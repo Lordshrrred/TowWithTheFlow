@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decap CMS Debug</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #000;
+      color: #0f0;
+      padding: 3rem;
+      font-size: 1.3rem;
+      line-height: 1.6;
+    }
+    h1 { color: #0ff; }
+    pre { background: #111; padding: 1.5rem; border-radius: 8px; overflow: auto; max-height: 60vh; }
+    #error { color: #f00; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Decap CMS Debug Mode</h1>
+  <p>Step 1: This text means index.html is being served by GitHub Pages.</p>
+  <p id="status">Status: Initializing...</p>
+  <pre id="log">Log output will appear here...</pre>
+  <p id="error"></p>
+
+  <script>
+    const log = document.getElementById('log');
+    const status = document.getElementById('status');
+    const errorEl = document.getElementById('error');
+
+    log.textContent += '[OK] Page loaded.\n';
+
+    try {
+      status.textContent = 'Loading Decap CMS script...';
+      log.textContent += '[OK] Attempting to load script from unpkg.\n';
+
+      // Load script dynamically with error catching
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js';
+      script.async = true;
+
+      script.onload = () => {
+        log.textContent += '[OK] Decap CMS script loaded successfully.\n';
+        status.textContent = 'Script loaded. Initializing CMS...';
+
+        try {
+          window.CMS_MANUAL_INIT = true;
+          CMS.init();
+          log.textContent += '[OK] CMS.init() called.\n';
+          status.textContent = 'CMS initialized — waiting for UI render...';
+        } catch (initErr) {
+          log.textContent += '[ERROR] CMS.init failed: ' + initErr.message + '\n';
+          errorEl.textContent = 'Init error: ' + initErr.message;
+          console.error(initErr);
+        }
+      };
+
+      script.onerror = (err) => {
+        log.textContent += '[ERROR] Failed to load Decap CMS script.\n';
+        errorEl.textContent = 'Script load failed — check network or unpkg.';
+        console.error('Script load error', err);
+      };
+
+      document.body.appendChild(script);
+    } catch (e) {
+      log.textContent += '[FATAL] Script load attempt crashed: ' + e.message + '\n';
+      errorEl.textContent = 'Fatal error: ' + e.message;
+      console.error(e);
+    }
+  </script>
+</body>
+</html>
