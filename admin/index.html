@@ -3,71 +3,68 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Decap CMS Debug</title>
+  <title>Decap CMS - Vibration of Awesome</title>
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #000;
-      color: #0f0;
-      padding: 3rem;
-      font-size: 1.3rem;
-      line-height: 1.6;
-    }
-    h1 { color: #0ff; }
-    pre { background: #111; padding: 1.5rem; border-radius: 8px; overflow: auto; max-height: 60vh; }
-    #error { color: #f00; font-weight: bold; }
+    body { margin: 0; background: #0a0f1a; color: #e0f7fa; font-family: system-ui, sans-serif; }
+    #cms-root { height: 100vh; }
+    #debug-log { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); color: #0f0; padding: 1rem; max-height: 40vh; overflow: auto; z-index: 9999; }
+    #error { color: #ff5555; font-weight: bold; }
   </style>
 </head>
 <body>
-  <h1>Decap CMS Debug Mode</h1>
-  <p>Step 1: This text means index.html is being served by GitHub Pages.</p>
-  <p id="status">Status: Initializing...</p>
-  <pre id="log">Log output will appear here...</pre>
-  <p id="error"></p>
+  <div id="cms-root"></div> <!-- Explicit mount point for CMS -->
 
+  <div id="debug-log">
+    <h3>Debug Log</h3>
+    <pre id="log"></pre>
+    <p id="status">Initializing...</p>
+    <p id="error"></p>
+  </div>
+
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    const log = document.getElementById('log');
-    const status = document.getElementById('status');
+    const logEl = document.getElementById('log');
+    const statusEl = document.getElementById('status');
     const errorEl = document.getElementById('error');
 
-    log.textContent += '[OK] Page loaded.\n';
+    function log(msg) {
+      logEl.textContent += msg + '\n';
+      console.log(msg);
+    }
+
+    log('Page loaded - Decap CMS debug active');
 
     try {
-      status.textContent = 'Loading Decap CMS script...';
-      log.textContent += '[OK] Attempting to load script from unpkg.\n';
+      log('Setting manual init');
+      window.CMS_MANUAL_INIT = true;
 
-      // Load script dynamically with error catching
-      const script = document.createElement('script');
-      script.src = 'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js';
-      script.async = true;
+      log('Calling CMS.init()');
+      statusEl.textContent = 'CMS.init called...';
+      CMS.init({
+        target: '#cms-root'  // Explicitly mount to our div
+      });
 
-      script.onload = () => {
-        log.textContent += '[OK] Decap CMS script loaded successfully.\n';
-        status.textContent = 'Script loaded. Initializing CMS...';
+      log('CMS.init completed');
+      statusEl.textContent = 'Waiting for UI...';
 
-        try {
-          window.CMS_MANUAL_INIT = true;
-          CMS.init();
-          log.textContent += '[OK] CMS.init() called.\n';
-          status.textContent = 'CMS initialized — waiting for UI render...';
-        } catch (initErr) {
-          log.textContent += '[ERROR] CMS.init failed: ' + initErr.message + '\n';
-          errorEl.textContent = 'Init error: ' + initErr.message;
-          console.error(initErr);
+      // Poll for UI render (sometimes it takes time)
+      const checkUI = setInterval(() => {
+        if (document.querySelector('.nc-app')) {
+          log('[OK] CMS UI rendered!');
+          statusEl.textContent = 'CMS UI loaded — ready to log in';
+          clearInterval(checkUI);
         }
-      };
+      }, 500);
 
-      script.onerror = (err) => {
-        log.textContent += '[ERROR] Failed to load Decap CMS script.\n';
-        errorEl.textContent = 'Script load failed — check network or unpkg.';
-        console.error('Script load error', err);
-      };
-
-      document.body.appendChild(script);
-    } catch (e) {
-      log.textContent += '[FATAL] Script load attempt crashed: ' + e.message + '\n';
-      errorEl.textContent = 'Fatal error: ' + e.message;
-      console.error(e);
+      setTimeout(() => {
+        if (!document.querySelector('.nc-app')) {
+          log('[WARN] UI not rendered after 10s — check backend config');
+        }
+      }, 10000);
+    } catch (err) {
+      log('[ERROR] ' + err.message);
+      errorEl.textContent = 'Fatal error: ' + err.message + '\n' + err.stack;
+      console.error(err);
     }
   </script>
 </body>
