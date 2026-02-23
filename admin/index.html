@@ -3,69 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Decap CMS - Vibration of Awesome</title>
-  <style>
-    body { margin: 0; background: #0a0f1a; color: #e0f7fa; font-family: system-ui, sans-serif; }
-    #cms-root { height: 100vh; }
-    #debug-log { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); color: #0f0; padding: 1rem; max-height: 40vh; overflow: auto; z-index: 9999; }
-    #error { color: #ff5555; font-weight: bold; }
-  </style>
+  <title>Content Manager | Vibration of Awesome</title>
 </head>
 <body>
-  <div id="cms-root"></div> <!-- Explicit mount point for CMS -->
-
-  <div id="debug-log">
-    <h3>Debug Log</h3>
-    <pre id="log"></pre>
-    <p id="status">Initializing...</p>
-    <p id="error"></p>
-  </div>
-
+  <!-- This is the only content needed – Decap CMS mounts here -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    const logEl = document.getElementById('log');
-    const statusEl = document.getElementById('status');
-    const errorEl = document.getElementById('error');
-
-    function log(msg) {
-      logEl.textContent += msg + '\n';
-      console.log(msg);
-    }
-
-    log('Page loaded - Decap CMS debug active');
-
-    try {
-      log('Setting manual init');
-      window.CMS_MANUAL_INIT = true;
-
-      log('Calling CMS.init()');
-      statusEl.textContent = 'CMS.init called...';
-      CMS.init({
-        target: '#cms-root'  // Explicitly mount to our div
-      });
-
-      log('CMS.init completed');
-      statusEl.textContent = 'Waiting for UI...';
-
-      // Poll for UI render (sometimes it takes time)
-      const checkUI = setInterval(() => {
-        if (document.querySelector('.nc-app')) {
-          log('[OK] CMS UI rendered!');
-          statusEl.textContent = 'CMS UI loaded — ready to log in';
-          clearInterval(checkUI);
-        }
-      }, 500);
-
-      setTimeout(() => {
-        if (!document.querySelector('.nc-app')) {
-          log('[WARN] UI not rendered after 10s — check backend config');
-        }
-      }, 10000);
-    } catch (err) {
-      log('[ERROR] ' + err.message);
-      errorEl.textContent = 'Fatal error: ' + err.message + '\n' + err.stack;
-      console.error(err);
-    }
-  </script>
 </body>
 </html>
