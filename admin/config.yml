@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
-  branch: main  # change if your branch is called something else
+  name: github
+  repo: Lordshrrred/VibrationofAwesome
+  branch: main
+  auth_type: pkce
 
 media_folder: "images/uploads"   # folder for uploaded images
 public_folder: "/images/uploads"
