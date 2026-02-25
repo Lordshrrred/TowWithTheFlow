@@ -1,8 +1,11 @@
 backend:
   name: github
-  repo: Lordshrrred/VibrationofAwesome
-  branch: main
-  auth_type: pkce
+  repo: Lordshrrred/VibrationofAwesome      # your exact repo name (case-sensitive)
+  branch: main                               # your branch
+  auth_type: pkce                            # secure modern flow (recommended)
+  app_id: ""                                 # leave blank for implicit/PKCE
+  base_url: https://vibrationofawesome.com   # your live domain
+  auth_endpoint: https://github.com/login/oauth/authorize
 
 media_folder: "images/uploads"   # folder for uploaded images
 public_folder: "/images/uploads"
