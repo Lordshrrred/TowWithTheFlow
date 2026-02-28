@@ -2,6 +2,7 @@ backend:
   name: github
   repo: Lordshrrred/VibrationofAwesome
   branch: main
+  site_domain: vibrationofawesome.netlify.app
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
