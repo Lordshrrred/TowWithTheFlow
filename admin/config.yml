@@ -1,32 +1,54 @@
 backend:
   name: github
-  repo: Lordshrrred/VibrationofAwesome      # your exact repo name (case-sensitive)
-  branch: main                               # your branch
-  auth_type: pkce                            # secure modern flow (recommended)
-  app_id: ""                                 # leave blank for implicit/PKCE
-  base_url: https://vibrationofawesome.com   # your live domain
-  auth_endpoint: https://github.com/login/oauth/authorize
+  repo: Lordshrrred/VibrationofAwesome
+  branch: main
 
-media_folder: "images/uploads"   # folder for uploaded images
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
-    label: "Blog"
-    folder: "blog"  # create this folder in root later if needed
+    label: "Blog Posts"
+    folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "pages"
-    label: "Pages"
-    folder: "pages"
+  - name: "art"
+    label: "Art Store"
+    folder: "_art"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Available", name: "available", widget: "boolean", default: true}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "_data/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Vibration of Awesome"
+        name: "vibration"
+        file: "_data/vibration.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "EarthStar"
+        name: "earthstar"
+        file: "_data/earthstar.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
