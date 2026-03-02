@@ -122,8 +122,21 @@
     background: var(--gold);
     transition: width 0.3s;
   }
-  .nav-links a:hover { color: var(--gold); text-shadow: 0 0 10px rgba(201,168,76,0.5); }
+  .nav-links a:hover { color: var(--gold); text-shadow: 0 0 10px rgba(0,229,204,0.5); }
   .nav-links a:hover::after { width: 100%; }
+
+  .nav-links a.aura-link {
+    color: var(--gold) !important;
+    border: 1px solid rgba(0,229,204,0.3);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+  }
+  .nav-links a.aura-link:hover {
+    background: rgba(0,229,204,0.08) !important;
+    box-shadow: 0 0 12px rgba(0,229,204,0.2);
+    text-shadow: none !important;
+  }
+  .nav-links a.aura-link::after { display: none !important; }
 
   /* HERO */
   #home {
@@ -687,6 +700,8 @@
     <li><a href="#vibration">Vibration</a></li>
     <li><a href="#earthstar">EarthStar</a></li>
     <li><a href="#artstore">ArtStore</a></li>
+    <li><a href="https://earthstar.creator-spring.com/" target="_blank">Merch Store</a></li>
+    <li><a href="/aura/" class="aura-link">AURA ✦</a></li>
     <li><a href="#blog">Blog</a></li>
   </ul>
 </nav>
