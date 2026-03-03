@@ -670,9 +670,56 @@
   }
 
   /* Responsive */
+  /* Hamburger button */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--gold);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
   @media (max-width: 768px) {
-    nav { padding: 1.2rem 1.5rem; }
-    .nav-links { display: none; }
+    nav { padding: 1.2rem 1.5rem; position: relative; flex-wrap: wrap; }
+    .hamburger { display: flex; }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+      background: rgba(2,10,10,0.98);
+      border: 1px solid rgba(0,229,204,0.12);
+      border-top: none;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      z-index: 200;
+      padding: 0.5rem 0;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+      display: block;
+      padding: 0.9rem 1.5rem;
+      border-bottom: 1px solid rgba(0,229,204,0.05);
+      font-size: 0.85rem;
+    }
+    .nav-links a.aura-link {
+      margin: 0.5rem 1.5rem;
+      display: block;
+      text-align: center;
+    }
     section { padding: 5rem 1.5rem; }
     .about-grid, .vibration-layout { grid-template-columns: 1fr; gap: 3rem; }
     .earthstar-grid, .art-grid { grid-template-columns: 1fr 1fr; }
@@ -694,7 +741,10 @@
 <!-- NAV -->
 <nav>
   <a href="#home" class="nav-logo">VOA</a>
-  <ul class="nav-links">
+  <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#vibration">Vibration</a></li>
@@ -955,38 +1005,59 @@
     starsEl.appendChild(star);
   }
 
-  // Custom cursor
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let rx = 0, ry = 0, cx = 0, cy = 0;
-
-  document.addEventListener('mousemove', e => {
-    cx = e.clientX; cy = e.clientY;
-    cursor.style.left = cx + 'px';
-    cursor.style.top = cy + 'px';
-  });
-
-  function animateRing() {
-    rx += (cx - rx) * 0.12;
-    ry += (cy - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
-    requestAnimationFrame(animateRing);
+  // Hamburger menu
+  function toggleNav() {
+    const nav = document.getElementById('navLinks');
+    const burger = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    burger.classList.toggle('open');
   }
-  animateRing();
 
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-      ring.style.transform = 'translate(-50%,-50%) scale(1.5)';
-      ring.style.borderColor = 'rgba(201,168,76,0.8)';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-      ring.style.transform = 'translate(-50%,-50%) scale(1)';
-      ring.style.borderColor = 'rgba(201,168,76,0.4)';
+  // Close nav when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
     });
   });
+
+  // Custom cursor - desktop only
+  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+  if (!isTouchDevice) {
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    cursor.style.display = 'block';
+    ring.style.display = 'block';
+    let rx = 0, ry = 0, cx = 0, cy = 0;
+
+    document.addEventListener('mousemove', e => {
+      cx = e.clientX; cy = e.clientY;
+      cursor.style.left = cx + 'px';
+      cursor.style.top = cy + 'px';
+    });
+
+    function animateRing() {
+      rx += (cx - rx) * 0.12;
+      ry += (cy - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+        ring.style.transform = 'translate(-50%,-50%) scale(1.5)';
+        ring.style.borderColor = 'rgba(0,229,204,0.8)';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+        ring.style.transform = 'translate(-50%,-50%) scale(1)';
+        ring.style.borderColor = 'rgba(0,229,204,0.4)';
+      });
+    });
+  }
 
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
