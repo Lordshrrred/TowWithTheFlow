@@ -553,8 +553,8 @@
   }
   .es-card:hover .es-number { color: rgba(0,229,204,0.07); }
 
-  /* ART STORE */
-  #artstore {
+  /* WEARABLE ART STORE */
+  #wearable-art {
     border-top: 1px solid rgba(201,168,76,0.08);
   }
 
@@ -567,78 +567,64 @@
     gap: 2rem;
   }
 
-  .art-grid {
+  .merch-preview {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    margin-bottom: 3rem;
   }
 
-  .art-card {
+  .merch-card {
     position: relative;
-    aspect-ratio: 3/4;
+    aspect-ratio: 1;
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(201,168,76,0.1);
     overflow: hidden;
-    cursor: none;
-    transition: border-color 0.3s;
-  }
-  .art-card:hover { border-color: rgba(201,168,76,0.4); }
-
-  .art-placeholder {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background: linear-gradient(135deg, rgba(26,10,46,0.5), rgba(42,31,14,0.3), rgba(26,46,26,0.4));
-    position: relative;
-    overflow: hidden;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .merch-card:hover {
+    border-color: rgba(201,168,76,0.4);
+    background: rgba(201,168,76,0.02);
   }
 
-  .art-placeholder::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(201,168,76,0.08), transparent 60%);
-    transition: all 0.3s;
-  }
-
-  .art-number {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 3rem;
-    color: rgba(201,168,76,0.15);
+  .merch-icon {
+    font-size: 2.5rem;
+    opacity: 0.3;
     line-height: 1;
   }
 
-  .art-card-label {
+  .merch-card-label {
     font-family: 'Rajdhani', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--muted);
+    text-align: center;
   }
 
-  .art-hover-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(10,10,18,0.85);
+  .merch-cta {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    opacity: 0;
-    transition: opacity 0.3s;
+    gap: 2rem;
+    padding: 3rem;
+    border: 1px solid rgba(201,168,76,0.1);
+    background: rgba(0,0,0,0.2);
+    text-align: center;
+    flex-direction: column;
   }
-  .art-card:hover .art-hover-overlay { opacity: 1; }
 
-  .art-hover-overlay span {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 0.75rem;
-    color: var(--cream);
-    letter-spacing: 0.1em;
+  .merch-cta p {
+    font-size: 1rem;
+    font-style: italic;
+    color: rgba(240,230,204,0.6);
+    max-width: 500px;
+    line-height: 1.8;
   }
 
   /* BLOG */
@@ -809,7 +795,7 @@
     }
     section { padding: 5rem 1.5rem; }
     .about-grid, .vibration-layout { grid-template-columns: 1fr; gap: 3rem; }
-    .earthstar-grid, .art-grid { grid-template-columns: 1fr 1fr; }
+    .earthstar-grid, .merch-preview { grid-template-columns: 1fr 1fr; }
     .blog-grid { grid-template-columns: 1fr; }
     .blog-card.featured { grid-row: span 1; }
     footer { padding: 2rem 1.5rem; }
@@ -836,8 +822,8 @@
     <li><a href="#about">About</a></li>
     <li><a href="#vibration">Vibration</a></li>
     <li><a href="#earthstar">EarthStar</a></li>
-    <li><a href="#artstore">ArtStore</a></li>
-    <li><a href="https://earthstar.creator-spring.com/" target="_blank">Merch Store</a></li>
+    <li><a href="/art-store/">Wieldable Art</a></li>
+    <li><a href="#wearable-art">Wearable Art</a></li>
     <li><a href="/aura/" class="aura-link">AURA ✦</a></li>
     <li><a href="#blog">Blog</a></li>
   </ul>
@@ -884,7 +870,7 @@
     </p>
     <div class="hero-cta">
       <a href="#blog" class="btn-primary">Explore Blog</a>
-      <a href="#artstore" class="btn-secondary">ArtStore</a>
+      <a href="/art-store/" class="btn-secondary">Wieldable Art Store</a>
     </div>
   </div>
 
@@ -1012,47 +998,33 @@
   </div>
 </section>
 
-<!-- ART STORE -->
-<section id="artstore">
+<!-- WEARABLE ART STORE -->
+<section id="wearable-art">
   <div class="section-inner reveal">
     <div class="store-header">
       <div>
-        <p class="section-label">ArtStore</p>
-        <h2 class="section-title">Original Works</h2>
+        <p class="section-label">Wearable Art Store</p>
+        <h2 class="section-title">Wear the Frequency</h2>
       </div>
-      <a href="#artstore" class="btn-secondary" style="font-family:'Rajdhani',sans-serif;font-size:0.75rem;letter-spacing:0.2em">View All →</a>
+      <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener" class="btn-secondary" style="font-family:'Rajdhani',sans-serif;font-size:0.75rem;letter-spacing:0.2em">Shop Merch →</a>
     </div>
-    <div class="art-grid">
-      <div class="art-card">
-        <div class="art-placeholder">
-          <div class="art-number">01</div>
-          <span class="art-card-label">Your Art Here</span>
-        </div>
-        <div class="art-hover-overlay">
-          <span>Untitled I</span>
-          <a href="#" class="btn-primary" style="font-size:0.7rem;padding:0.6rem 1.5rem">Add to Cart</a>
-        </div>
+    <div class="merch-preview">
+      <div class="merch-card">
+        <div class="merch-icon">👕</div>
+        <span class="merch-card-label">Apparel</span>
       </div>
-      <div class="art-card">
-        <div class="art-placeholder">
-          <div class="art-number">02</div>
-          <span class="art-card-label">Your Art Here</span>
-        </div>
-        <div class="art-hover-overlay">
-          <span>Untitled II</span>
-          <a href="#" class="btn-primary" style="font-size:0.7rem;padding:0.6rem 1.5rem">Add to Cart</a>
-        </div>
+      <div class="merch-card">
+        <div class="merch-icon">🧢</div>
+        <span class="merch-card-label">Headwear</span>
       </div>
-      <div class="art-card">
-        <div class="art-placeholder">
-          <div class="art-number">03</div>
-          <span class="art-card-label">Your Art Here</span>
-        </div>
-        <div class="art-hover-overlay">
-          <span>Untitled III</span>
-          <a href="#" class="btn-primary" style="font-size:0.7rem;padding:0.6rem 1.5rem">Add to Cart</a>
-        </div>
+      <div class="merch-card">
+        <div class="merch-icon">🖼️</div>
+        <span class="merch-card-label">Prints</span>
       </div>
+    </div>
+    <div class="merch-cta">
+      <p>Wearable art carrying the Vibration of Awesome into the world. Print-on-demand apparel, accessories, and more — powered by Creator Spring.</p>
+      <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener" class="btn-primary" style="font-family:'Rajdhani',sans-serif;font-size:0.8rem;letter-spacing:0.25em">Visit Wearable Art Store →</a>
     </div>
   </div>
 </section>
