@@ -1,0 +1,15 @@
+baseURL = "https://vibrationofawesome.com/"
+languageCode = "en-us"
+title = "Vibration of Awesome"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Roots in the Earth, Crown in the Stars. The Future is Ours."
+  author = "Matty BOOMBOOM"
+
+[permalinks]
+  posts = "/posts/:slug/"
