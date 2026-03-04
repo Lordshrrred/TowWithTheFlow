@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wieldable Art Store — Vibration of Awesome</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #00e5cc;
+    --gold-light: #4dfff0;
+    --deep: #020a0a;
+    --midnight: #030d0d;
+    --earth: #001a18;
+    --terra: #003d38;
+    --moss: #0a1f1e;
+    --cream: #d0fff8;
+    --muted: #4a9e96;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--deep);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Custom cursor */
+  .cursor {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+    display: none;
+  }
+  .cursor-ring {
+    width: 30px; height: 30px;
+    border: 1px solid rgba(0,229,204,0.4);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: all 0.15s ease;
+    display: none;
+  }
+
+  /* Stars */
+  .stars {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--dur, 3s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+    opacity: 0;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: var(--brightness, 0.8); transform: scale(1); }
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(2,10,10,0.97), transparent);
+    border-bottom: 1px solid rgba(0,229,204,0.1);
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    text-shadow: 0 0 20px rgba(0,229,204,0.4);
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-back {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-back:hover { color: var(--gold); }
+
+  .nav-store-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+
+  /* HERO */
+  .store-hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 5rem;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,40,40,0.95) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 80% 90%, rgba(0,229,204,0.05) 0%, transparent 60%),
+      linear-gradient(160deg, #010d10 0%, #020a0a 40%, #001a18 100%);
+  }
+
+  .hero-mandala {
+    position: absolute;
+    width: 500px; height: 500px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.04;
+    animation: rotate 80s linear infinite;
+  }
+  @keyframes rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: var(--cream);
+    text-shadow: 0 0 60px rgba(0,229,204,0.2);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+  .hero-title span { color: var(--gold); display: block; }
+
+  .hero-sub {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgba(168,237,228,0.7);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  /* PAYMENT BANNER */
+  .payment-banner {
+    position: relative;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    border-top: 1px solid rgba(0,229,204,0.08);
+    border-bottom: 1px solid rgba(0,229,204,0.08);
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .payment-method {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .payment-method.crypto { color: var(--gold); }
+
+  .payment-icon {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(0,229,204,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  .payment-method.crypto .payment-icon {
+    border-color: rgba(0,229,204,0.5);
+    background: rgba(0,229,204,0.05);
+    box-shadow: 0 0 10px rgba(0,229,204,0.1);
+  }
+
+  .crypto-discount {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--deep);
+    background: var(--gold);
+    padding: 0.3rem 0.8rem;
+    font-weight: 700;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  }
+
+  .payment-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(0,229,204,0.1);
+  }
+
+  /* CRYPTO INFO BAR */
+  .crypto-info {
+    position: relative;
+    z-index: 1;
+    background: rgba(0,229,204,0.03);
+    border-bottom: 1px solid rgba(0,229,204,0.08);
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .crypto-info p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.9;
+    text-align: center;
+  }
+
+  .crypto-info .glow-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 8px var(--gold);
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 0.5; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  /* MAIN CONTENT */
+  main {
+    position: relative;
+    z-index: 1;
+    padding: 5rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 30px; height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .section-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 1.5rem 0 3rem;
+  }
+
+  /* ART GRID */
+  .art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  .art-card {
+    position: relative;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(0,229,204,0.1);
+    overflow: hidden;
+    transition: border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+    cursor: none;
+  }
+  .art-card:hover {
+    border-color: rgba(0,229,204,0.35);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(0,229,204,0.05);
+  }
+
+  .art-image-wrap {
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, rgba(0,20,25,0.9), rgba(0,40,35,0.7), rgba(0,20,25,0.9));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .art-image-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(0,229,204,0.06) 0%, transparent 70%);
+  }
+
+  .art-num {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 5rem;
+    color: rgba(0,229,204,0.06);
+    line-height: 1;
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+  }
+
+  .art-placeholder-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(74,158,150,0.5);
+    z-index: 1;
+  }
+
+  .art-placeholder-icon {
+    width: 60px; height: 60px;
+    border: 1px solid rgba(0,229,204,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    z-index: 1;
+    font-size: 1.5rem;
+    opacity: 0.3;
+  }
+
+  .art-info {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(0,229,204,0.06);
+    background: rgba(0,0,0,0.2);
+  }
+
+  .art-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.85rem;
+    color: var(--cream);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.05em;
+  }
+
+  .art-medium {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.7;
+    margin-bottom: 1.2rem;
+  }
+
+  .art-pricing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .price-usd {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+  }
+
+  .price-crypto-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+  }
+
+  .price-crypto {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+
+  .discount-tag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--deep);
+    background: var(--gold);
+    padding: 0.15rem 0.5rem;
+    font-weight: 700;
+  }
+
+  .art-buy-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1.2rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--deep);
+    background: var(--gold);
+    padding: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+    cursor: none;
+    border: none;
+    font-weight: 700;
+  }
+  .art-buy-btn:hover {
+    background: var(--gold-light);
+    box-shadow: 0 0 20px rgba(0,229,204,0.3);
+  }
+
+  /* COMING SOON OVERLAY */
+  .coming-soon-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2,10,10,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    backdrop-filter: blur(2px);
+  }
+
+  .coming-soon-badge {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(0,229,204,0.3);
+    padding: 0.6rem 1.5rem;
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+  }
+
+  /* PAYMENT INFO SECTION */
+  .payment-section {
+    margin-bottom: 6rem;
+    padding: 4rem;
+    border: 1px solid rgba(0,229,204,0.08);
+    background: rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .payment-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    opacity: 0.3;
+  }
+
+  .payment-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .payment-card {
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(0,229,204,0.08);
+    background: rgba(0,0,0,0.3);
+    position: relative;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .payment-card:hover {
+    border-color: rgba(0,229,204,0.2);
+    background: rgba(0,229,204,0.02);
+  }
+
+  .payment-card.crypto-card {
+    border-color: rgba(0,229,204,0.15);
+  }
+  .payment-card.crypto-card:hover {
+    border-color: rgba(0,229,204,0.4);
+    box-shadow: 0 0 30px rgba(0,229,204,0.05);
+  }
+
+  .payment-card-icon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+
+  .payment-card-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .payment-card-desc {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgba(168,237,228,0.5);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .crypto-badge {
+    display: inline-block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--deep);
+    background: var(--gold);
+    padding: 0.3rem 0.8rem;
+    font-weight: 700;
+  }
+
+  .payment-card-note {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.6;
+    margin-top: 0.8rem;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 3rem 4rem;
+    border-top: 1px solid rgba(0,229,204,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    text-shadow: 0 0 20px rgba(0,229,204,0.3);
+  }
+  .footer-sub {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.5;
+    margin-top: 0.4rem;
+  }
+
+  footer p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: rgba(74,158,150,0.3);
+    text-transform: uppercase;
+  }
+
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  footer a:hover { color: var(--gold); }
+
+  /* Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .art-grid, .payment-methods-grid { grid-template-columns: 1fr 1fr; }
+    main { padding: 4rem 2rem; }
+    .payment-banner { padding: 1.5rem; gap: 1.5rem; }
+    .payment-divider { display: none; }
+  }
+  @media (max-width: 600px) {
+    .art-grid, .payment-methods-grid { grid-template-columns: 1fr; }
+    nav { padding: 1.2rem 1.5rem; }
+    .store-hero { min-height: 45vh; }
+    .payment-section { padding: 2.5rem 1.5rem; }
+    footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="stars" id="stars"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="/" class="nav-logo">VOA</a>
+  <div class="nav-right">
+    <span class="nav-store-title">Wieldable Art Store</span>
+    <a href="/" class="nav-back">← Back to Site</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="store-hero">
+  <div class="hero-bg"></div>
+  <svg class="hero-mandala" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="250" cy="250" r="240" stroke="#00e5cc" stroke-width="0.5"/>
+    <circle cx="250" cy="250" r="180" stroke="#00e5cc" stroke-width="0.5"/>
+    <circle cx="250" cy="250" r="120" stroke="#00e5cc" stroke-width="0.5"/>
+    <circle cx="250" cy="250" r="60" stroke="#00e5cc" stroke-width="0.5"/>
+    <line x1="250" y1="10" x2="250" y2="490" stroke="#00e5cc" stroke-width="0.5"/>
+    <line x1="10" y1="250" x2="490" y2="250" stroke="#00e5cc" stroke-width="0.5"/>
+    <line x1="74" y1="74" x2="426" y2="426" stroke="#00e5cc" stroke-width="0.5"/>
+    <line x1="426" y1="74" x2="74" y2="426" stroke="#00e5cc" stroke-width="0.5"/>
+    <line x1="130" y1="26" x2="370" y2="474" stroke="#00e5cc" stroke-width="0.3"/>
+    <line x1="26" y1="130" x2="474" y2="370" stroke="#00e5cc" stroke-width="0.3"/>
+  </svg>
+  <div class="hero-content">
+    <p class="hero-eyebrow">✦ Original Works ✦</p>
+    <h1 class="hero-title">
+      Wieldable
+      <span>Art Store</span>
+    </h1>
+    <p class="hero-sub">Original pieces you can hold, hang, and wield.<br>Art as a living frequency.</p>
+  </div>
+</section>
+
+<!-- PAYMENT BANNER -->
+<div class="payment-banner">
+  <div class="payment-method">
+    <div class="payment-icon">💳</div>
+    Credit Card
+  </div>
+  <div class="payment-divider"></div>
+  <div class="payment-method crypto">
+    <div class="payment-icon">◎</div>
+    Solana
+    <span class="crypto-discount">11% Off</span>
+  </div>
+  <div class="payment-divider"></div>
+  <div class="payment-method crypto">
+    <div class="payment-icon">₿</div>
+    Bitcoin
+    <span class="crypto-discount">11% Off</span>
+  </div>
+</div>
+
+<!-- CRYPTO INFO BAR -->
+<div class="crypto-info">
+  <div class="glow-dot"></div>
+  <p>Pay with Solana or Bitcoin and receive 11% off your entire order — crypto aligned with the frequency</p>
+  <div class="glow-dot"></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- ART LISTINGS -->
+  <div class="reveal">
+    <p class="section-label">Original Works</p>
+    <h2 class="section-title">Available Pieces</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="art-grid reveal">
+
+    <!-- PIECE 01 -->
+    <div class="art-card">
+      <div class="art-image-wrap">
+        <div class="art-placeholder-icon">✦</div>
+        <span class="art-placeholder-text">Artwork Coming Soon</span>
+        <div class="art-num">01</div>
+      </div>
+      <div class="art-info">
+        <div class="art-title">Untitled No. I</div>
+        <div class="art-medium">Medium · Dimensions TBD</div>
+        <div class="art-pricing">
+          <span class="price-usd">$—</span>
+          <div class="price-crypto-block">
+            <span class="price-crypto">◎ — SOL &nbsp;|&nbsp; ₿ —</span>
+            <span class="discount-tag">11% crypto discount</span>
+          </div>
+        </div>
+        <button class="art-buy-btn" disabled style="opacity:0.4;cursor:not-allowed">Coming Soon</button>
+      </div>
+      <div class="coming-soon-overlay">
+        <div class="coming-soon-badge">Coming Soon</div>
+      </div>
+    </div>
+
+    <!-- PIECE 02 -->
+    <div class="art-card">
+      <div class="art-image-wrap">
+        <div class="art-placeholder-icon">✦</div>
+        <span class="art-placeholder-text">Artwork Coming Soon</span>
+        <div class="art-num">02</div>
+      </div>
+      <div class="art-info">
+        <div class="art-title">Untitled No. II</div>
+        <div class="art-medium">Medium · Dimensions TBD</div>
+        <div class="art-pricing">
+          <span class="price-usd">$—</span>
+          <div class="price-crypto-block">
+            <span class="price-crypto">◎ — SOL &nbsp;|&nbsp; ₿ —</span>
+            <span class="discount-tag">11% crypto discount</span>
+          </div>
+        </div>
+        <button class="art-buy-btn" disabled style="opacity:0.4;cursor:not-allowed">Coming Soon</button>
+      </div>
+      <div class="coming-soon-overlay">
+        <div class="coming-soon-badge">Coming Soon</div>
+      </div>
+    </div>
+
+    <!-- PIECE 03 -->
+    <div class="art-card">
+      <div class="art-image-wrap">
+        <div class="art-placeholder-icon">✦</div>
+        <span class="art-placeholder-text">Artwork Coming Soon</span>
+        <div class="art-num">03</div>
+      </div>
+      <div class="art-info">
+        <div class="art-title">Untitled No. III</div>
+        <div class="art-medium">Medium · Dimensions TBD</div>
+        <div class="art-pricing">
+          <span class="price-usd">$—</span>
+          <div class="price-crypto-block">
+            <span class="price-crypto">◎ — SOL &nbsp;|&nbsp; ₿ —</span>
+            <span class="discount-tag">11% crypto discount</span>
+          </div>
+        </div>
+        <button class="art-buy-btn" disabled style="opacity:0.4;cursor:not-allowed">Coming Soon</button>
+      </div>
+      <div class="coming-soon-overlay">
+        <div class="coming-soon-badge">Coming Soon</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PAYMENT INFO -->
+  <div class="payment-section reveal">
+    <p class="section-label">How to Pay</p>
+    <h2 class="section-title">Payment Methods</h2>
+    <div class="divider" style="margin-bottom:0"></div>
+
+    <div class="payment-methods-grid">
+
+      <!-- CREDIT CARD -->
+      <div class="payment-card">
+        <span class="payment-card-icon">💳</span>
+        <div class="payment-card-name">Credit Card</div>
+        <p class="payment-card-desc">Secure card payments via Stripe. Visa, Mastercard, Amex accepted. Standard pricing applies.</p>
+        <div class="payment-card-note">Powered by Stripe · Coming Soon</div>
+      </div>
+
+      <!-- SOLANA -->
+      <div class="payment-card crypto-card">
+        <span class="payment-card-icon">◎</span>
+        <div class="payment-card-name">Solana (SOL)</div>
+        <p class="payment-card-desc">Fast, low-fee blockchain payments. Connect your Phantom or Solflare wallet and pay in SOL.</p>
+        <span class="crypto-badge">11% Discount</span>
+        <div class="payment-card-note">Wallet connect · Coming Soon</div>
+      </div>
+
+      <!-- BITCOIN -->
+      <div class="payment-card crypto-card">
+        <span class="payment-card-icon">₿</span>
+        <div class="payment-card-name">Bitcoin (BTC)</div>
+        <p class="payment-card-desc">Pay with Bitcoin via Lightning Network or on-chain. Sovereign money for sovereign art.</p>
+        <span class="crypto-badge">11% Discount</span>
+        <div class="payment-card-note">Lightning + on-chain · Coming Soon</div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Vibration of Awesome</div>
+    <div class="footer-sub">Wieldable Art Store</div>
+  </div>
+  <p>© 2026 · <a href="/">vibrationofawesome.com</a></p>
+</footer>
+
+<script>
+  // Stars
+  const starsEl = document.getElementById('stars');
+  for (let i = 0; i < 120; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    const size = Math.random() * 2 + 0.5;
+    star.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--dur:${Math.random()*4+2}s;--delay:${Math.random()*5}s;--brightness:${Math.random()*0.5+0.3};`;
+    starsEl.appendChild(star);
+  }
+
+  // Custom cursor — desktop only
+  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+  if (!isTouchDevice) {
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    cursor.style.display = 'block';
+    ring.style.display = 'block';
+    let rx = 0, ry = 0, cx = 0, cy = 0;
+    document.addEventListener('mousemove', e => {
+      cx = e.clientX; cy = e.clientY;
+      cursor.style.left = cx + 'px';
+      cursor.style.top = cy + 'px';
+    });
+    function animateRing() {
+      rx += (cx - rx) * 0.12;
+      ry += (cy - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+        ring.style.transform = 'translate(-50%,-50%) scale(1.5)';
+        ring.style.borderColor = 'rgba(0,229,204,0.8)';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+        ring.style.transform = 'translate(-50%,-50%) scale(1)';
+        ring.style.borderColor = 'rgba(0,229,204,0.4)';
+      });
+    });
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+
+  // Nav scroll effect
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.style.background = 'rgba(2,10,10,0.98)';
+    } else {
+      nav.style.background = 'linear-gradient(to bottom, rgba(2,10,10,0.97), transparent)';
+    }
+  });
+</script>
+</body>
+</html>
