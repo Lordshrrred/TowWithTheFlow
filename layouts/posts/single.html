@@ -1,0 +1,254 @@
+{{ define "head-extra" }}
+<style>
+  .post-hero {
+    position: relative;
+    padding: 10rem 4rem 5rem;
+    z-index: 1;
+    border-bottom: 1px solid rgba(0,229,204,0.08);
+    background: linear-gradient(to bottom, rgba(0,40,40,0.3) 0%, transparent 100%);
+  }
+
+  .post-hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .post-back {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    transition: color 0.2s;
+  }
+  .post-back:hover { color: var(--gold); }
+
+  .post-tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-tag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
+    border: 1px solid rgba(0,229,204,0.2);
+    padding: 0.25rem 0.75rem;
+  }
+
+  .post-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  .post-meta {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .post-meta-dot {
+    width: 3px; height: 3px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+
+  .post-body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 5rem 4rem 8rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .post-body h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    color: var(--cream);
+    margin: 3rem 0 1.5rem;
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+  }
+
+  .post-body h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 2.5rem 0 1rem;
+  }
+
+  .post-body p {
+    font-size: 1.15rem;
+    line-height: 1.95;
+    color: rgba(208,255,248,0.8);
+    margin-bottom: 1.75rem;
+    font-style: italic;
+  }
+
+  .post-body strong {
+    color: var(--cream);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .post-body em {
+    color: #a8ede4;
+  }
+
+  .post-body a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,229,204,0.3);
+    transition: border-color 0.2s;
+  }
+  .post-body a:hover { border-color: var(--gold); }
+
+  .post-body blockquote {
+    border-left: 2px solid var(--gold);
+    padding: 1rem 2rem;
+    margin: 2.5rem 0;
+    background: rgba(0,229,204,0.03);
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(168,237,228,0.8);
+  }
+
+  .post-body ul, .post-body ol {
+    margin: 0 0 1.75rem 1.5rem;
+  }
+
+  .post-body li {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: rgba(208,255,248,0.8);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+
+  .post-body hr {
+    border: none;
+    border-top: 1px solid rgba(0,229,204,0.12);
+    margin: 3rem 0;
+  }
+
+  .post-body img {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    border: 1px solid rgba(0,229,204,0.1);
+  }
+
+  .post-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 2rem 0;
+  }
+
+  .post-footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 4rem 6rem;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(0,229,204,0.08);
+    padding-top: 3rem;
+  }
+
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .post-nav a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    max-width: 45%;
+  }
+  .post-nav a:hover { color: var(--gold); }
+  .post-nav .next { text-align: right; }
+
+  @media (max-width: 768px) {
+    .post-hero { padding: 8rem 1.5rem 3rem; }
+    .post-body { padding: 3rem 1.5rem 5rem; }
+    .post-footer { padding: 2rem 1.5rem 4rem; }
+  }
+</style>
+{{ end }}
+
+{{ define "main" }}
+<div class="post-hero">
+  <div class="post-hero-inner">
+    <a href="/posts/" class="post-back">← All Transmissions</a>
+
+    {{ if .Params.tags }}
+    <div class="post-tags">
+      {{ range .Params.tags }}
+      <span class="post-tag">{{ . }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <h1 class="post-title">{{ .Title }}</h1>
+
+    <div class="post-meta">
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
+      {{ if .ReadingTime }}
+      <div class="post-meta-dot"></div>
+      <span>{{ .ReadingTime }} min read</span>
+      {{ end }}
+      {{ if .Params.canonical }}
+      <div class="post-meta-dot"></div>
+      <a href="{{ .Params.canonical }}" target="_blank" rel="noopener" style="color:var(--muted);font-family:'Rajdhani',sans-serif;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Originally on Medium ↗</a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="post-body">
+  <div class="post-divider"></div>
+  {{ .Content }}
+</div>
+
+<div class="post-footer">
+  <div class="post-nav">
+    {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}">← {{ .Title }}</a>
+    {{ end }}
+    {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}" class="next">{{ .Title }} →</a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
