@@ -1,2 +1,6 @@
 public/
 .hugo_build.lock
+
+# Blog engine
+node_modules/
+.env
