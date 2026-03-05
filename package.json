@@ -5,7 +5,8 @@
   "scripts": {
     "generate": "node scripts/generate-post.js",
     "syndicate": "node scripts/syndicate.js",
-    "research": "node scripts/seo-research.js"
+    "research": "node scripts/seo-research.js",
+    "sitemap": "node scripts/update-sitemap.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",

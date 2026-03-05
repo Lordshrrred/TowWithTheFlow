@@ -13,6 +13,7 @@ import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { updateSitemap } from "./update-sitemap.js";
 
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
@@ -376,6 +377,9 @@ async function main() {
   });
   fs.writeFileSync(dataFile, JSON.stringify(posts, null, 2), "utf8");
   console.log("JSON index updated: static/_data/" + lane + "-posts.json");
+
+  // Always regenerate sitemap after adding a post
+  updateSitemap();
 }
 
 main();
