@@ -188,6 +188,73 @@
     50% { opacity: 1; transform: scaleX(1); }
   }
 
+  /* MANIFESTO */
+  #manifesto {
+    padding: 7rem 4rem;
+    text-align: center;
+    position: relative;
+    border-top: 1px solid rgba(0,229,204,0.06);
+    border-bottom: 1px solid rgba(0,229,204,0.06);
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,40,38,0.35) 0%, transparent 70%);
+  }
+
+  .manifesto-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .manifesto-inner::before {
+    content: '\201C';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12rem;
+    line-height: 0.6;
+    color: rgba(0,229,204,0.07);
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .manifesto-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+    font-style: italic;
+    line-height: 2;
+    color: rgba(168,237,228,0.78);
+    letter-spacing: 0.02em;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .manifesto-believe {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: var(--gold);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-shadow: 0 0 40px rgba(0,229,204,0.4), 0 0 80px rgba(0,229,204,0.15);
+    display: block;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .manifesto-attribution {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(0,229,204,0.45);
+  }
+
+  @media (max-width: 768px) {
+    #manifesto { padding: 5rem 1.5rem; }
+    .manifesto-inner::before { font-size: 7rem; left: 0; }
+  }
+
   /* EARTHSTAR */
   #earthstar {
     background: linear-gradient(135deg, rgba(0,50,45,0.2) 0%, transparent 60%);
@@ -655,6 +722,23 @@
         <p>Placeholder for the Vibration of Awesome concept ~ your philosophy, your mission, what this frequency means to you and the world.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section id="manifesto">
+  <div class="manifesto-inner reveal">
+    <p class="manifesto-text">
+      I believe in a world that works for everyone. I don't know how this is going to work.
+      I just believe that we're going to take the planet back. So when people ask me
+      "how are we supposed to do it, it's so dark and doom and gloom" ~ my response is
+      just gonna be: Believe. Just believe in it. Keep showing up fully every day to your life.
+      Because every person that believes in it makes it that much more real. If we can cascade
+      that belief across millions and billions we are unstoppable and nothing can keep us
+      from taking this planet back into the hands of good.
+    </p>
+    <span class="manifesto-believe">Believe.</span>
+    <p class="manifesto-attribution">Matt Dunn ~ Vibration of Awesome</p>
   </div>
 </section>
 
