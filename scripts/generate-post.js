@@ -142,7 +142,7 @@ function buildHtml(lane, title, dateStr, bodyHtml, slug, metaDescription) {
   H.push("  <title>" + title + " | " + laneName + " | Vibration of Awesome</title>");
   H.push('  <meta name="description" content="' + metaContent + '">');
   const postUrl = "https://vibrationofawesome.com/blog/" + lane + "/posts/" + slug + ".html";
-  const datePublished = new Date(dateStr).toISOString().slice(0, 10);
+  const datePublished = new Date(dateStr).toISOString();
   const authorName = isMatt ? "Matt Dunn" : "Matty BoomBoom";
   H.push('  <link rel="canonical" href="' + postUrl + '">');
   H.push('  <meta name="robots" content="index, follow">');
