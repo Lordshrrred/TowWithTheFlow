@@ -383,7 +383,7 @@
     line-height: 1.8;
   }
 
-  /* BLOG */
+  /* DUAL BLOG FEED */
   #blog {
     background: linear-gradient(to bottom, transparent, rgba(0,40,35,0.15));
     border-top: 1px solid rgba(201,168,76,0.08);
@@ -398,68 +398,124 @@
     gap: 1rem;
   }
 
-  .blog-grid {
+  .dual-feed {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     margin-top: 3rem;
   }
 
-  .blog-card {
+  .feed-lane {
     border: 1px solid rgba(201,168,76,0.08);
     padding: 2.5rem;
-    background: rgba(255,255,255,0.015);
-    transition: all 0.3s;
+    background: rgba(255,255,255,0.01);
     position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    display: block;
-    color: inherit;
   }
-  .blog-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 2px;
-    background: linear-gradient(to right, var(--gold), transparent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s;
+
+  .feed-matt {
+    border-color: rgba(255,179,0,0.15);
+    background: rgba(255,179,0,0.01);
   }
-  .blog-card:hover { background: rgba(201,168,76,0.03); }
-  .blog-card:hover::after { transform: scaleX(1); }
 
-  .blog-card.featured { grid-row: span 2; }
+  .feed-boombot {
+    border-color: rgba(0,229,204,0.15);
+    background: rgba(0,229,204,0.01);
+  }
 
-  .blog-tag {
+  .lane-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+  }
+
+  .lane-badge {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .lane-badge--matt {
+    color: #ffb300;
+    border: 1px solid rgba(255,179,0,0.3);
+    background: rgba(255,179,0,0.05);
+  }
+
+  .lane-badge--boombot {
     color: var(--gold);
-    opacity: 0.7;
-    margin-bottom: 1rem;
-    display: block;
+    border: 1px solid rgba(0,229,204,0.3);
+    background: rgba(0,229,204,0.05);
   }
 
-  .blog-card h3 {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1rem;
-    color: var(--cream);
-    line-height: 1.4;
-    margin-bottom: 1rem;
-  }
-
-  .blog-card.featured h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .blog-card p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: rgba(240,230,204,0.55);
+  .lane-byline {
+    font-size: 0.82rem;
     font-style: italic;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .feed-card {
+    display: block;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(201,168,76,0.06);
+    text-decoration: none;
+    color: inherit;
+    transition: padding-left 0.2s;
+  }
+  .feed-card:last-child { border-bottom: none; }
+  .feed-card:hover { padding-left: 0.5rem; }
+
+  .feed-date {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .feed-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.85rem;
+    color: var(--cream);
+    line-height: 1.45;
+    margin-bottom: 0.5rem;
+  }
+
+  .feed-excerpt {
+    font-size: 0.87rem;
+    line-height: 1.7;
+    color: rgba(208,255,248,0.5);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .lane-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .lane-link:hover { color: var(--gold); }
+
+  .feed-loading, .feed-empty {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--muted);
+    padding: 2rem 0;
+    text-align: center;
+    opacity: 0.6;
   }
 
   @media (max-width: 768px) {
@@ -471,8 +527,7 @@
     }
     .about-grid, .vibration-layout { grid-template-columns: 1fr; gap: 3rem; }
     .earthstar-grid, .merch-preview { grid-template-columns: 1fr 1fr; }
-    .blog-grid { grid-template-columns: 1fr; }
-    .blog-card.featured { grid-row: span 1; }
+    .dual-feed { grid-template-columns: 1fr; gap: 2rem; }
   }
 </style>
 {{ end }}
@@ -678,51 +733,79 @@
   </div>
 </section>
 
-<!-- BLOG -->
+<!-- LATEST TRANSMISSIONS (Dual Blog Feed) -->
 <section id="blog">
-  <div class="section-inner reveal">
-    <div class="blog-header">
+  <div class="section-inner">
+    <div class="blog-header reveal">
       <div>
-        <p class="section-label">Blog</p>
-        <h2 class="section-title">Transmissions</h2>
+        <p class="section-label">Latest Transmissions</p>
+        <h2 class="section-title">Two Frequencies</h2>
         <div class="divider"></div>
       </div>
-      <a href="/posts/" class="btn-secondary" style="font-family:'Rajdhani',sans-serif;font-size:0.75rem;letter-spacing:0.2em">All Posts →</a>
+      <a href="/blog/" class="btn-secondary" style="font-family:'Rajdhani',sans-serif;font-size:0.75rem;letter-spacing:0.2em">All Posts →</a>
     </div>
-    <div class="blog-grid">
-      {{ $posts := where .Site.RegularPages "Section" "posts" }}
-      {{ range $i, $p := first 4 $posts }}
-      <div class="blog-card{{ if eq $i 0 }} featured{{ end }}">
-        <a href="{{ $p.RelPermalink }}" style="text-decoration:none;color:inherit;display:block;height:100%">
-          <span class="blog-tag">{{ if eq $i 0 }}✦ Featured{{ else }}{{ index $p.Params.tags 0 | default "Transmission" }}{{ end }}</span>
-          <h3>{{ $p.Title }}</h3>
-          <p>{{ $p.Summary | truncate 150 "..." }}</p>
-        </a>
+    <div class="dual-feed reveal">
+
+      <!-- Forest Temple Lane -->
+      <div class="feed-lane feed-matt">
+        <div class="lane-header">
+          <span class="lane-badge lane-badge--matt">🌿 From the Forest Temple</span>
+          <p class="lane-byline">by Matt Dunn — raw, unfiltered, human</p>
+        </div>
+        <div class="lane-posts" id="matt-feed">
+          <div class="feed-loading">Loading transmissions...</div>
+        </div>
+        <a href="/blog/matt/" class="lane-link">All Forest Temple Posts →</a>
       </div>
-      {{ else }}
-      <div class="blog-card featured">
-        <span class="blog-tag">✦ Featured</span>
-        <h3>Your First Post Title Goes Here</h3>
-        <p>This is a placeholder for your featured blog post preview. Once you publish through Decap CMS, this will pull from your actual content automatically.</p>
+
+      <!-- Boom Frequency Lane -->
+      <div class="feed-lane feed-boombot">
+        <div class="lane-header">
+          <span class="lane-badge lane-badge--boombot">⚡ Boom Frequency</span>
+          <p class="lane-byline">by Matty BoomBoom — signal from somewhere interesting</p>
+        </div>
+        <div class="lane-posts" id="boombot-feed">
+          <div class="feed-loading">Loading transmissions...</div>
+        </div>
+        <a href="/blog/boombot/" class="lane-link">All Boom Frequency Posts →</a>
       </div>
-      <div class="blog-card">
-        <span class="blog-tag">Earth</span>
-        <h3>Second Post Title</h3>
-        <p>Placeholder preview text for your second post.</p>
-      </div>
-      <div class="blog-card">
-        <span class="blog-tag">Cosmos</span>
-        <h3>Third Post Title</h3>
-        <p>Placeholder preview text for your third post.</p>
-      </div>
-      <div class="blog-card">
-        <span class="blog-tag">Art</span>
-        <h3>Fourth Post Title</h3>
-        <p>Placeholder preview text for your fourth post.</p>
-      </div>
-      {{ end }}
+
     </div>
   </div>
 </section>
 
+{{ end }}
+
+{{ define "foot-extra" }}
+<script>
+(async function loadBlogFeeds() {
+  const lanes = [
+    { id: 'matt-feed', url: '/_data/matt-posts.json' },
+    { id: 'boombot-feed', url: '/_data/boombot-posts.json' }
+  ];
+  for (const lane of lanes) {
+    const el = document.getElementById(lane.id);
+    if (!el) continue;
+    try {
+      const res = await fetch(lane.url);
+      if (!res.ok) throw new Error('Not found');
+      const posts = await res.json();
+      const latest = posts.slice(0, 3);
+      if (!latest.length) {
+        el.innerHTML = '<div class="feed-empty">Posts coming soon...</div>';
+        continue;
+      }
+      el.innerHTML = latest.map(p => `
+        <a href="${p.url}" class="feed-card">
+          <span class="feed-date">${new Date(p.date).toLocaleDateString('en-US', {year:'numeric',month:'short',day:'numeric'})}</span>
+          <h3 class="feed-title">${p.title}</h3>
+          <p class="feed-excerpt">${p.excerpt}</p>
+        </a>
+      `).join('');
+    } catch(e) {
+      el.innerHTML = '<div class="feed-empty">Posts coming soon...</div>';
+    }
+  }
+})();
+</script>
 {{ end }}
