@@ -195,24 +195,10 @@
 
   .earthstar-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0;
     margin-top: 4rem;
     position: relative;
-  }
-
-  .es-card.es-phase-zero {
-    grid-column: 1 / -1;
-    background: rgba(201,168,76,0.03);
-    border-bottom: 1px solid rgba(0,229,204,0.08);
-  }
-
-  .es-card.es-phase-zero h3 {
-    font-size: 1.4rem;
-  }
-
-  .es-card.es-phase-zero p {
-    max-width: 700px;
   }
 
   .es-card {
@@ -541,7 +527,8 @@
       letter-spacing: 0.02em;
     }
     .about-grid, .vibration-layout { grid-template-columns: 1fr; gap: 3rem; }
-    .earthstar-grid, .merch-preview { grid-template-columns: 1fr 1fr; }
+    .earthstar-grid { grid-template-columns: 1fr; }
+    .merch-preview { grid-template-columns: 1fr 1fr; }
     .dual-feed { grid-template-columns: 1fr; gap: 2rem; }
   }
 </style>
@@ -675,7 +662,7 @@
     <div class="divider"></div>
     <div class="earthstar-grid">
 
-      <div class="es-card es-phase-zero">
+      <div class="es-card">
         <div class="es-phase">Phase 00 ~ The Beginning</div>
         <div class="es-icon-wrap">
           <svg class="es-icon-svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
