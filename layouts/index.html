@@ -201,6 +201,20 @@
     position: relative;
   }
 
+  .es-card.es-phase-zero {
+    grid-column: 1 / -1;
+    background: rgba(201,168,76,0.03);
+    border-bottom: 1px solid rgba(0,229,204,0.08);
+  }
+
+  .es-card.es-phase-zero h3 {
+    font-size: 1.4rem;
+  }
+
+  .es-card.es-phase-zero p {
+    max-width: 700px;
+  }
+
   .es-card {
     background: rgba(0,0,0,0.3);
     border: 1px solid rgba(0,229,204,0.08);
@@ -410,6 +424,8 @@
     padding: 2.5rem;
     background: rgba(255,255,255,0.01);
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .feed-matt {
@@ -430,12 +446,12 @@
 
   .lane-badge {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.25em;
+    font-size: 0.85rem;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     display: inline-block;
-    padding: 0.3rem 0.8rem;
-    margin-bottom: 0.75rem;
+    padding: 0.45rem 1.1rem;
+    margin-bottom: 0.85rem;
   }
 
   .lane-badge--matt {
@@ -451,9 +467,8 @@
   }
 
   .lane-byline {
-    font-size: 0.82rem;
-    font-style: italic;
-    color: var(--muted);
+    font-size: 0.95rem;
+    color: rgba(208,255,248,0.65);
     line-height: 1.5;
     margin: 0;
   }
@@ -482,25 +497,25 @@
 
   .feed-title {
     font-family: 'Cinzel Decorative', serif;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--cream);
     line-height: 1.45;
     margin-bottom: 0.5rem;
   }
 
   .feed-excerpt {
-    font-size: 0.87rem;
-    line-height: 1.7;
-    color: rgba(208,255,248,0.5);
-    font-style: italic;
+    font-size: 0.97rem;
+    line-height: 1.8;
+    color: rgba(208,255,248,0.68);
     margin: 0;
   }
 
   .lane-link {
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: auto;
+    padding-top: 2rem;
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--muted);
@@ -646,7 +661,7 @@
         </div>
       </div>
       <div>
-        <p>Placeholder for the Vibration of Awesome concept — your philosophy, your mission, what this frequency means to you and the world.</p>
+        <p>Placeholder for the Vibration of Awesome concept ~ your philosophy, your mission, what this frequency means to you and the world.</p>
       </div>
     </div>
   </div>
@@ -660,8 +675,21 @@
     <div class="divider"></div>
     <div class="earthstar-grid">
 
+      <div class="es-card es-phase-zero">
+        <div class="es-phase">Phase 00 ~ The Beginning</div>
+        <div class="es-icon-wrap">
+          <svg class="es-icon-svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="7.5" cy="15.5" r="4.5"/>
+            <path d="M21 2l-9.4 9.4M17 6l-3 3"/>
+          </svg>
+        </div>
+        <h3>The Keys of Light</h3>
+        <p>The keys of light have been distributed, the signals have been sent, and the seeds have been planted. This is the beginning of the Reclamation of power for the masses and the Great Transition.</p>
+        <div class="es-number">0</div>
+      </div>
+
       <div class="es-card">
-        <div class="es-phase">Phase 01 — Foundation</div>
+        <div class="es-phase">Phase 01 ~ Foundation</div>
         <div class="es-icon-wrap">
           <svg class="es-icon-svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/>
@@ -669,24 +697,24 @@
           </svg>
         </div>
         <h3>Abundance Realization</h3>
-        <p>We finally built it. The life, the vision, the abundance — realized in full and shared with the world. This is where it begins.</p>
+        <p>We finally built it. The life, the vision, the abundance realized in full and shared with the world. This is where it begins.</p>
         <div class="es-number">I</div>
       </div>
 
       <div class="es-card">
-        <div class="es-phase">Phase 02 — Power</div>
+        <div class="es-phase">Phase 02 ~ Power</div>
         <div class="es-icon-wrap">
           <svg class="es-icon-svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
           </svg>
         </div>
         <h3>Weapons of Mass Creation</h3>
-        <p>With abundance realized, unlimited resources become tools of transformation — systems that make so much more sense the old ones simply fall away.</p>
+        <p>With abundance realized, unlimited resources become tools of transformation. Systems that make so much more sense the old ones simply fall away.</p>
         <div class="es-number">II</div>
       </div>
 
       <div class="es-card">
-        <div class="es-phase">Phase 03 — Destiny</div>
+        <div class="es-phase">Phase 03 ~ Destiny</div>
         <div class="es-icon-wrap">
           <svg class="es-icon-svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="3"/>
@@ -694,7 +722,7 @@
           </svg>
         </div>
         <h3>Global Harmonization</h3>
-        <p>The world finally got its shit together. Not because we forced it — but because the example we set made the old system obsolete. Peace. Harmony. Achieved.</p>
+        <p>The world finally got its shit together. Not because we forced it ~ but because the example we set made the old system obsolete. Peace. Harmony. Achieved.</p>
         <div class="es-number">III</div>
       </div>
 
@@ -750,7 +778,7 @@
       <div class="feed-lane feed-matt">
         <div class="lane-header">
           <span class="lane-badge lane-badge--matt">🌿 From the Forest Temple</span>
-          <p class="lane-byline">by Matt Dunn — raw, unfiltered, human</p>
+          <p class="lane-byline">by Matt Dunn, raw, unfiltered, human, fully expressed</p>
         </div>
         <div class="lane-posts" id="matt-feed">
           <div class="feed-loading">Loading transmissions...</div>
@@ -762,7 +790,7 @@
       <div class="feed-lane feed-boombot">
         <div class="lane-header">
           <span class="lane-badge lane-badge--boombot">⚡ Boom Frequency</span>
-          <p class="lane-byline">by Matty BoomBoom — signal from somewhere interesting</p>
+          <p class="lane-byline">by Matty BoomBoom, Bringing that boom boom</p>
         </div>
         <div class="lane-posts" id="boombot-feed">
           <div class="feed-loading">Loading transmissions...</div>
