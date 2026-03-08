@@ -2,11 +2,13 @@
   "name": "vibrationofawesome-blog-engine",
   "version": "1.0.0",
   "description": "Dual-blog content engine for vibrationofawesome.com",
+  "type": "module",
   "scripts": {
     "generate": "node scripts/generate-post.js",
     "syndicate": "node scripts/syndicate.js",
     "research": "node scripts/seo-research.js",
-    "sitemap": "node scripts/update-sitemap.js"
+    "sitemap": "node scripts/update-sitemap.js",
+    "get-tokens": "node scripts/get-page-tokens.cjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",

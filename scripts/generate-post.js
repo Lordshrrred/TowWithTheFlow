@@ -14,6 +14,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { updateSitemap } from "./update-sitemap.js";
+import { syndicatePost } from "./syndicate.js";
 
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
@@ -22,8 +23,9 @@ const ROOT = path.resolve(__dirname, "..");
 
 // ── CLI ARGS ──
 const argv = minimist(process.argv.slice(2), {
-  string: ["lane", "title", "keyword", "topic"],
-  alias: { l: "lane", t: "title", k: "keyword", p: "topic" },
+  string:  ["lane", "title", "keyword", "topic"],
+  boolean: ["no-syndicate"],
+  alias:   { l: "lane", t: "title", k: "keyword", p: "topic" },
 });
 const lane = argv.lane;
 if (!lane || !["matt", "boombot"].includes(lane)) {
@@ -400,6 +402,24 @@ async function main() {
 
   // Always regenerate sitemap after adding a post
   updateSitemap();
+
+  // Auto-syndicate to all configured platforms (skip with --no-syndicate)
+  if (!argv["no-syndicate"]) {
+    try {
+      await syndicatePost({
+        title:    postTitle,
+        excerpt:  extractExcerpt(bodyMarkdown),
+        url:      "https://vibrationofawesome.com/blog/" + lane + "/posts/" + slug + ".html",
+        tags:     [],
+        bodyText: bodyMarkdown.slice(0, 1000),
+      });
+    } catch (err) {
+      // Syndication errors are non-fatal — the post was already written
+      console.error("Syndication encountered an error: " + err.message);
+    }
+  } else {
+    console.log("\nSyndication skipped (--no-syndicate).");
+  }
 }
 
 main();
