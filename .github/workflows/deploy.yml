@@ -1,9 +1,11 @@
-name: Deploy to Netlify
+name: Netlify Functions (disabled - Netlify deploys via dashboard integration)
+# This workflow is intentionally disabled.
+# Netlify auto-deploys from the GitHub repo via its own dashboard webhook,
+# keeping vibrationofawesome.netlify.app alive for the AURA serverless function.
+# The primary site (vibrationofawesome.com) is now served by GitHub Pages.
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch: # manual trigger only — no longer fires on push
 
 jobs:
   deploy:
