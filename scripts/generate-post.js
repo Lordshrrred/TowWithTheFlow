@@ -403,8 +403,10 @@ async function main() {
   // Always regenerate sitemap after adding a post
   updateSitemap();
 
-  // Auto-syndicate to all configured platforms (skip with --no-syndicate)
-  if (!argv["no-syndicate"]) {
+  // ── Syndication ──
+  // Boom Frequency (boombot): auto-syndicate immediately after generation.
+  // Forest Temple (matt): manual only — run the command printed below when ready.
+  if (lane === "boombot" && !argv["no-syndicate"]) {
     try {
       await syndicatePost({
         title:    postTitle,
@@ -417,8 +419,12 @@ async function main() {
       // Syndication errors are non-fatal — the post was already written
       console.error("Syndication encountered an error: " + err.message);
     }
-  } else {
+  } else if (lane === "boombot" && argv["no-syndicate"]) {
     console.log("\nSyndication skipped (--no-syndicate).");
+  } else {
+    // Matt / Forest Temple — never auto-syndicate
+    console.log("\nForest Temple post ready. Syndicate manually when you're ready:");
+    console.log("  node scripts/syndicate.js --lane matt --slug " + slug);
   }
 }
 
