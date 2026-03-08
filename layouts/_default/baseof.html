@@ -107,7 +107,7 @@
   }
 
   /* NAV */
-  nav {
+  body > nav {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
@@ -347,7 +347,7 @@
   .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
   @media (max-width: 768px) {
-    nav { padding: 1.2rem 1.5rem; position: relative; flex-wrap: wrap; }
+    body > nav { padding: 1.2rem 1.5rem; position: relative; flex-wrap: wrap; }
     .hamburger { display: flex; }
     .nav-links {
       display: none;
