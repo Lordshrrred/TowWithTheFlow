@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Vibration of Awesome</title>
-<meta name="description" content="Privacy Policy for VibrationOfAwesome.com">
+<title>Contact — Vibration of Awesome</title>
+<meta name="description" content="Get in touch with VibrationOfAwesome.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -157,7 +157,7 @@
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-  /* PAGE CONTENT */
+  /* PAGE */
   .page-wrap {
     position: relative;
     z-index: 1;
@@ -168,8 +168,7 @@
 
   .page-header {
     text-align: center;
-    padding: 4rem 2rem 3rem;
-    position: relative;
+    padding: 4rem 2rem 2rem;
   }
 
   .section-label {
@@ -202,13 +201,11 @@
     margin-bottom: 1rem;
   }
 
-  .page-updated {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    color: var(--muted);
-    opacity: 0.6;
-    text-transform: uppercase;
+  .page-subtitle {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: rgba(208,255,248,0.55);
+    line-height: 1.8;
   }
 
   .divider {
@@ -218,66 +215,164 @@
     margin: 2rem auto;
   }
 
-  /* CONTENT */
-  .content-wrap {
-    max-width: 760px;
+  /* CONTACT LAYOUT */
+  .contact-wrap {
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 5rem;
+    align-items: start;
   }
 
-  .policy-block {
-    margin-bottom: 2.5rem;
+  /* LEFT PANEL */
+  .contact-info {
     opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
   }
-  .policy-block.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .contact-info.visible { opacity: 1; transform: translateY(0); }
 
-  .policy-block h2 {
+  .contact-info-label {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--gold);
-    opacity: 0.9;
-    margin-bottom: 0.9rem;
-    padding-bottom: 0.6rem;
-    border-bottom: 1px solid rgba(0,229,204,0.12);
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .policy-block h2::before {
-    content: '✦';
-    font-size: 0.6rem;
     opacity: 0.6;
+    margin-bottom: 0.6rem;
   }
 
-  .policy-block p, .policy-block li {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: rgba(208,255,248,0.65);
+  .contact-info-value {
+    font-size: 1rem;
     font-style: italic;
+    color: rgba(208,255,248,0.75);
+    line-height: 1.7;
+    margin-bottom: 2rem;
   }
-  .policy-block ul {
-    padding-left: 1.5rem;
-    margin-top: 0.5rem;
-  }
-  .policy-block li {
-    margin-bottom: 0.4rem;
-  }
-  .policy-block a {
+
+  .contact-info-value a {
     color: var(--gold);
     text-decoration: none;
     border-bottom: 1px solid rgba(0,229,204,0.3);
     transition: border-color 0.2s, text-shadow 0.2s;
   }
-  .policy-block a:hover {
+  .contact-info-value a:hover {
     border-color: var(--gold);
     text-shadow: 0 0 10px rgba(0,229,204,0.4);
+  }
+
+  .contact-divider {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 0.5rem 0 2rem;
+  }
+
+  /* FORM */
+  .contact-form-wrap {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s;
+  }
+  .contact-form-wrap.visible { opacity: 1; transform: translateY(0); }
+
+  .form-group {
+    margin-bottom: 1.6rem;
+  }
+
+  label {
+    display: block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    background: rgba(0,20,18,0.6);
+    border: 1px solid rgba(0,229,204,0.15);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-style: italic;
+    padding: 0.85rem 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  textarea::placeholder {
+    color: rgba(74,158,150,0.5);
+    font-style: italic;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: rgba(0,229,204,0.5);
+    background: rgba(0,30,28,0.7);
+    box-shadow: 0 0 20px rgba(0,229,204,0.06), inset 0 0 10px rgba(0,229,204,0.02);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--deep);
+    background: var(--gold);
+    padding: 1rem 2.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    margin-top: 0.5rem;
+  }
+  .btn-primary:hover {
+    background: var(--gold-light);
+    box-shadow: 0 0 30px rgba(0,229,204,0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Success state */
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(0,229,204,0.15);
+    background: rgba(0,20,18,0.4);
+  }
+  .form-success .success-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .form-success h3 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+  }
+  .form-success p {
+    font-size: 1rem;
+    font-style: italic;
+    color: rgba(208,255,248,0.55);
+    line-height: 1.8;
   }
 
   /* FOOTER */
@@ -291,7 +386,6 @@
     position: relative;
     z-index: 1;
   }
-  .footer-left {}
   .footer-logo {
     font-family: 'Cinzel Decorative', serif;
     font-size: 1.2rem;
@@ -325,9 +419,7 @@
     color: var(--gold);
     text-shadow: 0 0 8px rgba(0,229,204,0.4);
   }
-  .footer-right {
-    text-align: right;
-  }
+  .footer-right { text-align: right; }
   .footer-right p {
     font-family: 'Rajdhani', sans-serif;
     font-size: 0.7rem;
@@ -362,6 +454,7 @@
       font-size: 0.85rem;
     }
     .nav-links a.aura-link { margin: 0.5rem 1.5rem; display: block; text-align: center; }
+    .contact-wrap { grid-template-columns: 1fr; gap: 3rem; }
     footer { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 1.5rem; }
     .footer-right { text-align: center; }
     .footer-tagline { font-size: 0.78rem; }
@@ -394,82 +487,65 @@
 <main class="page-wrap">
 
   <div class="page-header">
-    <p class="section-label">Legal</p>
-    <h1 class="page-title">Privacy Policy</h1>
-    <p class="page-updated">Last updated: March 7, 2026</p>
+    <p class="section-label">Reach Out</p>
+    <h1 class="page-title">Contact</h1>
+    <p class="page-subtitle">Send a transmission. We'll resonate back.</p>
     <div class="divider"></div>
   </div>
 
-  <div class="content-wrap">
+  <div class="contact-wrap">
 
-    <div class="policy-block">
-      <p>VibrationOfAwesome ("we", "us", or "our") operates
-      <strong>vibrationofawesome.com</strong>. This page explains what information we
-      collect when you visit, how we use it, and what rights you have over that
-      information.</p>
+    <!-- Left: info panel -->
+    <div class="contact-info" id="contactInfo">
+      <div class="contact-info-label">Email</div>
+      <div class="contact-info-value">
+        <a href="mailto:matt@vibrationofawesome.com">matt@vibrationofawesome.com</a>
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-info-label">Response Time</div>
+      <div class="contact-info-value">Usually within 48 hours.</div>
+      <div class="contact-divider"></div>
+      <div class="contact-info-label">Based In</div>
+      <div class="contact-info-value">Earth. Cosmos adjacent.</div>
     </div>
 
-    <div class="policy-block">
-      <h2>Information We Collect</h2>
-      <ul>
-        <li><strong>Usage data</strong> — pages visited, time on site, referring URLs,
-            browser type, and device type, collected automatically via server logs
-            or analytics tools.</li>
-        <li><strong>Cookies</strong> — small files stored in your browser to remember
-            preferences and measure traffic. You can disable cookies in your browser
-            settings at any time.</li>
-        <li><strong>Voluntarily provided information</strong> — any name or email
-            address you choose to share when contacting us directly.</li>
-      </ul>
-    </div>
+    <!-- Right: form -->
+    <div class="contact-form-wrap" id="contactFormWrap">
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        id="contactForm"
+      >
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;">
+          <label>Don't fill this out: <input name="bot-field"></label>
+        </p>
 
-    <div class="policy-block">
-      <h2>How We Use Your Information</h2>
-      <ul>
-        <li>To operate and improve the website and its content.</li>
-        <li>To understand how visitors engage with our work.</li>
-        <li>To respond to messages or feedback you send us.</li>
-      </ul>
-    </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
 
-    <div class="policy-block">
-      <h2>Third-Party Services</h2>
-      <p>We may use third-party tools — such as analytics providers, social media
-      platforms, or content delivery networks — that collect data subject to their
-      own privacy policies. We do not sell your personal information to any
-      third party.</p>
-    </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
 
-    <div class="policy-block">
-      <h2>Data Retention</h2>
-      <p>We retain data only as long as necessary for the purposes described above or
-      as required by applicable law.</p>
-    </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="What's on your frequency…" required></textarea>
+        </div>
 
-    <div class="policy-block">
-      <h2>Your Rights</h2>
-      <p>Depending on your location, you may have rights to access, correct, or delete
-      personal information we hold about you. To exercise any of these rights,
-      contact us at the address below.</p>
-    </div>
+        <button type="submit" class="btn-primary">Send Transmission</button>
+      </form>
 
-    <div class="policy-block">
-      <h2>Children's Privacy</h2>
-      <p>This site is not directed at children under 13. We do not knowingly collect
-      personal information from children.</p>
-    </div>
-
-    <div class="policy-block">
-      <h2>Changes to This Policy</h2>
-      <p>We may update this policy from time to time. The "Last updated" date at the
-      top of this page will reflect any changes. Continued use of the site after
-      an update constitutes acceptance of the revised policy.</p>
-    </div>
-
-    <div class="policy-block">
-      <h2>Contact</h2>
-      <p>Questions about this policy? Reach us at
-      <a href="mailto:matt@vibrationofawesome.com">matt@vibrationofawesome.com</a></p>
+      <div class="form-success" id="formSuccess">
+        <span class="success-icon">✦</span>
+        <h3>Transmission Received</h3>
+        <p>Thank you for reaching out. We'll be in touch soon.</p>
+      </div>
     </div>
 
   </div>
@@ -512,7 +588,7 @@
     });
   });
 
-  // Custom cursor — desktop only
+  // Custom cursor
   const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
   if (!isTouchDevice) {
     const cursor = document.getElementById('cursor');
@@ -521,7 +597,7 @@
     let rx = 0, ry = 0, cx = 0, cy = 0;
     document.addEventListener('mousemove', e => { cx = e.clientX; cy = e.clientY; cursor.style.left = cx+'px'; cursor.style.top = cy+'px'; });
     (function animateRing() { rx += (cx-rx)*0.12; ry += (cy-ry)*0.12; ring.style.left = rx+'px'; ring.style.top = ry+'px'; requestAnimationFrame(animateRing); })();
-    document.querySelectorAll('a, button').forEach(el => {
+    document.querySelectorAll('a, button, input, textarea').forEach(el => {
       el.addEventListener('mouseenter', () => { cursor.style.transform='translate(-50%,-50%) scale(2)'; ring.style.transform='translate(-50%,-50%) scale(1.5)'; ring.style.borderColor='rgba(0,229,204,0.8)'; });
       el.addEventListener('mouseleave', () => { cursor.style.transform='translate(-50%,-50%) scale(1)'; ring.style.transform='translate(-50%,-50%) scale(1)'; ring.style.borderColor='rgba(0,229,204,0.4)'; });
     });
@@ -529,13 +605,27 @@
 
   // Scroll reveal
   const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
-  document.querySelectorAll('.policy-block').forEach(el => io.observe(el));
+  document.querySelectorAll('#contactInfo, #contactFormWrap').forEach(el => io.observe(el));
 
   // Nav scroll
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
     nav.style.background = window.scrollY > 50 ? 'rgba(2,10,10,0.97)' : 'linear-gradient(to bottom, rgba(2,10,10,0.97), transparent)';
     nav.style.borderBottomColor = window.scrollY > 50 ? 'rgba(0,229,204,0.15)' : 'rgba(0,229,204,0.1)';
+  });
+
+  // Form success (for Netlify AJAX or native redirect fallback)
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } catch {
+      form.submit(); // fallback to native Netlify redirect
+    }
   });
 </script>
 </body>
