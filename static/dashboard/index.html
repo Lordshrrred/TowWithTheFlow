@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syndication Dashboard | Vibration of Awesome</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #020a0a; --surface: #060f10; --surface2: #0b1a1c; --surface3: #0f2224;
+      --accent: #00e5cc; --accent2: #00b4d8; --accent-dim: rgba(0,229,204,0.15);
+      --success: #00e676; --danger: #ff5252; --warn: #ffb300;
+      --text: #d0fff8; --text-muted: #4a9e96; --border: rgba(0,229,204,0.12);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: "Space Grotesk", sans-serif; font-size: 15px;
+      line-height: 1.6; min-height: 100vh; overflow-x: hidden;
+    }
+    #stars-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+    .wrap { position: relative; z-index: 1; display: flex; flex-direction: column; min-height: 100vh; }
+
+    /* ── Auth Gate ── */
+    #gate {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 2rem;
+    }
+    .gate-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 2.5rem 3rem; max-width: 380px; width: 100%; text-align: center;
+    }
+    .gate-logo { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+    .gate-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .gate-sub { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 2rem; }
+    .gate-input {
+      width: 100%; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; color: var(--text); font-family: inherit; font-size: 1rem;
+      padding: 0.75rem 1rem; margin-bottom: 1rem; outline: none;
+      transition: border-color 0.2s;
+    }
+    .gate-input:focus { border-color: var(--accent); }
+    .gate-btn {
+      width: 100%; background: var(--accent); color: #020a0a;
+      font-family: inherit; font-size: 0.9rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; border: none;
+      border-radius: 6px; padding: 0.75rem; cursor: pointer; transition: opacity 0.2s;
+    }
+    .gate-btn:hover { opacity: 0.85; }
+    .gate-error { color: var(--danger); font-size: 0.84rem; margin-top: 0.75rem; display: none; }
+    .gate-setup {
+      color: var(--text-muted); font-size: 0.8rem; margin-top: 1.5rem;
+      background: var(--surface2); border-radius: 6px; padding: 0.75rem; text-align: left;
+    }
+    .gate-setup code { color: var(--accent); font-size: 0.8em; }
+
+    /* ── Main Dashboard (hidden until auth) ── */
+    #app { display: none; flex-direction: column; min-height: 100vh; }
+
+    /* ── Header ── */
+    .dash-header {
+      border-bottom: 1px solid var(--border); background: rgba(2,10,10,0.9);
+      backdrop-filter: blur(12px); padding: 1rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .dash-logo { font-weight: 700; font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .dash-logo span { color: var(--accent); }
+    .dash-subtitle { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+    .dash-lock-btn {
+      background: none; border: 1px solid var(--border); color: var(--text-muted);
+      font-family: inherit; font-size: 0.78rem; padding: 0.35rem 0.8rem; border-radius: 4px;
+      cursor: pointer; transition: border-color 0.2s, color 0.2s; letter-spacing: 0.05em;
+    }
+    .dash-lock-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Main content ── */
+    .dash-main { padding: 2rem; max-width: 1400px; margin: 0 auto; width: 100%; flex: 1; }
+
+    /* ── Stats strip ── */
+    .stats-strip { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+      padding: 1rem 1.5rem; flex: 1; min-width: 140px;
+    }
+    .stat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; }
+    .stat-value { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+    .stat-sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.1rem; }
+
+    /* ── Section headers ── */
+    .section { margin-bottom: 2.5rem; }
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+    }
+    .section-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+
+    /* ── Platform status table ── */
+    .post-table { width: 100%; border-collapse: collapse; }
+    .post-table th {
+      text-align: left; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-muted); padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-table td {
+      padding: 0.75rem; border-bottom: 1px solid rgba(0,229,204,0.05);
+      vertical-align: middle;
+    }
+    .post-table tr:hover td { background: rgba(0,229,204,0.03); }
+    .post-title-cell { max-width: 260px; }
+    .post-title-link { color: var(--text); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+    .post-title-link:hover { color: var(--accent); }
+    .post-lane { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.2rem; }
+    .post-date { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; }
+
+    /* Platform icons/badges */
+    .platform-badges { display: flex; gap: 4px; flex-wrap: nowrap; }
+    .badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 22px; border-radius: 3px; font-size: 0.6rem;
+      font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      cursor: default; transition: transform 0.15s;
+    }
+    .badge:hover { transform: scale(1.1); }
+    .badge-ok   { background: rgba(0,230,118,0.15); color: var(--success); border: 1px solid rgba(0,230,118,0.3); }
+    .badge-fail { background: rgba(255,82,82,0.12); color: var(--danger); border: 1px solid rgba(255,82,82,0.25); }
+    .badge-skip { background: rgba(255,255,255,0.04); color: #555; border: 1px solid #222; }
+
+    /* ── Queue section ── */
+    .queue-grid { display: grid; gap: 0.75rem; }
+    .queue-item {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+      padding: 0.9rem 1.2rem; display: flex; align-items: center; gap: 1rem;
+    }
+    .queue-lane-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .queue-item-title { font-size: 0.9rem; font-weight: 500; flex: 1; }
+    .queue-item-date  { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
+    .queue-synced { opacity: 0.4; }
+    .queue-pending-badge {
+      font-size: 0.65rem; letter-spacing: 0.08em; padding: 0.2em 0.5em;
+      border-radius: 2px; background: rgba(0,229,204,0.1); color: var(--accent);
+      border: 1px solid rgba(0,229,204,0.2); text-transform: uppercase; font-weight: 700;
+    }
+
+    /* ── Manual trigger ── */
+    .trigger-panel {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem;
+    }
+    .trigger-row { display: flex; gap: 0.75rem; align-items: flex-end; flex-wrap: wrap; margin-bottom: 1rem; }
+    .trigger-field { display: flex; flex-direction: column; gap: 0.3rem; flex: 1; min-width: 180px; }
+    .trigger-label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+    .trigger-select {
+      background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+      font-family: inherit; font-size: 0.9rem; padding: 0.6rem 0.8rem; border-radius: 6px; outline: none;
+    }
+    .trigger-select:focus { border-color: var(--accent); }
+    .trigger-btn {
+      background: var(--accent); color: #020a0a; font-family: inherit; font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: none;
+      border-radius: 6px; padding: 0.6rem 1.4rem; cursor: pointer; transition: opacity 0.2s;
+      white-space: nowrap; align-self: flex-end;
+    }
+    .trigger-btn:hover { opacity: 0.85; }
+    .trigger-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .cmd-box {
+      display: none; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 0.9rem 1rem; margin-top: 0.5rem;
+    }
+    .cmd-label { font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .cmd-text { font-family: "JetBrains Mono", "Fira Code", monospace; font-size: 0.85rem; color: var(--accent); word-break: break-all; }
+    .cmd-copy {
+      margin-top: 0.6rem; background: none; border: 1px solid var(--border); color: var(--text-muted);
+      font-family: inherit; font-size: 0.78rem; padding: 0.3rem 0.7rem; border-radius: 4px; cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .cmd-copy:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Caption preview panel ── */
+    .caption-modal {
+      display: none; position: fixed; inset: 0; background: rgba(2,10,10,0.9);
+      z-index: 200; align-items: center; justify-content: center; padding: 2rem;
+    }
+    .caption-modal.open { display: flex; }
+    .caption-inner {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      max-width: 720px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 2rem;
+    }
+    .caption-inner h2 { font-size: 1rem; color: var(--accent); margin-bottom: 1.5rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .caption-platform { margin-bottom: 1.2rem; }
+    .cap-name { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; }
+    .cap-text { background: var(--surface2); border-radius: 6px; padding: 0.75rem 1rem; font-size: 0.85rem; white-space: pre-wrap; word-break: break-word; }
+    .caption-close {
+      display: block; width: 100%; margin-top: 1.5rem; background: none; border: 1px solid var(--border);
+      color: var(--text-muted); font-family: inherit; font-size: 0.85rem; padding: 0.6rem;
+      border-radius: 6px; cursor: pointer; transition: border-color 0.2s;
+    }
+    .caption-close:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Empty states ── */
+    .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-muted); }
+    .empty-state code { color: var(--accent); font-size: 0.9em; }
+
+    /* ── Footer ── */
+    .dash-footer { text-align: center; padding: 1.5rem; font-size: 0.78rem; color: var(--text-muted); border-top: 1px solid var(--border); }
+
+    /* ── Loading ── */
+    .loading { color: var(--text-muted); font-size: 0.88rem; padding: 1rem; }
+    .dot-pulse::after { content: "..."; animation: dots 1.2s steps(4,end) infinite; }
+    @keyframes dots { 0%,20% { content: "."; } 40% { content: ".."; } 60%,100% { content: "..."; } }
+
+    @media (max-width: 768px) {
+      .dash-main { padding: 1rem; }
+      .dash-header { padding: 0.75rem 1rem; }
+      .stats-strip { gap: 0.5rem; }
+      .platform-badges { flex-wrap: wrap; }
+      .post-table { font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="stars-canvas" aria-hidden="true"></canvas>
+
+<div class="wrap">
+
+  <!-- ── AUTH GATE ── -->
+  <div id="gate">
+    <div class="gate-card">
+      <div class="gate-logo">VibrationofAwesome</div>
+      <h1 class="gate-title">Syndication Dashboard</h1>
+      <p class="gate-sub">Enter dashboard password to continue.</p>
+      <input id="pw-input" class="gate-input" type="password" placeholder="Password" autocomplete="current-password">
+      <button class="gate-btn" id="pw-submit">Unlock</button>
+      <div class="gate-error" id="pw-error">Incorrect password. Try again.</div>
+      <div class="gate-setup" id="setup-note" style="display:none">
+        <strong>Setup required:</strong> Run syndication once to generate the password config:<br>
+        <code>DASHBOARD_PASSWORD=yourpass node scripts/syndicate.js --lane boombot --slug your-post</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN APP ── -->
+  <div id="app">
+    <header class="dash-header">
+      <div>
+        <div class="dash-logo">Vibration<span>of</span>Awesome</div>
+        <div class="dash-subtitle">Syndication Dashboard</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem">
+        <span id="last-updated" style="font-size:0.75rem;color:var(--text-muted)"></span>
+        <button class="dash-lock-btn" id="lock-btn">Lock</button>
+      </div>
+    </header>
+
+    <main class="dash-main">
+
+      <!-- Stats -->
+      <div class="stats-strip" id="stats-strip">
+        <div class="stat-card">
+          <div class="stat-label">Total Posts Syndicated</div>
+          <div class="stat-value" id="stat-total">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">This Week</div>
+          <div class="stat-value" id="stat-week">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Success Rate</div>
+          <div class="stat-value" id="stat-rate">—</div>
+          <div class="stat-sub">across all platforms</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Platforms Active</div>
+          <div class="stat-value" id="stat-platforms">10</div>
+          <div class="stat-sub">BS · MS · FB×2 · PT · DV · HN · TU · IG · TH</div>
+        </div>
+      </div>
+
+      <!-- Recent posts table -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Recent Syndications</span>
+          <span style="font-size:0.75rem;color:var(--text-muted)" id="entry-count"></span>
+        </div>
+        <div id="recent-posts-wrap">
+          <div class="loading dot-pulse">Loading</div>
+        </div>
+      </div>
+
+      <!-- Upcoming queue -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Post Queue</span>
+          <span style="font-size:0.75rem;color:var(--text-muted)">All posts · newest first</span>
+        </div>
+        <div id="queue-wrap">
+          <div class="loading dot-pulse">Loading</div>
+        </div>
+      </div>
+
+      <!-- Manual trigger -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Manual Syndication</span>
+        </div>
+        <div class="trigger-panel">
+          <div class="trigger-row">
+            <div class="trigger-field">
+              <label class="trigger-label">Lane</label>
+              <select class="trigger-select" id="trig-lane">
+                <option value="boombot">Boom Frequency (BoomBot)</option>
+                <option value="matt">Forest Temple (Matt)</option>
+              </select>
+            </div>
+            <div class="trigger-field">
+              <label class="trigger-label">Post</label>
+              <select class="trigger-select" id="trig-slug">
+                <option value="">— select post —</option>
+              </select>
+            </div>
+            <button class="trigger-btn" id="trig-btn" disabled>Generate Command</button>
+          </div>
+          <div class="cmd-box" id="cmd-box">
+            <div class="cmd-label">Run this in your terminal:</div>
+            <div class="cmd-text" id="cmd-text"></div>
+            <button class="cmd-copy" id="cmd-copy">Copy to clipboard</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="dash-footer">
+      Vibration of Awesome &nbsp;·&nbsp; Syndication Dashboard &nbsp;·&nbsp;
+      <a href="/" style="color:var(--accent);text-decoration:none">vibrationofawesome.com</a>
+    </footer>
+  </div>
+
+</div>
+
+<!-- Caption preview modal -->
+<div class="caption-modal" id="caption-modal" role="dialog" aria-modal="true" aria-label="Captions">
+  <div class="caption-inner" id="caption-inner">
+    <h2>Captions Used</h2>
+    <div id="caption-body"></div>
+    <button class="caption-close" id="caption-close">Close</button>
+  </div>
+</div>
+
+<script>
+// ── Stars canvas ─────────────────────────────────────────────────────────────
+(function () {
+  const canvas = document.getElementById("stars-canvas");
+  const ctx    = canvas.getContext("2d");
+  let stars    = [];
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  function init() {
+    stars = Array.from({ length: 140 }, () => ({
+      x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+      r: Math.random() * 1.1 + 0.2, speed: Math.random() * 0.12 + 0.03,
+      op: Math.random() * 0.5 + 0.15, pulse: Math.random() * Math.PI * 2,
+      ps: Math.random() * 0.006 + 0.002, accent: Math.random() < 0.05,
+    }));
+  }
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const s of stars) {
+      s.pulse += s.ps;
+      const op = s.op * (0.7 + 0.3 * Math.sin(s.pulse));
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = s.accent ? `rgba(0,229,204,${op})` : `rgba(255,255,255,${op})`;
+      ctx.fill();
+      s.y += s.speed;
+      if (s.y > canvas.height + 2) { s.y = -2; s.x = Math.random() * canvas.width; }
+    }
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener("resize", () => { resize(); init(); });
+  resize(); init(); draw();
+})();
+
+// ── Constants ─────────────────────────────────────────────────────────────────
+const PLATFORM_LABELS = {
+  bluesky:            "BS",
+  mastodon:           "MS",
+  facebook_voa:       "FV",
+  facebook_earthstar: "FE",
+  pinterest:          "PT",
+  devto:              "DV",
+  hashnode:           "HN",
+  tumblr:             "TU",
+  instagram:          "IG",
+  threads:            "TH",
+};
+const PLATFORM_NAMES = {
+  bluesky:            "Bluesky",
+  mastodon:           "Mastodon",
+  facebook_voa:       "Facebook VOA",
+  facebook_earthstar: "Facebook EarthStar",
+  pinterest:          "Pinterest",
+  devto:              "Dev.to",
+  hashnode:           "Hashnode",
+  tumblr:             "Tumblr",
+  instagram:          "Instagram",
+  threads:            "Threads",
+};
+const SESSION_KEY   = "voa_dash_authed";
+const CONFIG_URL    = "/_data/dashboard-config.json";
+const LOG_URL       = "/_data/syndication-log.json";
+const BOOMBOT_URL   = "/_data/boombot-posts.json";
+const MATT_URL      = "/_data/matt-posts.json";
+
+// ── Password hashing (SubtleCrypto) ──────────────────────────────────────────
+async function sha256hex(str) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+// ── Auth gate ─────────────────────────────────────────────────────────────────
+async function initAuth() {
+  // Already authed this session?
+  if (sessionStorage.getItem(SESSION_KEY) === "1") { showApp(); return; }
+
+  // Fetch config for password hash
+  let configHash = null;
+  try {
+    const cfg = await fetch(CONFIG_URL).then(r => r.ok ? r.json() : null);
+    configHash = cfg?.passwordHash || null;
+  } catch (_) { /* fetch may fail in dev */ }
+
+  if (!configHash) {
+    document.getElementById("setup-note").style.display = "block";
+  }
+
+  const input  = document.getElementById("pw-input");
+  const errEl  = document.getElementById("pw-error");
+  const submit = document.getElementById("pw-submit");
+
+  async function tryLogin() {
+    const val = input.value.trim();
+    if (!val) return;
+    if (!configHash) {
+      // No config — allow any non-empty password in dev mode
+      sessionStorage.setItem(SESSION_KEY, "1");
+      showApp(); return;
+    }
+    const hash = await sha256hex(val);
+    if (hash === configHash) {
+      errEl.style.display = "none";
+      sessionStorage.setItem(SESSION_KEY, "1");
+      showApp();
+    } else {
+      errEl.style.display = "block";
+      input.value = "";
+    }
+  }
+
+  submit.addEventListener("click", tryLogin);
+  input.addEventListener("keydown", e => { if (e.key === "Enter") tryLogin(); });
+}
+
+// ── Show main app ─────────────────────────────────────────────────────────────
+function showApp() {
+  document.getElementById("gate").style.display = "none";
+  const app = document.getElementById("app");
+  app.style.display = "flex";
+  app.style.flexDirection = "column";
+  loadDashboard();
+}
+
+document.getElementById("lock-btn").addEventListener("click", () => {
+  sessionStorage.removeItem(SESSION_KEY);
+  location.reload();
+});
+
+// ── Data loading ──────────────────────────────────────────────────────────────
+async function loadDashboard() {
+  const [logData, boombotPosts, mattPosts] = await Promise.all([
+    fetch(LOG_URL).then(r => r.ok ? r.json() : { entries: [] }).catch(() => ({ entries: [] })),
+    fetch(BOOMBOT_URL).then(r => r.ok ? r.json() : []).catch(() => []),
+    fetch(MATT_URL).then(r => r.ok ? r.json() : []).catch(() => []),
+  ]);
+
+  const entries = Array.isArray(logData.entries) ? logData.entries : [];
+  const allPosts = [
+    ...boombotPosts.map(p => ({ ...p, lane: "boombot" })),
+    ...mattPosts.map(p => ({ ...p, lane: "matt" })),
+  ].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  renderStats(entries);
+  renderRecentPosts(entries);
+  renderQueue(entries, allPosts);
+  renderTrigger(allPosts);
+
+  if (logData.lastUpdated) {
+    document.getElementById("last-updated").textContent =
+      "Updated " + new Date(logData.lastUpdated).toLocaleString();
+  }
+}
+
+// ── Stats ─────────────────────────────────────────────────────────────────────
+function renderStats(entries) {
+  document.getElementById("stat-total").textContent = entries.length;
+
+  const weekAgo   = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  const thisWeek  = entries.filter(e => new Date(e.timestamp) > weekAgo).length;
+  document.getElementById("stat-week").textContent = thisWeek;
+
+  if (entries.length > 0) {
+    let total = 0, ok = 0;
+    for (const e of entries) {
+      for (const r of Object.values(e.platforms || {})) {
+        total++; if (r.success) ok++;
+      }
+    }
+    document.getElementById("stat-rate").textContent =
+      total > 0 ? Math.round((ok / total) * 100) + "%" : "—";
+  }
+}
+
+// ── Recent posts table ────────────────────────────────────────────────────────
+function renderRecentPosts(entries) {
+  const wrap = document.getElementById("recent-posts-wrap");
+  document.getElementById("entry-count").textContent = entries.length + " entries";
+
+  if (entries.length === 0) {
+    wrap.innerHTML = `<div class="empty-state">No syndications yet.<br>Run: <code>node scripts/syndicate.js --lane boombot --slug your-slug</code></div>`;
+    return;
+  }
+
+  const rows = entries.slice(0, 25).map(entry => {
+    const platforms = entry.platforms || {};
+    const badges = Object.entries(PLATFORM_LABELS).map(([key, abbr]) => {
+      const r = platforms[key];
+      if (!r) return `<span class="badge badge-skip" title="${PLATFORM_NAMES[key]}: no data">${abbr}</span>`;
+      const cls   = r.success ? "badge-ok" : "badge-fail";
+      const tip   = r.success
+        ? `${PLATFORM_NAMES[key]}: ✓${r.postUrl ? " — " + r.postUrl : ""}`
+        : `${PLATFORM_NAMES[key]}: ✗ ${r.error || "failed"}`;
+      const url   = r.postUrl
+        ? `onclick="window.open('${r.postUrl}','_blank')" style="cursor:pointer"`
+        : "";
+      return `<span class="badge ${cls}" title="${tip}" ${url}>${abbr}</span>`;
+    }).join("");
+
+    const hasCaptions = entry.captions && Object.keys(entry.captions).length > 0;
+    const captionBtn = hasCaptions
+      ? `<button onclick="showCaptions(${JSON.stringify(JSON.stringify(entry.captions))})" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.75rem;padding:0.2rem 0.4rem;border-radius:3px;border:1px solid var(--border)">captions</button>`
+      : "";
+
+    const date    = new Date(entry.timestamp).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    const laneClr = entry.lane === "matt" ? "#ffb300" : "#00e5ff";
+    const laneNm  = entry.lane === "matt" ? "Forest Temple" : "Boom Frequency";
+
+    return `<tr>
+      <td class="post-title-cell">
+        <a href="${entry.postUrl}" target="_blank" class="post-title-link">${esc(entry.postTitle)}</a>
+        <div class="post-lane" style="color:${laneClr}">${laneNm}</div>
+      </td>
+      <td class="post-date">${date}</td>
+      <td><div class="platform-badges">${badges}</div></td>
+      <td>${captionBtn}</td>
+    </tr>`;
+  }).join("");
+
+  wrap.innerHTML = `<table class="post-table">
+    <thead><tr>
+      <th>Post</th>
+      <th>Date</th>
+      <th>Platforms</th>
+      <th></th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+// ── Queue ─────────────────────────────────────────────────────────────────────
+function renderQueue(entries, allPosts) {
+  const wrap    = document.getElementById("queue-wrap");
+  const synced  = new Set(entries.map(e => e.postSlug));
+
+  if (allPosts.length === 0) {
+    wrap.innerHTML = `<div class="empty-state">No posts found in JSON indexes.</div>`;
+    return;
+  }
+
+  const items = allPosts.map(post => {
+    const isSynced  = synced.has(post.slug);
+    const laneClr   = post.lane === "matt" ? "#ffb300" : "#00e5ff";
+    const laneNm    = post.lane === "matt" ? "Forest Temple" : "Boom Frequency";
+    const date      = new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    const badge     = isSynced
+      ? `<span style="font-size:0.68rem;color:var(--text-muted)">synced</span>`
+      : `<span class="queue-pending-badge">Pending</span>`;
+
+    return `<div class="queue-item${isSynced ? " queue-synced" : ""}">
+      <div class="queue-lane-dot" style="background:${laneClr}" title="${laneNm}"></div>
+      <div class="queue-item-title">
+        <a href="https://vibrationofawesome.com${post.url}" target="_blank" style="color:inherit;text-decoration:none">${esc(post.title)}</a>
+      </div>
+      <div class="queue-item-date">${date}</div>
+      ${badge}
+    </div>`;
+  }).join("");
+
+  wrap.innerHTML = `<div class="queue-grid">${items}</div>`;
+}
+
+// ── Manual trigger ────────────────────────────────────────────────────────────
+let allPostsCache = [];
+
+async function renderTrigger(allPosts) {
+  allPostsCache = allPosts;
+  const laneEl = document.getElementById("trig-lane");
+  const slugEl = document.getElementById("trig-slug");
+  const btn    = document.getElementById("trig-btn");
+  const cmdBox = document.getElementById("cmd-box");
+  const cmdTxt = document.getElementById("cmd-text");
+  const cpyBtn = document.getElementById("cmd-copy");
+
+  function refreshSlugs() {
+    const lane = laneEl.value;
+    const opts = allPostsCache.filter(p => p.lane === lane);
+    slugEl.innerHTML = `<option value="">— select post —</option>` +
+      opts.map(p => `<option value="${p.slug}">${esc(p.title)}</option>`).join("");
+    btn.disabled = true;
+    cmdBox.style.display = "none";
+  }
+
+  laneEl.addEventListener("change", refreshSlugs);
+  slugEl.addEventListener("change", () => {
+    btn.disabled = !slugEl.value;
+    cmdBox.style.display = "none";
+  });
+
+  btn.addEventListener("click", () => {
+    const lane = laneEl.value;
+    const slug = slugEl.value;
+    if (!slug) return;
+    const cmd = `node scripts/syndicate.js --lane ${lane} --slug ${slug}`;
+    cmdTxt.textContent = cmd;
+    cmdBox.style.display = "block";
+  });
+
+  cpyBtn.addEventListener("click", () => {
+    navigator.clipboard?.writeText(cmdTxt.textContent).then(() => {
+      cpyBtn.textContent = "Copied!";
+      setTimeout(() => { cpyBtn.textContent = "Copy to clipboard"; }, 2000);
+    });
+  });
+
+  refreshSlugs();
+}
+
+// ── Caption modal ─────────────────────────────────────────────────────────────
+const CAPTION_ORDER = ["facebook","bluesky","mastodon","pinterest","devto","hashnode","tumblr","instagram","threads"];
+
+function showCaptions(captionsJson) {
+  const captions = JSON.parse(captionsJson);
+  const body = document.getElementById("caption-body");
+  body.innerHTML = CAPTION_ORDER.map(key => {
+    const val = captions[key] || "";
+    if (!val) return "";
+    const name = PLATFORM_NAMES[key] || key.charAt(0).toUpperCase() + key.slice(1);
+    return `<div class="caption-platform">
+      <div class="cap-name">${name}</div>
+      <div class="cap-text">${esc(val)}</div>
+    </div>`;
+  }).join("");
+  document.getElementById("caption-modal").classList.add("open");
+}
+
+document.getElementById("caption-close").addEventListener("click", () => {
+  document.getElementById("caption-modal").classList.remove("open");
+});
+document.getElementById("caption-modal").addEventListener("click", e => {
+  if (e.target === document.getElementById("caption-modal")) {
+    document.getElementById("caption-modal").classList.remove("open");
+  }
+});
+
+// ── Utils ─────────────────────────────────────────────────────────────────────
+function esc(s) {
+  return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+initAuth();
+</script>
+</body>
+</html>

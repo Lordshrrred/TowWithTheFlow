@@ -4,3 +4,9 @@ public/
 # Blog engine
 node_modules/
 .env
+
+# Syndication cache (token exchange results)
+.cache/
+
+# Dashboard password hash — regenerated from DASHBOARD_PASSWORD env var
+static/_data/dashboard-config.json

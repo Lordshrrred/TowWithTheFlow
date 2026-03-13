@@ -5,6 +5,8 @@
   "scripts": {
     "generate": "node scripts/generate-post.js",
     "syndicate": "node scripts/syndicate.js",
+    "captions": "node scripts/generate-captions.js",
+    "image": "node scripts/select-image.js",
     "research": "node scripts/seo-research.js",
     "sitemap": "node scripts/update-sitemap.js"
   },
