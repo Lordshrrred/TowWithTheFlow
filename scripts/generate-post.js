@@ -13,17 +13,19 @@ import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { spawnSync } from "child_process";
 import { updateSitemap } from "./update-sitemap.js";
 
-dotenv.config();
+dotenv.config({ override: true });
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
 
 // ── CLI ARGS ──
 const argv = minimist(process.argv.slice(2), {
-  string: ["lane", "title", "keyword", "topic"],
-  alias: { l: "lane", t: "title", k: "keyword", p: "topic" },
+  string:  ["lane", "title", "keyword", "topic"],
+  boolean: ["no-syndicate"],
+  alias:   { l: "lane", t: "title", k: "keyword", p: "topic" },
 });
 const lane = argv.lane;
 if (!lane || !["matt", "boombot"].includes(lane)) {
@@ -400,6 +402,28 @@ async function main() {
 
   // Always regenerate sitemap after adding a post
   updateSitemap();
+
+  // ── Auto-syndication ──
+  if (argv["no-syndicate"]) {
+    console.log("\n[syndication skipped — --no-syndicate flag set]");
+  } else {
+    console.log("\nStarting auto-syndication...");
+    const syndicateArgs = [
+      "scripts/syndicate.js",
+      "--lane",  lane,
+      "--slug",  slug,
+    ];
+    // Pass keyword as image search term for BoomBot posts
+    if (lane === "boombot" && argv.keyword) {
+      syndicateArgs.push("--keyword", argv.keyword);
+    } else if (lane === "matt" && argv.title) {
+      syndicateArgs.push("--keyword", argv.title);
+    }
+
+    const result = spawnSync("node", syndicateArgs, { stdio: "inherit", cwd: ROOT });
+    if (result.error) console.error("Syndication spawn error:", result.error.message);
+    else if (result.status !== 0) console.warn(`Syndication exited with code ${result.status}`);
+  }
 }
 
 main();
