@@ -15,6 +15,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { spawnSync } from "child_process";
 import { updateSitemap } from "./update-sitemap.js";
+import { syndicatePost } from "./syndicate.js";
 
 dotenv.config({ override: true });
 const __filename = fileURLToPath(import.meta.url);
@@ -222,7 +223,7 @@ function buildHtml(lane, title, dateStr, bodyHtml, slug, metaDescription) {
   H.push("    .post-cta { background: var(--surface2); border: 1px solid var(--accent-dark); border-radius: 8px; padding: 2rem; margin: 2rem 0; text-align: center; }");
   H.push("    .post-cta h3 { color: var(--accent); font-size: 1.1rem; margin-bottom: 0.6rem; }");
   H.push("    .post-cta p { color: var(--text-muted); font-size: 0.95rem; margin: 0 0 1.2rem; }");
-  H.push("    .post-cta a { display: inline-block; background: var(--accent); color: #020a0a; font-family: Space Grotesk, sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.7em 1.6em; border-radius: 4px; text-decoration: none; transition: opacity 0.2s, transform 0.15s; }");
+  H.push("    .post-cta a { display: inline-block; background: var(--accent); color: #020a0a !important; font-family: Space Grotesk, sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.7em 1.6em; border-radius: 4px; text-decoration: none !important; border-bottom: none !important; transition: opacity 0.2s, transform 0.15s; }");
   H.push("    .post-cta a:hover { opacity: 0.85; transform: translateY(-1px); }");
   H.push("    .site-footer { border-top: 1px solid var(--border); padding: 2rem 0; text-align: center; font-size: 0.82rem; color: var(--text-muted); }");
   H.push("    .site-footer a { color: var(--accent); text-decoration: none; }");
@@ -403,26 +404,29 @@ async function main() {
   // Always regenerate sitemap after adding a post
   updateSitemap();
 
-  // ── Auto-syndication ──
-  if (argv["no-syndicate"]) {
-    console.log("\n[syndication skipped — --no-syndicate flag set]");
-  } else {
+  // ── Syndication ──
+  // Boom Frequency (boombot): auto-syndicate immediately after generation.
+  // Forest Temple (matt): manual only — run the command printed below when ready.
+  if (lane === "boombot" && !argv["no-syndicate"]) {
     console.log("\nStarting auto-syndication...");
     const syndicateArgs = [
       "scripts/syndicate.js",
       "--lane",  lane,
       "--slug",  slug,
     ];
-    // Pass keyword as image search term for BoomBot posts
-    if (lane === "boombot" && argv.keyword) {
-      syndicateArgs.push("--keyword", argv.keyword);
-    } else if (lane === "matt" && argv.title) {
-      syndicateArgs.push("--keyword", argv.title);
-    }
+    if (argv.keyword) syndicateArgs.push("--keyword", argv.keyword);
 
     const result = spawnSync("node", syndicateArgs, { stdio: "inherit", cwd: ROOT });
     if (result.error) console.error("Syndication spawn error:", result.error.message);
     else if (result.status !== 0) console.warn(`Syndication exited with code ${result.status}`);
+  } else if (lane === "boombot" && argv["no-syndicate"]) {
+    console.log("\n[syndication skipped — --no-syndicate flag set]");
+    console.log("  Syndicate manually when ready:");
+    console.log("  node scripts/syndicate.js --lane " + lane + " --slug " + slug);
+  } else {
+    // Matt / Forest Temple — never auto-syndicate
+    console.log("\nForest Temple post ready. Syndicate manually when you're ready:");
+    console.log("  node scripts/syndicate.js --lane matt --slug " + slug);
   }
 }
 
