@@ -20,7 +20,7 @@ import minimist  from "minimist";
 import { generateCaptions } from "./generate-captions.js";
 import { selectImage }      from "./select-image.js";
 
-dotenv.config();
+dotenv.config({ override: true });
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = path.dirname(__filename);

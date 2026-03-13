@@ -16,7 +16,7 @@ import { fileURLToPath } from "url";
 import { spawnSync } from "child_process";
 import { updateSitemap } from "./update-sitemap.js";
 
-dotenv.config();
+dotenv.config({ override: true });
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
