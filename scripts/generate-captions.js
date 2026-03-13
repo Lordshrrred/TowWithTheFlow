@@ -41,29 +41,40 @@ Return ONLY the labeled sections in exact order with no preamble or commentary.`
 
 // ── Parser ────────────────────────────────────────────────────────────────────
 
-/** Parse Claude's labeled-section response into a plain object keyed by lowercase platform name */
+/**
+ * Parse Claude's labeled-section response into a plain object keyed by lowercase platform name.
+ * Handles Claude's tendency to wrap labels in markdown bold (**LABEL:**) and
+ * separate sections with --- horizontal rules.
+ */
 function parseCaptions(text) {
   const result = {};
+
+  // Label pattern: optional leading **, optional trailing **, colon, optional trailing whitespace/newlines
+  // e.g. matches: "FACEBOOK:", "**FACEBOOK:**", "**FACEBOOK:** "
+  function labelRe(label) {
+    return new RegExp(`^\\*{0,2}\\s*${label}:\\s*\\*{0,2}\\s*`, "mi");
+  }
+
   for (let i = 0; i < LABELS.length; i++) {
     const label = LABELS[i];
     const next  = LABELS[i + 1];
 
-    // Find where this label's content starts
-    const startRe = new RegExp(`^${label}:\\s*`, "m");
-    const startM  = text.match(startRe);
+    // Use exec() so we get startM.index — reliable even if the string appears elsewhere
+    const startM = labelRe(label).exec(text);
     if (!startM) { result[label.toLowerCase()] = ""; continue; }
 
-    const start = text.indexOf(startM[0]) + startM[0].length;
+    const start = startM.index + startM[0].length;
     let end = text.length;
 
-    // Find where the NEXT label begins so we don't bleed into it
     if (next) {
-      const endRe = new RegExp(`^${next}:`, "m");
-      const endM  = text.slice(start).match(endRe);
-      if (endM) end = start + text.slice(start).indexOf(endM[0]);
+      const endM = labelRe(next).exec(text.slice(start));
+      if (endM) end = start + endM.index;
     }
 
-    result[label.toLowerCase()] = text.slice(start, end).trim();
+    result[label.toLowerCase()] = text
+      .slice(start, end)
+      .replace(/\s*\n?---+\n?\s*$/m, "")  // strip trailing --- separator
+      .trim();
   }
   return result;
 }

@@ -181,9 +181,11 @@ async function postToBluesky(caption, postUrl, postTitle, postExcerpt) {
 
 /** Post to Mastodon */
 async function postToMastodon(caption) {
-  const instance = process.env.MASTODON_INSTANCE?.replace(/\/+$/, "");
-  const token    = process.env.MASTODON_ACCESS_TOKEN;
+  let instance = (process.env.MASTODON_INSTANCE || "").replace(/\/+$/, "");
+  const token  = process.env.MASTODON_ACCESS_TOKEN;
   if (!instance || !token) throw new Error("MASTODON_INSTANCE or MASTODON_ACCESS_TOKEN not set");
+  // Ensure https:// scheme — users often store just "mastodon.social"
+  if (!instance.startsWith("http")) instance = `https://${instance}`;
 
   const resp = await fetch(`${instance}/api/v1/statuses`, {
     method:  "POST",
@@ -376,8 +378,8 @@ async function postViaPubler(platform, caption, imageUrl) {
   const key = process.env.PUBLER_API_KEY;
   if (!key) throw new Error("PUBLER_API_KEY not set");
 
-  // Publer API — verify endpoint and payload against Publer's docs if this fails
-  const resp = await fetch("https://api.publer.io/v1/posts", {
+  // Publer API v1 — correct base URL is app.publer.com
+  const resp = await fetch("https://app.publer.com/api/v1/posts", {
     method:  "POST",
     headers: {
       "Content-Type":  "application/json",
@@ -391,7 +393,7 @@ async function postViaPubler(platform, caption, imageUrl) {
     }),
   });
 
-  const data = await resp.json();
+  const data = await resp.json().catch(() => ({}));
   if (!resp.ok) throw new Error(`Publer (${platform}): ${data.message || data.error || resp.status}`);
   const postId = data.post?.id || data.id;
   return { postId: String(postId || ""), postUrl: null };
