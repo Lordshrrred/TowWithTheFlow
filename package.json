@@ -2,6 +2,7 @@
   "name": "vibrationofawesome-blog-engine",
   "version": "1.0.0",
   "description": "Dual-blog content engine for vibrationofawesome.com",
+  "type": "module",
   "scripts": {
     "generate": "node scripts/generate-post.js",
     "syndicate": "node scripts/syndicate.js",
