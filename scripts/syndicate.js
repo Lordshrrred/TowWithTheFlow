@@ -325,7 +325,7 @@ async function postToHashnode(postTitle, caption, postUrl, tags, imageUrl) {
   return { postId: post?.id, postUrl: post?.url };
 }
 
-/** Post to Tumblr using OAuth 1.0a (NPF format) */
+/** Post to Tumblr using OAuth 1.0a (legacy /post endpoint with form body) */
 async function postToTumblr(caption, tags) {
   const consumerKey    = process.env.TUMBLR_CONSUMER_KEY;
   const consumerSecret = process.env.TUMBLR_CONSUMER_SECRET;
@@ -338,19 +338,19 @@ async function postToTumblr(caption, tags) {
   }
   if (!blogName) throw new Error("TUMBLR_BLOG_NAME not set");
 
-  const url  = `https://api.tumblr.com/v2/blog/${blogName}/posts`;
-  const body = JSON.stringify({
-    content: [{ type: "text", text: caption }],
-    tags:    (tags || []).slice(0, 30),
-  });
+  // Legacy /post endpoint (form-encoded) — the NPF /posts endpoint returns 8001
+  const url        = `https://api.tumblr.com/v2/blog/${blogName}/post`;
+  const bodyParams = {
+    type: "text",
+    body: caption,
+    tags: (tags || []).slice(0, 30).join(","),
+  };
 
-  // Extract body params that are included in the OAuth signature base string
-  // For JSON bodies, the content-type is application/json and body params
-  // are NOT included in the OAuth base string — only URL params are.
+  // Form-encoded body params MUST be included in the OAuth signature base string
   const authHeader = buildOAuthHeader({
-    method:         "POST",
+    method: "POST",
     url,
-    bodyParams:     {},
+    bodyParams,
     consumerKey,
     consumerSecret,
     token,
@@ -359,8 +359,8 @@ async function postToTumblr(caption, tags) {
 
   const resp = await fetch(url, {
     method:  "POST",
-    headers: { "Content-Type": "application/json", Authorization: authHeader },
-    body,
+    headers: { "Content-Type": "application/x-www-form-urlencoded", Authorization: authHeader },
+    body:    new URLSearchParams(bodyParams).toString(),
   });
   const data = await resp.json();
   if (!resp.ok || data.meta?.status >= 400) {
@@ -373,30 +373,94 @@ async function postToTumblr(caption, tags) {
   };
 }
 
-/** Post Instagram or Threads via Publer API */
+/** Post Instagram or Threads via Publer API v1 */
 async function postViaPubler(platform, caption, imageUrl) {
-  const key = process.env.PUBLER_API_KEY;
-  if (!key) throw new Error("PUBLER_API_KEY not set");
+  const key       = process.env.PUBLER_API_KEY;
+  const wsId      = process.env.PUBLER_WORKSPACE_ID;
+  const accountId = platform === "instagram"
+    ? process.env.PUBLER_INSTAGRAM_ACCOUNT_ID
+    : process.env.PUBLER_THREADS_ACCOUNT_ID;
 
-  // Publer API v1 — correct base URL is app.publer.com
-  const resp = await fetch("https://app.publer.com/api/v1/posts", {
-    method:  "POST",
-    headers: {
-      "Content-Type":  "application/json",
-      Authorization:   `Bearer ${key}`,
-    },
+  if (!key)       throw new Error("PUBLER_API_KEY not set");
+  if (!wsId)      throw new Error("PUBLER_WORKSPACE_ID not set");
+  if (!accountId) throw new Error(`PUBLER_${platform.toUpperCase()}_ACCOUNT_ID not set`);
+
+  const BASE    = "https://app.publer.com/api/v1";
+  const headers = {
+    "Content-Type":       "application/json",
+    "Authorization":      `Bearer-API ${key}`,
+    "Publer-Workspace-Id": wsId,
+  };
+
+  // ── Step 1: upload image from URL (async — must poll job_status) ──────────
+  let mediaId = null;
+  if (imageUrl) {
+    const upResp = await fetch(`${BASE}/media/from-url`, {
+      method: "POST", headers,
+      body: JSON.stringify({
+        media: [{ url: imageUrl, name: "post-image" }],
+        type: "single", direct_upload: false, in_library: false,
+      }),
+    });
+    const upData = await upResp.json().catch(() => ({}));
+    if (!upResp.ok) throw new Error(`Publer media upload: ${upData.message || upResp.status}`);
+
+    const jobId = upData.job_id;
+    if (jobId) {
+      // Poll up to 60 s for the upload job to complete
+      for (let i = 0; i < 30; i++) {
+        await new Promise(r => setTimeout(r, 2000));
+        const st = await fetch(`${BASE}/job_status/${jobId}`, { headers })
+          .then(r => r.json()).catch(() => ({}));
+        if (st.status === "complete" || st.status === "completed") {
+          mediaId = Array.isArray(st.payload) ? st.payload[0]?.id : st.payload?.id;
+          break;
+        }
+        if (st.status === "failed" || st.status === "error") throw new Error("Publer media upload job failed");
+      }
+      if (!mediaId) throw new Error("Publer media upload timed out");
+    } else {
+      mediaId = Array.isArray(upData) ? upData[0]?.id : upData.id;
+    }
+  }
+
+  // ── Step 2: publish immediately via /posts/schedule/publish ──────────────
+  // Omitting scheduled_at signals immediate publish per Publer docs.
+  const networkCfg = {
+    type: mediaId ? "photo" : "status",
+    text: caption,
+    ...(mediaId ? { media: [{ id: mediaId, type: "image" }] } : {}),
+  };
+
+  const postResp = await fetch(`${BASE}/posts/schedule/publish`, {
+    method: "POST", headers,
     body: JSON.stringify({
-      platforms:   [platform],          // "instagram" or "threads"
-      text:        caption,
-      publish_now: true,
-      ...(imageUrl && platform === "instagram" ? { media_urls: [imageUrl] } : {}),
+      bulk: {
+        state: "scheduled",
+        posts: [{ networks: { [platform]: networkCfg }, accounts: [{ id: accountId }] }],
+      },
     }),
   });
 
-  const data = await resp.json().catch(() => ({}));
-  if (!resp.ok) throw new Error(`Publer (${platform}): ${data.message || data.error || resp.status}`);
-  const postId = data.post?.id || data.id;
-  return { postId: String(postId || ""), postUrl: null };
+  const postData = await postResp.json().catch(() => ({}));
+  if (!postResp.ok) throw new Error(`Publer (${platform}): ${postData.message || postData.error || postData.errors?.[0] || postResp.status}`);
+
+  // Response may be async (job_id) — extract post ID if available
+  let postId = postData.post?.id || postData.id;
+  const jobId2 = postData.job_id;
+  if (jobId2 && !postId) {
+    for (let i = 0; i < 10; i++) {
+      await new Promise(r => setTimeout(r, 2000));
+      const st = await fetch(`${BASE}/job_status/${jobId2}`, { headers })
+        .then(r => r.json()).catch(() => ({}));
+      if (st.status === "complete" || st.status === "completed") {
+        postId = Array.isArray(st.payload) ? st.payload[0]?.id : st.payload?.id;
+        break;
+      }
+    }
+  }
+
+  return { postId: String(postId || "queued"), postUrl: null };
 }
 
 // ── Syndication log ───────────────────────────────────────────────────────────
