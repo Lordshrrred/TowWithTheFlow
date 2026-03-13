@@ -1,1 +1,337 @@
-{ "lastUpdated": null, "entries": [] }
+{
+  "lastUpdated": "2026-03-13T04:55:21.130Z",
+  "entries": [
+    {
+      "id": "1773377721130",
+      "timestamp": "2026-03-13T04:55:21.130Z",
+      "lane": "boombot",
+      "postSlug": "how-to-use-claude-api-for-musicians",
+      "postTitle": "How to Use the Claude API for Musicians: A Complete Guide",
+      "postUrl": "https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+      "imageUrl": "https://images.pexels.com/photos/29544068/pexels-photo-29544068.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "imageSource": "pexels",
+      "captions": {
+        "facebook": "Honest question — when did \"AI is just for developers\" become the rule nobody questioned? If you're a musician drowning in content tasks or chasing a creative spark at 2am, the Claude API might be the weird little tool you didn't know you needed. Check out the full guide and tell me — what's the most tedious part of your music career you'd automate first? https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "bluesky": "the claude API is not just a developer thing. musicians, this one's for you. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "mastodon": "The idea that AI APIs are only for coders is quietly falling apart — and musicians are some of the first creatives to benefit when they stop believing it. This guide breaks down how to actually use the Claude API if you make music and want to automate the noise so you can focus on the signal. Worth a read if you're building a creative practice in the age of intelligent tools. #AIMusic #IndependentMusician #CreativeAutomation",
+        "pinterest": "Discover how musicians can use the Claude API to automate content creation, generate lyrics and ideas, handle repetitive marketing tasks, and unlock AI-powered creativity without needing a coding background. This complete guide from Vibration of Awesome walks you through practical, real-world applications of Claude AI for independent artists, music producers, and neurodivergent creatives who want to work smarter. Whether you're a bedroom producer or a touring artist drowning in admin, this is the AI workflow guide built for you. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html #AIForMusicians #MusicProductivity #AITools #IndependentArtist #MusicTech",
+        "devto": "Most AI API tutorials assume you're building a SaaS product or training a model. But what if you're a musician who just wants to stop spending three hours on content every week? This guide flips the Claude API tutorial on its head — no computer science degree required, just a creative brain that's tired of doing the boring stuff manually. The automation angle here is practical, weird, and genuinely useful for any artist trying to build in public. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "hashnode": "I spent years assuming APIs were someone else's territory — the developers, the engineers, the people with the right kind of brain. Then I started poking at Claude and realized the whole thing could be bent toward what I actually do: make music, create content, run a chaotic one-person operation at midnight. I wrote this guide specifically for musicians who want the automation wins without the computer science rabbit hole. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "tumblr": "there's something quietly radical about a musician at 2am asking an AI to help them finish a thought, draft a caption, outline an album concept — and actually getting somewhere. the tools were never only for the engineers. this guide exists because the lines got blurry in the best way possible, and someone had to write it for the rest of us.\n\n#musicians on tumblr #ai tools #music and technology #creative process #independent artist #digital creativity #neurodivergent creatives #weird internet things",
+        "instagram": "The Claude API isn't just for coders — it's for musicians ready to stop doing everything the hard way.\n\n#AIForMusicians #MusicTech #IndependentArtist #CreativeTools #AICreativity #MusicProducer #ArtistLife #VibrationOfAwesome",
+        "threads": "hot take: the claude API is one of the most slept-on tools for musicians right now and nobody's talking about it. full guide up if you're curious 👇 #AIMusicians #MusicTech #CreatorTools"
+      },
+      "platforms": {
+        "bluesky": {
+          "success": true,
+          "postId": "at://did:plc:d7rpszmsiitz7liaonbencvs/app.bsky.feed.post/3mgw4qcf44l2s",
+          "postUrl": "https://bsky.app/profile/unlimitedpotential.bsky.social/post/3mgw4qcf44l2s",
+          "error": null
+        },
+        "mastodon": {
+          "success": true,
+          "postId": "116220081688630618",
+          "postUrl": "https://mastodon.social/@unlimitedpotential/116220081688630618",
+          "error": null
+        },
+        "facebook_voa": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Error validating access token: Session has expired on Thursday, 12-Mar-26 20:00:00 PDT. The current time is Thursday, 12-Mar-26 21:55:11 PDT."
+        },
+        "facebook_earthstar": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Error validating access token: Session has expired on Thursday, 12-Mar-26 20:00:00 PDT. The current time is Thursday, 12-Mar-26 21:55:11 PDT."
+        },
+        "pinterest": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Pinterest: Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write', 'pins:write']"
+        },
+        "devto": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Dev.to: Canonical url has already been taken. Email support@dev.to for further details."
+        },
+        "hashnode": {
+          "success": true,
+          "postId": "69b398b095568207ceaba513",
+          "postUrl": "https://vibrationofawesome.hashnode.dev/how-to-use-the-claude-api-for-musicians-a-complete-guide-1-1-1-1-1",
+          "error": null
+        },
+        "tumblr": {
+          "success": true,
+          "postId": "810945308707160064",
+          "postUrl": "https://earthstarrising.tumblr.com/post/810945308707160064",
+          "error": null
+        },
+        "instagram": {
+          "success": true,
+          "postId": "queued",
+          "postUrl": null,
+          "error": null
+        },
+        "threads": {
+          "success": true,
+          "postId": "queued",
+          "postUrl": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "1773377617224",
+      "timestamp": "2026-03-13T04:53:37.225Z",
+      "lane": "boombot",
+      "postSlug": "how-to-use-claude-api-for-musicians",
+      "postTitle": "How to Use the Claude API for Musicians: A Complete Guide",
+      "postUrl": "https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+      "imageUrl": "https://images.pexels.com/photos/5336243/pexels-photo-5336243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "imageSource": "pexels",
+      "captions": {
+        "facebook": "The Claude API sounds like a developer thing — but honestly? It might be the most useful tool a working musician hasn't tried yet. I broke down exactly how to use it for content, creativity, and cutting out the tedious stuff over at vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html — no coding degree required. Are you already experimenting with AI in your music workflow, or does it still feel like foreign territory?",
+        "bluesky": "The Claude API isn't just for devs. Musicians, this one's for you. vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "mastodon": "Most musicians hear \"API\" and immediately check out — but that's exactly the gap worth closing. The Claude API can handle your creative blocks, your content grind, and your 2am spiral into \"what do I even post about.\" Here's a practical breakdown built specifically for musicians, not engineers. #MusicianLife #AITools #IndependentArtist",
+        "pinterest": "Wondering how musicians can actually use the Claude API without being a developer? This complete guide breaks down how AI tools like Claude can help musicians automate content creation, generate lyric ideas, write bios and press releases, and supercharge their creative process — all without writing a single line of code. Whether you're an indie artist, producer, or music creator trying to work smarter, this is the starting point you've been looking for. Find the full guide at vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html\n#MusicianTips #AIForMusicians #MusicProduction #ContentCreationForArtists #AITools\n**DEV.TO:**\nMost AI automation tutorials assume you're building SaaS products or scraping data — but what if your use case is writing song descriptions at midnight, generating press release drafts, or building a lightweight content pipeline around your releases? The Claude API is surprisingly approachable for musicians and creative entrepreneurs who want automation without the enterprise overhead. This guide strips away the jargon and shows exactly where it plugs into a real music workflow.\nvibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html\n\n---\n\n**HASHNODE:**\nI've spent two decades in internet marketing and a good chunk of that time watching creative people get left behind every time a new technical tool dropped — not because they couldn't use it, but because nobody explained it in their language. When I started integrating the Claude API into my own music and content workflow, I realized this was one of those tools that genuinely changes the day-to-day grind for artists. So I wrote the guide I wish I'd had: no fluff, no assumed knowledge, just real application for musicians ready to automate the boring and amplify the creative.\nvibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html\n\n---\n\n**TUMBLR:**\nthere's something quietly radical about a musician at 2am talking to an AI API instead of staring at a blank page wondering why the words won't come. this guide exists for exactly that moment — the one where you need a creative co-pilot, not another subscription app promising to \"revolutionize\" your workflow. it's practical, it's real, and it's written for people who make music, not just manage it.\n\n#musiciansoftumblr #aitools #indieartist #creativeworkflow #musicproduction #digitalcreator #artificialintelligence #makersofmusic\n\n---\n\n**INSTAGRAM:**\nThe API isn't just for developers anymore — musicians, your creative workflow just got a serious upgrade.\n\n#AIForMusicians #MusicianLife #IndieArtist #AITools #MusicProduction #CreativeWorkflow #DigitalCreator #MusicBusiness\n\n---\n\n**THREADS:**\nFriendly reminder that \"the Claude API is for developers\" is a myth worth killing. Musicians are using it for content, creativity, and cutting busywork — here's how. vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html #AITools #MusicianLife #IndieArtist",
+        "devto": "",
+        "hashnode": "I've spent two decades in internet marketing and a good chunk of that time watching creative people get left behind every time a new technical tool dropped — not because they couldn't use it, but because nobody explained it in their language. When I started integrating the Claude API into my own music and content workflow, I realized this was one of those tools that genuinely changes the day-to-day grind for artists. So I wrote the guide I wish I'd had: no fluff, no assumed knowledge, just real application for musicians ready to automate the boring and amplify the creative.\nvibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "tumblr": "there's something quietly radical about a musician at 2am talking to an AI API instead of staring at a blank page wondering why the words won't come. this guide exists for exactly that moment — the one where you need a creative co-pilot, not another subscription app promising to \"revolutionize\" your workflow. it's practical, it's real, and it's written for people who make music, not just manage it.\n\n#musiciansoftumblr #aitools #indieartist #creativeworkflow #musicproduction #digitalcreator #artificialintelligence #makersofmusic",
+        "instagram": "The API isn't just for developers anymore — musicians, your creative workflow just got a serious upgrade.\n\n#AIForMusicians #MusicianLife #IndieArtist #AITools #MusicProduction #CreativeWorkflow #DigitalCreator #MusicBusiness",
+        "threads": "Friendly reminder that \"the Claude API is for developers\" is a myth worth killing. Musicians are using it for content, creativity, and cutting busywork — here's how. vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html #AITools #MusicianLife #IndieArtist"
+      },
+      "platforms": {
+        "bluesky": {
+          "success": true,
+          "postId": "at://did:plc:d7rpszmsiitz7liaonbencvs/app.bsky.feed.post/3mgw4n7njow22",
+          "postUrl": "https://bsky.app/profile/unlimitedpotential.bsky.social/post/3mgw4n7njow22",
+          "error": null
+        },
+        "mastodon": {
+          "success": true,
+          "postId": "116220074919696572",
+          "postUrl": "https://mastodon.social/@unlimitedpotential/116220074919696572",
+          "error": null
+        },
+        "facebook_voa": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Error validating access token: Session has expired on Thursday, 12-Mar-26 20:00:00 PDT. The current time is Thursday, 12-Mar-26 21:53:28 PDT."
+        },
+        "facebook_earthstar": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Error validating access token: Session has expired on Thursday, 12-Mar-26 20:00:00 PDT. The current time is Thursday, 12-Mar-26 21:53:28 PDT."
+        },
+        "pinterest": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Pinterest: Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write', 'pins:write']"
+        },
+        "devto": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Dev.to: Canonical url has already been taken. Email support@dev.to for further details."
+        },
+        "hashnode": {
+          "success": true,
+          "postId": "69b398492c4261d17418b131",
+          "postUrl": "https://vibrationofawesome.hashnode.dev/how-to-use-the-claude-api-for-musicians-a-complete-guide-1-1-1-1",
+          "error": null
+        },
+        "tumblr": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Tumblr: Posting failed. Please try again."
+        },
+        "instagram": {
+          "success": true,
+          "postId": "queued",
+          "postUrl": null,
+          "error": null
+        },
+        "threads": {
+          "success": true,
+          "postId": "queued",
+          "postUrl": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "1773377414289",
+      "timestamp": "2026-03-13T04:50:14.289Z",
+      "lane": "boombot",
+      "postSlug": "how-to-use-claude-api-for-musicians",
+      "postTitle": "How to Use the Claude API for Musicians: A Complete Guide",
+      "postUrl": "https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+      "imageUrl": "https://images.pexels.com/photos/31169090/pexels-photo-31169090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "imageSource": "pexels",
+      "captions": {
+        "facebook": "Okay real talk — the Claude API is not just a developer toy. If you're a musician drowning in content tasks or chasing ideas at 2am, this guide breaks down exactly how to plug into it without writing a single line of code from scratch. Have you tried using AI tools in your music workflow yet, and if so, what's been the weirdest or most useful thing you've done with it? https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "bluesky": "The Claude API is sitting there ready to handle your 2am creative spirals and nobody told musicians about it until now. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "mastodon": "Most AI guides assume you're a developer — this one assumes you're a musician with too many ideas and not enough hours. The Claude API can automate the tedious content grind and spark creative breakthroughs without requiring a computer science degree. If you've been sleeping on API tools, this might be the nudge you needed. #MusicianLife #AITools #CreatorTools",
+        "pinterest": "Musicians using AI tools are saving hours every week by automating content creation, lyric brainstorming, and creative ideation — and the Claude API is one of the most powerful and underused tools available right now. This complete guide for musicians breaks down how to access the Claude API, what it can actually do for your music career, and how to start using it even if you have zero coding background. Whether you're producing electronic music, writing rock lyrics, or building your artist brand online, AI automation can completely change how you work. Read the full guide here: https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html #MusicianTips #AIForMusicians #MusicProduction #CreatorTools #AIAutomation",
+        "devto": "Most AI automation tutorials are written for backend engineers — but what happens when a musician cracks open the Claude API and starts pointing it at their content workflow? The results are genuinely weird and genuinely useful: automated lyric prompts, content pipelines, creative ideation on demand at hours no sane person should be awake. This guide breaks down the Claude API specifically for musicians and non-traditional builders who want automation without the jargon spiral. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "hashnode": "I spent years doing the content grind manually — writing, scheduling, ideating, repeating — until I started actually *using* the Claude API instead of just reading about it. Once I mapped it onto my music workflow, something clicked: this thing isn't a chatbot, it's an automation layer you can bend toward whatever creative problem you're stuck on. I wrote a complete guide for musicians who want to get their hands on it without feeling like they accidentally enrolled in a CS program. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "tumblr": "there's something quietly rebellious about a musician learning to use an API at 2am — not because anyone asked them to, but because the ideas won't stop and the tools are finally within reach. this guide exists for the ones who don't fit the \"developer\" box but refuse to be locked out of what's possible. the Claude API is more accessible than they want you to think, and your music brain is exactly the kind of brain that can use it well.\n\n#musicians #ai tools #music and technology #creative process #musician life #digital creativity #ai for artists #independent musician",
+        "instagram": "You don't have to be a developer to use the Claude API. You just have to be curious enough to start.\n\n#AIForMusicians #MusicianLife #CreatorTools #AITools #MusicProduction #IndependentArtist #DigitalCreator",
+        "threads": "No coding degree required. Just a music brain and a willingness to experiment at weird hours. Full guide for musicians on using the Claude API is up now. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html #AITools #MusicianLife #CreatorTools"
+      },
+      "platforms": {
+        "bluesky": {
+          "success": true,
+          "postId": "at://did:plc:d7rpszmsiitz7liaonbencvs/app.bsky.feed.post/3mgw4eqoo3u2a",
+          "postUrl": "https://bsky.app/profile/unlimitedpotential.bsky.social/post/3mgw4eqoo3u2a",
+          "error": null
+        },
+        "mastodon": {
+          "success": true,
+          "postId": "116220056289223276",
+          "postUrl": "https://mastodon.social/@unlimitedpotential/116220056289223276",
+          "error": null
+        },
+        "facebook_voa": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Error validating access token: Session has expired on Thursday, 12-Mar-26 20:00:00 PDT. The current time is Thursday, 12-Mar-26 21:48:44 PDT."
+        },
+        "facebook_earthstar": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Error validating access token: Session has expired on Thursday, 12-Mar-26 20:00:00 PDT. The current time is Thursday, 12-Mar-26 21:48:44 PDT."
+        },
+        "pinterest": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Pinterest: Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write', 'pins:write']"
+        },
+        "devto": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Dev.to: Canonical url has already been taken. Email support@dev.to for further details."
+        },
+        "hashnode": {
+          "success": true,
+          "postId": "69b3972dba92fe2cd2f5ddce",
+          "postUrl": "https://vibrationofawesome.hashnode.dev/how-to-use-the-claude-api-for-musicians-a-complete-guide-1-1-1",
+          "error": null
+        },
+        "tumblr": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Tumblr: Posting failed. Please try again."
+        },
+        "instagram": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Publer media upload timed out"
+        },
+        "threads": {
+          "success": true,
+          "postId": "queued",
+          "postUrl": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "1773376980097",
+      "timestamp": "2026-03-13T04:43:00.097Z",
+      "lane": "boombot",
+      "postSlug": "how-to-use-claude-api-for-musicians",
+      "postTitle": "How to Use the Claude API for Musicians: A Complete Guide",
+      "postUrl": "https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+      "imageUrl": "https://images.pexels.com/photos/29544068/pexels-photo-29544068.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "imageSource": "pexels",
+      "captions": {
+        "facebook": "Musicians, the Claude API is not just a developer toy — it's a genuinely useful creative tool if you know how to point it at the right problems. I broke down exactly how to use it for content, automation, and those 2am rabbit holes where inspiration hits but your brain is mush: https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html — Have you started experimenting with AI in your music workflow yet, or does it still feel like someone else's territory?",
+        "bluesky": "The Claude API is not gatekept by developers anymore. Musicians, this one's for you. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "mastodon": "Most musicians hear \"API\" and immediately check out — but that instinct is costing you time you could be spending actually making music. The Claude API can handle your content, your ideas, your 2am creative spirals, and a lot of the administrative noise in between. If you've been AI-curious but dev-averse, this breakdown was written with you in mind. #MusicianLife #AITools #IndependentArtist",
+        "pinterest": "Musicians are quietly using the Claude API to automate content creation, generate lyrics and concepts on demand, and reclaim hours lost to repetitive tasks — and you don't need to be a developer to do it. This complete guide breaks down exactly how to connect with the Claude API as a musician, what prompts actually work, and how to build a creative workflow that runs even when your inspiration doesn't. Whether you're a solo artist, producer, or DIY band managing your own online presence, AI tools like Claude are becoming an essential part of the modern musician's toolkit. Full guide here: https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html #MusicianTools #AIForMusicians #MusicProduction #ContentAutomation #IndependentArtist\n**DEV.TO:**\nMost AI automation tutorials assume you're building SaaS or scraping data — but what if you're trying to automate your artist newsletter, generate release copy at midnight, or build a custom creative assistant trained on your own aesthetic? The Claude API is surprisingly accessible for non-traditional use cases, and musicians are one of the most underserved groups in the AI-tools conversation. This guide cuts through the setup noise and gets into real-world applications for creators who want automation without needing a CS degree. https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html\n\n---\n\n**HASHNODE:**\nI've spent the last two decades in internet marketing and the last few years making music under projects like EarthStar and Ruzindla — and somewhere in the middle of those two worlds, I started realizing that the tools builders use and the tools musicians need are actually the same tools, just pointed differently. The Claude API was one of those moments where I thought, okay, this is genuinely useful for the creative side of what I do, not just the business side. So I wrote up the whole thing — how to actually use it as a musician, not as a developer: https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html\n\n---\n\n**TUMBLR:**\nThere's a version of you that writes at 2am, answers your own emails, generates three album concept directions before breakfast, and never burns out on the content machine — the Claude API is part of how that version gets built. You don't need to know how to code, you just need to know what you're trying to say and be willing to experiment with how machines can help you say it louder. This guide is for the musicians who are already a little bit everywhere and want AI working in the background, not in the way.\n\n#musicians #aitools #creativeworkflow #independentartist #musicproduction #neurodivergentcreators #digitalcreator #vibrationofawesome\n\n---\n\n**INSTAGRAM:**\nYou don't need to be a developer to use the Claude API. You just need to be a musician with things to make and not enough hours to make them.\n\n#AIForMusicians #MusicianLife #IndependentArtist #CreativeWorkflow #AITools #MusicProduction #ContentCreation #DigitalCreator\n\n---\n\n**THREADS:**\nThe Claude API guide I wrote isn't for developers. It's for musicians who are tired of doing everything manually and ready to let AI carry some of the load. Link in bio. #AITools #MusicianLife #IndependentArtist",
+        "devto": "",
+        "hashnode": "I've spent the last two decades in internet marketing and the last few years making music under projects like EarthStar and Ruzindla — and somewhere in the middle of those two worlds, I started realizing that the tools builders use and the tools musicians need are actually the same tools, just pointed differently. The Claude API was one of those moments where I thought, okay, this is genuinely useful for the creative side of what I do, not just the business side. So I wrote up the whole thing — how to actually use it as a musician, not as a developer: https://vibrationofawesome.com/blog/boombot/posts/how-to-use-claude-api-for-musicians.html",
+        "tumblr": "There's a version of you that writes at 2am, answers your own emails, generates three album concept directions before breakfast, and never burns out on the content machine — the Claude API is part of how that version gets built. You don't need to know how to code, you just need to know what you're trying to say and be willing to experiment with how machines can help you say it louder. This guide is for the musicians who are already a little bit everywhere and want AI working in the background, not in the way.\n\n#musicians #aitools #creativeworkflow #independentartist #musicproduction #neurodivergentcreators #digitalcreator #vibrationofawesome",
+        "instagram": "You don't need to be a developer to use the Claude API. You just need to be a musician with things to make and not enough hours to make them.\n\n#AIForMusicians #MusicianLife #IndependentArtist #CreativeWorkflow #AITools #MusicProduction #ContentCreation #DigitalCreator",
+        "threads": "The Claude API guide I wrote isn't for developers. It's for musicians who are tired of doing everything manually and ready to let AI carry some of the load. Link in bio. #AITools #MusicianLife #IndependentArtist"
+      },
+      "platforms": {
+        "bluesky": {
+          "success": true,
+          "postId": "at://did:plc:d7rpszmsiitz7liaonbencvs/app.bsky.feed.post/3mgw42ggh6s2w",
+          "postUrl": "https://bsky.app/profile/unlimitedpotential.bsky.social/post/3mgw42ggh6s2w",
+          "error": null
+        },
+        "mastodon": {
+          "success": true,
+          "postId": "116220033587896755",
+          "postUrl": "https://mastodon.social/@unlimitedpotential/116220033587896755",
+          "error": null
+        },
+        "facebook_voa": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Error validating access token: Session has expired on Thursday, 12-Mar-26 20:00:00 PDT. The current time is Thursday, 12-Mar-26 21:42:57 PDT."
+        },
+        "facebook_earthstar": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Error validating access token: Session has expired on Thursday, 12-Mar-26 20:00:00 PDT. The current time is Thursday, 12-Mar-26 21:42:58 PDT."
+        },
+        "pinterest": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Pinterest: Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write', 'pins:write']"
+        },
+        "devto": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Dev.to: Canonical url has already been taken. Email support@dev.to for further details."
+        },
+        "hashnode": {
+          "success": true,
+          "postId": "69b395d338f2943498e26f5e",
+          "postUrl": "https://vibrationofawesome.hashnode.dev/how-to-use-the-claude-api-for-musicians-a-complete-guide-1-1",
+          "error": null
+        },
+        "tumblr": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Tumblr: Posting failed. Please try again."
+        },
+        "instagram": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Publer (instagram): 404"
+        },
+        "threads": {
+          "success": false,
+          "postId": null,
+          "postUrl": null,
+          "error": "Publer (threads): 404"
+        }
+      }
+    }
+  ]
+}
