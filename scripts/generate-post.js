@@ -317,15 +317,47 @@ function buildHtml(lane, title, dateStr, bodyHtml, slug, metaDescription) {
   return H.join("\n");
 }
 
+/** Load existing posts from both JSON indexes and return a formatted string for Claude */
+function buildExistingPostsList() {
+  const BASE = "https://vibrationofawesome.com";
+  const lines = [];
+  for (const l of ["boombot", "matt"]) {
+    const f = path.join(ROOT, "static", "_data", l + "-posts.json");
+    if (!fs.existsSync(f)) continue;
+    try {
+      const posts = JSON.parse(fs.readFileSync(f, "utf8"));
+      for (const p of (Array.isArray(posts) ? posts : [])) {
+        if (p.title && p.url) lines.push("- " + p.title + " → " + BASE + p.url);
+      }
+    } catch (_) {}
+  }
+  return lines.join("\n");
+}
+
 // ── MAIN ──
 async function main() {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   let postTitle, userMessage, systemPrompt;
 
+  // Build internal-linking context from existing published posts
+  const existingPosts = buildExistingPostsList();
+  const internalLinkingInstruction = existingPosts
+    ? [
+        "",
+        "---",
+        "INTERNAL LINKING: The following posts already exist on vibrationofawesome.com.",
+        "Where 2–3 of them are genuinely relevant to what you're writing, naturally weave",
+        "in a contextual hyperlink using Markdown: [anchor text](full URL).",
+        "Only link where it truly fits the flow — never force it, never link the same post twice.",
+        existingPosts,
+        "---",
+      ].join("\n")
+    : "";
+
   if (lane === "matt") {
     postTitle    = argv.title;
     systemPrompt = MATT_SYSTEM;
-    userMessage  = "Write a full blog post with the title: \"" + argv.title + "\"";
+    userMessage  = "Write a full blog post with the title: \"" + argv.title + "\"" + internalLinkingInstruction;
   } else {
     postTitle    = argv.keyword;
     systemPrompt = BOOMBOT_SYSTEM;
@@ -333,6 +365,7 @@ async function main() {
       "Write a long-form SEO blog post targeting the long-tail keyword: \"" + argv.keyword + "\"",
       "Broader topic context: \"" + argv.topic + "\"",
       "Make the H1 title compelling and include the keyword naturally.",
+      internalLinkingInstruction,
     ].join("\n");
   }
 
