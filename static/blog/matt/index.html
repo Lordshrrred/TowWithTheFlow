@@ -70,11 +70,11 @@
       <p class="lane-eyebrow">&#127807; Matt Dunn</p>
       <div class="lane-accent"></div>
       <h1 class="lane-title">From the Forest Temple</h1>
-      <p class="lane-desc">Raw, unfiltered transmissions from Matt Dunn &mdash; musician, digital creator, 20-year internet marketing veteran. Not the polished version. The real story behind the music, the systems, and what it actually takes to build something that lasts.</p>
+      <p class="lane-desc">Raw, unfiltered transmissions from Matt Dunn: musician, digital creator, 20-year internet marketing veteran. Not the polished version. The real story behind the music, the systems, and what it actually takes to build something that lasts.</p>
     </div>
     <div class="post-list" id="post-list"><div class="empty-state">Loading posts...</div></div>
   </main>
-  <footer><p>&copy; 2026 <a href="/">Vibration of Awesome</a> &mdash; All rights reserved.</p></footer>
+  <footer><p>&copy; 2026 <a href="/">Vibration of Awesome</a>. All rights reserved.</p></footer>
   <script>
     (function(){var canvas=document.getElementById("stars-canvas"),ctx=canvas.getContext("2d"),stars=[];function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}function init(){stars=[];for(var i=0;i<150;i++){stars.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.5+0.3,speed:Math.random()*0.008+0.002,phase:Math.random()*Math.PI*2});}}function draw(ts){ctx.clearRect(0,0,canvas.width,canvas.height);var t=ts/1000;stars.forEach(function(s){var a=0.3+0.7*(0.5+0.5*Math.sin(t*s.speed*6+s.phase));ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle="rgba(208,255,248,"+a+")";ctx.fill();});requestAnimationFrame(draw);}resize();init();requestAnimationFrame(draw);window.addEventListener("resize",function(){resize();init();});})();
     function fmtDate(d){return new Date(d).toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"});}

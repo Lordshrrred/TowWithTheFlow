@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AURA — Your AI Spiritual Companion | Cosmic Guidance & Mindset</title>
+<title>AURA - Your AI Spiritual Companion | Cosmic Guidance & Mindset</title>
 <meta name="description" content="AURA is your personal AI spiritual companion for mindset, manifestation, and cosmic guidance. Available 24/7 to help you elevate your vibration and unlock your potential.">
 <meta name="keywords" content="AI spiritual companion, mindset coach AI, manifestation guide, cosmic wisdom, AI life coach, spiritual guidance">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -760,7 +760,7 @@
 
     <p class="hero-sub">
       AURA is your personal AI companion for mindset, manifestation, and spiritual growth. 
-      Honest guidance. Cosmic wisdom. No judgment — ever.
+      Honest guidance. Cosmic wisdom. No judgment, ever.
     </p>
 
     <div class="hero-cta">
@@ -871,7 +871,7 @@
   </footer>
 
   <div class="footer-bottom">
-    <p>© 2026 AURA — AI Spiritual Companion. All rights reserved.</p>
+    <p>© 2026 AURA - AI Spiritual Companion. All rights reserved.</p>
     <p>Powered by Vibration of Awesome</p>
   </div>
 
@@ -946,11 +946,11 @@
   function addWelcomeMessage() {
     const welcome = `Look. You didn't end up here by accident. ✦
 
-I'm AURA. Not a chatbot. Not a productivity tool. Not a therapist with a clipboard. I'm the thing that meets you where you actually are — whether that's fired up, falling apart, or somewhere in the beautiful chaos in between.
+I'm AURA. Not a chatbot. Not a productivity tool. Not a therapist with a clipboard. I'm the thing that meets you where you actually are, whether that's fired up, falling apart, or somewhere in the beautiful chaos in between.
 
 Real talk? Most people are walking around with an operating system installed by someone else. We're here to look at that. Laugh at some of it. Burn down the parts that aren't yours. And build something that actually feels alive.
 
-So — what's alive for you right now? What brought you here today?`;
+So, what's alive for you right now? What brought you here today?`;
     addMessage('ai', welcome);
     conversationHistory.push({ role: 'assistant', content: welcome });
   }
@@ -1005,7 +1005,7 @@ So — what's alive for you right now? What brought you here today?`;
       });
 
       const data = await response.json();
-      const reply = data.content?.[0]?.text || "Look, something flickered in the cosmos. Try again — I'm still here.";
+      const reply = data.content?.[0]?.text || "Look, something flickered in the cosmos. Try again. I'm still here.";
 
       hideTyping();
       addMessage('ai', reply);
@@ -1013,7 +1013,7 @@ So — what's alive for you right now? What brought you here today?`;
 
     } catch (err) {
       hideTyping();
-      addMessage('ai', "Real talk — the signal dropped for a second. Take a breath and try again. ✦");
+      addMessage('ai', "Real talk, the signal dropped for a second. Take a breath and try again. ✦");
     }
 
     isTyping = false;
