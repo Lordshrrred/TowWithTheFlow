@@ -1,5 +1,5 @@
 ---
-title: "Bridging the Divide — A Vision for a United Humanity"
+title: "Bridging the Divide - A Vision for a United Humanity"
 slug: "first-transmission"
 date: 2025-01-28
 description: "The world we live in today feels more divided than ever. A personal reflection on polarization, fear, compassion, and the collective vision of a world that works for everyone."
@@ -8,7 +8,7 @@ canonical: "https://medium.com/p/567a51016b16"
 draft: false
 ---
 
-The world we live in today feels more divided than ever. Polarization runs deep, with both sides often unable — or unwilling — to see the humanity in the other. It's easy to lose hope when every conversation seems to turn into a battlefield of egos and ideologies. Even when you approach with respect and sincerity, you're met with resistance, misunderstanding, or outright hostility.
+The world we live in today feels more divided than ever. Polarization runs deep, with both sides often unable, or unwilling, to see the humanity in the other. It's easy to lose hope when every conversation seems to turn into a battlefield of egos and ideologies. Even when you approach with respect and sincerity, you're met with resistance, misunderstanding, or outright hostility.
 
 From my in the middle perspective we have deep polarization on both ends of the spectrum. Lower vibrational interpreters of our 3D world so very asleep and caught up in their own lack of awareness and what they believe is right. Sorry if that offends you and if it does my hope is to inspire some deep reflection within you for the greater good of our species.
 
@@ -18,7 +18,7 @@ That's why I'm persevering to write this despite the risk of back lash and havin
 
 I recently found myself reflecting a lot on this after a simple Facebook comment resulted in accusations and blame. It hit me deep on a collective level with people so far gone in their belief systems it left me wondering: How are we supposed to move forward as a species when we're so far divided, clinging tightly to "us vs. them"? My 3D self, the part of me tethered to this chaotic reality, couldn't see a way forward.
 
-But there's something deeper in all of us — something that can.
+But there's something deeper in all of us, something that can.
 
 I believe we are capable of transcending this division. It won't happen through more arguments or debates, but through something far greater: compassion, creativity, and collective intention. It's about each of us holding the vision of a better world, even when it feels impossible.
 
@@ -110,7 +110,7 @@ America under Trump may suck for all I know but it sucked under Biden too and I'
 
 Also I want to be clear. I am not for the right, but I am certainly fed up with left at this point in my life. I know for certain I am not the only peace loving hippie that feels that way.
 
-> "Whether you are right-wing or left-wing you are still a one winged bird flapping around in circles." — Yours Truly
+> "Whether you are right-wing or left-wing you are still a one winged bird flapping around in circles." - Yours Truly
 
 ---
 
@@ -140,11 +140,11 @@ Also Ruby I hope my article has answered some of your questions on your post eve
 
 ## A Higher Calling For Us All
 
-This is where art comes in. Music, writing, creativity — these are powerful tools to bridge the divide. They bypass the defenses of the mind and speak directly to the soul. They remind us of our shared humanity, our dreams, our pain, and our potential. So please feel your souls, feel your pain, feel your fears, hopes and dreams and bring them up from deep within to share with your fellow humans so we can all connect on what makes us human. We are all capable of such beauty and if we can come together and heal that which divides we are unstoppable as a species.
+This is where art comes in. Music, writing, creativity: these are powerful tools to bridge the divide. They bypass the defenses of the mind and speak directly to the soul. They remind us of our shared humanity, our dreams, our pain, and our potential. So please feel your souls, feel your pain, feel your fears, hopes and dreams and bring them up from deep within to share with your fellow humans so we can all connect on what makes us human. We are all capable of such beauty and if we can come together and heal that which divides we are unstoppable as a species.
 
 I don't have all the answers. Some days, the vision feels distant, like an echo I can barely hear. But I know this: every prayer, every song, and every small act of love is a step forward. The path may be unclear, but it's there, waiting for us to walk it together.
 
-So I'll keep praying. I'll keep creating. And I'll keep believing that we can rise above this. Because the future is ours to shape — and I refuse to let division be its defining feature.
+So I'll keep praying. I'll keep creating. And I'll keep believing that we can rise above this. Because the future is ours to shape, and I refuse to let division be its defining feature.
 
 **I believe in a world that works for everyone!**
 

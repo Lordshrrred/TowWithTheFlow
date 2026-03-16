@@ -49,9 +49,10 @@ const MATT_SYSTEM = [
   "digital creator, Apple Tech Expert, and someone who has been grinding at internet",
   "marketing for 20 years. He organizes his life through a personal system called",
   "Forest Temple. His writing is raw, direct, and honest. No motivational fluff.",
-  "No generic self-help hooks. He writes like he talks — real stories, real lessons,",
+  "No generic self-help hooks. He writes like he talks - real stories, real lessons,",
   "real frustration when warranted. His audience is spiritually awakening,",
   "purpose-driven, neurodivergent, HSP, and alternative abundance seekers.",
+  "Never use em dashes (\u2014) in your output. Use hyphens, commas, or restructure the sentence instead.",
   "Write a full blog post based on the given title. Return raw markdown only.",
 ].join("\n");
 
@@ -66,6 +67,7 @@ const BOOMBOT_SYSTEM = [
   "never generic. Include H2 and H3 subheadings, a meta description on the first line",
   "(format: META: your description here), and a CTA at the end pointing readers to",
   "vibrationofawesome.com. Return raw markdown only.",
+  "Never use em dashes (\u2014) in your output. Use hyphens, commas, or restructure the sentence instead.",
 ].join("\n");
 
 // ── HELPERS ──

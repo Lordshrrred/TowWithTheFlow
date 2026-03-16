@@ -129,7 +129,6 @@
     line-height: 1.9;
     color: rgba(240,230,204,0.75);
     margin-bottom: 1.5rem;
-    font-style: italic;
   }
 
   .about-visual {
@@ -448,7 +447,6 @@
 
   .merch-cta p {
     font-size: 1rem;
-    font-style: italic;
     color: rgba(240,230,204,0.6);
     max-width: 500px;
     line-height: 1.8;
@@ -590,6 +588,101 @@
     opacity: 0.6;
   }
 
+  /* VOA BUILDING BLOCKS LIST */
+  .voa-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0 1.5rem;
+  }
+  .voa-list li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(240,230,204,0.75);
+    padding: 0.5rem 0 0.5rem 1.2rem;
+    border-bottom: 1px solid rgba(0,229,204,0.06);
+    position: relative;
+  }
+  .voa-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.55rem;
+    top: 0.85rem;
+    opacity: 0.7;
+  }
+  .voa-list li strong {
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  /* PARADIGM OF ABUNDANCE */
+  #paradigm {
+    background: linear-gradient(to right, rgba(0,40,25,0.3) 0%, transparent 50%);
+    border-top: 1px solid rgba(0,229,204,0.08);
+    border-bottom: 1px solid rgba(0,229,204,0.08);
+  }
+
+  /* EMPOWER YOUR LIFE */
+  #empower {
+    border-top: 1px solid rgba(201,168,76,0.08);
+  }
+  .empower-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .empower-card {
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(0,229,204,0.08);
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .empower-card:hover {
+    border-color: rgba(0,229,204,0.2);
+    background: rgba(0,229,204,0.02);
+  }
+  .empower-card-num {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 3.5rem;
+    color: rgba(0,229,204,0.05);
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .empower-card h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.9rem;
+  }
+  .empower-card p {
+    font-size: 0.97rem;
+    line-height: 1.8;
+    color: rgba(208,255,248,0.65);
+  }
+  .empower-link {
+    display: inline-block;
+    margin-top: 1.3rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .empower-link:hover { opacity: 0.7; }
+
   @media (max-width: 768px) {
     .hero-tagline {
       font-size: 0.95rem;
@@ -601,6 +694,7 @@
     .earthstar-grid { grid-template-columns: 1fr; }
     .merch-preview { grid-template-columns: 1fr 1fr; }
     .dual-feed { grid-template-columns: 1fr; gap: 2rem; }
+    .empower-grid { grid-template-columns: 1fr; }
   }
 </style>
 {{ end }}
@@ -669,7 +763,7 @@
         <p>It's the state you enter when you stop drifting through life and start consciously cultivating the things that make life meaningful.</p>
         <p>Gratitude. Creativity. Health. Growth. Purpose. Contribution.</p>
         <p>When these things become the foundation of your life, something interesting happens. Life expands. Opportunities appear. Ideas start flowing. And you begin building a life that actually feels worth living.</p>
-        <p>The Vibration of Awesome isn't about perfection. It's about showing up fully for your life — and doing your best to make it awesome.</p>
+        <p>The Vibration of Awesome isn't about perfection. It's about showing up fully for your life and doing your best to make it awesome.</p>
       </div>
       <div class="about-visual">
         <svg width="280" height="280" viewBox="0 0 280 280" fill="none">
@@ -722,11 +816,90 @@
         </div>
       </div>
       <div>
-        <p>Most people are taught to see the world through scarcity — to believe there isn't enough opportunity, success, or meaning to go around.</p>
+        <p>There's a state where everything clicks. Where you feel connected to your life, your purpose, and the people around you. Where creativity flows and every day feels worth showing up for.</p>
+        <p>That's the Vibration of Awesome.</p>
+        <p>It's not a destination. It's a frequency you cultivate by deliberately building the things that matter:</p>
+        <ul class="voa-list">
+          <li><strong>Gratitude</strong> - the foundation. The lens that shifts everything.</li>
+          <li><strong>Creativity</strong> - the expression. What you bring into the world.</li>
+          <li><strong>Health</strong> - the vessel. Body and mind as sacred instruments.</li>
+          <li><strong>Purpose</strong> - the direction. Why you show up every day.</li>
+          <li><strong>Growth</strong> - the movement. Always becoming more.</li>
+          <li><strong>Contribution</strong> - the multiplier. Impact beyond yourself.</li>
+        </ul>
+        <p>Stack these, and something shifts. Life expands. The frequency rises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARADIGM OF ABUNDANCE -->
+<section id="paradigm">
+  <div class="section-inner">
+    <div class="vibration-layout reveal">
+      <div>
+        <p class="section-label">Philosophy</p>
+        <h2 class="section-title">The Paradigm of Abundance</h2>
+        <div class="divider"></div>
+        <div class="frequency-bars">
+          <div class="freq-bar">
+            <span class="freq-label">Create</span>
+            <div class="freq-line" style="width:130px;--dur:2.3s;--delay:0s"></div>
+          </div>
+          <div class="freq-bar">
+            <span class="freq-label">Share</span>
+            <div class="freq-line" style="width:95px;--dur:1.8s;--delay:0.4s"></div>
+          </div>
+          <div class="freq-bar">
+            <span class="freq-label">Build</span>
+            <div class="freq-line" style="width:160px;--dur:2.5s;--delay:0.8s"></div>
+          </div>
+          <div class="freq-bar">
+            <span class="freq-label">Expand</span>
+            <div class="freq-line" style="width:110px;--dur:2s;--delay:1.1s"></div>
+          </div>
+          <div class="freq-bar">
+            <span class="freq-label">Inspire</span>
+            <div class="freq-line" style="width:145px;--dur:2.8s;--delay:0.2s"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>Most people are taught to see the world through scarcity, to believe there isn't enough opportunity, success, or meaning to go around.</p>
         <p>But we live in a universe of endless creativity.</p>
         <p>Ideas are infinite. Innovation is infinite. Human potential is infinite.</p>
         <p>The Paradigm of Abundance is the understanding that you don't have to take from others to succeed. You create value. You build something meaningful. And the world expands.</p>
         <p>When more people live from abundance instead of scarcity, collaboration replaces competition and creativity replaces survival.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPOWER YOUR LIFE -->
+<section id="empower">
+  <div class="section-inner reveal">
+    <p class="section-label">Action</p>
+    <h2 class="section-title">Empower Your Life</h2>
+    <div class="divider"></div>
+    <p style="font-size:1.1rem;line-height:1.9;color:rgba(240,230,204,0.7);max-width:680px;margin-bottom:3rem;">The Vibration of Awesome isn't just a philosophy. It's something you practice. Here are the tools, channels, and paths that make it real.</p>
+    <div class="empower-grid">
+      <div class="empower-card">
+        <div class="empower-card-num">01</div>
+        <h3>Read the Blog</h3>
+        <p>Two frequencies. Raw personal transmissions from Matt Dunn in the Forest Temple, and AI-powered insight from Matty BoomBoom on creativity, music, and tools.</p>
+        <a href="/blog/" class="empower-link">Explore Blog →</a>
+      </div>
+      <div class="empower-card">
+        <div class="empower-card-num">02</div>
+        <h3>Wear the Frequency</h3>
+        <p>Wearable art designed to carry the signal into the world. Print-on-demand apparel and accessories that express the philosophy.</p>
+        <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener" class="empower-link">Shop Merch →</a>
+      </div>
+      <div class="empower-card">
+        <div class="empower-card-num">03</div>
+        <h3>Explore The EarthStar Initiative</h3>
+        <p>The creative extension of this philosophy. Music, art, and a vision for humanity's transition into something better.</p>
+        <a href="/earthstar/" class="empower-link">Visit EarthStar →</a>
       </div>
     </div>
   </div>
@@ -752,14 +925,14 @@
 <!-- EARTHSTAR -->
 <section id="earthstar">
   <div class="section-inner reveal">
-    <p class="section-label">EarthStar</p>
+    <p class="section-label">The EarthStar Initiative</p>
     <h2 class="section-title">Vision</h2>
     <div class="divider"></div>
-    <p style="font-size:1.1rem;line-height:1.9;color:rgba(240,230,204,0.75);font-style:italic;max-width:680px;margin-bottom:1.2rem;">EarthStar is a developing creative project inspired by the same philosophy behind the Vibration of Awesome.</p>
-    <p style="font-size:1.1rem;line-height:1.9;color:rgba(240,230,204,0.75);font-style:italic;max-width:680px;margin-bottom:1.2rem;">It explores the idea that humanity is moving through a Great Transition — a shift toward a more conscious, responsible, and life-honoring civilization.</p>
-    <p style="font-size:1.1rem;line-height:1.9;color:rgba(240,230,204,0.75);font-style:italic;max-width:680px;margin-bottom:1.5rem;">Music, art, and storytelling are the vehicles. The vision is the destination.</p>
-    <a href="/earthstar/" class="btn-secondary" style="font-family:'Rajdhani',sans-serif;font-size:0.78rem;letter-spacing:0.22em;display:inline-block;margin-bottom:2.5rem;">Explore EarthStar →</a>
-    <p style="font-size:0.95rem;line-height:1.8;color:rgba(240,230,204,0.5);font-style:italic;max-width:680px;margin-bottom:2rem;">This is the arc. The roadmap from here to there. Not a guarantee — a direction.</p>
+    <p style="font-size:1.1rem;line-height:1.9;color:rgba(240,230,204,0.75);max-width:680px;margin-bottom:1.2rem;">The EarthStar Initiative is a developing creative project inspired by the same philosophy behind the Vibration of Awesome.</p>
+    <p style="font-size:1.1rem;line-height:1.9;color:rgba(240,230,204,0.75);max-width:680px;margin-bottom:1.2rem;">It explores the idea that humanity is moving through a Great Transition, a shift toward a more conscious, responsible, and life-honoring civilization.</p>
+    <p style="font-size:1.1rem;line-height:1.9;color:rgba(240,230,204,0.75);max-width:680px;margin-bottom:1.5rem;">Music, art, and storytelling are the vehicles. The vision is the destination.</p>
+    <a href="/earthstar/" class="btn-secondary" style="font-family:'Rajdhani',sans-serif;font-size:0.78rem;letter-spacing:0.22em;display:inline-block;margin-bottom:2.5rem;">Explore The EarthStar Initiative →</a>
+    <p style="font-size:0.95rem;line-height:1.8;color:rgba(240,230,204,0.5);max-width:680px;margin-bottom:2rem;">This is the arc. The roadmap from here to there. Not a guarantee, a direction.</p>
     <div class="earthstar-grid">
 
       <div class="es-card">
@@ -842,7 +1015,7 @@
       </div>
     </div>
     <div class="merch-cta">
-      <p>Wearable art carrying the Vibration of Awesome into the world. Print-on-demand apparel, accessories, and more — powered by Creator Spring.</p>
+      <p>Wearable art carrying the Vibration of Awesome into the world. Print-on-demand apparel, accessories, and more, powered by Creator Spring.</p>
       <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener" class="btn-primary" style="font-family:'Rajdhani',sans-serif;font-size:0.8rem;letter-spacing:0.25em">Visit Wearable Art Store →</a>
     </div>
   </div>

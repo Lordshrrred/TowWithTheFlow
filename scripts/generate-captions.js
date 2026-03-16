@@ -34,8 +34,10 @@ learning AI, and abundance-minded outliers. Matt Dunn is the creator — musicia
 rock/metal/electronic, Ruzindla EDM/psytrance), digital creator, 20-year internet marketing
 veteran who runs a personal operating system called Forest Temple.
 
-Write in a real, slightly eccentric voice — never corporate, never generic. Each caption must
+Write in a real, slightly eccentric voice - never corporate, never generic. Each caption must
 be completely unique and tailored for that platform's culture and norms.
+
+Never use em dashes (\u2014) in your output. Use hyphens, commas, or restructure the sentence instead.
 
 Return ONLY the labeled sections in exact order with no preamble or commentary.`;
 
