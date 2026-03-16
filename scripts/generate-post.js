@@ -16,6 +16,7 @@ import { fileURLToPath } from "url";
 import { spawnSync } from "child_process";
 import { updateSitemap } from "./update-sitemap.js";
 import { syndicatePost } from "./syndicate.js";
+import { fetchNasaImages } from "./select-image.js";
 
 dotenv.config({ override: true });
 const __filename = fileURLToPath(import.meta.url);
@@ -237,6 +238,10 @@ function buildHtml(lane, title, dateStr, bodyHtml, slug, metaDescription) {
   H.push("    .post-body pre { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 1.2em; overflow-x: auto; margin: 1.5em 0; }");
   H.push("    .post-body pre code { background: none; padding: 0; color: var(--text); }");
   H.push("    .post-body hr { border: none; border-top: 1px solid var(--border); margin: 2.5em 0; }");
+  H.push("    .nasa-img-wrap { margin: 2.8rem -1rem; overflow: hidden; border-radius: 3px; }");
+  H.push("    .nasa-img-wrap img { display: block; width: 100%; height: 300px; object-fit: cover; filter: brightness(0.82) saturate(1.15); box-shadow: 0 0 50px rgba(" + accentR + "," + accentG + "," + accentB + ",0.18), 0 6px 30px rgba(0,0,0,0.6); transition: filter 0.4s; }");
+  H.push("    .nasa-img-wrap img:hover { filter: brightness(0.92) saturate(1.2); }");
+  H.push("    @media (max-width: 600px) { .nasa-img-wrap { margin: 2rem -0.5rem; } .nasa-img-wrap img { height: 200px; } }");");
   H.push("    .post-body strong { color: var(--accent-light); font-weight: 600; }");
   H.push("    .post-body em { font-style: italic; }");
   H.push("    .post-cta { background: var(--surface2); border: 1px solid var(--accent-dark); border-radius: 8px; padding: 2rem; margin: 2rem 0; text-align: center; }");
@@ -353,6 +358,47 @@ function buildExistingPostsList() {
   return lines.join("\n");
 }
 
+// ── INLINE IMAGE INJECTION ────────────────────────────────────────────────────
+
+/**
+ * Inject NASA APOD images into post body HTML at ~25%, 50%, 75% positions.
+ * Splits on </p> boundaries and inserts image blocks between paragraphs.
+ * @param {string} html   - Rendered post body HTML
+ * @param {Array}  images - Array of { url, title } from fetchNasaImages
+ * @returns {string}      - HTML with images injected
+ */
+function injectNasaImages(html, images) {
+  if (!images || images.length === 0) return html;
+
+  // Split into paragraph chunks at </p> boundaries
+  const chunks = html.split("</p>").filter(function(c) { return c.trim() !== ""; });
+  const total  = chunks.length;
+  if (total < 4) return html; // Too short — skip injection
+
+  // Target positions: after ~25%, 50%, 75% of paragraphs
+  const positions = [
+    Math.max(1, Math.floor(total * 0.25)),
+    Math.max(2, Math.floor(total * 0.50)),
+    Math.max(3, Math.floor(total * 0.75)),
+  ];
+
+  // Build image HTML blocks
+  function imgBlock(img) {
+    return '</p>\n<div class="nasa-img-wrap">'
+      + '<img src="' + img.url + '" alt="' + (img.title || "NASA astronomy image") + '" loading="lazy">'
+      + '</div>';
+  }
+
+  // Insert images working backwards so indices stay valid
+  for (let i = images.length - 1; i >= 0; i--) {
+    const pos = positions[i];
+    if (pos === undefined || pos >= total) continue;
+    chunks.splice(pos, 0, imgBlock(images[i]));
+  }
+
+  return chunks.join("</p>") + "</p>";
+}
+
 // ── MAIN ──
 async function main() {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -423,8 +469,17 @@ async function main() {
   if (h1Match) postTitle = h1Match[1].trim();
   const bodyMarkdown = cleanMarkdown.replace(/^#\s+.+$/m, "").trim();
 
-  const bodyHtml = marked.parse(bodyMarkdown);
-  const slug     = slugify(postTitle);
+  // Fetch 3 NASA APOD images and inject at 25%, 50%, 75% through the body
+  let bodyHtml = marked.parse(bodyMarkdown);
+  console.log("Fetching 3 NASA APOD images for inline art...");
+  const inlineImages = await fetchNasaImages(3);
+  if (inlineImages.length > 0) {
+    bodyHtml = injectNasaImages(bodyHtml, inlineImages);
+    console.log("Inline images injected: " + inlineImages.map(function(i) { return i.title; }).join(", "));
+  } else {
+    console.warn("No NASA images returned — post will have no inline images.");
+  }
+  const slug = slugify(postTitle);
 
   const outputDir  = path.join(ROOT, "static", "blog", lane, "posts");
   const outputFile = path.join(outputDir, slug + ".html");

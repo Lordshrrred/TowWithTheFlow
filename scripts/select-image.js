@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 /**
- * select-image.js — Image selector for syndicated posts
+ * select-image.js — Image selector for blog posts
  *
- * Primary:  Pexels API (PEXELS_API_KEY), searches by query keyword
+ * Primary:  NASA APOD API (NASA_API_KEY in .env, falls back to DEMO_KEY)
+ *           Fetches random images, filters to media_type === "image",
+ *           picks one at random. Returns hdurl or url.
  * Fallback: Randomly picks from static/personal-photos/ folder
  *
- * Exports: selectImage(query)
- * Returns: { url, thumbUrl, source, attribution, photographer } or null
+ * Exports: selectImage(query)   — picks one NASA image
+ *          fetchNasaImages(n)   — returns array of n NASA image objects
  *
- * CLI: node scripts/select-image.js "music technology"
+ * CLI: node scripts/select-image.js
  */
 
 import dotenv from "dotenv";
@@ -18,26 +20,22 @@ import fs from "fs";
 
 dotenv.config({ override: true });
 
-const __filename  = fileURLToPath(import.meta.url);
-const __dirname   = path.dirname(__filename);
-const ROOT        = path.resolve(__dirname, "..");
-const PHOTOS_DIR  = path.join(ROOT, "static", "personal-photos");
-const IMAGE_EXTS  = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"]);
-const PEXELS_BASE = "https://api.pexels.com/v1";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname  = path.dirname(__filename);
+const ROOT       = path.resolve(__dirname, "..");
+const PHOTOS_DIR = path.join(ROOT, "static", "personal-photos");
+const IMAGE_EXTS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"]);
+const APOD_BASE  = "https://api.nasa.gov/planetary/apod";
 
 // ── Personal photos fallback ──────────────────────────────────────────────────
 
-/** Pick a random image from static/personal-photos/. Returns null if folder is empty. */
 function pickPersonalPhoto() {
   if (!fs.existsSync(PHOTOS_DIR)) return null;
-
   const files = fs.readdirSync(PHOTOS_DIR).filter(f => {
     const ext = path.extname(f).toLowerCase();
     return IMAGE_EXTS.has(ext) && !f.startsWith(".");
   });
-
   if (files.length === 0) return null;
-
   const file = files[Math.floor(Math.random() * files.length)];
   return {
     url:          `https://vibrationofawesome.com/personal-photos/${file}`,
@@ -49,79 +47,84 @@ function pickPersonalPhoto() {
   };
 }
 
-// ── Pexels API ────────────────────────────────────────────────────────────────
+// ── NASA APOD API ─────────────────────────────────────────────────────────────
 
 /**
- * Fetch a landscape image from Pexels matching the query.
- * Returns null on any failure (missing key, API error, no results).
+ * Fetch `count` random APOD images from NASA.
+ * Filters to media_type === "image" only (skips video APODs).
+ * Returns array of { url, thumbUrl, source, title, date } objects.
+ * Uses NASA_API_KEY from env; falls back to DEMO_KEY (30 req/hr, 50/day).
  */
-async function fetchPexelsImage(query) {
-  const key = process.env.PEXELS_API_KEY;
-  if (!key) {
-    console.warn("[select-image] PEXELS_API_KEY not set — skipping Pexels.");
-    return null;
-  }
+export async function fetchNasaImages(count) {
+  count = count || 1;
+  const key = process.env.NASA_API_KEY || "DEMO_KEY";
+  // Request more than needed to have buffer after filtering out video entries
+  const fetchCount = Math.min(count * 4, 100);
 
   try {
-    const qs   = new URLSearchParams({ query, per_page: "15", orientation: "landscape" });
-    const resp = await fetch(`${PEXELS_BASE}/search?${qs}`, {
-      headers: { Authorization: key },
+    const resp = await fetch(APOD_BASE + "?api_key=" + key + "&count=" + fetchCount);
+    if (!resp.ok) {
+      const body = await resp.text().catch(function(){ return ""; });
+      console.warn("[select-image] NASA APOD " + resp.status + ": " + body.slice(0, 120));
+      return [];
+    }
+    const items = await resp.json();
+    const all = Array.isArray(items) ? items : [items];
+    const images = all.filter(function(item) {
+      return item.media_type === "image" && (item.hdurl || item.url);
     });
 
-    if (!resp.ok) {
-      console.warn(`[select-image] Pexels API returned ${resp.status}: ${await resp.text()}`);
-      return null;
+    if (images.length === 0) {
+      console.warn("[select-image] NASA APOD returned no image-type results");
+      return [];
     }
 
-    const data = await resp.json();
-    if (!data.photos || data.photos.length === 0) {
-      console.warn(`[select-image] Pexels returned 0 photos for query: "${query}"`);
-      return null;
+    // Fisher-Yates shuffle
+    for (let i = images.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = images[i]; images[i] = images[j]; images[j] = tmp;
     }
 
-    // Pick randomly from the top 8 results to add variety
-    const pool  = data.photos.slice(0, Math.min(data.photos.length, 8));
-    const photo = pool[Math.floor(Math.random() * pool.length)];
-
-    return {
-      url:          photo.src.large2x || photo.src.large || photo.src.original,
-      thumbUrl:     photo.src.medium  || photo.src.small,
-      source:       "pexels",
-      attribution:  `Photo by ${photo.photographer} on Pexels`,
-      photographer: photo.photographer,
-      pexelsUrl:    photo.url,
-      pexelsId:     photo.id,
-    };
+    return images.slice(0, count).map(function(item) {
+      return {
+        url:          item.hdurl || item.url,
+        thumbUrl:     item.url,
+        source:       "nasa",
+        title:        item.title  || "",
+        date:         item.date   || "",
+        attribution:  null,
+        photographer: null,
+      };
+    });
   } catch (err) {
-    console.warn(`[select-image] Pexels fetch error: ${err.message}`);
-    return null;
+    console.warn("[select-image] NASA APOD fetch error: " + err.message);
+    return [];
   }
 }
 
 // ── Main export ───────────────────────────────────────────────────────────────
 
 /**
- * Select an image for a syndicated post.
- *
- * @param {string} query - Search keyword(s) sent to Pexels
- * @returns {Promise<object|null>} Image info, or null if nothing available
+ * Select one image. query parameter accepted for API compatibility but unused
+ * (NASA APOD is randomly selected, not keyword-searched).
  */
-export async function selectImage(query) {
-  // 1. Try Pexels
-  const pexels = await fetchPexelsImage(query);
-  if (pexels) {
-    console.log(`[select-image] Pexels: "${pexels.attribution}"`);
-    return pexels;
+export async function selectImage(_query) {
+  // 1. Try NASA APOD
+  const results = await fetchNasaImages(1);
+  if (results.length > 0) {
+    const img = results[0];
+    console.log("[select-image] NASA APOD: \"" + img.title + "\" (" + img.date + ")");
+    return img;
   }
 
   // 2. Fall back to personal photos
   const personal = pickPersonalPhoto();
   if (personal) {
-    console.log(`[select-image] Personal photo: ${path.basename(personal.localPath)}`);
+    console.log("[select-image] Personal photo: " + path.basename(personal.localPath));
     return personal;
   }
 
-  console.warn("[select-image] No image available from Pexels or personal-photos/.");
+  console.warn("[select-image] No image available from NASA APOD or personal-photos/.");
   return null;
 }
 
@@ -129,8 +132,7 @@ export async function selectImage(query) {
 
 const isCli = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(__filename);
 if (isCli) {
-  const query = process.argv.slice(2).join(" ") || "music technology creativity";
-  console.log(`Searching for: "${query}"\n`);
-  const image = await selectImage(query);
+  console.log("Fetching NASA APOD image...\n");
+  const image = await selectImage("");
   console.log(image ? JSON.stringify(image, null, 2) : "No image found.");
 }
