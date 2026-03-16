@@ -507,6 +507,13 @@
     display: inline-block;
     padding: 0.45rem 1.1rem;
     margin-bottom: 0.85rem;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  a.lane-badge:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
   }
 
   .lane-badge--matt {
@@ -1058,7 +1065,7 @@
       <!-- Forest Temple Lane -->
       <div class="feed-lane feed-matt">
         <div class="lane-header">
-          <span class="lane-badge lane-badge--matt">🌿 From the Forest Temple</span>
+          <a href="/blog/matt/" class="lane-badge lane-badge--matt">🌿 From the Forest Temple</a>
           <p class="lane-byline">by Matt Dunn, raw, unfiltered, human, fully expressed</p>
         </div>
         <div class="lane-posts" id="matt-feed">
@@ -1070,7 +1077,7 @@
       <!-- Boom Frequency Lane -->
       <div class="feed-lane feed-boombot">
         <div class="lane-header">
-          <span class="lane-badge lane-badge--boombot">⚡ Boom Frequency</span>
+          <a href="/blog/boombot/" class="lane-badge lane-badge--boombot">⚡ Boom Frequency</a>
           <p class="lane-byline">by Matty BoomBoom, Bringing that boom boom</p>
         </div>
         <div class="lane-posts" id="boombot-feed">
