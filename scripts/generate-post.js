@@ -71,6 +71,23 @@ const BOOMBOT_SYSTEM = [
 
 // ── HELPERS ──
 
+/** Build a list of existing posts for internal linking context */
+function buildExistingPostsList() {
+  const BASE = "https://vibrationofawesome.com";
+  const lines = [];
+  for (const l of ["boombot", "matt"]) {
+    const f = path.join(ROOT, "static", "_data", l + "-posts.json");
+    if (!fs.existsSync(f)) continue;
+    try {
+      const posts = JSON.parse(fs.readFileSync(f, "utf8"));
+      for (const p of (Array.isArray(posts) ? posts : [])) {
+        if (p.title && p.url) lines.push("- " + p.title + " → " + BASE + p.url);
+      }
+    } catch (_) {}
+  }
+  return lines.join("\n");
+}
+
 /** Convert title to URL-safe slug */
 function slugify(str) {
   return str.toLowerCase().replace(/[^a-z0-9\s-]/g, "").trim().replace(/\s+/g, "-").replace(/-+/g, "-");
