@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vision ~ The EarthStar Initiative</title>
+<meta name="description" content="A Multi-Phase Global Planetary Awakening. The phases of the work: Keys of Light, Abundance Realization, Weapons of Mass Creation, Global Harmonization.">
+<link rel="canonical" href="https://vibrationofawesome.com/earthstar/vision/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1a3a8f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EarthStar">
+<meta property="og:title" content="Vision ~ The EarthStar Initiative">
+<meta property="og:description" content="A Multi-Phase Global Planetary Awakening. The phases of the work.">
+<meta property="og:url" content="https://vibrationofawesome.com/earthstar/vision/">
+<meta property="og:image" content="https://vibrationofawesome.com/images/earthstar-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vision ~ The EarthStar Initiative">
+<meta name="twitter:description" content="A Multi-Phase Global Planetary Awakening.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5HF0WKZT9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G5HF0WKZT9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Raleway:wght@300;400;600&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --blue:      #1a3a8f;
+    --blue-mid:  #2550b8;
+    --blue-glow: rgba(26,58,143,0.55);
+    --blue-dim:  rgba(26,58,143,0.14);
+    --gold:      #c9a84c;
+    --gold-light:#e8c96a;
+    --gold-glow: rgba(201,168,76,0.45);
+    --gold-dim:  rgba(201,168,76,0.10);
+    --emerald:   #1a6b3c;
+    --emerald-dim:rgba(26,107,60,0.12);
+    --deep:      #0a0f2e;
+    --midnight:  #080d2a;
+    --surface:   #0d1238;
+    --text:      #f0f0ff;
+    --text-muted:#8898cc;
+    --border:    rgba(26,58,143,0.22);
+    --gold-border:rgba(201,168,76,0.25);
+    --cream:     #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--deep);
+    color: var(--text);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 1.75;
+  }
+
+  /* ── STARS ── */
+  .stars {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none; z-index: 0; overflow: hidden;
+  }
+  .star {
+    position: absolute; background: white; border-radius: 50%;
+    animation: twinkle var(--dur,3s) ease-in-out infinite;
+    animation-delay: var(--delay,0s); opacity: 0;
+  }
+  .star.gold { background: var(--gold); }
+  .star.blue { background: #3a5fc8; }
+  @keyframes twinkle {
+    0%,100% { opacity:0; transform:scale(0.5); }
+    50%      { opacity:var(--brightness,0.7); transform:scale(1); }
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(10,15,46,0.97), transparent);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem; letter-spacing: 0.14em; font-weight: 600;
+    color: var(--gold);
+    text-decoration: none;
+    text-shadow: 0 0 20px var(--gold-glow);
+  }
+  .nav-back {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    border: 1px solid var(--gold-border);
+    padding: 0.4rem 0.9rem;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-back:hover { color: var(--gold); border-color: var(--gold); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    position: relative; z-index: 1;
+    padding: 10rem 4rem 6rem;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 80% 70% at 50% 0%, rgba(8,13,42,0.97) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 20%, rgba(201,168,76,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 50% at 20% 80%, rgba(26,58,143,0.09) 0%, transparent 60%),
+      linear-gradient(160deg, #0a0f2e 0%, #0c1240 40%, #080d2a 100%);
+    border-bottom: 1px solid var(--gold-border);
+  }
+  .page-hero-inner { max-width: 820px; margin: 0 auto; }
+  .page-eyebrow {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.5em; text-transform: uppercase;
+    color: var(--gold); opacity: 0.8; margin-bottom: 1.2rem;
+    display: block;
+    animation: fadeUp 1.2s ease forwards; opacity: 0;
+  }
+  .page-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 900;
+    color: var(--cream);
+    letter-spacing: 0.08em; line-height: 1.1;
+    margin-bottom: 1.2rem;
+    animation: fadeUp 1.4s ease forwards; opacity: 0;
+    text-shadow: 0 0 60px var(--gold-glow), 0 0 120px rgba(26,58,143,0.3);
+  }
+  .page-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 3rem;
+    opacity: 0.85;
+    animation: fadeUp 1.6s ease forwards; opacity: 0;
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(20px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* ── INTRO SECTION ── */
+  .intro-section {
+    position: relative; z-index: 1;
+    padding: 5rem 4rem;
+    max-width: 820px; margin: 0 auto;
+  }
+  .intro-section p {
+    font-size: 1.18rem; line-height: 2.1;
+    color: rgba(240,240,255,0.82);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  .intro-section p.highlight {
+    color: rgba(240,240,255,0.95);
+    font-weight: 600;
+    font-size: 1.05rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+  }
+  .intro-divider {
+    width: 80px; height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 3rem 0;
+  }
+
+  /* ── PHASE SECTION ── */
+  .phases-wrapper {
+    position: relative; z-index: 1;
+    padding: 0 4rem 6rem;
+  }
+  .phases-container { max-width: 960px; margin: 0 auto; }
+
+  /* Timeline connector between phases */
+  .phase-connector {
+    display: flex; align-items: center; justify-content: center;
+    padding: 1.2rem 0;
+    position: relative;
+  }
+  .phase-connector::before {
+    content: '';
+    position: absolute; top: 0; bottom: 0; left: 50%;
+    width: 1px;
+    background: linear-gradient(to bottom, rgba(201,168,76,0.3), rgba(26,58,143,0.3));
+  }
+  .phase-connector-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 12px var(--gold-glow);
+    position: relative; z-index: 1;
+    animation: pulseDot 2.5s ease-in-out infinite;
+  }
+  @keyframes pulseDot {
+    0%,100% { transform: scale(0.8); opacity: 0.6; }
+    50%      { transform: scale(1.2); opacity: 1; }
+  }
+
+  /* Individual phase card */
+  .phase-block {
+    background: rgba(0,0,0,0.45);
+    border: 1px solid var(--blue-dim);
+    border-left: 3px solid var(--gold);
+    position: relative; overflow: hidden;
+    padding: 4rem 4rem 3.5rem;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.4), inset 0 0 60px rgba(26,58,143,0.04);
+    transition: border-color 0.4s, box-shadow 0.4s;
+  }
+  .phase-block:hover {
+    border-color: rgba(201,168,76,0.35);
+    border-left-color: var(--gold);
+    box-shadow: 0 8px 60px rgba(0,0,0,0.5), 0 0 40px rgba(201,168,76,0.06), inset 0 0 80px rgba(26,58,143,0.07);
+  }
+  .phase-block::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(26,58,143,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .phase-numeral-bg {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(6rem, 14vw, 11rem);
+    font-weight: 900;
+    color: rgba(201,168,76,0.04);
+    position: absolute; right: 2rem; top: 1rem;
+    line-height: 1; pointer-events: none;
+    letter-spacing: -0.02em;
+    user-select: none;
+    transition: color 0.4s;
+  }
+  .phase-block:hover .phase-numeral-bg {
+    color: rgba(201,168,76,0.07);
+  }
+  .phase-block-inner { position: relative; z-index: 1; max-width: 680px; }
+  .phase-tag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 1.2rem; display: block;
+  }
+  .phase-heading {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.06em; line-height: 1.2;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 30px var(--gold-glow);
+  }
+  .phase-subheading {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 400;
+    color: rgba(240,240,255,0.85);
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+  .phase-divider {
+    width: 50px; height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin-bottom: 2rem;
+  }
+  .phase-block p {
+    font-size: 1.1rem; line-height: 2;
+    color: rgba(240,240,255,0.75);
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+  }
+  .phase-block p.phase-placeholder {
+    font-style: italic;
+    color: rgba(240,240,255,0.4);
+    font-size: 0.95rem;
+    border-left: 2px solid rgba(201,168,76,0.2);
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── CONCLUSION SECTION ── */
+  .conclusion-section {
+    position: relative; z-index: 1;
+    padding: 5rem 4rem 7rem;
+    border-top: 1px solid var(--gold-border);
+    text-align: center;
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 70%);
+  }
+  .conclusion-inner { max-width: 780px; margin: 0 auto; }
+  .conclusion-section p {
+    font-size: 1.18rem; line-height: 2.1;
+    color: rgba(240,240,255,0.8);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  .conclusion-coda {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+    margin: 2.5rem 0;
+    text-shadow: 0 0 40px var(--gold-glow);
+  }
+  .conclusion-section .section-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); opacity: 0.75; display: block; margin-bottom: 1.5rem;
+  }
+  .btn-back {
+    display: inline-block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid var(--gold-border);
+    padding: 0.8rem 1.8rem; text-decoration: none;
+    transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    margin-top: 1rem;
+  }
+  .btn-back:hover {
+    color: var(--cream); border-color: var(--gold);
+    box-shadow: 0 0 20px var(--gold-glow);
+  }
+
+  /* ── REVEAL ── */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2.5rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 2rem;
+    position: relative; z-index: 1;
+  }
+  .footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem; letter-spacing: 0.12em; font-weight: 600;
+    color: var(--gold);
+  }
+  .footer-tagline {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.73rem; letter-spacing: 0.1em;
+    color: var(--text-muted); opacity: 0.6; margin-top: 0.3rem;
+    font-weight: 300;
+  }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); opacity: 0.45;
+    width: 100%;
+    text-align: right;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .page-hero { padding: 8rem 1.5rem 4rem; }
+    .intro-section { padding: 3.5rem 1.5rem; }
+    .phases-wrapper { padding: 0 1.5rem 4rem; }
+    .phase-block { padding: 2.5rem 1.5rem 2rem; }
+    .conclusion-section { padding: 4rem 1.5rem 5rem; }
+    footer { padding: 2rem 1.5rem; }
+    .footer-copy { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="/earthstar/" class="nav-logo">The EarthStar Initiative</a>
+  <a href="/earthstar/" class="nav-back">&#8592; Back to EarthStar</a>
+</nav>
+
+<!-- ══════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════ -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-eyebrow">The EarthStar Initiative</span>
+    <h1 class="page-title">Vision</h1>
+    <p class="page-subtitle">A Multi-Phase Global Planetary Awakening</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     INTRO
+══════════════════════════════════════ -->
+<div class="intro-section reveal">
+  <p>I believe in a world that works for everyone.</p>
+  <p>I believe in everyone's abundance realization and ultimate ability to wield weapons of mass creation in this world ~ alongside billions of others doing the same ~ inevitably creating a global harmonization in which the old obsolete ways of existing in this world fall away because something new and more beautiful has taken its place.</p>
+  <p class="highlight">This is not a prediction. This is a direction.</p>
+  <p class="highlight">These are the phases of the work.</p>
+  <div class="intro-divider"></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PHASES
+══════════════════════════════════════ -->
+<div class="phases-wrapper">
+  <div class="phases-container">
+
+    <!-- PHASE ZERO -->
+    <div class="phase-block reveal">
+      <div class="phase-numeral-bg">0</div>
+      <div class="phase-block-inner">
+        <span class="phase-tag">Phase Zero</span>
+        <h2 class="phase-heading">The Keys of Light</h2>
+        <div class="phase-divider"></div>
+        <p class="phase-placeholder">[Placeholder ~ Matt's vision for Phase Zero coming soon]</p>
+        <p>The keys of light have been distributed. The signals have been sent. The seeds have been planted. This is the beginning of the Reclamation of power for the masses and the Great Transition.</p>
+      </div>
+    </div>
+
+    <div class="phase-connector"><div class="phase-connector-dot"></div></div>
+
+    <!-- PHASE ONE -->
+    <div class="phase-block reveal">
+      <div class="phase-numeral-bg">I</div>
+      <div class="phase-block-inner">
+        <span class="phase-tag">Phase One</span>
+        <h2 class="phase-heading">Abundance Realization</h2>
+        <div class="phase-divider"></div>
+        <p class="phase-placeholder">[Placeholder ~ Matt's vision for Phase One coming soon]</p>
+        <p>We finally built it. The life, the vision, the abundance realized in full and shared with the world. This is where it begins.</p>
+      </div>
+    </div>
+
+    <div class="phase-connector"><div class="phase-connector-dot"></div></div>
+
+    <!-- PHASE TWO -->
+    <div class="phase-block reveal">
+      <div class="phase-numeral-bg">II</div>
+      <div class="phase-block-inner">
+        <span class="phase-tag">Phase Two</span>
+        <h2 class="phase-heading">Weapons of Mass Creation</h2>
+        <div class="phase-divider"></div>
+        <p class="phase-placeholder">[Placeholder ~ Matt's vision for Phase Two coming soon]</p>
+        <p>With abundance realized, unlimited resources become tools of transformation. Systems that make so much more sense the old ones simply fall away.</p>
+      </div>
+    </div>
+
+    <div class="phase-connector"><div class="phase-connector-dot"></div></div>
+
+    <!-- PHASE THREE -->
+    <div class="phase-block reveal">
+      <div class="phase-numeral-bg">III</div>
+      <div class="phase-block-inner">
+        <span class="phase-tag">Phase Three</span>
+        <h2 class="phase-heading">Global Harmonization</h2>
+        <div class="phase-divider"></div>
+        <p class="phase-placeholder">[Placeholder ~ Matt's vision for Phase Three coming soon]</p>
+        <p>The world finally got its shit together. Not because we forced it ~ but because the example we set made the old system obsolete. Peace. Harmony. Achieved.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CONCLUSION
+══════════════════════════════════════ -->
+<div class="conclusion-section reveal">
+  <div class="conclusion-inner">
+    <span class="section-label">The Vision</span>
+    <p>I believe in a world that works for everyone.</p>
+    <p>Not because it is guaranteed. But because enough people choosing to believe in it and build toward it makes it inevitable.</p>
+    <p>Every person who wakes up. Every weapon of mass creation wielded with intention. Every act of abundance shared freely. These are the building blocks of Global Harmonization.</p>
+    <p>The future is not something that happens to us.</p>
+    <p>It is something we build together.</p>
+    <p>The EarthStar Initiative is one small part of that build.</p>
+    <div class="conclusion-coda">
+      Roots in the Earth. Crown in the Stars.<br>
+      The Future is Ours.
+    </div>
+    <a href="/earthstar/" class="btn-back">&#8592; Back to EarthStar</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div>
+    <div class="footer-logo">The EarthStar Initiative</div>
+    <div class="footer-tagline">Roots in the Earth, Crown in the Stars. The Future is Ours.</div>
+  </div>
+  <div class="footer-links">
+    <a href="/earthstar/">EarthStar</a>
+    <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener">Merch</a>
+    <a href="/blog/">Blog</a>
+    <a href="/">&#8592; Vibration of Awesome</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 The EarthStar Initiative / Vibration of Awesome</div>
+</footer>
+
+<script>
+  // Stars
+  const starsEl = document.getElementById('stars');
+  for (let i = 0; i < 140; i++) {
+    const star = document.createElement('div');
+    star.className = 'star' + (i < 14 ? ' gold' : i < 28 ? ' blue' : '');
+    const sz = Math.random() * 2 + 0.4;
+    star.style.cssText =
+      'width:'+sz+'px;height:'+sz+'px;' +
+      'left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;' +
+      '--dur:'+(Math.random()*4+2)+'s;--delay:'+(Math.random()*6)+'s;' +
+      '--brightness:'+(Math.random()*0.5+0.2)+';';
+    starsEl.appendChild(star);
+  }
+
+  // Nav scroll
+  const navEl = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    navEl.style.background = window.scrollY > 60
+      ? 'rgba(10,15,46,0.98)'
+      : 'linear-gradient(to bottom, rgba(10,15,46,0.97), transparent)';
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+</script>
+</body>
+</html>

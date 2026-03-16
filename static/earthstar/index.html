@@ -7,8 +7,7 @@
 <meta name="description" content="The EarthStar Initiative is a creative project born from the philosophy of the Vibration of Awesome. Music, art, and storytelling for the Great Transition. The sound of humanity waking up.">
 <link rel="canonical" href="https://vibrationofawesome.com/earthstar/">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#4a90d9">
-<!-- Open Graph -->
+<meta name="theme-color" content="#1a3a8f">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EarthStar">
 <meta property="og:title" content="The EarthStar Initiative - Roots in the Earth, Crown in the Stars">
@@ -17,48 +16,46 @@
 <meta property="og:image" content="https://vibrationofawesome.com/images/earthstar-hero.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<!-- Twitter / X Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The EarthStar Initiative - Roots in the Earth, Crown in the Stars">
 <meta name="twitter:description" content="EarthStar is a transmission. Rock, metal, electronic. The sound of humanity waking up.">
 <meta name="twitter:image" content="https://vibrationofawesome.com/images/earthstar-hero.jpg">
-<!-- Structured Data -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MusicGroup","name":"EarthStar","url":"https://vibrationofawesome.com/earthstar/","description":"EarthStar is a musical and artistic project by Matt Dunn, exploring rock, metal, and electronic music.","genre":["Rock","Metal","Electronic"],"member":{"@type":"Person","name":"Matt Dunn","url":"https://vibrationofawesome.com"}}
 </script>
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5HF0WKZT9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G5HF0WKZT9');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Raleway:wght@300;400;600&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   /* ── RESET & ROOT ── */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
-    --blue:      #4a90d9;
-    --blue-glow: rgba(74,144,217,0.4);
-    --blue-dim:  rgba(74,144,217,0.08);
+    --blue:      #1a3a8f;
+    --blue-mid:  #2550b8;
+    --blue-glow: rgba(26,58,143,0.55);
+    --blue-dim:  rgba(26,58,143,0.14);
     --gold:      #c9a84c;
-    --gold-glow: rgba(201,168,76,0.4);
-    --gold-dim:  rgba(201,168,76,0.08);
-    --green:     #4caf85;
-    --green-dim: rgba(76,175,133,0.12);
-    --purple:    #8b5cf6;
-    --purple-dim:rgba(139,92,246,0.12);
-    --deep:      #050810;
-    --midnight:  #070b14;
-    --surface:   #0a0f1e;
-    --surface2:  #0d1428;
-    --text:      #d4e8f8;
-    --text-muted:#5a7a9a;
-    --border:    rgba(74,144,217,0.1);
-    --cream:     #e8f4ff;
+    --gold-light:#e8c96a;
+    --gold-glow: rgba(201,168,76,0.45);
+    --gold-dim:  rgba(201,168,76,0.10);
+    --emerald:   #1a6b3c;
+    --emerald-dim:rgba(26,107,60,0.12);
+    --deep:      #0a0f2e;
+    --midnight:  #080d2a;
+    --surface:   #0d1238;
+    --surface2:  #101640;
+    --text:      #f0f0ff;
+    --text-muted:#8898cc;
+    --border:    rgba(26,58,143,0.22);
+    --cream:     #ffffff;
   }
   html { scroll-behavior: smooth; }
   body {
     background: var(--deep);
     color: var(--text);
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     overflow-x: hidden;
     line-height: 1.75;
     cursor: none;
@@ -78,7 +75,7 @@
   }
   .cursor-ring {
     width: 28px; height: 28px;
-    border: 1px solid rgba(74,144,217,0.5);
+    border: 1px solid rgba(26,58,143,0.55);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
@@ -100,7 +97,7 @@
     animation-delay: var(--delay,0s); opacity: 0;
   }
   .star.gold { background: var(--gold); }
-  .star.blue { background: var(--blue); }
+  .star.blue { background: #3a5fc8; }
   @keyframes twinkle {
     0%,100% { opacity:0; transform:scale(0.5); }
     50%      { opacity:var(--brightness,0.7); transform:scale(1); }
@@ -111,13 +108,13 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 1.4rem 3rem;
     display: flex; align-items: center; justify-content: space-between;
-    background: linear-gradient(to bottom, rgba(5,8,16,0.97), transparent);
+    background: linear-gradient(to bottom, rgba(10,15,46,0.97), transparent);
     border-bottom: 1px solid var(--border);
     transition: background 0.3s, border-color 0.3s;
   }
   .nav-logo {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1rem; letter-spacing: 0.12em;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem; letter-spacing: 0.14em; font-weight: 600;
     color: var(--gold);
     text-decoration: none;
     text-shadow: 0 0 20px var(--gold-glow);
@@ -131,16 +128,16 @@
     color: var(--text-muted); text-decoration: none;
     transition: color 0.2s;
   }
-  .nav-right a:hover { color: var(--blue); }
+  .nav-right a:hover { color: var(--gold); }
   .nav-back {
     font-family: 'Rajdhani', sans-serif;
     font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--text-muted); text-decoration: none;
-    border: 1px solid rgba(74,144,217,0.2);
+    border: 1px solid rgba(26,58,143,0.3);
     padding: 0.4rem 0.9rem;
     transition: color 0.2s, border-color 0.2s;
   }
-  .nav-back:hover { color: var(--blue); border-color: var(--blue); }
+  .nav-back:hover { color: var(--gold); border-color: var(--gold); }
 
   /* ── SECTIONS ── */
   section { position: relative; z-index: 1; padding: 6rem 4rem; }
@@ -151,11 +148,12 @@
     color: var(--gold); opacity: 0.75; margin-bottom: 0.8rem; display: block;
   }
   .section-title {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-    line-height: 1.2; color: var(--cream);
-    text-shadow: 0 0 40px var(--blue-glow);
-    margin-bottom: 1.2rem; letter-spacing: 0.03em;
+    font-weight: 600;
+    line-height: 1.2; color: var(--gold);
+    text-shadow: 0 0 40px var(--gold-glow);
+    margin-bottom: 1.2rem; letter-spacing: 0.05em;
   }
   .divider {
     width: 60px; height: 1px;
@@ -182,13 +180,13 @@
     display: inline-block;
     font-family: 'Rajdhani', sans-serif;
     font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--blue); border: 1px solid rgba(74,144,217,0.35);
+    color: var(--gold); border: 1px solid rgba(201,168,76,0.4);
     padding: 0.8rem 1.8rem; text-decoration: none;
     transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
   }
   .btn-secondary:hover {
-    color: var(--cream); border-color: var(--blue);
-    box-shadow: 0 0 20px var(--blue-glow);
+    color: var(--cream); border-color: var(--gold);
+    box-shadow: 0 0 20px var(--gold-glow);
   }
 
   /* ── REVEAL ── */
@@ -209,11 +207,11 @@
   .hero-bg {
     position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse 80% 70% at 50% 0%,   rgba(10,20,50,0.95) 0%, transparent 70%),
-      radial-gradient(ellipse 50% 50% at 20% 80%,  rgba(74,144,217,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 40% 40% at 80% 20%,  rgba(201,168,76,0.06) 0%, transparent 60%),
-      radial-gradient(ellipse 30% 30% at 70% 80%,  rgba(139,92,246,0.06) 0%, transparent 50%),
-      linear-gradient(160deg, #050810 0%, #07091a 40%, #060d16 100%);
+      radial-gradient(ellipse 80% 70% at 50% 0%,   rgba(8,13,42,0.97) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 20% 80%,  rgba(26,58,143,0.1) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 80% 20%,  rgba(201,168,76,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 30% 30% at 70% 80%,  rgba(26,107,60,0.06) 0%, transparent 50%),
+      linear-gradient(160deg, #0a0f2e 0%, #0c1240 40%, #080d2a 100%);
   }
 
   /* 8-pointed star compass SVG */
@@ -222,7 +220,7 @@
     width: min(600px, 90vw); height: min(600px, 90vw);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.07;
+    opacity: 0.08;
     animation: compassSpin 80s linear infinite;
   }
   .es-compass-inner {
@@ -230,7 +228,7 @@
     width: min(340px, 50vw); height: min(340px, 50vw);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.12;
+    opacity: 0.14;
     animation: compassSpin 40s linear infinite reverse;
   }
   @keyframes compassSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
@@ -250,15 +248,28 @@
     color: var(--gold); opacity: 0.8; margin-bottom: 1.5rem; display: block;
   }
   .hero-title {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(3rem, 9vw, 7rem);
-    line-height: 1.05; letter-spacing: 0.04em;
+    font-weight: 900;
+    line-height: 1.05; letter-spacing: 0.06em;
     color: var(--cream);
-    text-shadow:
-      0 0 40px var(--blue-glow),
-      0 0 80px rgba(74,144,217,0.2),
-      0 0 120px rgba(201,168,76,0.1);
+    animation: goldShimmer 4s ease-in-out infinite;
     margin-bottom: 1.2rem;
+  }
+  @keyframes goldShimmer {
+    0%,100% {
+      text-shadow:
+        0 0 40px var(--gold-glow),
+        0 0 80px rgba(26,58,143,0.35),
+        0 0 120px rgba(201,168,76,0.15);
+    }
+    50% {
+      text-shadow:
+        0 0 70px rgba(201,168,76,0.75),
+        0 0 140px rgba(26,58,143,0.25),
+        0 0 200px rgba(201,168,76,0.25),
+        0 0 10px rgba(255,255,255,0.4);
+    }
   }
   .hero-title span.star-glyph {
     color: var(--gold);
@@ -266,14 +277,16 @@
     font-size: 0.6em; vertical-align: middle; margin: 0 0.1em;
   }
   .hero-sub {
+    font-family: 'Raleway', sans-serif;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
     font-style: italic;
-    color: rgba(212,232,248,0.75);
-    line-height: 1.8; margin-bottom: 3rem; letter-spacing: 0.03em;
+    color: rgba(240,240,255,0.72);
+    line-height: 1.9; margin-bottom: 3rem; letter-spacing: 0.04em;
   }
   .hero-sub strong {
     color: var(--gold);
-    font-style: normal; font-weight: 400;
+    font-style: normal; font-weight: 600;
     text-shadow: 0 0 20px var(--gold-glow);
   }
   .hero-cta {
@@ -299,16 +312,18 @@
      ABOUT
   ══════════════════════════════════════ */
   #about {
-    border-top: 1px solid rgba(74,144,217,0.06);
-    background: linear-gradient(135deg, rgba(74,144,217,0.04) 0%, transparent 60%);
+    border-top: 1px solid rgba(26,58,143,0.1);
+    background: linear-gradient(135deg, rgba(26,58,143,0.06) 0%, transparent 60%);
   }
   .about-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 6rem; align-items: center;
   }
   .about-text p {
-    font-size: 1.15rem; line-height: 1.95;
-    color: rgba(212,232,248,0.78); margin-bottom: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.12rem; line-height: 2;
+    color: rgba(240,240,255,0.8); margin-bottom: 1.5rem;
+    font-weight: 400;
   }
   .about-visual {
     display: flex; align-items: center; justify-content: center;
@@ -318,17 +333,17 @@
     animation: symbolPulse 4s ease-in-out infinite;
   }
   @keyframes symbolPulse {
-    0%,100% { filter: drop-shadow(0 0 12px rgba(74,144,217,0.3)) drop-shadow(0 0 24px rgba(201,168,76,0.15)); }
-    50%      { filter: drop-shadow(0 0 24px rgba(74,144,217,0.5)) drop-shadow(0 0 48px rgba(201,168,76,0.25)); }
+    0%,100% { filter: drop-shadow(0 0 12px rgba(26,58,143,0.4)) drop-shadow(0 0 24px rgba(201,168,76,0.2)); }
+    50%      { filter: drop-shadow(0 0 28px rgba(26,58,143,0.6)) drop-shadow(0 0 56px rgba(201,168,76,0.35)); }
   }
 
   /* ══════════════════════════════════════
      MUSIC / PHASES
   ══════════════════════════════════════ */
   #music {
-    border-top: 1px solid rgba(201,168,76,0.06);
-    border-bottom: 1px solid rgba(201,168,76,0.06);
-    background: linear-gradient(to right, rgba(5,10,25,0.5) 0%, transparent 50%);
+    border-top: 1px solid rgba(201,168,76,0.08);
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    background: linear-gradient(to right, rgba(10,15,46,0.6) 0%, transparent 50%);
   }
   .phases-grid {
     display: grid;
@@ -336,7 +351,7 @@
     gap: 0; margin-top: 3.5rem;
   }
   .phase-card {
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.4);
     border: 1px solid var(--border);
     padding: 3rem 2.2rem 2.5rem;
     position: relative; overflow: hidden;
@@ -357,10 +372,10 @@
     transition: transform 0.6s cubic-bezier(0.23,1,0.32,1);
   }
   .phase-card:hover {
-    background: rgba(74,144,217,0.04);
+    background: rgba(26,58,143,0.06);
     transform: translateY(-6px);
-    border-color: rgba(74,144,217,0.3);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px var(--blue-dim);
+    border-color: rgba(201,168,76,0.3);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(201,168,76,0.08);
     z-index: 1;
   }
   .phase-card:hover::before { opacity: 1; }
@@ -368,22 +383,22 @@
   .phase-label {
     font-family: 'Rajdhani', sans-serif;
     font-size: 0.68rem; letter-spacing: 0.35em; text-transform: uppercase;
-    color: var(--blue); opacity: 0.85; margin-bottom: 1.2rem;
+    color: var(--text-muted); opacity: 0.85; margin-bottom: 1.2rem;
     transition: color 0.3s;
   }
   .phase-card:hover .phase-label { color: var(--gold); }
   .phase-icon {
     width: 56px; height: 56px;
-    border: 1px solid rgba(74,144,217,0.25);
+    border: 1px solid rgba(201,168,76,0.2);
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 1.6rem;
-    background: rgba(74,144,217,0.04);
+    background: rgba(201,168,76,0.04);
     clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
     transition: all 0.4s;
   }
   .phase-card:hover .phase-icon {
-    border-color: rgba(74,144,217,0.5);
-    box-shadow: 0 0 24px var(--blue-dim);
+    border-color: rgba(201,168,76,0.5);
+    box-shadow: 0 0 24px var(--gold-dim);
   }
   .phase-icon svg {
     width: 24px; height: 24px;
@@ -391,54 +406,37 @@
     stroke-linecap: round; stroke-linejoin: round;
   }
   .phase-title {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.05rem; font-weight: 700; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--cream);
+    font-family: 'Cinzel', serif;
+    font-size: 1rem; font-weight: 600; letter-spacing: 0.1em;
+    color: var(--gold);
     margin-bottom: 0.9rem; line-height: 1.3;
   }
   .phase-body {
-    font-size: 0.98rem; line-height: 1.85;
-    color: rgba(212,232,248,0.75); flex: 1;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.97rem; line-height: 1.9;
+    color: rgba(240,240,255,0.72); flex: 1;
+    font-weight: 400;
   }
   .phase-numeral {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Cinzel', serif;
     font-size: 5rem; line-height: 1;
-    color: rgba(74,144,217,0.05);
+    color: rgba(201,168,76,0.05);
     position: absolute; bottom: 0.8rem; right: 1.2rem;
     pointer-events: none;
     transition: color 0.4s;
   }
-  .phase-card:hover .phase-numeral { color: rgba(74,144,217,0.09); }
+  .phase-card:hover .phase-numeral { color: rgba(201,168,76,0.1); }
 
   /* ══════════════════════════════════════
-     RUZINDLA
+     SOUND
   ══════════════════════════════════════ */
-  #ruzindla {
-    background: linear-gradient(135deg, rgba(139,92,246,0.05) 0%, transparent 60%);
-    border-top: 1px solid rgba(139,92,246,0.08);
+  #sound {
+    background: linear-gradient(135deg, rgba(26,58,143,0.05) 0%, transparent 60%);
+    border-top: 1px solid rgba(26,58,143,0.1);
   }
-  .ruzindla-layout {
-    display: grid; grid-template-columns: 1fr 1.3fr;
-    gap: 5rem; align-items: center;
-  }
-  .ruzindla-visual {
-    display: flex; align-items: center; justify-content: center;
-    height: 340px; position: relative;
-  }
-  .ruzindla-ring {
-    position: absolute; border-radius: 50%;
-    border: 1px solid; animation: ringPulse var(--d,3s) ease-in-out infinite;
-    animation-delay: var(--dl,0s);
-  }
-  @keyframes ringPulse {
-    0%,100% { opacity: 0.06; transform: scale(0.97); }
-    50%      { opacity: 0.18; transform: scale(1); }
-  }
-  .ruzindla-text .section-title { color: var(--cream); }
-  .ruzindla-text .section-title span { color: var(--purple); text-shadow: 0 0 30px rgba(139,92,246,0.5); }
-  .ruzindla-text p {
-    font-size: 1.12rem; line-height: 1.95;
-    color: rgba(212,232,248,0.75); font-style: italic; margin-bottom: 1.5rem;
+  #sound p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
   }
 
   /* ══════════════════════════════════════
@@ -446,24 +444,26 @@
   ══════════════════════════════════════ */
   #merch {
     text-align: center;
-    border-top: 1px solid rgba(201,168,76,0.08);
-    border-bottom: 1px solid rgba(201,168,76,0.08);
-    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 70%);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 70%);
   }
   .merch-inner {
     max-width: 680px; margin: 0 auto;
   }
   .merch-tagline {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 600;
     color: var(--gold);
     text-shadow: 0 0 30px var(--gold-glow);
     margin: 1.5rem 0 1rem;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
   }
   .merch-sub {
-    font-size: 1.1rem; font-style: italic;
-    color: rgba(212,232,248,0.6);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem; font-style: italic; font-weight: 300;
+    color: rgba(240,240,255,0.58);
     margin-bottom: 2.5rem; line-height: 1.8;
   }
 
@@ -478,14 +478,15 @@
     position: relative; z-index: 1;
   }
   .footer-left .footer-logo {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1rem; letter-spacing: 0.1em;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem; letter-spacing: 0.12em; font-weight: 600;
     color: var(--gold); margin-bottom: 0.5rem;
   }
   .footer-left .footer-tagline {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem; letter-spacing: 0.15em;
     color: var(--text-muted); opacity: 0.7;
+    font-weight: 300;
   }
   .footer-right {
     display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem;
@@ -499,7 +500,7 @@
     font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--text-muted); text-decoration: none; transition: color 0.2s;
   }
-  .footer-links a:hover { color: var(--blue); }
+  .footer-links a:hover { color: var(--gold); }
   .footer-copy {
     font-family: 'Rajdhani', sans-serif;
     font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
@@ -510,8 +511,8 @@
      RESPONSIVE
   ══════════════════════════════════════ */
   @media (max-width: 900px) {
-    .about-grid, .ruzindla-layout { grid-template-columns: 1fr; gap: 3rem; }
-    .about-visual, .ruzindla-visual { height: 280px; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-visual { height: 280px; }
   }
   @media (max-width: 768px) {
     nav { padding: 1.1rem 1.5rem; }
@@ -539,6 +540,7 @@
   <div class="nav-right">
     <a href="#about">About</a>
     <a href="#music">The Vision</a>
+    <a href="/earthstar/vision/">Full Vision</a>
     <a href="#sound">The Sound</a>
     <a href="#merch">Merch</a>
     <a href="/" class="nav-back">← Vibration of Awesome</a>
@@ -554,43 +556,43 @@
   <!-- Outer 8-pointed star compass (slow rotation) -->
   <svg class="es-compass" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
     <!-- outer ring -->
-    <circle cx="250" cy="250" r="240" stroke="#4a90d9" stroke-width="0.6"/>
+    <circle cx="250" cy="250" r="240" stroke="#1a3a8f" stroke-width="0.6"/>
     <circle cx="250" cy="250" r="215" stroke="#c9a84c" stroke-width="0.3"/>
-    <circle cx="250" cy="250" r="180" stroke="#4a90d9" stroke-width="0.4"/>
+    <circle cx="250" cy="250" r="180" stroke="#1a3a8f" stroke-width="0.4"/>
     <!-- 8-pointed star cardinal spokes -->
-    <line x1="250" y1="10"  x2="250" y2="490" stroke="#4a90d9" stroke-width="0.5"/>
-    <line x1="10"  y1="250" x2="490" y2="250" stroke="#4a90d9" stroke-width="0.5"/>
+    <line x1="250" y1="10"  x2="250" y2="490" stroke="#1a3a8f" stroke-width="0.5"/>
+    <line x1="10"  y1="250" x2="490" y2="250" stroke="#1a3a8f" stroke-width="0.5"/>
     <line x1="80"  y1="80"  x2="420" y2="420" stroke="#c9a84c" stroke-width="0.4"/>
     <line x1="420" y1="80"  x2="80"  y2="420" stroke="#c9a84c" stroke-width="0.4"/>
-    <!-- secondary 45° spokes -->
-    <line x1="148" y1="22" x2="352" y2="478" stroke="#4caf85" stroke-width="0.25"/>
-    <line x1="352" y1="22" x2="148" y2="478" stroke="#4caf85" stroke-width="0.25"/>
-    <line x1="22"  y1="148" x2="478" y2="352" stroke="#4caf85" stroke-width="0.25"/>
-    <line x1="22"  y1="352" x2="478" y2="148" stroke="#4caf85" stroke-width="0.25"/>
+    <!-- secondary 45 spokes -->
+    <line x1="148" y1="22" x2="352" y2="478" stroke="#1a6b3c" stroke-width="0.25"/>
+    <line x1="352" y1="22" x2="148" y2="478" stroke="#1a6b3c" stroke-width="0.25"/>
+    <line x1="22"  y1="148" x2="478" y2="352" stroke="#1a6b3c" stroke-width="0.25"/>
+    <line x1="22"  y1="352" x2="478" y2="148" stroke="#1a6b3c" stroke-width="0.25"/>
     <!-- 8-pointed star diamond points -->
     <polygon points="250,10 240,60 260,60"     stroke="#c9a84c" stroke-width="0.6" fill="none"/>
     <polygon points="490,250 440,240 440,260"  stroke="#c9a84c" stroke-width="0.6" fill="none"/>
     <polygon points="250,490 260,440 240,440"  stroke="#c9a84c" stroke-width="0.6" fill="none"/>
     <polygon points="10,250 60,260 60,240"     stroke="#c9a84c" stroke-width="0.6" fill="none"/>
-    <polygon points="80,80   120,128 128,120"  stroke="#4a90d9" stroke-width="0.5" fill="none"/>
-    <polygon points="420,80  372,128 380,120"  stroke="#4a90d9" stroke-width="0.5" fill="none"/>
-    <polygon points="420,420 372,372 380,380"  stroke="#4a90d9" stroke-width="0.5" fill="none"/>
-    <polygon points="80,420  128,372 120,380"  stroke="#4a90d9" stroke-width="0.5" fill="none"/>
+    <polygon points="80,80   120,128 128,120"  stroke="#1a3a8f" stroke-width="0.5" fill="none"/>
+    <polygon points="420,80  372,128 380,120"  stroke="#1a3a8f" stroke-width="0.5" fill="none"/>
+    <polygon points="420,420 372,372 380,380"  stroke="#1a3a8f" stroke-width="0.5" fill="none"/>
+    <polygon points="80,420  128,372 120,380"  stroke="#1a3a8f" stroke-width="0.5" fill="none"/>
     <!-- Earth circle -->
-    <circle cx="250" cy="250" r="50" stroke="#4caf85" stroke-width="0.5" fill="rgba(76,175,133,0.03)"/>
-    <!-- Crown star -->
-    <circle cx="250" cy="250" r="8"  fill="#8b5cf6" opacity="0.7"/>
+    <circle cx="250" cy="250" r="50" stroke="#1a6b3c" stroke-width="0.5" fill="rgba(26,107,60,0.04)"/>
+    <!-- Crown star - gold -->
+    <circle cx="250" cy="250" r="8"  fill="#c9a84c" opacity="0.8"/>
   </svg>
 
   <!-- Inner counter-rotating ring -->
   <svg class="es-compass-inner" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="150" cy="150" r="140" stroke="#c9a84c" stroke-width="0.5" stroke-dasharray="4 8"/>
-    <circle cx="150" cy="150" r="100" stroke="#4a90d9" stroke-width="0.4"/>
-    <circle cx="150" cy="150" r="60"  stroke="#8b5cf6" stroke-width="0.4" fill="rgba(139,92,246,0.03)"/>
+    <circle cx="150" cy="150" r="100" stroke="#1a3a8f" stroke-width="0.4"/>
+    <circle cx="150" cy="150" r="60"  stroke="#1a3a8f" stroke-width="0.4" fill="rgba(26,58,143,0.04)"/>
     <line x1="150" y1="10"  x2="150" y2="290" stroke="#c9a84c" stroke-width="0.4"/>
     <line x1="10"  y1="150" x2="290" y2="150" stroke="#c9a84c" stroke-width="0.4"/>
-    <line x1="50"  y1="50"  x2="250" y2="250" stroke="#4a90d9" stroke-width="0.3"/>
-    <line x1="250" y1="50"  x2="50"  y2="250" stroke="#4a90d9" stroke-width="0.3"/>
+    <line x1="50"  y1="50"  x2="250" y2="250" stroke="#1a3a8f" stroke-width="0.3"/>
+    <line x1="250" y1="50"  x2="50"  y2="250" stroke="#1a3a8f" stroke-width="0.3"/>
     <!-- small octagram -->
     <polygon points="150,12 155,40 148,40"    stroke="#c9a84c" stroke-width="0.6" fill="none"/>
     <polygon points="288,150 260,155 260,145" stroke="#c9a84c" stroke-width="0.6" fill="none"/>
@@ -640,37 +642,37 @@
         <p>A belief that humanity can do better. And a commitment to help make that happen.</p>
       </div>
       <div class="about-visual">
-        <!-- EarthStar 8-pointed symbol, larger, glowing -->
+        <!-- EarthStar 8-pointed symbol -->
         <svg class="es-symbol" width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Background circles: earth (green) and cosmos (blue) -->
-          <circle cx="150" cy="150" r="140" stroke="rgba(74,144,217,0.15)" stroke-width="1"/>
-          <circle cx="150" cy="150" r="110" stroke="rgba(74,144,217,0.12)" stroke-width="1"/>
-          <circle cx="150" cy="150" r="75"  stroke="rgba(201,168,76,0.18)"  stroke-width="1.2" fill="rgba(201,168,76,0.02)"/>
-          <circle cx="150" cy="150" r="42"  stroke="rgba(76,175,133,0.35)"  stroke-width="1.2" fill="rgba(76,175,133,0.04)"/>
+          <!-- Background circles -->
+          <circle cx="150" cy="150" r="140" stroke="rgba(26,58,143,0.18)" stroke-width="1"/>
+          <circle cx="150" cy="150" r="110" stroke="rgba(26,58,143,0.14)" stroke-width="1"/>
+          <circle cx="150" cy="150" r="75"  stroke="rgba(201,168,76,0.22)"  stroke-width="1.2" fill="rgba(201,168,76,0.02)"/>
+          <circle cx="150" cy="150" r="42"  stroke="rgba(26,107,60,0.38)"  stroke-width="1.2" fill="rgba(26,107,60,0.04)"/>
           <!-- 8-pointed star diamond shape -->
           <path d="M150 14 L162 120 L236 88 L175 155 L236 212 L162 180 L150 286 L138 180 L64 212 L125 155 L64 88 L138 120 Z"
-                stroke="rgba(201,168,76,0.7)" stroke-width="1.5" fill="rgba(201,168,76,0.04)"/>
+                stroke="rgba(201,168,76,0.75)" stroke-width="1.5" fill="rgba(201,168,76,0.04)"/>
           <!-- Compass cardinal lines -->
-          <line x1="150" y1="14"  x2="150" y2="286" stroke="rgba(74,144,217,0.4)" stroke-width="0.8"/>
-          <line x1="14"  y1="150" x2="286" y2="150" stroke="rgba(74,144,217,0.4)" stroke-width="0.8"/>
+          <line x1="150" y1="14"  x2="150" y2="286" stroke="rgba(26,58,143,0.45)" stroke-width="0.8"/>
+          <line x1="14"  y1="150" x2="286" y2="150" stroke="rgba(26,58,143,0.45)" stroke-width="0.8"/>
           <!-- Diagonal lines -->
-          <line x1="64"  y1="64"  x2="236" y2="236" stroke="rgba(139,92,246,0.3)" stroke-width="0.6"/>
-          <line x1="236" y1="64"  x2="64"  y2="236" stroke="rgba(139,92,246,0.3)" stroke-width="0.6"/>
-          <!-- North/South/East/West compass points -->
-          <polygon points="150,14 143,38 157,38"   fill="rgba(201,168,76,0.8)" stroke="none"/>
-          <polygon points="150,286 157,262 143,262" fill="rgba(201,168,76,0.8)" stroke="none"/>
-          <polygon points="286,150 262,143 262,157" fill="rgba(201,168,76,0.8)" stroke="none"/>
-          <polygon points="14,150 38,157 38,143"    fill="rgba(201,168,76,0.8)" stroke="none"/>
-          <!-- Diagonal compass points (blue) -->
-          <polygon points="64,64   85,105 105,85"   fill="rgba(74,144,217,0.7)" stroke="none"/>
-          <polygon points="236,64  215,105 195,85"  fill="rgba(74,144,217,0.7)" stroke="none"/>
-          <polygon points="236,236 195,215 215,195" fill="rgba(74,144,217,0.7)" stroke="none"/>
-          <polygon points="64,236  105,215 85,195"  fill="rgba(74,144,217,0.7)" stroke="none"/>
-          <!-- Earth center circle (green) -->
-          <circle cx="150" cy="150" r="18" fill="rgba(76,175,133,0.25)" stroke="rgba(76,175,133,0.6)" stroke-width="1.5"/>
-          <!-- Crown center dot (purple) -->
-          <circle cx="150" cy="150" r="6"  fill="rgba(139,92,246,0.9)"/>
-          <circle cx="150" cy="150" r="3"  fill="rgba(255,255,255,0.8)"/>
+          <line x1="64"  y1="64"  x2="236" y2="236" stroke="rgba(26,58,143,0.3)" stroke-width="0.6"/>
+          <line x1="236" y1="64"  x2="64"  y2="236" stroke="rgba(26,58,143,0.3)" stroke-width="0.6"/>
+          <!-- Cardinal compass points (gold) -->
+          <polygon points="150,14 143,38 157,38"   fill="rgba(201,168,76,0.85)" stroke="none"/>
+          <polygon points="150,286 157,262 143,262" fill="rgba(201,168,76,0.85)" stroke="none"/>
+          <polygon points="286,150 262,143 262,157" fill="rgba(201,168,76,0.85)" stroke="none"/>
+          <polygon points="14,150 38,157 38,143"    fill="rgba(201,168,76,0.85)" stroke="none"/>
+          <!-- Diagonal compass points (royal blue) -->
+          <polygon points="64,64   85,105 105,85"   fill="rgba(26,58,143,0.75)" stroke="none"/>
+          <polygon points="236,64  215,105 195,85"  fill="rgba(26,58,143,0.75)" stroke="none"/>
+          <polygon points="236,236 195,215 215,195" fill="rgba(26,58,143,0.75)" stroke="none"/>
+          <polygon points="64,236  105,215 85,195"  fill="rgba(26,58,143,0.75)" stroke="none"/>
+          <!-- Earth center (emerald) -->
+          <circle cx="150" cy="150" r="18" fill="rgba(26,107,60,0.28)" stroke="rgba(26,107,60,0.65)" stroke-width="1.5"/>
+          <!-- Crown center (gold) -->
+          <circle cx="150" cy="150" r="6"  fill="rgba(201,168,76,0.95)"/>
+          <circle cx="150" cy="150" r="3"  fill="rgba(255,255,255,0.9)"/>
         </svg>
       </div>
     </div>
@@ -686,14 +688,14 @@
       <span class="section-label">Where We Are Going</span>
       <h2 class="section-title">The Vision</h2>
       <div class="divider"></div>
-      <p style="font-size:1.1rem;line-height:1.9;color:rgba(212,232,248,0.72);max-width:720px;margin-bottom:1rem;">In the future, The EarthStar Initiative may grow into several things:</p>
-      <p style="font-size:1.05rem;line-height:1.9;color:rgba(212,232,248,0.65);max-width:680px;margin-bottom:0.6rem;">Music and live performances that carry the frequency of the Great Transition.</p>
-      <p style="font-size:1.05rem;line-height:1.9;color:rgba(212,232,248,0.65);max-width:680px;margin-bottom:0.6rem;">Creative media and storytelling that documents the shift.</p>
-      <p style="font-size:1.05rem;line-height:1.9;color:rgba(212,232,248,0.65);max-width:680px;margin-bottom:0.6rem;">Collaborations with people working for a better world.</p>
-      <p style="font-size:1.05rem;line-height:1.9;color:rgba(212,232,248,0.65);max-width:680px;margin-bottom:1.5rem;">Possibly a nonprofit focused on protecting life on Earth, going as hard as Greenpeace used to.</p>
-      <p style="font-size:1.1rem;line-height:1.9;color:rgba(212,232,248,0.72);max-width:720px;margin-bottom:0.5rem;">Right now, The EarthStar Initiative is the beginning of that journey.</p>
-      <p style="font-size:1.1rem;line-height:1.9;color:rgba(212,232,248,0.72);max-width:720px;margin-bottom:2.5rem;">Phase 0 has already begun.</p>
-      <p style="font-size:0.9rem;line-height:1.8;color:rgba(212,232,248,0.45);letter-spacing:0.05em;max-width:680px;margin-bottom:0.5rem;">The arc of the work. Where we are going.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.1rem;line-height:1.95;color:rgba(240,240,255,0.74);max-width:720px;margin-bottom:1rem;">In the future, The EarthStar Initiative may grow into several things:</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:1.95;color:rgba(240,240,255,0.65);max-width:680px;margin-bottom:0.6rem;">Music and live performances that carry the frequency of the Great Transition.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:1.95;color:rgba(240,240,255,0.65);max-width:680px;margin-bottom:0.6rem;">Creative media and storytelling that documents the shift.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:1.95;color:rgba(240,240,255,0.65);max-width:680px;margin-bottom:0.6rem;">Collaborations with people working for a better world.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:1.95;color:rgba(240,240,255,0.65);max-width:680px;margin-bottom:1.5rem;">Possibly a nonprofit focused on protecting life on Earth, going as hard as Greenpeace used to.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.1rem;line-height:1.95;color:rgba(240,240,255,0.74);max-width:720px;margin-bottom:0.5rem;">Right now, The EarthStar Initiative is the beginning of that journey.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.1rem;line-height:1.95;color:rgba(240,240,255,0.74);max-width:720px;margin-bottom:2rem;">Phase 0 has already begun.</p>
+      <a href="/earthstar/vision/" class="btn-secondary" style="margin-bottom:2.5rem;">Explore the Full Vision &rarr;</a>
     </div>
     <div class="phases-grid reveal">
 
@@ -765,9 +767,9 @@
       <span class="section-label">In Development</span>
       <h2 class="section-title">The Sound</h2>
       <div class="divider"></div>
-      <p style="font-size:1.12rem;line-height:1.95;color:rgba(212,232,248,0.75);max-width:680px;margin-bottom:1.5rem;">The music of The EarthStar Initiative spans rock, metal, and electronic: raw energy meeting cosmic intention.</p>
-      <p style="font-size:1.12rem;line-height:1.95;color:rgba(212,232,248,0.75);max-width:680px;margin-bottom:1.5rem;">It doesn't exist in full yet. It's being built.</p>
-      <p style="font-size:1.12rem;line-height:1.95;color:rgba(212,232,248,0.75);max-width:680px;">When it arrives, it will carry everything this vision stands for.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.12rem;line-height:1.95;color:rgba(240,240,255,0.76);max-width:680px;margin-bottom:1.5rem;">The music of The EarthStar Initiative spans rock, metal, and electronic: raw energy meeting cosmic intention.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.12rem;line-height:1.95;color:rgba(240,240,255,0.76);max-width:680px;margin-bottom:1.5rem;">It doesn't exist in full yet. It's being built.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.12rem;line-height:1.95;color:rgba(240,240,255,0.76);max-width:680px;">When it arrives, it will carry everything this vision stands for.</p>
     </div>
   </div>
 </section>
@@ -781,7 +783,7 @@
       <span class="section-label">Wearable Frequency</span>
       <h2 class="merch-tagline">Wear the Frequency</h2>
       <p class="merch-sub">Carry the signal into the world. Print-on-demand apparel, accessories, and art, powered by Creator Spring.</p>
-      <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener" class="btn-primary">Wear the frequency →</a>
+      <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener" class="btn-primary">Wear the frequency &rarr;</a>
     </div>
   </div>
 </section>
@@ -797,26 +799,27 @@
   <div class="footer-right">
     <div class="footer-links">
       <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener">Merch</a>
+      <a href="/earthstar/vision/">Vision</a>
       <a href="/blog/">Blog</a>
       <a href="/aura/">AURA</a>
-      <a href="/">← Vibration of Awesome</a>
+      <a href="/">&#8592; Vibration of Awesome</a>
     </div>
-    <div class="footer-copy">© 2026 The EarthStar Initiative / Vibration of Awesome</div>
+    <div class="footer-copy">&copy; 2026 The EarthStar Initiative / Vibration of Awesome</div>
   </div>
 </footer>
 
 <script>
-  // ── Stars ──
+  // ── Stars: gold and royal blue ──
   const starsEl = document.getElementById('stars');
   for (let i = 0; i < 180; i++) {
     const star = document.createElement('div');
-    star.className = 'star' + (i < 10 ? ' gold' : i < 22 ? ' blue' : '');
+    star.className = 'star' + (i < 12 ? ' gold' : i < 28 ? ' blue' : '');
     const sz = Math.random() * 2.2 + 0.4;
     star.style.cssText =
-      `width:${sz}px;height:${sz}px;` +
-      `left:${Math.random()*100}%;top:${Math.random()*100}%;` +
-      `--dur:${Math.random()*4+2}s;--delay:${Math.random()*6}s;` +
-      `--brightness:${Math.random()*0.5+0.2};`;
+      'width:'+sz+'px;height:'+sz+'px;' +
+      'left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;' +
+      '--dur:'+(Math.random()*4+2)+'s;--delay:'+(Math.random()*6)+'s;' +
+      '--brightness:'+(Math.random()*0.5+0.2)+';';
     starsEl.appendChild(star);
   }
 
@@ -845,12 +848,12 @@
       el.addEventListener('mouseenter', () => {
         cursor.style.transform = 'translate(-50%,-50%) scale(2)';
         ring.style.transform   = 'translate(-50%,-50%) scale(1.5)';
-        ring.style.borderColor = 'rgba(74,144,217,0.85)';
+        ring.style.borderColor = 'rgba(201,168,76,0.85)';
       });
       el.addEventListener('mouseleave', () => {
         cursor.style.transform = 'translate(-50%,-50%) scale(1)';
         ring.style.transform   = 'translate(-50%,-50%) scale(1)';
-        ring.style.borderColor = 'rgba(74,144,217,0.5)';
+        ring.style.borderColor = 'rgba(26,58,143,0.55)';
       });
     });
   }
@@ -859,11 +862,11 @@
   const navEl = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
-      navEl.style.background = 'rgba(5,8,16,0.97)';
-      navEl.style.borderBottomColor = 'rgba(74,144,217,0.2)';
+      navEl.style.background = 'rgba(10,15,46,0.98)';
+      navEl.style.borderBottomColor = 'rgba(26,58,143,0.35)';
     } else {
-      navEl.style.background = 'linear-gradient(to bottom, rgba(5,8,16,0.97), transparent)';
-      navEl.style.borderBottomColor = 'rgba(74,144,217,0.1)';
+      navEl.style.background = 'linear-gradient(to bottom, rgba(10,15,46,0.97), transparent)';
+      navEl.style.borderBottomColor = 'rgba(26,58,143,0.22)';
     }
   });
 
