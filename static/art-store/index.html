@@ -10,6 +10,7 @@
   :root {
     --gold: #00e5cc;
     --gold-light: #4dfff0;
+    --gold-amber: #c9a84c;
     --deep: #020a0a;
     --midnight: #030d0d;
     --earth: #001a18;
@@ -524,6 +525,136 @@
     text-align: center;
   }
 
+  /* FEATURED PRODUCTS SECTION */
+  .products-section { margin-bottom: 4rem; }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+  .product-card {
+    position: relative;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(0,229,204,0.1);
+    overflow: hidden;
+    transition: border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+  }
+  .product-card:hover {
+    border-color: rgba(0,229,204,0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(0,229,204,0.07);
+  }
+  .product-image-wrap {
+    aspect-ratio: 1 / 1;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .product-image-wrap.loaf {
+    background: linear-gradient(135deg, #010d10 0%, #001f1a 40%, #00120e 70%, #001a16 100%);
+  }
+  .product-image-wrap.abstratocaster-black {
+    background: linear-gradient(135deg, #020608 0%, #040f14 40%, #010808 70%, #000d0c 100%);
+  }
+  .product-image-wrap.abstratocaster-white {
+    background: linear-gradient(135deg, #001a18 0%, #003d36 40%, #001e1c 70%, #004040 100%);
+  }
+  .product-image-wrap::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(0,229,204,0.08) 0%, transparent 65%);
+  }
+  .product-icon {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem; letter-spacing: 0.2em;
+    color: rgba(0,229,204,0.5);
+    text-align: center; position: relative; z-index: 1;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+  .product-icon .product-icon-symbol {
+    display: block;
+    font-size: 3rem; margin-bottom: 0.75rem;
+    color: rgba(0,229,204,0.25);
+  }
+  .product-name-overlay {
+    position: absolute; bottom: 1rem; left: 1rem; right: 1rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.7rem; letter-spacing: 0.12em;
+    color: rgba(0,229,204,0.7);
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+  .product-info {
+    padding: 1.4rem 1.5rem 1.5rem;
+    border-top: 1px solid rgba(0,229,204,0.06);
+    background: rgba(0,0,0,0.25);
+  }
+  .product-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.82rem; color: var(--cream);
+    margin-bottom: 0.3rem; letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+  .product-type {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--muted); opacity: 0.7; margin-bottom: 1.2rem;
+  }
+  .product-get-btn {
+    display: block; width: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--deep);
+    background: var(--gold);
+    padding: 0.75rem; text-align: center; text-decoration: none;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    font-weight: 700;
+  }
+  .product-get-btn:hover {
+    background: var(--gold-light);
+    box-shadow: 0 0 22px rgba(0,229,204,0.28);
+    transform: translateY(-1px);
+  }
+  .products-footer-row {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(0,229,204,0.07);
+    border-bottom: 1px solid rgba(0,229,204,0.07);
+    margin-bottom: 4rem;
+  }
+  .products-note {
+    font-size: 0.95rem; font-style: italic;
+    color: rgba(168,237,228,0.5);
+    line-height: 1.7;
+  }
+  .btn-full-store {
+    display: inline-block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--deep);
+    background: var(--gold);
+    padding: 0.75rem 1.8rem; text-decoration: none;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: background 0.2s, box-shadow 0.2s;
+    font-weight: 700; white-space: nowrap;
+  }
+  .btn-full-store:hover {
+    background: var(--gold-light);
+    box-shadow: 0 0 20px rgba(0,229,204,0.25);
+  }
+  @media (max-width: 900px) {
+    .products-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .products-grid { grid-template-columns: 1fr; }
+    .products-footer-row { flex-direction: column; align-items: flex-start; }
+  }
+
   /* PAYMENT INFO SECTION */
   .payment-section {
     margin-bottom: 6rem;
@@ -852,6 +983,75 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <div class="products-section">
+    <div class="reveal">
+      <p class="section-label">Featured Products</p>
+      <h2 class="section-title">Shop the Collection</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="products-grid reveal">
+
+      <!-- LOAF LIFE MUG -->
+      <div class="product-card">
+        <div class="product-image-wrap loaf">
+          <div class="product-icon">
+            <span class="product-icon-symbol">☕</span>
+            <span>Loaf Life</span>
+          </div>
+          <div class="product-name-overlay">Loaf Life Mug</div>
+        </div>
+        <div class="product-info">
+          <div class="product-title">Loaf Life Mug</div>
+          <div class="product-type">Print-on-Demand Mug</div>
+          <a href="https://earthstar.creator-spring.com/listing/loaf-life-mug?product=1637&variation=105025"
+             target="_blank" rel="noopener" class="product-get-btn">Get It &rarr;</a>
+        </div>
+      </div>
+
+      <!-- ABSTRATOCASTER BLACK MUG -->
+      <div class="product-card">
+        <div class="product-image-wrap abstratocaster-black">
+          <div class="product-icon">
+            <span class="product-icon-symbol">&#9836;</span>
+            <span>Abstratocaster</span>
+          </div>
+          <div class="product-name-overlay">Abstratocaster Black Mug</div>
+        </div>
+        <div class="product-info">
+          <div class="product-title">Abstratocaster Black Mug</div>
+          <div class="product-type">Print-on-Demand Mug</div>
+          <a href="https://earthstar.creator-spring.com/listing/abstratocaster-black-mug?product=1637&variation=105025"
+             target="_blank" rel="noopener" class="product-get-btn">Get It &rarr;</a>
+        </div>
+      </div>
+
+      <!-- ABSTRATOCASTER WHITE MUG -->
+      <div class="product-card">
+        <div class="product-image-wrap abstratocaster-white">
+          <div class="product-icon">
+            <span class="product-icon-symbol">&#9835;</span>
+            <span>Abstratocaster</span>
+          </div>
+          <div class="product-name-overlay">Abstratocaster White Mug</div>
+        </div>
+        <div class="product-info">
+          <div class="product-title">Abstratocaster White Mug</div>
+          <div class="product-type">Print-on-Demand Mug</div>
+          <a href="https://earthstar.creator-spring.com/listing/abstratocaster-mug?product=1565&variation=104920"
+             target="_blank" rel="noopener" class="product-get-btn">Get It &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="products-footer-row">
+      <p class="products-note">More designs coming soon. All items printed on demand and shipped directly to you.</p>
+      <a href="https://earthstar.creator-spring.com" target="_blank" rel="noopener" class="btn-full-store">View Full Store &rarr;</a>
+    </div>
   </div>
 
   <!-- PAYMENT INFO -->
