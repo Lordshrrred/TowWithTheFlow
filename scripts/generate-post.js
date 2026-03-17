@@ -16,7 +16,7 @@ import { fileURLToPath } from "url";
 import { spawnSync } from "child_process";
 import { updateSitemap } from "./update-sitemap.js";
 import { syndicatePost } from "./syndicate.js";
-import { fetchNasaImages } from "./select-image.js";
+import { fetchNasaImages, fetchForestImages } from "./select-image.js";
 
 dotenv.config({ override: true });
 const __filename = fileURLToPath(import.meta.url);
@@ -469,15 +469,28 @@ async function main() {
   if (h1Match) postTitle = h1Match[1].trim();
   const bodyMarkdown = cleanMarkdown.replace(/^#\s+.+$/m, "").trim();
 
-  // Fetch 3 NASA APOD images and inject at 25%, 50%, 75% through the body
+  // Fetch 3 inline images and inject at 25%, 50%, 75% through the body
+  // Matt lane → forest photos; BoomBot lane → NASA APOD
   let bodyHtml = marked.parse(bodyMarkdown);
-  console.log("Fetching 3 NASA APOD images for inline art...");
-  const inlineImages = await fetchNasaImages(3);
-  if (inlineImages.length > 0) {
-    bodyHtml = injectNasaImages(bodyHtml, inlineImages);
-    console.log("Inline images injected: " + inlineImages.map(function(i) { return i.title; }).join(", "));
+  let inlineImages = [];
+  if (lane === "matt") {
+    console.log("Selecting 3 forest images for inline art...");
+    inlineImages = fetchForestImages(3);
+    if (inlineImages.length > 0) {
+      bodyHtml = injectNasaImages(bodyHtml, inlineImages);
+      console.log("Forest images injected: " + inlineImages.map(function(i) { return i.title || path.basename(i.url); }).join(", "));
+    } else {
+      console.warn("No forest images found — post will have no inline images.");
+    }
   } else {
-    console.warn("No NASA images returned — post will have no inline images.");
+    console.log("Fetching 3 NASA APOD images for inline art...");
+    inlineImages = await fetchNasaImages(3);
+    if (inlineImages.length > 0) {
+      bodyHtml = injectNasaImages(bodyHtml, inlineImages);
+      console.log("NASA images injected: " + inlineImages.map(function(i) { return i.title; }).join(", "));
+    } else {
+      console.warn("No NASA images returned — post will have no inline images.");
+    }
   }
   const slug = slugify(postTitle);
 
