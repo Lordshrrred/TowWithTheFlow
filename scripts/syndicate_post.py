@@ -119,19 +119,19 @@ def syndicate_devto(slug: str, meta: dict, body: str):
 
 
 def syndicate_hashnode(slug: str, meta: dict, body: str):
-    """Post to Hashnode via GraphQL with canonical URL"""
+    """Post to Hashnode via GraphQL publishPost mutation with canonical URL"""
     if not HASHNODE_API_KEY or not HASHNODE_PUBLICATION_ID:
         log(f"HASHNODE | {slug} | SKIP: no API key or publication ID")
         return
 
     canonical_url = f"{BASE_URL}/{slug}/"
 
-    # Step 1: Create draft
-    create_mutation = """
-    mutation CreateDraft($input: CreateDraftInput!) {
-      createDraft(input: $input) {
-        draft {
+    publish_mutation = """
+    mutation PublishPost($input: PublishPostInput!) {
+      publishPost(input: $input) {
+        post {
           id
+          url
         }
       }
     }
@@ -144,7 +144,7 @@ def syndicate_hashnode(slug: str, meta: dict, body: str):
             "title": meta.get('title', slug),
             "contentMarkdown": body,
             "publicationId": HASHNODE_PUBLICATION_ID,
-            "canonicalUrl": canonical_url,
+            "originalArticleURL": canonical_url,
             "tags": tags,
         }
     }
@@ -153,39 +153,16 @@ def syndicate_hashnode(slug: str, meta: dict, body: str):
         resp = requests.post(
             "https://gql.hashnode.com",
             headers={"Authorization": HASHNODE_API_KEY, "Content-Type": "application/json"},
-            json={"query": create_mutation, "variables": variables},
+            json={"query": publish_mutation, "variables": variables},
             timeout=30
         )
         data = resp.json()
-        draft_id = data.get('data', {}).get('createDraft', {}).get('draft', {}).get('id')
-
-        if not draft_id:
-            log(f"HASHNODE | {slug} | FAIL (create draft) | {json.dumps(data)[:300]}")
-            return
-
-        # Step 2: Publish draft
-        publish_mutation = """
-        mutation PublishDraft($input: PublishDraftInput!) {
-          publishDraft(input: $input) {
-            post {
-              id
-              url
-            }
-          }
-        }
-        """
-        pub_resp = requests.post(
-            "https://gql.hashnode.com",
-            headers={"Authorization": HASHNODE_API_KEY, "Content-Type": "application/json"},
-            json={"query": publish_mutation, "variables": {"input": {"draftId": draft_id}}},
-            timeout=30
-        )
-        pub_data = pub_resp.json()
-        post_url = pub_data.get('data', {}).get('publishDraft', {}).get('post', {}).get('url', '')
+        post_url = data.get('data', {}).get('publishPost', {}).get('post', {}).get('url', '')
         if post_url:
             log(f"HASHNODE | {slug} | SUCCESS | url={post_url}")
         else:
-            log(f"HASHNODE | {slug} | FAIL (publish) | {json.dumps(pub_data)[:300]}")
+            errors = data.get('errors', [])
+            log(f"HASHNODE | {slug} | FAIL | {json.dumps(errors)[:300]}")
 
     except Exception as e:
         log(f"HASHNODE | {slug} | ERROR | {e}")
@@ -240,12 +217,11 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
     )
 
     payload = {
-        "type": "html",
+        "type": "text",
         "state": "published",
         "title": title,
         "body": full_html,
         "tags": ",".join(meta.get('tags', [])),
-        "native_inline_images": True,
     }
 
     try:
@@ -255,11 +231,14 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
             data=payload,
             timeout=30
         )
-        data = resp.json()
-        if data.get('meta', {}).get('status') in (200, 201) or data.get('response', {}).get('id'):
-            log(f"TUMBLR | {slug} | SUCCESS")
+        if resp.status_code in (200, 201):
+            log(f"TUMBLR | {slug} | SUCCESS | status={resp.status_code}")
         else:
-            log(f"TUMBLR | {slug} | FAIL | {json.dumps(data)[:300]}")
+            try:
+                detail = json.dumps(resp.json())[:200]
+            except Exception:
+                detail = resp.text[:200]
+            log(f"TUMBLR | {slug} | FAIL | status={resp.status_code} | {detail}")
     except Exception as e:
         log(f"TUMBLR | {slug} | ERROR | {e}")
 
