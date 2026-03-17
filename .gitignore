@@ -1,12 +1,16 @@
+.env
 public/
+resources/
 .hugo_build.lock
 
-# Blog engine
+# Node
 node_modules/
-.env
 
-# Syndication cache (token exchange results)
+# Syndication cache
 .cache/
 
-# Dashboard password hash — regenerated from DASHBOARD_PASSWORD env var
+# Syndication log (regenerated)
+scripts/syndication_log.txt
+
+# Dashboard config
 static/_data/dashboard-config.json

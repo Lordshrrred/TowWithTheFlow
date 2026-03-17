@@ -1,6 +1,8 @@
-baseURL = "https://vibrationofawesome.com/"
+baseURL = "https://towwiththeflow.com/"
 languageCode = "en-us"
-title = "Vibration of Awesome"
+title = "Tow With The Flow"
+theme = "twtf"
+enableRobotsTXT = true
 
 [markup]
   [markup.goldmark]
@@ -8,8 +10,17 @@ title = "Vibration of Awesome"
       unsafe = true
 
 [params]
-  description = "Roots in the Earth, Crown in the Stars. The Future is Ours."
-  author = "Matty BOOMBOOM"
+  description = "Real help when your car breaks down."
+  tagline = "Real Answers When Your Car Breaks Down"
+  subtagline = "No fluff. No runaround. Just what to do next."
+  googleAnalytics = "" # Paste GA_MEASUREMENT_ID here to activate
 
 [permalinks]
-  posts = "/posts/:slug/"
+  posts = "/:slug/"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5

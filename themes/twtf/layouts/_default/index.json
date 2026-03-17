@@ -1,0 +1,1 @@
+[{{ range $i, $p := .Site.RegularPages }}{{ if $i }},{{ end }}{"title":{{ $p.Title | jsonify }},"permalink":{{ $p.Permalink | jsonify }},"description":{{ $p.Params.description | default "" | jsonify }},"content":{{ $p.Plain | truncate 500 | jsonify }}}{{ end }}]
