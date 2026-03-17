@@ -1,16 +1,33 @@
 {{ define "main" }}
+
+<div class="page-hero">
+  <div class="container--narrow">
+    <h1>All Guides
+      <span class="guide-count">{{ len .Pages }} guides</span>
+    </h1>
+    <p>Real answers for real car emergencies. No fluff.</p>
+  </div>
+</div>
+
 <div class="section">
-  <div class="container">
-    <h1 class="section-title">{{ if .IsHome }}Latest Guides{{ else }}{{ .Title }}{{ end }}</h1>
-    <div class="card-grid">
+  <div class="container--narrow">
+    <div class="post-list">
       {{ range .Pages }}
-      <div class="card">
-        <h2 class="card__title">{{ .Title }}</h2>
-        <p class="card__desc">{{ .Params.description | default .Summary }}</p>
-        <a href="{{ .Permalink }}" class="card__link">Read Guide &#8250;</a>
-      </div>
+      <a href="{{ .Permalink }}" class="post-list-item">
+        {{ with .Params.image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" class="post-list-item__thumb">
+        {{ else }}
+        <div class="post-list-item__thumb-placeholder">&#128663;</div>
+        {{ end }}
+        <div class="post-list-item__body">
+          <p class="post-list-item__date">{{ .Date.Format "Jan 2, 2006" }}</p>
+          <h2 class="post-list-item__title">{{ .Title }}</h2>
+          <p class="post-list-item__desc">{{ .Params.description | default .Summary }}</p>
+        </div>
+      </a>
       {{ end }}
     </div>
   </div>
 </div>
+
 {{ end }}
