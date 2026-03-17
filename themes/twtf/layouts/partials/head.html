@@ -16,11 +16,13 @@
 <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
+{{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="{{ if .Params.image }}summary_large_image{{ else }}summary{{ end }}">
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ with .Params.image }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
 
 <!-- JSON-LD Schema -->
 {{ if .IsPage }}
@@ -41,7 +43,8 @@
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ .Permalink | jsonify }}
-  }
+  }{{ with .Params.image }},
+  "image": {{ . | absURL | jsonify }}{{ end }}
 }
 </script>
 {{ end }}

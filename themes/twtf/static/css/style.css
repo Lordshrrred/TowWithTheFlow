@@ -274,6 +274,52 @@ strong { font-weight: 600; }
   padding: 3rem 0;
 }
 
+/* ── Post Images ── */
+.post-hero-image {
+  margin: 0 0 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.photo-credit {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  text-align: right;
+  margin: 0.3rem 0 0;
+  opacity: 0.6;
+}
+
+/* Inline post images (mid + bottom) */
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  margin: 1.5rem 0 0.3rem;
+  display: block;
+  loading: lazy;
+}
+
+/* Image captions (from alt text via markdown) */
+.post-body img + em,
+.post-body img + p > em:only-child {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 1.25rem;
+}
+
+/* Photo credit below inline images */
+.post-body img ~ p:has(> em:only-child) {
+  margin-top: 0;
+}
+
 /* ── Post Page ── */
 .post-header {
   padding: 2.5rem 0 1.5rem;

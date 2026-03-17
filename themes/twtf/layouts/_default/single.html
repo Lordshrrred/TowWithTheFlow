@@ -12,6 +12,13 @@
       {{ end }}
     </div>
 
+    {{ with .Params.image }}
+    <div class="post-hero-image">
+      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" class="hero-img">
+      <p class="photo-credit">Photo: Pexels</p>
+    </div>
+    {{ end }}
+
     <div class="post-body">
       {{ .Content }}
 

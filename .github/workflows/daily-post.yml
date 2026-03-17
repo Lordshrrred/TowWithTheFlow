@@ -30,6 +30,7 @@ jobs:
       - name: Generate post
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
           HASHNODE_API_KEY: ${{ secrets.HASHNODE_API_KEY }}
           HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
@@ -56,6 +57,6 @@ jobs:
 
       - name: Commit and push
         run: |
-          git add content/posts/ scripts/keywords.txt scripts/syndication_log.txt || true
+          git add content/posts/ static/images/ scripts/keywords.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: daily post $(date +%Y-%m-%d)"
           git push
