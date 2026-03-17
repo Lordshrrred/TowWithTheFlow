@@ -1,76 +1,16 @@
-{{ define "head-extra" }}
-<style>
-  .term-wrap {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10rem 4rem 8rem;
-    position: relative;
-    z-index: 1;
-  }
-  .term-eyebrow {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: var(--gold);
-    opacity: 0.7;
-    margin-bottom: 1rem;
-    display: block;
-  }
-  .term-title {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    color: var(--cream);
-    margin-bottom: 3rem;
-  }
-  .term-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  .term-card {
-    border: 1px solid rgba(201,168,76,0.08);
-    padding: 2rem;
-    background: rgba(255,255,255,0.015);
-    transition: all 0.3s;
-    text-decoration: none;
-    display: block;
-    color: inherit;
-  }
-  .term-card:hover { background: rgba(201,168,76,0.03); }
-  .term-card h2 {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1rem;
-    color: var(--cream);
-    line-height: 1.4;
-    margin-bottom: 0.75rem;
-  }
-  .term-card-meta {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    opacity: 0.6;
-  }
-  @media (max-width: 768px) {
-    .term-wrap { padding: 8rem 1.5rem 5rem; }
-    .term-grid { grid-template-columns: 1fr; }
-  }
-</style>
-{{ end }}
-
 {{ define "main" }}
-<div class="term-wrap">
-  <span class="term-eyebrow">Tag</span>
-  <h1 class="term-title">{{ .Title }}</h1>
-  <div class="term-grid">
-    {{ range .Pages }}
-    <a href="{{ .RelPermalink }}" class="term-card">
-      <h2>{{ .Title }}</h2>
-      <div class="term-card-meta">{{ .Date.Format "Jan 2, 2006" }}</div>
-    </a>
-    {{ end }}
+<div class="section">
+  <div class="container">
+    <h1 class="section-title">{{ .Title }}</h1>
+    <div class="card-grid">
+      {{ range .Pages }}
+      <div class="card">
+        <h2 class="card__title">{{ .Title }}</h2>
+        <p class="card__desc">{{ .Params.description | default .Summary }}</p>
+        <a href="{{ .Permalink }}" class="card__link">Read Guide ›</a>
+      </div>
+      {{ end }}
+    </div>
   </div>
 </div>
 {{ end }}
