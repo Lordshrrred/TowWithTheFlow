@@ -9,6 +9,25 @@ resources/
 Thumbs.db
 CNAME.com
 
+# VOA ghost files — must never be committed to this repo
+index.html
+README.md
+_redirects
+script.js
+styles.css
+netlify.toml
+package.json
+package-lock.json
+admin/
+aura/
+images/
+netlify/
+.github/workflows/deploy.yml
+
+# Old VOA JS build scripts
+scripts/*.js
+scripts/*.cjs
+
 # Node
 node_modules/
 
