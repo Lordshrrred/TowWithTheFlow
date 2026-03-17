@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Philosophy ~ The EarthStar Initiative</title>
+<meta name="description" content="The philosophy behind The EarthStar Initiative. Human beings are creators. Abundance Realization. Weapons of Mass Creation. Global Harmonization.">
+<link rel="canonical" href="https://vibrationofawesome.com/earthstar/philosophy/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1a3a8f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EarthStar">
+<meta property="og:title" content="The Philosophy ~ The EarthStar Initiative">
+<meta property="og:description" content="Human beings are creators. The philosophy behind The EarthStar Initiative.">
+<meta property="og:url" content="https://vibrationofawesome.com/earthstar/philosophy/">
+<meta property="og:image" content="https://vibrationofawesome.com/images/earthstar-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Philosophy ~ The EarthStar Initiative">
+<meta name="twitter:description" content="Human beings are creators. The philosophy behind The EarthStar Initiative.">
+<meta name="twitter:image" content="https://vibrationofawesome.com/images/earthstar-hero.jpg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5HF0WKZT9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G5HF0WKZT9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Raleway:wght@300;400;600&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ── RESET AND ROOT ── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --blue:       #1a3a8f;
+    --blue-glow:  rgba(26,58,143,0.55);
+    --blue-dim:   rgba(26,58,143,0.14);
+    --gold:       #c9a84c;
+    --gold-light: #e8c96a;
+    --gold-glow:  rgba(201,168,76,0.45);
+    --gold-dim:   rgba(201,168,76,0.10);
+    --deep:       #0a0f2e;
+    --midnight:   #080d2a;
+    --surface:    #0d1238;
+    --text:       #f0f0ff;
+    --text-muted: #8898cc;
+    --border:     rgba(26,58,143,0.22);
+    --cream:      #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--deep);
+    color: var(--text);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 1.85;
+  }
+
+  /* ── STARS ── */
+  .stars {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none; z-index: 0; overflow: hidden;
+  }
+  .star {
+    position: absolute; background: white; border-radius: 50%;
+    animation: twinkle var(--dur,3s) ease-in-out infinite;
+    animation-delay: var(--delay,0s); opacity: 0;
+  }
+  .star.gold { background: var(--gold); }
+  .star.blue { background: #3a5fc8; }
+  @keyframes twinkle {
+    0%,100% { opacity:0; transform:scale(0.5); }
+    50%      { opacity:var(--brightness,0.7); transform:scale(1); }
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.4rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(10,15,46,0.97), transparent);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem; letter-spacing: 0.14em; font-weight: 600;
+    color: var(--gold);
+    text-decoration: none;
+    text-shadow: 0 0 20px var(--gold-glow);
+  }
+  .nav-right {
+    display: flex; align-items: center; gap: 1.8rem;
+  }
+  .nav-right a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-right a:hover { color: var(--gold); }
+  .nav-back {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    border: 1px solid rgba(26,58,143,0.3);
+    padding: 0.4rem 0.9rem;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-back:hover { color: var(--gold); border-color: var(--gold); }
+
+  /* ── LAYOUT ── */
+  .page-wrap {
+    position: relative; z-index: 1;
+    max-width: 760px; margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+
+  /* ── HERO ── */
+  .phil-hero {
+    position: relative; z-index: 1;
+    padding: 10rem 2.5rem 5rem;
+    max-width: 760px; margin: 0 auto;
+    text-align: left;
+  }
+  .phil-hero-eyebrow {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.45em; text-transform: uppercase;
+    color: var(--gold); opacity: 0.75;
+    display: block; margin-bottom: 1.4rem;
+  }
+  .phil-hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1; letter-spacing: 0.04em;
+    color: var(--cream);
+    text-shadow: 0 0 60px var(--gold-glow), 0 0 120px rgba(26,58,143,0.3);
+    margin-bottom: 1.5rem;
+  }
+  .phil-hero-sub {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15rem; font-weight: 300; font-style: italic;
+    color: rgba(240,240,255,0.62); line-height: 1.9;
+    letter-spacing: 0.03em; max-width: 560px;
+  }
+
+  /* ── SECTION DIVIDER ── */
+  .section-divider {
+    display: flex; align-items: center; gap: 1.5rem;
+    margin: 4rem 0;
+  }
+  .section-divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(201,168,76,0.35), transparent);
+  }
+  .section-divider-glyph {
+    color: var(--gold); opacity: 0.5;
+    font-size: 0.6rem; letter-spacing: 0.2em;
+    font-family: 'Cinzel', serif;
+  }
+
+  /* ── SECTION ── */
+  .phil-section {
+    position: relative; z-index: 1;
+    max-width: 760px; margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+  .section-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); opacity: 0.65;
+    display: block; margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 600; letter-spacing: 0.06em;
+    color: var(--gold);
+    text-shadow: 0 0 30px var(--gold-glow);
+    margin-bottom: 1.8rem; line-height: 1.25;
+  }
+  .section-title-rule {
+    width: 48px; height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin-bottom: 2rem;
+  }
+  .phil-body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.08rem; font-weight: 400;
+    color: rgba(240,240,255,0.82);
+    line-height: 2; max-width: 680px;
+  }
+  .phil-body p {
+    margin-bottom: 1.4rem;
+  }
+  .phil-body p:last-child { margin-bottom: 0; }
+
+  /* ── CALLOUT QUOTES ── */
+  .callout {
+    position: relative; z-index: 1;
+    max-width: 760px; margin: 0 auto;
+    padding: 3rem 2.5rem;
+    text-align: center;
+  }
+  .callout-inner {
+    border-top: 1px solid rgba(201,168,76,0.18);
+    border-bottom: 1px solid rgba(201,168,76,0.18);
+    padding: 2.8rem 2rem;
+    background: radial-gradient(ellipse 80% 100% at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 70%);
+  }
+  .callout-glyph {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem; color: var(--gold); opacity: 0.3;
+    display: block; margin-bottom: 0.8rem;
+    line-height: 1;
+  }
+  .callout-text {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 3.5vw, 2rem);
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1.5; letter-spacing: 0.04em;
+    text-shadow: 0 0 40px var(--gold-glow);
+  }
+
+  /* ── BOTTOM CTA ── */
+  .phil-cta {
+    position: relative; z-index: 1;
+    max-width: 760px; margin: 0 auto;
+    padding: 4rem 2.5rem 7rem;
+    display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;
+  }
+  .btn-primary {
+    display: inline-block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--deep); background: var(--gold);
+    padding: 0.85rem 2rem; text-decoration: none;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    font-weight: 700;
+  }
+  .btn-primary:hover {
+    opacity: 0.9; transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--gold-glow);
+  }
+  .btn-secondary {
+    display: inline-block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid rgba(201,168,76,0.4);
+    padding: 0.8rem 1.8rem; text-decoration: none;
+    transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  .btn-secondary:hover {
+    color: var(--cream); border-color: var(--gold);
+    box-shadow: 0 0 20px var(--gold-glow);
+  }
+
+  /* ── BACK LINK ── */
+  .back-link-row {
+    position: relative; z-index: 1;
+    max-width: 760px; margin: 0 auto;
+    padding: 0 2.5rem 2rem;
+  }
+  .back-link {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--gold); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 2rem;
+    position: relative; z-index: 1;
+  }
+  .footer-left .footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem; letter-spacing: 0.12em; font-weight: 600;
+    color: var(--gold); margin-bottom: 0.5rem;
+  }
+  .footer-left .footer-tagline {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem; letter-spacing: 0.15em;
+    color: var(--text-muted); opacity: 0.7; font-weight: 300;
+  }
+  .footer-right {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem;
+  }
+  .footer-links {
+    display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-end;
+  }
+  .footer-links a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-muted); opacity: 0.5;
+  }
+
+  /* ── REVEAL ── */
+  .reveal {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1.1rem 1.5rem; }
+    .nav-right a:not(.nav-back) { display: none; }
+    .phil-hero { padding: 8rem 1.5rem 4rem; }
+    .phil-section, .callout, .phil-cta, .back-link-row { padding-left: 1.5rem; padding-right: 1.5rem; }
+    footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    .footer-right { align-items: flex-start; }
+    .callout-text { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="/earthstar/" class="nav-logo">The EarthStar Initiative</a>
+  <div class="nav-right">
+    <a href="/earthstar/vision/">The Vision</a>
+    <a href="/earthstar/" class="nav-back">&#8592; Back to EarthStar</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<div class="phil-hero reveal">
+  <span class="phil-hero-eyebrow">&#10022; The EarthStar Initiative &#10022;</span>
+  <h1 class="phil-hero-title">A World Built<br>by Creators</h1>
+  <p class="phil-hero-sub">The Philosophy Behind The EarthStar Initiative</p>
+</div>
+
+<!-- ══════════════════════════════════════
+     CALLOUT: Human beings are creators.
+══════════════════════════════════════ -->
+<div class="callout reveal">
+  <div class="callout-inner">
+    <span class="callout-glyph">&#10022;</span>
+    <p class="callout-text">Human beings are creators.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 1: THE REALIZATION
+══════════════════════════════════════ -->
+<div class="phil-section reveal">
+  <span class="section-label">Section I</span>
+  <h2 class="section-title">The Realization</h2>
+  <div class="section-title-rule"></div>
+  <div class="phil-body">
+    <p>Every breakthrough, every work of art, every movement that has improved life on this planet came from people who chose to create instead of simply accept the world as it was.</p>
+    <p>EarthStar exists to remind people of that power.</p>
+  </div>
+</div>
+
+<div class="section-divider reveal">
+  <div class="section-divider-line"></div>
+  <div class="section-divider-glyph">&#10022;</div>
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 2: ABUNDANCE REALIZATION
+══════════════════════════════════════ -->
+<div class="phil-section reveal">
+  <span class="section-label">Section II</span>
+  <h2 class="section-title">Abundance Realization</h2>
+  <div class="section-title-rule"></div>
+  <div class="phil-body">
+    <p>Before we can change the world, we have to change how we see ourselves.</p>
+    <p>Most people are taught to live inside invisible limits. Limits on creativity. Limits on possibility. Limits on what kind of life they are allowed to pursue.</p>
+    <p>Abundance realization is the moment someone recognizes that those limits were never absolute.</p>
+    <p>It is the realization that you have the ability to build something meaningful with your life.</p>
+    <p>Abundance realization is not just about money or material wealth. It is about recognizing that your ideas, creativity, and energy are powerful resources.</p>
+    <p>When someone realizes that, their entire relationship with the world begins to change.</p>
+  </div>
+</div>
+
+<div class="section-divider reveal">
+  <div class="section-divider-line"></div>
+  <div class="section-divider-glyph">&#10022;</div>
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 3: WEAPONS OF MASS CREATION
+══════════════════════════════════════ -->
+<div class="phil-section reveal">
+  <span class="section-label">Section III</span>
+  <h2 class="section-title">Weapons of Mass Creation</h2>
+  <div class="section-title-rule"></div>
+  <div class="phil-body">
+    <p>Once people recognize their creative power, something extraordinary happens.</p>
+    <p>They begin to build.</p>
+    <p>They build art. They build communities. They build ideas. They build technology. They build solutions to problems that once seemed impossible.</p>
+    <p>These creations ripple outward.</p>
+    <p>This is what EarthStar calls Weapons of Mass Creation.</p>
+    <p>They are the opposite of destructive power. Instead of tearing the world down, they build it forward.</p>
+    <p>When enough people choose creation over destruction, the trajectory of the planet begins to change.</p>
+  </div>
+</div>
+
+<div class="section-divider reveal">
+  <div class="section-divider-line"></div>
+  <div class="section-divider-glyph">&#10022;</div>
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 4: EMPOWER THYSELF
+══════════════════════════════════════ -->
+<div class="phil-section reveal">
+  <span class="section-label">Section IV</span>
+  <h2 class="section-title">Empower Thyself</h2>
+  <div class="section-title-rule"></div>
+  <div class="phil-body">
+    <p>Every large change in the world begins with an individual decision.</p>
+    <p>The decision to grow. The decision to create. The decision to take responsibility for the life you are building.</p>
+    <p>This is the spirit behind Vibration of Awesome.</p>
+    <p>It is a reminder that empowerment begins within the individual.</p>
+    <p>When people believe in their own creative potential, they begin to shape their lives with intention. And that changes everything around them.</p>
+  </div>
+</div>
+
+<!-- CALLOUT: The self realization of others -->
+<div class="callout reveal">
+  <div class="callout-inner">
+    <span class="callout-glyph">&#10022;</span>
+    <p class="callout-text">The self realization of others is what propels EarthStar forward.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 5: EMPOWER THE EARTH
+══════════════════════════════════════ -->
+<div class="phil-section reveal">
+  <span class="section-label">Section V</span>
+  <h2 class="section-title">Empower the Earth</h2>
+  <div class="section-title-rule"></div>
+  <div class="phil-body">
+    <p>EarthStar is the larger vision.</p>
+    <p>A vision where humanity rediscovers its creative nature and begins to work together to build a world that functions better for everyone.</p>
+    <p>Not through force. Not through domination. But through creativity, collaboration, and shared purpose.</p>
+    <p>Vibration of Awesome helps people unlock themselves. EarthStar is what becomes possible when enough people do.</p>
+  </div>
+</div>
+
+<div class="section-divider reveal">
+  <div class="section-divider-line"></div>
+  <div class="section-divider-glyph">&#10022;</div>
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 6: GLOBAL HARMONIZATION
+══════════════════════════════════════ -->
+<div class="phil-section reveal">
+  <span class="section-label">Section VI</span>
+  <h2 class="section-title">Global Harmonization</h2>
+  <div class="section-title-rule"></div>
+  <div class="phil-body">
+    <p>If enough people awaken to their creative potential, the long-term result is something beautiful.</p>
+    <p>A world where innovation serves life. A world where creativity replaces despair. A world where people build systems that work for humanity instead of against it.</p>
+    <p>EarthStar calls this possibility Global Harmonization.</p>
+    <p>It is not a fixed destination. It is a direction.</p>
+    <p>A direction that becomes possible when people remember who they really are.</p>
+    <p>Creators.</p>
+  </div>
+</div>
+
+<div class="section-divider reveal">
+  <div class="section-divider-line"></div>
+  <div class="section-divider-glyph">&#10022;</div>
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 7: THE INVITATION
+══════════════════════════════════════ -->
+<div class="phil-section reveal">
+  <span class="section-label">Section VII</span>
+  <h2 class="section-title">The Invitation</h2>
+  <div class="section-title-rule"></div>
+  <div class="phil-body">
+    <p>EarthStar is not a movement you join. It is a realization you arrive at.</p>
+    <p>The moment you choose to create something meaningful with your life, you are already part of it.</p>
+    <p>Because the future of this planet will be shaped by the people who choose to build it.</p>
+  </div>
+</div>
+
+<!-- CALLOUT: EarthStar is not a movement you join -->
+<div class="callout reveal">
+  <div class="callout-inner">
+    <span class="callout-glyph">&#10022;</span>
+    <p class="callout-text">EarthStar is not a movement you join.<br>It is a realization you arrive at.</p>
+  </div>
+</div>
+
+<!-- CALLOUT: The future -->
+<div class="callout reveal" style="padding-top:0;">
+  <div class="callout-inner">
+    <span class="callout-glyph">&#10022;</span>
+    <p class="callout-text">The future of this planet will be shaped by the people who choose to build it.</p>
+  </div>
+</div>
+
+<!-- ── BACK LINK (bottom) ── -->
+<div class="back-link-row reveal">
+  <a href="/earthstar/" class="back-link">&#8592; Back to EarthStar</a>
+</div>
+
+<!-- ── BOTTOM CTA ── -->
+<div class="phil-cta reveal">
+  <a href="/earthstar/vision/" class="btn-primary">Explore the Vision &rarr;</a>
+  <a href="/earthstar/" class="btn-secondary">&#8592; Back to EarthStar</a>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-logo">The EarthStar Initiative</div>
+    <div class="footer-tagline">Roots in the Earth, Crown in the Stars. The Future is Ours.</div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-links">
+      <a href="/earthstar/">EarthStar</a>
+      <a href="/earthstar/vision/">Vision</a>
+      <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener">Merch</a>
+      <a href="/blog/">Blog</a>
+      <a href="/">&#8592; Vibration of Awesome</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 The EarthStar Initiative / Vibration of Awesome</div>
+  </div>
+</footer>
+
+<script>
+  // ── Stars ──
+  const starsEl = document.getElementById('stars');
+  for (let i = 0; i < 140; i++) {
+    const star = document.createElement('div');
+    star.className = 'star' + (i < 10 ? ' gold' : i < 22 ? ' blue' : '');
+    const sz = Math.random() * 1.8 + 0.3;
+    star.style.cssText =
+      'width:'+sz+'px;height:'+sz+'px;' +
+      'left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;' +
+      '--dur:'+(Math.random()*4+2)+'s;--delay:'+(Math.random()*6)+'s;' +
+      '--brightness:'+(Math.random()*0.4+0.15)+';';
+    starsEl.appendChild(star);
+  }
+
+  // ── Nav scroll effect ──
+  const navEl = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 60) {
+      navEl.style.background = 'rgba(10,15,46,0.98)';
+      navEl.style.borderBottomColor = 'rgba(26,58,143,0.35)';
+    } else {
+      navEl.style.background = 'linear-gradient(to bottom, rgba(10,15,46,0.97), transparent)';
+      navEl.style.borderBottomColor = 'rgba(26,58,143,0.22)';
+    }
+  });
+
+  // ── Scroll reveal ──
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(function(r) { observer.observe(r); });
+</script>
+</body>
+</html>
