@@ -63,18 +63,15 @@ def parse_frontmatter(content: str) -> tuple[dict, str]:
     return meta, body
 
 
-def md_to_html(body: str) -> str:
-    h = body
-    h = re.sub(r'^> (.+)$', r'<blockquote>\1</blockquote>', h, flags=re.MULTILINE)
-    h = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', h)
-    h = re.sub(r'^## (.+)$', r'<h2>\1</h2>', h, flags=re.MULTILINE)
-    h = re.sub(r'^### (.+)$', r'<h3>\1</h3>', h, flags=re.MULTILINE)
-    h = re.sub(r'^\d+\. (.+)$', r'<li>\1</li>', h, flags=re.MULTILINE)
-    lines = []
-    for line in h.split('\n'):
-        s = line.strip()
-        lines.append(f'<p>{s}</p>' if s and not s.startswith('<') else s)
-    return '\n'.join(lines)
+def md_to_plain(body: str) -> str:
+    """Strip markdown to plain text for NPF posting."""
+    t = body
+    t = re.sub(r'^#{1,6}\s+', '', t, flags=re.MULTILINE)
+    t = re.sub(r'^> ', '', t, flags=re.MULTILINE)
+    t = re.sub(r'\*\*(.+?)\*\*', r'\1', t)
+    t = re.sub(r'\*(.+?)\*', r'\1', t)
+    t = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', t)
+    return t.strip()
 
 
 def post_to_tumblr(slug: str) -> bool:
@@ -85,14 +82,11 @@ def post_to_tumblr(slug: str) -> bool:
 
     meta, body = parse_frontmatter(post_file.read_text(encoding='utf-8'))
     title = meta.get('title', slug)
+    tags  = meta.get('tags', [])
     canonical_url = f"{BASE_URL}/{slug}/"
 
-    html_body = md_to_html(body)
-    full_html = (
-        f"<h1>{title}</h1>\n"
-        f"{html_body}\n"
-        f'<p><a href="{canonical_url}">Read the full guide at towwiththeflow.com</a></p>'
-    )
+    plain = md_to_plain(body)
+    full_text = f"{title}\n\n{plain}\n\nRead the full guide: {canonical_url}"
 
     try:
         from requests_oauthlib import OAuth1
@@ -104,19 +98,19 @@ def post_to_tumblr(slug: str) -> bool:
         TUMBLR_CONSUMER_KEY, TUMBLR_CONSUMER_SECRET,
         TUMBLR_TOKEN, TUMBLR_TOKEN_SECRET
     )
-    payload = {
-        "type": "text",
+
+    # Neue Post Format (NPF) - bypasses legacy type=text which returns error 8001
+    npf_payload = {
+        "content": [{"type": "text", "text": full_text}],
+        "tags": tags if isinstance(tags, list) else [t.strip() for t in str(tags).split(',') if t.strip()],
         "state": "published",
-        "title": title,
-        "body": full_html,
-        "tags": ",".join(meta.get('tags', [])),
     }
 
     try:
         resp = requests.post(
             f"https://api.tumblr.com/v2/blog/{TUMBLR_BLOG_NAME}/posts",
             auth=oauth,
-            data=payload,
+            json=npf_payload,
             timeout=30,
         )
         if resp.status_code in (200, 201):
@@ -124,9 +118,9 @@ def post_to_tumblr(slug: str) -> bool:
             return True
         else:
             try:
-                detail = json.dumps(resp.json())[:300]
+                detail = json.dumps(resp.json())[:400]
             except Exception:
-                detail = resp.text[:300]
+                detail = resp.text[:400]
             log(f"TUMBLR | {slug} | FAIL | status={resp.status_code} | {detail}")
             return False
     except Exception as e:

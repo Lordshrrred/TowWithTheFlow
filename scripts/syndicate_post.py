@@ -169,7 +169,8 @@ def syndicate_hashnode(slug: str, meta: dict, body: str):
 
 
 def syndicate_tumblr(slug: str, meta: dict, body: str):
-    """Post to Tumblr via OAuth1"""
+    """Post to Tumblr via OAuth1 using Neue Post Format (NPF).
+    NPF bypasses legacy 'type=text' endpoint which returns error 8001."""
     if not all([TUMBLR_CONSUMER_KEY, TUMBLR_CONSUMER_SECRET, TUMBLR_TOKEN, TUMBLR_TOKEN_SECRET, TUMBLR_BLOG_NAME]):
         log(f"TUMBLR | {slug} | SKIP: missing OAuth credentials")
         return
@@ -182,62 +183,55 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
 
     canonical_url = f"{BASE_URL}/{slug}/"
     title = meta.get('title', slug)
+    tags  = meta.get('tags', [])
 
-    # Convert markdown to basic HTML (simple conversion)
-    html_body = body
-    # Blockquotes
-    html_body = re.sub(r'^> (.+)$', r'<blockquote>\1</blockquote>', html_body, flags=re.MULTILINE)
-    # Bold
-    html_body = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html_body)
-    # H2
-    html_body = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html_body, flags=re.MULTILINE)
-    # H3
-    html_body = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html_body, flags=re.MULTILINE)
-    # Numbered lists
-    html_body = re.sub(r'^\d+\. (.+)$', r'<li>\1</li>', html_body, flags=re.MULTILINE)
-    # Paragraphs (wrap consecutive non-tag lines)
-    paragraphs = []
-    for line in html_body.split('\n'):
-        stripped = line.strip()
-        if stripped and not stripped.startswith('<'):
-            paragraphs.append(f'<p>{stripped}</p>')
-        else:
-            paragraphs.append(stripped)
-    html_body = '\n'.join(paragraphs)
+    # Build plain-text version of the post body (strip markdown)
+    plain = body
+    plain = re.sub(r'^#{1,6}\s+', '', plain, flags=re.MULTILINE)   # headings
+    plain = re.sub(r'^> ', '', plain, flags=re.MULTILINE)          # blockquotes
+    plain = re.sub(r'\*\*(.+?)\*\*', r'\1', plain)                 # bold
+    plain = re.sub(r'\*(.+?)\*', r'\1', plain)                     # italic
+    plain = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', plain)        # links
+    plain = plain.strip()
 
-    full_html = (
-        f"<h1>{title}</h1>\n"
-        f"{html_body}\n"
-        f'<p><a href="{canonical_url}">Read the full guide at towwiththeflow.com</a></p>'
-    )
+    full_text = f"{title}\n\n{plain}\n\nRead the full guide: {canonical_url}"
 
     oauth = OAuth1(
         TUMBLR_CONSUMER_KEY, TUMBLR_CONSUMER_SECRET,
         TUMBLR_TOKEN, TUMBLR_TOKEN_SECRET
     )
 
-    payload = {
-        "type": "text",
+    # NPF payload - Neue Post Format
+    if isinstance(tags, list):
+        tag_list = tags
+    else:
+        tag_list = [t.strip() for t in str(tags).split(',') if t.strip()]
+
+    npf_payload = {
+        "content": [
+            {
+                "type": "text",
+                "text": full_text
+            }
+        ],
+        "tags": tag_list,
         "state": "published",
-        "title": title,
-        "body": full_html,
-        "tags": ",".join(meta.get('tags', [])),
     }
 
     try:
         resp = requests.post(
             f"https://api.tumblr.com/v2/blog/{TUMBLR_BLOG_NAME}/posts",
             auth=oauth,
-            data=payload,
+            json=npf_payload,
             timeout=30
         )
         if resp.status_code in (200, 201):
             log(f"TUMBLR | {slug} | SUCCESS | status={resp.status_code}")
         else:
             try:
-                detail = json.dumps(resp.json())[:200]
+                detail = json.dumps(resp.json())[:400]
             except Exception:
-                detail = resp.text[:200]
+                detail = resp.text[:400]
             log(f"TUMBLR | {slug} | FAIL | status={resp.status_code} | {detail}")
     except Exception as e:
         log(f"TUMBLR | {slug} | ERROR | {e}")
