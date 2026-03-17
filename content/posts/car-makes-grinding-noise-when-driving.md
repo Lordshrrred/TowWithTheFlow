@@ -11,21 +11,21 @@ slug: "car-makes-grinding-noise-when-driving"
 ## What To Do
 
 1. **Identify when the grinding happens.** Only when braking? All the time? During turns? At specific speeds? This narrows the cause fast.
-2. **If grinding only when braking**, your brake pads are likely worn down to the metal backing plate. This is urgent — you're grinding the rotor and your stopping distance is increasing.
-3. **If grinding at all times (not just braking)**, suspect a wheel bearing. Try to notice if the sound changes when you swerve gently left or right — a bearing noise often changes pitch during weight transfer.
+2. **If grinding only when braking**, your brake pads are likely worn down to the metal backing plate. This is urgent, you're grinding the rotor and your stopping distance is increasing.
+3. **If grinding at all times (not just braking)**, suspect a wheel bearing. Try to notice if the sound changes when you swerve gently left or right, a bearing noise often changes pitch during weight transfer.
 4. **If grinding during turns**, it could be a CV joint in late-stage failure or a brake pad dragging from a seized caliper.
-5. **Pull over and inspect the wheel area** if it's safe. Look for obvious debris — a rock or road debris can get wedged between the pad and rotor and grind loudly until it clears.
+5. **Pull over and inspect the wheel area** if it's safe. Look for obvious debris, a rock or road debris can get wedged between the pad and rotor and grind loudly until it clears.
 6. **Don't delay brake repairs.** If you've determined it's the brakes, drive carefully to the nearest shop. Avoid high speeds and hard stops. This is not a park-it-and-deal-with-it-later situation.
 
 ### Grinding Noise by Situation
 
 | When It Grinds | Most Likely Cause | Urgency |
 |---|---|---|
-| Only when braking | Worn brake pads, damaged rotor | High — fix this week |
-| All the time, every speed | Wheel bearing failure | High — can cause wheel to lock |
+| Only when braking | Worn brake pads, damaged rotor | High, fix this week |
+| All the time, every speed | Wheel bearing failure | High, can cause wheel to lock |
 | During slow turns | CV joint late-stage failure | Medium-high |
-| At certain speed, goes away | Debris in brakes | Usually low — often self-clears |
-| When starting from a stop | Rust on rotors (normal after sitting) | Low — clears on its own |
+| At certain speed, goes away | Debris in brakes | Usually low, often self-clears |
+| When starting from a stop | Rust on rotors (normal after sitting) | Low, clears on its own |
 
 ## What It Might Cost
 
@@ -41,7 +41,7 @@ Waiting on brake repairs always makes them more expensive. Metal-on-metal grindi
 
 ## Stay Safe
 
-- **If grinding brakes get worse suddenly** — increased stopping distance, brake pedal going to the floor, or smoke from a wheel — stop driving immediately. You may be losing brake function.
+- **If grinding brakes get worse suddenly**, increased stopping distance, brake pedal going to the floor, or smoke from a wheel, stop driving immediately. You may be losing brake function.
 - **A seized caliper** will cause continuous grinding and heat buildup. The wheel can get extremely hot, which is a fire risk. If one wheel feels hot after driving, the caliper may be seized.
 - **Wheel bearing failure** can cause the wheel to lock up without warning at speed. If you suspect a bearing (constant grinding, pulling, wheel wobble), do not drive on a highway.
 - **Never ignore grinding that gets louder over days.** It means the component is deteriorating. The earlier you fix it, the cheaper and safer it is.

@@ -6,7 +6,7 @@ tags: ["car breakdown", "cold weather", "battery", "starting problems"]
 slug: "car-wont-start-in-cold-weather-what-to-do"
 ---
 
-> **Quick Answer:** Cold weather kills weak batteries, thickens engine oil, and can gel diesel fuel. If you hear a slow crank or clicking, it's almost certainly the battery. If you hear nothing at all, check the battery connections. If it cranks fine but won't fire, the problem is fuel or spark. Start with the battery — it causes 80% of cold-weather no-starts.
+> **Quick Answer:** Cold weather kills weak batteries, thickens engine oil, and can gel diesel fuel. If you hear a slow crank or clicking, it's almost certainly the battery. If you hear nothing at all, check the battery connections. If it cranks fine but won't fire, the problem is fuel or spark. Start with the battery, it causes 80% of cold-weather no-starts.
 
 ## What To Do
 
@@ -22,7 +22,7 @@ slug: "car-wont-start-in-cold-weather-what-to-do"
 
 4. **Let the car warm up for 30 seconds before revving or driving.** In extreme cold, oil is thick and needs time to circulate.
 
-5. **If it cranks but won't fire in extreme cold (below -10°F / -23°C):** The fuel may not be atomizing properly. Try starting fluid sprayed briefly into the air intake — this is a last resort, not a habit.
+5. **If it cranks but won't fire in extreme cold (below -10°F / -23°C):** The fuel may not be atomizing properly. Try starting fluid sprayed briefly into the air intake, this is a last resort, not a habit.
 
 6. **For diesel vehicles below 20°F (-7°C):** Diesel can gel. Use an anti-gel additive, let glow plugs cycle fully (wait for the coil light to go out before cranking), and consider a block heater if temperatures stay this low regularly.
 
@@ -40,7 +40,7 @@ slug: "car-wont-start-in-cold-weather-what-to-do"
 
 ## Stay Safe
 
-If you're stuck at home, you have time. If you're stuck in a parking lot or on a road in cold weather, keep warm first and troubleshoot second. Cold exposure is dangerous — stay in the car with hazards on if you're waiting for help.
+If you're stuck at home, you have time. If you're stuck in a parking lot or on a road in cold weather, keep warm first and troubleshoot second. Cold exposure is dangerous, stay in the car with hazards on if you're waiting for help.
 
 Do not run the engine in an enclosed garage, even briefly, to warm it up. Carbon monoxide is odorless and kills fast. Always have a door or window open if you must run the engine inside any structure.
 

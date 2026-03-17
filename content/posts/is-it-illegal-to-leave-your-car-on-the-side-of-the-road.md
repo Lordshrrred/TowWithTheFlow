@@ -6,7 +6,7 @@ tags: ["car breakdown", "roadside", "towing laws", "abandoned vehicle"]
 slug: "is-it-illegal-to-leave-your-car-on-the-side-of-the-road"
 ---
 
-> **Quick Answer:** It depends on where you leave it and for how long. On a highway shoulder, most states allow 24–48 hours before law enforcement can tag and tow it. On city streets, parking rules apply. If your car is blocking traffic or creating a hazard, it can be towed immediately with no waiting period. Never just leave it — call the police non-emergency line to report it first.
+> **Quick Answer:** It depends on where you leave it and for how long. On a highway shoulder, most states allow 24–48 hours before law enforcement can tag and tow it. On city streets, parking rules apply. If your car is blocking traffic or creating a hazard, it can be towed immediately with no waiting period. Never just leave it, call the police non-emergency line to report it first.
 
 ## What To Do
 
@@ -18,9 +18,9 @@ slug: "is-it-illegal-to-leave-your-car-on-the-side-of-the-road"
 
 4. **Check local ordinances if it's on a city street.** "No parking" signs, street cleaning schedules, fire hydrant proximity, and permit requirements all apply even to a broken-down car. If you're in a posted no-parking zone, it can be towed within an hour regardless of the circumstances.
 
-5. **If it gets tagged (a notice on the windshield):** The sticker typically gives you 24–72 hours to move the vehicle before a tow is called. Move it — even to a legal parking spot down the street — to reset the clock.
+5. **If it gets tagged (a notice on the windshield):** The sticker typically gives you 24–72 hours to move the vehicle before a tow is called. Move it, even to a legal parking spot down the street, to reset the clock.
 
-6. **If it gets impounded:** Call the towing company listed on the notice first. Then call the police department that authorized the tow to get the release paperwork. Storage fees start accruing immediately — typically $30–$75 per day — so recover it quickly.
+6. **If it gets impounded:** Call the towing company listed on the notice first. Then call the police department that authorized the tow to get the release paperwork. Storage fees start accruing immediately, typically $30–$75 per day, so recover it quickly.
 
 ## What It Might Cost
 
@@ -33,8 +33,8 @@ slug: "is-it-illegal-to-leave-your-car-on-the-side-of-the-road"
 
 ## Stay Safe
 
-The biggest financial mistake people make is leaving a car on the side of the road without reporting it and then waiting several days to deal with it. Storage fees compound fast — a $150 tow turns into a $500+ bill after 3–4 days in a lot.
+The biggest financial mistake people make is leaving a car on the side of the road without reporting it and then waiting several days to deal with it. Storage fees compound fast, a $150 tow turns into a $500+ bill after 3–4 days in a lot.
 
-If your car broke down in a location that is genuinely unsafe to retrieve (high-traffic area, no safe pedestrian access), call a tow company and have them handle it. You don't need to be present for a tow from a public road in most states — you just need to give authorization by phone.
+If your car broke down in a location that is genuinely unsafe to retrieve (high-traffic area, no safe pedestrian access), call a tow company and have them handle it. You don't need to be present for a tow from a public road in most states, you just need to give authorization by phone.
 
 Highway situations are different from city streets. On an interstate, police have authority to remove vehicles that have sat beyond the posted limit (often 24 hours) without a grace period, especially if they're creating a hazard. Don't assume you have more time than you do.

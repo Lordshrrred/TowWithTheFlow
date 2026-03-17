@@ -51,4 +51,4 @@ The break-even math: if you pay $80/year for AAA Basic and use it once for a $12
 ## Stay Safe
 
 - Store your roadside assistance number in your phone before you need it. Searching for it while stranded on a highway shoulder is not the time to find out you lost the card.
-- Most apps (AAA, Allstate) let you track the tow truck's ETA in real time. Use them — it's safer than standing outside waiting and watching.
+- Most apps (AAA, Allstate) let you track the tow truck's ETA in real time. Use them, it's safer than standing outside waiting and watching.

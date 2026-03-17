@@ -6,7 +6,7 @@ tags: ["battery", "cold weather", "car breakdown", "jump start"]
 slug: "how-to-start-a-frozen-car-battery"
 ---
 
-> **Quick Answer:** Do not jump-start a frozen battery — it can explode. A battery freezes when it's deeply discharged (below 20% charge) and temps drop below 32°F. Signs include a cracked or bulging case. If the battery looks normal, bring it inside to warm up for several hours, then attempt a slow charge before jumping. If the case is damaged, replace it.
+> **Quick Answer:** Do not jump-start a frozen battery, it can explode. A battery freezes when it's deeply discharged (below 20% charge) and temps drop below 32°F. Signs include a cracked or bulging case. If the battery looks normal, bring it inside to warm up for several hours, then attempt a slow charge before jumping. If the case is damaged, replace it.
 
 ## What To Do
 
@@ -18,13 +18,13 @@ slug: "how-to-start-a-frozen-car-battery"
 
 2. **If the case looks intact, bring the battery inside.** Disconnect it (negative terminal first, then positive) and bring it somewhere around 50–60°F (10–15°C). Let it sit for 3–6 hours minimum.
 
-3. **After warming, test the battery voltage.** A fully charged 12V battery reads 12.6V or higher. Below 11.8V means it's deeply discharged. Below 10V often means a dead cell — replacement time regardless of temperature.
+3. **After warming, test the battery voltage.** A fully charged 12V battery reads 12.6V or higher. Below 11.8V means it's deeply discharged. Below 10V often means a dead cell, replacement time regardless of temperature.
 
 4. **Charge slowly before jump-starting.** Use a battery charger on a 2-amp "trickle" setting for several hours. Slow charging is gentler on a borderline battery than the sudden current surge of a jump start.
 
 5. **If you have no charger and must jump-start:** Let the good battery connect and sit for 5 full minutes before attempting to crank. This gives the dead battery time to absorb some charge and reduces surge risk.
 
-6. **Reinstall and test.** Reconnect positive first, then negative. Start the car and let it run for 20–30 minutes to recharge. Have the battery tested at an auto parts store — most test for free. A battery that froze once is weakened and often fails again within the same winter.
+6. **Reinstall and test.** Reconnect positive first, then negative. Start the car and let it run for 20–30 minutes to recharge. Have the battery tested at an auto parts store, most test for free. A battery that froze once is weakened and often fails again within the same winter.
 
 ## What It Might Cost
 
@@ -37,7 +37,7 @@ slug: "how-to-start-a-frozen-car-battery"
 
 ## Stay Safe
 
-A frozen, cracked battery is a serious hazard. Battery acid (sulfuric acid) can leak from a cracked case and cause chemical burns to skin and eyes. If the case is cracked, wear gloves before handling it, and don't tilt the battery — keep it level to prevent acid from flowing toward the crack.
+A frozen, cracked battery is a serious hazard. Battery acid (sulfuric acid) can leak from a cracked case and cause chemical burns to skin and eyes. If the case is cracked, wear gloves before handling it, and don't tilt the battery, keep it level to prevent acid from flowing toward the crack.
 
 Never jump-start a battery that is visibly frozen or damaged. The internal pressure from warming electrolyte can cause the battery to vent hydrogen gas, and a jump-start spark can ignite it. Work carefully, keep flames and cigarettes away from the battery, and ventilate the area when charging indoors.
 

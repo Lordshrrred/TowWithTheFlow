@@ -11,7 +11,7 @@ slug: "car-shakes-while-driving-slow-speeds"
 ## What To Do
 
 1. **Notice where you feel the shake.** Steering wheel only = front end issue. Through the whole car = wheels or drivetrain. In the brake pedal when stopping = warped rotors.
-2. **Check your tires.** Look for obvious damage — a bulge, flat spot, or piece missing from the tread. A tire with a bulge can blow out and needs to be replaced immediately.
+2. **Check your tires.** Look for obvious damage, a bulge, flat spot, or piece missing from the tread. A tire with a bulge can blow out and needs to be replaced immediately.
 3. **Check tire pressure.** An underinflated tire creates uneven contact and can cause low-speed wobble or shake.
 4. **Listen while it shakes.** A clicking or popping during slow turns = CV joint. A rhythmic thump = flat spot on tire or out-of-round tire. A grinding shake when braking = brake issue.
 5. **Try driving at different speeds.** If the shake goes away above 25 mph, it's more likely a wheel balance or tire issue. If it gets worse at higher speeds, it's potentially more serious.

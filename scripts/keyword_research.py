@@ -25,7 +25,7 @@ if not ANTHROPIC_API_KEY:
 KEYWORDS_FILE = Path(__file__).parent / "keywords.txt"
 LOG_FILE = Path(__file__).parent / "syndication_log.txt"
 
-SYSTEM_PROMPT = """You are an SEO keyword researcher for towwiththeflow.com, a car breakdown and roadside emergency help site. Generate 20 new long-tail keywords that have clear search intent from a stressed driver actively looking for help. Cover specific car problems, towing costs by city, seasonal issues, insurance questions, roadside safety, and specific breakdown scenarios. Phrase them exactly how someone would type into Google in a stressful moment. Return ONLY a JSON array of 20 keyword strings, nothing else, no markdown backticks."""
+SYSTEM_PROMPT = """You are an SEO keyword researcher for towwiththeflow.com, a car breakdown and roadside emergency help site. Generate 20 new long-tail keywords that have clear search intent from a stressed driver actively looking for help. Cover specific car problems, towing costs by city, seasonal issues, insurance questions, roadside safety, and specific breakdown scenarios. Phrase them exactly how someone would type into Google in a stressful moment. Return ONLY a JSON array of 20 keyword strings, nothing else, no markdown backticks. NEVER use em dashes (—) in keyword strings."""
 
 
 def load_existing_keywords() -> set[str]:

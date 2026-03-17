@@ -1,14 +1,38 @@
-<!-- AD SLOT: header -->
 <header class="site-header">
   <div class="container">
     <div class="site-header__inner">
       <a href="{{ "/" | relURL }}" class="site-logo">&#9881; Tow With The Flow</a>
-      <nav class="site-nav">
+      <nav class="site-nav" id="site-nav">
         <a href="{{ "/" | relURL }}">Home</a>
         <a href="{{ "/posts/" | relURL }}">All Guides</a>
         <a href="{{ "/about/" | relURL }}">About</a>
         <a href="{{ "/contact/" | relURL }}">Contact</a>
       </nav>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
 </header>
+<script>
+(function() {
+  var btn = document.getElementById('hamburger-btn');
+  var nav = document.getElementById('site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function() {
+    var open = nav.classList.toggle('is-open');
+    btn.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('is-open');
+      btn.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>

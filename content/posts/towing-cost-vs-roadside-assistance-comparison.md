@@ -12,7 +12,7 @@ slug: "towing-cost-vs-roadside-assistance-comparison"
 
 1. **Audit your existing coverage before spending anything new.** You may already be paying for roadside assistance through:
    - Auto insurance policy (look for "roadside" or "emergency road service" on your declarations page)
-   - Credit card — call the number on the back and ask if roadside is included
+   - Credit card, call the number on the back and ask if roadside is included
    - Vehicle manufacturer program (new car? check the glove box for coverage documents)
    - Cell phone plan (some T-Mobile, Verizon plans include it)
 2. **If you have no coverage, decide based on your situation:**
@@ -47,10 +47,10 @@ slug: "towing-cost-vs-roadside-assistance-comparison"
 | Insurance roadside rider | $5–$15 | Varies by policy |
 | Credit card roadside | $0 extra | Per-incident dispatch ~$50 |
 
-**Break-even math:** AAA Basic at $75/year. If you use it once for a $120 tow, net cost is negative $45 — you're ahead. One jump start in addition covers two years of membership.
+**Break-even math:** AAA Basic at $75/year. If you use it once for a $120 tow, net cost is negative $45, you're ahead. One jump start in addition covers two years of membership.
 
 ## Stay Safe
 
 - Roadside plans are only useful if you actually call them. Store the number in your phone now.
-- AAA and most roadside apps (AAA, Allstate, Urgently) show real-time GPS tracking of your tow truck. Use this feature — it's safer than stepping outside repeatedly to check.
-- If your situation involves a collision, call your insurance company first — the process for accident towing is different from breakdown towing.
+- AAA and most roadside apps (AAA, Allstate, Urgently) show real-time GPS tracking of your tow truck. Use this feature, it's safer than stepping outside repeatedly to check.
+- If your situation involves a collision, call your insurance company first, the process for accident towing is different from breakdown towing.

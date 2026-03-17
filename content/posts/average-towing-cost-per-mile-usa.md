@@ -6,15 +6,15 @@ tags: ["towing cost", "tow truck", "roadside assistance", "breakdown"]
 slug: "average-towing-cost-per-mile-usa"
 ---
 
-> **Quick Answer:** The national average towing cost is $2.50–$7 per mile, on top of a $50–$100 hook-up fee. A 10-mile tow typically runs $75–$125. Urban areas tend to be cheaper per mile; rural and remote areas run higher. Specialty tows — flatbed, AWD vehicles, heavy trucks — cost more regardless of distance.
+> **Quick Answer:** The national average towing cost is $2.50–$7 per mile, on top of a $50–$100 hook-up fee. A 10-mile tow typically runs $75–$125. Urban areas tend to be cheaper per mile; rural and remote areas run higher. Specialty tows, flatbed, AWD vehicles, heavy trucks, cost more regardless of distance.
 
 ## What To Do
 
 1. **Understand the two-part pricing structure.** Almost every tow company charges a base fee (hook-up, dispatch, or service fee) plus a per-mile rate. Ask for both numbers before agreeing.
-2. **Ask specifically about your vehicle type.** Standard wheel-lift tows are cheapest. If you drive an AWD, 4WD, or all-wheel-drive vehicle, you likely need a flatbed — which adds $20–$50 to the base rate.
+2. **Ask specifically about your vehicle type.** Standard wheel-lift tows are cheapest. If you drive an AWD, 4WD, or all-wheel-drive vehicle, you likely need a flatbed, which adds $20–$50 to the base rate.
 3. **Shop around if you have time.** If you're in a safe location (parking lot, your driveway), call 2–3 companies and compare. Five minutes on the phone can save $50–$100.
 4. **Use your roadside assistance first.** AAA, insurance roadside, credit card benefits (many Visa/Mastercard cards include this), and auto club memberships often cover towing at no cost or low cost. Check before paying out of pocket.
-5. **Tell them your exact destination.** Rates change based on total distance. Lock in the destination before they move the car — changing it mid-tow will cost you.
+5. **Tell them your exact destination.** Rates change based on total distance. Lock in the destination before they move the car, changing it mid-tow will cost you.
 6. **Request an itemized receipt.** If you're filing for insurance reimbursement, you'll need it.
 
 ## What It Might Cost
@@ -27,7 +27,7 @@ slug: "average-towing-cost-per-mile-usa"
 | 50 miles | $175 | $350 |
 | 100 miles | $300 | $600 |
 
-**Regional differences matter.** New York, California, and Hawaii run toward the high end. Midwest and Southeast states tend to be lower. Mountain West states (Colorado, Wyoming, Montana) vary widely — urban rates are reasonable, but remote mountain tows are expensive.
+**Regional differences matter.** New York, California, and Hawaii run toward the high end. Midwest and Southeast states tend to be lower. Mountain West states (Colorado, Wyoming, Montana) vary widely, urban rates are reasonable, but remote mountain tows are expensive.
 
 **Factors that increase cost:**
 - After-hours or weekend calls: $25–$75 surcharge
