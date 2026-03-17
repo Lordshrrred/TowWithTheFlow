@@ -7,7 +7,7 @@
 <meta name="description" content="The EarthStar Initiative: a vision for planetary transformation through creativity, abundance realization, and shared purpose. Empower Thyself. Empower the Earth.">
 <link rel="canonical" href="https://vibrationofawesome.com/earthstar/">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#1a3a8f">
+<meta name="theme-color" content="#050d1a">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EarthStar">
 <meta property="og:title" content="The EarthStar Initiative - Roots in the Earth, Crown in the Stars">
@@ -26,25 +26,37 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5HF0WKZT9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G5HF0WKZT9');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Raleway:wght@300;400;600&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Raleway:wght@300;400;600&display=swap');
+
   /* ── RESET & ROOT ── */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
-    /* Core depth - cosmic void */
-    --deep:        #06091c;
-    --midnight:    #040710;
-    --surface:     #090e28;
-    --surface2:    #0d1338;
-    --indigo:      #110c3e;
-    --indigo-dim:  rgba(24,16,90,0.28);
-    --violet-dim:  rgba(65,35,185,0.10);
+    /* Core depth - deep ocean blue-black */
+    --deep:        #050d1a;
+    --midnight:    #030810;
+    --surface:     #071220;
+    --surface2:    #0a1828;
 
-    /* Signal blue */
-    --blue:        #1a3a8f;
-    --blue-mid:    #2550b8;
-    --blue-glow:   rgba(26,58,143,0.5);
-    --blue-dim:    rgba(26,58,143,0.12);
+    /* Teal-blue signal */
+    --teal:        #1a6b8a;
+    --teal-glow:   rgba(26,107,138,0.40);
+    --teal-dim:    rgba(26,107,138,0.12);
+
+    /* Forest green */
+    --forest:      #1a5c3a;
+    --forest-glow: rgba(26,92,58,0.35);
+    --forest-dim:  rgba(26,92,58,0.12);
+
+    /* Electric cyan highlight */
+    --cyan:        #00b4d8;
+    --cyan-glow:   rgba(0,180,216,0.35);
+    --cyan-dim:    rgba(0,180,216,0.08);
+
+    /* Electric green signal */
+    --green:       #00c864;
+    --green-glow:  rgba(0,200,100,0.30);
+    --green-dim:   rgba(0,200,100,0.07);
 
     /* Sacred gold */
     --gold:        #c9a84c;
@@ -53,20 +65,15 @@
     --gold-glow:   rgba(201,168,76,0.38);
     --gold-dim:    rgba(201,168,76,0.08);
 
-    /* Forest temple */
-    --emerald:     #1a6b3c;
-    --emerald-dim: rgba(26,107,60,0.10);
-    --forest-dim:  rgba(12,40,22,0.6);
-
-    /* Moonlight text */
-    --text:        #dde2f6;
-    --text-dim:    rgba(218,226,246,0.62);
-    --text-muted:  #6a80bd;
+    /* Moonlight text - cool blue-white */
+    --text:        #e8f0f8;
+    --text-dim:    rgba(232,240,248,0.62);
+    --text-muted:  #5a8aaa;
 
     /* Borders */
-    --border:      rgba(26,58,143,0.18);
+    --border:      rgba(0,180,216,0.18);
     --border-gold: rgba(201,168,76,0.12);
-    --cream:       #f0f0ff;
+    --cream:       #f0f8ff;
   }
 
   html { scroll-behavior: smooth; }
@@ -85,7 +92,7 @@
     content: '';
     position: fixed; inset: 0; z-index: 0;
     pointer-events: none;
-    opacity: 0.028;
+    opacity: 0.04;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     background-size: 300px 300px;
   }
@@ -93,7 +100,7 @@
   /* ── CUSTOM CURSOR ── */
   .cursor {
     width: 7px; height: 7px;
-    background: var(--gold);
+    background: var(--cyan);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
@@ -101,11 +108,11 @@
     transform: translate(-50%, -50%);
     transition: transform 0.1s;
     display: none;
-    box-shadow: 0 0 8px var(--gold-glow);
+    box-shadow: 0 0 10px var(--cyan-glow);
   }
   .cursor-ring {
     width: 26px; height: 26px;
-    border: 1px solid rgba(26,58,143,0.5);
+    border: 1px solid rgba(0,180,216,0.45);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
@@ -126,9 +133,10 @@
     animation: twinkle var(--dur,3s) ease-in-out infinite;
     animation-delay: var(--delay,0s); opacity: 0;
   }
-  .star.gold   { background: var(--gold); }
-  .star.blue   { background: #3a5fc8; }
-  .star.violet { background: #8060e0; }
+  .star.gold  { background: var(--gold); }
+  .star.blue  { background: #2a6ab8; }
+  .star.teal  { background: var(--cyan); }
+  .star.green { background: var(--green); }
   @keyframes twinkle {
     0%,100% { opacity:0; transform:scale(0.5); }
     50%     { opacity:var(--brightness,0.7); transform:scale(1); }
@@ -139,13 +147,13 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 1.4rem 3rem;
     display: flex; align-items: center; justify-content: space-between;
-    background: linear-gradient(to bottom, rgba(6,9,28,0.97) 60%, transparent);
-    border-bottom: 1px solid rgba(26,58,143,0.14);
+    background: linear-gradient(to bottom, rgba(5,13,26,0.97) 60%, transparent);
+    border-bottom: 1px solid rgba(0,180,216,0.10);
     transition: background 0.3s, border-color 0.3s;
   }
   .nav-logo {
-    font-family: 'Cinzel', serif;
-    font-size: 1rem; letter-spacing: 0.14em; font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem; letter-spacing: 0.1em; font-weight: 700;
     color: var(--gold);
     text-decoration: none;
     text-shadow: 0 0 24px var(--gold-glow);
@@ -154,65 +162,64 @@
     display: flex; align-items: center; gap: 2rem;
   }
   .nav-right a {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--text-muted); text-decoration: none;
     transition: color 0.25s;
   }
-  .nav-right a:hover { color: var(--gold); }
+  .nav-right a:hover { color: var(--cyan); }
   .nav-back {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--text-muted); text-decoration: none;
-    border: 1px solid rgba(26,58,143,0.25);
+    border: 1px solid rgba(0,180,216,0.2);
     padding: 0.4rem 0.9rem;
     transition: color 0.25s, border-color 0.25s;
   }
-  .nav-back:hover { color: var(--gold); border-color: rgba(201,168,76,0.35); }
+  .nav-back:hover { color: var(--cyan); border-color: rgba(0,180,216,0.55); }
 
   /* ── SECTIONS ── */
   section { position: relative; z-index: 1; padding: 7rem 4rem; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
   .section-label {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.68rem; letter-spacing: 0.45em; text-transform: uppercase;
-    color: var(--gold); opacity: 0.7; margin-bottom: 0.9rem; display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--cyan); opacity: 0.75; margin-bottom: 0.9rem; display: block;
   }
   .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+    font-weight: 700;
     line-height: 1.2; color: var(--gold);
     text-shadow: 0 0 50px rgba(201,168,76,0.25), 0 0 100px rgba(201,168,76,0.1);
-    margin-bottom: 1.4rem; letter-spacing: 0.06em;
+    margin-bottom: 1.4rem; letter-spacing: 0.1em;
   }
   .divider {
-    width: 56px; height: 1px;
-    background: linear-gradient(to right, rgba(201,168,76,0.6), transparent);
+    width: 60px; height: 1px;
+    background: linear-gradient(to right, var(--cyan), rgba(0,200,100,0.4), transparent);
     margin-bottom: 2.2rem;
-    box-shadow: 0 0 12px rgba(201,168,76,0.15);
+    box-shadow: 0 0 12px rgba(0,180,216,0.20);
   }
 
   /* ── ATMOSPHERIC SECTION ACCENT ── */
   section::before {
     content: '';
     position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: radial-gradient(ellipse 50% 100% at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse 50% 100% at 50% 0%, rgba(0,180,216,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
 
   /* ── BUTTONS ── */
   .btn-primary {
     display: inline-block;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.8rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: #050816;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #050d1a;
     background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-warm) 100%);
     padding: 0.9rem 2.2rem; text-decoration: none;
     clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
     transition: opacity 0.2s, transform 0.18s, box-shadow 0.25s;
     font-weight: 700;
-    position: relative;
   }
   .btn-primary:hover {
     opacity: 0.92; transform: translateY(-3px);
@@ -220,17 +227,17 @@
   }
   .btn-secondary {
     display: inline-block;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.78rem; letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--gold); border: 1px solid rgba(201,168,76,0.3);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--cyan); border: 1px solid rgba(0,180,216,0.35);
     padding: 0.85rem 2rem; text-decoration: none;
     transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, background 0.25s;
   }
   .btn-secondary:hover {
     color: var(--cream);
-    border-color: rgba(201,168,76,0.65);
-    background: rgba(201,168,76,0.05);
-    box-shadow: 0 0 28px rgba(201,168,76,0.2), inset 0 0 20px rgba(201,168,76,0.04);
+    border-color: rgba(0,180,216,0.75);
+    background: rgba(0,180,216,0.06);
+    box-shadow: 0 0 28px rgba(0,180,216,0.25), inset 0 0 20px rgba(0,180,216,0.05);
   }
 
   /* ── REVEAL ── */
@@ -248,27 +255,28 @@
     display: flex; align-items: center; justify-content: center;
     text-align: center; overflow: hidden; padding: 0 2rem;
   }
-  #hero::before { display: none; } /* remove section accent on hero */
+  #hero::before { display: none; }
 
   .hero-bg {
     position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse 90% 80% at 50% -5%,   rgba(6,9,28,0.98) 0%, transparent 65%),
-      radial-gradient(ellipse 60% 45% at 15% 85%,   rgba(26,58,143,0.12) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 40% at 85% 20%,   rgba(201,168,76,0.06) 0%, transparent 55%),
-      radial-gradient(ellipse 40% 35% at 70% 80%,   rgba(26,107,60,0.05) 0%, transparent 50%),
-      radial-gradient(ellipse 70% 60% at 30% 30%,   rgba(24,16,90,0.12) 0%, transparent 60%),
-      linear-gradient(170deg, #07091f 0%, #0a0e30 35%, #07091e 70%, #060818 100%);
+      radial-gradient(ellipse 90% 80% at 50% -5%,   rgba(5,13,26,0.98) 0%, transparent 65%),
+      radial-gradient(ellipse 60% 45% at 15% 85%,   rgba(26,107,138,0.14) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 85% 20%,   rgba(201,168,76,0.05) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 35% at 70% 80%,   rgba(0,200,100,0.06) 0%, transparent 50%),
+      radial-gradient(ellipse 70% 60% at 30% 30%,   rgba(26,92,58,0.08) 0%, transparent 60%),
+      linear-gradient(170deg, #060e1c 0%, #08132a 35%, #060d1c 70%, #050c18 100%);
   }
 
-  /* Aurora atmospheric layer */
+  /* Aurora atmospheric layer - blue, teal, green, indigo */
   .hero-bg::after {
     content: '';
     position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse 160% 22% at 50% 42%, rgba(65,35,180,0.065) 0%, transparent 55%),
-      radial-gradient(ellipse 100% 15% at 18% 68%, rgba(26,107,60,0.040) 0%, transparent 55%),
-      radial-gradient(ellipse 90%  18% at 82% 52%, rgba(26,58,143,0.055) 0%, transparent 55%);
+      radial-gradient(ellipse 160% 22% at 50% 42%, rgba(0,180,216,0.08) 0%, transparent 55%),
+      radial-gradient(ellipse 100% 15% at 18% 68%, rgba(0,200,100,0.055) 0%, transparent 55%),
+      radial-gradient(ellipse 90%  18% at 82% 52%, rgba(26,107,138,0.07) 0%, transparent 55%),
+      radial-gradient(ellipse 120% 12% at 35% 30%, rgba(26,92,58,0.05) 0%, transparent 50%);
     animation: auroraFloat 22s ease-in-out infinite alternate;
   }
   @keyframes auroraFloat {
@@ -282,7 +290,7 @@
     width: min(620px, 92vw); height: min(620px, 92vw);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.075;
+    opacity: 0.08;
     animation: compassSpin 90s linear infinite;
   }
   .es-compass-inner {
@@ -290,7 +298,7 @@
     width: min(360px, 52vw); height: min(360px, 52vw);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.12;
+    opacity: 0.13;
     animation: compassSpin 45s linear infinite reverse;
   }
   @keyframes compassSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
@@ -300,50 +308,65 @@
     max-width: 820px; padding: 2rem;
     animation: fadeUp 1.8s ease forwards; opacity: 0;
   }
+  /* Slow pulsing green/teal radial glow behind the headline */
+  .hero-content::before {
+    content: '';
+    position: absolute; top: 40%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; height: 260px;
+    background: radial-gradient(ellipse, rgba(0,200,100,0.10) 0%, rgba(0,180,216,0.07) 40%, transparent 70%);
+    animation: headlineGlow 7s ease-in-out infinite alternate;
+    z-index: -1; pointer-events: none;
+    border-radius: 50%;
+  }
+  @keyframes headlineGlow {
+    0%   { opacity: 0.5; transform: translate(-50%,-50%) scaleX(0.85) scaleY(0.9); }
+    100% { opacity: 1.0; transform: translate(-50%,-50%) scaleX(1.15) scaleY(1.1); }
+  }
   @keyframes fadeUp {
     from { opacity:0; transform:translateY(36px); }
     to   { opacity:1; transform:translateY(0); }
   }
   .hero-eyebrow {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.7rem; letter-spacing: 0.55em; text-transform: uppercase;
-    color: var(--gold); opacity: 0.75; margin-bottom: 1.6rem; display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.62rem; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--cyan); opacity: 0.8; margin-bottom: 1.6rem; display: block;
   }
   .hero-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(3rem, 9vw, 7rem);
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2.6rem, 8vw, 6.5rem);
     font-weight: 900;
-    line-height: 1.05; letter-spacing: 0.07em;
+    line-height: 1.05; letter-spacing: 0.1em;
     color: var(--cream);
-    animation: goldShimmer 5s ease-in-out infinite;
+    animation: titleShimmer 5s ease-in-out infinite;
     margin-bottom: 1.4rem;
   }
-  @keyframes goldShimmer {
+  @keyframes titleShimmer {
     0%,100% {
       text-shadow:
-        0 0 50px rgba(201,168,76,0.35),
-        0 0 100px rgba(26,58,143,0.25),
-        0 0 160px rgba(201,168,76,0.10);
+        0 0 50px rgba(201,168,76,0.30),
+        0 0 100px rgba(0,180,216,0.20),
+        0 0 160px rgba(0,200,100,0.08);
     }
     50% {
       text-shadow:
-        0 0 80px rgba(201,168,76,0.65),
-        0 0 160px rgba(26,58,143,0.20),
-        0 0 240px rgba(201,168,76,0.22),
-        0 0 12px  rgba(255,255,255,0.35);
+        0 0 80px rgba(201,168,76,0.55),
+        0 0 160px rgba(0,180,216,0.30),
+        0 0 240px rgba(0,200,100,0.14),
+        0 0 12px  rgba(255,255,255,0.30);
     }
   }
   .hero-title span.star-glyph {
     color: var(--gold);
     text-shadow: 0 0 30px var(--gold-glow), 0 0 60px var(--gold-glow);
-    font-size: 0.58em; vertical-align: middle; margin: 0 0.08em;
+    font-size: 0.55em; vertical-align: middle; margin: 0 0.08em;
   }
   .hero-sub {
     font-family: 'Raleway', sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.45rem);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
     font-weight: 300;
     font-style: italic;
-    color: rgba(218,226,246,0.65);
+    color: rgba(232,240,248,0.65);
     line-height: 2.0; margin-bottom: 3.2rem; letter-spacing: 0.04em;
   }
   .hero-sub strong {
@@ -362,12 +385,13 @@
   }
   @keyframes bob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
   .scroll-hint span {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.58rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--text-muted);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.52rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted);
   }
   .scroll-line {
     width: 1px; height: 38px;
-    background: linear-gradient(to bottom, rgba(201,168,76,0.5), transparent);
+    background: linear-gradient(to bottom, var(--cyan), transparent);
+    opacity: 0.5;
   }
 
   /* ══════════════════════════════════════
@@ -375,9 +399,10 @@
   ══════════════════════════════════════ */
   #about {
     background:
-      radial-gradient(ellipse 70% 100% at 0% 50%, rgba(12,28,18,0.55) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 60% at 100% 30%, var(--indigo-dim) 0%, transparent 55%),
-      linear-gradient(160deg, rgba(9,14,32,0.8) 0%, rgba(6,9,28,0.6) 100%);
+      radial-gradient(ellipse 70% 100% at 0% 50%,   rgba(26,92,58,0.20) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 60% at 100% 30%,  rgba(26,107,138,0.15) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 40% at 55% 80%,   rgba(0,180,216,0.06) 0%, transparent 50%),
+      linear-gradient(160deg, rgba(7,18,20,0.85) 0%, rgba(5,13,26,0.70) 100%);
   }
   .about-grid {
     display: grid; grid-template-columns: 1fr 1fr;
@@ -397,8 +422,8 @@
     animation: symbolPulse 5s ease-in-out infinite;
   }
   @keyframes symbolPulse {
-    0%,100% { filter: drop-shadow(0 0 14px rgba(26,58,143,0.38)) drop-shadow(0 0 28px rgba(201,168,76,0.18)); }
-    50%     { filter: drop-shadow(0 0 32px rgba(26,58,143,0.55)) drop-shadow(0 0 64px rgba(201,168,76,0.32)); }
+    0%,100% { filter: drop-shadow(0 0 14px rgba(0,180,216,0.35)) drop-shadow(0 0 28px rgba(0,200,100,0.15)); }
+    50%     { filter: drop-shadow(0 0 32px rgba(0,180,216,0.55)) drop-shadow(0 0 64px rgba(26,92,58,0.35)); }
   }
 
   /* ══════════════════════════════════════
@@ -406,10 +431,10 @@
   ══════════════════════════════════════ */
   #music {
     background:
-      radial-gradient(ellipse 80% 60% at 50% 0%,   var(--indigo-dim) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 40% at 90% 80%,  rgba(26,58,143,0.08) 0%, transparent 50%),
-      radial-gradient(ellipse 40% 35% at 10% 90%,  var(--violet-dim) 0%, transparent 50%),
-      linear-gradient(180deg, rgba(9,10,32,0.7) 0%, rgba(6,9,24,0.6) 100%);
+      radial-gradient(ellipse 80% 60% at 50% 0%,   rgba(0,180,216,0.08) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 90% 80%,  rgba(26,107,138,0.10) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 35% at 10% 90%,  rgba(0,200,100,0.07) 0%, transparent 50%),
+      linear-gradient(180deg, rgba(6,14,22,0.80) 0%, rgba(5,13,20,0.70) 100%);
   }
   .phases-grid {
     display: grid;
@@ -417,22 +442,23 @@
     gap: 0; margin-top: 3.5rem;
   }
   .phase-card {
-    background: linear-gradient(160deg, rgba(10,14,38,0.96) 0%, rgba(7,9,24,0.98) 100%);
-    border: 1px solid rgba(26,58,143,0.18);
+    background: linear-gradient(160deg, rgba(5,14,22,0.97) 0%, rgba(6,16,12,0.98) 100%);
+    border: 1px solid rgba(0,180,216,0.14);
     border-top: 1px solid rgba(201,168,76,0.08);
+    border-left: 2px solid rgba(0,200,100,0.20);
     padding: 3rem 2.4rem 2.8rem;
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
     transition: all 0.55s cubic-bezier(0.23,1,0.32,1);
   }
-  /* subtle inner-top glow */
+  /* inner top glow */
   .phase-card::before {
     content: '';
     position: absolute; top: 0; left: 0; right: 0; height: 80px;
-    background: linear-gradient(to bottom, rgba(201,168,76,0.03), transparent);
+    background: linear-gradient(to bottom, rgba(0,200,100,0.03), transparent);
     pointer-events: none;
   }
-  /* animated gold top line on hover */
+  /* gold top line on hover */
   .phase-card::after {
     content: ''; position: absolute; top: 0; left: 0; right: 0;
     height: 1px;
@@ -441,65 +467,66 @@
     transition: transform 0.65s cubic-bezier(0.23,1,0.32,1);
   }
   .phase-card:hover {
-    background: linear-gradient(160deg, rgba(18,14,52,0.97) 0%, rgba(10,14,38,0.98) 100%);
+    background: linear-gradient(160deg, rgba(5,18,28,0.97) 0%, rgba(6,22,14,0.98) 100%);
     transform: translateY(-7px);
-    border-color: rgba(201,168,76,0.22);
-    border-top-color: rgba(201,168,76,0.35);
+    border-color: rgba(0,180,216,0.30);
+    border-top-color: rgba(201,168,76,0.30);
+    border-left-color: rgba(0,200,100,0.65);
     box-shadow:
       0 24px 70px rgba(0,0,0,0.75),
-      0 0 50px rgba(65,35,180,0.07),
-      0 0 80px rgba(201,168,76,0.05);
+      0 0 50px rgba(0,180,216,0.10),
+      0 0 80px rgba(0,200,100,0.07);
     z-index: 1;
   }
   .phase-card:hover::after { transform: scaleX(1); }
   .phase-label {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.66rem; letter-spacing: 0.38em; text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase;
     color: var(--text-muted); opacity: 0.8; margin-bottom: 1.3rem;
     transition: color 0.3s;
   }
-  .phase-card:hover .phase-label { color: var(--gold); opacity: 0.9; }
+  .phase-card:hover .phase-label { color: var(--cyan); opacity: 0.95; }
   .phase-icon {
     width: 54px; height: 54px;
-    border: 1px solid rgba(201,168,76,0.18);
+    border: 1px solid rgba(0,200,100,0.22);
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 1.6rem;
-    background: rgba(201,168,76,0.03);
+    background: rgba(0,200,100,0.04);
     clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
     transition: all 0.4s;
   }
   .phase-card:hover .phase-icon {
-    border-color: rgba(201,168,76,0.45);
-    background: rgba(201,168,76,0.06);
-    box-shadow: 0 0 28px rgba(201,168,76,0.12);
+    border-color: rgba(0,200,100,0.55);
+    background: rgba(0,200,100,0.07);
+    box-shadow: 0 0 28px rgba(0,200,100,0.15);
   }
   .phase-icon svg {
     width: 22px; height: 22px;
-    stroke: var(--gold); fill: none; stroke-width: 1.4;
+    stroke: var(--green); fill: none; stroke-width: 1.4;
     stroke-linecap: round; stroke-linejoin: round;
   }
   .phase-title {
-    font-family: 'Cinzel', serif;
-    font-size: 0.98rem; font-weight: 600; letter-spacing: 0.1em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em;
     color: var(--gold);
-    margin-bottom: 1rem; line-height: 1.3;
+    margin-bottom: 1rem; line-height: 1.4;
     text-shadow: 0 0 30px rgba(201,168,76,0.2);
   }
   .phase-body {
     font-family: 'Raleway', sans-serif;
     font-size: 0.96rem; line-height: 1.95;
-    color: rgba(218,226,246,0.65); flex: 1;
+    color: rgba(232,240,248,0.62); flex: 1;
     font-weight: 400;
   }
   .phase-numeral {
-    font-family: 'Cinzel', serif;
-    font-size: 5rem; line-height: 1;
-    color: rgba(201,168,76,0.04);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4.5rem; line-height: 1;
+    color: rgba(0,180,216,0.05);
     position: absolute; bottom: 0.8rem; right: 1.2rem;
     pointer-events: none;
     transition: color 0.45s;
   }
-  .phase-card:hover .phase-numeral { color: rgba(201,168,76,0.09); }
+  .phase-card:hover .phase-numeral { color: rgba(0,200,100,0.09); }
 
   /* ══════════════════════════════════════
      MERCH
@@ -507,26 +534,27 @@
   #merch {
     text-align: center;
     background:
-      radial-gradient(ellipse 80% 70% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 65%),
-      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(24,16,90,0.15) 0%, transparent 55%),
-      linear-gradient(180deg, rgba(7,9,24,0.65) 0%, rgba(6,9,28,0.8) 100%);
+      radial-gradient(ellipse 80% 70% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 50% 50%, rgba(0,180,216,0.05) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(26,92,58,0.08) 0%, transparent 50%),
+      linear-gradient(180deg, rgba(6,14,20,0.70) 0%, rgba(5,13,26,0.85) 100%);
   }
   .merch-inner {
     max-width: 680px; margin: 0 auto;
   }
   .merch-tagline {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.4rem, 3vw, 2.2rem);
-    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.2rem, 2.8vw, 2rem);
+    font-weight: 700;
     color: var(--gold);
     text-shadow: 0 0 40px rgba(201,168,76,0.3), 0 0 80px rgba(201,168,76,0.12);
     margin: 1.5rem 0 1rem;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.1em;
   }
   .merch-sub {
     font-family: 'Raleway', sans-serif;
     font-size: 1.08rem; font-style: italic; font-weight: 300;
-    color: rgba(218,226,246,0.52);
+    color: rgba(232,240,248,0.50);
     margin-bottom: 2.5rem; line-height: 1.9;
   }
 
@@ -534,25 +562,22 @@
      FOOTER
   ══════════════════════════════════════ */
   footer {
-    border-top: 1px solid rgba(26,58,143,0.14);
+    border-top: 1px solid rgba(0,180,216,0.10);
     padding: 3rem 4rem;
     display: flex; align-items: center; justify-content: space-between;
     flex-wrap: wrap; gap: 2rem;
     position: relative; z-index: 1;
-    background: linear-gradient(to bottom, rgba(6,9,24,0.4), rgba(4,7,16,0.7));
-  }
-  footer::before {
-    background: radial-gradient(ellipse 40% 100% at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 60%);
+    background: linear-gradient(to bottom, rgba(5,13,26,0.5), rgba(3,8,16,0.75));
   }
   .footer-left .footer-logo {
-    font-family: 'Cinzel', serif;
-    font-size: 0.98rem; letter-spacing: 0.13em; font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.88rem; letter-spacing: 0.1em; font-weight: 700;
     color: var(--gold); margin-bottom: 0.5rem;
     text-shadow: 0 0 20px rgba(201,168,76,0.2);
   }
   .footer-left .footer-tagline {
     font-family: 'Raleway', sans-serif;
-    font-size: 0.74rem; letter-spacing: 0.14em;
+    font-size: 0.74rem; letter-spacing: 0.12em;
     color: var(--text-muted); opacity: 0.65;
     font-weight: 300;
   }
@@ -564,15 +589,15 @@
     justify-content: flex-end;
   }
   .footer-links a {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.67rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--text-muted); text-decoration: none; transition: color 0.2s;
   }
-  .footer-links a:hover { color: var(--gold); }
+  .footer-links a:hover { color: var(--cyan); }
   .footer-copy {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.64rem; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted); opacity: 0.45;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.55rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); opacity: 0.40;
   }
 
   /* ══════════════════════════════════════
@@ -589,7 +614,7 @@
     footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
     .footer-right { align-items: flex-start; }
     .phases-grid { grid-template-columns: 1fr; }
-    .hero-title { font-size: clamp(2.4rem, 12vw, 4rem); }
+    .hero-title { font-size: clamp(2rem, 11vw, 3.5rem); }
   }
   @media (max-width: 480px) {
     .nav-right a:not(.nav-back) { display: none; }
@@ -609,8 +634,7 @@
     <a href="#about">About</a>
     <a href="#music">The Vision</a>
     <a href="/earthstar/philosophy/">Philosophy</a>
-    <a href="/earthstar/vision/">Full Vision</a>
-    <a href="#merch">Merch</a>
+    <a href="https://vibrationofawesome.com/art-store/">Merch</a>
     <a href="/" class="nav-back">&#8592; Vibration of Awesome</a>
   </div>
 </nav>
@@ -621,47 +645,40 @@
 <section id="hero">
   <div class="hero-bg"></div>
 
-  <!-- Outer 8-pointed star compass (slow rotation) -->
+  <!-- Outer 8-pointed star compass (slow rotation) - blue/green/teal -->
   <svg class="es-compass" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- outer ring -->
-    <circle cx="250" cy="250" r="240" stroke="#1a3a8f" stroke-width="0.6"/>
+    <circle cx="250" cy="250" r="240" stroke="#00b4d8" stroke-width="0.6"/>
     <circle cx="250" cy="250" r="215" stroke="#c9a84c" stroke-width="0.3"/>
-    <circle cx="250" cy="250" r="180" stroke="#1a3a8f" stroke-width="0.4"/>
-    <!-- 8-pointed star cardinal spokes -->
-    <line x1="250" y1="10"  x2="250" y2="490" stroke="#1a3a8f" stroke-width="0.5"/>
-    <line x1="10"  y1="250" x2="490" y2="250" stroke="#1a3a8f" stroke-width="0.5"/>
-    <line x1="80"  y1="80"  x2="420" y2="420" stroke="#c9a84c" stroke-width="0.4"/>
-    <line x1="420" y1="80"  x2="80"  y2="420" stroke="#c9a84c" stroke-width="0.4"/>
-    <!-- secondary 45 spokes -->
-    <line x1="148" y1="22" x2="352" y2="478" stroke="#1a6b3c" stroke-width="0.25"/>
-    <line x1="352" y1="22" x2="148" y2="478" stroke="#1a6b3c" stroke-width="0.25"/>
-    <line x1="22"  y1="148" x2="478" y2="352" stroke="#1a6b3c" stroke-width="0.25"/>
-    <line x1="22"  y1="352" x2="478" y2="148" stroke="#1a6b3c" stroke-width="0.25"/>
-    <!-- 8-pointed star diamond points -->
+    <circle cx="250" cy="250" r="180" stroke="#1a6b8a" stroke-width="0.4"/>
+    <line x1="250" y1="10"  x2="250" y2="490" stroke="#1a6b8a" stroke-width="0.5"/>
+    <line x1="10"  y1="250" x2="490" y2="250" stroke="#1a6b8a" stroke-width="0.5"/>
+    <line x1="80"  y1="80"  x2="420" y2="420" stroke="#00c864" stroke-width="0.4"/>
+    <line x1="420" y1="80"  x2="80"  y2="420" stroke="#00c864" stroke-width="0.4"/>
+    <line x1="148" y1="22" x2="352" y2="478" stroke="#1a5c3a" stroke-width="0.25"/>
+    <line x1="352" y1="22" x2="148" y2="478" stroke="#1a5c3a" stroke-width="0.25"/>
+    <line x1="22"  y1="148" x2="478" y2="352" stroke="#1a5c3a" stroke-width="0.25"/>
+    <line x1="22"  y1="352" x2="478" y2="148" stroke="#1a5c3a" stroke-width="0.25"/>
     <polygon points="250,10 240,60 260,60"     stroke="#c9a84c" stroke-width="0.6" fill="none"/>
     <polygon points="490,250 440,240 440,260"  stroke="#c9a84c" stroke-width="0.6" fill="none"/>
     <polygon points="250,490 260,440 240,440"  stroke="#c9a84c" stroke-width="0.6" fill="none"/>
     <polygon points="10,250 60,260 60,240"     stroke="#c9a84c" stroke-width="0.6" fill="none"/>
-    <polygon points="80,80   120,128 128,120"  stroke="#1a3a8f" stroke-width="0.5" fill="none"/>
-    <polygon points="420,80  372,128 380,120"  stroke="#1a3a8f" stroke-width="0.5" fill="none"/>
-    <polygon points="420,420 372,372 380,380"  stroke="#1a3a8f" stroke-width="0.5" fill="none"/>
-    <polygon points="80,420  128,372 120,380"  stroke="#1a3a8f" stroke-width="0.5" fill="none"/>
-    <!-- Earth circle -->
-    <circle cx="250" cy="250" r="50" stroke="#1a6b3c" stroke-width="0.5" fill="rgba(26,107,60,0.04)"/>
-    <!-- Crown star - gold -->
+    <polygon points="80,80   120,128 128,120"  stroke="#00b4d8" stroke-width="0.5" fill="none"/>
+    <polygon points="420,80  372,128 380,120"  stroke="#00b4d8" stroke-width="0.5" fill="none"/>
+    <polygon points="420,420 372,372 380,380"  stroke="#00b4d8" stroke-width="0.5" fill="none"/>
+    <polygon points="80,420  128,372 120,380"  stroke="#00b4d8" stroke-width="0.5" fill="none"/>
+    <circle cx="250" cy="250" r="50" stroke="#00c864" stroke-width="0.5" fill="rgba(0,200,100,0.04)"/>
     <circle cx="250" cy="250" r="8"  fill="#c9a84c" opacity="0.8"/>
   </svg>
 
   <!-- Inner counter-rotating ring -->
   <svg class="es-compass-inner" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="150" cy="150" r="140" stroke="#c9a84c" stroke-width="0.5" stroke-dasharray="4 8"/>
-    <circle cx="150" cy="150" r="100" stroke="#1a3a8f" stroke-width="0.4"/>
-    <circle cx="150" cy="150" r="60"  stroke="#1a3a8f" stroke-width="0.4" fill="rgba(26,58,143,0.04)"/>
-    <line x1="150" y1="10"  x2="150" y2="290" stroke="#c9a84c" stroke-width="0.4"/>
-    <line x1="10"  y1="150" x2="290" y2="150" stroke="#c9a84c" stroke-width="0.4"/>
-    <line x1="50"  y1="50"  x2="250" y2="250" stroke="#1a3a8f" stroke-width="0.3"/>
-    <line x1="250" y1="50"  x2="50"  y2="250" stroke="#1a3a8f" stroke-width="0.3"/>
-    <!-- small octagram -->
+    <circle cx="150" cy="150" r="140" stroke="#00b4d8" stroke-width="0.5" stroke-dasharray="4 8"/>
+    <circle cx="150" cy="150" r="100" stroke="#1a6b8a" stroke-width="0.4"/>
+    <circle cx="150" cy="150" r="60"  stroke="#00c864" stroke-width="0.4" fill="rgba(0,200,100,0.03)"/>
+    <line x1="150" y1="10"  x2="150" y2="290" stroke="#00b4d8" stroke-width="0.4"/>
+    <line x1="10"  y1="150" x2="290" y2="150" stroke="#00b4d8" stroke-width="0.4"/>
+    <line x1="50"  y1="50"  x2="250" y2="250" stroke="#1a6b8a" stroke-width="0.3"/>
+    <line x1="250" y1="50"  x2="50"  y2="250" stroke="#1a6b8a" stroke-width="0.3"/>
     <polygon points="150,12 155,40 148,40"    stroke="#c9a84c" stroke-width="0.6" fill="none"/>
     <polygon points="288,150 260,155 260,145" stroke="#c9a84c" stroke-width="0.6" fill="none"/>
     <polygon points="150,288 145,260 155,260" stroke="#c9a84c" stroke-width="0.6" fill="none"/>
@@ -673,8 +690,7 @@
     <h1 class="hero-title">Earth<span class="star-glyph">&#10022;</span>Star</h1>
     <p class="hero-sub">
       <strong>Roots in the Earth, Crown in the Stars.</strong><br>
-      The Future is Ours.<br>
-      <strong>Empower the Earth.</strong>
+      The Future is Ours.
     </p>
     <div class="hero-cta">
       <a href="/earthstar/philosophy/" class="btn-primary">The Philosophy</a>
@@ -706,35 +722,31 @@
         <p style="color:var(--gold);font-weight:600;letter-spacing:0.05em;text-shadow:0 0 20px rgba(201,168,76,0.25);">Empower Thyself. Empower the Earth.</p>
       </div>
       <div class="about-visual">
-        <!-- EarthStar 8-pointed symbol -->
+        <!-- EarthStar 8-pointed symbol - blue/green/teal palette -->
         <svg class="es-symbol" width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Background circles -->
-          <circle cx="150" cy="150" r="140" stroke="rgba(26,58,143,0.18)" stroke-width="1"/>
-          <circle cx="150" cy="150" r="110" stroke="rgba(26,58,143,0.14)" stroke-width="1"/>
+          <circle cx="150" cy="150" r="140" stroke="rgba(0,180,216,0.18)" stroke-width="1"/>
+          <circle cx="150" cy="150" r="110" stroke="rgba(26,107,138,0.16)" stroke-width="1"/>
           <circle cx="150" cy="150" r="75"  stroke="rgba(201,168,76,0.22)"  stroke-width="1.2" fill="rgba(201,168,76,0.02)"/>
-          <circle cx="150" cy="150" r="42"  stroke="rgba(26,107,60,0.38)"  stroke-width="1.2" fill="rgba(26,107,60,0.04)"/>
-          <!-- 8-pointed star diamond shape -->
+          <circle cx="150" cy="150" r="42"  stroke="rgba(0,200,100,0.38)"   stroke-width="1.2" fill="rgba(0,200,100,0.04)"/>
           <path d="M150 14 L162 120 L236 88 L175 155 L236 212 L162 180 L150 286 L138 180 L64 212 L125 155 L64 88 L138 120 Z"
-                stroke="rgba(201,168,76,0.75)" stroke-width="1.5" fill="rgba(201,168,76,0.04)"/>
-          <!-- Compass cardinal lines -->
-          <line x1="150" y1="14"  x2="150" y2="286" stroke="rgba(26,58,143,0.45)" stroke-width="0.8"/>
-          <line x1="14"  y1="150" x2="286" y2="150" stroke="rgba(26,58,143,0.45)" stroke-width="0.8"/>
-          <!-- Diagonal lines -->
-          <line x1="64"  y1="64"  x2="236" y2="236" stroke="rgba(26,58,143,0.3)" stroke-width="0.6"/>
-          <line x1="236" y1="64"  x2="64"  y2="236" stroke="rgba(26,58,143,0.3)" stroke-width="0.6"/>
-          <!-- Cardinal compass points (gold) -->
+                stroke="rgba(201,168,76,0.75)" stroke-width="1.5" fill="rgba(201,168,76,0.03)"/>
+          <line x1="150" y1="14"  x2="150" y2="286" stroke="rgba(0,180,216,0.45)" stroke-width="0.8"/>
+          <line x1="14"  y1="150" x2="286" y2="150" stroke="rgba(0,180,216,0.45)" stroke-width="0.8"/>
+          <line x1="64"  y1="64"  x2="236" y2="236" stroke="rgba(0,180,216,0.28)" stroke-width="0.6"/>
+          <line x1="236" y1="64"  x2="64"  y2="236" stroke="rgba(0,180,216,0.28)" stroke-width="0.6"/>
+          <!-- Cardinal points: gold -->
           <polygon points="150,14 143,38 157,38"   fill="rgba(201,168,76,0.85)" stroke="none"/>
           <polygon points="150,286 157,262 143,262" fill="rgba(201,168,76,0.85)" stroke="none"/>
           <polygon points="286,150 262,143 262,157" fill="rgba(201,168,76,0.85)" stroke="none"/>
           <polygon points="14,150 38,157 38,143"    fill="rgba(201,168,76,0.85)" stroke="none"/>
-          <!-- Diagonal compass points (royal blue) -->
-          <polygon points="64,64   85,105 105,85"   fill="rgba(26,58,143,0.75)" stroke="none"/>
-          <polygon points="236,64  215,105 195,85"  fill="rgba(26,58,143,0.75)" stroke="none"/>
-          <polygon points="236,236 195,215 215,195" fill="rgba(26,58,143,0.75)" stroke="none"/>
-          <polygon points="64,236  105,215 85,195"  fill="rgba(26,58,143,0.75)" stroke="none"/>
-          <!-- Earth center (emerald) -->
-          <circle cx="150" cy="150" r="18" fill="rgba(26,107,60,0.28)" stroke="rgba(26,107,60,0.65)" stroke-width="1.5"/>
-          <!-- Crown center (gold) -->
+          <!-- Diagonal points: electric green -->
+          <polygon points="64,64   85,105 105,85"   fill="rgba(0,200,100,0.75)" stroke="none"/>
+          <polygon points="236,64  215,105 195,85"  fill="rgba(0,200,100,0.75)" stroke="none"/>
+          <polygon points="236,236 195,215 215,195" fill="rgba(0,200,100,0.75)" stroke="none"/>
+          <polygon points="64,236  105,215 85,195"  fill="rgba(0,200,100,0.75)" stroke="none"/>
+          <!-- Earth center: teal -->
+          <circle cx="150" cy="150" r="18" fill="rgba(26,107,138,0.28)" stroke="rgba(0,180,216,0.65)" stroke-width="1.5"/>
+          <!-- Crown center: gold -->
           <circle cx="150" cy="150" r="6"  fill="rgba(201,168,76,0.95)"/>
           <circle cx="150" cy="150" r="3"  fill="rgba(255,255,255,0.9)"/>
         </svg>
@@ -744,7 +756,7 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     MUSIC PHASES
+     VISION / PHASES
 ══════════════════════════════════════ -->
 <section id="music">
   <div class="section-inner">
@@ -752,12 +764,12 @@
       <span class="section-label">Where We Are Going</span>
       <h2 class="section-title">The Vision</h2>
       <div class="divider"></div>
-      <p style="font-family:'Raleway',sans-serif;font-size:1.1rem;line-height:2.0;color:rgba(218,226,246,0.72);max-width:720px;margin-bottom:1rem;">In the future, The EarthStar Initiative may grow into several things:</p>
-      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:2.0;color:rgba(218,226,246,0.58);max-width:680px;margin-bottom:0.6rem;">Creative works and storytelling that document and accelerate the shift.</p>
-      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:2.0;color:rgba(218,226,246,0.58);max-width:680px;margin-bottom:0.6rem;">Collaborations with people working for a better world.</p>
-      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:2.0;color:rgba(218,226,246,0.58);max-width:680px;margin-bottom:1.5rem;">Possibly a nonprofit focused on protecting life on Earth, going as hard as Greenpeace used to.</p>
-      <p style="font-family:'Raleway',sans-serif;font-size:1.1rem;line-height:2.0;color:rgba(218,226,246,0.72);max-width:720px;margin-bottom:0.5rem;">Right now, The EarthStar Initiative is the beginning of that journey.</p>
-      <p style="font-family:'Raleway',sans-serif;font-size:1.1rem;line-height:2.0;color:rgba(218,226,246,0.72);max-width:720px;margin-bottom:2rem;">Phase 0 has already begun.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.1rem;line-height:2.0;color:rgba(232,240,248,0.72);max-width:720px;margin-bottom:1rem;">In the future, The EarthStar Initiative may grow into several things:</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:2.0;color:rgba(232,240,248,0.58);max-width:680px;margin-bottom:0.6rem;">Creative works and storytelling that document and accelerate the shift.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:2.0;color:rgba(232,240,248,0.58);max-width:680px;margin-bottom:0.6rem;">Collaborations with people working for a better world.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.05rem;line-height:2.0;color:rgba(232,240,248,0.58);max-width:680px;margin-bottom:1.5rem;">Possibly a nonprofit focused on protecting life on Earth, going as hard as Greenpeace used to.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.1rem;line-height:2.0;color:rgba(232,240,248,0.72);max-width:720px;margin-bottom:0.5rem;">Right now, The EarthStar Initiative is the beginning of that journey.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:1.1rem;line-height:2.0;color:rgba(232,240,248,0.72);max-width:720px;margin-bottom:2rem;">Phase 0 has already begun.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;">
         <a href="/earthstar/philosophy/" class="btn-primary">Read the Philosophy &rarr;</a>
         <a href="/earthstar/vision/" class="btn-secondary">Explore the Full Vision &rarr;</a>
@@ -832,8 +844,8 @@
     <div class="merch-inner reveal">
       <span class="section-label">Wearable Frequency</span>
       <h2 class="merch-tagline">Wear the Frequency</h2>
-      <p class="merch-sub">Carry the signal into the world. Print-on-demand apparel, accessories, and art, powered by Creator Spring.</p>
-      <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener" class="btn-primary">Wear the frequency &rarr;</a>
+      <p class="merch-sub">Carry the signal into the world. Original art, apparel, and accessories from the EarthStar universe.</p>
+      <a href="https://vibrationofawesome.com/art-store/" class="btn-primary">Visit the Art Store &rarr;</a>
     </div>
   </div>
 </section>
@@ -850,7 +862,7 @@
     <div class="footer-links">
       <a href="/earthstar/philosophy/">Philosophy</a>
       <a href="/earthstar/vision/">Vision</a>
-      <a href="https://earthstar.creator-spring.com/" target="_blank" rel="noopener">Merch</a>
+      <a href="https://vibrationofawesome.com/art-store/">Merch</a>
       <a href="/blog/">Blog</a>
       <a href="/">&#8592; Vibration of Awesome</a>
     </div>
@@ -859,12 +871,13 @@
 </footer>
 
 <script>
-  // ── Stars: gold, royal blue, and violet ──
+  // ── Stars: gold, blue, teal, green, white ──
   const starsEl = document.getElementById('stars');
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 210; i++) {
     const star = document.createElement('div');
     const r = Math.random();
-    star.className = 'star' + (r < 0.07 ? ' gold' : r < 0.18 ? ' blue' : r < 0.24 ? ' violet' : '');
+    star.className = 'star' +
+      (r < 0.07 ? ' gold' : r < 0.18 ? ' blue' : r < 0.27 ? ' teal' : r < 0.33 ? ' green' : '');
     const sz = Math.random() * 2.0 + 0.3;
     star.style.cssText =
       'width:'+sz+'px;height:'+sz+'px;' +
@@ -899,12 +912,12 @@
       el.addEventListener('mouseenter', () => {
         cursor.style.transform = 'translate(-50%,-50%) scale(2)';
         ring.style.transform   = 'translate(-50%,-50%) scale(1.5)';
-        ring.style.borderColor = 'rgba(201,168,76,0.85)';
+        ring.style.borderColor = 'rgba(0,200,100,0.85)';
       });
       el.addEventListener('mouseleave', () => {
         cursor.style.transform = 'translate(-50%,-50%) scale(1)';
         ring.style.transform   = 'translate(-50%,-50%) scale(1)';
-        ring.style.borderColor = 'rgba(26,58,143,0.5)';
+        ring.style.borderColor = 'rgba(0,180,216,0.45)';
       });
     });
   }
@@ -913,11 +926,11 @@
   const navEl = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
-      navEl.style.background = 'rgba(6,9,28,0.98)';
-      navEl.style.borderBottomColor = 'rgba(26,58,143,0.28)';
+      navEl.style.background = 'rgba(5,13,26,0.98)';
+      navEl.style.borderBottomColor = 'rgba(0,180,216,0.18)';
     } else {
-      navEl.style.background = 'linear-gradient(to bottom, rgba(6,9,28,0.97) 60%, transparent)';
-      navEl.style.borderBottomColor = 'rgba(26,58,143,0.14)';
+      navEl.style.background = 'linear-gradient(to bottom, rgba(5,13,26,0.97) 60%, transparent)';
+      navEl.style.borderBottomColor = 'rgba(0,180,216,0.10)';
     }
   });
 
