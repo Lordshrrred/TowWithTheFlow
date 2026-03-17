@@ -1,4 +1,5 @@
 {{ define "main" }}
+<div class="reading-progress" id="reading-progress"></div>
 <!-- AD SLOT: sidebar -->
 <article>
   <div class="container--narrow">
@@ -50,6 +51,7 @@
 
     <!-- AD SLOT: in-content -->
     <!-- AFFILIATE: Amazon emergency kit links, TODO -->
+    <p><a href="#" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">&#8593; Back to top</a></p>
   </div>
 </article>
 
@@ -110,6 +112,20 @@
   }
 
   updateCount();
+})();
+
+// Reading progress bar
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  function update() {
+    var doc = document.documentElement;
+    var scrolled = doc.scrollTop || document.body.scrollTop;
+    var total = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = total > 0 ? (scrolled / total * 100) + '%' : '0%';
+  }
+  window.addEventListener('scroll', update, {passive: true});
+  update();
 })();
 </script>
 {{ end }}
