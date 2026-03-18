@@ -202,8 +202,16 @@ def slugify(text: str) -> str:
     return text.strip('-')
 
 
-def load_keywords() -> list[tuple[int, str, bool]]:
-    """Returns list of (line_index, keyword, is_done)"""
+def _parse_keyword_line(raw: str) -> tuple[str, int | None]:
+    """Return (keyword, score_or_None) from a raw line (after stripping # DONE)."""
+    m = re.match(r'^\[(\d+)\]\s*(.+)$', raw.strip())
+    if m:
+        return m.group(2).strip(), int(m.group(1))
+    return raw.strip(), None
+
+
+def load_keywords() -> list[tuple[int, str, int | None, bool]]:
+    """Returns list of (line_index, keyword, score_or_None, is_done)"""
     if not KEYWORDS_FILE.exists():
         return []
     lines = KEYWORDS_FILE.read_text(encoding='utf-8').splitlines()
@@ -213,17 +221,22 @@ def load_keywords() -> list[tuple[int, str, bool]]:
         if not stripped:
             continue
         is_done = stripped.startswith('# DONE')
-        keyword = stripped.replace('# DONE', '').strip() if is_done else stripped
-        result.append((i, keyword, is_done))
+        raw = stripped.replace('# DONE', '').strip() if is_done else stripped
+        keyword, score = _parse_keyword_line(raw)
+        result.append((i, keyword, score, is_done))
     return result
 
 
 def mark_done(keyword: str):
-    """Mark a keyword as # DONE in keywords.txt"""
+    """Mark a keyword as # DONE in keywords.txt, preserving any [N] score prefix."""
     lines = KEYWORDS_FILE.read_text(encoding='utf-8').splitlines()
     for i, line in enumerate(lines):
-        if line.strip() == keyword:
-            lines[i] = f"# DONE {keyword}"
+        raw = line.strip()
+        if raw.startswith('# DONE'):
+            continue
+        kw, _score = _parse_keyword_line(raw)
+        if kw.lower() == keyword.lower():
+            lines[i] = f"# DONE {raw}"
             break
     KEYWORDS_FILE.write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
@@ -276,14 +289,21 @@ def extract_slug(content: str, keyword: str) -> str:
 
 def main():
     keywords = load_keywords()
-    pending = [(i, kw) for i, kw, done in keywords if not done]
+    pending = [(i, kw, score) for i, kw, score, done in keywords if not done]
 
     if not pending:
         print("No pending keywords found. Run keyword_research.py to add more.")
         sys.exit(0)
 
-    line_idx, keyword = pending[0]
-    print(f"Generating post for: {keyword}")
+    # Pick highest-scored keyword; fall back to first (sequential) if none are scored
+    scored_pending = [(i, kw, s) for i, kw, s in pending if s is not None]
+    if scored_pending:
+        scored_pending.sort(key=lambda x: x[2], reverse=True)
+        line_idx, keyword, score = scored_pending[0]
+        print(f"Generating post for (score [{score}]): {keyword}")
+    else:
+        line_idx, keyword, score = pending[0]
+        print(f"Generating post for (no score): {keyword}")
 
     content = generate_post(keyword)
     slug = extract_slug(content, keyword)
