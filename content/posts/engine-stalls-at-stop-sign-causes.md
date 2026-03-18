@@ -1,6 +1,6 @@
 ---
 title: "Engine Stalls at Stop Signs, Causes and Fixes"
-date: 2026-03-13
+date: 2026-02-26
 description: "If your engine stalls every time you slow down or stop, it's telling you something specific. Here are the most common causes and what to do."
 tags: ["engine stalls", "stall at stop sign", "idle problems", "car breakdown", "fuel system"]
 slug: "engine-stalls-at-stop-sign-causes"

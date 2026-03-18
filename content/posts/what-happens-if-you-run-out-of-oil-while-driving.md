@@ -1,6 +1,6 @@
 ---
 title: "What Happens If You Run Out of Oil While Driving?"
-date: 2026-03-16
+date: 2026-03-05
 description: "Running out of oil while driving causes rapid, catastrophic engine damage. Here's what to watch for, what happens inside, and what to do."
 tags: ["run out of oil", "low oil pressure", "engine damage", "car breakdown", "oil light"]
 slug: "what-happens-if-you-run-out-of-oil-while-driving"

@@ -1,6 +1,6 @@
 ---
 title: "Check Engine Light Flashing Then Stops: What It Means"
-date: 2026-03-17
+date: 2026-03-13
 description: "A flashing check engine light is a serious warning. Here's what it means when it stops flashing and whether you're safe to drive."
 tags: ["check engine light", "engine", "warning lights", "misfire"]
 slug: "check-engine-light-flashing-then-stops"

@@ -1,6 +1,6 @@
 ---
 title: "How Much Does a Tow Cost in Colorado?"
-date: 2026-03-17
+date: 2026-02-28
 description: "Towing costs in Colorado run $75-$200 for local tows. Here's what affects the price and how to avoid getting overcharged."
 tags: ["towing cost", "colorado", "roadside assistance", "tow truck"]
 slug: "how-much-does-a-tow-cost-in-colorado"

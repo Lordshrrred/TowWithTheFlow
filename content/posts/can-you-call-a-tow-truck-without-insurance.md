@@ -1,6 +1,6 @@
 ---
 title: "Can You Call a Tow Truck Without Insurance?"
-date: 2026-03-17
+date: 2026-02-17
 description: "Yes, you can call a tow truck without insurance. You pay out of pocket. Here's what it costs and what your options are if you can't afford it."
 tags: ["tow truck", "roadside assistance", "insurance", "car breakdown"]
 slug: "can-you-call-a-tow-truck-without-insurance"

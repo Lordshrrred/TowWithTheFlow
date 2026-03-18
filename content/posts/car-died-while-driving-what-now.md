@@ -1,6 +1,6 @@
 ---
 title: "Car Died While Driving, What Now?"
-date: 2026-03-09
+date: 2026-02-18
 description: "If your car suddenly died while driving, here's exactly what to do in the next 60 seconds and what likely caused it."
 tags: ["car died while driving", "car breakdown", "engine stall", "roadside emergency"]
 slug: "car-died-while-driving-what-now"

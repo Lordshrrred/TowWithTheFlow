@@ -1,6 +1,6 @@
 ---
 title: "Car Makes a Grinding Noise When Driving"
-date: 2026-03-15
+date: 2026-02-19
 description: "Grinding while driving is almost always metal touching something it shouldn't. Here's how to identify the source and whether it's safe to keep moving."
 tags: ["grinding noise", "brake noise", "wheel bearing", "car breakdown", "drivetrain"]
 slug: "car-makes-grinding-noise-when-driving"

@@ -1,6 +1,6 @@
 ---
 title: "Towing Cost vs Roadside Assistance: Full Comparison"
-date: 2026-03-17
+date: 2026-03-08
 description: "Towing costs $75–$300+ per incident. Roadside assistance costs $60–$130/year and covers multiple calls. Here's how to choose what's right for you."
 tags: ["towing cost", "roadside assistance", "AAA", "car breakdown", "comparison"]
 slug: "towing-cost-vs-roadside-assistance-comparison"

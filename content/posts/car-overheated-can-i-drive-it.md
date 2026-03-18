@@ -1,6 +1,6 @@
 ---
 title: "Car Overheated, Can I Drive It?"
-date: 2026-03-11
+date: 2026-02-20
 description: "Driving an overheated car can destroy the engine in minutes. Here's what to do the moment the temperature gauge spikes."
 tags: ["car overheating", "engine temperature", "car breakdown", "coolant", "towing"]
 slug: "car-overheated-can-i-drive-it"

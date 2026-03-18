@@ -1,6 +1,6 @@
 ---
 title: "Car Starts Then Dies Immediately: Causes and Fixes"
-date: 2026-03-17
+date: 2026-03-12
 description: "If your car fires up then shuts off within seconds, these are the most likely culprits and what to check first."
 tags: ["car breakdown", "engine", "starting problems", "fuel system"]
 slug: "car-starts-then-dies-immediately-causes"

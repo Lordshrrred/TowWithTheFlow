@@ -1,6 +1,6 @@
 ---
 title: "Does Insurance Cover Towing After an Accident?"
-date: 2026-03-17
+date: 2026-03-10
 description: "Car insurance covers towing after an accident if you have comprehensive or collision coverage. Here's how to use it without getting stuck with the bill."
 tags: ["insurance", "towing cost", "car accident", "roadside assistance"]
 slug: "does-insurance-cover-towing-after-accident"

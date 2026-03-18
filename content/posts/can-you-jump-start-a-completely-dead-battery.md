@@ -1,6 +1,6 @@
 ---
 title: "Can You Jump Start a Completely Dead Battery?"
-date: 2026-03-17
+date: 2026-03-11
 description: "A completely dead battery can usually be jump started, but it takes longer and needs the donor car running first. Here's the right process and when it won't work."
 tags: ["jump start", "dead battery", "car wont start", "roadside assistance", "battery"]
 slug: "can-you-jump-start-a-completely-dead-battery"

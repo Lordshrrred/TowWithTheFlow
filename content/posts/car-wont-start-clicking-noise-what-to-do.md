@@ -1,6 +1,6 @@
 ---
 title: "Car Won't Start, Clicking Noise, What To Do"
-date: 2026-03-08
+date: 2026-02-22
 description: "A clicking noise when you try to start your car almost always points to a dead battery or bad starter. Here's how to diagnose it fast."
 tags: ["car wont start", "clicking noise", "dead battery", "starter", "car breakdown"]
 slug: "car-wont-start-clicking-noise-what-to-do"
