@@ -85,7 +85,11 @@ def load_post(slug: str) -> tuple[dict, str] | None:
 
 def syndicate_devto(slug: str, meta: dict, body: str):
     """Post to Dev.to with canonical URL"""
-    if not DEVTO_API_KEY:
+    # PAUSED: Dev.to syndication disabled until workflow is confirmed stable
+    log(f"DEVTO | {slug} | SKIP: syndication paused")
+    return
+
+    if not DEVTO_API_KEY:  # noqa: unreachable
         log(f"DEVTO | {slug} | SKIP: no API key")
         return
 
