@@ -172,9 +172,33 @@ def syndicate_hashnode(slug: str, meta: dict, body: str):
         log(f"HASHNODE | {slug} | ERROR | {e}")
 
 
+NPF_BLOCK_LIMIT = 4096  # Tumblr hard limit per NPF text block
+
+
+def _split_npf_blocks(text: str, limit: int = NPF_BLOCK_LIMIT) -> list[dict]:
+    """Split text into NPF text blocks, each under the per-block char limit.
+    Splits at paragraph boundaries where possible to avoid mid-sentence cuts."""
+    blocks = []
+    while text:
+        if len(text) <= limit:
+            blocks.append({"type": "text", "text": text})
+            break
+        # Find the last double-newline within the limit
+        cut = text.rfind('\n\n', 0, limit)
+        if cut == -1:
+            # No paragraph break found — split at last newline
+            cut = text.rfind('\n', 0, limit)
+        if cut == -1:
+            # No newline at all — hard cut at limit
+            cut = limit
+        blocks.append({"type": "text", "text": text[:cut].rstrip()})
+        text = text[cut:].lstrip()
+    return blocks
+
+
 def syndicate_tumblr(slug: str, meta: dict, body: str):
     """Post to Tumblr via OAuth1 using Neue Post Format (NPF).
-    NPF bypasses legacy 'type=text' endpoint which returns error 8001."""
+    Splits long posts across multiple text blocks (Tumblr limit: 4096 chars each)."""
     if not all([TUMBLR_CONSUMER_KEY, TUMBLR_CONSUMER_SECRET, TUMBLR_TOKEN, TUMBLR_TOKEN_SECRET, TUMBLR_BLOG_NAME]):
         log(f"TUMBLR | {slug} | SKIP: missing OAuth credentials")
         return
@@ -185,7 +209,7 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
         log(f"TUMBLR | {slug} | ERROR: requests-oauthlib not installed")
         return
 
-    canonical_url = f"{BASE_URL}/{slug}/"
+    canonical_url = f"{BASE_URL}/posts/{slug}/"
     title = meta.get('title', slug)
     tags  = meta.get('tags', [])
 
@@ -196,7 +220,9 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
     plain = re.sub(r'\*\*(.+?)\*\*', r'\1', plain)                 # bold
     plain = re.sub(r'\*(.+?)\*', r'\1', plain)                     # italic
     plain = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', plain)        # links
-    plain = plain.strip()
+    plain = re.sub(r'^\|.+', '', plain, flags=re.MULTILINE)        # tables
+    plain = re.sub(r'^[-]{3,}$', '', plain, flags=re.MULTILINE)    # hr
+    plain = re.sub(r'\n{3,}', '\n\n', plain).strip()
 
     full_text = f"{title}\n\n{plain}\n\nRead the full guide: {canonical_url}"
 
@@ -205,20 +231,20 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
         TUMBLR_TOKEN, TUMBLR_TOKEN_SECRET
     )
 
-    # NPF payload - Neue Post Format
+    # Tumblr NPF requires tags as a comma-separated STRING, not a JSON array.
+    # Passing a list causes error 8001 regardless of content.
     if isinstance(tags, list):
-        tag_list = tags
+        tags_str = ",".join(tags)
     else:
-        tag_list = [t.strip() for t in str(tags).split(',') if t.strip()]
+        tags_str = str(tags)
+
+    # Split into <=4096-char NPF blocks if needed
+    content_blocks = _split_npf_blocks(full_text)
+    log(f"TUMBLR | {slug} | {len(content_blocks)} NPF block(s), total {len(full_text)} chars")
 
     npf_payload = {
-        "content": [
-            {
-                "type": "text",
-                "text": full_text
-            }
-        ],
-        "tags": tag_list,
+        "content": content_blocks,
+        "tags": tags_str,
         "state": "published",
     }
 
@@ -230,7 +256,10 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
             timeout=30
         )
         if resp.status_code in (200, 201):
-            log(f"TUMBLR | {slug} | SUCCESS | status={resp.status_code}")
+            data = resp.json()
+            post_id = (data.get('response') or {}).get('id', '')
+            post_url = f"https://{TUMBLR_BLOG_NAME}.tumblr.com/post/{post_id}" if post_id else ''
+            log(f"TUMBLR | {slug} | SUCCESS | status={resp.status_code} | url={post_url}")
         else:
             try:
                 detail = json.dumps(resp.json())[:400]
