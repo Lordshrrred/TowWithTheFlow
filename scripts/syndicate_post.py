@@ -123,12 +123,22 @@ def syndicate_devto(slug: str, meta: dict, body: str):
 
 
 def syndicate_hashnode(slug: str, meta: dict, body: str):
-    """Post to Hashnode via GraphQL publishPost mutation with canonical URL"""
+    """Post to Hashnode via GraphQL publishPost mutation.
+    Sets canonical URL (originalArticleURL) and appends a visible backlink CTA."""
     if not HASHNODE_API_KEY or not HASHNODE_PUBLICATION_ID:
         log(f"HASHNODE | {slug} | SKIP: no API key or publication ID")
         return
 
-    canonical_url = f"{BASE_URL}/{slug}/"
+    canonical_url = f"{BASE_URL}/posts/{slug}/"
+
+    # Append a visible, clickable backlink CTA to the post body for SEO value
+    title = meta.get('title', slug)
+    cta = (
+        f"\n\n---\n\n"
+        f"**Originally published on TowWithTheFlow.com** — "
+        f"[Read the full article here]({canonical_url})"
+    )
+    body_with_backlink = body.rstrip() + cta
 
     publish_mutation = """
     mutation PublishPost($input: PublishPostInput!) {
@@ -145,8 +155,8 @@ def syndicate_hashnode(slug: str, meta: dict, body: str):
 
     variables = {
         "input": {
-            "title": meta.get('title', slug),
-            "contentMarkdown": body,
+            "title": title,
+            "contentMarkdown": body_with_backlink,
             "publicationId": HASHNODE_PUBLICATION_ID,
             "originalArticleURL": canonical_url,
             "tags": tags,
@@ -224,7 +234,13 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
     plain = re.sub(r'^[-]{3,}$', '', plain, flags=re.MULTILINE)    # hr
     plain = re.sub(r'\n{3,}', '\n\n', plain).strip()
 
-    full_text = f"{title}\n\n{plain}\n\nRead the full guide: {canonical_url}"
+    body_text = f"{title}\n\n{plain}"
+
+    # CTA with inline NPF link formatting — makes the URL a real clickable hyperlink
+    cta_label = "Read the full guide on TowWithTheFlow.com"
+    cta_sentence = f"{cta_label}: {canonical_url}"
+    link_start = len(cta_label) + 2   # after "...: "
+    link_end   = len(cta_sentence)
 
     oauth = OAuth1(
         TUMBLR_CONSUMER_KEY, TUMBLR_CONSUMER_SECRET,
@@ -238,9 +254,16 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
     else:
         tags_str = str(tags)
 
-    # Split into <=4096-char NPF blocks if needed
-    content_blocks = _split_npf_blocks(full_text)
-    log(f"TUMBLR | {slug} | {len(content_blocks)} NPF block(s), total {len(full_text)} chars")
+    # Split body into <=4096-char NPF blocks, then append a dedicated link block
+    body_blocks = _split_npf_blocks(body_text)
+    cta_block = {
+        "type": "text",
+        "text": cta_sentence,
+        "formatting": [{"start": link_start, "end": link_end, "type": "link", "url": canonical_url}]
+    }
+    content_blocks = body_blocks + [cta_block]
+
+    log(f"TUMBLR | {slug} | {len(content_blocks)} NPF block(s), total {sum(len(b.get('text','')) for b in content_blocks)} chars")
 
     npf_payload = {
         "content": content_blocks,
