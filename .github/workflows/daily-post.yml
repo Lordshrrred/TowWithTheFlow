@@ -60,3 +60,21 @@ jobs:
           git add content/posts/ static/images/ scripts/keywords.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: daily post $(date +%Y-%m-%d)"
           git push
+
+      - name: Syndicate backlog post
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          HASHNODE_API_KEY: ${{ secrets.HASHNODE_API_KEY }}
+          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
+          TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
+          TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
+          TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
+          TUMBLR_TOKEN_SECRET: ${{ secrets.TUMBLR_TOKEN_SECRET }}
+          TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python scripts/syndicate_backlog.py
+          git add scripts/synced-posts.txt scripts/syndication_log.txt || true
+          git diff --staged --quiet || git commit -m "Auto: backlog syndication $(date +%Y-%m-%d)"
+          git push
