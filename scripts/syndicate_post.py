@@ -129,7 +129,7 @@ def syndicate_hashnode(slug: str, meta: dict, body: str):
         log(f"HASHNODE | {slug} | SKIP: no API key or publication ID")
         return
 
-    canonical_url = f"{BASE_URL}/posts/{slug}/"
+    canonical_url = f"{BASE_URL}/{slug}/"
 
     # Append a visible, clickable backlink CTA to the post body for SEO value
     title = meta.get('title', slug)
@@ -219,7 +219,7 @@ def syndicate_tumblr(slug: str, meta: dict, body: str):
         log(f"TUMBLR | {slug} | ERROR: requests-oauthlib not installed")
         return
 
-    canonical_url = f"{BASE_URL}/posts/{slug}/"
+    canonical_url = f"{BASE_URL}/{slug}/"
     title = meta.get('title', slug)
     tags  = meta.get('tags', [])
 
