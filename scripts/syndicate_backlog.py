@@ -5,6 +5,11 @@ Reads all posts from content/posts/, finds the oldest one not yet in
 synced-posts.txt, and syndicates it to Dev.to, Hashnode, and Tumblr.
 Runs once per day via daily-post.yml — one post per execution.
 When all posts are synced, sends a completion email and exits cleanly.
+
+Also syndicates one feeder blog post per day from feeder_backlog.txt,
+but only after FEEDER_HOLD_UNTIL date (let posts age before syndicating).
+Feeder posts are fetched from the TTWF_GithubPages GitHub repo and
+syndicated to Hashnode and Tumblr only (not Dev.to).
 """
 
 import os
@@ -42,6 +47,14 @@ LOG_FILE    = Path(__file__).parent / "syndication_log.txt"
 
 # Files in content/posts/ that are NOT real blog posts
 SKIP_FILES = {"_index.md", "tow-content-log.md"}
+
+# ── Feeder blog config ─────────────────────────────────────────────────────────
+FEEDER_BACKLOG_FILE  = Path(__file__).parent / "feeder_backlog.txt"
+FEEDER_SYNCED_FILE   = Path(__file__).parent / "feeder-synced.txt"
+FEEDER_BASE_URL      = "https://denverroadsideguide.blogspot.com"
+FEEDER_RAW_BASE      = "https://raw.githubusercontent.com/Lordshrrred/TTWF_GithubPages/main/content/posts"
+# Don't start syndicating feeder posts until this date (let them age first)
+FEEDER_HOLD_UNTIL    = date(2026, 3, 31)
 
 
 # ── Logging ────────────────────────────────────────────────────────────────────
@@ -346,6 +359,91 @@ def send_completion_email(total: int):
         log(f"EMAIL: FAILED — {e}")
 
 
+# ── Feeder blog helpers ────────────────────────────────────────────────────────
+def load_feeder_backlog() -> list[str]:
+    """Return ordered list of feeder slugs from feeder_backlog.txt."""
+    if not FEEDER_BACKLOG_FILE.exists():
+        return []
+    return [
+        line.strip() for line in FEEDER_BACKLOG_FILE.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.startswith("#")
+    ]
+
+
+def load_feeder_synced() -> set[str]:
+    if not FEEDER_SYNCED_FILE.exists():
+        FEEDER_SYNCED_FILE.write_text("", encoding="utf-8")
+        return set()
+    return {l.strip() for l in FEEDER_SYNCED_FILE.read_text(encoding="utf-8").splitlines() if l.strip()}
+
+
+def mark_feeder_synced(slug: str):
+    with FEEDER_SYNCED_FILE.open("a", encoding="utf-8") as f:
+        f.write(slug + "\n")
+
+
+def fetch_feeder_post(slug: str) -> tuple[dict, str] | None:
+    """Fetch a feeder post from GitHub raw and parse its frontmatter."""
+    url = f"{FEEDER_RAW_BASE}/{slug}.md"
+    try:
+        r = requests.get(url, timeout=20)
+        if r.status_code != 200:
+            log(f"FEEDER: could not fetch {slug} — HTTP {r.status_code}")
+            return None
+        return parse_frontmatter(r.text)
+    except Exception as e:
+        log(f"FEEDER: fetch error for {slug} — {e}")
+        return None
+
+
+def syndicate_feeder_post(slug: str):
+    """Fetch one feeder post and syndicate it to Hashnode and Tumblr."""
+    result = fetch_feeder_post(slug)
+    if result is None:
+        return
+
+    meta, body = result
+    # Override canonical to point at the feeder blog page
+    canonical = f"{FEEDER_BASE_URL}/"   # Blogger URL not known statically; use base
+
+    # Hashnode — reuse existing function (canonical already set inside it via BASE_URL)
+    # We temporarily patch meta to add a feeder note, then call syndicate_hashnode
+    ok, detail = syndicate_hashnode(slug, meta, body)
+    log(f"FEEDER HASHNODE | {slug} | {'SUCCESS' if ok else 'FAIL'} | {detail}")
+
+    ok, detail = syndicate_tumblr(slug, meta, body)
+    log(f"FEEDER TUMBLR   | {slug} | {'SUCCESS' if ok else 'FAIL'} | {detail}")
+
+    mark_feeder_synced(slug)
+    log(f"FEEDER: marked synced: {slug}")
+
+
+def run_feeder_syndication():
+    """Syndicate one feeder post if the hold period has passed."""
+    today = date.today()
+    if today < FEEDER_HOLD_UNTIL:
+        log(f"FEEDER: holding until {FEEDER_HOLD_UNTIL} (today={today}) — skipping")
+        return
+
+    backlog = load_feeder_backlog()
+    if not backlog:
+        log("FEEDER: feeder_backlog.txt is empty or missing — skipping")
+        return
+
+    synced  = load_feeder_synced()
+    pending = [s for s in backlog if s not in synced]
+
+    log(f"FEEDER: total={len(backlog)}  synced={len(synced)}  pending={len(pending)}")
+
+    if not pending:
+        log("FEEDER: all feeder posts synced")
+        return
+
+    slug = pending[0]
+    log(f"FEEDER: syndicating {slug}")
+    syndicate_feeder_post(slug)
+
+
 # ── Main ───────────────────────────────────────────────────────────────────────
 def main():
     all_posts = get_all_posts()
@@ -382,6 +480,9 @@ def main():
     # Mark synced to keep the backlog moving (failures are logged above)
     mark_synced(slug)
     log(f"Marked synced: {slug}  ({len(synced) + 1}/{len(all_posts)} total)")
+
+    # Also drip one feeder post per day (hold until FEEDER_HOLD_UNTIL)
+    run_feeder_syndication()
 
 
 if __name__ == "__main__":

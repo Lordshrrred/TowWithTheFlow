@@ -79,25 +79,26 @@ jobs:
           git diff --staged --quiet || git commit -m "Auto: backlog syndication $(date +%Y-%m-%d)"
           git push
 
-      - name: Trigger feeder blog with new post
-        env:
-          FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
-        run: |
-          if [ ! -f scripts/last_generated_slug.txt ]; then
-            echo "No slug file found — skipping feeder trigger"
-            exit 0
-          fi
-          NEW_SLUG=$(cat scripts/last_generated_slug.txt)
-          NEW_URL="https://towwiththeflow.com/${NEW_SLUG}/"
-          NEW_TITLE=$(grep "^title:" content/posts/${NEW_SLUG}.md | head -1 | sed 's/title: //' | tr -d '"')
-
-          echo "Triggering feeder blog for slug: ${NEW_SLUG}"
-          curl -X POST \
-            -H "Authorization: token ${FEEDER_TRIGGER_TOKEN}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/Lordshrrred/TTWF_GithubPages/actions/workflows/daily-post.yml/dispatches \
-            -d "$(jq -n \
-              --arg slug "$NEW_SLUG" \
-              --arg url  "$NEW_URL" \
-              --arg title "$NEW_TITLE" \
-              '{ref:"main",inputs:{source_slug:$slug,source_url:$url,source_title:$title}}')"
+      # PAUSED: feeder trigger disabled while backlog posts age (re-enable ~2026-03-31)
+      # - name: Trigger feeder blog with new post
+      #   env:
+      #     FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
+      #   run: |
+      #     if [ ! -f scripts/last_generated_slug.txt ]; then
+      #       echo "No slug file found — skipping feeder trigger"
+      #       exit 0
+      #     fi
+      #     NEW_SLUG=$(cat scripts/last_generated_slug.txt)
+      #     NEW_URL="https://towwiththeflow.com/${NEW_SLUG}/"
+      #     NEW_TITLE=$(grep "^title:" content/posts/${NEW_SLUG}.md | head -1 | sed 's/title: //' | tr -d '"')
+      #
+      #     echo "Triggering feeder blog for slug: ${NEW_SLUG}"
+      #     curl -X POST \
+      #       -H "Authorization: token ${FEEDER_TRIGGER_TOKEN}" \
+      #       -H "Accept: application/vnd.github.v3+json" \
+      #       https://api.github.com/repos/Lordshrrred/TTWF_GithubPages/actions/workflows/daily-post.yml/dispatches \
+      #       -d "$(jq -n \
+      #         --arg slug "$NEW_SLUG" \
+      #         --arg url  "$NEW_URL" \
+      #         --arg title "$NEW_TITLE" \
+      #         '{ref:"main",inputs:{source_slug:$slug,source_url:$url,source_title:$title}}')"
