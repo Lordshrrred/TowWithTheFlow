@@ -70,7 +70,12 @@ strong { font-weight: 600; }
   background: rgba(15,17,23,0.97);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-top: 3px solid var(--accent);
+  border-top: 5px solid;
+  border-image: repeating-linear-gradient(
+    -45deg,
+    #f5a623 0px, #f5a623 10px,
+    #0c0d14 10px, #0c0d14 20px
+  ) 1;
   border-bottom: 1px solid var(--border);
   padding: 0.85rem 0;
   position: sticky;
@@ -154,6 +159,12 @@ strong { font-weight: 600; }
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-bottom: 5px solid;
+  border-image: repeating-linear-gradient(
+    -45deg,
+    #f5a623 0px, #f5a623 10px,
+    #0c0d14 10px, #0c0d14 20px
+  ) 1;
 }
 
 /* Subtle grain texture on hero */
@@ -613,7 +624,12 @@ blockquote strong:first-child {
 /* ── Footer ── */
 .site-footer {
   background: #0b0d14;
-  border-top: 2px solid var(--accent);
+  border-top: 5px solid;
+  border-image: repeating-linear-gradient(
+    -45deg,
+    #f5a623 0px, #f5a623 10px,
+    #0c0d14 10px, #0c0d14 20px
+  ) 1;
   padding: 2.25rem 0;
   text-align: center;
 }
