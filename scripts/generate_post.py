@@ -320,6 +320,10 @@ def main():
     filename.write_text(content, encoding='utf-8')
     print(f"Saved: {filename}")
 
+    # Record slug so the workflow can pass it to the feeder blog trigger
+    slug_file = Path(__file__).parent / "last_generated_slug.txt"
+    slug_file.write_text(slug, encoding='utf-8')
+
     mark_done(keyword)
     append_long_tails(keyword)
 
