@@ -41,6 +41,14 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Build dashboard
+        env:
+          DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pip install python-dotenv --quiet
+          python scripts/build_dashboard.py
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production

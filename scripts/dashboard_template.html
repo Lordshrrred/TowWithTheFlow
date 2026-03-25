@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tow With The Flow &mdash; Syndication Dashboard</title>
+  <style>
+    :root {
+      --bg:       #0f1117;
+      --bg2:      #1a1d28;
+      --bg3:      #22263a;
+      --amber:    #f5a623;
+      --amber2:   #c47f10;
+      --green:    #4caf50;
+      --red:      #f44336;
+      --text:     #e0e0e0;
+      --dim:      #888;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px; min-height: 100vh;
+    }
+
+    /* ---- Password Gate ---- */
+    #gate {
+      position: fixed; inset: 0; background: var(--bg);
+      display: flex; align-items: center; justify-content: center; z-index: 999;
+    }
+    .gate-box {
+      background: var(--bg2); border: 1px solid var(--amber);
+      border-radius: 12px; padding: 44px 40px; width: 360px; text-align: center;
+    }
+    .gate-box h1 { color: var(--amber); font-size: 18px; margin-bottom: 6px; }
+    .gate-box p  { color: var(--dim); margin-bottom: 28px; font-size: 13px; }
+    .gate-box input {
+      width: 100%; padding: 10px 14px; background: var(--bg);
+      border: 1px solid var(--bg3); border-radius: 6px;
+      color: var(--text); font-size: 14px; margin-bottom: 12px;
+      outline: none; transition: border-color .15s;
+    }
+    .gate-box input:focus { border-color: var(--amber); }
+    .gate-box button {
+      width: 100%; padding: 10px; background: var(--amber);
+      color: #000; border: none; border-radius: 6px;
+      font-size: 14px; font-weight: 700; cursor: pointer; transition: background .15s;
+    }
+    .gate-box button:hover { background: var(--amber2); }
+    #gate-err { color: var(--red); margin-top: 10px; font-size: 12px; min-height: 16px; }
+
+    /* ---- Layout ---- */
+    #dash { display: none; }
+    .topbar {
+      background: var(--bg2); border-bottom: 1px solid var(--bg3);
+      padding: 14px 24px; display: flex; align-items: center;
+      justify-content: space-between; position: sticky; top: 0; z-index: 100;
+    }
+    .topbar h1 { color: var(--amber); font-size: 15px; font-weight: 700; }
+    .topbar-right { display: flex; align-items: center; gap: 12px; }
+    #refresh-ts { font-size: 11px; color: var(--dim); }
+    .lock-btn {
+      font-size: 12px; color: var(--dim); background: none;
+      border: 1px solid var(--bg3); border-radius: 4px;
+      padding: 4px 10px; cursor: pointer; transition: all .15s;
+    }
+    .lock-btn:hover { border-color: var(--dim); color: var(--text); }
+
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+    .sec { margin-bottom: 36px; }
+    .sec-title {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .12em; color: var(--amber); margin-bottom: 14px;
+      padding-bottom: 6px; border-bottom: 1px solid var(--bg3);
+    }
+
+    /* ---- Status Cards ---- */
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+    .card {
+      background: var(--bg2); border: 1px solid var(--bg3);
+      border-radius: 8px; padding: 16px;
+    }
+    .card-hd { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .card-name { font-weight: 600; font-size: 13px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #555; flex-shrink: 0; }
+    .dot.ok  { background: var(--green); }
+    .dot.err { background: var(--red); }
+    .card-n   { font-size: 22px; font-weight: 700; color: var(--amber); }
+    .card-sub { font-size: 11px; color: var(--dim); margin-top: 4px; line-height: 1.4; }
+    .card-lnk {
+      display: inline-block; margin-top: 10px; font-size: 11px;
+      color: var(--amber); text-decoration: none;
+    }
+    .card-lnk:hover { text-decoration: underline; }
+
+    /* ---- Stat boxes ---- */
+    .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+    .sbox { background: var(--bg2); border: 1px solid var(--bg3); border-radius: 8px; padding: 14px; }
+    .sbox-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--dim); margin-bottom: 4px; }
+    .sbox-val { font-size: 20px; font-weight: 700; color: var(--amber); }
+    .sbox-sub { font-size: 11px; color: var(--dim); margin-top: 3px; }
+
+    /* ---- Backlink rows ---- */
+    .bl-row {
+      background: var(--bg2); border: 1px solid var(--bg3);
+      border-radius: 8px; padding: 14px; margin-bottom: 8px;
+    }
+    .bl-hd { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+    .bl-name { font-weight: 600; font-size: 13px; }
+    .bl-ok  { color: var(--green); font-size: 13px; }
+    .bl-no  { color: var(--red);   font-size: 13px; }
+    .bl-sum { font-size: 11px; color: var(--dim); margin-bottom: 8px; }
+    .bl-list { list-style: none; }
+    .bl-list li { display: flex; align-items: center; gap: 6px; padding: 3px 0; font-size: 12px; }
+    .bl-url { color: var(--amber); font-size: 11px; text-decoration: none; }
+    .bl-url:hover { text-decoration: underline; }
+
+    /* ---- Log box ---- */
+    .logbox {
+      background: var(--bg); border: 1px solid var(--bg3); border-radius: 6px;
+      padding: 12px; font-family: monospace; font-size: 12px;
+      max-height: 320px; overflow-y: auto; line-height: 1.6;
+    }
+    .l-ok   { color: var(--green); }
+    .l-err  { color: var(--red); }
+    .l-skip { color: var(--dim); }
+
+    /* ---- Coming soon ---- */
+    .badge-gray {
+      font-size: 10px; background: var(--bg3); color: var(--dim);
+      padding: 2px 7px; border-radius: 3px; margin-left: 6px;
+    }
+
+    /* ---- Quick actions ---- */
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .act-btn {
+      background: var(--bg2); border: 1px solid var(--amber);
+      color: var(--amber); padding: 10px 18px; border-radius: 6px;
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      display: flex; align-items: center; gap: 8px; transition: background .15s;
+    }
+    .act-btn:hover { background: var(--bg3); }
+    .act-btn:disabled { opacity: .4; cursor: not-allowed; }
+    .act-btn.act-ok   { border-color: var(--green); color: var(--green); }
+    .act-btn.act-spin { border-color: var(--dim);   color: var(--dim); }
+    .spin {
+      width: 13px; height: 13px; border: 2px solid currentColor;
+      border-top-color: transparent; border-radius: 50%;
+      animation: spin .6s linear infinite; display: none;
+    }
+    .act-btn.act-spin .spin { display: inline-block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .act-note { margin-top: 10px; font-size: 11px; color: var(--dim); }
+
+    /* ---- Misc ---- */
+    .dim { color: var(--dim); }
+    @media (max-width: 600px) {
+      .wrap { padding: 12px; }
+      .cards, .stats { grid-template-columns: 1fr 1fr; }
+      .topbar h1 { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Password Gate -->
+<div id="gate">
+  <div class="gate-box">
+    <h1>Tow With The Flow</h1>
+    <p>Syndication Dashboard</p>
+    <input type="password" id="pw" placeholder="Password" autocomplete="current-password">
+    <button id="pw-btn">Unlock Dashboard</button>
+    <div id="gate-err"></div>
+  </div>
+</div>
+
+<!-- Dashboard -->
+<div id="dash">
+  <div class="topbar">
+    <h1>Tow With The Flow &mdash; Syndication Dashboard</h1>
+    <div class="topbar-right">
+      <span id="refresh-ts" class="dim">Loading&hellip;</span>
+      <button class="lock-btn" onclick="lock()">Lock</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <!-- 1. Syndication Status -->
+    <div class="sec">
+      <div class="sec-title">Syndication Status</div>
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-hd"><span class="card-name">Dev.to</span><span class="dot" id="dt-dot"></span></div>
+          <div class="card-n"  id="dt-n">—</div>
+          <div class="card-sub" id="dt-sub">Loading&hellip;</div>
+          <a class="card-lnk" href="https://dev.to/towwiththeflowyoo" target="_blank">View profile &rarr;</a>
+        </div>
+
+        <div class="card">
+          <div class="card-hd"><span class="card-name">Hashnode</span><span class="dot" id="hn-dot"></span></div>
+          <div class="card-n"  id="hn-n">—</div>
+          <div class="card-sub" id="hn-sub">Loading&hellip;</div>
+          <a class="card-lnk" href="https://towwiththeflow.hashnode.dev" target="_blank">View blog &rarr;</a>
+        </div>
+
+        <div class="card">
+          <div class="card-hd"><span class="card-name">Tumblr</span><span class="dot" id="tb-dot"></span></div>
+          <div class="card-n"  id="tb-n">—</div>
+          <div class="card-sub" id="tb-sub">Loading&hellip;</div>
+          <a class="card-lnk" href="https://www.tumblr.com/towwiththeflow" target="_blank">View blog &rarr;</a>
+        </div>
+
+        <div class="card">
+          <div class="card-hd"><span class="card-name">Blogger</span><span class="dot" id="bl-dot"></span></div>
+          <div class="card-n"  id="bl-n">—</div>
+          <div class="card-sub" id="bl-sub">Loading&hellip;</div>
+          <a class="card-lnk" href="https://denverroadsideguide.blogspot.com" target="_blank">View blog &rarr;</a>
+        </div>
+
+        <div class="card">
+          <div class="card-hd"><span class="card-name">Feeder (GitHub Pages)</span><span class="dot" id="fd-dot"></span></div>
+          <div class="card-n"  id="fd-n">—</div>
+          <div class="card-sub" id="fd-sub">Loading&hellip;</div>
+          <a class="card-lnk" href="https://lordshrrred.github.io/TTWF_GithubPages/" target="_blank">View feeder &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. Backlink Verification -->
+    <div class="sec">
+      <div class="sec-title">Backlink Verification</div>
+      <div id="backlinks"><div class="dim" style="font-size:12px;">Checking backlinks&hellip;</div></div>
+    </div>
+
+    <!-- 3. TWTF Main Site Stats -->
+    <div class="sec">
+      <div class="sec-title">TWTF Main Site Stats</div>
+      <div class="stats">
+        <div class="sbox">
+          <div class="sbox-lbl">Total Posts</div>
+          <div class="sbox-val" id="s-posts">—</div>
+          <div class="sbox-sub">in content/posts/</div>
+        </div>
+        <div class="sbox">
+          <div class="sbox-lbl">Keywords Remaining</div>
+          <div class="sbox-val" id="s-kw">—</div>
+          <div class="sbox-sub">in keywords.txt</div>
+        </div>
+        <div class="sbox">
+          <div class="sbox-lbl">Last Deploy</div>
+          <div class="sbox-val" id="s-deploy" style="font-size:13px;padding-top:4px;">—</div>
+          <div class="sbox-sub" id="s-deploy-msg">—</div>
+        </div>
+        <div class="sbox">
+          <div class="sbox-lbl">Next Scheduled Post</div>
+          <div class="sbox-val" style="font-size:14px;padding-top:4px;">9:00 AM UTC</div>
+          <div class="sbox-sub">Daily via GitHub Actions</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Syndication Log -->
+    <div class="sec">
+      <div class="sec-title">Syndication Log (Last 20 Entries)</div>
+      <div class="logbox" id="logbox"><div class="l-skip">Fetching log&hellip;</div></div>
+    </div>
+
+    <!-- 5. Coming Soon -->
+    <div class="sec">
+      <div class="sec-title">Platforms Coming Soon</div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-hd">
+            <span class="card-name">Write.as<span class="badge-gray">Not connected yet</span></span>
+          </div>
+          <div class="card-sub" style="margin-top:8px;">Open-source, privacy-focused blogging</div>
+        </div>
+        <div class="card">
+          <div class="card-hd">
+            <span class="card-name">Bear Blog<span class="badge-gray">Not connected yet</span></span>
+          </div>
+          <div class="card-sub" style="margin-top:8px;">Minimal, fast blogging for SEO</div>
+        </div>
+        <div class="card">
+          <div class="card-hd">
+            <span class="card-name">Ghost<span class="badge-gray">Not connected yet</span></span>
+          </div>
+          <div class="card-sub" style="margin-top:8px;">Professional publishing platform</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Quick Actions -->
+    <div class="sec">
+      <div class="sec-title">Quick Actions</div>
+      <div class="actions">
+        <button class="act-btn" id="btn-gen" onclick="triggerWf('daily-post.yml','btn-gen','Generate Post Now')">
+          <span class="spin"></span>Generate Post Now
+        </button>
+        <button class="act-btn" id="btn-kw" onclick="triggerWf('weekly-keywords.yml','btn-kw','Run Keyword Research')">
+          <span class="spin"></span>Run Keyword Research
+        </button>
+        <button class="act-btn" id="btn-backlog" onclick="triggerWf('daily-post.yml','btn-backlog','Sync Backlog Post')">
+          <span class="spin"></span>Sync Backlog Post
+        </button>
+      </div>
+      <p class="act-note">Triggers GitHub Actions workflow. Allow ~30s for the run to start.</p>
+    </div>
+
+  </div><!-- /wrap -->
+</div><!-- /dash -->
+
+<script>
+// ── Config ──────────────────────────────────────────────────────────────────
+const PW_HASH   = '__PASSWORD_HASH__';
+const GH_TOKEN  = '__GITHUB_TOKEN__';
+const TWTF      = 'Lordshrrred/TowWithTheFlow';
+const FEEDER    = 'Lordshrrred/TTWF_GithubPages';
+const TTL       = 5 * 60 * 1000;
+
+// ── Utilities ────────────────────────────────────────────────────────────────
+async function sha256(s) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+function cGet(k)     { try { const v=sessionStorage.getItem('d_'+k); if(!v)return null; const o=JSON.parse(v); return Date.now()-o.t<TTL?o.v:null; }catch{return null;} }
+function cSet(k,v)   { try { sessionStorage.setItem('d_'+k,JSON.stringify({t:Date.now(),v})); }catch{} }
+function esc(s)      { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function age(d)      { const s=Math.floor((Date.now()-new Date(d))/1000); if(s<3600)return Math.floor(s/60)+'m ago'; if(s<86400)return Math.floor(s/3600)+'h ago'; return Math.floor(s/86400)+'d ago'; }
+function dot(id,ok)  { const e=document.getElementById(id); if(e)e.className='dot '+(ok===true?'ok':ok===false?'err':''); }
+function txt(id,v)   { const e=document.getElementById(id); if(e)e.textContent=v; }
+
+async function jFetch(cKey, url, opts={}) {
+  const c=cGet(cKey); if(c)return c;
+  const r=await fetch(url,opts); if(!r.ok)throw new Error('HTTP '+r.status);
+  const d=await r.json(); cSet(cKey,d); return d;
+}
+async function tFetch(cKey, url) {
+  const c=cGet(cKey); if(c)return c;
+  const r=await fetch(url); if(!r.ok)throw new Error('HTTP '+r.status);
+  const t=await r.text(); cSet(cKey,t); return t;
+}
+function ghH() {
+  const h={'User-Agent':'TWTF-Dashboard'};
+  if(GH_TOKEN&&GH_TOKEN!=='__GITHUB_TOKEN__') h['Authorization']='token '+GH_TOKEN;
+  return h;
+}
+
+// ── Auth ─────────────────────────────────────────────────────────────────────
+async function unlock() {
+  const val = document.getElementById('pw').value;
+  if(!val) return;
+  const h = await sha256(val);
+  if(h === PW_HASH) {
+    sessionStorage.setItem('twtf_ok','1');
+    document.getElementById('gate').style.display='none';
+    document.getElementById('dash').style.display='block';
+    init();
+  } else {
+    document.getElementById('gate-err').textContent='Incorrect password.';
+  }
+}
+function lock() { sessionStorage.removeItem('twtf_ok'); location.reload(); }
+
+document.getElementById('pw-btn').addEventListener('click', unlock);
+document.getElementById('pw').addEventListener('keydown', e=>{ if(e.key==='Enter') unlock(); });
+
+if(sessionStorage.getItem('twtf_ok')==='1') {
+  document.getElementById('gate').style.display='none';
+  document.getElementById('dash').style.display='block';
+}
+
+// ── Section 1: Platform Status ───────────────────────────────────────────────
+async function loadDevTo() {
+  try {
+    const data = await jFetch('devto','https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1000');
+    const n = data.length;
+    const r = data[0];
+    txt('dt-n', n + ' posts');
+    txt('dt-sub', r ? '"'+r.title.slice(0,55)+'" — '+age(r.published_at) : 'No posts yet');
+    dot('dt-dot', n>0);
+    return data;
+  } catch(e) {
+    txt('dt-n','Error'); txt('dt-sub',e.message); dot('dt-dot',false); return [];
+  }
+}
+
+async function loadHashnode() {
+  try {
+    const q = `{publication(host:"towwiththeflow.hashnode.dev"){posts(first:10){totalDocuments edges{node{title publishedAt url canonicalUrl}}}}}`;
+    const data = await jFetch('hn','https://gql.hashnode.com',{
+      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({query:q})
+    });
+    const posts = data.data?.publication?.posts;
+    const n     = posts?.totalDocuments || 0;
+    const nodes = posts?.edges?.map(e=>e.node) || [];
+    const r     = nodes[0];
+    txt('hn-n', n + ' posts');
+    txt('hn-sub', r ? '"'+r.title.slice(0,55)+'" — '+age(r.publishedAt) : 'No posts yet');
+    dot('hn-dot', n>0);
+    return nodes;
+  } catch(e) {
+    txt('hn-n','Error'); txt('hn-sub',e.message); dot('hn-dot',false); return [];
+  }
+}
+
+async function loadBlogger() {
+  try {
+    const data = await jFetch('bl','https://denverroadsideguide.blogspot.com/feeds/posts/default?alt=json&max-results=10');
+    const entries = data.feed?.entry || [];
+    const total   = parseInt(data.feed?.['openSearch$totalResults']?.['$t'] || '0') || entries.length;
+    const r       = entries[0];
+    txt('bl-n', total + ' posts');
+    txt('bl-sub', r ? '"'+(r.title?.['$t']||'').slice(0,55)+'" — '+age(r.published?.['$t']||'') : 'No posts yet');
+    dot('bl-dot', total>0);
+    return entries;
+  } catch(e) {
+    txt('bl-n','Error'); txt('bl-sub',e.message); dot('bl-dot',false); return [];
+  }
+}
+
+async function loadTumblr() {
+  // Tumblr API requires OAuth — cannot call from browser without CORS proxy
+  txt('tb-n', 'CORS limited');
+  txt('tb-sub', 'Check syndication log for Tumblr status');
+  dot('tb-dot', null);
+}
+
+async function loadFeeder() {
+  try {
+    const [commits, tree] = await Promise.all([
+      jFetch('fd_c', `https://api.github.com/repos/${FEEDER}/commits?per_page=1`, {headers:ghH()}),
+      jFetch('fd_t', `https://api.github.com/repos/${FEEDER}/git/trees/main?recursive=1`, {headers:ghH()})
+    ]);
+    const posts = tree.tree.filter(f=>f.path.startsWith('content/posts/')&&f.path.endsWith('.md'));
+    const n = posts.length;
+    const c = commits[0]?.commit;
+    txt('fd-n', n + ' posts');
+    txt('fd-sub', c ? c.message.split('\n')[0].slice(0,60)+' — '+age(c.author.date) : '—');
+    dot('fd-dot', n>0);
+    return posts;
+  } catch(e) {
+    txt('fd-n','Error'); txt('fd-sub',e.message); dot('fd-dot',false); return [];
+  }
+}
+
+// ── Section 2: Backlinks ─────────────────────────────────────────────────────
+function blRow(platform, ok, summary, samples) {
+  return `<div class="bl-row">
+    <div class="bl-hd">
+      <span class="bl-name">${esc(platform)}</span>
+      ${ok ? '<span class="bl-ok">&#10003; Backlinks found</span>' : '<span class="bl-no">&#10007; Not detected</span>'}
+    </div>
+    <div class="bl-sum">${esc(summary)}</div>
+    <ul class="bl-list">
+      ${samples.map(s=>`<li>
+        ${s.ok?'<span class="bl-ok">&#10003;</span>':'<span class="bl-no">&#10007;</span>'}
+        <span>${esc(s.title.slice(0,60))}</span>
+        ${s.url?`<a class="bl-url" href="${esc(s.url)}" target="_blank">&rarr; ${esc(s.url.replace(/^https?:\/\//,'').slice(0,55))}</a>`:''}
+      </li>`).join('')}
+    </ul>
+  </div>`;
+}
+
+async function loadBacklinks(dtPosts, hnNodes, blEntries) {
+  const rows = [];
+
+  // Dev.to: check canonical_url
+  const dtCanon = dtPosts.filter(p=>p.canonical_url?.includes('towwiththeflow.com'));
+  rows.push(blRow('Dev.to', dtCanon.length>0,
+    `${dtCanon.length}/${dtPosts.length} posts have canonical URL pointing to towwiththeflow.com`,
+    dtPosts.slice(0,3).map(p=>({
+      title: p.title, url: p.canonical_url||p.url,
+      ok: !!(p.canonical_url?.includes('towwiththeflow.com'))
+    }))));
+
+  // Hashnode: check canonicalUrl
+  const hnCanon = hnNodes.filter(p=>p.canonicalUrl?.includes('towwiththeflow.com'));
+  rows.push(blRow('Hashnode', hnCanon.length>0,
+    `${hnCanon.length}/${hnNodes.length} posts have canonical URL set to towwiththeflow.com`,
+    hnNodes.slice(0,3).map(p=>({
+      title: p.title, url: p.canonicalUrl||p.url,
+      ok: !!(p.canonicalUrl?.includes('towwiththeflow.com'))
+    }))));
+
+  // Blogger: check content for backlinks
+  const blBack = blEntries.filter(e=>(e.content?.['$t']||e.summary?.['$t']||'').includes('towwiththeflow.com'));
+  rows.push(blRow('Blogger', blBack.length>0,
+    `${blBack.length}/${blEntries.length} fetched posts contain towwiththeflow.com backlinks`,
+    blEntries.slice(0,3).map(e=>{
+      const content = e.content?.['$t']||e.summary?.['$t']||'';
+      const url = e.link?.find(l=>l.rel==='alternate')?.href||'';
+      return {title: e.title?.['$t']||'', url, ok: content.includes('towwiththeflow.com')};
+    })));
+
+  // Feeder: backlinks enforced at generation
+  rows.push(blRow('Feeder (GitHub Pages)', true,
+    'All feeder posts generated with specific post backlinks (enforced by generate_variation.py)',
+    [{title:'generate_variation.py — enforces specific-post backlinks',
+      url:`https://github.com/${FEEDER}/blob/main/scripts/generate_variation.py`, ok:true}]));
+
+  document.getElementById('backlinks').innerHTML = rows.join('');
+}
+
+// ── Section 3: Site Stats ────────────────────────────────────────────────────
+async function loadStats() {
+  try {
+    const [commits, tree] = await Promise.all([
+      jFetch('tw_c', `https://api.github.com/repos/${TWTF}/commits?per_page=1`, {headers:ghH()}),
+      jFetch('tw_t', `https://api.github.com/repos/${TWTF}/git/trees/main?recursive=1`, {headers:ghH()})
+    ]);
+    const posts = tree.tree.filter(f=>
+      f.path.startsWith('content/posts/')&&f.path.endsWith('.md')&&!f.path.includes('_index'));
+    txt('s-posts', posts.length);
+
+    const c = commits[0]?.commit;
+    if(c) {
+      txt('s-deploy', new Date(c.author.date).toLocaleDateString());
+      txt('s-deploy-msg', c.message.split('\n')[0].slice(0,48));
+    }
+  } catch(e) { txt('s-posts','Err'); console.error(e); }
+
+  try {
+    const kw = await tFetch('tw_kw', `https://raw.githubusercontent.com/${TWTF}/main/scripts/keywords.txt`);
+    const remaining = kw.split('\n').filter(l=>l.trim()&&!l.trim().startsWith('#')).length;
+    txt('s-kw', remaining);
+  } catch { txt('s-kw','N/A'); }
+}
+
+// ── Section 4: Syndication Log ───────────────────────────────────────────────
+async function loadLog() {
+  const el = document.getElementById('logbox');
+  try {
+    const text = await tFetch('log',
+      `https://raw.githubusercontent.com/${TWTF}/main/scripts/syndication_log.txt`);
+    const lines = text.trim().split('\n').filter(Boolean).slice(-20).reverse();
+    if(!lines.length) { el.innerHTML='<div class="l-skip">Log is empty.</div>'; return; }
+    el.innerHTML = lines.map(ln=>{
+      const low=ln.toLowerCase();
+      let cls='l-skip';
+      if(/success|posted|ok\b/.test(low)) cls='l-ok';
+      else if(/fail|error|\berr\b/.test(low)) cls='l-err';
+      return `<div class="${cls}">${esc(ln)}</div>`;
+    }).join('');
+  } catch {
+    el.innerHTML='<div class="l-skip">syndication_log.txt is .gitignored — not available remotely. Run locally to view.</div>';
+  }
+}
+
+// ── Section 6: Quick Actions ─────────────────────────────────────────────────
+async function triggerWf(wf, btnId, label) {
+  const btn = document.getElementById(btnId);
+  if(!btn||btn.disabled) return;
+  btn.disabled = true;
+  btn.classList.add('act-spin');
+  try {
+    const r = await fetch(`https://api.github.com/repos/${TWTF}/actions/workflows/${wf}/dispatches`,{
+      method:'POST',
+      headers:{ Authorization:`token ${GH_TOKEN}`, 'Content-Type':'application/json',
+                Accept:'application/vnd.github.v3+json' },
+      body: JSON.stringify({ref:'main'})
+    });
+    btn.classList.remove('act-spin');
+    if(r.status===204) {
+      btn.classList.add('act-ok');
+      btn.lastChild.textContent = ' Triggered!';
+      setTimeout(()=>{ btn.classList.remove('act-ok'); btn.disabled=false;
+        btn.lastChild.textContent = ' '+label; }, 3500);
+    } else {
+      throw new Error('Status '+r.status);
+    }
+  } catch(e) {
+    btn.classList.remove('act-spin'); btn.disabled=false;
+    alert('Failed: '+e.message);
+  }
+}
+
+// ── Init ─────────────────────────────────────────────────────────────────────
+async function init() {
+  txt('refresh-ts','Loading...');
+  const [dtPosts, hnNodes, blEntries] = await Promise.all([
+    loadDevTo(), loadHashnode(), loadBlogger(),
+    loadTumblr(), loadFeeder(), loadStats(), loadLog()
+  ]);
+  await loadBacklinks(dtPosts, hnNodes, blEntries);
+  txt('refresh-ts', 'Refreshed '+new Date().toLocaleTimeString());
+  setTimeout(()=>{ Object.keys(sessionStorage).filter(k=>k.startsWith('d_')).forEach(k=>sessionStorage.removeItem(k)); init(); }, TTL);
+}
+
+if(sessionStorage.getItem('twtf_ok')==='1') init();
+</script>
+</body>
+</html>
