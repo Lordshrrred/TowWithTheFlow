@@ -1,597 +1,1061 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tow With The Flow &mdash; Syndication Dashboard</title>
-  <style>
-    :root {
-      --bg:       #0f1117;
-      --bg2:      #1a1d28;
-      --bg3:      #22263a;
-      --amber:    #f5a623;
-      --amber2:   #c47f10;
-      --green:    #4caf50;
-      --red:      #f44336;
-      --text:     #e0e0e0;
-      --dim:      #888;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg); color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 14px; min-height: 100vh;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tow With The Flow -- Syndication Dashboard</title>
+<style>
+/* =====================================================
+   TWTF SYNDICATION DASHBOARD
+   ===================================================== */
+:root {
+  --bg:     #0f1117;
+  --bg2:    #1a1d26;
+  --bg3:    #22263a;
+  --bg4:    #0c0e15;
+  --amber:  #f5a623;
+  --amber2: #c47f10;
+  --green:  #22c55e;
+  --red:    #ef4444;
+  --yellow: #f59e0b;
+  --gray:   #6b7280;
+  --text:   #f0f0f0;
+  --dim:    #8892a4;
+  --border: #2e3240;
+  --tape:   repeating-linear-gradient(-45deg,#f5a623 0,#f5a623 8px,#0a0b10 8px,#0a0b10 16px);
+}
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 13px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+a { color: var(--amber); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-    /* ---- Password Gate ---- */
-    #gate {
-      position: fixed; inset: 0; background: var(--bg);
-      display: flex; align-items: center; justify-content: center; z-index: 999;
-    }
-    .gate-box {
-      background: var(--bg2); border: 1px solid var(--amber);
-      border-radius: 12px; padding: 44px 40px; width: 360px; text-align: center;
-    }
-    .gate-box h1 { color: var(--amber); font-size: 18px; margin-bottom: 6px; }
-    .gate-box p  { color: var(--dim); margin-bottom: 28px; font-size: 13px; }
-    .gate-box input {
-      width: 100%; padding: 10px 14px; background: var(--bg);
-      border: 1px solid var(--bg3); border-radius: 6px;
-      color: var(--text); font-size: 14px; margin-bottom: 12px;
-      outline: none; transition: border-color .15s;
-    }
-    .gate-box input:focus { border-color: var(--amber); }
-    .gate-box button {
-      width: 100%; padding: 10px; background: var(--amber);
-      color: #000; border: none; border-radius: 6px;
-      font-size: 14px; font-weight: 700; cursor: pointer; transition: background .15s;
-    }
-    .gate-box button:hover { background: var(--amber2); }
-    #gate-err { color: var(--red); margin-top: 10px; font-size: 12px; min-height: 16px; }
+/* ---- Password Gate ---- */
+#gate {
+  position: fixed; inset: 0;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+}
+.gate-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-top: 5px solid transparent;
+  border-image: var(--tape) 1;
+  border-radius: 10px;
+  padding: 44px 40px;
+  width: 380px;
+  text-align: center;
+}
+.gate-card h1 { color: var(--amber); font-size: 18px; letter-spacing: .06em; margin-bottom: 4px; }
+.gate-sub { color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; }
+.gate-card input {
+  width: 100%; padding: 10px 14px;
+  background: var(--bg4); border: 1px solid var(--border);
+  border-radius: 6px; color: var(--text); font-size: 14px;
+  margin-bottom: 10px; outline: none;
+}
+.gate-card input:focus { border-color: var(--amber); }
+.gate-card button {
+  width: 100%; padding: 11px;
+  background: var(--amber); color: #000;
+  border: none; border-radius: 6px;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.gate-card button:hover { background: var(--amber2); }
+.gate-err { color: var(--red); font-size: 11px; margin-top: 8px; min-height: 16px; }
 
-    /* ---- Layout ---- */
-    #dash { display: none; }
-    .topbar {
-      background: var(--bg2); border-bottom: 1px solid var(--bg3);
-      padding: 14px 24px; display: flex; align-items: center;
-      justify-content: space-between; position: sticky; top: 0; z-index: 100;
-    }
-    .topbar h1 { color: var(--amber); font-size: 15px; font-weight: 700; }
-    .topbar-right { display: flex; align-items: center; gap: 12px; }
-    #refresh-ts { font-size: 11px; color: var(--dim); }
-    .lock-btn {
-      font-size: 12px; color: var(--dim); background: none;
-      border: 1px solid var(--bg3); border-radius: 4px;
-      padding: 4px 10px; cursor: pointer; transition: all .15s;
-    }
-    .lock-btn:hover { border-color: var(--dim); color: var(--text); }
+/* ---- Dashboard shell ---- */
+#dash { display: none; }
 
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 24px; }
+.dash-header {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  border-top: 5px solid transparent;
+  border-image: var(--tape) 1;
+  padding: 11px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 500;
+}
+.dash-title {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--amber);
+}
+.dash-right { display: flex; align-items: center; gap: 12px; }
+.upd-badge { font-size: 10px; color: var(--dim); background: var(--bg3); border-radius: 4px; padding: 3px 8px; }
+.lock-btn {
+  font-size: 10px; color: var(--dim);
+  background: none; border: 1px solid var(--border);
+  border-radius: 4px; padding: 3px 10px; cursor: pointer;
+}
+.lock-btn:hover { border-color: var(--dim); color: var(--text); }
 
-    .sec { margin-bottom: 36px; }
-    .sec-title {
-      font-size: 10px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .12em; color: var(--amber); margin-bottom: 14px;
-      padding-bottom: 6px; border-bottom: 1px solid var(--bg3);
-    }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 18px 20px; }
+.section { margin-bottom: 28px; }
+.sec-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px; padding-bottom: 7px;
+  border-bottom: 1px solid var(--border);
+}
+.sec-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--amber); }
+.sec-right { font-size: 10px; color: var(--dim); }
 
-    /* ---- Status Cards ---- */
-    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
-    .card {
-      background: var(--bg2); border: 1px solid var(--bg3);
-      border-radius: 8px; padding: 16px;
-    }
-    .card-hd { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
-    .card-name { font-weight: 600; font-size: 13px; }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: #555; flex-shrink: 0; }
-    .dot.ok  { background: var(--green); }
-    .dot.err { background: var(--red); }
-    .card-n   { font-size: 22px; font-weight: 700; color: var(--amber); }
-    .card-sub { font-size: 11px; color: var(--dim); margin-top: 4px; line-height: 1.4; }
-    .card-lnk {
-      display: inline-block; margin-top: 10px; font-size: 11px;
-      color: var(--amber); text-decoration: none;
-    }
-    .card-lnk:hover { text-decoration: underline; }
+/* ---- Stats bar ---- */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 10px; margin-bottom: 24px;
+}
+.s-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 13px 15px;
+}
+.s-label { font-size: 9px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin-bottom: 5px; }
+.s-value { font-size: 24px; font-weight: 700; color: var(--amber); line-height: 1; }
+.s-sub { font-size: 9px; color: var(--dim); margin-top: 3px; }
 
-    /* ---- Stat boxes ---- */
-    .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
-    .sbox { background: var(--bg2); border: 1px solid var(--bg3); border-radius: 8px; padding: 14px; }
-    .sbox-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--dim); margin-bottom: 4px; }
-    .sbox-val { font-size: 20px; font-weight: 700; color: var(--amber); }
-    .sbox-sub { font-size: 11px; color: var(--dim); margin-top: 3px; }
+/* ---- Platform pills ---- */
+.plat-bar { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+.plat-pill {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 20px; padding: 5px 12px; font-size: 11px; font-weight: 600;
+}
+.plat-pill.dim { opacity: .4; }
+.ps { font-size: 9px; color: var(--dim); }
+.ps.ok  { color: var(--green); }
+.ps.err { color: var(--red); }
+.ps.warn { color: var(--yellow); }
+.test-btn {
+  font-size: 9px; color: var(--amber);
+  background: none; border: 1px solid rgba(245,166,35,.3);
+  border-radius: 3px; padding: 1px 5px; cursor: pointer; margin-left: 2px;
+}
+.test-btn:hover { border-color: var(--amber); }
 
-    /* ---- Backlink rows ---- */
-    .bl-row {
-      background: var(--bg2); border: 1px solid var(--bg3);
-      border-radius: 8px; padding: 14px; margin-bottom: 8px;
-    }
-    .bl-hd { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-    .bl-name { font-weight: 600; font-size: 13px; }
-    .bl-ok  { color: var(--green); font-size: 13px; }
-    .bl-no  { color: var(--red);   font-size: 13px; }
-    .bl-sum { font-size: 11px; color: var(--dim); margin-bottom: 8px; }
-    .bl-list { list-style: none; }
-    .bl-list li { display: flex; align-items: center; gap: 6px; padding: 3px 0; font-size: 12px; }
-    .bl-url { color: var(--amber); font-size: 11px; text-decoration: none; }
-    .bl-url:hover { text-decoration: underline; }
+/* ---- Matrix ---- */
+.matrix-outer { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+table.matrix { width: 100%; border-collapse: collapse; font-size: 11px; min-width: 840px; }
+.matrix thead th {
+  background: var(--bg3); padding: 7px 10px;
+  text-align: center; font-size: 9px; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--dim); font-weight: 700;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap; position: sticky; top: 0; z-index: 2;
+}
+.matrix thead th.th-post {
+  text-align: left; position: sticky; left: 0; z-index: 3;
+  background: var(--bg3); min-width: 210px;
+}
+.matrix tbody tr { border-bottom: 1px solid rgba(46,50,64,.5); }
+.matrix tbody tr:hover { background: rgba(255,255,255,.02); }
+.matrix td { padding: 6px 10px; text-align: center; vertical-align: middle; }
+.matrix td.td-post {
+  text-align: left; position: sticky; left: 0; z-index: 1;
+  background: var(--bg2); border-right: 1px solid var(--border); max-width: 210px;
+}
+.matrix tbody tr:hover .td-post { background: #1d2130; }
+.td-post .t { font-size: 11px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+.td-post .t:hover { color: var(--amber); }
+.c-ok   { color: var(--green); font-size: 13px; cursor: pointer; }
+.c-ok:hover { opacity: .75; }
+.c-fail { color: var(--red); font-size: 13px; }
+.c-none { color: #2e3240; font-size: 13px; }
+.c-skip { color: var(--gray); font-size: 11px; }
+.c-pend { color: #2a2e40; font-size: 10px; }
+.badge {
+  display: inline-block; padding: 2px 7px; border-radius: 10px;
+  font-size: 9px; font-weight: 700;
+  background: rgba(245,166,35,.1); border: 1px solid rgba(245,166,35,.2);
+  color: var(--amber);
+}
+.badge.full { background: rgba(34,197,94,.12); border-color: rgba(34,197,94,.25); color: var(--green); }
+.badge.zero { background: rgba(239,68,68,.1); border-color: rgba(239,68,68,.2); color: var(--red); }
+.matrix-msg { padding: 32px; text-align: center; color: var(--dim); font-size: 12px; }
 
-    /* ---- Log box ---- */
-    .logbox {
-      background: var(--bg); border: 1px solid var(--bg3); border-radius: 6px;
-      padding: 12px; font-family: monospace; font-size: 12px;
-      max-height: 320px; overflow-y: auto; line-height: 1.6;
-    }
-    .l-ok   { color: var(--green); }
-    .l-err  { color: var(--red); }
-    .l-skip { color: var(--dim); }
+/* ---- Queue section ---- */
+.q-stats {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px 16px; margin-bottom: 12px;
+}
+.qs { font-size: 10px; color: var(--dim); }
+.qs strong { color: var(--text); }
+.qdiv { width: 1px; height: 18px; background: var(--border); flex-shrink: 0; }
+.drip-ctrl { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.drip-ind { display: flex; align-items: center; gap: 5px; font-size: 10px; }
+.drip-dot { width: 7px; height: 7px; border-radius: 50%; }
+.drip-dot.on  { background: var(--green); }
+.drip-dot.off { background: var(--yellow); }
+.drip-toggle {
+  font-size: 10px; padding: 4px 12px;
+  background: none; border: 1px solid var(--border);
+  border-radius: 4px; color: var(--dim); cursor: pointer;
+}
+.drip-toggle:hover { border-color: var(--amber); color: var(--amber); }
 
-    /* ---- Coming soon ---- */
-    .badge-gray {
-      font-size: 10px; background: var(--bg3); color: var(--dim);
-      padding: 2px 7px; border-radius: 3px; margin-left: 6px;
-    }
+.queue-panels { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.qpanel {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;
+}
+.qpanel-head {
+  padding: 9px 13px; background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.qp-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.qp-label.green { color: var(--green); }
+.qp-label.yellow { color: var(--yellow); }
+.qp-label.gray  { color: var(--gray); }
+.qp-ct { font-size: 10px; color: var(--dim); background: var(--bg4); border-radius: 10px; padding: 1px 8px; }
+.qlist { max-height: 380px; overflow-y: auto; flex: 1; }
+.qi {
+  padding: 7px 13px; border-bottom: 1px solid rgba(46,50,64,.4);
+  border-left: 3px solid transparent;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.qi:last-child { border-bottom: none; }
+.qi.syn { border-left-color: var(--green); }
+.qi.que { border-left-color: var(--yellow); }
+.qi.sch { border-left-color: var(--gray); }
+.qi-main { flex: 1; min-width: 0; }
+.qi-title {
+  font-size: 11px; color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.qi-title a { color: var(--text); }
+.qi-title a:hover { color: var(--amber); text-decoration: none; }
+.qi-meta { font-size: 9px; color: var(--dim); margin-top: 2px; }
+.qi-meta .pos { color: var(--yellow); }
+.qi-meta .gray { color: var(--gray); }
+.qi-score { font-size: 9px; color: var(--dim); flex-shrink: 0; }
+.now-btn {
+  font-size: 9px; padding: 3px 8px; flex-shrink: 0;
+  background: none; border: 1px solid rgba(245,166,35,.3);
+  border-radius: 3px; color: var(--amber); cursor: pointer;
+}
+.now-btn:hover { border-color: var(--amber); }
+.empty-msg { padding: 20px; text-align: center; color: var(--dim); font-size: 11px; }
 
-    /* ---- Quick actions ---- */
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .act-btn {
-      background: var(--bg2); border: 1px solid var(--amber);
-      color: var(--amber); padding: 10px 18px; border-radius: 6px;
-      font-size: 13px; font-weight: 600; cursor: pointer;
-      display: flex; align-items: center; gap: 8px; transition: background .15s;
-    }
-    .act-btn:hover { background: var(--bg3); }
-    .act-btn:disabled { opacity: .4; cursor: not-allowed; }
-    .act-btn.act-ok   { border-color: var(--green); color: var(--green); }
-    .act-btn.act-spin { border-color: var(--dim);   color: var(--dim); }
-    .spin {
-      width: 13px; height: 13px; border: 2px solid currentColor;
-      border-top-color: transparent; border-radius: 50%;
-      animation: spin .6s linear infinite; display: none;
-    }
-    .act-btn.act-spin .spin { display: inline-block; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .act-note { margin-top: 10px; font-size: 11px; color: var(--dim); }
+/* ---- Log ---- */
+.log-box {
+  background: var(--bg4); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px;
+  font-family: 'Courier New', monospace; font-size: 10px;
+  max-height: 300px; overflow-y: auto; line-height: 1.8;
+}
+.ll { display: block; }
+.ll.ok   { color: var(--green); }
+.ll.fail { color: var(--red); }
+.ll.skip { color: var(--dim); }
+.ll.sep  { color: #2e3240; }
+.ll.warn { color: var(--yellow); }
 
-    /* ---- Misc ---- */
-    .dim { color: var(--dim); }
-    @media (max-width: 600px) {
-      .wrap { padding: 12px; }
-      .cards, .stats { grid-template-columns: 1fr 1fr; }
-      .topbar h1 { font-size: 13px; }
-    }
-  </style>
+/* ---- Info cards ---- */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.icard { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+.irow {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 6px 0; border-bottom: 1px solid rgba(46,50,64,.4); font-size: 11px;
+}
+.irow:last-child { border-bottom: none; }
+.irow .lbl { color: var(--dim); }
+.irow .val { font-weight: 600; text-align: right; max-width: 55%; }
+.irow .val.amber { color: var(--amber); }
+.irow .val.green { color: var(--green); }
+
+/* ---- Quick actions ---- */
+.act-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.act-btn {
+  display: flex; align-items: center; gap: 7px;
+  background: var(--bg2); border: 1px solid var(--amber);
+  color: var(--amber); padding: 9px 16px;
+  border-radius: 6px; font-size: 11px; font-weight: 700;
+  cursor: pointer; text-transform: uppercase; letter-spacing: .05em;
+}
+.act-btn:hover { background: var(--bg3); }
+.act-btn:disabled { opacity: .4; cursor: not-allowed; }
+.act-btn.ok   { border-color: var(--green); color: var(--green); }
+.act-btn.spin { border-color: var(--gray); color: var(--gray); }
+.spinner {
+  width: 11px; height: 11px; border: 2px solid currentColor;
+  border-top-color: transparent; border-radius: 50%;
+  animation: spin .6s linear infinite; display: none;
+}
+.act-btn.spin .spinner { display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.act-note { margin-top: 8px; font-size: 10px; color: var(--dim); }
+
+/* ---- Responsive ---- */
+@media (max-width: 960px) {
+  .stats-bar { grid-template-columns: repeat(3,1fr); }
+  .queue-panels { grid-template-columns: 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .stats-bar { grid-template-columns: repeat(2,1fr); }
+  .wrap { padding: 10px 12px; }
+}
+</style>
 </head>
 <body>
 
-<!-- Password Gate -->
+<!-- PASSWORD GATE -->
 <div id="gate">
-  <div class="gate-box">
-    <h1>Tow With The Flow</h1>
-    <p>Syndication Dashboard</p>
+  <div class="gate-card">
+    <h1>TOW WITH THE FLOW</h1>
+    <div class="gate-sub">Syndication Dashboard</div>
     <input type="password" id="pw" placeholder="Password" autocomplete="current-password">
-    <button id="pw-btn">Unlock Dashboard</button>
-    <div id="gate-err"></div>
+    <button id="pw-btn">Unlock</button>
+    <div class="gate-err" id="gate-err"></div>
   </div>
 </div>
 
-<!-- Dashboard -->
+<!-- DASHBOARD -->
 <div id="dash">
-  <div class="topbar">
-    <h1>Tow With The Flow &mdash; Syndication Dashboard</h1>
-    <div class="topbar-right">
-      <span id="refresh-ts" class="dim">Loading&hellip;</span>
+
+  <div class="dash-header">
+    <div class="dash-title">TOW WITH THE FLOW -- Syndication Dashboard</div>
+    <div class="dash-right">
+      <span class="upd-badge" id="upd-ts">Loading...</span>
       <button class="lock-btn" onclick="lock()">Lock</button>
     </div>
   </div>
 
   <div class="wrap">
 
-    <!-- 1. Syndication Status -->
-    <div class="sec">
-      <div class="sec-title">Syndication Status</div>
-      <div class="cards">
-
-        <div class="card">
-          <div class="card-hd"><span class="card-name">Dev.to</span><span class="dot" id="dt-dot"></span></div>
-          <div class="card-n"  id="dt-n">—</div>
-          <div class="card-sub" id="dt-sub">Loading&hellip;</div>
-          <a class="card-lnk" href="https://dev.to/towwiththeflowyoo" target="_blank">View profile &rarr;</a>
-        </div>
-
-        <div class="card">
-          <div class="card-hd"><span class="card-name">Hashnode</span><span class="dot" id="hn-dot"></span></div>
-          <div class="card-n"  id="hn-n">—</div>
-          <div class="card-sub" id="hn-sub">Loading&hellip;</div>
-          <a class="card-lnk" href="https://towwiththeflow.hashnode.dev" target="_blank">View blog &rarr;</a>
-        </div>
-
-        <div class="card">
-          <div class="card-hd"><span class="card-name">Tumblr</span><span class="dot" id="tb-dot"></span></div>
-          <div class="card-n"  id="tb-n">—</div>
-          <div class="card-sub" id="tb-sub">Loading&hellip;</div>
-          <a class="card-lnk" href="https://www.tumblr.com/towwiththeflow" target="_blank">View blog &rarr;</a>
-        </div>
-
-        <div class="card">
-          <div class="card-hd"><span class="card-name">Blogger</span><span class="dot" id="bl-dot"></span></div>
-          <div class="card-n"  id="bl-n">—</div>
-          <div class="card-sub" id="bl-sub">Loading&hellip;</div>
-          <a class="card-lnk" href="https://denverroadsideguide.blogspot.com" target="_blank">View blog &rarr;</a>
-        </div>
-
-        <div class="card">
-          <div class="card-hd"><span class="card-name">Feeder (GitHub Pages)</span><span class="dot" id="fd-dot"></span></div>
-          <div class="card-n"  id="fd-n">—</div>
-          <div class="card-sub" id="fd-sub">Loading&hellip;</div>
-          <a class="card-lnk" href="https://lordshrrred.github.io/TTWF_GithubPages/" target="_blank">View feeder &rarr;</a>
-        </div>
-
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="s-card">
+        <div class="s-label">Total Posts</div>
+        <div class="s-value" id="sv-total">--</div>
+        <div class="s-sub">towwiththeflow.com</div>
+      </div>
+      <div class="s-card">
+        <div class="s-label">Syndicated This Week</div>
+        <div class="s-value" id="sv-week">--</div>
+        <div class="s-sub">all platforms, last 7 days</div>
+      </div>
+      <div class="s-card">
+        <div class="s-label">Overall Success Rate</div>
+        <div class="s-value" id="sv-rate">--</div>
+        <div class="s-sub">successes / attempts</div>
+      </div>
+      <div class="s-card">
+        <div class="s-label">Active Platforms</div>
+        <div class="s-value" id="sv-plats">5</div>
+        <div class="s-sub">of 8 planned</div>
+      </div>
+      <div class="s-card">
+        <div class="s-label">Backlog Remaining</div>
+        <div class="s-value" id="sv-backlog">--</div>
+        <div class="s-sub">posts in drip queue</div>
+      </div>
+      <div class="s-card">
+        <div class="s-label">Feeder Coverage</div>
+        <div class="s-value" id="sv-feeder">--</div>
+        <div class="s-sub">posts with feeder variation</div>
       </div>
     </div>
 
-    <!-- 2. Backlink Verification -->
-    <div class="sec">
-      <div class="sec-title">Backlink Verification</div>
-      <div id="backlinks"><div class="dim" style="font-size:12px;">Checking backlinks&hellip;</div></div>
+    <!-- PLATFORM MATRIX -->
+    <div class="section">
+      <div class="sec-head">
+        <div class="sec-title">Platform Syndication Matrix</div>
+        <div class="sec-right" id="matrix-info">Loading...</div>
+      </div>
+
+      <div class="plat-bar">
+        <div class="plat-pill" id="pp-devto">
+          <span>Dev.to</span>
+          <span class="ps" id="ps-devto">...</span>
+          <button class="test-btn" onclick="testPlatform('devto')">Test</button>
+        </div>
+        <div class="plat-pill" id="pp-hashnode">
+          <span>Hashnode</span>
+          <span class="ps" id="ps-hashnode">...</span>
+          <button class="test-btn" onclick="testPlatform('hashnode')">Test</button>
+        </div>
+        <div class="plat-pill" id="pp-tumblr">
+          <span>Tumblr</span>
+          <span class="ps" id="ps-tumblr">...</span>
+          <button class="test-btn" onclick="testPlatform('tumblr')">Test</button>
+        </div>
+        <div class="plat-pill" id="pp-blogger">
+          <span>Blogger</span>
+          <span class="ps" id="ps-blogger">...</span>
+          <button class="test-btn" onclick="testPlatform('blogger')">Test</button>
+        </div>
+        <div class="plat-pill" id="pp-feeder">
+          <span>Feeder</span>
+          <span class="ps" id="ps-feeder">...</span>
+          <button class="test-btn" onclick="testPlatform('feeder')">Test</button>
+        </div>
+        <div class="plat-pill dim"><span>Write.as</span><span class="ps">Not connected</span></div>
+        <div class="plat-pill dim"><span>Bear Blog</span><span class="ps">Not connected</span></div>
+        <div class="plat-pill dim"><span>Ghost</span><span class="ps">Not connected</span></div>
+      </div>
+
+      <div class="matrix-outer" id="matrix-outer">
+        <div class="matrix-msg">Fetching post list and syndication data...</div>
+      </div>
     </div>
 
-    <!-- 3. TWTF Main Site Stats -->
-    <div class="sec">
-      <div class="sec-title">TWTF Main Site Stats</div>
-      <div class="stats">
-        <div class="sbox">
-          <div class="sbox-lbl">Total Posts</div>
-          <div class="sbox-val" id="s-posts">—</div>
-          <div class="sbox-sub">in content/posts/</div>
+    <!-- SYNDICATION QUEUE -->
+    <div class="section">
+      <div class="sec-head">
+        <div class="sec-title">Syndication Queue</div>
+      </div>
+
+      <div class="q-stats">
+        <div class="qs">Syndicated: <strong id="qs-syn">--</strong></div>
+        <div class="qdiv"></div>
+        <div class="qs">Queued: <strong id="qs-que">--</strong></div>
+        <div class="qdiv"></div>
+        <div class="qs">Est. completion: <strong id="qs-comp">--</strong></div>
+        <div class="qdiv"></div>
+        <div class="qs">Rate: <strong>1 post/day</strong></div>
+        <div class="qdiv"></div>
+        <div class="qs">Today: <strong id="qs-today">--</strong></div>
+        <div class="drip-ctrl">
+          <div class="drip-ind">
+            <div class="drip-dot on"></div>
+            <span style="color:var(--dim)">New posts: <strong id="np-status" style="color:var(--green)">ACTIVE</strong></span>
+          </div>
+          <div class="drip-ind">
+            <div class="drip-dot on" id="drip-dot"></div>
+            <span style="color:var(--dim)">Backlog drip: <strong id="drip-status" style="color:var(--green)">ACTIVE</strong></span>
+          </div>
+          <button class="drip-toggle" id="drip-btn" onclick="toggleDrip()">Pause Drip</button>
         </div>
-        <div class="sbox">
-          <div class="sbox-lbl">Keywords Remaining</div>
-          <div class="sbox-val" id="s-kw">—</div>
-          <div class="sbox-sub">in keywords.txt</div>
+      </div>
+
+      <div class="queue-panels">
+        <div class="qpanel">
+          <div class="qpanel-head">
+            <span class="qp-label green">Syndicated</span>
+            <span class="qp-ct" id="qct-syn">0</span>
+          </div>
+          <div class="qlist" id="ql-syn"></div>
         </div>
-        <div class="sbox">
-          <div class="sbox-lbl">Last Deploy</div>
-          <div class="sbox-val" id="s-deploy" style="font-size:13px;padding-top:4px;">—</div>
-          <div class="sbox-sub" id="s-deploy-msg">—</div>
+        <div class="qpanel">
+          <div class="qpanel-head">
+            <span class="qp-label yellow">Queued for Drip</span>
+            <span class="qp-ct" id="qct-que">0</span>
+          </div>
+          <div class="qlist" id="ql-que"></div>
         </div>
-        <div class="sbox">
-          <div class="sbox-lbl">Next Scheduled Post</div>
-          <div class="sbox-val" style="font-size:14px;padding-top:4px;">9:00 AM UTC</div>
-          <div class="sbox-sub">Daily via GitHub Actions</div>
+        <div class="qpanel">
+          <div class="qpanel-head">
+            <span class="qp-label gray">Upcoming Keywords</span>
+            <span class="qp-ct" id="qct-sch">0</span>
+          </div>
+          <div class="qlist" id="ql-sch"></div>
         </div>
       </div>
     </div>
 
-    <!-- 4. Syndication Log -->
-    <div class="sec">
-      <div class="sec-title">Syndication Log (Last 20 Entries)</div>
-      <div class="logbox" id="logbox"><div class="l-skip">Fetching log&hellip;</div></div>
+    <!-- SYNDICATION LOG -->
+    <div class="section">
+      <div class="sec-head">
+        <div class="sec-title">Syndication Log</div>
+        <div class="sec-right" id="log-info">Last 30 entries</div>
+      </div>
+      <div class="log-box" id="log-box"><span class="ll skip">Fetching log...</span></div>
     </div>
 
-    <!-- 5. Coming Soon -->
-    <div class="sec">
-      <div class="sec-title">Platforms Coming Soon</div>
-      <div class="cards">
-        <div class="card">
-          <div class="card-hd">
-            <span class="card-name">Write.as<span class="badge-gray">Not connected yet</span></span>
-          </div>
-          <div class="card-sub" style="margin-top:8px;">Open-source, privacy-focused blogging</div>
+    <!-- SITE STATS -->
+    <div class="section two-col">
+      <div class="icard">
+        <div class="sec-head" style="margin-bottom:10px">
+          <div class="sec-title">towwiththeflow.com Stats</div>
         </div>
-        <div class="card">
-          <div class="card-hd">
-            <span class="card-name">Bear Blog<span class="badge-gray">Not connected yet</span></span>
-          </div>
-          <div class="card-sub" style="margin-top:8px;">Minimal, fast blogging for SEO</div>
+        <div class="irow"><span class="lbl">Total Posts</span><span class="val amber" id="ii-posts">--</span></div>
+        <div class="irow"><span class="lbl">Keywords Remaining</span><span class="val" id="ii-kw">--</span></div>
+        <div class="irow"><span class="lbl">Last Deploy Date</span><span class="val" id="ii-deploy">--</span></div>
+        <div class="irow"><span class="lbl">Last Commit</span><span class="val" style="font-size:10px" id="ii-commit">--</span></div>
+        <div class="irow"><span class="lbl">Next Scheduled Post</span><span class="val green">9:00 AM UTC daily</span></div>
+      </div>
+      <div class="icard">
+        <div class="sec-head" style="margin-bottom:10px">
+          <div class="sec-title">Feeder Site Stats (TTWF_GithubPages)</div>
         </div>
-        <div class="card">
-          <div class="card-hd">
-            <span class="card-name">Ghost<span class="badge-gray">Not connected yet</span></span>
-          </div>
-          <div class="card-sub" style="margin-top:8px;">Professional publishing platform</div>
+        <div class="irow"><span class="lbl">Total Feeder Posts</span><span class="val amber" id="ii-fposts">--</span></div>
+        <div class="irow"><span class="lbl">Last Feeder Post</span><span class="val" id="ii-flast">--</span></div>
+        <div class="irow"><span class="lbl">Feeder Backlink Coverage</span><span class="val green" id="ii-fbl">--</span></div>
+        <div class="irow"><span class="lbl">Last Feeder Commit</span><span class="val" style="font-size:10px" id="ii-fcommit">--</span></div>
+        <div class="irow">
+          <span class="lbl">Feeder Site</span>
+          <a href="https://lordshrrred.github.io/TTWF_GithubPages/" target="_blank" style="font-size:10px">View feeder site</a>
         </div>
       </div>
     </div>
 
-    <!-- 6. Quick Actions -->
-    <div class="sec">
-      <div class="sec-title">Quick Actions</div>
-      <div class="actions">
+    <!-- QUICK ACTIONS -->
+    <div class="section">
+      <div class="sec-head">
+        <div class="sec-title">Quick Actions</div>
+        <div class="sec-right">Triggers GitHub Actions workflows via API</div>
+      </div>
+      <div class="act-grid">
         <button class="act-btn" id="btn-gen" onclick="triggerWf('daily-post.yml','btn-gen','Generate Post Now')">
-          <span class="spin"></span>Generate Post Now
+          <span class="spinner"></span>Generate Post Now
         </button>
         <button class="act-btn" id="btn-kw" onclick="triggerWf('weekly-keywords.yml','btn-kw','Run Keyword Research')">
-          <span class="spin"></span>Run Keyword Research
+          <span class="spinner"></span>Run Keyword Research
         </button>
-        <button class="act-btn" id="btn-backlog" onclick="triggerWf('daily-post.yml','btn-backlog','Sync Backlog Post')">
-          <span class="spin"></span>Sync Backlog Post
+        <button class="act-btn" id="btn-bl" onclick="triggerWf('daily-post.yml','btn-bl','Sync Backlog Post')">
+          <span class="spinner"></span>Sync One Backlog Post
+        </button>
+        <button class="act-btn" id="btn-ta" onclick="testAll()">
+          <span class="spinner"></span>Test All Connections
         </button>
       </div>
-      <p class="act-note">Triggers GitHub Actions workflow. Allow ~30s for the run to start.</p>
+      <div class="act-note">Allow ~30s for workflow to start after triggering. Drip pause/resume commits a flag file to the repo.</div>
     </div>
 
   </div><!-- /wrap -->
 </div><!-- /dash -->
 
 <script>
-// ── Config ──────────────────────────────────────────────────────────────────
-const PW_HASH   = '__PASSWORD_HASH__';
-const GH_TOKEN  = '__GITHUB_TOKEN__';
-const TWTF      = 'Lordshrrred/TowWithTheFlow';
-const FEEDER    = 'Lordshrrred/TTWF_GithubPages';
-const TTL       = 5 * 60 * 1000;
+/* ============================================================
+   CONFIG -- injected at build time by build_dashboard.py
+   ============================================================ */
+const PW_HASH    = '__PASSWORD_HASH__';
+const GH_TOKEN   = '__GITHUB_TOKEN__';
+const BLOG_ID    = '__BLOGGER_BLOG_ID__';
+const BLOG_KEY   = '__BLOGGER_API_KEY__';
+const TWTF       = 'Lordshrrred/TowWithTheFlow';
+const FEEDER     = 'Lordshrrred/TTWF_GithubPages';
+const TTL        = 5 * 60 * 1000;
 
-// ── Utilities ────────────────────────────────────────────────────────────────
+/* ============================================================
+   UTILITIES
+   ============================================================ */
 async function sha256(s) {
-  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
-  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2,'0')).join('');
 }
-function cGet(k)     { try { const v=sessionStorage.getItem('d_'+k); if(!v)return null; const o=JSON.parse(v); return Date.now()-o.t<TTL?o.v:null; }catch{return null;} }
-function cSet(k,v)   { try { sessionStorage.setItem('d_'+k,JSON.stringify({t:Date.now(),v})); }catch{} }
-function esc(s)      { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-function age(d)      { const s=Math.floor((Date.now()-new Date(d))/1000); if(s<3600)return Math.floor(s/60)+'m ago'; if(s<86400)return Math.floor(s/3600)+'h ago'; return Math.floor(s/86400)+'d ago'; }
-function dot(id,ok)  { const e=document.getElementById(id); if(e)e.className='dot '+(ok===true?'ok':ok===false?'err':''); }
-function txt(id,v)   { const e=document.getElementById(id); if(e)e.textContent=v; }
+const cGet = k => { try { const v = sessionStorage.getItem('d_'+k); if (!v) return null; const o = JSON.parse(v); return Date.now()-o.t < TTL ? o.v : null; } catch { return null; } };
+const cSet = (k,v) => { try { sessionStorage.setItem('d_'+k, JSON.stringify({t:Date.now(),v})); } catch {} };
+const esc  = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const txt  = (id,v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+const html = (id,v) => { const e = document.getElementById(id); if (e) e.innerHTML = v; };
 
-async function jFetch(cKey, url, opts={}) {
-  const c=cGet(cKey); if(c)return c;
-  const r=await fetch(url,opts); if(!r.ok)throw new Error('HTTP '+r.status);
-  const d=await r.json(); cSet(cKey,d); return d;
+function age(d) {
+  if (!d) return '--';
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return Math.floor(s) + 's ago';
+  if (s < 3600)  return Math.floor(s/60) + 'm ago';
+  if (s < 86400) return Math.floor(s/3600) + 'h ago';
+  return Math.floor(s/86400) + 'd ago';
 }
-async function tFetch(cKey, url) {
-  const c=cGet(cKey); if(c)return c;
-  const r=await fetch(url); if(!r.ok)throw new Error('HTTP '+r.status);
-  const t=await r.text(); cSet(cKey,t); return t;
+function fmtDate(d) {
+  if (!d) return '--';
+  return new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+}
+function addDays(n) {
+  const d = new Date(); d.setDate(d.getDate() + n); return d;
+}
+function fmtShort(d) {
+  return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+}
+function slugToTitle(s) {
+  return s.split('-').map(w => w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
 }
 function ghH() {
-  const h={'User-Agent':'TWTF-Dashboard'};
-  if(GH_TOKEN&&GH_TOKEN!=='__GITHUB_TOKEN__') h['Authorization']='token '+GH_TOKEN;
+  const h = {'User-Agent':'TWTF-Dashboard', Accept:'application/vnd.github.v3+json'};
+  if (GH_TOKEN && !GH_TOKEN.startsWith('__')) h['Authorization'] = 'token ' + GH_TOKEN;
   return h;
 }
+async function jFetch(key, url, opts={}) {
+  const c = cGet(key); if (c) return c;
+  const r = await fetch(url, opts);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const d = await r.json(); cSet(key,d); return d;
+}
+async function tFetch(key, url) {
+  const c = cGet(key); if (c) return c;
+  const r = await fetch(url);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const t = await r.text(); cSet(key,t); return t;
+}
 
-// ── Auth ─────────────────────────────────────────────────────────────────────
+/* ============================================================
+   AUTH
+   ============================================================ */
 async function unlock() {
   const val = document.getElementById('pw').value;
-  if(!val) return;
+  if (!val) return;
   const h = await sha256(val);
-  if(h === PW_HASH) {
+  if (h === PW_HASH) {
     sessionStorage.setItem('twtf_ok','1');
-    document.getElementById('gate').style.display='none';
-    document.getElementById('dash').style.display='block';
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('dash').style.display = 'block';
     init();
   } else {
-    document.getElementById('gate-err').textContent='Incorrect password.';
+    document.getElementById('gate-err').textContent = 'Incorrect password.';
   }
 }
 function lock() { sessionStorage.removeItem('twtf_ok'); location.reload(); }
-
 document.getElementById('pw-btn').addEventListener('click', unlock);
-document.getElementById('pw').addEventListener('keydown', e=>{ if(e.key==='Enter') unlock(); });
-
-if(sessionStorage.getItem('twtf_ok')==='1') {
-  document.getElementById('gate').style.display='none';
-  document.getElementById('dash').style.display='block';
+document.getElementById('pw').addEventListener('keydown', e => { if (e.key==='Enter') unlock(); });
+if (sessionStorage.getItem('twtf_ok')==='1') {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('dash').style.display = 'block';
 }
 
-// ── Section 1: Platform Status ───────────────────────────────────────────────
-async function loadDevTo() {
-  try {
-    const data = await jFetch('devto','https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1000');
-    const n = data.length;
-    const r = data[0];
-    txt('dt-n', n + ' posts');
-    txt('dt-sub', r ? '"'+r.title.slice(0,55)+'" — '+age(r.published_at) : 'No posts yet');
-    dot('dt-dot', n>0);
-    return data;
-  } catch(e) {
-    txt('dt-n','Error'); txt('dt-sub',e.message); dot('dt-dot',false); return [];
-  }
-}
+/* ============================================================
+   DATA STORE
+   ============================================================ */
+const D = {
+  posts:       [],   // [{slug, title}]
+  synced:      new Set(),
+  feederFiles: [],
+  devto:       [],
+  hashnode:    [],
+  blogger:     [],
+  logMap:      {},   // {slug: {DEVTO:{status,url}, HASHNODE:..., TUMBLR:..., BLOGGER:...}}
+  logLines:    [],
+  feederBacklog: [],
+  keywords:    [],
+  dripPaused:  false,
+};
 
-async function loadHashnode() {
-  try {
-    const q = `{publication(host:"towwiththeflow.hashnode.dev"){posts(first:10){totalDocuments edges{node{title publishedAt url canonicalUrl}}}}}`;
-    const data = await jFetch('hn','https://gql.hashnode.com',{
-      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({query:q})
-    });
-    const posts = data.data?.publication?.posts;
-    const n     = posts?.totalDocuments || 0;
-    const nodes = posts?.edges?.map(e=>e.node) || [];
-    const r     = nodes[0];
-    txt('hn-n', n + ' posts');
-    txt('hn-sub', r ? '"'+r.title.slice(0,55)+'" — '+age(r.publishedAt) : 'No posts yet');
-    dot('hn-dot', n>0);
-    return nodes;
-  } catch(e) {
-    txt('hn-n','Error'); txt('hn-sub',e.message); dot('hn-dot',false); return [];
-  }
-}
-
-async function loadBlogger() {
-  try {
-    const data = await jFetch('bl','https://denverroadsideguide.blogspot.com/feeds/posts/default?alt=json&max-results=10');
-    const entries = data.feed?.entry || [];
-    const total   = parseInt(data.feed?.['openSearch$totalResults']?.['$t'] || '0') || entries.length;
-    const r       = entries[0];
-    txt('bl-n', total + ' posts');
-    txt('bl-sub', r ? '"'+(r.title?.['$t']||'').slice(0,55)+'" — '+age(r.published?.['$t']||'') : 'No posts yet');
-    dot('bl-dot', total>0);
-    return entries;
-  } catch(e) {
-    txt('bl-n','Error'); txt('bl-sub',e.message); dot('bl-dot',false); return [];
-  }
-}
-
-async function loadTumblr() {
-  // Tumblr API requires OAuth — cannot call from browser without CORS proxy
-  txt('tb-n', 'CORS limited');
-  txt('tb-sub', 'Check syndication log for Tumblr status');
-  dot('tb-dot', null);
-}
-
-async function loadFeeder() {
-  try {
-    const [commits, tree] = await Promise.all([
-      jFetch('fd_c', `https://api.github.com/repos/${FEEDER}/commits?per_page=1`, {headers:ghH()}),
-      jFetch('fd_t', `https://api.github.com/repos/${FEEDER}/git/trees/main?recursive=1`, {headers:ghH()})
-    ]);
-    const posts = tree.tree.filter(f=>f.path.startsWith('content/posts/')&&f.path.endsWith('.md'));
-    const n = posts.length;
-    const c = commits[0]?.commit;
-    txt('fd-n', n + ' posts');
-    txt('fd-sub', c ? c.message.split('\n')[0].slice(0,60)+' — '+age(c.author.date) : '—');
-    dot('fd-dot', n>0);
-    return posts;
-  } catch(e) {
-    txt('fd-n','Error'); txt('fd-sub',e.message); dot('fd-dot',false); return [];
-  }
-}
-
-// ── Section 2: Backlinks ─────────────────────────────────────────────────────
-function blRow(platform, ok, summary, samples) {
-  return `<div class="bl-row">
-    <div class="bl-hd">
-      <span class="bl-name">${esc(platform)}</span>
-      ${ok ? '<span class="bl-ok">&#10003; Backlinks found</span>' : '<span class="bl-no">&#10007; Not detected</span>'}
-    </div>
-    <div class="bl-sum">${esc(summary)}</div>
-    <ul class="bl-list">
-      ${samples.map(s=>`<li>
-        ${s.ok?'<span class="bl-ok">&#10003;</span>':'<span class="bl-no">&#10007;</span>'}
-        <span>${esc(s.title.slice(0,60))}</span>
-        ${s.url?`<a class="bl-url" href="${esc(s.url)}" target="_blank">&rarr; ${esc(s.url.replace(/^https?:\/\//,'').slice(0,55))}</a>`:''}
-      </li>`).join('')}
-    </ul>
-  </div>`;
-}
-
-async function loadBacklinks(dtPosts, hnNodes, blEntries) {
-  const rows = [];
-
-  // Dev.to: check canonical_url
-  const dtCanon = dtPosts.filter(p=>p.canonical_url?.includes('towwiththeflow.com'));
-  rows.push(blRow('Dev.to', dtCanon.length>0,
-    `${dtCanon.length}/${dtPosts.length} posts have canonical URL pointing to towwiththeflow.com`,
-    dtPosts.slice(0,3).map(p=>({
-      title: p.title, url: p.canonical_url||p.url,
-      ok: !!(p.canonical_url?.includes('towwiththeflow.com'))
-    }))));
-
-  // Hashnode: check canonicalUrl
-  const hnCanon = hnNodes.filter(p=>p.canonicalUrl?.includes('towwiththeflow.com'));
-  rows.push(blRow('Hashnode', hnCanon.length>0,
-    `${hnCanon.length}/${hnNodes.length} posts have canonical URL set to towwiththeflow.com`,
-    hnNodes.slice(0,3).map(p=>({
-      title: p.title, url: p.canonicalUrl||p.url,
-      ok: !!(p.canonicalUrl?.includes('towwiththeflow.com'))
-    }))));
-
-  // Blogger: check content for backlinks
-  const blBack = blEntries.filter(e=>(e.content?.['$t']||e.summary?.['$t']||'').includes('towwiththeflow.com'));
-  rows.push(blRow('Blogger', blBack.length>0,
-    `${blBack.length}/${blEntries.length} fetched posts contain towwiththeflow.com backlinks`,
-    blEntries.slice(0,3).map(e=>{
-      const content = e.content?.['$t']||e.summary?.['$t']||'';
-      const url = e.link?.find(l=>l.rel==='alternate')?.href||'';
-      return {title: e.title?.['$t']||'', url, ok: content.includes('towwiththeflow.com')};
-    })));
-
-  // Feeder: backlinks enforced at generation
-  rows.push(blRow('Feeder (GitHub Pages)', true,
-    'All feeder posts generated with specific post backlinks (enforced by generate_variation.py)',
-    [{title:'generate_variation.py — enforces specific-post backlinks',
-      url:`https://github.com/${FEEDER}/blob/main/scripts/generate_variation.py`, ok:true}]));
-
-  document.getElementById('backlinks').innerHTML = rows.join('');
-}
-
-// ── Section 3: Site Stats ────────────────────────────────────────────────────
-async function loadStats() {
-  try {
-    const [commits, tree] = await Promise.all([
-      jFetch('tw_c', `https://api.github.com/repos/${TWTF}/commits?per_page=1`, {headers:ghH()}),
-      jFetch('tw_t', `https://api.github.com/repos/${TWTF}/git/trees/main?recursive=1`, {headers:ghH()})
-    ]);
-    const posts = tree.tree.filter(f=>
-      f.path.startsWith('content/posts/')&&f.path.endsWith('.md')&&!f.path.includes('_index'));
-    txt('s-posts', posts.length);
-
-    const c = commits[0]?.commit;
-    if(c) {
-      txt('s-deploy', new Date(c.author.date).toLocaleDateString());
-      txt('s-deploy-msg', c.message.split('\n')[0].slice(0,48));
+/* ---- Log parser ---- */
+function parseLog(text) {
+  D.logMap = {}; D.logLines = [];
+  if (!text) return;
+  for (const line of text.split('\n').filter(Boolean)) {
+    if (line.includes('--- Syndicating:') || line.includes('--- Done syndicating:')) {
+      D.logLines.push({raw:line, type:'sep'}); continue;
     }
-  } catch(e) { txt('s-posts','Err'); console.error(e); }
-
-  try {
-    const kw = await tFetch('tw_kw', `https://raw.githubusercontent.com/${TWTF}/main/scripts/keywords.txt`);
-    const remaining = kw.split('\n').filter(l=>l.trim()&&!l.trim().startsWith('#')).length;
-    txt('s-kw', remaining);
-  } catch { txt('s-kw','N/A'); }
-}
-
-// ── Section 4: Syndication Log ───────────────────────────────────────────────
-async function loadLog() {
-  const el = document.getElementById('logbox');
-  try {
-    const text = await tFetch('log',
-      `https://raw.githubusercontent.com/${TWTF}/main/scripts/syndication_log.txt`);
-    const lines = text.trim().split('\n').filter(Boolean).slice(-20).reverse();
-    if(!lines.length) { el.innerHTML='<div class="l-skip">Log is empty.</div>'; return; }
-    el.innerHTML = lines.map(ln=>{
-      const low=ln.toLowerCase();
-      let cls='l-skip';
-      if(/success|posted|ok\b/.test(low)) cls='l-ok';
-      else if(/fail|error|\berr\b/.test(low)) cls='l-err';
-      return `<div class="${cls}">${esc(ln)}</div>`;
-    }).join('');
-  } catch {
-    el.innerHTML='<div class="l-skip">syndication_log.txt is .gitignored — not available remotely. Run locally to view.</div>';
+    const m = line.match(/^\[([^\]]+)\]\s+(\w+)\s+\|\s+([^|]+?)\s+\|\s+(\w+)(.*)/);
+    if (!m) { D.logLines.push({raw:line,type:'skip'}); continue; }
+    const [,ts,plat,slug,status,extra] = m;
+    const sk = slug.trim();
+    const urlM = extra.match(/url=(\S+)/);
+    const url = urlM ? urlM[1] : null;
+    const type = status==='SUCCESS'?'ok': status==='SKIP'?'skip':'fail';
+    D.logLines.push({raw:line,ts,plat,slug:sk,status,url,type});
+    if (!D.logMap[sk]) D.logMap[sk] = {};
+    D.logMap[sk][plat] = {status, url};
   }
 }
 
-// ── Section 6: Quick Actions ─────────────────────────────────────────────────
+/* ============================================================
+   FETCHERS
+   ============================================================ */
+async function fetchDevTo() {
+  return jFetch('dt', 'https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1000');
+}
+async function fetchHashnode() {
+  const q = '{publication(host:"towwiththeflow.hashnode.dev"){posts(first:50){totalDocuments edges{node{title publishedAt url canonicalUrl}}}}}';
+  const d = await jFetch('hn','https://gql.hashnode.com',{
+    method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({query:q})
+  });
+  return d.data?.publication?.posts?.edges?.map(e=>e.node)||[];
+}
+async function fetchBlogger() {
+  try {
+    if (BLOG_KEY && !BLOG_KEY.startsWith('__') && BLOG_ID && !BLOG_ID.startsWith('__')) {
+      const d = await jFetch('bl_api', `https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${BLOG_KEY}&maxResults=50&fields=items(title,url,published)`);
+      return d.items||[];
+    }
+    const d = await jFetch('bl_rss','https://denverroadsideguide.blogspot.com/feeds/posts/default?alt=json&max-results=50');
+    return (d.feed?.entry||[]).map(e=>({
+      title: e.title?.['$t']||'',
+      url:   e.link?.find(l=>l.rel==='alternate')?.href||'',
+      published: e.published?.['$t'],
+    }));
+  } catch { return []; }
+}
+async function checkDripPaused() {
+  try {
+    const r = await fetch(`https://api.github.com/repos/${TWTF}/contents/scripts/DRIP_PAUSED`,{headers:ghH()});
+    return r.status===200;
+  } catch { return false; }
+}
+
+async function fetchAll() {
+  const [
+    twtfTree, feederTree, twtfCommits, feederCommits,
+    dt, hn, bl,
+    logTxt, syncedTxt, backlogTxt, kwTxt,
+    dripPaused,
+  ] = await Promise.allSettled([
+    jFetch('tw_tree', `https://api.github.com/repos/${TWTF}/git/trees/main?recursive=1`,{headers:ghH()}),
+    jFetch('fd_tree', `https://api.github.com/repos/${FEEDER}/git/trees/main?recursive=1`,{headers:ghH()}),
+    jFetch('tw_c',    `https://api.github.com/repos/${TWTF}/commits?per_page=1`,{headers:ghH()}),
+    jFetch('fd_c',    `https://api.github.com/repos/${FEEDER}/commits?per_page=1`,{headers:ghH()}),
+    fetchDevTo(), fetchHashnode(), fetchBlogger(),
+    tFetch('tw_log',     `https://raw.githubusercontent.com/${TWTF}/main/scripts/syndication_log.txt`),
+    tFetch('tw_synced',  `https://raw.githubusercontent.com/${TWTF}/main/scripts/synced-posts.txt`),
+    tFetch('tw_backlog', `https://raw.githubusercontent.com/${TWTF}/main/scripts/feeder_backlog.txt`),
+    tFetch('tw_kw',      `https://raw.githubusercontent.com/${TWTF}/main/scripts/keywords.txt`),
+    checkDripPaused(),
+  ]);
+
+  if (twtfTree.status==='fulfilled') {
+    D.posts = twtfTree.value.tree
+      .filter(f=>f.path.startsWith('content/posts/')&&f.path.endsWith('.md')&&!f.path.includes('_index'))
+      .map(f=>{ const slug=f.path.replace('content/posts/','').replace('.md',''); return {slug,title:slugToTitle(slug)}; })
+      .sort((a,b)=>a.slug.localeCompare(b.slug));
+  }
+  if (feederTree.status==='fulfilled') {
+    D.feederFiles = feederTree.value.tree
+      .filter(f=>f.path.startsWith('content/posts/')&&f.path.endsWith('.md'))
+      .map(f=>f.path.replace('content/posts/','').replace('.md',''));
+  }
+  if (twtfCommits.status==='fulfilled'&&twtfCommits.value[0]) {
+    const c = twtfCommits.value[0].commit;
+    txt('ii-deploy', fmtDate(c.author.date));
+    txt('ii-commit', c.message.split('\n')[0].slice(0,55));
+  }
+  if (feederCommits.status==='fulfilled'&&feederCommits.value[0]) {
+    const c = feederCommits.value[0].commit;
+    txt('ii-flast', age(c.author.date));
+    txt('ii-fcommit', c.message.split('\n')[0].slice(0,55));
+  }
+  if (dt.status==='fulfilled')  D.devto    = dt.value;
+  if (hn.status==='fulfilled')  D.hashnode = hn.value;
+  if (bl.status==='fulfilled')  D.blogger  = bl.value;
+  if (logTxt.status==='fulfilled')     parseLog(logTxt.value);
+  else D.logLines = [{raw:'syndication_log.txt not yet pushed to GitHub -- commit it locally to enable remote log viewing.',type:'skip'}];
+  if (syncedTxt.status==='fulfilled')  D.synced      = new Set(syncedTxt.value.split('\n').map(l=>l.trim()).filter(Boolean));
+  if (backlogTxt.status==='fulfilled') D.feederBacklog = backlogTxt.value.split('\n').map(l=>l.trim()).filter(Boolean);
+  if (kwTxt.status==='fulfilled')      D.keywords    = kwTxt.value.split('\n').filter(l=>l.trim()&&!l.trim().startsWith('#'));
+  D.dripPaused = dripPaused.status==='fulfilled' && dripPaused.value===true;
+}
+
+/* ============================================================
+   SYNDICATION STATUS HELPERS
+   ============================================================ */
+function devtoStatus(slug) {
+  const p = D.devto.find(p=>{const c=p.canonical_url||''; return c.includes('/'+slug+'/') || c.endsWith('/'+slug);});
+  if (p) return {ok:true, url:p.url};
+  const l = D.logMap[slug]?.DEVTO;
+  if (l?.status==='SUCCESS') return {ok:true, url:null};
+  if (l?.status==='SKIP')    return {ok:false, skip:true};
+  if (l)                     return {ok:false, fail:true};
+  return {};
+}
+function hashnodeStatus(slug) {
+  const p = D.hashnode.find(p=>{const c=p.canonicalUrl||''; return c.includes('/'+slug+'/') || c.endsWith('/'+slug);});
+  if (p) return {ok:true, url:p.url};
+  const l = D.logMap[slug]?.HASHNODE;
+  if (l?.status==='SUCCESS') return {ok:true, url:l.url};
+  if (l) return {ok:false, fail:true};
+  return {};
+}
+function tumblrStatus(slug) {
+  const l = D.logMap[slug]?.TUMBLR;
+  if (!l) return {};
+  if (l.status==='SUCCESS') return {ok:true, url:l.url};
+  return {ok:false, fail:true};
+}
+function bloggerStatus(slug) {
+  const kw = slug.replace(/-/g,' ');
+  const p = D.blogger.find(p=>(p.url||'').includes(slug) || (p.title||'').toLowerCase().includes(kw));
+  if (p) return {ok:true, url:p.url};
+  const l = D.logMap[slug]?.BLOGGER;
+  if (l?.status==='SUCCESS') return {ok:true, url:l.url};
+  if (l) return {ok:false, fail:true};
+  return {};
+}
+function feederStatus(slug) {
+  let found = null;
+  if (slug.startsWith('towing-cost-')) {
+    const city = slug.replace('towing-cost-','');
+    found = D.feederFiles.find(f=>f===city+'-towing-prices'||f.startsWith(city+'-towing-prices'));
+  }
+  if (!found) found = D.feederFiles.find(f=>f.startsWith(slug+'-')||f===slug);
+  if (found) return {ok:true, url:`https://lordshrrred.github.io/TTWF_GithubPages/${found}/`};
+  return {};
+}
+
+function cell(s, label) {
+  if (s.ok)   return s.url ? `<a href="${esc(s.url)}" target="_blank" class="c-ok" title="View on ${esc(label)}">&#10003;</a>` : `<span class="c-ok" title="Syndicated">&#10003;</span>`;
+  if (s.fail) return `<span class="c-fail" title="Failed">&#10007;</span>`;
+  if (s.skip) return `<span class="c-skip" title="Paused/Skipped">--</span>`;
+  return `<span class="c-none" title="Not attempted">&#8722;</span>`;
+}
+const pendCell = () => `<span class="c-pend" title="Not connected yet">--</span>`;
+
+/* ============================================================
+   RENDER MATRIX
+   ============================================================ */
+function renderMatrix() {
+  if (!D.posts.length) { html('matrix-outer','<div class="matrix-msg">No posts found.</div>'); return; }
+  let ok=0, tot=0;
+  const rows = D.posts.map(p=>{
+    const dt=devtoStatus(p.slug), hn=hashnodeStatus(p.slug),
+          tb=tumblrStatus(p.slug), bl=bloggerStatus(p.slug), fd=feederStatus(p.slug);
+    const cells=[dt,hn,tb,bl,fd];
+    const score = cells.filter(c=>c.ok).length;
+    tot+=5; ok+=score;
+    const bCls = score===5?'full':score===0?'zero':'';
+    return `<tr>
+      <td class="td-post"><a href="https://towwiththeflow.com/${p.slug}/" target="_blank" class="t">${esc(p.title)}</a></td>
+      <td>${cell(dt,'Dev.to')}</td>
+      <td>${cell(hn,'Hashnode')}</td>
+      <td>${cell(tb,'Tumblr')}</td>
+      <td>${cell(bl,'Blogger')}</td>
+      <td>${cell(fd,'Feeder')}</td>
+      <td>${pendCell()}</td><td>${pendCell()}</td><td>${pendCell()}</td>
+      <td><span class="badge ${bCls}">${score}/5</span></td>
+    </tr>`;
+  }).join('');
+
+  const rate = tot>0 ? Math.round(ok/tot*100)+'%' : '--';
+  txt('sv-rate', rate);
+  txt('matrix-info', `${D.posts.length} posts -- ${ok}/${tot} cells synced`);
+
+  html('matrix-outer',`<table class="matrix">
+    <thead><tr>
+      <th class="th-post">Post</th>
+      <th>Dev.to</th><th>Hashnode</th><th>Tumblr</th><th>Blogger</th><th>Feeder</th>
+      <th style="opacity:.35">Write.as</th>
+      <th style="opacity:.35">Bear</th>
+      <th style="opacity:.35">Ghost</th>
+      <th>Score</th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`);
+}
+
+/* ============================================================
+   RENDER STATS BAR
+   ============================================================ */
+function renderStats() {
+  txt('sv-total', D.posts.length);
+  const weekAgo = Date.now() - 7*24*3600*1000;
+  const weekOk  = D.logLines.filter(l=>l.type==='ok'&&new Date(l.ts)>weekAgo).length;
+  txt('sv-week', weekOk);
+  txt('sv-backlog', D.feederBacklog.length);
+  const covered = D.posts.filter(p=>feederStatus(p.slug).ok).length;
+  txt('sv-feeder', covered+'/'+D.posts.length);
+  txt('ii-posts', D.posts.length);
+  txt('ii-kw', D.keywords.length);
+  txt('ii-fposts', D.feederFiles.length);
+  txt('ii-fbl', D.feederFiles.length+'/'+D.posts.length+' posts');
+}
+
+/* ============================================================
+   RENDER QUEUE
+   ============================================================ */
+function renderQueue() {
+  const synced  = [...D.synced].filter(Boolean);
+  const allSlug = D.posts.map(p=>p.slug);
+  const queued  = allSlug.filter(s=>!D.synced.has(s));
+  const kws     = D.keywords.slice(0,7);
+
+  txt('qs-syn',  synced.length);
+  txt('qs-que',  queued.length);
+  txt('qct-syn', synced.length);
+  txt('qct-que', queued.length);
+  txt('qct-sch', kws.length);
+
+  const compDate = addDays(queued.length);
+  txt('qs-comp', fmtDate(compDate));
+
+  const todayStr = new Date().toISOString().slice(0,10);
+  const todayOk  = D.logLines.filter(l=>l.type==='ok'&&(l.ts||'').startsWith(todayStr)).length;
+  txt('qs-today', todayOk+' syndicated');
+
+  // Panel 1: Syndicated
+  html('ql-syn', synced.length ? synced.map(slug=>{
+    const plats = D.logMap[slug] ? Object.entries(D.logMap[slug]).filter(([,v])=>v.status==='SUCCESS').map(([k])=>k).join(', ') : '--';
+    return `<div class="qi syn">
+      <div class="qi-main">
+        <div class="qi-title"><a href="https://towwiththeflow.com/${slug}/" target="_blank">${esc(slugToTitle(slug))}</a></div>
+        <div class="qi-meta">${esc(plats)}</div>
+      </div>
+    </div>`;
+  }).join('') : '<div class="empty-msg">No synced posts yet.</div>');
+
+  // Panel 2: Queued
+  html('ql-que', queued.length ? queued.map((slug,i)=>`<div class="qi que">
+    <div class="qi-main">
+      <div class="qi-title">${esc(slugToTitle(slug))}</div>
+      <div class="qi-meta"><span class="pos">#${i+1} in queue</span> -- est. ${fmtShort(addDays(i+1))}</div>
+    </div>
+    <button class="now-btn" onclick="syndicateNow('${slug}')">Now</button>
+  </div>`).join('') : '<div class="empty-msg">All posts syndicated.</div>');
+
+  // Panel 3: Keywords
+  html('ql-sch', kws.length ? kws.map((kw,i)=>{
+    const clean = kw.replace(/^\[\d+\]\s*/,'').trim();
+    return `<div class="qi sch">
+      <div class="qi-main">
+        <div class="qi-title">${esc(clean)}</div>
+        <div class="qi-meta gray">Not yet written -- est. ${fmtShort(addDays(i+1))}</div>
+      </div>
+    </div>`;
+  }).join('') : '<div class="empty-msg">No keywords remaining.</div>');
+
+  updateDripUI(D.dripPaused);
+}
+
+function updateDripUI(paused) {
+  const dot = document.getElementById('drip-dot');
+  const st  = document.getElementById('drip-status');
+  const btn = document.getElementById('drip-btn');
+  if (paused) {
+    dot.className='drip-dot off'; st.textContent='PAUSED'; st.style.color='var(--yellow)';
+    if (btn) btn.textContent='Resume Drip';
+  } else {
+    dot.className='drip-dot on'; st.textContent='ACTIVE'; st.style.color='var(--green)';
+    if (btn) btn.textContent='Pause Drip';
+  }
+}
+
+/* ============================================================
+   RENDER LOG
+   ============================================================ */
+function renderLog() {
+  const lines = D.logLines.slice(-30).reverse();
+  txt('log-info', `Last ${Math.min(lines.length,30)} entries (newest first)`);
+  if (!lines.length) { html('log-box','<span class="ll skip">No log entries.</span>'); return; }
+  html('log-box', lines.map(l=>{
+    const cls = l.type==='ok'?'ok':l.type==='fail'?'fail':l.type==='sep'?'sep':'skip';
+    const link = l.url ? ` <a href="${esc(l.url)}" target="_blank" style="color:var(--amber);font-size:9px">[view]</a>` : '';
+    return `<span class="ll ${cls}">${esc(l.raw)}${link}</span>`;
+  }).join(''));
+}
+
+/* ============================================================
+   PLATFORM TEST BUTTONS
+   ============================================================ */
+async function testPlatform(plat) {
+  const el = document.getElementById('ps-'+plat);
+  if (el) { el.textContent='Testing...'; el.className='ps'; }
+  const t0 = Date.now();
+  try {
+    let ok = false;
+    if (plat==='devto') {
+      ok = (await fetch('https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1')).ok;
+    } else if (plat==='hashnode') {
+      const r = await fetch('https://gql.hashnode.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:'{publication(host:"towwiththeflow.hashnode.dev"){posts(first:1){totalDocuments}}}'})});
+      ok = r.ok;
+    } else if (plat==='tumblr') {
+      const last = D.logLines.filter(l=>l.plat==='TUMBLR').slice(-1)[0];
+      if (el) { el.textContent = last?(last.type==='ok'?'Last: OK':'Last: FAIL'):'No log data'; el.className='ps '+(last?.type==='ok'?'ok':'warn'); }
+      return;
+    } else if (plat==='blogger') {
+      ok = (await fetch('https://denverroadsideguide.blogspot.com/feeds/posts/default?alt=json&max-results=1')).ok;
+    } else if (plat==='feeder') {
+      ok = (await fetch(`https://api.github.com/repos/${FEEDER}/commits?per_page=1`,{headers:ghH()})).ok;
+    }
+    const ms = Date.now()-t0;
+    if (el) { el.textContent=ok?`OK (${ms}ms)`:'Failed'; el.className='ps '+(ok?'ok':'err'); }
+  } catch { if (el) { el.textContent='Failed'; el.className='ps err'; } }
+}
+
+async function testAll() {
+  const btn = document.getElementById('btn-ta');
+  if (btn) { btn.disabled=true; btn.classList.add('spin'); }
+  await Promise.all(['devto','hashnode','tumblr','blogger','feeder'].map(testPlatform));
+  if (btn) {
+    btn.classList.remove('spin'); btn.classList.add('ok');
+    btn.lastChild.textContent = ' All Tests Done';
+    setTimeout(()=>{ btn.classList.remove('ok'); btn.disabled=false; btn.lastChild.textContent=' Test All Connections'; },3500);
+  }
+}
+
+/* ============================================================
+   QUICK ACTIONS
+   ============================================================ */
 async function triggerWf(wf, btnId, label) {
   const btn = document.getElementById(btnId);
-  if(!btn||btn.disabled) return;
-  btn.disabled = true;
-  btn.classList.add('act-spin');
+  if (!btn||btn.disabled) return;
+  if (!GH_TOKEN||GH_TOKEN.startsWith('__')) { alert('GitHub token not injected. Run build_dashboard.py first.'); return; }
+  btn.disabled=true; btn.classList.add('spin');
   try {
     const r = await fetch(`https://api.github.com/repos/${TWTF}/actions/workflows/${wf}/dispatches`,{
       method:'POST',
-      headers:{ Authorization:`token ${GH_TOKEN}`, 'Content-Type':'application/json',
-                Accept:'application/vnd.github.v3+json' },
-      body: JSON.stringify({ref:'main'})
+      headers:{Authorization:'token '+GH_TOKEN,'Content-Type':'application/json',Accept:'application/vnd.github.v3+json'},
+      body:JSON.stringify({ref:'main'})
     });
-    btn.classList.remove('act-spin');
-    if(r.status===204) {
-      btn.classList.add('act-ok');
+    btn.classList.remove('spin');
+    if (r.status===204) {
+      btn.classList.add('ok');
       btn.lastChild.textContent = ' Triggered!';
-      setTimeout(()=>{ btn.classList.remove('act-ok'); btn.disabled=false;
-        btn.lastChild.textContent = ' '+label; }, 3500);
+      setTimeout(()=>{ btn.classList.remove('ok'); btn.disabled=false; btn.lastChild.textContent=' '+label; },4000);
+    } else { throw new Error('HTTP '+r.status); }
+  } catch(e) { btn.classList.remove('spin'); btn.disabled=false; alert('Failed: '+e.message); }
+}
+
+async function syndicateNow(slug) {
+  if (!GH_TOKEN||GH_TOKEN.startsWith('__')) { alert('GitHub token not injected.'); return; }
+  if (!confirm('Syndicate "'+slugToTitle(slug)+'" now?\n\nThis triggers a workflow run. The drip queue order is unchanged -- next auto-syndication remains on schedule.')) return;
+  try {
+    const r = await fetch(`https://api.github.com/repos/${TWTF}/actions/workflows/daily-post.yml/dispatches`,{
+      method:'POST',
+      headers:{Authorization:'token '+GH_TOKEN,'Content-Type':'application/json',Accept:'application/vnd.github.v3+json'},
+      body:JSON.stringify({ref:'main'})
+    });
+    if (r.status===204) alert('Triggered!\n\nManually syndicated -- drip queue unchanged, next auto-syndication still on schedule.');
+    else throw new Error('HTTP '+r.status);
+  } catch(e) { alert('Failed: '+e.message); }
+}
+
+async function toggleDrip() {
+  if (!GH_TOKEN||GH_TOKEN.startsWith('__')) { alert('GitHub token not injected.'); return; }
+  const btn = document.getElementById('drip-btn');
+  if (btn) { btn.disabled=true; btn.textContent=D.dripPaused?'Resuming...':'Pausing...'; }
+  try {
+    if (!D.dripPaused) {
+      await fetch(`https://api.github.com/repos/${TWTF}/contents/scripts/DRIP_PAUSED`,{
+        method:'PUT',
+        headers:{Authorization:'token '+GH_TOKEN,'Content-Type':'application/json',Accept:'application/vnd.github.v3+json'},
+        body:JSON.stringify({message:'Pause backlog drip via dashboard',content:btoa('paused')})
+      });
     } else {
-      throw new Error('Status '+r.status);
+      const fR = await fetch(`https://api.github.com/repos/${TWTF}/contents/scripts/DRIP_PAUSED`,{headers:ghH()});
+      if (fR.ok) {
+        const fD = await fR.json();
+        await fetch(`https://api.github.com/repos/${TWTF}/contents/scripts/DRIP_PAUSED`,{
+          method:'DELETE',
+          headers:{Authorization:'token '+GH_TOKEN,'Content-Type':'application/json',Accept:'application/vnd.github.v3+json'},
+          body:JSON.stringify({message:'Resume backlog drip via dashboard',sha:fD.sha})
+        });
+      }
     }
-  } catch(e) {
-    btn.classList.remove('act-spin'); btn.disabled=false;
-    alert('Failed: '+e.message);
-  }
+    D.dripPaused = !D.dripPaused;
+    cSet('drip_paused', D.dripPaused);
+    updateDripUI(D.dripPaused);
+  } catch(e) { alert('Failed: '+e.message); }
+  if (btn) btn.disabled=false;
 }
 
-// ── Init ─────────────────────────────────────────────────────────────────────
+/* ============================================================
+   INIT + AUTO-REFRESH
+   ============================================================ */
 async function init() {
-  txt('refresh-ts','Loading...');
-  const [dtPosts, hnNodes, blEntries] = await Promise.all([
-    loadDevTo(), loadHashnode(), loadBlogger(),
-    loadTumblr(), loadFeeder(), loadStats(), loadLog()
-  ]);
-  await loadBacklinks(dtPosts, hnNodes, blEntries);
-  txt('refresh-ts', 'Refreshed '+new Date().toLocaleTimeString());
-  setTimeout(()=>{ Object.keys(sessionStorage).filter(k=>k.startsWith('d_')).forEach(k=>sessionStorage.removeItem(k)); init(); }, TTL);
+  txt('upd-ts','Loading...');
+  await fetchAll();
+  renderStats();
+  renderMatrix();
+  renderQueue();
+  renderLog();
+  txt('upd-ts','Updated '+new Date().toLocaleTimeString());
+  setTimeout(()=>{
+    Object.keys(sessionStorage).filter(k=>k.startsWith('d_')).forEach(k=>sessionStorage.removeItem(k));
+    init();
+  }, TTL);
 }
 
-if(sessionStorage.getItem('twtf_ok')==='1') init();
+if (sessionStorage.getItem('twtf_ok')==='1') init();
 </script>
 </body>
 </html>
