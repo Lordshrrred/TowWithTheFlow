@@ -12,23 +12,21 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg:       #080810;
-      --surface:  #0d0d1a;
-      --surface2: #12122a;
-      --surface3: #181835;
-      --orange:     #FF6B2B;
-      --orange-dim: rgba(255,107,43,0.12);
-      --orange-glow:rgba(255,107,43,0.08);
-      --amber:     #FFB347;
-      --amber-dim: rgba(255,179,71,0.15);
-      --green:    #39FF14;
-      --purple:   #cc44ff;
-      --red:      #FF4444;
-      --teal:     #4a9e96;
-      --text:     #f0ede8;
-      --text-muted: #7a6a5a;
-      --border:   rgba(255,107,43,0.12);
-      --border-amber: rgba(255,179,71,0.15);
+      --bg:         #0f1117;
+      --surface:    #161922;
+      --surface2:   #1e2230;
+      --surface3:   #252a3a;
+      --amber:      #f5a623;
+      --amber-dim:  rgba(245,166,35,0.12);
+      --amber-glow: rgba(245,166,35,0.07);
+      --amber2:     #e8950f;
+      --green:      #39FF14;
+      --red:        #FF4444;
+      --blue:       #4a9eff;
+      --text:       #e8e4da;
+      --text-muted: #6b7280;
+      --border:     rgba(245,166,35,0.12);
+      --border2:    rgba(245,166,35,0.20);
     }
     html { scroll-behavior: smooth; }
     body {
@@ -40,7 +38,7 @@
     h1,h2,h3,h4 { font-family: "Poppins", sans-serif; }
 
     /* ── Stars canvas ── */
-    #stars-canvas { position: fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:0.5; }
+    #stars-canvas { position: fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:0.4; }
 
     /* ── Auth gate ── */
     #gate {
@@ -52,7 +50,7 @@
       border-radius: 12px; padding: 2.5rem; width: 100%; max-width: 380px;
       text-align: center;
     }
-    .gate-logo { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.5rem; }
+    .gate-logo { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.5rem; }
     .gate-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text); }
     .gate-sub { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2rem; }
     .gate-input {
@@ -61,9 +59,9 @@
       color: var(--text); font-size: 0.95rem; margin-bottom: 1rem;
       font-family: inherit; outline: none; transition: border-color 0.2s;
     }
-    .gate-input:focus { border-color: var(--orange); }
+    .gate-input:focus { border-color: var(--amber); }
     .gate-btn {
-      width: 100%; padding: 0.8rem; background: var(--orange); color: #080810;
+      width: 100%; padding: 0.8rem; background: var(--amber); color: #0f1117;
       border: none; border-radius: 6px; font-size: 0.9rem; font-weight: 700;
       font-family: "Poppins", sans-serif; letter-spacing: 0.05em;
       cursor: pointer; transition: opacity 0.2s;
@@ -79,10 +77,10 @@
       padding: 1.2rem 2rem; display: flex; align-items: center;
       justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;
       border-bottom: 1px solid var(--border);
-      background: rgba(8,8,16,0.9); backdrop-filter: blur(8px);
+      background: rgba(15,17,23,0.92); backdrop-filter: blur(8px);
       position: sticky; top: 0; z-index: 50;
     }
-    .dash-logo { font-family: "Poppins", sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--orange); letter-spacing: 0.1em; text-decoration: none; }
+    .dash-logo { font-family: "Poppins", sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--amber); letter-spacing: 0.1em; text-decoration: none; }
     .dash-tabs { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
     .dash-tab {
       padding: 0.45rem 1.1rem; font-size: 0.78rem; font-weight: 600;
@@ -90,8 +88,8 @@
       color: var(--text-muted); background: transparent; transition: all 0.2s;
       font-family: "Rajdhani", sans-serif;
     }
-    .dash-tab:hover { color: var(--orange); background: var(--orange-glow); }
-    .dash-tab.active { color: var(--orange); background: var(--orange-dim); border-left: 1px solid var(--border); }
+    .dash-tab:hover { color: var(--amber); background: var(--amber-glow); }
+    .dash-tab.active { color: var(--amber); background: var(--amber-dim); border-left: 1px solid var(--border); }
     .dash-tab:first-child { border-left: none; }
     .dash-right { display: flex; align-items: center; gap: 1rem; }
     .last-updated { font-size: 0.75rem; color: var(--text-muted); }
@@ -106,6 +104,25 @@
     /* ── Main content ── */
     .dash-main { padding: 1.8rem 2rem 4rem; max-width: 1600px; width: 100%; margin: 0 auto; }
 
+    /* ── Activating banner ── */
+    .activating-banner {
+      background: var(--surface); border: 1px solid var(--border2);
+      border-left: 3px solid var(--amber);
+      border-radius: 10px; padding: 1.2rem 1.5rem; margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    }
+    .activating-banner .ab-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .activating-banner .ab-text { flex: 1; }
+    .activating-banner .ab-title { font-weight: 600; color: var(--amber); font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .activating-banner .ab-sub { font-size: 0.8rem; color: var(--text-muted); }
+    .ab-fetch-btn {
+      padding: 0.4rem 1rem; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; background: var(--amber);
+      color: #0f1117; border: none; border-radius: 4px; cursor: pointer;
+      font-family: "Rajdhani", sans-serif; white-space: nowrap;
+    }
+    .ab-fetch-btn:hover { opacity: 0.85; }
+
     /* ── Section title ── */
     .section-title {
       font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em;
@@ -113,15 +130,8 @@
     }
 
     /* ── Skeleton loader ── */
-    @keyframes skeleton-pulse {
-      0%, 100% { opacity: 0.4; }
-      50%       { opacity: 0.8; }
-    }
-    .skeleton {
-      background: var(--surface2);
-      border-radius: 6px;
-      animation: skeleton-pulse 1.5s ease-in-out infinite;
-    }
+    @keyframes skeleton-pulse { 0%,100%{opacity:0.4;} 50%{opacity:0.75;} }
+    .skeleton { background: var(--surface2); border-radius: 6px; animation: skeleton-pulse 1.5s ease-in-out infinite; }
 
     /* ── Stat cards row ── */
     .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
@@ -131,36 +141,12 @@
     }
     .stat-card::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--orange), transparent);
+      background: linear-gradient(90deg, var(--amber), transparent);
     }
     .stat-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
-    .stat-value { font-family: "Poppins", sans-serif; font-size: 2rem; font-weight: 700; color: var(--orange); line-height: 1; margin-bottom: 0.3rem; }
+    .stat-value { font-family: "Poppins", sans-serif; font-size: 2rem; font-weight: 700; color: var(--amber); line-height: 1; margin-bottom: 0.3rem; }
     .stat-sub { font-size: 0.75rem; color: var(--text-muted); }
     .stat-skel { height: 90px; }
-
-    /* ── Realtime strip ── */
-    .realtime-card {
-      background: var(--surface); border: 1px solid rgba(255,107,43,0.2);
-      border-radius: 10px; padding: 1.1rem 1.5rem; margin-bottom: 1.5rem;
-      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
-    }
-    .rt-pulse { display: flex; align-items: center; gap: 0.55rem; white-space: nowrap; }
-    .rt-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--orange); flex-shrink: 0; animation: rt-blink 1.5s ease-in-out infinite; }
-    @keyframes rt-blink { 0%,100%{opacity:1;box-shadow:0 0 6px var(--orange);} 50%{opacity:0.5;box-shadow:none;} }
-    .rt-count { font-family: "Poppins", sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--orange); }
-    .rt-label { font-size: 0.8rem; color: var(--text-muted); }
-    .rt-pages { display: flex; gap: 0.5rem; flex-wrap: wrap; flex: 1; }
-    .rt-page-pill {
-      font-size: 0.72rem; padding: 0.22rem 0.6rem; background: rgba(255,107,43,0.08);
-      border: 1px solid rgba(255,107,43,0.2); border-radius: 20px; color: var(--text);
-      display: flex; align-items: center; gap: 0.4rem; max-width: 240px;
-    }
-    .rt-page-pill .rt-page-n { font-weight: 700; color: var(--orange); }
-    .rt-page-path { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .rt-countries { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-    .rt-country { font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; }
-    .rt-skel { height: 58px; }
-    .rt-last { font-size: 0.7rem; color: var(--text-muted); opacity: 0.7; white-space: nowrap; margin-left: auto; }
 
     /* ── Two-column rows ── */
     .two-col { display: grid; gap: 1.5rem; margin-bottom: 1.5rem; }
@@ -168,15 +154,12 @@
     .two-col.split-5050 { grid-template-columns: 1fr 1fr; }
 
     /* ── Chart card ── */
-    .chart-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 10px; padding: 1.3rem 1.5rem;
-    }
+    .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.5rem; }
     .chart-card h3 { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 1.1rem; }
     .chart-wrap { position: relative; }
     .chart-skel { width: 100%; border-radius: 6px; }
 
-    /* ── Sources chart legend ── */
+    /* ── Sources legend ── */
     .sources-legend { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 1rem; }
     .source-row { display: flex; align-items: center; gap: 0.6rem; }
     .source-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
@@ -184,55 +167,40 @@
     .source-pct { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
     .source-sessions { font-size: 0.78rem; color: var(--text-muted); }
 
-    /* ── Top pages list ── */
+    /* ── Top pages ── */
     .pages-list { display: flex; flex-direction: column; gap: 0; }
     .page-row {
       display: grid; grid-template-columns: 2rem 1fr auto; align-items: center;
-      gap: 0.6rem; padding: 0.55rem 0.6rem; border-radius: 5px;
-      transition: background 0.15s; cursor: default;
+      gap: 0.6rem; padding: 0.55rem 0.6rem; border-radius: 5px; transition: background 0.15s;
     }
     .page-row:nth-child(even) { background: rgba(255,255,255,0.02); }
-    .page-row:hover { background: var(--orange-glow); }
+    .page-row:hover { background: var(--amber-glow); }
     .page-rank { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-align: right; }
     .page-path-wrap { min-width: 0; }
     .page-path {
-      font-size: 0.8rem; color: var(--orange); text-decoration: none;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-      display: block; max-width: 100%;
+      font-size: 0.8rem; color: var(--amber); text-decoration: none;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; max-width: 100%;
     }
     .page-path:hover { text-decoration: underline; }
     .page-bar-wrap { display: flex; align-items: center; gap: 0.5rem; }
     .page-bar-bg { width: 60px; height: 4px; background: var(--surface2); border-radius: 2px; overflow: hidden; flex-shrink: 0; }
-    .page-bar-fill { height: 100%; background: var(--orange); border-radius: 2px; }
+    .page-bar-fill { height: 100%; background: var(--amber); border-radius: 2px; }
     .page-views { font-size: 0.78rem; font-weight: 600; color: var(--text); white-space: nowrap; }
 
-    /* ── Guide categories ── */
-    .cat-list { display: flex; flex-direction: column; gap: 0.7rem; }
-    .cat-row { display: flex; align-items: center; gap: 0.7rem; }
-    .cat-name { font-size: 0.82rem; color: var(--text); min-width: 140px; }
-    .cat-bar-bg { flex: 1; height: 8px; background: var(--surface2); border-radius: 4px; overflow: hidden; }
-    .cat-bar-fill { height: 100%; background: linear-gradient(90deg, var(--orange), var(--amber)); border-radius: 4px; }
-    .cat-val { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); min-width: 44px; text-align: right; }
-    .cat-pct { font-size: 0.72rem; color: var(--orange); min-width: 36px; text-align: right; }
-
-    /* ── Geo section ── */
+    /* ── Geo ── */
     .geo-countries { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.2rem; }
     .geo-row { display: flex; align-items: center; gap: 0.6rem; }
     .geo-name { font-size: 0.82rem; color: var(--text); min-width: 110px; white-space: nowrap; }
     .geo-bar-bg { flex: 1; height: 5px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
-    .geo-bar-fill { height: 100%; background: var(--orange); border-radius: 3px; }
+    .geo-bar-fill { height: 100%; background: var(--amber); border-radius: 3px; }
     .geo-val { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); min-width: 40px; text-align: right; }
     .cities-title { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0.8rem 0 0.5rem; }
     .city-row { display: flex; justify-content: space-between; font-size: 0.8rem; padding: 0.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
-    .city-name { color: var(--text); }
-    .city-sessions { color: var(--text-muted); font-weight: 600; }
+    .city-name { color: var(--text); } .city-sessions { color: var(--text-muted); font-weight: 600; }
 
-    /* ── Device charts row ── */
+    /* ── Device charts ── */
     .three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 1.5rem; }
-    .device-chart-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 10px; padding: 1.3rem 1.5rem;
-    }
+    .device-chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.5rem; }
     .device-chart-card h3 { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 1rem; }
     .donut-wrap { position: relative; max-width: 180px; margin: 0 auto 1rem; }
     .donut-skel { width: 160px; height: 160px; border-radius: 50%; margin: 0 auto 1rem; }
@@ -243,30 +211,36 @@
     .dev-leg-val { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
 
     /* ── New vs Returning ── */
-    .nvr-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;
-    }
+    .nvr-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; }
     .nvr-card h3 { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 1.2rem; }
     .nvr-numbers { display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
     .nvr-block { flex: 1; min-width: 140px; }
     .nvr-value { font-family: "Poppins", sans-serif; font-size: 2.8rem; font-weight: 700; line-height: 1; margin-bottom: 0.3rem; }
-    .nvr-block.new .nvr-value  { color: var(--orange); }
-    .nvr-block.ret .nvr-value  { color: var(--amber); }
+    .nvr-block.new .nvr-value { color: var(--amber); }
+    .nvr-block.ret .nvr-value { color: var(--blue); }
     .nvr-label { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; }
-    .nvr-abs   { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem; }
+    .nvr-abs { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem; }
     .nvr-bar-wrap { flex: 2; min-width: 200px; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; }
     .nvr-bar-bg { width: 100%; height: 12px; background: var(--surface2); border-radius: 6px; overflow: hidden; }
     .nvr-bar-split { height: 100%; border-radius: 6px; }
     .nvr-bar-labels { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); }
 
-    /* ── Error state ── */
+    /* ── TWTF Topic bars ── */
+    .topic-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .topic-row { display: flex; align-items: center; gap: 0.7rem; }
+    .topic-name { font-size: 0.82rem; color: var(--text); min-width: 160px; white-space: nowrap; }
+    .topic-bar-bg { flex: 1; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+    .topic-bar-fill { height: 100%; background: linear-gradient(90deg, var(--amber), var(--amber2)); border-radius: 3px; }
+    .topic-val { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); min-width: 44px; text-align: right; }
+
+    /* ── Error / Empty ── */
     .error-msg { color: var(--text-muted); font-style: italic; font-size: 0.82rem; text-align: center; padding: 1.5rem; }
+    .empty-msg { color: var(--text-muted); font-size: 0.82rem; text-align: center; padding: 2rem; opacity: 0.7; }
 
     /* ── Responsive ── */
-    @media(max-width: 1100px) { .stat-row { grid-template-columns: repeat(2,1fr); } }
-    @media(max-width: 900px)  { .two-col.split-6040,.two-col.split-5050 { grid-template-columns: 1fr; } .three-col { grid-template-columns: 1fr; } }
-    @media(max-width: 600px)  { .stat-row { grid-template-columns: 1fr; } .dash-main { padding: 1rem 1rem 3rem; } }
+    @media(max-width:1100px){.stat-row{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:900px){.two-col.split-6040,.two-col.split-5050{grid-template-columns:1fr;}.three-col{grid-template-columns:1fr;}}
+    @media(max-width:600px){.stat-row{grid-template-columns:1fr;}.dash-main{padding:1rem 1rem 3rem;}}
   </style>
 </head>
 <body>
@@ -287,10 +261,10 @@
 <!-- ── App ── -->
 <div id="app">
   <header class="dash-header">
-    <a href="./index.html" class="dash-logo">TWTF</a>
+    <a href="/dashboard/" class="dash-logo">TOW WITH THE FLOW</a>
     <nav class="dash-tabs">
-      <a href="./index.html" class="dash-tab">Syndication</a>
-      <a href="./analytics.html" class="dash-tab active">Analytics</a>
+      <a href="/dashboard/" class="dash-tab">Syndication</a>
+      <a href="/dashboard/analytics.html" class="dash-tab active">Analytics</a>
     </nav>
     <div class="dash-right">
       <span class="last-updated" id="last-updated">Loading…</span>
@@ -300,6 +274,16 @@
 
   <main class="dash-main">
 
+    <!-- Activating banner (hidden by default, shown when data is empty) -->
+    <div class="activating-banner" id="activating-banner" style="display:none;">
+      <div class="ab-icon">📡</div>
+      <div class="ab-text">
+        <div class="ab-title">Google Analytics activating…</div>
+        <div class="ab-sub">Data appears within 24–48 hours after GA4 was connected. The workflow runs daily at 6 AM UTC. <span id="ab-last-fetch"></span></div>
+      </div>
+      <button class="ab-fetch-btn" onclick="triggerFetch()">Trigger Fetch</button>
+    </div>
+
     <!-- Stat Cards -->
     <div class="stat-row" id="stat-row">
       <div class="skeleton stat-skel"></div>
@@ -308,28 +292,29 @@
       <div class="skeleton stat-skel"></div>
     </div>
 
-    <!-- Realtime strip -->
-    <div id="realtime-wrap">
-      <div class="skeleton rt-skel" style="margin-bottom:1.5rem;border-radius:10px;"></div>
-    </div>
-
-    <!-- Row 2: Pageviews chart + Sources -->
-    <div class="two-col split-6040" id="row2">
+    <!-- Row 2: Pageviews over time + Traffic Sources -->
+    <div class="two-col split-6040">
       <div class="chart-card">
         <h3>Pageviews Over Time <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— last 30 days</span></h3>
-        <div class="chart-wrap"><div class="skeleton chart-skel" id="pv-skel" style="height:200px;"></div><canvas id="pv-chart" style="display:none;"></canvas></div>
+        <div class="chart-wrap">
+          <div class="skeleton chart-skel" id="pv-skel" style="height:200px;"></div>
+          <canvas id="pv-chart" style="display:none;"></canvas>
+        </div>
       </div>
       <div class="chart-card">
         <h3>Traffic Sources</h3>
-        <div class="chart-wrap"><div class="skeleton chart-skel" id="src-skel" style="height:180px;"></div><canvas id="src-chart" style="display:none;max-height:200px;"></canvas></div>
+        <div class="chart-wrap">
+          <div class="skeleton chart-skel" id="src-skel" style="height:180px;"></div>
+          <canvas id="src-chart" style="display:none;max-height:200px;"></canvas>
+        </div>
         <div class="sources-legend" id="src-legend"></div>
       </div>
     </div>
 
-    <!-- Row 3: Top Guides + Geo -->
-    <div class="two-col split-5050" id="row3">
+    <!-- Row 3: Top Pages + Geo -->
+    <div class="two-col split-5050">
       <div class="chart-card">
-        <h3>Top Guides <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— last 30 days</span></h3>
+        <h3>Top Pages <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— last 30 days</span></h3>
         <div id="pages-list"><div class="skeleton chart-skel" style="height:320px;"></div></div>
       </div>
       <div class="chart-card">
@@ -338,20 +323,20 @@
       </div>
     </div>
 
-    <!-- Row 3b: Guide Categories (TWTF-specific) -->
-    <div class="two-col split-5050" id="row3b" style="margin-bottom:1.5rem;">
+    <!-- Row 4: TWTF-specific — Topic breakdown + City towing pages -->
+    <div class="two-col split-5050">
       <div class="chart-card">
-        <h3>Top Guide Categories <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— which content type drives traffic</span></h3>
-        <div id="cat-section"><div class="skeleton chart-skel" style="height:180px;"></div></div>
+        <h3>Top Content Categories <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— by topic</span></h3>
+        <div id="topics-list"><div class="skeleton chart-skel" style="height:200px;"></div></div>
       </div>
-      <div class="chart-card" style="display:flex;flex-direction:column;justify-content:center;">
-        <h3>Category Breakdown</h3>
-        <div class="chart-wrap" style="max-height:200px;"><div class="skeleton donut-skel" id="cat-skel" style="width:180px;height:180px;margin:0 auto;"></div><canvas id="cat-chart" style="display:none;max-height:200px;"></canvas></div>
+      <div class="chart-card">
+        <h3>City Towing Cost Pages <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— local traffic</span></h3>
+        <div id="city-pages-list"><div class="skeleton chart-skel" style="height:200px;"></div></div>
       </div>
     </div>
 
-    <!-- Row 4: Devices (3 donuts) -->
-    <div class="three-col" id="devices-row">
+    <!-- Row 5: Devices (3 donuts) -->
+    <div class="three-col">
       <div class="device-chart-card">
         <h3>Device Type</h3>
         <div class="donut-wrap"><div class="skeleton donut-skel" id="dev-skel"></div><canvas id="dev-chart" style="display:none;"></canvas></div>
@@ -370,7 +355,7 @@
     </div>
 
     <!-- New vs Returning -->
-    <div class="nvr-card" id="nvr-card">
+    <div class="nvr-card">
       <h3>New vs Returning Users</h3>
       <div id="nvr-content"><div class="skeleton chart-skel" style="height:80px;"></div></div>
     </div>
@@ -380,19 +365,21 @@
 
 <script>
 // ── Config ──────────────────────────────────────────────────────────────────
-const SESSION_KEY   = "twtf_dash_authed";
-const PW_HASH       = "__PASSWORD_HASH__";
-const GA_BASE       = "https://towwiththeflow.netlify.app/.netlify/functions/analytics";
-const REFRESH_MS    = 5 * 60 * 1000;
-const RT_REFRESH_MS = 30 * 1000;
+const SESSION_KEY  = "twtf_dash_authed";    // shared with syndication dashboard
+const PW_HASH      = "__PASSWORD_HASH__";   // injected by build_dashboard.py
+const DATA_URL     = "/data/analytics.json";
+const GH_OWNER     = "Lordshrrred";
+const GH_REPO      = "TowWithTheFlow";
+const GH_TOKEN     = "__GITHUB_TOKEN__";
+const REFRESH_MS   = 5 * 60 * 1000;
 
-// Chart.js palette — orange/amber spectrum
+// Chart.js palette — amber spectrum
 const PALETTE = [
-  "#FF6B2B", "#FFB347", "#FF8C42", "#FFC67A",
-  "#E85D20", "#FFDA9E", "#cc44ff", "#4a9e96",
+  "#f5a623","#e8950f","#ffc04a","#d4790a",
+  "#ffda80","#b36000","#4a9eff","#cc44ff",
 ];
 
-// ── Stars ────────────────────────────────────────────────────────────────────
+// ── Stars (exact VOA logic, amber tint) ────────────────────────────────────
 (function initStars() {
   const canvas = document.getElementById("stars-canvas");
   const ctx    = canvas.getContext("2d");
@@ -411,7 +398,7 @@ const PALETTE = [
       s.a = Math.max(0.05, Math.min(0.7, s.a + s.da));
       if (s.a <= 0.05 || s.a >= 0.7) s.da *= -1;
       ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,220,180,${s.a})`; ctx.fill();
+      ctx.fillStyle = `rgba(245,200,140,${s.a})`; ctx.fill();
     }
     requestAnimationFrame(draw);
   }
@@ -427,11 +414,9 @@ async function sha256hex(str) {
 
 async function initAuth() {
   if (sessionStorage.getItem(SESSION_KEY) === "1") { showApp(); return; }
-
   const input  = document.getElementById("pw-input");
   const errEl  = document.getElementById("pw-error");
   const submit = document.getElementById("pw-submit");
-
   async function tryLogin() {
     const val = input.value.trim(); if (!val) return;
     if (!PW_HASH || PW_HASH === "__PASSWORD_HASH__") {
@@ -448,7 +433,7 @@ async function initAuth() {
 
 function showApp() {
   document.getElementById("gate").style.display = "none";
-  const app = document.getElementById("app"); app.style.display = "flex";
+  document.getElementById("app").style.display = "flex";
   loadAll();
 }
 
@@ -456,19 +441,19 @@ document.getElementById("lock-btn").addEventListener("click", () => {
   sessionStorage.removeItem(SESSION_KEY); location.reload();
 });
 
-// ── Fetch helper ─────────────────────────────────────────────────────────────
-async function gaFetch(metric) {
-  const resp = await fetch(`${GA_BASE}?metric=${metric}`);
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-  const data = await resp.json();
-  if (data.error) throw new Error(data.error);
-  return data;
+// ── Data fetch (reads static JSON written by GH Actions) ─────────────────────
+let _data = null;
+async function fetchData() {
+  const resp = await fetch(DATA_URL + "?t=" + Date.now());
+  if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching analytics.json`);
+  _data = await resp.json();
+  return _data;
 }
 
 // ── Utilities ─────────────────────────────────────────────────────────────────
 function fmtNum(n) {
-  if (n >= 1000000) return (n/1000000).toFixed(1) + "M";
-  if (n >= 1000)    return (n/1000).toFixed(1) + "K";
+  if (n >= 1_000_000) return (n/1_000_000).toFixed(1) + "M";
+  if (n >= 1_000)     return (n/1_000).toFixed(1) + "K";
   return String(n);
 }
 function fmtDur(sec) {
@@ -476,12 +461,17 @@ function fmtDur(sec) {
   return `${m}m ${String(s).padStart(2,"0")}s`;
 }
 function fmtPct(f) { return (f * 100).toFixed(1) + "%"; }
-function fmtDate(d) { // YYYYMMDD → Mon DD
-  const y = d.slice(0,4), m = d.slice(4,6), day = d.slice(6,8);
+function fmtDate(d) {
+  // accepts "YYYYMMDD" or "YYYY-MM-DD"
+  const ds = d.replace(/-/g,"");
+  const y = ds.slice(0,4), m = ds.slice(4,6), day = ds.slice(6,8);
   return new Date(`${y}-${m}-${day}`).toLocaleDateString("en-US",{month:"short",day:"numeric"});
 }
 function errHtml(msg) {
-  return `<div class="error-msg">⚠ Could not load — ${msg || "check GA credentials"}</div>`;
+  return `<div class="error-msg">⚠ Could not load — ${msg || "check analytics.json"}</div>`;
+}
+function emptyHtml(msg) {
+  return `<div class="empty-msg">📊 ${msg}</div>`;
 }
 
 // ── Chart instances ───────────────────────────────────────────────────────────
@@ -491,375 +481,309 @@ function makeChart(id, config) {
   charts[id] = new Chart(document.getElementById(id), config);
 }
 
-// ── Overview / Stat Cards ─────────────────────────────────────────────────────
-async function loadOverview() {
+// ── Activating banner logic ───────────────────────────────────────────────────
+function checkActivating(d) {
+  const noData = !d.pageviews && !d.sessions;
+  const banner = document.getElementById("activating-banner");
+  if (noData) {
+    banner.style.display = "flex";
+    const lastFetch = document.getElementById("ab-last-fetch");
+    if (d.lastUpdated) {
+      lastFetch.textContent = `Last workflow run: ${new Date(d.lastUpdated).toLocaleString()}.`;
+    }
+  } else {
+    banner.style.display = "none";
+  }
+}
+
+// ── Trigger GH Actions workflow manually ─────────────────────────────────────
+async function triggerFetch() {
+  if (!GH_TOKEN || GH_TOKEN === "__GITHUB_TOKEN__") {
+    alert("GitHub token not configured — trigger the workflow manually in GitHub Actions."); return;
+  }
   try {
-    const d = await gaFetch("overview");
+    const r = await fetch(
+      `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/actions/workflows/fetch-analytics.yml/dispatches`,
+      { method: "POST",
+        headers: { "Authorization": `token ${GH_TOKEN}`, "Accept": "application/vnd.github.v3+json", "Content-Type": "application/json" },
+        body: JSON.stringify({ ref: "main" }) }
+    );
+    alert(r.ok ? "✓ Fetch workflow triggered — check Actions tab in ~30s." : `Failed: ${r.status}`);
+  } catch(e) { alert("Error: " + e.message); }
+}
 
-    document.getElementById("stat-row").innerHTML = `
-      <div class="stat-card">
-        <div class="stat-label">Pageviews</div>
-        <div class="stat-value">${fmtNum(d.pageviews)}</div>
-        <div class="stat-sub">last 30 days</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Sessions</div>
-        <div class="stat-value">${fmtNum(d.sessions)}</div>
-        <div class="stat-sub">last 30 days</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Avg. Session Duration</div>
-        <div class="stat-value" style="font-size:1.6rem;">${fmtDur(d.avgSessionDur)}</div>
-        <div class="stat-sub">avg time on site</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Bounce Rate</div>
-        <div class="stat-value" style="color:${d.bounceRate > 0.65 ? 'var(--red)' : d.bounceRate > 0.45 ? 'var(--amber)' : 'var(--green)'};">${fmtPct(d.bounceRate)}</div>
-        <div class="stat-sub">single-page sessions</div>
-      </div>`;
+// ── Overview / Stat Cards ─────────────────────────────────────────────────────
+function renderOverview(d) {
+  const isActivating = !d.pageviews && !d.sessions;
+  document.getElementById("stat-row").innerHTML = `
+    <div class="stat-card">
+      <div class="stat-label">Pageviews</div>
+      <div class="stat-value">${fmtNum(d.pageviews || 0)}</div>
+      <div class="stat-sub">last 30 days</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Sessions</div>
+      <div class="stat-value">${fmtNum(d.sessions || 0)}</div>
+      <div class="stat-sub">last 30 days</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Avg. Session Duration</div>
+      <div class="stat-value" style="font-size:1.6rem;">${fmtDur(d.avgSessionDuration || 0)}</div>
+      <div class="stat-sub">avg time on site</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Bounce Rate</div>
+      <div class="stat-value" style="color:${(d.bounceRate||0) > 0.65 ? 'var(--red)' : (d.bounceRate||0) > 0.45 ? '#e8d87a' : 'var(--green)'};">${fmtPct(d.bounceRate || 0)}</div>
+      <div class="stat-sub">single-page sessions</div>
+    </div>`;
 
-    // Pageviews line chart — uses d.daily[].date and d.daily[].pageviews
-    const labels = d.daily.map(r => fmtDate(r.date));
-    const values = d.daily.map(r => r.pageviews);
-    document.getElementById("pv-skel").style.display = "none";
-    document.getElementById("pv-chart").style.display = "block";
+  // Pageviews line chart
+  const daily = d.daily || [];
+  document.getElementById("pv-skel").style.display = "none";
+  document.getElementById("pv-chart").style.display = "block";
+  if (!daily.length || isActivating) {
+    // Show empty placeholder chart
     makeChart("pv-chart", {
       type: "line",
-      data: {
-        labels,
-        datasets: [{
-          label: "Pageviews",
-          data: values,
-          borderColor: "#FF6B2B",
-          borderWidth: 2,
-          fill: true,
-          backgroundColor: (ctx) => {
-            const g = ctx.chart.ctx.createLinearGradient(0,0,0,ctx.chart.height);
-            g.addColorStop(0, "rgba(255,107,43,0.25)");
-            g.addColorStop(1, "rgba(255,107,43,0.01)");
-            return g;
-          },
-          tension: 0.4,
-          pointRadius: 0,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: "#FF6B2B",
-        }]
-      },
-      options: {
-        responsive: true,
-        interaction: { mode: "index", intersect: false },
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: "#0d0d1a",
-            borderColor: "rgba(255,107,43,0.3)",
-            borderWidth: 1,
-            titleColor: "#f0ede8",
-            bodyColor: "#FF6B2B",
-            callbacks: { label: ctx => ` ${ctx.parsed.y.toLocaleString()} pageviews` }
-          }
+      data: { labels: ["Awaiting data"], datasets: [{ data: [0], borderColor: "rgba(245,166,35,0.3)", borderWidth: 1, fill: false, pointRadius: 0 }] },
+      options: { responsive: true, plugins: { legend:{display:false}, tooltip:{enabled:false} },
+        scales: { x:{ticks:{color:"#6b7280"}}, y:{beginAtZero:true, ticks:{color:"#6b7280"}} } }
+    });
+  } else {
+    const labels = daily.map(r => fmtDate(r.date));
+    const values = daily.map(r => r.pageviews);
+    makeChart("pv-chart", {
+      type: "line",
+      data: { labels, datasets: [{
+        label: "Pageviews", data: values,
+        borderColor: "#f5a623", borderWidth: 2, fill: true,
+        backgroundColor: (ctx) => {
+          const g = ctx.chart.ctx.createLinearGradient(0,0,0,ctx.chart.height);
+          g.addColorStop(0,"rgba(245,166,35,0.25)"); g.addColorStop(1,"rgba(245,166,35,0.01)"); return g;
         },
+        tension: 0.4, pointRadius: 0, pointHoverRadius: 5, pointHoverBackgroundColor: "#f5a623",
+      }]},
+      options: {
+        responsive: true, interaction: { mode:"index", intersect:false },
+        plugins: { legend:{display:false}, tooltip: {
+          backgroundColor:"#161922", borderColor:"rgba(245,166,35,0.3)", borderWidth:1,
+          titleColor:"#e8e4da", bodyColor:"#f5a623",
+          callbacks:{ label: ctx => ` ${ctx.parsed.y.toLocaleString()} pageviews` }
+        }},
         scales: {
-          x: { grid: { color: "rgba(255,255,255,0.04)" }, ticks: { color: "#7a6a5a", maxTicksLimit: 8, font: { size: 11 } } },
-          y: { grid: { color: "rgba(255,255,255,0.04)" }, ticks: { color: "#7a6a5a", font: { size: 11 }, callback: v => fmtNum(v) }, beginAtZero: true }
+          x:{grid:{color:"rgba(255,255,255,0.04)"},ticks:{color:"#6b7280",maxTicksLimit:8,font:{size:11}}},
+          y:{grid:{color:"rgba(255,255,255,0.04)"},ticks:{color:"#6b7280",font:{size:11},callback:v=>fmtNum(v)},beginAtZero:true}
         }
       }
     });
-
-    // New vs Returning
-    const total  = d.newUsers + d.returningUsers;
-    const newPct = total > 0 ? Math.round((d.newUsers / total) * 100) : 0;
-    const retPct = 100 - newPct;
-    document.getElementById("nvr-content").innerHTML = `
-      <div class="nvr-numbers">
-        <div class="nvr-block new">
-          <div class="nvr-value">${newPct}%</div>
-          <div class="nvr-label">New Users</div>
-          <div class="nvr-abs">${fmtNum(d.newUsers)} users</div>
-        </div>
-        <div class="nvr-block ret">
-          <div class="nvr-value">${retPct}%</div>
-          <div class="nvr-label">Returning Users</div>
-          <div class="nvr-abs">${fmtNum(d.returningUsers)} users</div>
-        </div>
-        <div class="nvr-bar-wrap">
-          <div class="nvr-bar-bg">
-            <div class="nvr-bar-split" style="width:${newPct}%;background:linear-gradient(90deg,var(--orange),var(--amber));"></div>
-          </div>
-          <div class="nvr-bar-labels">
-            <span style="color:var(--orange);">↑ New ${newPct}%</span>
-            <span style="color:var(--amber);">Returning ${retPct}% ↑</span>
-          </div>
-        </div>
-      </div>`;
-
-  } catch (err) {
-    document.getElementById("stat-row").innerHTML = `<div class="stat-card" style="grid-column:1/-1;">${errHtml(err.message)}</div>`;
-    document.getElementById("nvr-content").innerHTML = errHtml(err.message);
   }
-}
 
-// ── Realtime ─────────────────────────────────────────────────────────────────
-let rtTimer = null;
-async function loadRealtime() {
-  try {
-    const d = await gaFetch("realtime");
-    // d.pages[].page and d.pages[].users
-    const pagesHtml = (d.pages || []).map(p =>
-      `<span class="rt-page-pill">
-        <span class="rt-page-n">${p.users}</span>
-        <span class="rt-page-path" title="${p.page}">${p.page}</span>
-      </span>`
-    ).join("") || '<span style="color:var(--text-muted);font-size:0.8rem;">no active pages</span>';
-
-    // d.countries[].country and d.countries[].users
-    const countryHtml = (d.countries || []).map(c =>
-      `<span class="rt-country">🌐 ${c.country} (${c.users})</span>`
-    ).join(" · ") || "";
-
-    document.getElementById("realtime-wrap").innerHTML = `
-      <div class="realtime-card">
-        <div class="rt-pulse">
-          <div class="rt-dot"></div>
-          <span class="rt-count">${d.activeUsers}</span>
-          <span class="rt-label">active right now</span>
+  // New vs Returning
+  const nu  = d.newUsers || 0;
+  const ru  = d.returningUsers || 0;
+  const tot = nu + ru;
+  const np  = tot > 0 ? Math.round((nu/tot)*100) : 0;
+  const rp  = 100 - np;
+  document.getElementById("nvr-content").innerHTML = `
+    <div class="nvr-numbers">
+      <div class="nvr-block new"><div class="nvr-value">${np}%</div><div class="nvr-label">New Users</div><div class="nvr-abs">${fmtNum(nu)} users</div></div>
+      <div class="nvr-block ret"><div class="nvr-value">${rp}%</div><div class="nvr-label">Returning Users</div><div class="nvr-abs">${fmtNum(ru)} users</div></div>
+      <div class="nvr-bar-wrap">
+        <div class="nvr-bar-bg"><div class="nvr-bar-split" style="width:${np}%;background:linear-gradient(90deg,var(--amber),var(--blue));"></div></div>
+        <div class="nvr-bar-labels">
+          <span style="color:var(--amber);">↑ New ${np}%</span>
+          <span style="color:var(--blue);">Returning ${rp}% ↑</span>
         </div>
-        <div class="rt-pages">${pagesHtml}</div>
-        ${countryHtml ? `<div class="rt-countries">${countryHtml}</div>` : ""}
-        <span class="rt-last">refreshes every 30s</span>
-      </div>`;
-  } catch (err) {
-    document.getElementById("realtime-wrap").innerHTML =
-      `<div class="realtime-card" style="border-color:rgba(255,68,68,0.2);">${errHtml(err.message)}</div>`;
-  }
-}
-
-function startRealtimeLoop() {
-  loadRealtime();
-  if (rtTimer) clearInterval(rtTimer);
-  rtTimer = setInterval(loadRealtime, RT_REFRESH_MS);
+      </div>
+    </div>`;
 }
 
 // ── Traffic Sources ───────────────────────────────────────────────────────────
-async function loadSources() {
-  try {
-    const rows = await gaFetch("sources");
-    const labels = rows.map(r => r.channel);
-    const values = rows.map(r => r.sessions);
-    const colors = rows.map((_, i) => PALETTE[i % PALETTE.length]);
-
-    document.getElementById("src-skel").style.display = "none";
-    document.getElementById("src-chart").style.display = "block";
-
-    makeChart("src-chart", {
-      type: "doughnut",
-      data: { labels, datasets: [{ data: values, backgroundColor: colors, borderWidth: 1, borderColor: "#0d0d1a", hoverOffset: 6 }] },
-      options: {
-        cutout: "65%",
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: "#0d0d1a",
-            borderColor: "rgba(255,107,43,0.3)",
-            borderWidth: 1,
-            callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed.toLocaleString()} sessions` }
-          }
-        }
-      }
-    });
-
-    const total = values.reduce((s,v) => s+v, 0);
-    document.getElementById("src-legend").innerHTML = rows.map((r, i) => `
-      <div class="source-row">
-        <div class="source-dot" style="background:${colors[i]};"></div>
-        <span class="source-name">${r.channel}</span>
-        <span class="source-sessions">${r.sessions.toLocaleString()}</span>
-        <span class="source-pct">${r.pct}%</span>
-      </div>`).join("");
-  } catch (err) {
-    document.getElementById("src-skel").innerHTML = errHtml(err.message);
+function renderSources(d) {
+  const rows = d.trafficSources || [];
+  document.getElementById("src-skel").style.display = "none";
+  document.getElementById("src-chart").style.display = "block";
+  if (!rows.length) {
+    document.getElementById("src-legend").innerHTML = emptyHtml("No source data yet");
+    makeChart("src-chart", { type:"doughnut", data:{labels:["No data"],datasets:[{data:[1],backgroundColor:["#2a2d36"],borderWidth:0}]}, options:{cutout:"65%",plugins:{legend:{display:false},tooltip:{enabled:false}}} });
+    return;
   }
+  const labels = rows.map(r => r.source || r.channel);
+  const values = rows.map(r => r.sessions);
+  const colors = rows.map((_,i) => PALETTE[i % PALETTE.length]);
+  const total  = values.reduce((s,v)=>s+v,0);
+  makeChart("src-chart", {
+    type: "doughnut",
+    data: { labels, datasets: [{ data:values, backgroundColor:colors, borderWidth:1, borderColor:"#161922", hoverOffset:6 }] },
+    options: { cutout:"65%", plugins: { legend:{display:false}, tooltip: {
+      backgroundColor:"#161922", borderColor:"rgba(245,166,35,0.3)", borderWidth:1,
+      callbacks:{ label: ctx => ` ${ctx.label}: ${ctx.parsed.toLocaleString()} sessions` }
+    }}}
+  });
+  document.getElementById("src-legend").innerHTML = rows.map((r,i) => `
+    <div class="source-row">
+      <div class="source-dot" style="background:${colors[i]};"></div>
+      <span class="source-name">${r.source || r.channel}</span>
+      <span class="source-sessions">${(r.sessions||0).toLocaleString()}</span>
+      <span class="source-pct">${r.pct !== undefined ? r.pct : (total ? Math.round((r.sessions/total)*100) : 0)}%</span>
+    </div>`).join("");
 }
 
-// ── Top Pages + Categories ─────────────────────────────────────────────────────
-async function loadTopPages() {
-  try {
-    const pages = await gaFetch("toppages");
-    const max   = pages[0]?.pageviews || 1;
-
-    // Top Guides list
-    document.getElementById("pages-list").innerHTML =
-      `<div class="pages-list">${pages.map((p, i) => `
-        <div class="page-row">
-          <span class="page-rank">${i+1}</span>
-          <div class="page-path-wrap">
-            <a class="page-path" href="https://towwiththeflow.com${p.path}" target="_blank" rel="noopener" title="${p.path}">${p.path}</a>
-          </div>
-          <div class="page-bar-wrap">
-            <div class="page-bar-bg"><div class="page-bar-fill" style="width:${Math.round((p.pageviews/max)*100)}%;"></div></div>
-            <span class="page-views">${p.pageviews.toLocaleString()}</span>
-          </div>
-        </div>`).join("")}</div>`;
-
-    // Guide Categories
-    const CATS = [
-      { name: "Car Won't Start",  kw: ["wont-start","won-t-start","no-start","clicking","dead-battery"] },
-      { name: "Towing Costs",     kw: ["towing-cost","tow-truck-price","cost-to-tow","tow-cost","price"] },
-      { name: "Breakdowns",       kw: ["breaks-down","broke-down","breakdown","car-broke","car-died","wont-move","dead-while"] },
-      { name: "Battery Issues",   kw: ["battery","alternator","charge"] },
-      { name: "Overheating",      kw: ["overheat","overheated","engine-hot","temperature","radiator"] },
-      { name: "Tires & Wheels",   kw: ["tire","flat","blowout","wheel","axle"] },
-      { name: "Other Guides",     kw: [] },
-    ];
-    const totals = {}; CATS.forEach(c => totals[c.name] = 0);
-    const grandTotal = pages.reduce((s,p) => s + p.pageviews, 0);
-
-    for (const p of pages) {
-      const path = p.path.toLowerCase();
-      let hit = false;
-      for (const c of CATS.slice(0,-1)) {
-        if (c.kw.some(k => path.includes(k))) { totals[c.name] += p.pageviews; hit = true; break; }
-      }
-      if (!hit) totals["Other Guides"] += p.pageviews;
-    }
-
-    const catItems = CATS.map(c => ({ name: c.name, views: totals[c.name] }))
-                         .filter(c => c.views > 0)
-                         .sort((a,b) => b.views - a.views);
-    const catMax = catItems[0]?.views || 1;
-
-    document.getElementById("cat-section").innerHTML = `<div class="cat-list">${catItems.map(c => `
-      <div class="cat-row">
-        <span class="cat-name">${c.name}</span>
-        <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${Math.round(c.views/catMax*100)}%;"></div></div>
-        <span class="cat-val">${fmtNum(c.views)}</span>
-        <span class="cat-pct">${grandTotal > 0 ? Math.round(c.views/grandTotal*100) : 0}%</span>
+// ── Top Pages ─────────────────────────────────────────────────────────────────
+function renderTopPages(d) {
+  const pages = d.topPages || [];
+  if (!pages.length) { document.getElementById("pages-list").innerHTML = emptyHtml("No page data yet — check back after the first workflow run."); return; }
+  const max = pages[0]?.pageviews || 1;
+  document.getElementById("pages-list").innerHTML =
+    `<div class="pages-list">${pages.map((p,i) => `
+      <div class="page-row">
+        <span class="page-rank">${i+1}</span>
+        <div class="page-path-wrap">
+          <a class="page-path" href="https://towwiththeflow.com${p.page||p.path}" target="_blank" rel="noopener" title="${p.page||p.path}">${p.page||p.path}</a>
+        </div>
+        <div class="page-bar-wrap">
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:${Math.round(((p.pageviews||0)/max)*100)}%;"></div></div>
+          <span class="page-views">${(p.pageviews||0).toLocaleString()}</span>
+        </div>
       </div>`).join("")}</div>`;
+}
 
-    // Category donut
-    document.getElementById("cat-skel").style.display = "none";
-    document.getElementById("cat-chart").style.display = "block";
-    makeChart("cat-chart", {
-      type: "doughnut",
-      data: {
-        labels: catItems.map(c => c.name),
-        datasets: [{ data: catItems.map(c => c.views), backgroundColor: PALETTE.slice(0, catItems.length), borderWidth: 1, borderColor: "#0d0d1a", hoverOffset: 6 }]
-      },
-      options: {
-        cutout: "60%",
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: "#0d0d1a", borderColor: "rgba(255,107,43,0.3)", borderWidth: 1,
-            callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed.toLocaleString()}` }
-          }
-        }
-      }
-    });
-
-  } catch (err) {
-    document.getElementById("pages-list").innerHTML = errHtml(err.message);
-    document.getElementById("cat-section").innerHTML = errHtml(err.message);
+// ── TWTF — Topic breakdown derived from top pages ────────────────────────────
+function renderTopics(d) {
+  const pages = d.topPages || [];
+  const CATS = [
+    { name: "Car Won't Start",  kw: ["wont-start","won-t-start","no-start","clicking-noise","dead-battery","lights-turn-on"] },
+    { name: "Towing Costs",     kw: ["towing-cost","tow-truck-price","cost-to-tow","price-"] },
+    { name: "Breakdowns",       kw: ["breaks-down","broke-down","breakdown","car-broke","car-died","what-now","wont-move"] },
+    { name: "Overheating",      kw: ["overheat","overheated","engine-hot","temperature","radiator"] },
+    { name: "Battery & Electrics", kw: ["battery","alternator","charging","electrical"] },
+    { name: "Flat Tires & Axles",  kw: ["tire","flat","blowout","axle","wheel"] },
+    { name: "Other Guides",     kw: [] },
+  ];
+  const totals = {}; CATS.forEach(c => totals[c.name] = 0);
+  const grand  = pages.reduce((s,p)=>s+(p.pageviews||0),0);
+  for (const p of pages) {
+    const path = (p.page||p.path||"").toLowerCase();
+    let hit = false;
+    for (const c of CATS.slice(0,-1)) {
+      if (c.kw.some(k => path.includes(k))) { totals[c.name] += (p.pageviews||0); hit=true; break; }
+    }
+    if (!hit) totals["Other Guides"] += (p.pageviews||0);
   }
+  const items = CATS.map(c=>({name:c.name,v:totals[c.name]})).filter(c=>c.v>0).sort((a,b)=>b.v-a.v);
+  const max = items[0]?.v || 1;
+  if (!items.length) { document.getElementById("topics-list").innerHTML = emptyHtml("No topic data yet"); return; }
+  document.getElementById("topics-list").innerHTML =
+    `<div class="topic-list">${items.map(c=>`
+      <div class="topic-row">
+        <span class="topic-name">${c.name}</span>
+        <div class="topic-bar-bg"><div class="topic-bar-fill" style="width:${Math.round(c.v/max*100)}%;"></div></div>
+        <span class="topic-val">${fmtNum(c.v)}</span>
+      </div>`).join("")}</div>`;
+}
+
+// ── TWTF — City towing cost pages ────────────────────────────────────────────
+function renderCityPages(d) {
+  const pages = d.topPages || [];
+  const cityPages = pages.filter(p => {
+    const path = (p.page||p.path||"").toLowerCase();
+    return path.includes("towing-cost") || path.includes("tow-truck-price");
+  }).slice(0,10);
+  if (!cityPages.length) { document.getElementById("city-pages-list").innerHTML = emptyHtml("No city towing pages tracked yet"); return; }
+  const max = cityPages[0]?.pageviews || 1;
+  document.getElementById("city-pages-list").innerHTML =
+    `<div class="topic-list">${cityPages.map((p,i)=>{
+      const path = p.page||p.path||"";
+      const label = path.replace(/^\/towing-cost-/,"").replace(/^\/tow-truck-price-/,"").replace(/\//,"").replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase());
+      return `<div class="topic-row">
+        <span class="topic-name" title="${path}">${label||path}</span>
+        <div class="topic-bar-bg"><div class="topic-bar-fill" style="width:${Math.round(((p.pageviews||0)/max)*100)}%;"></div></div>
+        <span class="topic-val">${fmtNum(p.pageviews||0)}</span>
+      </div>`;
+    }).join("")}</div>`;
 }
 
 // ── Geo ───────────────────────────────────────────────────────────────────────
-async function loadGeo() {
-  try {
-    const { countries, cities } = await gaFetch("geo");
-    const maxC = countries[0]?.sessions || 1;
-
-    const countriesHtml = `<div class="geo-countries">${countries.slice(0,10).map(c => `
-      <div class="geo-row">
-        <span class="geo-name">${c.country}</span>
-        <div class="geo-bar-bg"><div class="geo-bar-fill" style="width:${Math.round((c.sessions/maxC)*100)}%;"></div></div>
-        <span class="geo-val">${c.sessions.toLocaleString()}</span>
-      </div>`).join("")}</div>`;
-
-    const citiesHtml = `
-      <div class="cities-title">Top Cities</div>
-      ${cities.slice(0,5).map(c => `
-        <div class="city-row">
-          <span class="city-name">${c.city}</span>
-          <span class="city-sessions">${c.sessions.toLocaleString()}</span>
-        </div>`).join("")}`;
-
-    document.getElementById("geo-section").innerHTML = countriesHtml + citiesHtml;
-  } catch (err) {
-    document.getElementById("geo-section").innerHTML = errHtml(err.message);
-  }
+function renderGeo(d) {
+  const countries = d.topCountries || [];
+  const cities    = d.topCities    || [];
+  if (!countries.length) { document.getElementById("geo-section").innerHTML = emptyHtml("No geo data yet"); return; }
+  const maxC = countries[0]?.sessions || 1;
+  const countriesHtml = `<div class="geo-countries">${countries.slice(0,10).map(c=>`
+    <div class="geo-row">
+      <span class="geo-name">${c.country}</span>
+      <div class="geo-bar-bg"><div class="geo-bar-fill" style="width:${Math.round(((c.sessions||0)/maxC)*100)}%;"></div></div>
+      <span class="geo-val">${(c.sessions||0).toLocaleString()}</span>
+    </div>`).join("")}</div>`;
+  const citiesHtml = cities.length ? `
+    <div class="cities-title">Top Cities</div>
+    ${cities.slice(0,5).map(c=>`
+      <div class="city-row"><span class="city-name">${c.city}</span><span class="city-sessions">${(c.sessions||0).toLocaleString()}</span></div>
+    `).join("")}` : "";
+  document.getElementById("geo-section").innerHTML = countriesHtml + citiesHtml;
 }
 
 // ── Devices ───────────────────────────────────────────────────────────────────
 function buildDonut(canvasId, skelId, legendId, rows, nameKey) {
-  const labels = rows.map(r => r[nameKey]);
-  const values = rows.map(r => r.sessions);
-  const colors = rows.map((_, i) => PALETTE[i % PALETTE.length]);
-  const total  = values.reduce((s,v) => s+v, 0);
-
   document.getElementById(skelId).style.display = "none";
   const canvas = document.getElementById(canvasId); canvas.style.display = "block";
-
+  if (!rows || !rows.length) {
+    makeChart(canvasId, { type:"doughnut", data:{labels:["No data"],datasets:[{data:[1],backgroundColor:["#2a2d36"],borderWidth:0}]}, options:{cutout:"60%",plugins:{legend:{display:false},tooltip:{enabled:false}}} });
+    document.getElementById(legendId).innerHTML = emptyHtml("—"); return;
+  }
+  const labels = rows.map(r=>r[nameKey]);
+  const values = rows.map(r=>r.sessions||0);
+  const colors = rows.map((_,i)=>PALETTE[i%PALETTE.length]);
+  const total  = values.reduce((s,v)=>s+v,0);
   makeChart(canvasId, {
     type: "doughnut",
-    data: { labels, datasets: [{ data: values, backgroundColor: colors, borderWidth: 1, borderColor: "#0d0d1a", hoverOffset: 6 }] },
-    options: {
-      cutout: "60%",
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: "#0d0d1a",
-          borderColor: "rgba(255,107,43,0.2)",
-          borderWidth: 1,
-          callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed.toLocaleString()}` }
-        }
-      }
-    }
+    data: { labels, datasets: [{ data:values, backgroundColor:colors, borderWidth:1, borderColor:"#161922", hoverOffset:6 }] },
+    options: { cutout:"60%", plugins: { legend:{display:false}, tooltip: {
+      backgroundColor:"#161922", borderColor:"rgba(245,166,35,0.2)", borderWidth:1,
+      callbacks:{ label: ctx => ` ${ctx.label}: ${ctx.parsed.toLocaleString()}` }
+    }}}
   });
-
-  document.getElementById(legendId).innerHTML = rows.map((r,i) => `
+  document.getElementById(legendId).innerHTML = rows.map((r,i)=>`
     <div class="dev-leg-row">
       <div class="dev-leg-dot" style="background:${colors[i]};"></div>
       <span class="dev-leg-name">${r[nameKey]}</span>
-      <span class="dev-leg-val">${total > 0 ? Math.round((r.sessions/total)*100) : 0}%</span>
+      <span class="dev-leg-val">${total>0?Math.round((r.sessions/total)*100):0}%</span>
     </div>`).join("");
 }
 
-async function loadDevices() {
-  try {
-    const { devices, browsers, os } = await gaFetch("devices");
-    // d.devices[].device, d.browsers[].browser, d.os[].os — matches updated function
-    buildDonut("dev-chart","dev-skel","dev-legend", devices,  "device");
-    buildDonut("br-chart", "br-skel", "br-legend",  browsers, "browser");
-    buildDonut("os-chart", "os-skel", "os-legend",  os,       "os");
-  } catch (err) {
-    ["dev-skel","br-skel","os-skel"].forEach(id => {
-      document.getElementById(id).outerHTML = errHtml(err.message);
-    });
-  }
+function renderDevices(d) {
+  buildDonut("dev-chart","dev-skel","dev-legend", d.devices,  "device");
+  buildDonut("br-chart", "br-skel", "br-legend",  d.browsers, "browser");
+  buildDonut("os-chart", "os-skel", "os-legend",  d.os,       "os");
 }
 
-// ── Last updated timestamp ────────────────────────────────────────────────────
-function updateTimestamp() {
-  document.getElementById("last-updated").textContent =
-    "Updated " + new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+// ── Timestamp ─────────────────────────────────────────────────────────────────
+function updateTimestamp(d) {
+  const lu = d?.lastUpdated ? new Date(d.lastUpdated).toLocaleString() : new Date().toLocaleTimeString();
+  document.getElementById("last-updated").textContent = "Data: " + lu;
 }
 
-// ── Load all + auto-refresh ───────────────────────────────────────────────────
+// ── Load all ──────────────────────────────────────────────────────────────────
 async function loadAll() {
-  await Promise.all([
-    loadOverview(),
-    loadSources(),
-    loadTopPages(),
-    loadGeo(),
-    loadDevices(),
-  ]);
-  startRealtimeLoop();
-  updateTimestamp();
-  setInterval(async () => {
-    await Promise.all([loadOverview(), loadSources(), loadTopPages(), loadGeo(), loadDevices()]);
-    updateTimestamp();
-  }, REFRESH_MS);
+  try {
+    const d = await fetchData();
+    checkActivating(d);
+    renderOverview(d);
+    renderSources(d);
+    renderTopPages(d);
+    renderGeo(d);
+    renderDevices(d);
+    renderTopics(d);
+    renderCityPages(d);
+    updateTimestamp(d);
+  } catch(err) {
+    document.getElementById("stat-row").innerHTML =
+      `<div class="stat-card" style="grid-column:1/-1;">${errHtml(err.message)}</div>`;
+    document.getElementById("activating-banner").style.display = "flex";
+    document.getElementById("ab-last-fetch").textContent = "";
+  }
+  // Auto-refresh every 5 min
+  setTimeout(loadAll, REFRESH_MS);
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────

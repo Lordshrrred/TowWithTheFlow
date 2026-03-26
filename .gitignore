@@ -40,3 +40,6 @@ node_modules/
 
 # Dashboard config
 static/_data/dashboard-config.json
+
+# Built dashboard outputs contain injected secrets — never commit
+static/dashboard/
