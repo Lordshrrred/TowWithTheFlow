@@ -89,7 +89,7 @@
       font-family: "Rajdhani", sans-serif;
     }
     .dash-tab:hover { color: var(--amber); background: var(--amber-glow); }
-    .dash-tab.active { color: var(--amber); background: var(--amber-dim); border-left: 1px solid var(--border); }
+    .dash-tab.active { color: var(--amber); background: var(--amber-dim); border-bottom: 2px solid var(--amber); }
     .dash-tab:first-child { border-left: none; }
     .dash-right { display: flex; align-items: center; gap: 1rem; }
     .last-updated { font-size: 0.75rem; color: var(--text-muted); }
@@ -261,11 +261,16 @@
 <!-- ── App ── -->
 <div id="app">
   <header class="dash-header">
-    <a href="/dashboard/" class="dash-logo">TOW WITH THE FLOW</a>
-    <nav class="dash-tabs">
-      <a href="/dashboard/" class="dash-tab">Syndication</a>
-      <a href="/dashboard/analytics.html" class="dash-tab active">Analytics</a>
-    </nav>
+    <div style="display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;">
+      <div>
+        <div class="dash-logo">TOW WITH THE FLOW</div>
+        <div style="font-size:0.68rem;font-family:'Rajdhani',sans-serif;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);">Analytics Dashboard</div>
+      </div>
+      <nav class="dash-tabs">
+        <a href="/dashboard/" class="dash-tab">Syndication</a>
+        <a href="/dashboard/analytics.html" class="dash-tab active">Analytics</a>
+      </nav>
+    </div>
     <div class="dash-right">
       <span class="last-updated" id="last-updated">Loading…</span>
       <button class="lock-btn" id="lock-btn">Lock</button>
@@ -365,7 +370,7 @@
 
 <script>
 // ── Config ──────────────────────────────────────────────────────────────────
-const SESSION_KEY  = "twtf_dash_authed";    // shared with syndication dashboard
+const SESSION_KEY  = "twtf_dashboard_auth"; // shared with syndication dashboard
 const PW_HASH      = "__PASSWORD_HASH__";   // injected by build_dashboard.py
 const DATA_URL     = "/data/analytics.json";
 const GH_OWNER     = "Lordshrrred";

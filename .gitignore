@@ -35,8 +35,7 @@ node_modules/
 # Syndication cache
 .cache/
 
-# Syndication log -- now tracked so dashboard can read it via GitHub raw
-# scripts/syndication_log.txt
+# Syndication log -- tracked so dashboard can read it via GitHub raw URL
 
 # Dashboard config
 static/_data/dashboard-config.json

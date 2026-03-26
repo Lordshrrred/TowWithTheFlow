@@ -3,11 +3,10 @@
 Injects build-time values into dashboard templates and writes static/dashboard/
 
 Outputs:
-  static/dashboard/index.html         -- Gate page (stars + auth + nav)
-  static/dashboard/analytics.html     -- GA4 analytics (VOA-style, orange)
-  static/dashboard/syndication.html   -- Syndication matrix + drip queue
+  static/dashboard/index.html      -- Syndication dashboard (matrix + drip queue)
+  static/dashboard/analytics.html  -- GA4 analytics (amber, static JSON)
 
-Injected placeholders in every template:
+Injected placeholders:
   __PASSWORD_HASH__   -- SHA256 of DASHBOARD_PASSWORD
   __GITHUB_TOKEN__    -- PAT for GitHub API reads + workflow triggers
   __BLOGGER_BLOG_ID__ -- Blogger blog ID
@@ -22,19 +21,14 @@ ROOT = Path(__file__).parent.parent
 
 BUILDS = [
     {
-        "template": ROOT / "scripts" / "gate_template.html",
+        "template": ROOT / "scripts" / "dashboard_template.html",
         "output":   ROOT / "static"  / "dashboard" / "index.html",
-        "label":    "Gate page",
+        "label":    "Syndication dashboard",
     },
     {
         "template": ROOT / "scripts" / "analytics_template.html",
         "output":   ROOT / "static"  / "dashboard" / "analytics.html",
         "label":    "Analytics dashboard",
-    },
-    {
-        "template": ROOT / "scripts" / "dashboard_template.html",
-        "output":   ROOT / "static"  / "dashboard" / "syndication.html",
-        "label":    "Syndication dashboard",
     },
 ]
 
