@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """
-Injects build-time values into dashboard templates and writes to static/dashboard/
+Injects build-time values into dashboard templates and writes static/dashboard/
 
 Outputs:
-  static/dashboard/index.html        -- Syndication dashboard
-  static/dashboard/analytics.html    -- Analytics dashboard
+  static/dashboard/index.html         -- Gate page (stars + auth + nav)
+  static/dashboard/analytics.html     -- GA4 analytics (VOA-style, orange)
+  static/dashboard/syndication.html   -- Syndication matrix + drip queue
 
-Injected placeholders:
+Injected placeholders in every template:
   __PASSWORD_HASH__   -- SHA256 of DASHBOARD_PASSWORD
   __GITHUB_TOKEN__    -- PAT for GitHub API reads + workflow triggers
-  __BLOGGER_BLOG_ID__ -- Blogger blog ID (safe to expose, read-only)
-  __BLOGGER_API_KEY__ -- Blogger API key (optional, restricted to reads)
+  __BLOGGER_BLOG_ID__ -- Blogger blog ID
+  __BLOGGER_API_KEY__ -- Blogger API key (optional)
 """
 import hashlib
 import os
@@ -21,14 +22,19 @@ ROOT = Path(__file__).parent.parent
 
 BUILDS = [
     {
-        "template": ROOT / "scripts" / "dashboard_template.html",
+        "template": ROOT / "scripts" / "gate_template.html",
         "output":   ROOT / "static"  / "dashboard" / "index.html",
-        "label":    "Syndication dashboard",
+        "label":    "Gate page",
     },
     {
         "template": ROOT / "scripts" / "analytics_template.html",
         "output":   ROOT / "static"  / "dashboard" / "analytics.html",
         "label":    "Analytics dashboard",
+    },
+    {
+        "template": ROOT / "scripts" / "dashboard_template.html",
+        "output":   ROOT / "static"  / "dashboard" / "syndication.html",
+        "label":    "Syndication dashboard",
     },
 ]
 
@@ -42,11 +48,13 @@ def main():
 
     password = os.environ.get("DASHBOARD_PASSWORD", "")
     if not password:
-        print("WARNING: DASHBOARD_PASSWORD not set -- dashboards will be inaccessible", file=sys.stderr)
+        print("WARNING: DASHBOARD_PASSWORD not set -- dashboards will be inaccessible",
+              file=sys.stderr)
 
     github_token = os.environ.get("GITHUB_TOKEN", "")
     if not github_token:
-        print("WARNING: GITHUB_TOKEN not set -- Quick Actions will not work", file=sys.stderr)
+        print("WARNING: GITHUB_TOKEN not set -- Quick Actions will not work",
+              file=sys.stderr)
 
     blogger_id  = os.environ.get("BLOGGER_BLOG_ID", "")
     blogger_key = os.environ.get("BLOGGER_API_KEY", "")
@@ -57,7 +65,8 @@ def main():
         tmpl = build["template"]
         out  = build["output"]
         if not tmpl.exists():
-            print(f"  SKIP {build['label']}: template not found ({tmpl})", file=sys.stderr)
+            print(f"  SKIP {build['label']}: template not found ({tmpl.name})",
+                  file=sys.stderr)
             continue
 
         html = tmpl.read_text(encoding="utf-8")
@@ -68,12 +77,12 @@ def main():
 
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding="utf-8")
-        print(f"Built: {build['label']} -> {out.relative_to(ROOT)}")
+        print(f"  Built: {build['label']:30s}  ->  {out.relative_to(ROOT)}")
 
     if blogger_key:
         print("  Blogger: API v3 key injected")
     else:
-        print("  Blogger: no API key -- syndication dashboard will use RSS fallback")
+        print("  Blogger: no API key -- syndication dashboard uses RSS fallback")
 
 
 if __name__ == "__main__":

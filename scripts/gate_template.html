@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Tow With The Flow</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:       #080810;
+      --surface:  #0d0d1a;
+      --surface2: #12122a;
+      --orange:     #FF6B2B;
+      --orange-dim: rgba(255,107,43,0.12);
+      --orange-glow:rgba(255,107,43,0.06);
+      --amber:     #FFB347;
+      --red:       #FF4444;
+      --text:      #f0ede8;
+      --text-muted:#7a6a5a;
+      --border:    rgba(255,107,43,0.12);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 14px; line-height: 1.6;
+      min-height: 100vh; overflow-x: hidden;
+    }
+    h1,h2,h3 { font-family: "Poppins", sans-serif; }
+
+    /* ── Stars canvas ── */
+    #stars-canvas { position: fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:0.5; }
+
+    /* ── Auth gate ── */
+    #gate {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 2rem; position: relative; z-index: 10;
+    }
+    .gate-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 2.5rem; width: 100%; max-width: 380px;
+      text-align: center;
+    }
+    .gate-logo { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.5rem; }
+    .gate-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text); }
+    .gate-sub { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2rem; }
+    .gate-input {
+      width: 100%; padding: 0.75rem 1rem; background: var(--surface2);
+      border: 1px solid var(--border); border-radius: 6px;
+      color: var(--text); font-size: 0.95rem; margin-bottom: 1rem;
+      font-family: inherit; outline: none; transition: border-color 0.2s;
+    }
+    .gate-input:focus { border-color: var(--orange); }
+    .gate-btn {
+      width: 100%; padding: 0.8rem; background: var(--orange); color: #080810;
+      border: none; border-radius: 6px; font-size: 0.9rem; font-weight: 700;
+      font-family: "Poppins", sans-serif; letter-spacing: 0.05em;
+      cursor: pointer; transition: opacity 0.2s;
+    }
+    .gate-btn:hover { opacity: 0.85; }
+    .gate-error { color: var(--red); font-size: 0.82rem; margin-top: 0.6rem; display: none; }
+
+    /* ── App shell ── */
+    #app { display: none; flex-direction: column; min-height: 100vh; position: relative; z-index: 1; }
+
+    /* ── Header ── */
+    .dash-header {
+      padding: 1.2rem 2rem; display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,8,16,0.9); backdrop-filter: blur(8px);
+      position: sticky; top: 0; z-index: 50;
+    }
+    .dash-logo { font-family: "Poppins", sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--orange); letter-spacing: 0.1em; text-decoration: none; }
+    .dash-right { display: flex; align-items: center; gap: 1rem; }
+    .lock-btn {
+      padding: 0.35rem 0.8rem; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; background: transparent;
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: var(--text-muted);
+      cursor: pointer; transition: all 0.2s; font-family: inherit;
+    }
+    .lock-btn:hover { border-color: var(--red); color: var(--red); }
+
+    /* ── Nav main ── */
+    .dash-main {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .nav-heading {
+      font-family: "Poppins", sans-serif; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 2rem; text-align: center;
+    }
+    .nav-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; max-width: 640px; width: 100%; }
+    .nav-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 2rem 1.8rem;
+      text-decoration: none; color: var(--text);
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      display: flex; flex-direction: column; gap: 0.5rem;
+      position: relative; overflow: hidden;
+    }
+    .nav-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--amber));
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .nav-card:hover { border-color: rgba(255,107,43,0.4); background: var(--orange-glow); transform: translateY(-2px); }
+    .nav-card:hover::before { opacity: 1; }
+    .nav-card-icon { font-size: 1.8rem; margin-bottom: 0.3rem; }
+    .nav-card-title {
+      font-family: "Poppins", sans-serif; font-size: 1rem; font-weight: 700;
+      color: var(--orange); letter-spacing: 0.03em;
+    }
+    .nav-card-sub { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+    .nav-card-arrow {
+      margin-top: auto; padding-top: 0.8rem; font-size: 0.75rem;
+      font-family: "Rajdhani", sans-serif; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange);
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .nav-card:hover .nav-card-arrow { opacity: 1; }
+
+    @media(max-width: 580px) { .nav-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<canvas id="stars-canvas"></canvas>
+
+<!-- ── Auth Gate ── -->
+<div id="gate">
+  <div class="gate-card">
+    <div class="gate-logo">Tow With The Flow</div>
+    <h1 class="gate-title">Operations Dashboard</h1>
+    <p class="gate-sub">Enter password to access the dashboard.</p>
+    <input id="pw-input" class="gate-input" type="password" placeholder="Password" autocomplete="current-password">
+    <button class="gate-btn" id="pw-submit">Unlock</button>
+    <div class="gate-error" id="pw-error">Incorrect password. Try again.</div>
+  </div>
+</div>
+
+<!-- ── App ── -->
+<div id="app">
+  <header class="dash-header">
+    <span class="dash-logo">TWTF</span>
+    <div class="dash-right">
+      <button class="lock-btn" id="lock-btn">Lock</button>
+    </div>
+  </header>
+
+  <main class="dash-main">
+    <div class="nav-heading">Select a section</div>
+    <div class="nav-grid">
+
+      <a href="./syndication.html" class="nav-card">
+        <div class="nav-card-icon">📡</div>
+        <div class="nav-card-title">Syndication</div>
+        <div class="nav-card-sub">Platform matrix, drip queue, post status across DEV, Hashnode, Tumblr, Blogger, Feeder and more.</div>
+        <div class="nav-card-arrow">Open →</div>
+      </a>
+
+      <a href="./analytics.html" class="nav-card">
+        <div class="nav-card-icon">📊</div>
+        <div class="nav-card-title">Analytics</div>
+        <div class="nav-card-sub">GA4 pageviews, sessions, traffic sources, top guides, geographic data, devices and realtime visitors.</div>
+        <div class="nav-card-arrow">Open →</div>
+      </a>
+
+    </div>
+  </main>
+</div>
+
+<script>
+const SESSION_KEY = "twtf_dash_authed";
+const PW_HASH     = "__PASSWORD_HASH__";
+
+// ── Stars ─────────────────────────────────────────────────────────
+(function initStars() {
+  const canvas = document.getElementById("stars-canvas");
+  const ctx    = canvas.getContext("2d");
+  let stars    = [];
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    stars = Array.from({ length: 90 }, () => ({
+      x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+      r: Math.random() * 1.2 + 0.3, a: Math.random(), da: (Math.random() - 0.5) * 0.005,
+    }));
+  }
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const s of stars) {
+      s.a = Math.max(0.05, Math.min(0.7, s.a + s.da));
+      if (s.a <= 0.05 || s.a >= 0.7) s.da *= -1;
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,220,180,${s.a})`; ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener("resize", resize);
+  resize(); draw();
+})();
+
+// ── Auth ──────────────────────────────────────────────────────────
+async function sha256hex(str) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,"0")).join("");
+}
+
+async function initAuth() {
+  if (sessionStorage.getItem(SESSION_KEY) === "1") { showApp(); return; }
+
+  const input  = document.getElementById("pw-input");
+  const errEl  = document.getElementById("pw-error");
+  const submit = document.getElementById("pw-submit");
+
+  async function tryLogin() {
+    const val = input.value.trim(); if (!val) return;
+    if (!PW_HASH || PW_HASH === "__PASSWORD_HASH__") {
+      sessionStorage.setItem(SESSION_KEY, "1"); showApp(); return;
+    }
+    const hash = await sha256hex(val);
+    if (hash === PW_HASH) {
+      errEl.style.display = "none";
+      sessionStorage.setItem(SESSION_KEY, "1");
+      showApp();
+    } else { errEl.style.display = "block"; input.value = ""; }
+  }
+  submit.addEventListener("click", tryLogin);
+  input.addEventListener("keydown", e => { if (e.key === "Enter") tryLogin(); });
+}
+
+function showApp() {
+  document.getElementById("gate").style.display = "none";
+  document.getElementById("app").style.display = "flex";
+}
+
+document.getElementById("lock-btn").addEventListener("click", () => {
+  sessionStorage.removeItem(SESSION_KEY); location.reload();
+});
+
+initAuth();
+</script>
+</body>
+</html>

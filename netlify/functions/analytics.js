@@ -2,23 +2,31 @@
   TWTF Analytics Netlify Function
   Endpoint: /.netlify/functions/analytics?metric=overview|toppages|sources|realtime|geo|devices
 
-  REQUIRED ENVIRONMENT VARIABLES — add to Netlify:
+  REQUIRED NETLIFY ENVIRONMENT VARIABLES:
 
-  GA_CREDENTIALS_JSON — service account JSON contents as a single-line string
-    (copy the entire downloaded JSON, minify to one line, paste as env var value)
+  GA_CREDENTIALS_JSON — full service account JSON as single-line string
+    (minify the downloaded JSON to one line, paste as env var value)
 
-  GA_PROPERTY_ID — TWTF's GA4 property ID (numbers only, e.g. "123456789")
-    Get it from: GA4 → Admin → Property Settings for towwiththeflow.com
+  GA_PROPERTY_ID — TWTF GA4 property ID
+    Property ID: 530033133
+    (GA4 → Admin → Property Settings for towwiththeflow.com)
 
-  DASHBOARD_PASSWORD — password for the dashboard gate
+  Service account email:
+    towwiththeflow@towwiththeflowroadside.iam.gserviceaccount.com
+    Add as Viewer in GA4 → Admin → Account Access Management
+
+  DASHBOARD_PASSWORD — your dashboard password
+
+  All vars set in Netlify dashboard under:
+  Site settings → Environment variables
 
   Setup steps:
-  1. Go to console.cloud.google.com → select or create a project
-  2. Enable the "Google Analytics Data API"
-  3. IAM & Admin → Service Accounts → Create service account → download JSON key
-  4. In GA4: Admin → Account Access Management → Add the service account email as Viewer
-  5. Add all 3 vars to Netlify: Site Settings → Environment Variables
-  6. Redeploy site
+  1. console.cloud.google.com → enable "Google Analytics Data API"
+  2. IAM & Admin → Service Accounts → find or create service account → download JSON key
+  3. GA4 → Admin → Account Access Management → add service account email as Viewer
+  4. Minify the JSON key to one line and paste as GA_CREDENTIALS_JSON
+  5. Set GA_PROPERTY_ID = 530033133
+  6. Redeploy
 */
 
 import { GoogleAuth } from 'google-auth-library';
@@ -46,93 +54,73 @@ async function getAccessToken() {
   return token.token;
 }
 
-// ── GA4 REPORT ────────────────────────────────────────────────────
+// ── GA4 REPORTS ───────────────────────────────────────────────────
 async function runReport(propertyId, token, body) {
   const res = await fetch(`${GA4_BASE}/properties/${propertyId}:runReport`, {
     method: 'POST',
-    headers: {
-      Authorization: `Bearer ${token}`,
-      'Content-Type': 'application/json',
-    },
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`GA4 runReport ${res.status}: ${err}`);
-  }
+  if (!res.ok) throw new Error(`GA4 runReport ${res.status}: ${await res.text()}`);
   return res.json();
 }
 
 async function runRealtimeReport(propertyId, token, body) {
   const res = await fetch(`${GA4_BASE}/properties/${propertyId}:runRealtimeReport`, {
     method: 'POST',
-    headers: {
-      Authorization: `Bearer ${token}`,
-      'Content-Type': 'application/json',
-    },
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`GA4 runRealtimeReport ${res.status}: ${err}`);
-  }
+  if (!res.ok) throw new Error(`GA4 realtime ${res.status}: ${await res.text()}`);
   return res.json();
 }
 
-// ── HELPER: extract rows ──────────────────────────────────────────
 function rows(data) {
   return (data.rows || []).map(row => ({
     dims: (row.dimensionValues || []).map(d => d.value),
-    mets: (row.metricValues || []).map(m => m.value),
+    mets: (row.metricValues  || []).map(m => m.value),
   }));
 }
 
-// ── METRIC HANDLERS ───────────────────────────────────────────────
-
+// ── OVERVIEW ──────────────────────────────────────────────────────
 async function getOverview(propertyId, token) {
-  // Summary metrics
-  const summary = await runReport(propertyId, token, {
-    dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
-    metrics: [
-      { name: 'screenPageViews' },
-      { name: 'sessions' },
-      { name: 'averageSessionDuration' },
-      { name: 'bounceRate' },
-      { name: 'newUsers' },
-      { name: 'totalUsers' },
-    ],
-  });
+  const [summary, daily] = await Promise.all([
+    runReport(propertyId, token, {
+      dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
+      metrics: [
+        { name: 'screenPageViews' },
+        { name: 'sessions' },
+        { name: 'averageSessionDuration' },
+        { name: 'bounceRate' },
+        { name: 'newUsers' },
+        { name: 'totalUsers' },
+      ],
+    }),
+    runReport(propertyId, token, {
+      dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
+      dimensions: [{ name: 'date' }],
+      metrics: [{ name: 'screenPageViews' }],
+      orderBys: [{ dimension: { dimensionName: 'date' } }],
+    }),
+  ]);
 
   const met = (summary.rows?.[0]?.metricValues || []).map(m => m.value);
-  const pageviews = parseInt(met[0] || 0);
-  const sessions = parseInt(met[1] || 0);
-  const avgDuration = parseFloat(met[2] || 0);
-  const bounceRate = parseFloat(met[3] || 0);
-  const newUsers = parseInt(met[4] || 0);
-  const totalUsers = parseInt(met[5] || 0);
-
-  // Daily sparkline — last 30 days
-  const daily = await runReport(propertyId, token, {
-    dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
-    dimensions: [{ name: 'date' }],
-    metrics: [{ name: 'screenPageViews' }],
-    orderBys: [{ dimension: { dimensionName: 'date' } }],
-  });
-
-  const sparkline = rows(daily).map(r => ({ date: r.dims[0], views: parseInt(r.mets[0]) }));
+  const totalUsers  = parseInt(met[5] || 0);
+  const newUsers    = parseInt(met[4] || 0);
 
   return {
-    pageviews,
-    sessions,
-    avgDurationSeconds: Math.round(avgDuration),
-    bounceRate: Math.round(bounceRate * 100) / 100,
+    pageviews:      parseInt(met[0] || 0),
+    sessions:       parseInt(met[1] || 0),
+    avgSessionDur:  Math.round(parseFloat(met[2] || 0)),   // seconds — matches VOA field name
+    bounceRate:     parseFloat(met[3] || 0),               // 0–1 fraction — matches VOA
     newUsers,
     returningUsers: totalUsers - newUsers,
-    totalUsers,
-    sparkline,
+    // "daily" array with YYYYMMDD date and pageviews — matches VOA field names
+    daily: rows(daily).map(r => ({ date: r.dims[0], pageviews: parseInt(r.mets[0]) })),
   };
 }
 
+// ── TOP PAGES ─────────────────────────────────────────────────────
 async function getTopPages(propertyId, token) {
   const data = await runReport(propertyId, token, {
     dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
@@ -148,16 +136,17 @@ async function getTopPages(propertyId, token) {
   });
 
   return rows(data).map((r, i) => ({
-    rank: i + 1,
-    path: r.dims[0],
-    title: r.dims[1],
+    rank:      i + 1,
+    path:      r.dims[0],
+    title:     r.dims[1],
     pageviews: parseInt(r.mets[0]),
-    avgDurationSeconds: Math.round(parseFloat(r.mets[1])),
-    bounceRate: Math.round(parseFloat(r.mets[2]) * 100) / 100,
-    sessions: parseInt(r.mets[3]),
+    avgDur:    Math.round(parseFloat(r.mets[1])),
+    bounceRate: Math.round(parseFloat(r.mets[2]) * 1000) / 10,
+    sessions:  parseInt(r.mets[3]),
   }));
 }
 
+// ── SOURCES ───────────────────────────────────────────────────────
 async function getSources(propertyId, token) {
   const data = await runReport(propertyId, token, {
     dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
@@ -167,56 +156,49 @@ async function getSources(propertyId, token) {
   });
 
   const total = rows(data).reduce((s, r) => s + parseInt(r.mets[0]), 0);
-
   return rows(data).map(r => ({
-    channel: r.dims[0],
+    channel:  r.dims[0],
     sessions: parseInt(r.mets[0]),
-    pct: total > 0 ? Math.round((parseInt(r.mets[0]) / total) * 1000) / 10 : 0,
+    pct:      total > 0 ? Math.round((parseInt(r.mets[0]) / total) * 1000) / 10 : 0,
   }));
 }
 
+// ── REALTIME ──────────────────────────────────────────────────────
 async function getRealtime(propertyId, token) {
-  const [active, pages, countries, devices] = await Promise.all([
+  const [active, pages, countries] = await Promise.all([
     runRealtimeReport(propertyId, token, {
       metrics: [{ name: 'activeUsers' }],
     }),
     runRealtimeReport(propertyId, token, {
-      dimensions: [{ name: 'pagePath' }, { name: 'pageTitle' }],
+      dimensions: [{ name: 'pagePath' }],
       metrics: [{ name: 'activeUsers' }],
       orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
       limit: 10,
     }),
     runRealtimeReport(propertyId, token, {
-      dimensions: [{ name: 'countryId' }, { name: 'country' }],
+      dimensions: [{ name: 'country' }],
       metrics: [{ name: 'activeUsers' }],
       orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
       limit: 10,
-    }),
-    runRealtimeReport(propertyId, token, {
-      dimensions: [{ name: 'deviceCategory' }],
-      metrics: [{ name: 'activeUsers' }],
     }),
   ]);
 
   return {
     activeUsers: parseInt(active.rows?.[0]?.metricValues?.[0]?.value || 0),
-    topPages: rows(pages).map(r => ({
-      path: r.dims[0],
-      title: r.dims[1],
+    // "pages" array with { page, users } — matches VOA field names
+    pages: rows(pages).map(r => ({
+      page:  r.dims[0],
       users: parseInt(r.mets[0]),
     })),
+    // "countries" array with { country, users } — matches VOA field names
     countries: rows(countries).map(r => ({
-      code: r.dims[0],
-      name: r.dims[1],
-      users: parseInt(r.mets[0]),
-    })),
-    devices: rows(devices).map(r => ({
-      type: r.dims[0],
-      users: parseInt(r.mets[0]),
+      country: r.dims[0],
+      users:   parseInt(r.mets[0]),
     })),
   };
 }
 
+// ── GEO ───────────────────────────────────────────────────────────
 async function getGeo(propertyId, token) {
   const [countries, cities] = await Promise.all([
     runReport(propertyId, token, {
@@ -236,19 +218,12 @@ async function getGeo(propertyId, token) {
   ]);
 
   return {
-    countries: rows(countries).map((r, i) => ({
-      rank: i + 1,
-      country: r.dims[0],
-      sessions: parseInt(r.mets[0]),
-    })),
-    cities: rows(cities).map((r, i) => ({
-      rank: i + 1,
-      city: r.dims[0],
-      sessions: parseInt(r.mets[0]),
-    })),
+    countries: rows(countries).map(r => ({ country: r.dims[0], sessions: parseInt(r.mets[0]) })),
+    cities:    rows(cities).map(r    => ({ city: r.dims[0],    sessions: parseInt(r.mets[0]) })),
   };
 }
 
+// ── DEVICES ───────────────────────────────────────────────────────
 async function getDevices(propertyId, token) {
   const [deviceCats, browsers, os] = await Promise.all([
     runReport(propertyId, token, {
@@ -274,18 +249,11 @@ async function getDevices(propertyId, token) {
   ]);
 
   return {
-    categories: rows(deviceCats).map(r => ({
-      type: r.dims[0],
-      sessions: parseInt(r.mets[0]),
-    })),
-    browsers: rows(browsers).map(r => ({
-      browser: r.dims[0],
-      sessions: parseInt(r.mets[0]),
-    })),
-    operatingSystems: rows(os).map(r => ({
-      os: r.dims[0],
-      sessions: parseInt(r.mets[0]),
-    })),
+    // "devices" array with { device, sessions } — matches VOA field names
+    devices:  rows(deviceCats).map(r => ({ device:  r.dims[0], sessions: parseInt(r.mets[0]) })),
+    browsers: rows(browsers).map(r   => ({ browser: r.dims[0], sessions: parseInt(r.mets[0]) })),
+    // "os" array with { os, sessions } — matches VOA field names
+    os:       rows(os).map(r         => ({ os:      r.dims[0], sessions: parseInt(r.mets[0]) })),
   };
 }
 
@@ -307,7 +275,6 @@ export const handler = async (event) => {
 
   try {
     const token = await getAccessToken();
-
     let data;
     switch (metric) {
       case 'overview':  data = await getOverview(propertyId, token);  break;
@@ -319,14 +286,13 @@ export const handler = async (event) => {
       default:
         return { statusCode: 400, headers: CORS_HEADERS, body: JSON.stringify({ error: `Unknown metric: ${metric}` }) };
     }
-
     return {
       statusCode: 200,
       headers: CORS_HEADERS,
-      body: JSON.stringify({ metric, data, generatedAt: new Date().toISOString() }),
+      body: JSON.stringify(data),
     };
   } catch (err) {
-    console.error('Analytics function error:', err.message);
+    console.error('analytics error:', err.message);
     return {
       statusCode: 500,
       headers: CORS_HEADERS,
