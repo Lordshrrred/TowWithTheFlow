@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
-Injects build-time values into the dashboard template and writes
-static/dashboard/index.html before hugo --minify runs.
+Injects build-time values into dashboard templates and writes to static/dashboard/
+
+Outputs:
+  static/dashboard/index.html        -- Syndication dashboard
+  static/dashboard/analytics.html    -- Analytics dashboard
 
 Injected placeholders:
   __PASSWORD_HASH__   -- SHA256 of DASHBOARD_PASSWORD
@@ -14,9 +17,20 @@ import os
 import sys
 from pathlib import Path
 
-ROOT     = Path(__file__).parent.parent
-TEMPLATE = ROOT / "scripts" / "dashboard_template.html"
-OUTPUT   = ROOT / "static"  / "dashboard" / "index.html"
+ROOT = Path(__file__).parent.parent
+
+BUILDS = [
+    {
+        "template": ROOT / "scripts" / "dashboard_template.html",
+        "output":   ROOT / "static"  / "dashboard" / "index.html",
+        "label":    "Syndication dashboard",
+    },
+    {
+        "template": ROOT / "scripts" / "analytics_template.html",
+        "output":   ROOT / "static"  / "dashboard" / "analytics.html",
+        "label":    "Analytics dashboard",
+    },
+]
 
 
 def main():
@@ -28,7 +42,7 @@ def main():
 
     password = os.environ.get("DASHBOARD_PASSWORD", "")
     if not password:
-        print("WARNING: DASHBOARD_PASSWORD not set -- dashboard will be inaccessible", file=sys.stderr)
+        print("WARNING: DASHBOARD_PASSWORD not set -- dashboards will be inaccessible", file=sys.stderr)
 
     github_token = os.environ.get("GITHUB_TOKEN", "")
     if not github_token:
@@ -39,19 +53,27 @@ def main():
 
     pw_hash = hashlib.sha256(password.encode()).hexdigest() if password else ""
 
-    html = TEMPLATE.read_text(encoding="utf-8")
-    html = html.replace("__PASSWORD_HASH__",   pw_hash)
-    html = html.replace("__GITHUB_TOKEN__",    github_token)
-    html = html.replace("__BLOGGER_BLOG_ID__", blogger_id)
-    html = html.replace("__BLOGGER_API_KEY__", blogger_key)
+    for build in BUILDS:
+        tmpl = build["template"]
+        out  = build["output"]
+        if not tmpl.exists():
+            print(f"  SKIP {build['label']}: template not found ({tmpl})", file=sys.stderr)
+            continue
 
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(html, encoding="utf-8")
-    print(f"Dashboard built -> {OUTPUT.relative_to(ROOT)}")
+        html = tmpl.read_text(encoding="utf-8")
+        html = html.replace("__PASSWORD_HASH__",   pw_hash)
+        html = html.replace("__GITHUB_TOKEN__",    github_token)
+        html = html.replace("__BLOGGER_BLOG_ID__", blogger_id)
+        html = html.replace("__BLOGGER_API_KEY__", blogger_key)
+
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(html, encoding="utf-8")
+        print(f"Built: {build['label']} -> {out.relative_to(ROOT)}")
+
     if blogger_key:
         print("  Blogger: API v3 key injected")
     else:
-        print("  Blogger: no API key -- will use RSS feed fallback")
+        print("  Blogger: no API key -- syndication dashboard will use RSS fallback")
 
 
 if __name__ == "__main__":
