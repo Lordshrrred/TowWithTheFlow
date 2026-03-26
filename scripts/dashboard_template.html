@@ -2,1060 +2,937 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tow With The Flow -- Syndication Dashboard</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOW WITH THE FLOW — Syndication Dashboard</title>
 <style>
-/* =====================================================
-   TWTF SYNDICATION DASHBOARD
-   ===================================================== */
 :root {
-  --bg:     #0f1117;
-  --bg2:    #1a1d26;
-  --bg3:    #22263a;
-  --bg4:    #0c0e15;
-  --amber:  #f5a623;
-  --amber2: #c47f10;
-  --green:  #22c55e;
-  --red:    #ef4444;
-  --yellow: #f59e0b;
-  --gray:   #6b7280;
-  --text:   #f0f0f0;
-  --dim:    #8892a4;
-  --border: #2e3240;
-  --tape:   repeating-linear-gradient(-45deg,#f5a623 0,#f5a623 8px,#0a0b10 8px,#0a0b10 16px);
+  --bg:      #0f1117;
+  --bg2:     #161822;
+  --bg3:     #1e2030;
+  --border:  #2a2d3e;
+  --amber:   #f5a623;
+  --amber2:  #e8950f;
+  --green:   #22c55e;
+  --red:     #ef4444;
+  --yellow:  #eab308;
+  --gray:    #6b7280;
+  --text:    #e2e8f0;
+  --muted:   #94a3b8;
+  --tape: repeating-linear-gradient(-45deg,#f5a623 0,#f5a623 8px,#0a0b10 8px,#0a0b10 16px);
 }
-*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 13px; }
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  min-height: 100vh;
-  line-height: 1.5;
-}
-a { color: var(--amber); text-decoration: none; }
-a:hover { text-decoration: underline; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px;min-height:100vh}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:inherit;font-size:12px}
 
-/* ---- Password Gate ---- */
-#gate {
-  position: fixed; inset: 0;
-  background: var(--bg);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 9999;
-}
-.gate-card {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-top: 5px solid transparent;
-  border-image: var(--tape) 1;
-  border-radius: 10px;
-  padding: 44px 40px;
-  width: 380px;
-  text-align: center;
-}
-.gate-card h1 { color: var(--amber); font-size: 18px; letter-spacing: .06em; margin-bottom: 4px; }
-.gate-sub { color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; }
-.gate-card input {
-  width: 100%; padding: 10px 14px;
-  background: var(--bg4); border: 1px solid var(--border);
-  border-radius: 6px; color: var(--text); font-size: 14px;
-  margin-bottom: 10px; outline: none;
-}
-.gate-card input:focus { border-color: var(--amber); }
-.gate-card button {
-  width: 100%; padding: 11px;
-  background: var(--amber); color: #000;
-  border: none; border-radius: 6px;
-  font-size: 13px; font-weight: 700; cursor: pointer;
-  text-transform: uppercase; letter-spacing: .06em;
-}
-.gate-card button:hover { background: var(--amber2); }
-.gate-err { color: var(--red); font-size: 11px; margin-top: 8px; min-height: 16px; }
+/* GATE */
+#gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999}
+.gate-box{background:var(--bg2);border:1px solid var(--border);border-top:4px solid;border-image:var(--tape) 1;padding:40px 48px;text-align:center;width:360px}
+.gate-box h1{font-size:18px;letter-spacing:.15em;color:var(--amber);margin-bottom:4px}
+.gate-box h2{font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:28px;text-transform:uppercase}
+.gate-box input{width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:4px;font-size:14px;margin-bottom:12px;outline:none}
+.gate-box input:focus{border-color:var(--amber)}
+.gate-box .gate-btn{width:100%;background:var(--amber);color:#000;border:none;padding:10px;border-radius:4px;font-weight:700;letter-spacing:.08em;font-size:13px}
+.gate-box .gate-btn:hover{background:var(--amber2)}
+#gate-err{color:var(--red);font-size:12px;margin-top:8px;min-height:16px}
 
-/* ---- Dashboard shell ---- */
-#dash { display: none; }
+/* LAYOUT */
+#app{display:none;flex-direction:column;min-height:100vh}
 
-.dash-header {
-  background: var(--bg2);
-  border-bottom: 1px solid var(--border);
-  border-top: 5px solid transparent;
-  border-image: var(--tape) 1;
-  padding: 11px 20px;
-  display: flex; align-items: center; justify-content: space-between;
-  position: sticky; top: 0; z-index: 500;
-}
-.dash-title {
-  font-size: 12px; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase;
-  color: var(--amber);
-}
-.dash-right { display: flex; align-items: center; gap: 12px; }
-.upd-badge { font-size: 10px; color: var(--dim); background: var(--bg3); border-radius: 4px; padding: 3px 8px; }
-.lock-btn {
-  font-size: 10px; color: var(--dim);
-  background: none; border: 1px solid var(--border);
-  border-radius: 4px; padding: 3px 10px; cursor: pointer;
-}
-.lock-btn:hover { border-color: var(--dim); color: var(--text); }
+/* HEADER */
+.hdr{background:var(--bg2);border-bottom:1px solid var(--border);border-top:5px solid;border-image:var(--tape) 1;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.hdr-left h1{font-size:20px;font-weight:800;letter-spacing:.12em;color:var(--amber)}
+.hdr-left h2{font-size:10px;letter-spacing:.25em;color:var(--muted);text-transform:uppercase;margin-top:2px}
+.hdr-right{display:flex;align-items:center;gap:12px}
+.updated-badge{background:var(--bg3);border:1px solid var(--border);padding:5px 12px;border-radius:4px;font-size:11px;color:var(--muted)}
+.updated-badge span{color:var(--text)}
+.lock-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 12px;border-radius:4px;font-size:11px;letter-spacing:.05em}
+.lock-btn:hover{border-color:var(--amber);color:var(--amber)}
+.refresh-btn{background:var(--amber);color:#000;border:none;padding:5px 12px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:.05em}
+.refresh-btn:hover{background:var(--amber2)}
 
-.wrap { max-width: 1440px; margin: 0 auto; padding: 18px 20px; }
-.section { margin-bottom: 28px; }
-.sec-head {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 12px; padding-bottom: 7px;
-  border-bottom: 1px solid var(--border);
-}
-.sec-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--amber); }
-.sec-right { font-size: 10px; color: var(--dim); }
+/* MAIN */
+.main{padding:20px 24px;display:flex;flex-direction:column;gap:20px}
 
-/* ---- Stats bar ---- */
-.stats-bar {
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-  gap: 10px; margin-bottom: 24px;
-}
-.s-card {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 13px 15px;
-}
-.s-label { font-size: 9px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin-bottom: 5px; }
-.s-value { font-size: 24px; font-weight: 700; color: var(--amber); line-height: 1; }
-.s-sub { font-size: 9px; color: var(--dim); margin-top: 3px; }
+/* STAT CARDS */
+.stats-bar{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:16px;position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--amber)}
+.stat-label{font-size:9px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
+.stat-val{font-size:28px;font-weight:800;color:var(--text);line-height:1}
+.stat-sub{font-size:11px;color:var(--muted);margin-top:6px}
+.stat-badge{display:inline-block;padding:2px 7px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:.05em}
+.badge-green{background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.3)}
+.badge-red{background:rgba(239,68,68,.15);color:var(--red);border:1px solid rgba(239,68,68,.3)}
+.badge-yellow{background:rgba(234,179,8,.15);color:var(--yellow);border:1px solid rgba(234,179,8,.3)}
+.badge-amber{background:rgba(245,166,35,.15);color:var(--amber);border:1px solid rgba(245,166,35,.3)}
+.badge-gray{background:rgba(107,114,128,.15);color:var(--gray);border:1px solid rgba(107,114,128,.3)}
 
-/* ---- Platform pills ---- */
-.plat-bar { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
-.plat-pill {
-  display: flex; align-items: center; gap: 6px;
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 20px; padding: 5px 12px; font-size: 11px; font-weight: 600;
-}
-.plat-pill.dim { opacity: .4; }
-.ps { font-size: 9px; color: var(--dim); }
-.ps.ok  { color: var(--green); }
-.ps.err { color: var(--red); }
-.ps.warn { color: var(--yellow); }
-.test-btn {
-  font-size: 9px; color: var(--amber);
-  background: none; border: 1px solid rgba(245,166,35,.3);
-  border-radius: 3px; padding: 1px 5px; cursor: pointer; margin-left: 2px;
-}
-.test-btn:hover { border-color: var(--amber); }
+/* SECTION */
+.section{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.section-hdr{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--bg3)}
+.section-title{font-size:11px;letter-spacing:.18em;color:var(--amber);text-transform:uppercase;font-weight:700}
+.section-body{padding:16px}
 
-/* ---- Matrix ---- */
-.matrix-outer { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
-table.matrix { width: 100%; border-collapse: collapse; font-size: 11px; min-width: 840px; }
-.matrix thead th {
-  background: var(--bg3); padding: 7px 10px;
-  text-align: center; font-size: 9px; text-transform: uppercase;
-  letter-spacing: .08em; color: var(--dim); font-weight: 700;
-  border-bottom: 1px solid var(--border);
-  white-space: nowrap; position: sticky; top: 0; z-index: 2;
-}
-.matrix thead th.th-post {
-  text-align: left; position: sticky; left: 0; z-index: 3;
-  background: var(--bg3); min-width: 210px;
-}
-.matrix tbody tr { border-bottom: 1px solid rgba(46,50,64,.5); }
-.matrix tbody tr:hover { background: rgba(255,255,255,.02); }
-.matrix td { padding: 6px 10px; text-align: center; vertical-align: middle; }
-.matrix td.td-post {
-  text-align: left; position: sticky; left: 0; z-index: 1;
-  background: var(--bg2); border-right: 1px solid var(--border); max-width: 210px;
-}
-.matrix tbody tr:hover .td-post { background: #1d2130; }
-.td-post .t { font-size: 11px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
-.td-post .t:hover { color: var(--amber); }
-.c-ok   { color: var(--green); font-size: 13px; cursor: pointer; }
-.c-ok:hover { opacity: .75; }
-.c-fail { color: var(--red); font-size: 13px; }
-.c-none { color: #2e3240; font-size: 13px; }
-.c-skip { color: var(--gray); font-size: 11px; }
-.c-pend { color: #2a2e40; font-size: 10px; }
-.badge {
-  display: inline-block; padding: 2px 7px; border-radius: 10px;
-  font-size: 9px; font-weight: 700;
-  background: rgba(245,166,35,.1); border: 1px solid rgba(245,166,35,.2);
-  color: var(--amber);
-}
-.badge.full { background: rgba(34,197,94,.12); border-color: rgba(34,197,94,.25); color: var(--green); }
-.badge.zero { background: rgba(239,68,68,.1); border-color: rgba(239,68,68,.2); color: var(--red); }
-.matrix-msg { padding: 32px; text-align: center; color: var(--dim); font-size: 12px; }
+/* DRIP QUEUE */
+.drip-stats-row{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:14px}
+.drip-stat{background:var(--bg3);border:1px solid var(--border);border-radius:5px;padding:10px;text-align:center}
+.drip-stat-label{font-size:9px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.drip-stat-val{font-size:16px;font-weight:700;color:var(--text)}
+.drip-indicators{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.drip-indicator{padding:5px 12px;border-radius:4px;font-size:11px;font-weight:600;letter-spacing:.05em;border:1px solid}
+.ind-active{background:rgba(34,197,94,.1);color:var(--green);border-color:rgba(34,197,94,.3)}
+.ind-paused{background:rgba(234,179,8,.1);color:var(--yellow);border-color:rgba(234,179,8,.3)}
+.drip-btns{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.drip-btn{padding:7px 16px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:.06em;border:1px solid}
+.btn-activate{background:rgba(34,197,94,.15);color:var(--green);border-color:rgba(34,197,94,.4)}
+.btn-activate:hover{background:rgba(34,197,94,.25)}
+.btn-pause{background:rgba(234,179,8,.15);color:var(--yellow);border-color:rgba(234,179,8,.4)}
+.btn-pause:hover{background:rgba(234,179,8,.25)}
+.btn-publish{background:var(--amber);color:#000;border-color:var(--amber);font-weight:800}
+.btn-publish:hover{background:var(--amber2)}
+.drip-list{display:flex;flex-direction:column;gap:6px;max-height:260px;overflow-y:auto}
+.drip-item{display:flex;align-items:center;gap:10px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:8px 12px}
+.drip-pos{width:24px;height:24px;border-radius:50%;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--muted);flex-shrink:0}
+.drip-title{flex:1;font-size:12px;color:var(--text)}
+.drip-date{font-size:10px;color:var(--muted);white-space:nowrap}
+.drip-now-btn{background:transparent;border:1px solid var(--amber);color:var(--amber);padding:3px 8px;border-radius:3px;font-size:10px;white-space:nowrap}
+.drip-now-btn:hover{background:rgba(245,166,35,.15)}
 
-/* ---- Queue section ---- */
-.q-stats {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 10px 16px; margin-bottom: 12px;
-}
-.qs { font-size: 10px; color: var(--dim); }
-.qs strong { color: var(--text); }
-.qdiv { width: 1px; height: 18px; background: var(--border); flex-shrink: 0; }
-.drip-ctrl { margin-left: auto; display: flex; align-items: center; gap: 12px; }
-.drip-ind { display: flex; align-items: center; gap: 5px; font-size: 10px; }
-.drip-dot { width: 7px; height: 7px; border-radius: 50%; }
-.drip-dot.on  { background: var(--green); }
-.drip-dot.off { background: var(--yellow); }
-.drip-toggle {
-  font-size: 10px; padding: 4px 12px;
-  background: none; border: 1px solid var(--border);
-  border-radius: 4px; color: var(--dim); cursor: pointer;
-}
-.drip-toggle:hover { border-color: var(--amber); color: var(--amber); }
+/* RECENT SYNDICATIONS */
+.recent-list{display:flex;flex-direction:column;gap:8px}
+.recent-item{display:flex;align-items:center;gap:12px;background:var(--bg3);border:1px solid var(--border);border-radius:5px;padding:10px 14px}
+.recent-info{flex:1;min-width:0}
+.recent-title{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.recent-date{font-size:10px;color:var(--muted);margin-top:2px}
+.plat-badges{display:flex;gap:5px;flex-wrap:wrap;flex-shrink:0}
+.plat-badge{display:inline-flex;align-items:center;justify-content:center;padding:3px 7px;border-radius:3px;font-size:10px;font-weight:700;cursor:default;white-space:nowrap;letter-spacing:.03em;border:1px solid}
+.pb-green{background:rgba(34,197,94,.15);color:var(--green);border-color:rgba(34,197,94,.35)}
+.pb-red{background:rgba(239,68,68,.15);color:var(--red);border-color:rgba(239,68,68,.35)}
+.pb-gray{background:rgba(107,114,128,.1);color:#6b7280;border-color:rgba(107,114,128,.2)}
+.pb-soon{background:rgba(107,114,128,.05);color:#374151;border-color:rgba(107,114,128,.1)}
+.pb-link{cursor:pointer}
+.pb-link:hover{filter:brightness(1.3)}
+.captions-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:3px 8px;border-radius:3px;font-size:10px;flex-shrink:0}
+.captions-btn:hover{border-color:var(--amber);color:var(--amber)}
 
-.queue-panels { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
-.qpanel {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;
-}
-.qpanel-head {
-  padding: 9px 13px; background: var(--bg3);
-  border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
-}
-.qp-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-.qp-label.green { color: var(--green); }
-.qp-label.yellow { color: var(--yellow); }
-.qp-label.gray  { color: var(--gray); }
-.qp-ct { font-size: 10px; color: var(--dim); background: var(--bg4); border-radius: 10px; padding: 1px 8px; }
-.qlist { max-height: 380px; overflow-y: auto; flex: 1; }
-.qi {
-  padding: 7px 13px; border-bottom: 1px solid rgba(46,50,64,.4);
-  border-left: 3px solid transparent;
-  display: flex; align-items: center; justify-content: space-between; gap: 8px;
-}
-.qi:last-child { border-bottom: none; }
-.qi.syn { border-left-color: var(--green); }
-.qi.que { border-left-color: var(--yellow); }
-.qi.sch { border-left-color: var(--gray); }
-.qi-main { flex: 1; min-width: 0; }
-.qi-title {
-  font-size: 11px; color: var(--text);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.qi-title a { color: var(--text); }
-.qi-title a:hover { color: var(--amber); text-decoration: none; }
-.qi-meta { font-size: 9px; color: var(--dim); margin-top: 2px; }
-.qi-meta .pos { color: var(--yellow); }
-.qi-meta .gray { color: var(--gray); }
-.qi-score { font-size: 9px; color: var(--dim); flex-shrink: 0; }
-.now-btn {
-  font-size: 9px; padding: 3px 8px; flex-shrink: 0;
-  background: none; border: 1px solid rgba(245,166,35,.3);
-  border-radius: 3px; color: var(--amber); cursor: pointer;
-}
-.now-btn:hover { border-color: var(--amber); }
-.empty-msg { padding: 20px; text-align: center; color: var(--dim); font-size: 11px; }
+/* MATRIX */
+.matrix-container{max-height:500px;overflow-y:auto}
+.matrix-wrap{overflow-x:auto}
+.matrix-table{width:100%;border-collapse:collapse;font-size:12px}
+.matrix-table th{background:var(--bg3);padding:8px 10px;text-align:left;font-size:9px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;border-bottom:1px solid var(--border);white-space:nowrap;position:sticky;top:0;z-index:2}
+.matrix-table th.plat-th{text-align:center}
+.matrix-table td{padding:7px 10px;border-bottom:1px solid rgba(42,45,62,.5)}
+.matrix-table tr:hover td{background:rgba(255,255,255,.02)}
+.matrix-table td.plat-td{text-align:center}
+.m-cell{display:inline-flex;align-items:center;justify-content:center;width:26px;height:22px;border-radius:3px;font-size:11px;font-weight:700;cursor:default;border:1px solid}
+.m-green{background:rgba(34,197,94,.15);color:var(--green);border-color:rgba(34,197,94,.3);cursor:pointer}
+.m-green:hover{background:rgba(34,197,94,.25)}
+.m-red{background:rgba(239,68,68,.12);color:var(--red);border-color:rgba(239,68,68,.25)}
+.m-gray{background:transparent;color:#374151;border-color:rgba(107,114,128,.15)}
+.m-soon{background:transparent;color:#252833;border-color:rgba(107,114,128,.08)}
+.score-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700}
+.score-good{background:rgba(34,197,94,.15);color:var(--green)}
+.score-med{background:rgba(234,179,8,.15);color:var(--yellow)}
+.score-low{background:rgba(239,68,68,.12);color:var(--red)}
+.test-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:2px 5px;border-radius:3px;font-size:9px;margin-left:3px;cursor:pointer}
+.test-btn:hover{border-color:var(--amber);color:var(--amber)}
+.test-ok{border-color:rgba(34,197,94,.5)!important;color:var(--green)!important}
+.test-fail{border-color:rgba(239,68,68,.5)!important;color:var(--red)!important}
+.matrix-filter{display:flex;gap:8px;align-items:center}
+.matrix-filter select,.matrix-filter input{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:4px 8px;border-radius:4px;font-size:11px;outline:none}
 
-/* ---- Log ---- */
-.log-box {
-  background: var(--bg4); border: 1px solid var(--border);
-  border-radius: 8px; padding: 12px;
-  font-family: 'Courier New', monospace; font-size: 10px;
-  max-height: 300px; overflow-y: auto; line-height: 1.8;
-}
-.ll { display: block; }
-.ll.ok   { color: var(--green); }
-.ll.fail { color: var(--red); }
-.ll.skip { color: var(--dim); }
-.ll.sep  { color: #2e3240; }
-.ll.warn { color: var(--yellow); }
+/* THREE PANELS */
+.three-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.panel-hdr{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.panel-title{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.panel-count{font-size:11px;color:var(--muted)}
+.panel-body{padding:10px;max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:6px}
+.panel-green .panel-hdr{border-left:3px solid var(--green)}
+.panel-yellow .panel-hdr{border-left:3px solid var(--yellow)}
+.panel-gray .panel-hdr{border-left:3px solid var(--gray)}
+.panel-green .panel-title{color:var(--green)}
+.panel-yellow .panel-title{color:var(--yellow)}
+.panel-gray .panel-title{color:var(--gray)}
+.queue-item{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:8px 10px}
+.queue-title{font-size:12px;color:var(--text);margin-bottom:3px;line-height:1.3}
+.queue-meta{font-size:10px;color:var(--muted)}
+.syndicate-now-btn{margin-top:6px;width:100%;background:transparent;border:1px solid var(--amber);color:var(--amber);padding:3px 0;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:.05em}
+.syndicate-now-btn:hover{background:rgba(245,166,35,.15)}
 
-/* ---- Info cards ---- */
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.icard { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
-.irow {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 6px 0; border-bottom: 1px solid rgba(46,50,64,.4); font-size: 11px;
-}
-.irow:last-child { border-bottom: none; }
-.irow .lbl { color: var(--dim); }
-.irow .val { font-weight: 600; text-align: right; max-width: 55%; }
-.irow .val.amber { color: var(--amber); }
-.irow .val.green { color: var(--green); }
+/* BOTTOM GRID */
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stats-box{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.stats-box-body{padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(42,45,62,.6)}
+.stat-row:last-child{border-bottom:none}
+.stat-row-label{font-size:11px;color:var(--muted)}
+.stat-row-val{font-size:12px;color:var(--text);font-weight:600;text-align:right;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.alert-bar{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:4px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px}
+.alert-text{font-size:11px;color:var(--red)}
+.alert-btn{background:rgba(239,68,68,.2);color:var(--red);border:1px solid rgba(239,68,68,.4);padding:4px 10px;border-radius:3px;font-size:10px;font-weight:700}
+.alert-btn:hover{background:rgba(239,68,68,.3)}
 
-/* ---- Quick actions ---- */
-.act-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-.act-btn {
-  display: flex; align-items: center; gap: 7px;
-  background: var(--bg2); border: 1px solid var(--amber);
-  color: var(--amber); padding: 9px 16px;
-  border-radius: 6px; font-size: 11px; font-weight: 700;
-  cursor: pointer; text-transform: uppercase; letter-spacing: .05em;
-}
-.act-btn:hover { background: var(--bg3); }
-.act-btn:disabled { opacity: .4; cursor: not-allowed; }
-.act-btn.ok   { border-color: var(--green); color: var(--green); }
-.act-btn.spin { border-color: var(--gray); color: var(--gray); }
-.spinner {
-  width: 11px; height: 11px; border: 2px solid currentColor;
-  border-top-color: transparent; border-radius: 50%;
-  animation: spin .6s linear infinite; display: none;
-}
-.act-btn.spin .spinner { display: inline-block; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.act-note { margin-top: 8px; font-size: 10px; color: var(--dim); }
+/* LOG */
+.log-lines{font-family:'Consolas','Courier New',monospace;font-size:11px;display:flex;flex-direction:column;gap:2px;max-height:300px;overflow-y:auto;padding:4px 0}
+.log-line{padding:3px 6px;border-radius:3px;line-height:1.5}
+.log-sep{color:var(--muted);opacity:.5}
+.log-ok{color:var(--green)}
+.log-fail{color:var(--red)}
+.log-skip{color:var(--yellow)}
+.log-err{color:#f97316}
+.log-default{color:var(--muted)}
 
-/* ---- Responsive ---- */
-@media (max-width: 960px) {
-  .stats-bar { grid-template-columns: repeat(3,1fr); }
-  .queue-panels { grid-template-columns: 1fr; }
-  .two-col { grid-template-columns: 1fr; }
-}
-@media (max-width: 600px) {
-  .stats-bar { grid-template-columns: repeat(2,1fr); }
-  .wrap { padding: 10px 12px; }
-}
+/* QUICK ACTIONS */
+.actions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.action-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:10px 12px;border-radius:5px;text-align:left;font-size:11px;line-height:1.4}
+.action-btn:hover{border-color:var(--amber);color:var(--amber)}
+.action-btn-label{font-weight:700;letter-spacing:.05em;display:block;margin-bottom:2px}
+.action-btn-sub{color:var(--muted);font-size:10px}
+
+/* MISC */
+.loading{color:var(--muted);font-size:12px;padding:20px;text-align:center}
+.spinner{display:inline-block;width:12px;height:12px;border:2px solid var(--border);border-top-color:var(--amber);border-radius:50%;animation:spin .6s linear infinite;margin-right:6px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
 </style>
 </head>
 <body>
 
 <!-- PASSWORD GATE -->
 <div id="gate">
-  <div class="gate-card">
+  <div class="gate-box">
     <h1>TOW WITH THE FLOW</h1>
-    <div class="gate-sub">Syndication Dashboard</div>
-    <input type="password" id="pw" placeholder="Password" autocomplete="current-password">
-    <button id="pw-btn">Unlock</button>
-    <div class="gate-err" id="gate-err"></div>
+    <h2>Syndication Dashboard</h2>
+    <input type="password" id="pw-input" placeholder="Enter dashboard password" autocomplete="current-password">
+    <button class="gate-btn" onclick="tryLogin()">UNLOCK DASHBOARD</button>
+    <div id="gate-err"></div>
   </div>
 </div>
 
-<!-- DASHBOARD -->
-<div id="dash">
-
-  <div class="dash-header">
-    <div class="dash-title">TOW WITH THE FLOW -- Syndication Dashboard</div>
-    <div class="dash-right">
-      <span class="upd-badge" id="upd-ts">Loading...</span>
-      <button class="lock-btn" onclick="lock()">Lock</button>
+<!-- APP -->
+<div id="app">
+  <div class="hdr">
+    <div class="hdr-left">
+      <h1>TOW WITH THE FLOW</h1>
+      <h2>Syndication Dashboard</h2>
+    </div>
+    <div class="hdr-right">
+      <div class="updated-badge">Updated <span id="updated-time">—</span></div>
+      <button class="refresh-btn" onclick="manualRefresh()">↻ REFRESH</button>
+      <button class="lock-btn" onclick="lockDash()">🔒 LOCK</button>
     </div>
   </div>
 
-  <div class="wrap">
+  <div class="main">
 
-    <!-- STATS BAR -->
+    <!-- TOP STATS -->
     <div class="stats-bar">
-      <div class="s-card">
-        <div class="s-label">Total Posts</div>
-        <div class="s-value" id="sv-total">--</div>
-        <div class="s-sub">towwiththeflow.com</div>
+      <div class="stat-card">
+        <div class="stat-label">Posts Syndicated</div>
+        <div class="stat-val" id="s-syndicated">—</div>
+        <div class="stat-sub" id="s-syndicated-sub">unique posts</div>
       </div>
-      <div class="s-card">
-        <div class="s-label">Syndicated This Week</div>
-        <div class="s-value" id="sv-week">--</div>
-        <div class="s-sub">all platforms, last 7 days</div>
+      <div class="stat-card">
+        <div class="stat-label">This Week</div>
+        <div class="stat-val" id="s-week">—</div>
+        <div class="stat-sub">syndications (7 days)</div>
       </div>
-      <div class="s-card">
-        <div class="s-label">Overall Success Rate</div>
-        <div class="s-value" id="sv-rate">--</div>
-        <div class="s-sub">successes / attempts</div>
+      <div class="stat-card">
+        <div class="stat-label">Success Rate</div>
+        <div class="stat-val" id="s-rate">—</div>
+        <div class="stat-sub">across all platforms</div>
       </div>
-      <div class="s-card">
-        <div class="s-label">Active Platforms</div>
-        <div class="s-value" id="sv-plats">5</div>
-        <div class="s-sub">of 8 planned</div>
+      <div class="stat-card">
+        <div class="stat-label">Platforms Active</div>
+        <div class="stat-val" id="s-platforms">5/9</div>
+        <div class="stat-sub">DEV·HASH·TUMBLR·BLOG·FEEDER</div>
       </div>
-      <div class="s-card">
-        <div class="s-label">Backlog Remaining</div>
-        <div class="s-value" id="sv-backlog">--</div>
-        <div class="s-sub">posts in drip queue</div>
+      <div class="stat-card">
+        <div class="stat-label">Drip Queue</div>
+        <div class="stat-val" id="s-queue">—</div>
+        <div class="stat-sub" id="s-queue-sub">remaining</div>
       </div>
-      <div class="s-card">
-        <div class="s-label">Feeder Coverage</div>
-        <div class="s-value" id="sv-feeder">--</div>
-        <div class="s-sub">posts with feeder variation</div>
+      <div class="stat-card">
+        <div class="stat-label">Backlink Health</div>
+        <div class="stat-val" id="s-health">—</div>
+        <div class="stat-sub" id="s-health-sub">feeder coverage</div>
       </div>
     </div>
 
-    <!-- PLATFORM MATRIX -->
+    <!-- DRIP QUEUE -->
     <div class="section">
-      <div class="sec-head">
-        <div class="sec-title">Platform Syndication Matrix</div>
-        <div class="sec-right" id="matrix-info">Loading...</div>
+      <div class="section-hdr">
+        <span class="section-title">Drip Queue</span>
+        <span id="drip-pill" class="stat-badge badge-gray">Checking…</span>
       </div>
-
-      <div class="plat-bar">
-        <div class="plat-pill" id="pp-devto">
-          <span>Dev.to</span>
-          <span class="ps" id="ps-devto">...</span>
-          <button class="test-btn" onclick="testPlatform('devto')">Test</button>
+      <div class="section-body">
+        <div class="drip-stats-row">
+          <div class="drip-stat"><div class="drip-stat-label">Posts Published</div><div class="drip-stat-val" id="dq-published">—</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Remaining</div><div class="drip-stat-val" id="dq-remaining">—</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Drip Rate</div><div class="drip-stat-val">1/day</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Schedule</div><div class="drip-stat-val">9 AM UTC</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Next Publish</div><div class="drip-stat-val" id="dq-next">—</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Syndicate</div><div class="drip-stat-val" id="dq-syndicated">—</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Feeder</div><div class="drip-stat-val" id="dq-feeder">—</div></div>
         </div>
-        <div class="plat-pill" id="pp-hashnode">
-          <span>Hashnode</span>
-          <span class="ps" id="ps-hashnode">...</span>
-          <button class="test-btn" onclick="testPlatform('hashnode')">Test</button>
+        <div class="drip-indicators">
+          <div class="drip-indicator ind-active">🟢 New Posts: <strong>ACTIVE</strong></div>
+          <div id="drip-backlog-ind" class="drip-indicator ind-paused">⏸ Backlog Drip: <strong>CHECKING…</strong></div>
         </div>
-        <div class="plat-pill" id="pp-tumblr">
-          <span>Tumblr</span>
-          <span class="ps" id="ps-tumblr">...</span>
-          <button class="test-btn" onclick="testPlatform('tumblr')">Test</button>
+        <div class="drip-btns">
+          <button class="drip-btn btn-activate" onclick="toggleDrip(false)">▶ ACTIVATE DRIP</button>
+          <button class="drip-btn btn-pause" onclick="toggleDrip(true)">⏸ PAUSE DRIP</button>
+          <button class="drip-btn btn-publish" onclick="triggerWorkflow('syndicate.yml')">⚡ PUBLISH NEXT NOW</button>
         </div>
-        <div class="plat-pill" id="pp-blogger">
-          <span>Blogger</span>
-          <span class="ps" id="ps-blogger">...</span>
-          <button class="test-btn" onclick="testPlatform('blogger')">Test</button>
-        </div>
-        <div class="plat-pill" id="pp-feeder">
-          <span>Feeder</span>
-          <span class="ps" id="ps-feeder">...</span>
-          <button class="test-btn" onclick="testPlatform('feeder')">Test</button>
-        </div>
-        <div class="plat-pill dim"><span>Write.as</span><span class="ps">Not connected</span></div>
-        <div class="plat-pill dim"><span>Bear Blog</span><span class="ps">Not connected</span></div>
-        <div class="plat-pill dim"><span>Ghost</span><span class="ps">Not connected</span></div>
-      </div>
-
-      <div class="matrix-outer" id="matrix-outer">
-        <div class="matrix-msg">Fetching post list and syndication data...</div>
+        <div class="drip-list" id="drip-list"><div class="loading"><span class="spinner"></span>Loading queue…</div></div>
       </div>
     </div>
 
-    <!-- SYNDICATION QUEUE -->
+    <!-- RECENT SYNDICATIONS -->
     <div class="section">
-      <div class="sec-head">
-        <div class="sec-title">Syndication Queue</div>
+      <div class="section-hdr">
+        <span class="section-title">Recent Syndications</span>
+        <span style="font-size:11px;color:var(--muted)">Last 5 syndicated posts</span>
       </div>
-
-      <div class="q-stats">
-        <div class="qs">Syndicated: <strong id="qs-syn">--</strong></div>
-        <div class="qdiv"></div>
-        <div class="qs">Queued: <strong id="qs-que">--</strong></div>
-        <div class="qdiv"></div>
-        <div class="qs">Est. completion: <strong id="qs-comp">--</strong></div>
-        <div class="qdiv"></div>
-        <div class="qs">Rate: <strong>1 post/day</strong></div>
-        <div class="qdiv"></div>
-        <div class="qs">Today: <strong id="qs-today">--</strong></div>
-        <div class="drip-ctrl">
-          <div class="drip-ind">
-            <div class="drip-dot on"></div>
-            <span style="color:var(--dim)">New posts: <strong id="np-status" style="color:var(--green)">ACTIVE</strong></span>
-          </div>
-          <div class="drip-ind">
-            <div class="drip-dot on" id="drip-dot"></div>
-            <span style="color:var(--dim)">Backlog drip: <strong id="drip-status" style="color:var(--green)">ACTIVE</strong></span>
-          </div>
-          <button class="drip-toggle" id="drip-btn" onclick="toggleDrip()">Pause Drip</button>
-        </div>
-      </div>
-
-      <div class="queue-panels">
-        <div class="qpanel">
-          <div class="qpanel-head">
-            <span class="qp-label green">Syndicated</span>
-            <span class="qp-ct" id="qct-syn">0</span>
-          </div>
-          <div class="qlist" id="ql-syn"></div>
-        </div>
-        <div class="qpanel">
-          <div class="qpanel-head">
-            <span class="qp-label yellow">Queued for Drip</span>
-            <span class="qp-ct" id="qct-que">0</span>
-          </div>
-          <div class="qlist" id="ql-que"></div>
-        </div>
-        <div class="qpanel">
-          <div class="qpanel-head">
-            <span class="qp-label gray">Upcoming Keywords</span>
-            <span class="qp-ct" id="qct-sch">0</span>
-          </div>
-          <div class="qlist" id="ql-sch"></div>
-        </div>
+      <div class="section-body">
+        <div class="recent-list" id="recent-list"><div class="loading"><span class="spinner"></span>Loading…</div></div>
       </div>
     </div>
 
-    <!-- SYNDICATION LOG -->
+    <!-- MATRIX -->
     <div class="section">
-      <div class="sec-head">
-        <div class="sec-title">Syndication Log</div>
-        <div class="sec-right" id="log-info">Last 30 entries</div>
+      <div class="section-hdr">
+        <span class="section-title">Syndication Status Matrix</span>
+        <div class="matrix-filter">
+          <input type="text" id="matrix-search" placeholder="Filter posts…" oninput="renderMatrix()" style="width:180px">
+          <select id="matrix-filter-sel" onchange="renderMatrix()">
+            <option value="all">All posts</option>
+            <option value="synced">Syndicated</option>
+            <option value="unsynced">Not yet</option>
+          </select>
+        </div>
       </div>
-      <div class="log-box" id="log-box"><span class="ll skip">Fetching log...</span></div>
+      <div class="matrix-container">
+        <div class="matrix-wrap">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th style="min-width:200px">Post</th>
+                <th style="min-width:80px">Date</th>
+                <th class="plat-th">DEV<button class="test-btn" id="tb-devto" onclick="testPlat('devto',this)">Test</button></th>
+                <th class="plat-th">HASH<button class="test-btn" id="tb-hashnode" onclick="testPlat('hashnode',this)">Test</button></th>
+                <th class="plat-th">TUMBLR<button class="test-btn" id="tb-tumblr" onclick="testPlat('tumblr',this)">Test</button></th>
+                <th class="plat-th">BLOG<button class="test-btn" id="tb-blogger" onclick="testPlat('blogger',this)">Test</button></th>
+                <th class="plat-th">FEEDER<button class="test-btn" id="tb-feeder" onclick="testPlat('feeder',this)">Test</button></th>
+                <th class="plat-th" style="color:#374151">WRITE</th>
+                <th class="plat-th" style="color:#374151">BEAR</th>
+                <th class="plat-th" style="color:#374151">GHOST</th>
+                <th class="plat-th">SCORE</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-body"><tr><td colspan="11" class="loading"><span class="spinner"></span>Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
-    <!-- SITE STATS -->
-    <div class="section two-col">
-      <div class="icard">
-        <div class="sec-head" style="margin-bottom:10px">
-          <div class="sec-title">towwiththeflow.com Stats</div>
+    <!-- THREE PANEL QUEUE -->
+    <div class="three-panels">
+      <div class="panel panel-green">
+        <div class="panel-hdr">
+          <span class="panel-title">Syndicated</span>
+          <span class="panel-count" id="p1-count">—</span>
         </div>
-        <div class="irow"><span class="lbl">Total Posts</span><span class="val amber" id="ii-posts">--</span></div>
-        <div class="irow"><span class="lbl">Keywords Remaining</span><span class="val" id="ii-kw">--</span></div>
-        <div class="irow"><span class="lbl">Last Deploy Date</span><span class="val" id="ii-deploy">--</span></div>
-        <div class="irow"><span class="lbl">Last Commit</span><span class="val" style="font-size:10px" id="ii-commit">--</span></div>
-        <div class="irow"><span class="lbl">Next Scheduled Post</span><span class="val green">9:00 AM UTC daily</span></div>
+        <div class="panel-body" id="panel-synced"><div class="loading"><span class="spinner"></span></div></div>
       </div>
-      <div class="icard">
-        <div class="sec-head" style="margin-bottom:10px">
-          <div class="sec-title">Feeder Site Stats (TTWF_GithubPages)</div>
+      <div class="panel panel-yellow">
+        <div class="panel-hdr">
+          <span class="panel-title">Queued</span>
+          <span class="panel-count" id="p2-count">—</span>
         </div>
-        <div class="irow"><span class="lbl">Total Feeder Posts</span><span class="val amber" id="ii-fposts">--</span></div>
-        <div class="irow"><span class="lbl">Last Feeder Post</span><span class="val" id="ii-flast">--</span></div>
-        <div class="irow"><span class="lbl">Feeder Backlink Coverage</span><span class="val green" id="ii-fbl">--</span></div>
-        <div class="irow"><span class="lbl">Last Feeder Commit</span><span class="val" style="font-size:10px" id="ii-fcommit">--</span></div>
-        <div class="irow">
-          <span class="lbl">Feeder Site</span>
-          <a href="https://lordshrrred.github.io/TTWF_GithubPages/" target="_blank" style="font-size:10px">View feeder site</a>
+        <div class="panel-body" id="panel-queued"><div class="loading"><span class="spinner"></span></div></div>
+      </div>
+      <div class="panel panel-gray">
+        <div class="panel-hdr">
+          <span class="panel-title">Scheduled Keywords</span>
+          <span class="panel-count" id="p3-count">—</span>
         </div>
+        <div class="panel-body" id="panel-sched"><div class="loading"><span class="spinner"></span></div></div>
+      </div>
+    </div>
+
+    <!-- BOTTOM GRID -->
+    <div class="bottom-grid">
+      <div class="stats-box">
+        <div class="section-hdr"><span class="section-title">towwiththeflow.com Stats</span></div>
+        <div class="stats-box-body" id="main-stats"><div class="loading"><span class="spinner"></span></div></div>
+      </div>
+      <div class="stats-box">
+        <div class="section-hdr"><span class="section-title">Feeder Site (TTWF_GithubPages)</span></div>
+        <div class="stats-box-body" id="feeder-stats"><div class="loading"><span class="spinner"></span></div></div>
+      </div>
+    </div>
+
+    <!-- LOG -->
+    <div class="section">
+      <div class="section-hdr">
+        <span class="section-title">Syndication Log</span>
+        <span style="font-size:11px;color:var(--muted)">Last 30 entries</span>
+      </div>
+      <div class="section-body">
+        <div class="log-lines" id="log-lines"><div class="loading"><span class="spinner"></span></div></div>
       </div>
     </div>
 
     <!-- QUICK ACTIONS -->
     <div class="section">
-      <div class="sec-head">
-        <div class="sec-title">Quick Actions</div>
-        <div class="sec-right">Triggers GitHub Actions workflows via API</div>
+      <div class="section-hdr"><span class="section-title">Quick Actions</span></div>
+      <div class="section-body">
+        <div class="actions-grid">
+          <button class="action-btn" onclick="triggerWorkflow('hugo.yml')"><span class="action-btn-label">🚀 DEPLOY SITE</span><span class="action-btn-sub">Trigger hugo.yml workflow</span></button>
+          <button class="action-btn" onclick="triggerWorkflow('syndicate.yml')"><span class="action-btn-label">📡 SYNDICATE NEXT</span><span class="action-btn-sub">Run syndication workflow</span></button>
+          <button class="action-btn" onclick="triggerWorkflow('generate.yml')"><span class="action-btn-label">✍️ GENERATE POST</span><span class="action-btn-sub">Run next keyword</span></button>
+          <button class="action-btn" onclick="triggerWorkflow('feeder.yml')"><span class="action-btn-label">🔗 UPDATE FEEDER</span><span class="action-btn-sub">Rebuild feeder posts</span></button>
+          <button class="action-btn" onclick="triggerFeederBacklinks()"><span class="action-btn-label">🔧 FIX BACKLINKS</span><span class="action-btn-sub">Re-run backlink updater</span></button>
+          <button class="action-btn" onclick="manualRefresh()"><span class="action-btn-label">↻ REFRESH DATA</span><span class="action-btn-sub">Clear cache, reload all</span></button>
+        </div>
       </div>
-      <div class="act-grid">
-        <button class="act-btn" id="btn-gen" onclick="triggerWf('daily-post.yml','btn-gen','Generate Post Now')">
-          <span class="spinner"></span>Generate Post Now
-        </button>
-        <button class="act-btn" id="btn-kw" onclick="triggerWf('weekly-keywords.yml','btn-kw','Run Keyword Research')">
-          <span class="spinner"></span>Run Keyword Research
-        </button>
-        <button class="act-btn" id="btn-bl" onclick="triggerWf('daily-post.yml','btn-bl','Sync Backlog Post')">
-          <span class="spinner"></span>Sync One Backlog Post
-        </button>
-        <button class="act-btn" id="btn-ta" onclick="testAll()">
-          <span class="spinner"></span>Test All Connections
-        </button>
-      </div>
-      <div class="act-note">Allow ~30s for workflow to start after triggering. Drip pause/resume commits a flag file to the repo.</div>
     </div>
 
-  </div><!-- /wrap -->
-</div><!-- /dash -->
+  </div>
+</div>
 
 <script>
-/* ============================================================
-   CONFIG -- injected at build time by build_dashboard.py
-   ============================================================ */
+// ── CONFIG (injected at build time) ─────────────────────────
 const PW_HASH    = '__PASSWORD_HASH__';
 const GH_TOKEN   = '__GITHUB_TOKEN__';
 const BLOG_ID    = '__BLOGGER_BLOG_ID__';
 const BLOG_KEY   = '__BLOGGER_API_KEY__';
-const TWTF       = 'Lordshrrred/TowWithTheFlow';
-const FEEDER     = 'Lordshrrred/TTWF_GithubPages';
-const TTL        = 5 * 60 * 1000;
+const REPO_OWNER = 'Lordshrrred';
+const REPO_NAME  = 'TowWithTheFlow';
+const FEEDER_REPO= 'TTWF_GithubPages';
+const MAIN_URL   = 'https://towwiththeflow.com';
+const CACHE_TTL  = 5 * 60 * 1000;
 
-/* ============================================================
-   UTILITIES
-   ============================================================ */
-async function sha256(s) {
-  const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
-  return Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2,'0')).join('');
-}
-const cGet = k => { try { const v = sessionStorage.getItem('d_'+k); if (!v) return null; const o = JSON.parse(v); return Date.now()-o.t < TTL ? o.v : null; } catch { return null; } };
-const cSet = (k,v) => { try { sessionStorage.setItem('d_'+k, JSON.stringify({t:Date.now(),v})); } catch {} };
-const esc  = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-const txt  = (id,v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
-const html = (id,v) => { const e = document.getElementById(id); if (e) e.innerHTML = v; };
-
-function age(d) {
-  if (!d) return '--';
-  const s = Math.floor((Date.now() - new Date(d)) / 1000);
-  if (s < 60)    return Math.floor(s) + 's ago';
-  if (s < 3600)  return Math.floor(s/60) + 'm ago';
-  if (s < 86400) return Math.floor(s/3600) + 'h ago';
-  return Math.floor(s/86400) + 'd ago';
-}
-function fmtDate(d) {
-  if (!d) return '--';
-  return new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-}
-function addDays(n) {
-  const d = new Date(); d.setDate(d.getDate() + n); return d;
-}
-function fmtShort(d) {
-  return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
-}
-function slugToTitle(s) {
-  return s.split('-').map(w => w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
-}
-function ghH() {
-  const h = {'User-Agent':'TWTF-Dashboard', Accept:'application/vnd.github.v3+json'};
-  if (GH_TOKEN && !GH_TOKEN.startsWith('__')) h['Authorization'] = 'token ' + GH_TOKEN;
-  return h;
-}
-async function jFetch(key, url, opts={}) {
-  const c = cGet(key); if (c) return c;
-  const r = await fetch(url, opts);
-  if (!r.ok) throw new Error('HTTP ' + r.status);
-  const d = await r.json(); cSet(key,d); return d;
-}
-async function tFetch(key, url) {
-  const c = cGet(key); if (c) return c;
-  const r = await fetch(url);
-  if (!r.ok) throw new Error('HTTP ' + r.status);
-  const t = await r.text(); cSet(key,t); return t;
-}
-
-/* ============================================================
-   AUTH
-   ============================================================ */
-async function unlock() {
-  const val = document.getElementById('pw').value;
-  if (!val) return;
-  const h = await sha256(val);
-  if (h === PW_HASH) {
-    sessionStorage.setItem('twtf_ok','1');
+// ── AUTH ──────────────────────────────────────────────────────
+async function tryLogin() {
+  const pw = document.getElementById('pw-input').value;
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
+  const hash = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  if (hash === PW_HASH) {
+    sessionStorage.setItem('twtf_auth','1');
     document.getElementById('gate').style.display = 'none';
-    document.getElementById('dash').style.display = 'block';
+    document.getElementById('app').style.display  = 'flex';
     init();
   } else {
     document.getElementById('gate-err').textContent = 'Incorrect password.';
   }
 }
-function lock() { sessionStorage.removeItem('twtf_ok'); location.reload(); }
-document.getElementById('pw-btn').addEventListener('click', unlock);
-document.getElementById('pw').addEventListener('keydown', e => { if (e.key==='Enter') unlock(); });
-if (sessionStorage.getItem('twtf_ok')==='1') {
-  document.getElementById('gate').style.display = 'none';
-  document.getElementById('dash').style.display = 'block';
+document.getElementById('pw-input').addEventListener('keydown', e => { if(e.key==='Enter') tryLogin(); });
+function lockDash() { sessionStorage.removeItem('twtf_auth'); location.reload(); }
+if (sessionStorage.getItem('twtf_auth')==='1') {
+  document.getElementById('gate').style.display='none';
+  document.getElementById('app').style.display='flex';
+  document.addEventListener('DOMContentLoaded', init);
 }
 
-/* ============================================================
-   DATA STORE
-   ============================================================ */
-const D = {
-  posts:       [],   // [{slug, title}]
-  synced:      new Set(),
-  feederFiles: [],
-  devto:       [],
-  hashnode:    [],
-  blogger:     [],
-  logMap:      {},   // {slug: {DEVTO:{status,url}, HASHNODE:..., TUMBLR:..., BLOGGER:...}}
-  logLines:    [],
-  feederBacklog: [],
-  keywords:    [],
-  dripPaused:  false,
+// ── CACHE ──────────────────────────────────────────────────────
+function cGet(k){
+  try{const i=sessionStorage.getItem('c_'+k);if(!i)return null;const{ts,d}=JSON.parse(i);if(Date.now()-ts>CACHE_TTL){sessionStorage.removeItem('c_'+k);return null;}return d;}catch{return null;}
+}
+function cSet(k,d){try{sessionStorage.setItem('c_'+k,JSON.stringify({ts:Date.now(),d}));}catch{}}
+function clearCache(){Object.keys(sessionStorage).filter(k=>k.startsWith('c_')).forEach(k=>sessionStorage.removeItem(k));}
+
+// ── FETCH HELPERS ──────────────────────────────────────────────
+async function jFetch(ck,url,opts={}){
+  const c=cGet(ck);if(c!==null)return c;
+  const r=await fetch(url,opts);if(!r.ok)throw new Error(`${r.status} ${url}`);
+  const d=await r.json();cSet(ck,d);return d;
+}
+async function tFetch(ck,url,opts={}){
+  const c=cGet(ck);if(c!==null)return c;
+  const r=await fetch(url,opts);if(!r.ok)throw new Error(`${r.status} ${url}`);
+  const d=await r.text();cSet(ck,d);return d;
+}
+const GH_HDR=()=>({'Authorization':`token ${GH_TOKEN}`,'Accept':'application/vnd.github.v3+json'});
+const ghFetch=(ck,p,o={})=>jFetch(ck,`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/${p}`,{headers:GH_HDR(),...o});
+const ghFeeder=(ck,p,o={})=>jFetch(ck,`https://api.github.com/repos/${REPO_OWNER}/${FEEDER_REPO}/${p}`,{headers:GH_HDR(),...o});
+
+// ── DATA STORE ──────────────────────────────────────────────────
+const D={
+  posts:[],syncedSlugs:new Set(),feederFiles:[],
+  devto:[],hashnode:[],blogger:[],
+  logMap:{},logLines:[],
+  feederBacklog:[],keywords:[],
+  dripPaused:false,
+  feederTotal:0,feederBacklinkEst:0,
+  lastCommit:null,
 };
 
-/* ---- Log parser ---- */
-function parseLog(text) {
-  D.logMap = {}; D.logLines = [];
-  if (!text) return;
-  for (const line of text.split('\n').filter(Boolean)) {
-    if (line.includes('--- Syndicating:') || line.includes('--- Done syndicating:')) {
-      D.logLines.push({raw:line, type:'sep'}); continue;
-    }
-    const m = line.match(/^\[([^\]]+)\]\s+(\w+)\s+\|\s+([^|]+?)\s+\|\s+(\w+)(.*)/);
-    if (!m) { D.logLines.push({raw:line,type:'skip'}); continue; }
-    const [,ts,plat,slug,status,extra] = m;
-    const sk = slug.trim();
-    const urlM = extra.match(/url=(\S+)/);
-    const url = urlM ? urlM[1] : null;
-    const type = status==='SUCCESS'?'ok': status==='SKIP'?'skip':'fail';
-    D.logLines.push({raw:line,ts,plat,slug:sk,status,url,type});
-    if (!D.logMap[sk]) D.logMap[sk] = {};
-    D.logMap[sk][plat] = {status, url};
-  }
+// ── FETCHERS ────────────────────────────────────────────────────
+async function fetchPosts(){
+  const tree=await ghFetch('gh_tree','git/trees/main?recursive=1');
+  D.posts=tree.tree
+    .filter(f=>f.path.startsWith('content/posts/')&&f.path.endsWith('.md')&&!f.path.includes('_index'))
+    .map(f=>{
+      const slug=f.path.replace('content/posts/','').replace('.md','');
+      return {slug,title:s2t(slug),date:''};
+    });
 }
 
-/* ============================================================
-   FETCHERS
-   ============================================================ */
-async function fetchDevTo() {
-  return jFetch('dt', 'https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1000');
+async function fetchSynced(){
+  try{
+    const t=await tFetch('synced_txt',`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/scripts/synced-posts.txt`);
+    D.syncedSlugs=new Set(t.trim().split('\n').map(l=>l.trim()).filter(Boolean));
+  }catch{D.syncedSlugs=new Set();}
 }
-async function fetchHashnode() {
-  const q = '{publication(host:"towwiththeflow.hashnode.dev"){posts(first:50){totalDocuments edges{node{title publishedAt url canonicalUrl}}}}}';
-  const d = await jFetch('hn','https://gql.hashnode.com',{
-    method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({query:q})
-  });
-  return d.data?.publication?.posts?.edges?.map(e=>e.node)||[];
-}
-async function fetchBlogger() {
-  try {
-    if (BLOG_KEY && !BLOG_KEY.startsWith('__') && BLOG_ID && !BLOG_ID.startsWith('__')) {
-      const d = await jFetch('bl_api', `https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${BLOG_KEY}&maxResults=50&fields=items(title,url,published)`);
-      return d.items||[];
+
+async function fetchLog(){
+  try{
+    const t=await tFetch('log_txt',`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/scripts/syndication_log.txt`);
+    const lines=t.trim().split('\n').filter(Boolean);
+    const map={};
+    for(const line of lines){
+      const m=line.match(/^\[([^\]]+)\]\s+(\w+)\s+\|\s+([^|]+?)\s+\|\s+(\w+)(.*)/);
+      if(!m)continue;
+      const[,ts,plat,slug,status,rest]=m;
+      const s=slug.trim();
+      if(!map[s])map[s]={};
+      const um=rest.match(/url=(\S+)/);
+      map[s][plat]={status,url:um?um[1]:null,ts};
     }
-    const d = await jFetch('bl_rss','https://denverroadsideguide.blogspot.com/feeds/posts/default?alt=json&max-results=50');
-    return (d.feed?.entry||[]).map(e=>({
-      title: e.title?.['$t']||'',
-      url:   e.link?.find(l=>l.rel==='alternate')?.href||'',
-      published: e.published?.['$t'],
+    D.logMap=map;
+    D.logLines=lines.slice(-30).reverse();
+  }catch{D.logMap={};D.logLines=[];}
+}
+
+async function fetchDevto(){
+  try{D.devto=await jFetch('devto','https://dev.to/api/articles?username=towwiththeflowyoo&per_page=100');}
+  catch{D.devto=[];}
+}
+
+async function fetchHashnode(){
+  try{
+    const q=`{publication(host:"towwiththeflow.hashnode.dev"){posts(first:50){edges{node{title canonicalUrl url}}}}}`;
+    const d=await jFetch('hashnode','https://gql.hashnode.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q})});
+    D.hashnode=d?.data?.publication?.posts?.edges?.map(e=>e.node)||[];
+  }catch{D.hashnode=[];}
+}
+
+async function fetchBlogger(){
+  try{
+    if(BLOG_KEY&&!BLOG_KEY.startsWith('__')&&BLOG_ID&&!BLOG_ID.startsWith('__')){
+      const d=await jFetch('blogger_api',`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${BLOG_KEY}&maxResults=100&fields=items(title,url)`);
+      D.blogger=d.items||[];return;
+    }
+    // RSS fallback
+    const d=await jFetch('blogger_rss','https://denverroadsideguide.blogspot.com/feeds/posts/default?alt=json&max-results=100');
+    D.blogger=(d?.feed?.entry||[]).map(e=>({
+      title:e.title?.$t||'',
+      url:e.link?.find(l=>l.rel==='alternate')?.href||null
     }));
-  } catch { return []; }
-}
-async function checkDripPaused() {
-  try {
-    const r = await fetch(`https://api.github.com/repos/${TWTF}/contents/scripts/DRIP_PAUSED`,{headers:ghH()});
-    return r.status===200;
-  } catch { return false; }
+  }catch{D.blogger=[];}
 }
 
-async function fetchAll() {
-  const [
-    twtfTree, feederTree, twtfCommits, feederCommits,
-    dt, hn, bl,
-    logTxt, syncedTxt, backlogTxt, kwTxt,
-    dripPaused,
-  ] = await Promise.allSettled([
-    jFetch('tw_tree', `https://api.github.com/repos/${TWTF}/git/trees/main?recursive=1`,{headers:ghH()}),
-    jFetch('fd_tree', `https://api.github.com/repos/${FEEDER}/git/trees/main?recursive=1`,{headers:ghH()}),
-    jFetch('tw_c',    `https://api.github.com/repos/${TWTF}/commits?per_page=1`,{headers:ghH()}),
-    jFetch('fd_c',    `https://api.github.com/repos/${FEEDER}/commits?per_page=1`,{headers:ghH()}),
-    fetchDevTo(), fetchHashnode(), fetchBlogger(),
-    tFetch('tw_log',     `https://raw.githubusercontent.com/${TWTF}/main/scripts/syndication_log.txt`),
-    tFetch('tw_synced',  `https://raw.githubusercontent.com/${TWTF}/main/scripts/synced-posts.txt`),
-    tFetch('tw_backlog', `https://raw.githubusercontent.com/${TWTF}/main/scripts/feeder_backlog.txt`),
-    tFetch('tw_kw',      `https://raw.githubusercontent.com/${TWTF}/main/scripts/keywords.txt`),
-    checkDripPaused(),
+async function fetchFeeder(){
+  try{
+    const tree=await ghFeeder('feeder_tree','git/trees/main?recursive=1');
+    const mds=tree.tree.filter(f=>f.path.startsWith('content/posts/')&&f.path.endsWith('.md')&&!f.path.includes('_index'));
+    D.feederFiles=mds.map(f=>f.path.replace('content/posts/','').replace('.md',''));
+    D.feederTotal=D.feederFiles.length;
+    // Sample 3 posts for backlink check
+    let hits=0;
+    const sample=mds.slice(0,3);
+    for(const f of sample){
+      try{
+        const t=await tFetch('fl_'+f.sha,`https://raw.githubusercontent.com/${REPO_OWNER}/${FEEDER_REPO}/main/${f.path}`);
+        if(t.includes('towwiththeflow.com'))hits++;
+      }catch{}
+    }
+    D.feederBacklinkEst=sample.length>0?Math.round((hits/sample.length)*D.feederTotal):0;
+  }catch{D.feederFiles=[];D.feederTotal=0;D.feederBacklinkEst=0;}
+}
+
+async function fetchFeederBacklog(){
+  try{
+    const t=await tFetch('backlog',`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/scripts/feeder_backlog.txt`);
+    D.feederBacklog=t.trim().split('\n').map(l=>l.trim()).filter(Boolean);
+  }catch{D.feederBacklog=[];}
+}
+
+async function fetchKeywords(){
+  try{
+    const t=await tFetch('kw',`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/scripts/keywords.txt`);
+    D.keywords=t.trim().split('\n').filter(l=>!l.startsWith('#')&&l.trim()).map(l=>l.trim());
+  }catch{D.keywords=[];}
+}
+
+async function fetchDrip(){
+  try{await ghFetch('drip_flag','contents/scripts/DRIP_PAUSED');D.dripPaused=true;}
+  catch{D.dripPaused=false;}
+}
+
+async function fetchCommit(){
+  try{const c=await ghFetch('commits','commits?per_page=1');D.lastCommit=c[0];}
+  catch{D.lastCommit=null;}
+}
+
+async function fetchAll(){
+  await Promise.allSettled([
+    fetchPosts(),fetchSynced(),fetchLog(),
+    fetchDevto(),fetchHashnode(),fetchBlogger(),
+    fetchFeeder(),fetchFeederBacklog(),fetchKeywords(),
+    fetchDrip(),fetchCommit()
   ]);
-
-  if (twtfTree.status==='fulfilled') {
-    D.posts = twtfTree.value.tree
-      .filter(f=>f.path.startsWith('content/posts/')&&f.path.endsWith('.md')&&!f.path.includes('_index'))
-      .map(f=>{ const slug=f.path.replace('content/posts/','').replace('.md',''); return {slug,title:slugToTitle(slug)}; })
-      .sort((a,b)=>a.slug.localeCompare(b.slug));
-  }
-  if (feederTree.status==='fulfilled') {
-    D.feederFiles = feederTree.value.tree
-      .filter(f=>f.path.startsWith('content/posts/')&&f.path.endsWith('.md'))
-      .map(f=>f.path.replace('content/posts/','').replace('.md',''));
-  }
-  if (twtfCommits.status==='fulfilled'&&twtfCommits.value[0]) {
-    const c = twtfCommits.value[0].commit;
-    txt('ii-deploy', fmtDate(c.author.date));
-    txt('ii-commit', c.message.split('\n')[0].slice(0,55));
-  }
-  if (feederCommits.status==='fulfilled'&&feederCommits.value[0]) {
-    const c = feederCommits.value[0].commit;
-    txt('ii-flast', age(c.author.date));
-    txt('ii-fcommit', c.message.split('\n')[0].slice(0,55));
-  }
-  if (dt.status==='fulfilled')  D.devto    = dt.value;
-  if (hn.status==='fulfilled')  D.hashnode = hn.value;
-  if (bl.status==='fulfilled')  D.blogger  = bl.value;
-  if (logTxt.status==='fulfilled')     parseLog(logTxt.value);
-  else D.logLines = [{raw:'syndication_log.txt not yet pushed to GitHub -- commit it locally to enable remote log viewing.',type:'skip'}];
-  if (syncedTxt.status==='fulfilled')  D.synced      = new Set(syncedTxt.value.split('\n').map(l=>l.trim()).filter(Boolean));
-  if (backlogTxt.status==='fulfilled') D.feederBacklog = backlogTxt.value.split('\n').map(l=>l.trim()).filter(Boolean);
-  if (kwTxt.status==='fulfilled')      D.keywords    = kwTxt.value.split('\n').filter(l=>l.trim()&&!l.trim().startsWith('#'));
-  D.dripPaused = dripPaused.status==='fulfilled' && dripPaused.value===true;
 }
 
-/* ============================================================
-   SYNDICATION STATUS HELPERS
-   ============================================================ */
-function devtoStatus(slug) {
-  const p = D.devto.find(p=>{const c=p.canonical_url||''; return c.includes('/'+slug+'/') || c.endsWith('/'+slug);});
-  if (p) return {ok:true, url:p.url};
-  const l = D.logMap[slug]?.DEVTO;
-  if (l?.status==='SUCCESS') return {ok:true, url:null};
-  if (l?.status==='SKIP')    return {ok:false, skip:true};
-  if (l)                     return {ok:false, fail:true};
-  return {};
+// ── STATUS HELPERS ───────────────────────────────────────────────
+function devtoSt(slug){
+  const p=D.devto.find(a=>{const c=(a.canonical_url||'').replace(/\/$/,'');return c.endsWith('/'+slug)||c.includes('/'+slug+'/');});
+  if(p)return{ok:true,url:p.url||null};
+  const l=D.logMap[slug]?.DEVTO;
+  if(l?.status==='SUCCESS')return{ok:true,url:l.url};
+  if(l?.status==='SKIP')return{ok:false,skip:true};
+  if(l?.status==='FAIL'||l?.status==='ERROR')return{ok:false,fail:true};
+  if(l)return{ok:false,fail:true};
+  return{};
 }
-function hashnodeStatus(slug) {
-  const p = D.hashnode.find(p=>{const c=p.canonicalUrl||''; return c.includes('/'+slug+'/') || c.endsWith('/'+slug);});
-  if (p) return {ok:true, url:p.url};
-  const l = D.logMap[slug]?.HASHNODE;
-  if (l?.status==='SUCCESS') return {ok:true, url:l.url};
-  if (l) return {ok:false, fail:true};
-  return {};
+function hashnodeSt(slug){
+  const p=D.hashnode.find(a=>{const c=(a.canonicalUrl||'').replace(/\/$/,'');return c.endsWith('/'+slug)||c.includes('/'+slug);});
+  if(p)return{ok:true,url:p.url||null};
+  const l=D.logMap[slug]?.HASHNODE;
+  if(l?.status==='SUCCESS')return{ok:true,url:l.url};
+  if(l?.status==='SKIP')return{ok:false,skip:true};
+  if(l?.status==='FAIL'||l?.status==='ERROR')return{ok:false,fail:true};
+  return{};
 }
-function tumblrStatus(slug) {
-  const l = D.logMap[slug]?.TUMBLR;
-  if (!l) return {};
-  if (l.status==='SUCCESS') return {ok:true, url:l.url};
-  return {ok:false, fail:true};
+function tumblrSt(slug){
+  const l=D.logMap[slug]?.TUMBLR;
+  if(!l)return{};
+  if(l.status==='SUCCESS')return{ok:true,url:l.url};
+  if(l.status==='SKIP')return{ok:false,skip:true};
+  return{ok:false,fail:true};
 }
-function bloggerStatus(slug) {
-  const kw = slug.replace(/-/g,' ');
-  const p = D.blogger.find(p=>(p.url||'').includes(slug) || (p.title||'').toLowerCase().includes(kw));
-  if (p) return {ok:true, url:p.url};
-  const l = D.logMap[slug]?.BLOGGER;
-  if (l?.status==='SUCCESS') return {ok:true, url:l.url};
-  if (l) return {ok:false, fail:true};
-  return {};
+function bloggerSt(slug){
+  const title=s2t(slug).toLowerCase();
+  const p=D.blogger.find(b=>(b.title||'').toLowerCase().includes(title.slice(0,20)));
+  if(p)return{ok:true,url:p.url||null};
+  const l=D.logMap[slug]?.BLOGGER;
+  if(l?.status==='SUCCESS')return{ok:true,url:l.url};
+  if(l)return{ok:false,fail:true};
+  return{};
 }
-function feederStatus(slug) {
-  let found = null;
-  if (slug.startsWith('towing-cost-')) {
-    const city = slug.replace('towing-cost-','');
-    found = D.feederFiles.find(f=>f===city+'-towing-prices'||f.startsWith(city+'-towing-prices'));
+function feederSt(slug){
+  let found;
+  if(slug.startsWith('towing-cost-')){
+    const city=slug.replace('towing-cost-','');
+    found=D.feederFiles.find(f=>f===city+'-towing-prices'||f.startsWith(city+'-towing-prices'));
   }
-  if (!found) found = D.feederFiles.find(f=>f.startsWith(slug+'-')||f===slug);
-  if (found) return {ok:true, url:`https://lordshrrred.github.io/TTWF_GithubPages/${found}/`};
-  return {};
+  if(!found)found=D.feederFiles.find(f=>f===slug||f.startsWith(slug+'-'));
+  if(found)return{ok:true,url:`https://${REPO_OWNER.toLowerCase()}.github.io/${FEEDER_REPO}/posts/${found}/`};
+  const l=D.logMap[slug]?.FEEDER;
+  if(l?.status==='SUCCESS')return{ok:true,url:l.url};
+  if(l)return{ok:false,fail:true};
+  return{};
+}
+function scorePost(slug){
+  const fns=[devtoSt,hashnodeSt,tumblrSt,bloggerSt,feederSt];
+  let ok=0;for(const fn of fns)if(fn(slug).ok)ok++;
+  return{ok,total:5};
 }
 
-function cell(s, label) {
-  if (s.ok)   return s.url ? `<a href="${esc(s.url)}" target="_blank" class="c-ok" title="View on ${esc(label)}">&#10003;</a>` : `<span class="c-ok" title="Syndicated">&#10003;</span>`;
-  if (s.fail) return `<span class="c-fail" title="Failed">&#10007;</span>`;
-  if (s.skip) return `<span class="c-skip" title="Paused/Skipped">--</span>`;
-  return `<span class="c-none" title="Not attempted">&#8722;</span>`;
+// ── CELL / BADGE BUILDERS ─────────────────────────────────────────
+function cell(st,soon=false){
+  if(soon)return`<span class="m-cell m-soon">—</span>`;
+  if(st.ok){
+    const u=st.url?` onclick="window.open('${st.url}','_blank')"`:' ';
+    return`<span class="m-cell m-green"${u}>✓</span>`;
+  }
+  if(st.skip)return`<span class="m-cell m-gray" title="Skipped">—</span>`;
+  if(st.fail)return`<span class="m-cell m-red" title="Failed">✗</span>`;
+  return`<span class="m-cell m-gray">—</span>`;
 }
-const pendCell = () => `<span class="c-pend" title="Not connected yet">--</span>`;
+function badge(name,st,soon=false){
+  if(soon)return`<span class="plat-badge pb-soon">${name}</span>`;
+  if(st.ok){
+    const u=st.url?` onclick="window.open('${st.url}','_blank')"`:' ';
+    return`<span class="plat-badge pb-green pb-link"${u}>✓ ${name}</span>`;
+  }
+  if(st.skip)return`<span class="plat-badge pb-gray">— ${name}</span>`;
+  if(st.fail)return`<span class="plat-badge pb-red">✗ ${name}</span>`;
+  return`<span class="plat-badge pb-gray">— ${name}</span>`;
+}
 
-/* ============================================================
-   RENDER MATRIX
-   ============================================================ */
-function renderMatrix() {
-  if (!D.posts.length) { html('matrix-outer','<div class="matrix-msg">No posts found.</div>'); return; }
-  let ok=0, tot=0;
-  const rows = D.posts.map(p=>{
-    const dt=devtoStatus(p.slug), hn=hashnodeStatus(p.slug),
-          tb=tumblrStatus(p.slug), bl=bloggerStatus(p.slug), fd=feederStatus(p.slug);
-    const cells=[dt,hn,tb,bl,fd];
-    const score = cells.filter(c=>c.ok).length;
-    tot+=5; ok+=score;
-    const bCls = score===5?'full':score===0?'zero':'';
-    return `<tr>
-      <td class="td-post"><a href="https://towwiththeflow.com/${p.slug}/" target="_blank" class="t">${esc(p.title)}</a></td>
-      <td>${cell(dt,'Dev.to')}</td>
-      <td>${cell(hn,'Hashnode')}</td>
-      <td>${cell(tb,'Tumblr')}</td>
-      <td>${cell(bl,'Blogger')}</td>
-      <td>${cell(fd,'Feeder')}</td>
-      <td>${pendCell()}</td><td>${pendCell()}</td><td>${pendCell()}</td>
-      <td><span class="badge ${bCls}">${score}/5</span></td>
+// ── RENDER STATS ──────────────────────────────────────────────────
+function renderStats(){
+  let synced=0,totalOps=0,successOps=0,thisWeek=0;
+  const weekAgo=Date.now()-7*24*3600*1000;
+
+  for(const p of D.posts){if(scorePost(p.slug).ok>0)synced++;}
+
+  // Count from log
+  const logRaw=cGet('log_txt')||'';
+  for(const line of logRaw.split('\n')){
+    const m=line.match(/^\[(\d{4}-\d{2}-\d{2})[^\]]*\]\s+\w+\s+\|\s+\S+\s+\|\s+(\w+)/);
+    if(!m)continue;
+    totalOps++;
+    if(m[2]==='SUCCESS'){successOps++;if(new Date(m[1]).getTime()>weekAgo)thisWeek++;}
+  }
+
+  const rate=totalOps>0?Math.round(successOps/totalOps*100):0;
+  const hlth=D.feederTotal>0?Math.round(D.feederBacklinkEst/D.feederTotal*100):0;
+
+  document.getElementById('s-syndicated').textContent=synced;
+  document.getElementById('s-syndicated-sub').textContent=`of ${D.posts.length} posts`;
+  document.getElementById('s-week').textContent=thisWeek;
+  document.getElementById('s-rate').textContent=rate+'%';
+  document.getElementById('s-queue').textContent=D.feederBacklog.length;
+  document.getElementById('s-queue-sub').innerHTML=D.dripPaused
+    ?'<span class="stat-badge badge-yellow">PAUSED</span>'
+    :'<span class="stat-badge badge-green">ACTIVE</span>';
+  document.getElementById('s-health').textContent=hlth+'%';
+  document.getElementById('s-health-sub').textContent=`${D.feederBacklinkEst}/${D.feederTotal} feeder posts`;
+}
+
+function renderDrip(){
+  const p=D.dripPaused;
+  const pill=document.getElementById('drip-pill');
+  pill.textContent=p?'PAUSED':'ACTIVE';
+  pill.className='stat-badge '+(p?'badge-yellow':'badge-green');
+
+  const ind=document.getElementById('drip-backlog-ind');
+  ind.className='drip-indicator '+(p?'ind-paused':'ind-active');
+  ind.innerHTML=(p?'⏸':'▶')+` Backlog Drip: <strong>${p?'PAUSED':'ACTIVE'}</strong>`;
+
+  document.getElementById('dq-published').textContent=D.syncedSlugs.size;
+  document.getElementById('dq-remaining').textContent=D.feederBacklog.length;
+  document.getElementById('dq-syndicated').textContent=Object.keys(D.logMap).length;
+  document.getElementById('dq-feeder').textContent=D.feederTotal;
+
+  const now=new Date(),nxt=new Date(now);
+  nxt.setUTCHours(9,0,0,0);if(nxt<=now)nxt.setUTCDate(nxt.getUTCDate()+1);
+  document.getElementById('dq-next').textContent=nxt.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+
+  // Queue list: posts with score 0
+  const unsynced=D.posts.filter(p=>scorePost(p.slug).ok===0).slice(0,20);
+  const el=document.getElementById('drip-list');
+  el.innerHTML=unsynced.length
+    ?unsynced.map((p,i)=>`<div class="drip-item">
+        <div class="drip-pos">${i+1}</div>
+        <div class="drip-title">${p.title}</div>
+        <div class="drip-date">${p.date||''}</div>
+        <button class="drip-now-btn" onclick="syndicateNow('${p.slug}')">Syndicate Now</button>
+      </div>`).join('')
+    :'<div class="loading">All posts syndicated!</div>';
+}
+
+function renderRecent(){
+  const withLog=D.posts
+    .filter(p=>D.logMap[p.slug])
+    .map(p=>{
+      const entries=Object.values(D.logMap[p.slug]||{});
+      const latest=entries.reduce((a,b)=>(a.ts||'')>(b.ts||'')?a:b,{});
+      return{...p,latestTs:latest.ts||''};
+    })
+    .sort((a,b)=>b.latestTs.localeCompare(a.latestTs))
+    .slice(0,5);
+
+  const el=document.getElementById('recent-list');
+  if(!withLog.length){el.innerHTML='<div class="loading">No syndications logged yet.</div>';return;}
+
+  el.innerHTML=withLog.map(p=>{
+    const dv=devtoSt(p.slug),hn=hashnodeSt(p.slug),tb=tumblrSt(p.slug),bl=bloggerSt(p.slug),fd=feederSt(p.slug);
+    const bs=[badge('DEV',dv),badge('HASH',hn),badge('TUMBLR',tb),badge('BLOG',bl),badge('FEEDER',fd),
+               badge('WRITE',{},true),badge('BEAR',{},true),badge('GHOST',{},true)].join('');
+    return`<div class="recent-item">
+      <div class="recent-info">
+        <div class="recent-title">${p.title}</div>
+        <div class="recent-date">${p.latestTs.slice(0,10)}</div>
+      </div>
+      <div class="plat-badges">${bs}</div>
+      <button class="captions-btn">captions</button>
+    </div>`;
+  }).join('');
+}
+
+function renderMatrix(){
+  const search=(document.getElementById('matrix-search')?.value||'').toLowerCase();
+  const filter=document.getElementById('matrix-filter-sel')?.value||'all';
+  let posts=D.posts;
+  if(search)posts=posts.filter(p=>p.title.toLowerCase().includes(search)||p.slug.includes(search));
+  if(filter==='synced')posts=posts.filter(p=>scorePost(p.slug).ok>0);
+  if(filter==='unsynced')posts=posts.filter(p=>scorePost(p.slug).ok===0);
+
+  const tbody=document.getElementById('matrix-body');
+  if(!posts.length){tbody.innerHTML='<tr><td colspan="11" class="loading">No posts match.</td></tr>';return;}
+  tbody.innerHTML=posts.map(p=>{
+    const dv=devtoSt(p.slug),hn=hashnodeSt(p.slug),tb=tumblrSt(p.slug),bl=bloggerSt(p.slug),fd=feederSt(p.slug);
+    const sc=scorePost(p.slug);
+    const pct=Math.round(sc.ok/sc.total*100);
+    const scCls=pct>=80?'score-good':pct>=40?'score-med':'score-low';
+    return`<tr>
+      <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+        <a href="${MAIN_URL}/posts/${p.slug}/" target="_blank" style="color:var(--text)">${p.title}</a>
+      </td>
+      <td style="color:var(--muted);font-size:11px;white-space:nowrap">${p.date||'—'}</td>
+      <td class="plat-td">${cell(dv)}</td>
+      <td class="plat-td">${cell(hn)}</td>
+      <td class="plat-td">${cell(tb)}</td>
+      <td class="plat-td">${cell(bl)}</td>
+      <td class="plat-td">${cell(fd)}</td>
+      <td class="plat-td">${cell({},true)}</td>
+      <td class="plat-td">${cell({},true)}</td>
+      <td class="plat-td">${cell({},true)}</td>
+      <td class="plat-td"><span class="score-badge ${scCls}">${sc.ok}/${sc.total}</span></td>
     </tr>`;
   }).join('');
-
-  const rate = tot>0 ? Math.round(ok/tot*100)+'%' : '--';
-  txt('sv-rate', rate);
-  txt('matrix-info', `${D.posts.length} posts -- ${ok}/${tot} cells synced`);
-
-  html('matrix-outer',`<table class="matrix">
-    <thead><tr>
-      <th class="th-post">Post</th>
-      <th>Dev.to</th><th>Hashnode</th><th>Tumblr</th><th>Blogger</th><th>Feeder</th>
-      <th style="opacity:.35">Write.as</th>
-      <th style="opacity:.35">Bear</th>
-      <th style="opacity:.35">Ghost</th>
-      <th>Score</th>
-    </tr></thead>
-    <tbody>${rows}</tbody>
-  </table>`);
 }
 
-/* ============================================================
-   RENDER STATS BAR
-   ============================================================ */
-function renderStats() {
-  txt('sv-total', D.posts.length);
-  const weekAgo = Date.now() - 7*24*3600*1000;
-  const weekOk  = D.logLines.filter(l=>l.type==='ok'&&new Date(l.ts)>weekAgo).length;
-  txt('sv-week', weekOk);
-  txt('sv-backlog', D.feederBacklog.length);
-  const covered = D.posts.filter(p=>feederStatus(p.slug).ok).length;
-  txt('sv-feeder', covered+'/'+D.posts.length);
-  txt('ii-posts', D.posts.length);
-  txt('ii-kw', D.keywords.length);
-  txt('ii-fposts', D.feederFiles.length);
-  txt('ii-fbl', D.feederFiles.length+'/'+D.posts.length+' posts');
+function renderPanels(){
+  const synced=D.posts.filter(p=>scorePost(p.slug).ok>0);
+  const queued=D.posts.filter(p=>scorePost(p.slug).ok===0);
+  const kws=D.keywords.slice(0,7);
+
+  document.getElementById('p1-count').textContent=synced.length;
+  document.getElementById('panel-synced').innerHTML=synced.length
+    ?synced.map(p=>{const sc=scorePost(p.slug);const c=sc.ok>=4?'score-good':sc.ok>=2?'score-med':'score-low';
+      return`<div class="queue-item"><div class="queue-title">${p.title}</div>
+        <div class="queue-meta">${p.date||''} <span style="float:right"><span class="score-badge ${c}">${sc.ok}/${sc.total}</span></span></div></div>`;
+    }).join('')
+    :'<div class="loading">None yet.</div>';
+
+  document.getElementById('p2-count').textContent=queued.length;
+  document.getElementById('panel-queued').innerHTML=queued.length
+    ?queued.map((p,i)=>`<div class="queue-item">
+        <div class="queue-title">${p.title}</div>
+        <div class="queue-meta">Position ${i+1}${p.date?' · '+p.date:''}</div>
+        <button class="syndicate-now-btn" onclick="syndicateNow('${p.slug}')">⚡ Syndicate Now</button>
+      </div>`).join('')
+    :'<div class="loading">All posts syndicated!</div>';
+
+  document.getElementById('p3-count').textContent=`${D.keywords.length} remaining`;
+  document.getElementById('panel-sched').innerHTML=kws.length
+    ?kws.map((kw,i)=>`<div class="queue-item">
+        <div class="queue-title" style="color:var(--muted)">${kw}</div>
+        <div class="queue-meta">Not yet written · Est. +${i+1} days</div>
+      </div>`).join('')
+    :'<div class="loading">No keywords remaining.</div>';
 }
 
-/* ============================================================
-   RENDER QUEUE
-   ============================================================ */
-function renderQueue() {
-  const synced  = [...D.synced].filter(Boolean);
-  const allSlug = D.posts.map(p=>p.slug);
-  const queued  = allSlug.filter(s=>!D.synced.has(s));
-  const kws     = D.keywords.slice(0,7);
-
-  txt('qs-syn',  synced.length);
-  txt('qs-que',  queued.length);
-  txt('qct-syn', synced.length);
-  txt('qct-que', queued.length);
-  txt('qct-sch', kws.length);
-
-  const compDate = addDays(queued.length);
-  txt('qs-comp', fmtDate(compDate));
-
-  const todayStr = new Date().toISOString().slice(0,10);
-  const todayOk  = D.logLines.filter(l=>l.type==='ok'&&(l.ts||'').startsWith(todayStr)).length;
-  txt('qs-today', todayOk+' syndicated');
-
-  // Panel 1: Syndicated
-  html('ql-syn', synced.length ? synced.map(slug=>{
-    const plats = D.logMap[slug] ? Object.entries(D.logMap[slug]).filter(([,v])=>v.status==='SUCCESS').map(([k])=>k).join(', ') : '--';
-    return `<div class="qi syn">
-      <div class="qi-main">
-        <div class="qi-title"><a href="https://towwiththeflow.com/${slug}/" target="_blank">${esc(slugToTitle(slug))}</a></div>
-        <div class="qi-meta">${esc(plats)}</div>
-      </div>
-    </div>`;
-  }).join('') : '<div class="empty-msg">No synced posts yet.</div>');
-
-  // Panel 2: Queued
-  html('ql-que', queued.length ? queued.map((slug,i)=>`<div class="qi que">
-    <div class="qi-main">
-      <div class="qi-title">${esc(slugToTitle(slug))}</div>
-      <div class="qi-meta"><span class="pos">#${i+1} in queue</span> -- est. ${fmtShort(addDays(i+1))}</div>
-    </div>
-    <button class="now-btn" onclick="syndicateNow('${slug}')">Now</button>
-  </div>`).join('') : '<div class="empty-msg">All posts syndicated.</div>');
-
-  // Panel 3: Keywords
-  html('ql-sch', kws.length ? kws.map((kw,i)=>{
-    const clean = kw.replace(/^\[\d+\]\s*/,'').trim();
-    return `<div class="qi sch">
-      <div class="qi-main">
-        <div class="qi-title">${esc(clean)}</div>
-        <div class="qi-meta gray">Not yet written -- est. ${fmtShort(addDays(i+1))}</div>
-      </div>
-    </div>`;
-  }).join('') : '<div class="empty-msg">No keywords remaining.</div>');
-
-  updateDripUI(D.dripPaused);
+function renderLog(){
+  const el=document.getElementById('log-lines');
+  if(!D.logLines.length){el.innerHTML='<div class="loading">No log entries.</div>';return;}
+  el.innerHTML=D.logLines.map(line=>{
+    let c='log-default';
+    if(line.includes('SUCCESS'))c='log-ok';
+    else if(line.includes('FAIL')||line.includes('ERROR'))c='log-fail';
+    else if(line.includes('SKIP'))c='log-skip';
+    else if(line.includes('---'))c='log-sep';
+    return`<div class="log-line ${c}">${esc(line)}</div>`;
+  }).join('');
 }
 
-function updateDripUI(paused) {
-  const dot = document.getElementById('drip-dot');
-  const st  = document.getElementById('drip-status');
-  const btn = document.getElementById('drip-btn');
-  if (paused) {
-    dot.className='drip-dot off'; st.textContent='PAUSED'; st.style.color='var(--yellow)';
-    if (btn) btn.textContent='Resume Drip';
-  } else {
-    dot.className='drip-dot on'; st.textContent='ACTIVE'; st.style.color='var(--green)';
-    if (btn) btn.textContent='Pause Drip';
-  }
+function renderSiteStats(){
+  const cm=D.lastCommit;
+  const msg=cm?.commit?.message?.split('\n')[0]||'—';
+  const date=cm?.commit?.committer?.date?new Date(cm.commit.committer.date).toLocaleDateString():'—';
+  document.getElementById('main-stats').innerHTML=`
+    <div class="stat-row"><span class="stat-row-label">Total posts</span><span class="stat-row-val">${D.posts.length}</span></div>
+    <div class="stat-row"><span class="stat-row-label">Keywords remaining</span><span class="stat-row-val">${D.keywords.length}</span></div>
+    <div class="stat-row"><span class="stat-row-label">Syndicated posts</span><span class="stat-row-val">${D.syncedSlugs.size}</span></div>
+    <div class="stat-row"><span class="stat-row-label">Last deploy</span><span class="stat-row-val">${date}</span></div>
+    <div class="stat-row"><span class="stat-row-label">Last commit</span><span class="stat-row-val" title="${msg}">${msg}</span></div>
+    <div class="stat-row"><span class="stat-row-label">Next post</span><span class="stat-row-val">9:00 AM UTC daily</span></div>`;
 }
 
-/* ============================================================
-   RENDER LOG
-   ============================================================ */
-function renderLog() {
-  const lines = D.logLines.slice(-30).reverse();
-  txt('log-info', `Last ${Math.min(lines.length,30)} entries (newest first)`);
-  if (!lines.length) { html('log-box','<span class="ll skip">No log entries.</span>'); return; }
-  html('log-box', lines.map(l=>{
-    const cls = l.type==='ok'?'ok':l.type==='fail'?'fail':l.type==='sep'?'sep':'skip';
-    const link = l.url ? ` <a href="${esc(l.url)}" target="_blank" style="color:var(--amber);font-size:9px">[view]</a>` : '';
-    return `<span class="ll ${cls}">${esc(l.raw)}${link}</span>`;
-  }).join(''));
+function renderFeederStats(){
+  const pct=D.feederTotal>0?Math.round(D.feederBacklinkEst/D.feederTotal*100):0;
+  const noLinks=D.feederBacklinkEst===0&&D.feederTotal>0;
+  document.getElementById('feeder-stats').innerHTML=`
+    <div class="stat-row"><span class="stat-row-label">Total feeder posts</span><span class="stat-row-val">${D.feederTotal}</span></div>
+    <div class="stat-row"><span class="stat-row-label">Backlink coverage</span><span class="stat-row-val">${D.feederBacklinkEst}/${D.feederTotal} (~${pct}%)</span></div>
+    <div class="stat-row"><span class="stat-row-label">Feeder backlog</span><span class="stat-row-val">${D.feederBacklog.length} posts</span></div>
+    <div class="stat-row"><span class="stat-row-label">Feeder site</span><span class="stat-row-val"><a href="https://${REPO_OWNER.toLowerCase()}.github.io/${FEEDER_REPO}/" target="_blank" style="color:var(--amber)">View site →</a></span></div>
+    ${noLinks?`<div class="alert-bar"><span class="alert-text">⚠️ 0 backlinks detected in sampled feeder posts</span><button class="alert-btn" onclick="triggerFeederBacklinks()">Run backlink fix</button></div>`:''}`;
 }
 
-/* ============================================================
-   PLATFORM TEST BUTTONS
-   ============================================================ */
-async function testPlatform(plat) {
-  const el = document.getElementById('ps-'+plat);
-  if (el) { el.textContent='Testing...'; el.className='ps'; }
-  const t0 = Date.now();
-  try {
-    let ok = false;
-    if (plat==='devto') {
-      ok = (await fetch('https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1')).ok;
-    } else if (plat==='hashnode') {
-      const r = await fetch('https://gql.hashnode.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:'{publication(host:"towwiththeflow.hashnode.dev"){posts(first:1){totalDocuments}}}'})});
-      ok = r.ok;
-    } else if (plat==='tumblr') {
-      const last = D.logLines.filter(l=>l.plat==='TUMBLR').slice(-1)[0];
-      if (el) { el.textContent = last?(last.type==='ok'?'Last: OK':'Last: FAIL'):'No log data'; el.className='ps '+(last?.type==='ok'?'ok':'warn'); }
-      return;
-    } else if (plat==='blogger') {
-      ok = (await fetch('https://denverroadsideguide.blogspot.com/feeds/posts/default?alt=json&max-results=1')).ok;
-    } else if (plat==='feeder') {
-      ok = (await fetch(`https://api.github.com/repos/${FEEDER}/commits?per_page=1`,{headers:ghH()})).ok;
+// ── PLATFORM TEST ─────────────────────────────────────────────────
+async function testPlat(plat,btn){
+  btn.textContent='…';btn.className='test-btn';
+  const t0=Date.now();
+  try{
+    let ok=false;
+    if(plat==='devto'){const r=await fetch('https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1');ok=r.ok;}
+    else if(plat==='hashnode'){const r=await fetch('https://gql.hashnode.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:'{__typename}'})});ok=r.ok;}
+    else if(plat==='tumblr'){ok=Object.values(D.logMap).some(m=>m.TUMBLR?.status==='SUCCESS');}
+    else if(plat==='blogger'){
+      const url=BLOG_KEY&&!BLOG_KEY.startsWith('__')
+        ?`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${BLOG_KEY}&maxResults=1`
+        :`https://denverroadsideguide.blogspot.com/feeds/posts/default?alt=json&max-results=1`;
+      const r=await fetch(url);ok=r.ok;
     }
-    const ms = Date.now()-t0;
-    if (el) { el.textContent=ok?`OK (${ms}ms)`:'Failed'; el.className='ps '+(ok?'ok':'err'); }
-  } catch { if (el) { el.textContent='Failed'; el.className='ps err'; } }
+    else if(plat==='feeder'){const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${FEEDER_REPO}/git/refs/heads/main`,{headers:GH_HDR()});ok=r.ok;}
+    const ms=Date.now()-t0;
+    btn.textContent=ok?`✓ ${ms}ms`:'✗ fail';
+    btn.className='test-btn '+(ok?'test-ok':'test-fail');
+  }catch{btn.textContent='✗ err';btn.className='test-btn test-fail';}
 }
 
-async function testAll() {
-  const btn = document.getElementById('btn-ta');
-  if (btn) { btn.disabled=true; btn.classList.add('spin'); }
-  await Promise.all(['devto','hashnode','tumblr','blogger','feeder'].map(testPlatform));
-  if (btn) {
-    btn.classList.remove('spin'); btn.classList.add('ok');
-    btn.lastChild.textContent = ' All Tests Done';
-    setTimeout(()=>{ btn.classList.remove('ok'); btn.disabled=false; btn.lastChild.textContent=' Test All Connections'; },3500);
-  }
-}
-
-/* ============================================================
-   QUICK ACTIONS
-   ============================================================ */
-async function triggerWf(wf, btnId, label) {
-  const btn = document.getElementById(btnId);
-  if (!btn||btn.disabled) return;
-  if (!GH_TOKEN||GH_TOKEN.startsWith('__')) { alert('GitHub token not injected. Run build_dashboard.py first.'); return; }
-  btn.disabled=true; btn.classList.add('spin');
-  try {
-    const r = await fetch(`https://api.github.com/repos/${TWTF}/actions/workflows/${wf}/dispatches`,{
-      method:'POST',
-      headers:{Authorization:'token '+GH_TOKEN,'Content-Type':'application/json',Accept:'application/vnd.github.v3+json'},
-      body:JSON.stringify({ref:'main'})
-    });
-    btn.classList.remove('spin');
-    if (r.status===204) {
-      btn.classList.add('ok');
-      btn.lastChild.textContent = ' Triggered!';
-      setTimeout(()=>{ btn.classList.remove('ok'); btn.disabled=false; btn.lastChild.textContent=' '+label; },4000);
-    } else { throw new Error('HTTP '+r.status); }
-  } catch(e) { btn.classList.remove('spin'); btn.disabled=false; alert('Failed: '+e.message); }
-}
-
-async function syndicateNow(slug) {
-  if (!GH_TOKEN||GH_TOKEN.startsWith('__')) { alert('GitHub token not injected.'); return; }
-  if (!confirm('Syndicate "'+slugToTitle(slug)+'" now?\n\nThis triggers a workflow run. The drip queue order is unchanged -- next auto-syndication remains on schedule.')) return;
-  try {
-    const r = await fetch(`https://api.github.com/repos/${TWTF}/actions/workflows/daily-post.yml/dispatches`,{
-      method:'POST',
-      headers:{Authorization:'token '+GH_TOKEN,'Content-Type':'application/json',Accept:'application/vnd.github.v3+json'},
-      body:JSON.stringify({ref:'main'})
-    });
-    if (r.status===204) alert('Triggered!\n\nManually syndicated -- drip queue unchanged, next auto-syndication still on schedule.');
-    else throw new Error('HTTP '+r.status);
-  } catch(e) { alert('Failed: '+e.message); }
-}
-
-async function toggleDrip() {
-  if (!GH_TOKEN||GH_TOKEN.startsWith('__')) { alert('GitHub token not injected.'); return; }
-  const btn = document.getElementById('drip-btn');
-  if (btn) { btn.disabled=true; btn.textContent=D.dripPaused?'Resuming...':'Pausing...'; }
-  try {
-    if (!D.dripPaused) {
-      await fetch(`https://api.github.com/repos/${TWTF}/contents/scripts/DRIP_PAUSED`,{
-        method:'PUT',
-        headers:{Authorization:'token '+GH_TOKEN,'Content-Type':'application/json',Accept:'application/vnd.github.v3+json'},
-        body:JSON.stringify({message:'Pause backlog drip via dashboard',content:btoa('paused')})
-      });
-    } else {
-      const fR = await fetch(`https://api.github.com/repos/${TWTF}/contents/scripts/DRIP_PAUSED`,{headers:ghH()});
-      if (fR.ok) {
-        const fD = await fR.json();
-        await fetch(`https://api.github.com/repos/${TWTF}/contents/scripts/DRIP_PAUSED`,{
-          method:'DELETE',
-          headers:{Authorization:'token '+GH_TOKEN,'Content-Type':'application/json',Accept:'application/vnd.github.v3+json'},
-          body:JSON.stringify({message:'Resume backlog drip via dashboard',sha:fD.sha})
-        });
-      }
+// ── DRIP TOGGLE ───────────────────────────────────────────────────
+async function toggleDrip(pause){
+  const url=`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/scripts/DRIP_PAUSED`;
+  try{
+    if(pause){
+      await fetch(url,{method:'PUT',headers:{...GH_HDR(),'Content-Type':'application/json'},body:JSON.stringify({message:'Dashboard: pause drip',content:btoa('paused'),branch:'main'})});
+    }else{
+      const info=await fetch(url,{headers:GH_HDR()});
+      if(info.ok){const d=await info.json();await fetch(url,{method:'DELETE',headers:{...GH_HDR(),'Content-Type':'application/json'},body:JSON.stringify({message:'Dashboard: activate drip',sha:d.sha,branch:'main'})});}
     }
-    D.dripPaused = !D.dripPaused;
-    cSet('drip_paused', D.dripPaused);
-    updateDripUI(D.dripPaused);
-  } catch(e) { alert('Failed: '+e.message); }
-  if (btn) btn.disabled=false;
+    D.dripPaused=pause;sessionStorage.removeItem('c_drip_flag');
+    renderDrip();renderStats();
+  }catch(e){alert('Drip toggle failed: '+e.message);}
 }
 
-/* ============================================================
-   INIT + AUTO-REFRESH
-   ============================================================ */
-async function init() {
-  txt('upd-ts','Loading...');
+// ── ACTIONS ───────────────────────────────────────────────────────
+async function triggerWorkflow(wf){
+  try{
+    const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/${wf}/dispatches`,
+      {method:'POST',headers:{...GH_HDR(),'Content-Type':'application/json'},body:JSON.stringify({ref:'main'})});
+    alert(r.ok?`✓ ${wf} triggered!`:`Failed: ${r.status}`);
+  }catch(e){alert('Error: '+e.message);}
+}
+async function triggerFeederBacklinks(){
+  try{
+    const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${FEEDER_REPO}/actions/workflows/backlinks.yml/dispatches`,
+      {method:'POST',headers:{...GH_HDR(),'Content-Type':'application/json'},body:JSON.stringify({ref:'main'})});
+    alert(r.ok?'✓ Backlink fix triggered!':'Failed: '+r.status);
+  }catch(e){alert('Error: '+e.message);}
+}
+async function syndicateNow(slug){
+  try{
+    const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/syndicate.yml/dispatches`,
+      {method:'POST',headers:{...GH_HDR(),'Content-Type':'application/json'},body:JSON.stringify({ref:'main',inputs:{slug}})});
+    alert(r.ok?`✓ Syndication triggered for: ${slug}`:`Failed: ${r.status}`);
+  }catch(e){alert('Error: '+e.message);}
+}
+
+// ── UTILS ─────────────────────────────────────────────────────────
+function s2t(slug){return slug.split('-').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+// ── INIT ──────────────────────────────────────────────────────────
+async function init(){
+  document.getElementById('updated-time').textContent=new Date().toLocaleTimeString();
   await fetchAll();
-  renderStats();
-  renderMatrix();
-  renderQueue();
-  renderLog();
-  txt('upd-ts','Updated '+new Date().toLocaleTimeString());
-  setTimeout(()=>{
-    Object.keys(sessionStorage).filter(k=>k.startsWith('d_')).forEach(k=>sessionStorage.removeItem(k));
-    init();
-  }, TTL);
+  renderStats();renderDrip();renderRecent();renderMatrix();renderPanels();renderLog();renderSiteStats();renderFeederStats();
+  document.getElementById('updated-time').textContent=new Date().toLocaleTimeString();
+  setTimeout(()=>{clearCache();init();},CACHE_TTL);
 }
-
-if (sessionStorage.getItem('twtf_ok')==='1') init();
+function manualRefresh(){clearCache();init();}
 </script>
 </body>
 </html>
