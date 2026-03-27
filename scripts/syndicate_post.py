@@ -6,8 +6,12 @@ Called automatically by generate_post.py with the post slug.
 Canonical URL always points back to towwiththeflow.com.
 """
 
-import os
+# SYNDICATION PAUSED — backlink fix in progress
 import sys
+print("SYNDICATION PAUSED — backlink fix in progress")
+sys.exit(0)
+
+import os
 import re
 import json
 import requests

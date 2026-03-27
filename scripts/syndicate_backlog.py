@@ -12,6 +12,11 @@ Feeder posts are fetched from the TTWF_GithubPages GitHub repo and
 syndicated to Hashnode and Tumblr only (not Dev.to).
 """
 
+# SYNDICATION PAUSED — backlink fix in progress
+import sys
+print("SYNDICATION PAUSED — backlink fix in progress")
+sys.exit(0)
+
 import os
 import re
 import json
