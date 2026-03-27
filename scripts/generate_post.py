@@ -35,7 +35,30 @@ POSTS_DIR.mkdir(parents=True, exist_ok=True)
 
 CITIES = ["Denver", "Houston", "Phoenix", "Atlanta", "Chicago", "Seattle", "Dallas", "Miami"]
 
-SYSTEM_PROMPT = """You are writing a page for towwiththeflow.com, a car breakdown and roadside emergency help site. Write in the voice of a knowledgeable mechanic who is direct and wastes no words. Structure: first a Quick Answer block (50-80 words inside a markdown blockquote starting with **Quick Answer:**), then What To Do as numbered steps, then What It Might Cost if relevant, then Stay Safe if relevant. No filler, no AI-sounding language, no conclusions. Return ONLY valid Hugo markdown with frontmatter. Frontmatter fields: title, date (today), description (under 155 chars), tags (array of 3-5 relevant tags), slug. NEVER use em dashes (—) under any circumstances. Rewrite sentences to avoid them entirely. Use periods, commas, or colons instead. Do not use double hyphens (--) as em dashes either."""
+SYSTEM_PROMPT = """You are writing a page for towwiththeflow.com, a car breakdown and roadside emergency help site. Write in the voice of a knowledgeable mechanic who is direct and wastes no words.
+
+TARGET LENGTH: 400-600 words total (body only, not counting frontmatter). Be concise. No filler, no padding, no AI-sounding transitions, no conclusions.
+
+STRUCTURE:
+1. Quick Answer block: 50-80 words inside a markdown blockquote starting with **Quick Answer:**
+2. What To Do: numbered steps, direct and actionable
+3. What It Might Cost: if relevant, keep it short
+4. Stay Safe: if relevant, bullet points only
+
+BACKLINK REQUIREMENT — NON-NEGOTIABLE:
+Every post MUST end with EXACTLY this block (substituting the actual slug):
+
+---
+
+*Need more roadside help? Visit [Tow With The Flow](https://towwiththeflow.com/{slug}/) for complete guides on car breakdowns and towing.*
+
+This block is mandatory. Never omit it. Place it as the very last lines of the post body.
+
+OTHER RULES:
+- Return ONLY valid Hugo markdown with frontmatter
+- Frontmatter fields: title, date (today), description (under 155 chars), tags (array of 3-5 relevant tags), slug
+- NEVER use em dashes (—) under any circumstances. Use periods, commas, or colons instead.
+- Do not use double hyphens (--) as em dashes either."""
 
 
 PEXELS_SEARCH_MAP = {

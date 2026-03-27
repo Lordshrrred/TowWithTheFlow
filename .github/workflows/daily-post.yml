@@ -2,15 +2,28 @@ name: Daily Post
 
 on:
   schedule:
-    - cron: '0 9 * * *'  # 9am UTC daily
+    - cron: '0 9 * * *'    # Job 1 — 9:00am UTC: generate new post
+    - cron: '30 10 * * *'  # Job 2 — 10:30am UTC: syndicate backlog post
   workflow_dispatch:
+    inputs:
+      job:
+        description: 'Which job to run: generate | syndicate | both'
+        required: false
+        default: 'both'
 
 permissions:
   contents: write
 
 jobs:
-  generate-and-publish:
+  # ────────────────────────────────────────────────────────────────────────────
+  # JOB 1 — Generate new post (9:00am UTC)
+  # Runs when triggered by the 0 9 cron, OR when workflow_dispatch job=generate|both
+  # ────────────────────────────────────────────────────────────────────────────
+  generate-post:
     runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'workflow_dispatch' && (github.event.inputs.job == 'generate' || github.event.inputs.job == 'both') ||
+      github.event_name == 'schedule' && github.event.schedule == '0 9 * * *'
 
     steps:
       - name: Checkout repo
@@ -31,14 +44,6 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
-          HASHNODE_API_KEY: ${{ secrets.HASHNODE_API_KEY }}
-          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
-          TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
-          TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
-          TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
-          TUMBLR_TOKEN_SECRET: ${{ secrets.TUMBLR_TOKEN_SECRET }}
-          TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
         run: python scripts/generate_post.py
 
       - name: Set up Hugo
@@ -55,51 +60,67 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit and push
+      - name: Commit and push new post
         run: |
-          git add content/posts/ static/images/ scripts/keywords.txt scripts/syndication_log.txt || true
+          git add content/posts/ static/images/ scripts/keywords.txt scripts/last_generated_slug.txt || true
           git diff --staged --quiet || git commit -m "Auto: daily post $(date +%Y-%m-%d)"
           git push
 
-      # SYNDICATION PAUSED — backlink fix in progress
-      # - name: Syndicate backlog post
-      #   env:
-      #     DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
-      #     HASHNODE_API_KEY: ${{ secrets.HASHNODE_API_KEY }}
-      #     HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
-      #     TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
-      #     TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
-      #     TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
-      #     TUMBLR_TOKEN_SECRET: ${{ secrets.TUMBLR_TOKEN_SECRET }}
-      #     TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
-      #     GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
-      #     GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-      #   run: |
-      #     python scripts/syndicate_backlog.py
-      #     git add scripts/synced-posts.txt scripts/syndication_log.txt || true
-      #     git diff --staged --quiet || git commit -m "Auto: backlog syndication $(date +%Y-%m-%d)"
-      #     git push
+  # ────────────────────────────────────────────────────────────────────────────
+  # JOB 2 — Syndicate backlog post (10:30am UTC)
+  # Runs 90 minutes after generation so Hugo has built and deployed first.
+  # Picks the oldest unsynced post, runs it through all 5 platforms.
+  # Enforces: backlink check, Hashnode warmup, 60s waits, failure alerts.
+  # ────────────────────────────────────────────────────────────────────────────
+  syndicate-post:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'workflow_dispatch' && (github.event.inputs.job == 'syndicate' || github.event.inputs.job == 'both') ||
+      github.event_name == 'schedule' && github.event.schedule == '30 10 * * *'
 
-      # PAUSED: feeder trigger disabled while backlog posts age (re-enable ~2026-03-31)
-      # - name: Trigger feeder blog with new post
-      #   env:
-      #     FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
-      #   run: |
-      #     if [ ! -f scripts/last_generated_slug.txt ]; then
-      #       echo "No slug file found — skipping feeder trigger"
-      #       exit 0
-      #     fi
-      #     NEW_SLUG=$(cat scripts/last_generated_slug.txt)
-      #     NEW_URL="https://towwiththeflow.com/${NEW_SLUG}/"
-      #     NEW_TITLE=$(grep "^title:" content/posts/${NEW_SLUG}.md | head -1 | sed 's/title: //' | tr -d '"')
-      #
-      #     echo "Triggering feeder blog for slug: ${NEW_SLUG}"
-      #     curl -X POST \
-      #       -H "Authorization: token ${FEEDER_TRIGGER_TOKEN}" \
-      #       -H "Accept: application/vnd.github.v3+json" \
-      #       https://api.github.com/repos/Lordshrrred/TTWF_GithubPages/actions/workflows/daily-post.yml/dispatches \
-      #       -d "$(jq -n \
-      #         --arg slug "$NEW_SLUG" \
-      #         --arg url  "$NEW_URL" \
-      #         --arg title "$NEW_TITLE" \
-      #         '{ref:"main",inputs:{source_slug:$slug,source_url:$url,source_title:$title}}')"
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install anthropic python-dotenv requests requests-oauthlib
+
+      - name: Syndicate one backlog post (all 5 platforms)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          HASHNODE_API_KEY: ${{ secrets.HASHNODE_API_KEY }}
+          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
+          HASHNODE_BLOG_URL: ${{ secrets.HASHNODE_BLOG_URL }}
+          TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
+          TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
+          TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
+          TUMBLR_TOKEN_SECRET: ${{ secrets.TUMBLR_TOKEN_SECRET }}
+          TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python scripts/syndicate_backlog.py
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit syndication results
+        run: |
+          git add scripts/synced-posts.txt scripts/syndication_log.txt scripts/hashnode_warmup.txt || true
+          git diff --staged --quiet || git commit -m "Auto: syndication $(date +%Y-%m-%d)"
+          git push

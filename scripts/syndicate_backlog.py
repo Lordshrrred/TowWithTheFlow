@@ -12,11 +12,6 @@ Feeder posts are fetched from the TTWF_GithubPages GitHub repo and
 syndicated to Hashnode and Tumblr only (not Dev.to).
 """
 
-# SYNDICATION PAUSED — backlink fix in progress
-import sys
-print("SYNDICATION PAUSED — backlink fix in progress")
-sys.exit(0)
-
 import os
 import re
 import json
@@ -462,32 +457,24 @@ def main():
         send_completion_email(len(all_posts))
         sys.exit(0)
 
-    # Pick oldest unsynced
+    # Pick oldest unsynced — daily limit: 1 post per day
     post_date, slug = unsynced[0]
     log(f"Syndicating: {slug}  (date={post_date})")
 
-    post_file = POSTS_DIR / f"{slug}.md"
-    text      = post_file.read_text(encoding="utf-8")
-    meta, body = parse_frontmatter(text)
+    # Delegate to the full 5-platform engine in syndicate_post.py.
+    # That module enforces: backlink check, Hashnode warmup, 60s waits,
+    # content variation, failure alerts, and marks synced-posts.txt.
+    try:
+        from syndicate_post import run_syndication
+        successes, failures = run_syndication(slug)
+        log(f"Backlog run complete: {successes}/5 succeeded for {slug}")
+    except Exception as e:
+        log(f"ERROR: syndicate_post.run_syndication failed: {e}")
+        # Fall back to marking it synced so the backlog still advances
+        mark_synced(slug)
+        log(f"Marked synced (fallback): {slug}")
 
-    # ── Dev.to ────────────────────────────────────────────────
-    ok, detail = syndicate_devto(slug, meta, body)
-    log(f"DEVTO    | {slug} | {'SUCCESS' if ok else 'FAIL'} | {detail}")
-
-    # ── Hashnode ──────────────────────────────────────────────
-    ok, detail = syndicate_hashnode(slug, meta, body)
-    log(f"HASHNODE | {slug} | {'SUCCESS' if ok else 'FAIL'} | {detail}")
-
-    # ── Tumblr ────────────────────────────────────────────────
-    ok, detail = syndicate_tumblr(slug, meta, body)
-    log(f"TUMBLR   | {slug} | {'SUCCESS' if ok else 'FAIL'} | {detail}")
-
-    # Mark synced to keep the backlog moving (failures are logged above)
-    mark_synced(slug)
-    log(f"Marked synced: {slug}  ({len(synced) + 1}/{len(all_posts)} total)")
-
-    # Also drip one feeder post per day (hold until FEEDER_HOLD_UNTIL)
-    run_feeder_syndication()
+    log(f"Total progress: {len(synced) + 1}/{len(all_posts)} posts synced")
 
 
 if __name__ == "__main__":
