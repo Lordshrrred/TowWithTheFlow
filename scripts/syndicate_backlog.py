@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+import datetime
+RESUME_DATE = datetime.date(2026, 3, 28)
+today = datetime.date.today()
+if today < RESUME_DATE:
+    print(f"Syndication paused until {RESUME_DATE}. Today is {today}. Skipping.")
+    import sys
+    sys.exit(0)
+
 """
 Tow With The Flow — Backlog Syndication
 Reads all posts from content/posts/, finds the oldest one not yet in
