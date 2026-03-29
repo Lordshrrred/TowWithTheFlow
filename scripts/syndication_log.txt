@@ -216,3 +216,29 @@
 [2026-03-28 10:59:25] SYNCED | can-i-drive-with-a-broken-axle marked in synced-posts.txt
 [2026-03-28 10:59:25] BACKLOG: Backlog run complete: 1/5 succeeded for can-i-drive-with-a-broken-axle
 [2026-03-28 10:59:25] BACKLOG: Total progress: 3/70 posts synced
+[2026-03-29 10:57:01] BACKLOG: Posts total=70  synced=3  unsynced=67
+[2026-03-29 10:57:01] BACKLOG: Syndicating: can-you-call-a-tow-truck-without-insurance  (date=2026-02-17)
+[2026-03-29 10:57:01] === SYNDICATE START: can-you-call-a-tow-truck-without-insurance ===
+[2026-03-29 10:57:01] BACKLINK | can-you-call-a-tow-truck-without-insurance | missing — injecting before syndication
+[2026-03-29 10:57:01] DEVTO | can-you-call-a-tow-truck-without-insurance | syndicating...
+[2026-03-29 10:57:01] VARIATION | Dev.to | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZXFXkV2rahWTsLM4yDhs'} — using original body
+[2026-03-29 10:57:02] DEVTO | can-you-call-a-tow-truck-without-insurance | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-03-29 10:57:02] --- waiting 60s before next platform ---
+[2026-03-29 10:58:02] HASHNODE | can-you-call-a-tow-truck-without-insurance | syndicating...
+[2026-03-29 10:58:02] HASHNODE | can-you-call-a-tow-truck-without-insurance | warmup day skip (posts_published=1 — every-other-day rule)
+[2026-03-29 10:58:02] HASHNODE | can-you-call-a-tow-truck-without-insurance | FAIL | SKIP: Hashnode warmup — every-other-day rule
+[2026-03-29 10:58:02] --- waiting 60s before next platform ---
+[2026-03-29 10:59:02] TUMBLR | can-you-call-a-tow-truck-without-insurance | syndicating...
+[2026-03-29 10:59:02] VARIATION | Tumblr | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZXFgdrg1jJ9XLkenfd9r'} — using original body
+[2026-03-29 10:59:02] TUMBLR | can-you-call-a-tow-truck-without-insurance | SUCCESS | https://towwiththeflow.tumblr.com/post/812417750066724864
+[2026-03-29 10:59:02] --- waiting 60s before next platform ---
+[2026-03-29 11:00:02] BLOGGER | can-you-call-a-tow-truck-without-insurance | syndicating...
+[2026-03-29 11:00:02] BLOGGER | can-you-call-a-tow-truck-without-insurance | FAIL | SKIP: missing Blogger credentials
+[2026-03-29 11:00:02] --- waiting 60s before next platform ---
+[2026-03-29 11:01:02] FEEDER | can-you-call-a-tow-truck-without-insurance | syndicating...
+[2026-03-29 11:01:02] VARIATION | Feeder | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZXFqXMkidZhyijNi9zHT'} — using original body
+[2026-03-29 11:01:03] FEEDER | can-you-call-a-tow-truck-without-insurance | FAIL | HTTP 403: {"message":"Resource not accessible by integration","documentation_url":"https://docs.github.com/rest/repos/contents#create-or-update-file-contents","status":"403"}
+[2026-03-29 11:01:03] === SYNDICATE DONE: can-you-call-a-tow-truck-without-insurance | 1/5 succeeded ===
+[2026-03-29 11:01:03] SYNCED | can-you-call-a-tow-truck-without-insurance marked in synced-posts.txt
+[2026-03-29 11:01:03] BACKLOG: Backlog run complete: 1/5 succeeded for can-you-call-a-tow-truck-without-insurance
+[2026-03-29 11:01:03] BACKLOG: Total progress: 4/70 posts synced
