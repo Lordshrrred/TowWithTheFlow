@@ -242,3 +242,29 @@
 [2026-03-29 11:01:03] SYNCED | can-you-call-a-tow-truck-without-insurance marked in synced-posts.txt
 [2026-03-29 11:01:03] BACKLOG: Backlog run complete: 1/5 succeeded for can-you-call-a-tow-truck-without-insurance
 [2026-03-29 11:01:03] BACKLOG: Total progress: 4/70 posts synced
+[2026-03-30 11:30:54] BACKLOG: Posts total=70  synced=4  unsynced=66
+[2026-03-30 11:30:54] BACKLOG: Syndicating: car-died-while-driving-what-now  (date=2026-02-18)
+[2026-03-30 11:30:54] === SYNDICATE START: car-died-while-driving-what-now ===
+[2026-03-30 11:30:54] BACKLINK | car-died-while-driving-what-now | missing — injecting before syndication
+[2026-03-30 11:30:54] DEVTO | car-died-while-driving-what-now | syndicating...
+[2026-03-30 11:30:55] VARIATION | Dev.to | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZZBvYwSP7toqcf637cFt'} — using original body
+[2026-03-30 11:30:55] DEVTO | car-died-while-driving-what-now | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-03-30 11:30:55] --- waiting 60s before next platform ---
+[2026-03-30 11:31:55] HASHNODE | car-died-while-driving-what-now | syndicating...
+[2026-03-30 11:31:55] HASHNODE | car-died-while-driving-what-now | warmup day skip (posts_published=1 — every-other-day rule)
+[2026-03-30 11:31:55] HASHNODE | car-died-while-driving-what-now | FAIL | SKIP: Hashnode warmup — every-other-day rule
+[2026-03-30 11:31:55] --- waiting 60s before next platform ---
+[2026-03-30 11:32:55] TUMBLR | car-died-while-driving-what-now | syndicating...
+[2026-03-30 11:32:55] VARIATION | Tumblr | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZZC5RsnFTvKpoTaACKgY'} — using original body
+[2026-03-30 11:32:55] TUMBLR | car-died-while-driving-what-now | SUCCESS | https://towwiththeflow.tumblr.com/post/812510478983151616
+[2026-03-30 11:32:55] --- waiting 60s before next platform ---
+[2026-03-30 11:33:55] BLOGGER | car-died-while-driving-what-now | syndicating...
+[2026-03-30 11:33:55] BLOGGER | car-died-while-driving-what-now | FAIL | SKIP: missing Blogger credentials
+[2026-03-30 11:33:55] --- waiting 60s before next platform ---
+[2026-03-30 11:34:55] FEEDER | car-died-while-driving-what-now | syndicating...
+[2026-03-30 11:34:56] VARIATION | Feeder | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZZCEKGudc5A9woKTf8eX'} — using original body
+[2026-03-30 11:34:56] FEEDER | car-died-while-driving-what-now | FAIL | HTTP 403: {"message":"Resource not accessible by integration","documentation_url":"https://docs.github.com/rest/repos/contents#create-or-update-file-contents","status":"403"}
+[2026-03-30 11:34:56] === SYNDICATE DONE: car-died-while-driving-what-now | 1/5 succeeded ===
+[2026-03-30 11:34:56] SYNCED | car-died-while-driving-what-now marked in synced-posts.txt
+[2026-03-30 11:34:56] BACKLOG: Backlog run complete: 1/5 succeeded for car-died-while-driving-what-now
+[2026-03-30 11:34:56] BACKLOG: Total progress: 5/70 posts synced
