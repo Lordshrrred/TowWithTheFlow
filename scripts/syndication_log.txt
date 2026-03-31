@@ -268,3 +268,29 @@
 [2026-03-30 11:34:56] SYNCED | car-died-while-driving-what-now marked in synced-posts.txt
 [2026-03-30 11:34:56] BACKLOG: Backlog run complete: 1/5 succeeded for car-died-while-driving-what-now
 [2026-03-30 11:34:56] BACKLOG: Total progress: 5/70 posts synced
+[2026-03-31 11:15:27] BACKLOG: Posts total=70  synced=5  unsynced=65
+[2026-03-31 11:15:27] BACKLOG: Syndicating: car-makes-grinding-noise-when-driving  (date=2026-02-19)
+[2026-03-31 11:15:27] === SYNDICATE START: car-makes-grinding-noise-when-driving ===
+[2026-03-31 11:15:27] BACKLINK | car-makes-grinding-noise-when-driving | missing — injecting before syndication
+[2026-03-31 11:15:27] DEVTO | car-makes-grinding-noise-when-driving | syndicating...
+[2026-03-31 11:15:28] VARIATION | Dev.to | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZb4ZA4soW4jeuWgDUFHZ'} — using original body
+[2026-03-31 11:15:28] DEVTO | car-makes-grinding-noise-when-driving | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-03-31 11:15:28] --- waiting 60s before next platform ---
+[2026-03-31 11:16:28] HASHNODE | car-makes-grinding-noise-when-driving | syndicating...
+[2026-03-31 11:16:28] HASHNODE | car-makes-grinding-noise-when-driving | warmup day skip (posts_published=1 — every-other-day rule)
+[2026-03-31 11:16:28] HASHNODE | car-makes-grinding-noise-when-driving | FAIL | SKIP: Hashnode warmup — every-other-day rule
+[2026-03-31 11:16:28] --- waiting 60s before next platform ---
+[2026-03-31 11:17:28] TUMBLR | car-makes-grinding-noise-when-driving | syndicating...
+[2026-03-31 11:17:28] VARIATION | Tumblr | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZb4i2jMFHpUzdXkU8hwL'} — using original body
+[2026-03-31 11:17:29] TUMBLR | car-makes-grinding-noise-when-driving | SUCCESS | https://towwiththeflow.tumblr.com/post/812600104275050496
+[2026-03-31 11:17:29] --- waiting 60s before next platform ---
+[2026-03-31 11:18:29] BLOGGER | car-makes-grinding-noise-when-driving | syndicating...
+[2026-03-31 11:18:29] BLOGGER | car-makes-grinding-noise-when-driving | FAIL | SKIP: missing Blogger credentials
+[2026-03-31 11:18:29] --- waiting 60s before next platform ---
+[2026-03-31 11:19:29] FEEDER | car-makes-grinding-noise-when-driving | syndicating...
+[2026-03-31 11:19:29] VARIATION | Feeder | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZb4rv8ydJEY8ncwJzNSo'} — using original body
+[2026-03-31 11:19:29] FEEDER | car-makes-grinding-noise-when-driving | FAIL | HTTP 403: {"message":"Resource not accessible by integration","documentation_url":"https://docs.github.com/rest/repos/contents#create-or-update-file-contents","status":"403"}
+[2026-03-31 11:19:29] === SYNDICATE DONE: car-makes-grinding-noise-when-driving | 1/5 succeeded ===
+[2026-03-31 11:19:29] SYNCED | car-makes-grinding-noise-when-driving marked in synced-posts.txt
+[2026-03-31 11:19:29] BACKLOG: Backlog run complete: 1/5 succeeded for car-makes-grinding-noise-when-driving
+[2026-03-31 11:19:29] BACKLOG: Total progress: 6/70 posts synced
