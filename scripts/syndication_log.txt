@@ -294,3 +294,29 @@
 [2026-03-31 11:19:29] SYNCED | car-makes-grinding-noise-when-driving marked in synced-posts.txt
 [2026-03-31 11:19:29] BACKLOG: Backlog run complete: 1/5 succeeded for car-makes-grinding-noise-when-driving
 [2026-03-31 11:19:29] BACKLOG: Total progress: 6/70 posts synced
+[2026-04-01 11:28:26] BACKLOG: Posts total=70  synced=6  unsynced=64
+[2026-04-01 11:28:26] BACKLOG: Syndicating: car-overheated-can-i-drive-it  (date=2026-02-20)
+[2026-04-01 11:28:26] === SYNDICATE START: car-overheated-can-i-drive-it ===
+[2026-04-01 11:28:26] BACKLINK | car-overheated-can-i-drive-it | missing — injecting before syndication
+[2026-04-01 11:28:26] DEVTO | car-overheated-can-i-drive-it | syndicating...
+[2026-04-01 11:28:27] VARIATION | Dev.to | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZcyMVtaGMbLAnZWG2ZRA'} — using original body
+[2026-04-01 11:28:27] DEVTO | car-overheated-can-i-drive-it | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-04-01 11:28:27] --- waiting 60s before next platform ---
+[2026-04-01 11:29:27] HASHNODE | car-overheated-can-i-drive-it | syndicating...
+[2026-04-01 11:29:27] HASHNODE | car-overheated-can-i-drive-it | warmup day skip (posts_published=1 — every-other-day rule)
+[2026-04-01 11:29:27] HASHNODE | car-overheated-can-i-drive-it | FAIL | SKIP: Hashnode warmup — every-other-day rule
+[2026-04-01 11:29:27] --- waiting 60s before next platform ---
+[2026-04-01 11:30:27] TUMBLR | car-overheated-can-i-drive-it | syndicating...
+[2026-04-01 11:30:28] VARIATION | Tumblr | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZcyWNgF6sMm3enh953oD'} — using original body
+[2026-04-01 11:30:28] TUMBLR | car-overheated-can-i-drive-it | SUCCESS | https://towwiththeflow.tumblr.com/post/812691518291918848
+[2026-04-01 11:30:28] --- waiting 60s before next platform ---
+[2026-04-01 11:31:28] BLOGGER | car-overheated-can-i-drive-it | syndicating...
+[2026-04-01 11:31:28] BLOGGER | car-overheated-can-i-drive-it | FAIL | SKIP: missing Blogger credentials
+[2026-04-01 11:31:28] --- waiting 60s before next platform ---
+[2026-04-01 11:32:28] FEEDER | car-overheated-can-i-drive-it | syndicating...
+[2026-04-01 11:32:28] VARIATION | Feeder | Claude error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZcyfH2RfBHrn8oLYHEWW'} — using original body
+[2026-04-01 11:32:28] FEEDER | car-overheated-can-i-drive-it | FAIL | HTTP 403: {"message":"Resource not accessible by integration","documentation_url":"https://docs.github.com/rest/repos/contents#create-or-update-file-contents","status":"403"}
+[2026-04-01 11:32:28] === SYNDICATE DONE: car-overheated-can-i-drive-it | 1/5 succeeded ===
+[2026-04-01 11:32:28] SYNCED | car-overheated-can-i-drive-it marked in synced-posts.txt
+[2026-04-01 11:32:28] BACKLOG: Backlog run complete: 1/5 succeeded for car-overheated-can-i-drive-it
+[2026-04-01 11:32:28] BACKLOG: Total progress: 7/70 posts synced
