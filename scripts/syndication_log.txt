@@ -320,3 +320,26 @@
 [2026-04-01 11:32:28] SYNCED | car-overheated-can-i-drive-it marked in synced-posts.txt
 [2026-04-01 11:32:28] BACKLOG: Backlog run complete: 1/5 succeeded for car-overheated-can-i-drive-it
 [2026-04-01 11:32:28] BACKLOG: Total progress: 7/70 posts synced
+[2026-04-02 15:31:30] BACKLOG: Posts total=70  synced=7  backlog=63  (today's posts excluded from backlog)
+[2026-04-02 15:31:30] BACKLOG: Syndicating backlog: car-shakes-while-driving-slow-speeds  (post date=2026-02-21)
+[2026-04-02 15:31:30] === SYNDICATE START: car-shakes-while-driving-slow-speeds ===
+[2026-04-02 15:31:30] BACKLINK | car-shakes-while-driving-slow-speeds | missing — injecting before syndication
+[2026-04-02 15:31:30] DEVTO | car-shakes-while-driving-slow-speeds | syndicating...
+[2026-04-02 15:31:30] DEVTO | car-shakes-while-driving-slow-speeds | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-04-02 15:31:30] --- waiting 60s before next platform ---
+[2026-04-02 15:32:30] HASHNODE | car-shakes-while-driving-slow-speeds | syndicating...
+[2026-04-02 15:32:30] HASHNODE | car-shakes-while-driving-slow-speeds | warmup day skip (posts_published=1 — every-other-day rule)
+[2026-04-02 15:32:30] HASHNODE | car-shakes-while-driving-slow-speeds | FAIL | SKIP: Hashnode warmup — every-other-day rule
+[2026-04-02 15:32:30] --- waiting 60s before next platform ---
+[2026-04-02 15:33:30] TUMBLR | car-shakes-while-driving-slow-speeds | syndicating...
+[2026-04-02 15:33:31] TUMBLR | car-shakes-while-driving-slow-speeds | SUCCESS | https://towwiththeflow.tumblr.com/post/812797405981491200
+[2026-04-02 15:33:31] --- waiting 60s before next platform ---
+[2026-04-02 15:34:31] BLOGGER | car-shakes-while-driving-slow-speeds | syndicating...
+[2026-04-02 15:34:31] BLOGGER | car-shakes-while-driving-slow-speeds | FAIL | SKIP: missing Blogger credentials
+[2026-04-02 15:34:31] --- waiting 60s before next platform ---
+[2026-04-02 15:35:31] FEEDER | car-shakes-while-driving-slow-speeds | syndicating...
+[2026-04-02 15:35:31] FEEDER | car-shakes-while-driving-slow-speeds | FAIL | HTTP 403: {"message":"Resource not accessible by integration","documentation_url":"https://docs.github.com/rest/repos/contents#create-or-update-file-contents","status":"403"}
+[2026-04-02 15:35:31] === SYNDICATE DONE: car-shakes-while-driving-slow-speeds | 1/5 succeeded ===
+[2026-04-02 15:35:31] SYNCED | car-shakes-while-driving-slow-speeds marked in synced-posts.txt
+[2026-04-02 15:35:31] BACKLOG: Backlog run complete: 1/5 succeeded for car-shakes-while-driving-slow-speeds
+[2026-04-02 15:35:31] BACKLOG: Total progress: 8/70 posts synced
