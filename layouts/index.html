@@ -10,7 +10,7 @@
       <button type="submit">Find Your Answer</button>
     </form>
     <div class="hero__stats">
-      <span>{{ len .Site.RegularPages }} guides</span>
+      <span>{{ len (where .Site.RegularPages "Type" "posts") }} guides</span>
       <span>Updated daily</span>
       <span>No signup needed</span>
     </div>

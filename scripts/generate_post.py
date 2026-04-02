@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
 Tow With The Flow — Daily Post Generator
-Reads next unused keyword from keywords.txt, generates a Hugo post via Claude API,
-saves to content/posts/, marks keyword as done, appends 3 long-tail variations,
-then calls syndicate_post.py.
+Usage:
+  python generate_post.py --type general   # highest scored non-local keyword
+  python generate_post.py --type local     # highest scored local/city keyword
+Saves slug to last_general_slug.txt or last_local_slug.txt for syndication jobs.
 """
 
+import argparse
 import os
 import re
 import sys
@@ -50,7 +52,7 @@ Every post MUST end with EXACTLY this block (substituting the actual slug):
 
 ---
 
-*Need more roadside help? Visit [Tow With The Flow](https://towwiththeflow.com/{slug}/) for complete guides on car breakdowns and towing.*
+*Need roadside help? Visit [Tow With The Flow](https://towwiththeflow.com/{slug}/) for real answers when your car breaks down.*
 
 This block is mandatory. Never omit it. Place it as the very last lines of the post body.
 
@@ -310,23 +312,98 @@ def extract_slug(content: str, keyword: str) -> str:
     return slugify(keyword)
 
 
-def main():
+# City/location keywords — used to distinguish local vs general
+LOCAL_INDICATORS = [
+    "denver", "houston", "phoenix", "atlanta", "chicago", "seattle", "dallas",
+    "miami", "los angeles", "new york", "las vegas", "san antonio", "austin",
+    "nashville", "portland", "minneapolis", "detroit", "charlotte", "indianapolis",
+    "columbus", "san diego", "jacksonville", "memphis", "baltimore", "boston",
+    "fort worth", "el paso", "oklahoma city", "tucson", "albuquerque",
+    "near me", "in my city", "in my area", "local", "nearby",
+]
+
+
+def is_local(keyword: str) -> bool:
+    kw = keyword.lower()
+    return any(loc in kw for loc in LOCAL_INDICATORS)
+
+
+def pick_keyword(post_type: str) -> tuple[str, int | None]:
+    """Pick highest-scored keyword matching post_type ('general' or 'local').
+    Falls back to unscored keywords if no scored ones exist.
+    Runs keyword_research.py first if no pending keywords at all."""
     keywords = load_keywords()
     pending = [(i, kw, score) for i, kw, score, done in keywords if not done]
 
     if not pending:
-        print("No pending keywords found. Run keyword_research.py to add more.")
-        sys.exit(0)
+        print("No pending keywords. Running keyword_research.py first...")
+        import subprocess
+        result = subprocess.run(
+            [sys.executable, str(Path(__file__).parent / "keyword_research.py")],
+            capture_output=False
+        )
+        if result.returncode != 0:
+            print("ERROR: keyword_research.py failed", file=sys.stderr)
+            sys.exit(1)
+        keywords = load_keywords()
+        pending = [(i, kw, score) for i, kw, score, done in keywords if not done]
+        if not pending:
+            print("Still no pending keywords after research.", file=sys.stderr)
+            sys.exit(1)
 
-    # Pick highest-scored keyword; fall back to first (sequential) if none are scored
-    scored_pending = [(i, kw, s) for i, kw, s in pending if s is not None]
-    if scored_pending:
-        scored_pending.sort(key=lambda x: x[2], reverse=True)
-        line_idx, keyword, score = scored_pending[0]
-        print(f"Generating post for (score [{score}]): {keyword}")
+    # Filter by type
+    if post_type == "local":
+        typed = [(i, kw, s) for i, kw, s in pending if is_local(kw)]
+        type_label = "local/city"
     else:
-        line_idx, keyword, score = pending[0]
-        print(f"Generating post for (no score): {keyword}")
+        typed = [(i, kw, s) for i, kw, s in pending if not is_local(kw)]
+        type_label = "general"
+
+    if not typed:
+        print(f"No pending {type_label} keywords found. Falling back to any pending keyword.")
+        typed = pending
+
+    # Sort scored ones by score desc; unscored go to end
+    scored = [(i, kw, s) for i, kw, s in typed if s is not None]
+    unscored = [(i, kw, s) for i, kw, s in typed if s is None]
+    scored.sort(key=lambda x: x[2], reverse=True)
+    ordered = scored + unscored
+
+    _idx, keyword, score = ordered[0]
+    if score is not None:
+        print(f"Selected {type_label} keyword (score [{score}]): {keyword}")
+    else:
+        print(f"Selected {type_label} keyword (unscored): {keyword}")
+    return keyword, score
+
+
+def ensure_backlink(content: str, slug: str) -> str:
+    """Ensure the post body contains a backlink to towwiththeflow.com/{slug}/.
+    Appends the standard block if missing."""
+    if f"towwiththeflow.com/{slug}/" in content:
+        return content
+    if "towwiththeflow.com" in content:
+        return content  # has some backlink, leave it
+    backlink = (
+        "\n\n---\n\n"
+        f"*Need roadside help? Visit [Tow With The Flow](https://towwiththeflow.com/{slug}/) "
+        "for real answers when your car breaks down.*"
+    )
+    return content.rstrip() + backlink + "\n"
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Generate a TWTF blog post")
+    parser.add_argument(
+        "--type",
+        choices=["general", "local"],
+        default="general",
+        help="general = non-local keyword; local = city/location keyword",
+    )
+    args = parser.parse_args()
+    post_type = args.type
+
+    keyword, score = pick_keyword(post_type)
 
     content = generate_post(keyword)
     slug = extract_slug(content, keyword)
@@ -340,27 +417,22 @@ def main():
     # Add images from Pexels
     content = add_images_to_post(content, slug)
 
+    # Guarantee backlink is present
+    content = ensure_backlink(content, slug)
+
     filename.write_text(content, encoding='utf-8')
     print(f"Saved: {filename}")
 
-    # Record slug so the workflow can pass it to the feeder blog trigger
-    slug_file = Path(__file__).parent / "last_generated_slug.txt"
+    # Record slug for the syndication job that follows
+    slug_key = "last_local_slug.txt" if post_type == "local" else "last_general_slug.txt"
+    slug_file = Path(__file__).parent / slug_key
     slug_file.write_text(slug, encoding='utf-8')
+    # Also update legacy file so any existing tooling still works
+    (Path(__file__).parent / "last_generated_slug.txt").write_text(slug, encoding='utf-8')
+    print(f"Slug written to scripts/{slug_key}")
 
     mark_done(keyword)
     append_long_tails(keyword)
-
-    # Syndicate
-    syndicate_script = Path(__file__).parent / "syndicate_post.py"
-    if syndicate_script.exists():
-        result = subprocess.run(
-            [sys.executable, str(syndicate_script), slug],
-            capture_output=False
-        )
-        if result.returncode != 0:
-            print(f"WARNING: syndication script exited with code {result.returncode}")
-    else:
-        print("syndicate_post.py not found, skipping syndication.")
 
 
 if __name__ == "__main__":

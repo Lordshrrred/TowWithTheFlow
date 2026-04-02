@@ -1,23 +1,10 @@
 #!/usr/bin/env python3
-import datetime
-RESUME_DATE = datetime.date(2026, 3, 28)
-today = datetime.date.today()
-if today < RESUME_DATE:
-    print(f"Syndication paused until {RESUME_DATE}. Today is {today}. Skipping.")
-    import sys
-    sys.exit(0)
-
 """
 Tow With The Flow — Backlog Syndication
-Reads all posts from content/posts/, finds the oldest one not yet in
-synced-posts.txt, and syndicates it to Dev.to, Hashnode, and Tumblr.
-Runs once per day via daily-post.yml — one post per execution.
-When all posts are synced, sends a completion email and exits cleanly.
-
-Also syndicates one feeder blog post per day from feeder_backlog.txt,
-but only after FEEDER_HOLD_UNTIL date (let posts age before syndicating).
-Feeder posts are fetched from the TTWF_GithubPages GitHub repo and
-syndicated to Hashnode and Tumblr only (not Dev.to).
+Runs at 2:30pm UTC daily (Job 5 in daily-post.yml).
+Picks the oldest post NOT in synced-posts.txt AND NOT generated today,
+then delegates to syndicate_post.run_syndication() for full 5-platform syndication.
+Posts generated today are handled by their own syndication jobs (10:30am / 12:30pm).
 """
 
 import os
@@ -454,33 +441,43 @@ def run_feeder_syndication():
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 def main():
+    today_date = date.today()
     all_posts = get_all_posts()
     synced    = load_synced()
-    unsynced  = [(d, slug) for d, slug in all_posts if slug not in synced]
 
-    log(f"Posts total={len(all_posts)}  synced={len(synced)}  unsynced={len(unsynced)}")
+    # Backlog = posts older than today that are not yet synced.
+    # Posts generated today are handled by their own syndication jobs.
+    backlog = [
+        (d, slug) for d, slug in all_posts
+        if slug not in synced and d < today_date
+    ]
 
-    if not unsynced:
-        log("All posts synced — sending completion email")
+    log(f"Posts total={len(all_posts)}  synced={len(synced)}  backlog={len(backlog)}"
+        f"  (today's posts excluded from backlog)")
+
+    if not backlog:
+        log("No backlog posts to syndicate — all pre-today posts are synced")
         send_completion_email(len(all_posts))
         sys.exit(0)
 
-    # Pick oldest unsynced — daily limit: 1 post per day
-    post_date, slug = unsynced[0]
-    log(f"Syndicating: {slug}  (date={post_date})")
+    # Pick oldest backlog post
+    post_date, slug = backlog[0]
+    log(f"Syndicating backlog: {slug}  (post date={post_date})")
 
     # Delegate to the full 5-platform engine in syndicate_post.py.
-    # That module enforces: backlink check, Hashnode warmup, 60s waits,
-    # content variation, failure alerts, and marks synced-posts.txt.
+    # Enforces: backlink check, Hashnode warmup, 60s waits, failure alerts,
+    # and marks synced-posts.txt on success.
     try:
+        import sys as _sys
+        import os as _os
+        _sys.path.insert(0, str(Path(__file__).parent))
         from syndicate_post import run_syndication
         successes, failures = run_syndication(slug)
         log(f"Backlog run complete: {successes}/5 succeeded for {slug}")
     except Exception as e:
         log(f"ERROR: syndicate_post.run_syndication failed: {e}")
-        # Fall back to marking it synced so the backlog still advances
         mark_synced(slug)
-        log(f"Marked synced (fallback): {slug}")
+        log(f"Marked synced (fallback after error): {slug}")
 
     log(f"Total progress: {len(synced) + 1}/{len(all_posts)} posts synced")
 
