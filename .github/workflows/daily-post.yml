@@ -74,6 +74,29 @@ jobs:
           git diff --staged --quiet || git commit -m "Auto: general post $(date +%Y-%m-%d)"
           git push
 
+      - name: Trigger feeder blog variation
+        if: ${{ secrets.FEEDER_TRIGGER_TOKEN != '' }}
+        env:
+          FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
+        run: |
+          if [ ! -f scripts/last_general_slug.txt ]; then
+            echo "No slug file — skipping feeder trigger"
+            exit 0
+          fi
+          NEW_SLUG=$(cat scripts/last_general_slug.txt)
+          NEW_URL="https://towwiththeflow.com/${NEW_SLUG}/"
+          NEW_TITLE=$(grep "^title:" content/posts/${NEW_SLUG}.md 2>/dev/null | head -1 | sed 's/^title: //' | tr -d '"')
+          echo "Triggering feeder blog for: ${NEW_SLUG}"
+          curl -s -o /dev/null -w "%{http_code}" -X POST \
+            -H "Authorization: token ${FEEDER_TRIGGER_TOKEN}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/Lordshrrred/TTWF_GithubPages/actions/workflows/daily-post.yml/dispatches \
+            -d "$(jq -n \
+              --arg slug  "$NEW_SLUG" \
+              --arg url   "$NEW_URL" \
+              --arg title "$NEW_TITLE" \
+              '{ref:"main",inputs:{source_slug:$slug,source_url:$url,source_title:$title}}')"
+
   # ── JOB 2: Generate local/city post (9:30am UTC) ──────────────────────────────
   generate-local:
     runs-on: ubuntu-latest
