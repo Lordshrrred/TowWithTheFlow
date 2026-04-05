@@ -45,6 +45,7 @@ jobs:
         env:
           DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DASHBOARD_TRIGGER_TOKEN: ${{ secrets.DASHBOARD_TRIGGER_TOKEN }}
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
           BLOGGER_API_KEY: ${{ secrets.BLOGGER_API_KEY }}
         run: |

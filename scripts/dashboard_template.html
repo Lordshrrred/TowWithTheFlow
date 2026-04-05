@@ -417,7 +417,7 @@
         <div class="bstat-row"><span class="bstat-label">Next Scheduled Post</span><span class="bstat-value">9:00 AM UTC daily</span></div>
       </div>
       <div class="card">
-        <h3>Feeder Site <a class="bstat-link" href="https://lordshrrred.github.io/TTWF_GithubPages/" target="_blank" rel="noopener">↗ lordshrrred.github.io/TTWF_GithubPages</a></h3>
+        <h3>Feeder Site <a class="bstat-link" href="https://lordshrrred.github.io/TTWF_GithubPages/" target="_blank" rel="noopener">↗ Lordshrrred/TTWF_GithubPages (GitHub Pages)</a></h3>
         <div class="bstat-row"><span class="bstat-label">Total Feeder Posts</span><span class="bstat-value" id="bs-feeder-posts">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Backlink Coverage</span><span class="bstat-value" id="bs-backlink">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Platform</span><span class="bstat-value">GitHub Pages</span></div>
@@ -433,10 +433,11 @@
 <script>
 // ── Config ──────────────────────────────────────────────────────────────────
 const SESSION_KEY  = "twtf_dashboard_auth";
-const PW_HASH      = "__PASSWORD_HASH__";
-const GH_TOKEN     = "__GITHUB_TOKEN__";
-const BLOGGER_ID   = "__BLOGGER_BLOG_ID__";
-const BLOGGER_KEY  = "__BLOGGER_API_KEY__";
+const PW_HASH       = "__PASSWORD_HASH__";
+const GH_TOKEN      = "__GITHUB_TOKEN__";      // ephemeral — read API only
+const TRIGGER_TOKEN = "__DASHBOARD_TOKEN__";   // long-lived PAT — workflow dispatch
+const BLOGGER_ID    = "__BLOGGER_BLOG_ID__";
+const BLOGGER_KEY   = "__BLOGGER_API_KEY__";
 const GITHUB_OWNER = "Lordshrrred";
 const TWTF_REPO    = "TowWithTheFlow";
 const FEEDER_REPO  = "TTWF_GithubPages";
@@ -759,7 +760,7 @@ async function checkFeeder(slug){
     const hasCanon=/canonical[:\s].*towwiththeflow\.com/i.test(txt);
     const hasLink=/towwiththeflow\.com/i.test(txt);
     const anchorM=txt.match(/\[([^\]]+)\]\(https?:\/\/towwiththeflow\.com[^)]*\)/);
-    return{verified:hasCanon||hasLink, canonical:hasCanon, anchor:anchorM?anchorM[1]:"canonical link", url:`https://lordshrrred.github.io/TTWF_GithubPages/${slug}/`};
+    return{verified:hasCanon||hasLink, canonical:hasCanon, anchor:anchorM?anchorM[1]:"canonical link", url:`https://lordshrrred.github.io/TTWF_GithubPages/${slug}-guide/`};
   }catch{ return{verified:false,anchor:"",error:true}; }
 }
 
@@ -851,14 +852,19 @@ async function triggerWorkflow(wf,label,qaIdx,inputs,cb){
   // inputs is optional — if a function is passed as 4th arg, treat it as cb with no inputs
   if(typeof inputs==="function"){ cb=inputs; inputs={}; }
   inputs=inputs||{};
-  if(!GH_TOKEN||GH_TOKEN==="__GITHUB_TOKEN__"){ showToast("⚠ GitHub token not configured — trigger manually in Actions tab."); return; }
+  if(!TRIGGER_TOKEN||TRIGGER_TOKEN==="__DASHBOARD_TOKEN__"){
+    showToast("⚠ Workflow triggers require a DASHBOARD_TRIGGER_TOKEN secret (PAT with workflow scope). Use the GitHub Actions tab for now.");
+    return;
+  }
   const el=document.getElementById(`qa-${qaIdx}`);
   if(el){ el.textContent="Triggering…"; el.style.color="var(--amber)"; }
   try{
     const body={ref:"main"};
     if(Object.keys(inputs).length>0) body.inputs=inputs;
     const r=await fetch(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/actions/workflows/${wf}/dispatches`,{
-      method:"POST", headers:{...ghHdrs(),"Content-Type":"application/json"}, body:JSON.stringify(body)
+      method:"POST",
+      headers:{"Authorization":`token ${TRIGGER_TOKEN}`,"Accept":"application/vnd.github.v3+json","Content-Type":"application/json"},
+      body:JSON.stringify(body)
     });
     if(r.ok||r.status===204){ showToast(`✓ ${label} triggered — check Actions tab in ~30s.`); if(el){el.textContent="Triggered ✓";el.style.color="var(--green)";} if(cb)cb(); }
     else{ showToast(`✗ ${label} failed: HTTP ${r.status}`); if(el){el.textContent=`Failed (${r.status})`;el.style.color="var(--red)";} }

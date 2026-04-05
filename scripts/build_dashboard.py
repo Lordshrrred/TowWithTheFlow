@@ -7,10 +7,16 @@ Outputs:
   static/dashboard/analytics.html  -- GA4 analytics (amber, static JSON)
 
 Injected placeholders:
-  __PASSWORD_HASH__   -- SHA256 of DASHBOARD_PASSWORD
-  __GITHUB_TOKEN__    -- PAT for GitHub API reads + workflow triggers
-  __BLOGGER_BLOG_ID__ -- Blogger blog ID
-  __BLOGGER_API_KEY__ -- Blogger API key (optional)
+  __PASSWORD_HASH__      -- SHA256 of DASHBOARD_PASSWORD
+  __GITHUB_TOKEN__       -- Ephemeral Actions token for GitHub API reads (expires after run)
+  __DASHBOARD_TOKEN__    -- Long-lived PAT for workflow dispatch (DASHBOARD_TRIGGER_TOKEN secret)
+  __BLOGGER_BLOG_ID__    -- Blogger blog ID
+  __BLOGGER_API_KEY__    -- Blogger API key (optional)
+
+NOTE: __GITHUB_TOKEN__ is the ephemeral Actions token — only good for read API calls during
+the current workflow run. DO NOT use it for browser-side workflow dispatch.
+Use __DASHBOARD_TOKEN__ (backed by DASHBOARD_TRIGGER_TOKEN secret, a real PAT with
+workflow scope) for any trigger operations from the dashboard.
 """
 import hashlib
 import os
@@ -45,9 +51,10 @@ def main():
         print("WARNING: DASHBOARD_PASSWORD not set -- dashboards will be inaccessible",
               file=sys.stderr)
 
-    github_token = os.environ.get("GITHUB_TOKEN", "")
-    if not github_token:
-        print("WARNING: GITHUB_TOKEN not set -- Quick Actions will not work",
+    github_token    = os.environ.get("GITHUB_TOKEN", "")
+    trigger_token   = os.environ.get("DASHBOARD_TRIGGER_TOKEN", "")
+    if not trigger_token:
+        print("WARNING: DASHBOARD_TRIGGER_TOKEN not set -- dashboard workflow triggers will be disabled",
               file=sys.stderr)
 
     blogger_id  = os.environ.get("BLOGGER_BLOG_ID", "")
@@ -66,6 +73,7 @@ def main():
         html = tmpl.read_text(encoding="utf-8")
         html = html.replace("__PASSWORD_HASH__",   pw_hash)
         html = html.replace("__GITHUB_TOKEN__",    github_token)
+        html = html.replace("__DASHBOARD_TOKEN__", trigger_token)
         html = html.replace("__BLOGGER_BLOG_ID__", blogger_id)
         html = html.replace("__BLOGGER_API_KEY__", blogger_key)
 
