@@ -264,6 +264,14 @@
     </div>
   </header>
 
+  <!-- Build info strip -->
+  <div id="build-strip" style="background:var(--surface2);border-bottom:1px solid rgba(245,166,35,0.08);padding:0.3rem 1.5rem;display:flex;gap:1.5rem;align-items:center;font-size:0.68rem;font-family:'Rajdhani',sans-serif;letter-spacing:0.04em;color:var(--text-muted);flex-wrap:wrap;">
+    <span>BUILD: <strong style="color:var(--text);">__BUILD_TIMESTAMP__</strong></span>
+    <span>SHA: <strong style="color:var(--text);">__BUILD_COMMIT__</strong></span>
+    <span id="build-token-indicator">TRIGGER TOKEN: <strong id="build-token-val" style="color:__TOKEN_COLOR__;">__BUILD_TOKEN_STATUS__</strong></span>
+    <span id="build-trigger-note" style="display:none;color:var(--amber);">⚠ Workflow trigger buttons disabled — add DASHBOARD_TRIGGER_TOKEN secret and redeploy</span>
+  </div>
+
   <main class="dash-main">
 
     <!-- Stats bar -->
@@ -872,6 +880,21 @@ async function triggerWorkflow(wf,label,qaIdx,inputs,cb){
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
+(function applyTriggerState(){
+  const hasToken = TRIGGER_TOKEN && TRIGGER_TOKEN !== "__DASHBOARD_TOKEN__";
+  if(hasToken) return; // buttons active — nothing to do
+  // Show warning in build strip
+  const note = document.getElementById("build-trigger-note");
+  if(note) note.style.display = "inline";
+  // Grey out the three workflow-trigger QA cards (qa-0, qa-1, qa-2 — not qa-3 Test All)
+  document.querySelectorAll(".qa-card").forEach(card=>{
+    const onclick = card.getAttribute("onclick")||"";
+    if(!onclick.includes("triggerWorkflow")) return;
+    card.style.opacity = "0.45";
+    card.style.cursor  = "not-allowed";
+    card.title = "Disabled — DASHBOARD_TRIGGER_TOKEN not configured at build time. Add the secret and redeploy.";
+  });
+})();
 initAuth();
 </script>
 </body>

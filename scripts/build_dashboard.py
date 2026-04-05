@@ -12,6 +12,9 @@ Injected placeholders:
   __DASHBOARD_TOKEN__    -- Long-lived PAT for workflow dispatch (DASHBOARD_TRIGGER_TOKEN secret)
   __BLOGGER_BLOG_ID__    -- Blogger blog ID
   __BLOGGER_API_KEY__    -- Blogger API key (optional)
+  __BUILD_TIMESTAMP__    -- ISO timestamp of when this build ran
+  __BUILD_TOKEN_STATUS__ -- "configured" or "missing" (never the token value)
+  __BUILD_COMMIT__       -- Git commit SHA (GITHUB_SHA env var, or "local")
 
 NOTE: __GITHUB_TOKEN__ is the ephemeral Actions token — only good for read API calls during
 the current workflow run. DO NOT use it for browser-side workflow dispatch.
@@ -21,6 +24,7 @@ workflow scope) for any trigger operations from the dashboard.
 import hashlib
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
@@ -60,6 +64,11 @@ def main():
     blogger_id  = os.environ.get("BLOGGER_BLOG_ID", "")
     blogger_key = os.environ.get("BLOGGER_API_KEY", "")
 
+    build_ts     = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    token_status = "configured" if trigger_token else "missing"
+    token_color  = "#22c55e" if trigger_token else "#ef4444"
+    commit_sha   = os.environ.get("GITHUB_SHA", "local")[:8]
+
     pw_hash = hashlib.sha256(password.encode()).hexdigest() if password else ""
 
     for build in BUILDS:
@@ -71,11 +80,15 @@ def main():
             continue
 
         html = tmpl.read_text(encoding="utf-8")
-        html = html.replace("__PASSWORD_HASH__",   pw_hash)
-        html = html.replace("__GITHUB_TOKEN__",    github_token)
-        html = html.replace("__DASHBOARD_TOKEN__", trigger_token)
-        html = html.replace("__BLOGGER_BLOG_ID__", blogger_id)
-        html = html.replace("__BLOGGER_API_KEY__", blogger_key)
+        html = html.replace("__PASSWORD_HASH__",      pw_hash)
+        html = html.replace("__GITHUB_TOKEN__",       github_token)
+        html = html.replace("__DASHBOARD_TOKEN__",    trigger_token)
+        html = html.replace("__BLOGGER_BLOG_ID__",    blogger_id)
+        html = html.replace("__BLOGGER_API_KEY__",    blogger_key)
+        html = html.replace("__BUILD_TIMESTAMP__",    build_ts)
+        html = html.replace("__BUILD_TOKEN_STATUS__", token_status)
+        html = html.replace("__TOKEN_COLOR__",        token_color)
+        html = html.replace("__BUILD_COMMIT__",       commit_sha)
 
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding="utf-8")
