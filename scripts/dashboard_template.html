@@ -295,9 +295,9 @@
           <div class="drip-stat"><div class="drip-stat-label">Feeder</div><div class="drip-stat-value">Auto</div></div>
         </div>
         <div class="drip-actions">
-          <button class="drip-btn primary" onclick="triggerWorkflow('daily-post.yml','Activate Drip',0)">▶ Activate Drip</button>
-          <button class="drip-btn danger" onclick="showToast('Drip paused — re-activate to resume automatic posting.')">⏸ Pause Drip</button>
-          <button class="drip-btn secondary" onclick="triggerWorkflow('daily-post.yml','Publish Next Now',0)">⚡ Publish Next Now</button>
+          <button class="drip-btn primary" onclick="triggerWorkflow('daily-post.yml','Activate Drip',0,{job:'generate-general'})">▶ Activate Drip</button>
+          <button class="drip-btn danger" onclick="showToast('Drip runs on schedule — to pause, disable the workflow in the GitHub Actions tab.')">⏸ Pause Drip</button>
+          <button class="drip-btn secondary" onclick="triggerWorkflow('daily-post.yml','Publish Next Now',0,{job:'generate-general'})">⚡ Publish Next Now</button>
         </div>
         <div class="status-indicators">
           <div class="status-pill"><div class="status-dot green"></div><span>New Posts: <strong>ACTIVE ✓</strong></span></div>
@@ -384,7 +384,7 @@
     <!-- Quick Actions -->
     <div class="section-title">Quick Actions</div>
     <div class="quick-actions">
-      <div class="qa-card" onclick="triggerWorkflow('daily-post.yml','Generate Post',0)">
+      <div class="qa-card" onclick="triggerWorkflow('daily-post.yml','Generate Post',0,{job:'generate-general'})">
         <div class="qa-icon">⚡</div>
         <div class="qa-label">Generate Post Now</div>
         <div class="qa-desc">Runs daily-post.yml workflow</div>
@@ -396,7 +396,7 @@
         <div class="qa-desc">Runs weekly-keywords.yml workflow</div>
         <div class="qa-status" id="qa-1"></div>
       </div>
-      <div class="qa-card" onclick="triggerWorkflow('daily-post.yml','Sync Backlog Post',2)">
+      <div class="qa-card" onclick="triggerWorkflow('daily-post.yml','Sync Backlog Post',2,{job:'syndicate-backlog'})">
         <div class="qa-icon">📤</div>
         <div class="qa-label">Sync One Backlog Post</div>
         <div class="qa-desc">Triggers syndicate_backlog workflow</div>
@@ -717,7 +717,7 @@ function renderPostQueue({allSlugs,syncedSet,logMap,kwLines}){
     </div>`).join()||'<div style="padding:0.8rem 1.1rem;color:var(--text-muted);font-size:0.8rem;">No upcoming keywords</div>';
 }
 
-function synNow(slug,btn){ btn.disabled=true; btn.textContent="Triggering…"; triggerWorkflow("daily-post.yml","Syndicate Now",2,()=>{ btn.textContent="Triggered ✓"; showToast("Manually syndicated — drip queue order unchanged.",4000); }); }
+function synNow(slug,btn){ btn.disabled=true; btn.textContent="Triggering…"; triggerWorkflow("daily-post.yml","Syndicate Now",2,{job:"syndicate-backlog"},()=>{ btn.textContent="Triggered ✓"; showToast("Syndicate-backlog triggered — will process oldest unsynced post.",4000); }); }
 
 // ── Bottom Stats ──────────────────────────────────────────────────────────────
 function renderBottom({allSlugs,syncedSet,kwLines,feederFiles,deployInfo,logMap}){
@@ -898,7 +898,7 @@ function updateBacklinkHealthCard(logMap, feederSet){
 const PLAT_TESTS={
   dev:    async()=>{ const r=await fetch("https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1"); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
   hash:   async()=>{ const r=await fetch("https://gql.hashnode.com",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:`{publication(host:"${HASHNODE_HOST}"){id}}`})}); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
-  tumblr: async()=>({ok:true,msg:"Log-based"}),
+  tumblr: async()=>({ok:null,msg:"Tumblr requires OAuth — cannot test from browser. Check syndication_log.txt for real results."}),
   blog:   async()=>{ if(!BLOGGER_KEY||BLOGGER_KEY==="__BLOGGER_API_KEY__")return{ok:false,msg:"No API key"}; const r=await fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOGGER_ID}/posts?key=${BLOGGER_KEY}&maxResults=1`); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
   feeder: async()=>{ const r=await fetch(`${GITHUB_API}/repos/${GITHUB_OWNER}/${FEEDER_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
 };
@@ -917,13 +917,18 @@ async function testAllConnections(){
 }
 
 // ── Workflow Triggers ─────────────────────────────────────────────────────────
-async function triggerWorkflow(wf,label,qaIdx,cb){
+async function triggerWorkflow(wf,label,qaIdx,inputs,cb){
+  // inputs is optional — if a function is passed as 4th arg, treat it as cb with no inputs
+  if(typeof inputs==="function"){ cb=inputs; inputs={}; }
+  inputs=inputs||{};
   if(!GH_TOKEN||GH_TOKEN==="__GITHUB_TOKEN__"){ showToast("⚠ GitHub token not configured — trigger manually in Actions tab."); return; }
   const el=document.getElementById(`qa-${qaIdx}`);
   if(el){ el.textContent="Triggering…"; el.style.color="var(--amber)"; }
   try{
+    const body={ref:"main"};
+    if(Object.keys(inputs).length>0) body.inputs=inputs;
     const r=await fetch(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/actions/workflows/${wf}/dispatches`,{
-      method:"POST", headers:{...ghHdrs(),"Content-Type":"application/json"}, body:JSON.stringify({ref:"main"})
+      method:"POST", headers:{...ghHdrs(),"Content-Type":"application/json"}, body:JSON.stringify(body)
     });
     if(r.ok||r.status===204){ showToast(`✓ ${label} triggered — check Actions tab in ~30s.`); if(el){el.textContent="Triggered ✓";el.style.color="var(--green)";} if(cb)cb(); }
     else{ showToast(`✗ ${label} failed: HTTP ${r.status}`); if(el){el.textContent=`Failed (${r.status})`;el.style.color="var(--red)";} }

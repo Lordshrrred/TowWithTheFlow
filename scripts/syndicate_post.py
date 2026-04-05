@@ -43,6 +43,7 @@ BLOGGER_CLIENT_SECRET = os.getenv("BLOGGER_CLIENT_SECRET", "")
 BLOGGER_REFRESH_TOKEN = os.getenv("BLOGGER_REFRESH_TOKEN", "")
 BLOGGER_BLOG_ID       = os.getenv("BLOGGER_BLOG_ID", "")
 GITHUB_TOKEN          = os.getenv("GITHUB_TOKEN", "")
+FEEDER_TRIGGER_TOKEN  = os.getenv("FEEDER_TRIGGER_TOKEN", "") or GITHUB_TOKEN  # PAT with cross-repo write access
 ANTHROPIC_API_KEY     = os.getenv("ANTHROPIC_API_KEY", "")
 GMAIL_ADDRESS         = os.getenv("GMAIL_ADDRESS", "")
 GMAIL_APP_PASSWORD    = os.getenv("GMAIL_APP_PASSWORD", "")
@@ -417,8 +418,9 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
 
 # ── Platform: Feeder (TTWF_GithubPages) ───────────────────────────────────────
 def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
-    if not GITHUB_TOKEN:
-        return False, "SKIP: no GITHUB_TOKEN"
+    token = FEEDER_TRIGGER_TOKEN
+    if not token:
+        return False, "SKIP: no FEEDER_TRIGGER_TOKEN (or GITHUB_TOKEN) set"
 
     canonical = f"{BASE_URL}/{slug}/"
     varied_body = get_variation(body, "Feeder")
@@ -444,7 +446,7 @@ def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
 
     api_url = f"https://api.github.com/repos/{FEEDER_OWNER}/{FEEDER_REPO}/contents/content/posts/{feeder_slug}.md"
     headers = {
-        "Authorization": f"token {GITHUB_TOKEN}",
+        "Authorization": f"token {token}",
         "Content-Type":  "application/json",
     }
 
