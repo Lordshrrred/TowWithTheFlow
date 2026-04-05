@@ -75,10 +75,13 @@ jobs:
           git push
 
       - name: Trigger feeder blog variation
-        if: ${{ secrets.FEEDER_TRIGGER_TOKEN != '' }}
         env:
           FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
         run: |
+          if [ -z "$FEEDER_TRIGGER_TOKEN" ]; then
+            echo "FEEDER_TRIGGER_TOKEN not set, skipping feeder trigger"
+            exit 0
+          fi
           if [ ! -f scripts/last_general_slug.txt ]; then
             echo "No slug file — skipping feeder trigger"
             exit 0
