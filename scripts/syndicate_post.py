@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Tow With The Flow — Post Syndication (Full 5-Platform Engine)
+Tow With The Flow — Post Syndication (4-Platform Engine)
 Called by daily-post.yml at 10:30am UTC — 30 minutes after post generation.
 Also called directly: python scripts/syndicate_post.py <slug>
 
 Rules enforced:
   - Backlink check: every post MUST contain towwiththeflow.com before syndication
-  - Hashnode warmup: first 7 posts skip Hashnode every other day
-  - 60-second wait between each platform
+  - 60-second wait between each attempted platform (skipped platforms don't count)
   - Platform failures are logged and do NOT stop other platforms
   - Email alert if 2+ platforms fail on same day
   - Content variation per platform via Claude API
@@ -30,9 +29,6 @@ ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
 DEVTO_API_KEY         = os.getenv("DEVTO_API_KEY", "")
-HASHNODE_API_KEY      = os.getenv("HASHNODE_API_KEY", "")
-HASHNODE_PUB_ID       = os.getenv("HASHNODE_PUBLICATION_ID", "")
-HASHNODE_HOST         = os.getenv("HASHNODE_BLOG_URL", "https://towwiththeflowyo.hashnode.dev").replace("https://", "")
 TUMBLR_CONSUMER_KEY   = os.getenv("TUMBLR_CONSUMER_KEY", "")
 TUMBLR_CONSUMER_SECRET= os.getenv("TUMBLR_CONSUMER_SECRET", "")
 TUMBLR_TOKEN          = os.getenv("TUMBLR_TOKEN", "")
@@ -52,7 +48,6 @@ BASE_URL       = "https://towwiththeflow.com"
 POSTS_DIR      = ROOT / "content" / "posts"
 LOG_FILE       = Path(__file__).parent / "syndication_log.txt"
 SYNCED_FILE    = Path(__file__).parent / "synced-posts.txt"
-WARMUP_FILE    = Path(__file__).parent / "hashnode_warmup.txt"
 FEEDER_OWNER   = "Lordshrrred"
 FEEDER_REPO    = "TTWF_GithubPages"
 
@@ -117,49 +112,6 @@ def ensure_backlink(body: str, slug: str) -> str:
     return body.rstrip() + BACKLINK_TMPL.format(url=canonical)
 
 
-# ── Hashnode warmup ────────────────────────────────────────────────────────────
-def read_warmup() -> tuple[int, bool]:
-    """Returns (posts_published, warmup_complete)."""
-    if not WARMUP_FILE.exists():
-        return 0, False
-    text = WARMUP_FILE.read_text(encoding="utf-8")
-    m_pub = re.search(r'posts_published:\s*(\d+)', text)
-    m_done = re.search(r'warmup_complete:\s*(true|false)', text, re.IGNORECASE)
-    published = int(m_pub.group(1)) if m_pub else 0
-    complete = m_done.group(1).lower() == "true" if m_done else False
-    return published, complete
-
-
-def update_warmup(posts_published: int):
-    """Increment posts_published; set warmup_complete when >= 7."""
-    complete = posts_published >= 7
-    WARMUP_FILE.write_text(
-        f"posts_published: {posts_published}\n"
-        f"warmup_complete: {'true' if complete else 'false'}\n"
-        f"started: 2026-03-26\n"
-        f"notes: Hashnode new account warmup — target 1 post every 2 days for 7 days before daily cadence\n",
-        encoding="utf-8"
-    )
-    return complete
-
-
-def should_syndicate_hashnode(slug: str) -> bool:
-    """During warmup (first 7 posts), skip Hashnode every other day."""
-    published, complete = read_warmup()
-    if complete:
-        log(f"HASHNODE | {slug} | warmup complete — syndicating daily")
-        return True
-    # Skip every other day during warmup: skip if posts_published is odd
-    # Day 1: publish (0 published → publish → becomes 1)
-    # Day 2: skip
-    # Day 3: publish (2 published → publish → becomes 3) etc.
-    if published % 2 == 1:
-        log(f"HASHNODE | {slug} | warmup day skip (posts_published={published} — every-other-day rule)")
-        return False
-    log(f"HASHNODE | {slug} | warmup active (posts_published={published}) — syndicating")
-    return True
-
-
 # ── Content variation via Claude ───────────────────────────────────────────────
 VARIATION_SYSTEM = """You are rewriting a car breakdown/roadside help article for a specific syndication platform.
 Keep all the same facts and structure. Change the phrasing, opening sentence, and wording throughout.
@@ -220,56 +172,6 @@ def syndicate_devto(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         if r.status_code in (200, 201):
             return True, r.json().get("url", canonical)
         return False, f"HTTP {r.status_code}: {r.text[:300]}"
-    except Exception as e:
-        return False, str(e)
-
-
-# ── Platform: Hashnode ────────────────────────────────────────────────────────
-def syndicate_hashnode(slug: str, meta: dict, body: str) -> tuple[bool, str]:
-    if not HASHNODE_API_KEY or not HASHNODE_PUB_ID:
-        return False, "SKIP: no HASHNODE_API_KEY or HASHNODE_PUBLICATION_ID"
-    if not should_syndicate_hashnode(slug):
-        return False, "SKIP: Hashnode warmup — every-other-day rule"
-
-    canonical = f"{BASE_URL}/{slug}/"
-    varied_body = get_variation(body, "Hashnode")
-    tags = [
-        {"name": t, "slug": re.sub(r'[^a-z0-9-]', '-', t.lower())}
-        for t in meta.get("tags", [])[:5]
-    ]
-
-    # Try publishPost directly
-    publish_mutation = """
-    mutation PublishPost($input: PublishPostInput!) {
-      publishPost(input: $input) {
-        post { id url }
-      }
-    }"""
-    try:
-        r = requests.post(
-            "https://gql.hashnode.com",
-            headers={"Authorization": HASHNODE_API_KEY, "Content-Type": "application/json"},
-            json={"query": publish_mutation, "variables": {"input": {
-                "title":              meta.get("title", slug),
-                "contentMarkdown":    varied_body,
-                "publicationId":      HASHNODE_PUB_ID,
-                "originalArticleURL": canonical,
-                "tags":               tags,
-            }}},
-            timeout=30
-        )
-        data = r.json()
-        post = (data.get("data") or {}).get("publishPost", {}).get("post", {})
-        if post.get("url"):
-            # Update warmup counter
-            published, _ = read_warmup()
-            new_count = published + 1
-            complete = update_warmup(new_count)
-            if complete:
-                log(f"HASHNODE | {slug} | warmup COMPLETE ({new_count}/7 posts)")
-            return True, post["url"]
-        errors = data.get("errors", [])
-        return False, f"publishPost failed: {json.dumps(errors)[:200]}"
     except Exception as e:
         return False, str(e)
 
@@ -509,56 +411,79 @@ def mark_synced(slug: str):
 
 # ── Main orchestrator ──────────────────────────────────────────────────────────
 def run_syndication(slug: str):
-    log(f"=== SYNDICATE START: {slug} ===")
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     result = load_post(slug)
     if result is None:
         sys.exit(1)
     meta, raw_body = result
 
+    title     = meta.get("title", slug)
+    post_date = meta.get("date", "unknown")
+
+    log(f"=== SYNDICATE START: {slug} ===")
+    log(f"PREFLIGHT | title: {title}")
+    log(f"PREFLIGHT | date: {post_date}")
+    log(f"PREFLIGHT | timestamp: {ts}")
+    log(f"PREFLIGHT | DEVTO:   {'configured' if DEVTO_API_KEY else 'MISSING — will SKIP'}")
+    tumblr_ok = all([TUMBLR_CONSUMER_KEY, TUMBLR_CONSUMER_SECRET, TUMBLR_TOKEN, TUMBLR_TOKEN_SECRET, TUMBLR_BLOG])
+    log(f"PREFLIGHT | TUMBLR:  {'configured' if tumblr_ok else 'MISSING — will SKIP'}")
+    blogger_ok = all([BLOGGER_CLIENT_ID, BLOGGER_CLIENT_SECRET, BLOGGER_REFRESH_TOKEN, BLOGGER_BLOG_ID])
+    log(f"PREFLIGHT | BLOGGER: {'configured' if blogger_ok else 'MISSING — will SKIP'}")
+    if FEEDER_TRIGGER_TOKEN and FEEDER_TRIGGER_TOKEN != GITHUB_TOKEN:
+        log(f"PREFLIGHT | FEEDER:  configured (dedicated PAT)")
+    elif FEEDER_TRIGGER_TOKEN:
+        log(f"PREFLIGHT | FEEDER:  configured (GITHUB_TOKEN — may lack cross-repo write)")
+    else:
+        log(f"PREFLIGHT | FEEDER:  MISSING — will SKIP")
+
     # Guarantee backlink before anything touches the content
     body = ensure_backlink(raw_body, slug)
 
     platforms = [
         ("DEVTO",   lambda: syndicate_devto(slug, meta, body)),
-        ("HASHNODE",lambda: syndicate_hashnode(slug, meta, body)),
         ("TUMBLR",  lambda: syndicate_tumblr(slug, meta, body)),
         ("BLOGGER", lambda: syndicate_blogger(slug, meta, body)),
         ("FEEDER",  lambda: syndicate_feeder(slug, meta, body)),
     ]
 
-    failures = []
+    failures  = []
     successes = 0
+    attempted = 0
 
-    for i, (platform, fn) in enumerate(platforms):
-        if i > 0:
+    for platform, fn in platforms:
+        if attempted > 0:
             log(f"--- waiting 60s before next platform ---")
             time.sleep(60)
 
-        log(f"{platform} | {slug} | syndicating...")
+        log(f"{platform} | {slug} | START")
         try:
             ok, detail = fn()
         except Exception as e:
             ok, detail = False, f"unhandled exception: {e}"
 
-        status = "SUCCESS" if ok else "FAIL"
+        is_skip = detail.startswith("SKIP:")
+        if not is_skip:
+            attempted += 1
+
+        status = "SUCCESS" if ok else ("SKIP" if is_skip else "FAIL")
         log(f"{platform} | {slug} | {status} | {detail}")
 
         if ok:
             successes += 1
-        else:
+        elif not is_skip:
             failures.append(f"{platform}: {detail[:100]}")
 
-    log(f"=== SYNDICATE DONE: {slug} | {successes}/5 succeeded ===")
+    log(f"=== SYNDICATE DONE: {slug} | {successes}/4 succeeded | {attempted} attempted | {len(failures)} failed ===")
 
-    # Mark synced if at least 1 platform succeeded
     if successes >= 1:
         synced = load_synced()
         if slug not in synced:
             mark_synced(slug)
             log(f"SYNCED | {slug} marked in synced-posts.txt")
+    else:
+        log(f"NOT SYNCED | {slug} — 0 platforms succeeded, not marking as synced")
 
-    # Alert if 2+ failures
     if len(failures) >= 2:
         send_failure_alert(slug, failures)
 

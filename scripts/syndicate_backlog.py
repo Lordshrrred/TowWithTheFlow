@@ -25,8 +25,6 @@ ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
 DEVTO_API_KEY       = os.getenv("DEVTO_API_KEY", "")
-HASHNODE_API_KEY    = os.getenv("HASHNODE_API_KEY", "")
-HASHNODE_PUB_ID     = os.getenv("HASHNODE_PUBLICATION_ID", "")
 TUMBLR_CONSUMER_KEY = os.getenv("TUMBLR_CONSUMER_KEY", "")
 TUMBLR_CONSUMER_SEC = os.getenv("TUMBLR_CONSUMER_SECRET", "")
 TUMBLR_TOKEN        = os.getenv("TUMBLR_TOKEN", "")
@@ -184,104 +182,6 @@ def syndicate_devto(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         return False, str(e)
 
 
-# ── Hashnode ───────────────────────────────────────────────────────────────────
-def syndicate_hashnode(slug: str, meta: dict, body: str) -> tuple[bool, str]:
-    if not HASHNODE_API_KEY or not HASHNODE_PUB_ID:
-        return False, "SKIP: no HASHNODE_API_KEY or HASHNODE_PUBLICATION_ID"
-
-    canonical = f"{BASE_URL}/{slug}/"
-    cta = (
-        "\n\n---\n\n"
-        "**Originally published on TowWithTheFlow.com** — "
-        f"[Read the full article here]({canonical})"
-    )
-    body_with_cta = body.rstrip() + cta
-    tags = [
-        {"name": t, "slug": re.sub(r'[^a-z0-9-]', '-', t.lower())}
-        for t in meta.get("tags", [])[:5]
-    ]
-
-    # Step 1: createDraft
-    create_mutation = """
-    mutation CreateDraft($input: CreateDraftInput!) {
-      createDraft(input: $input) {
-        draft { id }
-      }
-    }"""
-    try:
-        r = requests.post(
-            "https://gql.hashnode.com",
-            headers={"Authorization": HASHNODE_API_KEY, "Content-Type": "application/json"},
-            json={"query": create_mutation, "variables": {"input": {
-                "title":              meta.get("title", slug),
-                "contentMarkdown":    body_with_cta,
-                "publicationId":      HASHNODE_PUB_ID,
-                "originalArticleURL": canonical,
-                "tags":               tags,
-            }}},
-            timeout=30
-        )
-        data = r.json()
-        draft_id = (data.get("data") or {}).get("createDraft", {}).get("draft", {}).get("id")
-
-        if not draft_id:
-            # createDraft not available — fall back to direct publishPost
-            raise ValueError(f"createDraft returned no id: {json.dumps(data.get('errors',''))[:200]}")
-
-    except Exception as create_err:
-        # Fall back to publishPost (works on all Hashnode plan tiers)
-        publish_mutation = """
-        mutation PublishPost($input: PublishPostInput!) {
-          publishPost(input: $input) {
-            post { id url }
-          }
-        }"""
-        try:
-            r2 = requests.post(
-                "https://gql.hashnode.com",
-                headers={"Authorization": HASHNODE_API_KEY, "Content-Type": "application/json"},
-                json={"query": publish_mutation, "variables": {"input": {
-                    "title":              meta.get("title", slug),
-                    "contentMarkdown":    body_with_cta,
-                    "publicationId":      HASHNODE_PUB_ID,
-                    "originalArticleURL": canonical,
-                    "tags":               tags,
-                }}},
-                timeout=30
-            )
-            data2 = r2.json()
-            post = (data2.get("data") or {}).get("publishPost", {}).get("post", {})
-            if post.get("url"):
-                return True, post["url"]
-            errors = data2.get("errors", [])
-            return False, f"publishPost fallback failed: {json.dumps(errors)[:200]}"
-        except Exception as e2:
-            return False, f"createDraft err: {create_err} | publishPost err: {e2}"
-
-    # Step 2: publishDraft
-    publish_draft_mutation = """
-    mutation PublishDraft($input: PublishDraftInput!) {
-      publishDraft(input: $input) {
-        post { id url }
-      }
-    }"""
-    try:
-        r3 = requests.post(
-            "https://gql.hashnode.com",
-            headers={"Authorization": HASHNODE_API_KEY, "Content-Type": "application/json"},
-            json={"query": publish_draft_mutation, "variables": {"input": {"draftId": draft_id}}},
-            timeout=30
-        )
-        data3 = r3.json()
-        post = (data3.get("data") or {}).get("publishDraft", {}).get("post", {})
-        if post.get("url"):
-            return True, post["url"]
-        errors = data3.get("errors", [])
-        return False, f"publishDraft failed: {json.dumps(errors)[:200]}"
-    except Exception as e3:
-        return False, f"publishDraft exception: {e3}"
-
-
 # ── Tumblr ─────────────────────────────────────────────────────────────────────
 def syndicate_tumblr(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     if not all([TUMBLR_CONSUMER_KEY, TUMBLR_CONSUMER_SEC, TUMBLR_TOKEN, TUMBLR_TOKEN_SEC, TUMBLR_BLOG]):
@@ -333,7 +233,7 @@ def send_completion_email(total: int):
     body = (
         "Hey Matt,\n\n"
         "All posts on Tow With The Flow have been fully syndicated\n"
-        "across Dev.to, Hashnode, and Tumblr.\n\n"
+        "across Dev.to, Tumblr, Blogger, and Feeder.\n\n"
         f"Total posts synced: {total}\n\n"
         "The daily automation is now running on its own.\n"
         "New posts will continue to syndicate automatically.\n\n"
@@ -392,19 +292,12 @@ def fetch_feeder_post(slug: str) -> tuple[dict, str] | None:
 
 
 def syndicate_feeder_post(slug: str):
-    """Fetch one feeder post and syndicate it to Hashnode and Tumblr."""
+    """Fetch one feeder post and syndicate it to Tumblr."""
     result = fetch_feeder_post(slug)
     if result is None:
         return
 
     meta, body = result
-    # Override canonical to point at the feeder blog page
-    canonical = f"{FEEDER_BASE_URL}/"   # Blogger URL not known statically; use base
-
-    # Hashnode — reuse existing function (canonical already set inside it via BASE_URL)
-    # We temporarily patch meta to add a feeder note, then call syndicate_hashnode
-    ok, detail = syndicate_hashnode(slug, meta, body)
-    log(f"FEEDER HASHNODE | {slug} | {'SUCCESS' if ok else 'FAIL'} | {detail}")
 
     ok, detail = syndicate_tumblr(slug, meta, body)
     log(f"FEEDER TUMBLR   | {slug} | {'SUCCESS' if ok else 'FAIL'} | {detail}")
@@ -464,16 +357,16 @@ def main():
     post_date, slug = backlog[0]
     log(f"Syndicating backlog: {slug}  (post date={post_date})")
 
-    # Delegate to the full 5-platform engine in syndicate_post.py.
-    # Enforces: backlink check, Hashnode warmup, 60s waits, failure alerts,
-    # and marks synced-posts.txt on success.
+    # Delegate to the full 4-platform engine in syndicate_post.py.
+    # Enforces: backlink check, 60s waits between attempted platforms,
+    # failure alerts, and marks synced-posts.txt on success.
     try:
         import sys as _sys
         import os as _os
         _sys.path.insert(0, str(Path(__file__).parent))
         from syndicate_post import run_syndication
         successes, failures = run_syndication(slug)
-        log(f"Backlog run complete: {successes}/5 succeeded for {slug}")
+        log(f"Backlog run complete: {successes}/4 succeeded for {slug}")
     except Exception as e:
         log(f"ERROR: syndicate_post.run_syndication failed: {e}")
         mark_synced(slug)

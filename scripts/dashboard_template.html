@@ -304,9 +304,6 @@
           <div class="status-pill"><div class="status-dot yellow"></div><span>Backlog Drip: <strong>PAUSED</strong></span></div>
         </div>
 
-        <!-- Hashnode warmup warning (hidden until data loads) -->
-        <div id="hashnode-warning" style="display:none;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.3);border-radius:6px;padding:0.75rem 1rem;margin-bottom:0.85rem;gap:0.7rem;align-items:flex-start;"></div>
-
         <!-- Per-platform drip rates -->
         <div class="section-title" style="margin-top:0.2rem;">Syndication Rates</div>
         <div id="drip-rates" style="margin-bottom:1rem;"></div>
@@ -342,7 +339,6 @@
               <th>Post</th>
               <th>Date</th>
               <th class="plat-h">DEV<button class="test-btn" onclick="testPlatform('dev',this)">test</button></th>
-              <th class="plat-h">HASH<button class="test-btn" onclick="testPlatform('hash',this)">test</button></th>
               <th class="plat-h">TUMBLR<button class="test-btn" onclick="testPlatform('tumblr',this)">test</button></th>
               <th class="plat-h">BLOG<button class="test-btn" onclick="testPlatform('blog',this)">test</button></th>
               <th class="plat-h">FEEDER<button class="test-btn" onclick="testPlatform('feeder',this)">test</button></th>
@@ -447,11 +443,9 @@ const FEEDER_REPO  = "TTWF_GithubPages";
 const GITHUB_RAW   = "https://raw.githubusercontent.com";
 const GITHUB_API   = "https://api.github.com";
 
-const ACTIVE_PLATS   = ["dev","hash","tumblr","blog","feeder"];
-const PLAT_LABEL     = {dev:"DEV",hash:"HASH",tumblr:"TUMBLR",blog:"BLOG",feeder:"FEEDER"};
-const LOG_PLAT_MAP   = {DEVTO:"dev",HASHNODE:"hash",TUMBLR:"tumblr",BLOGGER:"blog",FEEDER:"feeder"};
-const HASHNODE_HOST  = "towwiththeflowyo.hashnode.dev";
-const HASHNODE_PUBID = "69c601d810e664c5da7bf3e8";
+const ACTIVE_PLATS   = ["dev","tumblr","blog","feeder"];
+const PLAT_LABEL     = {dev:"DEV",tumblr:"TUMBLR",blog:"BLOG",feeder:"FEEDER"};
+const LOG_PLAT_MAP   = {DEVTO:"dev",TUMBLR:"tumblr",BLOGGER:"blog",FEEDER:"feeder"};
 const TWTF_BASE      = "https://towwiththeflow.com";
 
 // ── Stars ─────────────────────────────────────────────────────────────────────
@@ -505,14 +499,13 @@ function dripDate(i){ const d=new Date(); d.setDate(d.getDate()+i+1); d.setUTCHo
 
 // ── Load all ──────────────────────────────────────────────────────────────────
 async function loadDashboard(){
-  const [logTxt,syncedTxt,kwTxt,ghTree,feederTree,deployInfo,warmupTxt] = await Promise.all([
+  const [logTxt,syncedTxt,kwTxt,ghTree,feederTree,deployInfo] = await Promise.all([
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/syndication_log.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/synced-posts.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/keywords.txt`),
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}),
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${FEEDER_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}),
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/commits/main`,{headers:ghHdrs()}),
-    ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/hashnode_warmup.txt`),
   ]);
 
   const logMap     = parseLog(logTxt);
@@ -524,7 +517,7 @@ async function loadDashboard(){
   const feederSet  = new Set(feederFiles.map(f=>f.path.replace("content/posts/","").replace(".md","")));
 
   renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet});
-  renderDrip({allSlugs,syncedSet,logMap,warmupTxt});
+  renderDrip({allSlugs,syncedSet,logMap});
   renderRecent({logMap});
   renderMatrix({allSlugs,logMap,feederSet});
   renderPostQueue({allSlugs,syncedSet,logMap,kwLines});
@@ -552,57 +545,20 @@ function renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet}){
     <div class="stat-card"><div class="stat-label">Posts Syndicated</div><div class="stat-value">${syndSlugs.length}</div><div class="stat-sub">unique posts</div></div>
     <div class="stat-card"><div class="stat-label">This Week</div><div class="stat-value">${thisWeek}</div><div class="stat-sub">last 7 days</div></div>
     <div class="stat-card"><div class="stat-label">Success Rate</div><div class="stat-value">${rate}%</div><div class="stat-sub">${suc}/${tot} attempts</div></div>
-    <div class="stat-card"><div class="stat-label">Platforms Active</div><div class="stat-value">5/5</div><div class="stat-sub">all platforms live</div></div>
+    <div class="stat-card"><div class="stat-label">Platforms Active</div><div class="stat-value">4/4</div><div class="stat-sub">all platforms live</div></div>
     <div class="stat-card"><div class="stat-label">Drip Queue</div><div class="stat-value">${queued}</div><div class="stat-sub"><span class="stat-badge paused">PAUSED</span></div></div>
     <div class="stat-card" id="backlink-health-card"><div class="stat-label">Backlink Health</div><div class="stat-value" id="bl-health-pct" style="color:${healthColor};">—%</div><div class="stat-sub" id="bl-health-sub">verifying…</div></div>`;
 }
 
-// ── Hashnode warmup banner ─────────────────────────────────────────────────────
-function renderHashnodeWarning(warmupTxt){
-  const el=document.getElementById("hashnode-warning");
-  if(!el) return;
-  // Parse warmup file: lines like "posts_published: 5" or "warmup_complete: true"
-  let published=0, complete=false;
-  if(warmupTxt){
-    const pm=warmupTxt.match(/posts_published[:\s]+(\d+)/i); if(pm) published=parseInt(pm[1]);
-    complete=/warmup_complete[:\s]+true/i.test(warmupTxt);
-  }
-  const day=Math.min(published,7);
-  const pct=Math.round((day/7)*100);
-  const warmupDone=complete||published>=7;
-  if(warmupDone){ el.style.display="none"; return; }
-  el.style.display="flex";
-  el.innerHTML=`
-    <span style="font-size:1.1rem;flex-shrink:0;">⚠</span>
-    <div style="flex:1;">
-      <div style="font-weight:700;color:var(--yellow);font-size:0.85rem;margin-bottom:0.25rem;">
-        Hashnode: New account — drip mode active
-      </div>
-      <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">
-        Max 1 post per day, every other day for first 7 days to avoid spam flags.
-        Posts published: <strong style="color:var(--text);">${published}</strong> |
-        Warmup complete: <strong style="color:${warmupDone?"var(--green)":"var(--yellow)"};">${warmupDone?"Yes ✓":"No"}</strong>
-      </div>
-      <div style="background:var(--surface2);border-radius:20px;height:6px;overflow:hidden;">
-        <div style="width:${pct}%;height:100%;background:var(--yellow);border-radius:20px;transition:width 0.5s;"></div>
-      </div>
-      <div style="font-size:0.68rem;color:var(--text-muted);margin-top:0.25rem;">Day ${day} of 7 warmup</div>
-    </div>`;
-}
-
 // ── Per-platform drip rates ────────────────────────────────────────────────────
-function renderDripRates(warmupTxt){
+function renderDripRates(){
   const el=document.getElementById("drip-rates");
   if(!el) return;
-  let hnPublished=0;
-  if(warmupTxt){ const pm=warmupTxt.match(/posts_published[:\s]+(\d+)/i); if(pm) hnPublished=parseInt(pm[1]); }
-  const hnWarm=hnPublished>=7;
   const rates=[
-    {label:"DEV.TO",   rate:"1/day",                          color:"var(--amber)"},
-    {label:"HASHNODE", rate:hnWarm?"1/day":"1/2 days (warmup)", color:hnWarm?"var(--green)":"var(--yellow)"},
-    {label:"TUMBLR",   rate:"1/day",                          color:"var(--amber)"},
-    {label:"BLOGGER",  rate:"1/day",                          color:"var(--amber)"},
-    {label:"FEEDER",   rate:"auto on publish",                 color:"var(--blue)"},
+    {label:"DEV.TO",  rate:"1/day",          color:"var(--amber)"},
+    {label:"TUMBLR",  rate:"1/day",          color:"var(--amber)"},
+    {label:"BLOGGER", rate:"1/day",          color:"var(--amber)"},
+    {label:"FEEDER",  rate:"auto on publish", color:"var(--blue)"},
   ];
   el.innerHTML=rates.map(r=>`
     <div style="display:flex;align-items:center;justify-content:space-between;padding:0.3rem 0;border-bottom:1px solid rgba(245,166,35,0.06);">
@@ -612,14 +568,13 @@ function renderDripRates(warmupTxt){
 }
 
 // ── Drip Queue ────────────────────────────────────────────────────────────────
-function renderDrip({allSlugs,syncedSet,logMap,warmupTxt}){
+function renderDrip({allSlugs,syncedSet,logMap}){
   const queued=allSlugs.filter(s=>!syncedSet.has(s));
   document.getElementById("ds-published").textContent=allSlugs.length-queued.length;
   document.getElementById("ds-remaining").textContent=queued.length;
   const next=new Date(); next.setDate(next.getDate()+1); next.setUTCHours(9,0,0,0);
   document.getElementById("ds-next").textContent=next.toLocaleDateString("en-US",{month:"short",day:"numeric"});
-  renderHashnodeWarning(warmupTxt);
-  renderDripRates(warmupTxt);
+  renderDripRates();
   const el=document.getElementById("drip-queue-list");
   if(!queued.length){el.innerHTML='<div style="color:var(--text-muted);font-size:0.82rem;padding:0.4rem 0;">Queue empty — all posts synced ✓</div>';return;}
   el.innerHTML=queued.slice(0,20).map((s,i)=>`
@@ -765,11 +720,6 @@ async function checkSlugBacklinks(slug, platData, feederSet){
     results.dev = await checkDevto(slug, platData.dev.url);
   }
 
-  // Hashnode — GraphQL, no auth needed
-  if(platData.hash?.status==="success"&&platData.hash?.url){
-    results.hash = await checkHashnode(slug, platData.hash.url);
-  }
-
   // Feeder — read via GitHub Raw
   if(feederSet?.has(slug)||platData.feeder?.status==="success"){
     results.feeder = await checkFeeder(slug);
@@ -798,25 +748,6 @@ async function checkDevto(slug, url){
     const bodyOk=body.includes("towwiththeflow.com");
     const anchorM=body.match(/href="(https?:\/\/towwiththeflow\.com[^"]*)"[^>]*>([^<]+)</);
     return{verified:canonOk||bodyOk, canonical:canonOk, anchor:anchorM?anchorM[2]:"", url};
-  }catch{ return{verified:false,anchor:"",error:true}; }
-}
-
-async function checkHashnode(slug, url){
-  try{
-    // Extract post slug from URL
-    const hnSlug=url.split("/").pop();
-    const q=`{ publication(host:"${HASHNODE_HOST}") { post(slug:"${hnSlug}") { url originalArticleURL content { markdown } } } }`;
-    const r=await fetch("https://gql.hashnode.com",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:q})});
-    if(!r.ok) return{verified:false,anchor:""};
-    const d=await r.json();
-    const post=d?.data?.publication?.post;
-    if(!post) return{verified:false,anchor:""};
-    const canon=post.originalArticleURL||"";
-    const body=post.content?.markdown||"";
-    const canonOk=canon.includes("towwiththeflow.com");
-    const bodyOk=body.includes("towwiththeflow.com");
-    const anchorM=body.match(/\[([^\]]+)\]\(https?:\/\/towwiththeflow\.com[^)]*\)/);
-    return{verified:canonOk||bodyOk, canonical:canonOk, anchor:anchorM?anchorM[1]:"", url};
   }catch{ return{verified:false,anchor:"",error:true}; }
 }
 
@@ -864,7 +795,7 @@ function updateBacklinkCell(slug, results, platData){
 
 function updateBacklinkHealthCard(logMap, feederSet){
   // Compute per-platform backlink %
-  const perPlat={dev:{v:0,t:0},hash:{v:0,t:0},tumblr:{v:0,t:0},blog:{v:0,t:0},feeder:{v:0,t:0}};
+  const perPlat={dev:{v:0,t:0},tumblr:{v:0,t:0},blog:{v:0,t:0},feeder:{v:0,t:0}};
   let totalVerified=0, totalChecked=0;
   for(const[slug,cache]of Object.entries(BL_CACHE)){
     const platData=logMap[slug]||{};
@@ -897,7 +828,6 @@ function updateBacklinkHealthCard(logMap, feederSet){
 // ── Platform Tests ────────────────────────────────────────────────────────────
 const PLAT_TESTS={
   dev:    async()=>{ const r=await fetch("https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1"); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
-  hash:   async()=>{ const r=await fetch("https://gql.hashnode.com",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:`{publication(host:"${HASHNODE_HOST}"){id}}`})}); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
   tumblr: async()=>({ok:null,msg:"Tumblr requires OAuth — cannot test from browser. Check syndication_log.txt for real results."}),
   blog:   async()=>{ if(!BLOGGER_KEY||BLOGGER_KEY==="__BLOGGER_API_KEY__")return{ok:false,msg:"No API key"}; const r=await fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOGGER_ID}/posts?key=${BLOGGER_KEY}&maxResults=1`); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
   feeder: async()=>{ const r=await fetch(`${GITHUB_API}/repos/${GITHUB_OWNER}/${FEEDER_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },

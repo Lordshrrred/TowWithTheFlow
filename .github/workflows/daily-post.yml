@@ -209,8 +209,6 @@ jobs:
       - name: Syndicate general post
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
-          HASHNODE_API_KEY: ${{ secrets.HASHNODE_API_KEY }}
-          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
           TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
           TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
           TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
@@ -240,8 +238,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/syndication_log.txt \
-                  scripts/hashnode_warmup.txt || true
+          git add scripts/synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: syndicate general post $(date +%Y-%m-%d)"
           git push
 
@@ -267,8 +264,6 @@ jobs:
       - name: Syndicate local post
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
-          HASHNODE_API_KEY: ${{ secrets.HASHNODE_API_KEY }}
-          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
           TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
           TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
           TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
@@ -298,8 +293,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/syndication_log.txt \
-                  scripts/hashnode_warmup.txt || true
+          git add scripts/synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: syndicate local post $(date +%Y-%m-%d)"
           git push
 
@@ -325,8 +319,6 @@ jobs:
       - name: Syndicate backlog post (oldest unsynced)
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
-          HASHNODE_API_KEY: ${{ secrets.HASHNODE_API_KEY }}
-          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
           TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
           TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
           TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
@@ -349,7 +341,6 @@ jobs:
 
       - name: Commit syndication results
         run: |
-          git add scripts/synced-posts.txt scripts/syndication_log.txt \
-                  scripts/hashnode_warmup.txt || true
+          git add scripts/synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: backlog syndication $(date +%Y-%m-%d)"
           git push
