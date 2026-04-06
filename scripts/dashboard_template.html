@@ -551,11 +551,15 @@ function renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet}){
   const covered=syndSlugs.filter(s=>feederSet.has(s)).length;
   const health=syndSlugs.length>0?Math.round(covered/syndSlugs.length*100):0;
   const healthColor=health>=80?"var(--green)":health>=50?"var(--amber)":"var(--red)";
+  // Platforms Active: count platforms with at least one success in the log
+  const activePlats=ACTIVE_PLATS.filter(p=>Object.values(logMap).some(pm=>pm[p]?.status==="success"));
+  const activePlatSub=activePlats.length===ACTIVE_PLATS.length?"all platforms live":activePlats.length===0?"none working":`${activePlats.map(p=>PLAT_LABEL[p]).join(", ")} working`;
+  const platColor=activePlats.length===ACTIVE_PLATS.length?"var(--green)":activePlats.length>0?"var(--amber)":"var(--red)";
   document.getElementById("stats-bar").innerHTML=`
     <div class="stat-card"><div class="stat-label">Posts Syndicated</div><div class="stat-value">${syndSlugs.length}</div><div class="stat-sub">unique posts</div></div>
     <div class="stat-card"><div class="stat-label">This Week</div><div class="stat-value">${thisWeek}</div><div class="stat-sub">last 7 days</div></div>
     <div class="stat-card"><div class="stat-label">Success Rate</div><div class="stat-value">${rate}%</div><div class="stat-sub">${suc}/${tot} attempts</div></div>
-    <div class="stat-card"><div class="stat-label">Platforms Active</div><div class="stat-value">4/4</div><div class="stat-sub">all platforms live</div></div>
+    <div class="stat-card"><div class="stat-label">Platforms Active</div><div class="stat-value" style="color:${platColor};">${activePlats.length}/4</div><div class="stat-sub">${activePlatSub}</div></div>
     <div class="stat-card"><div class="stat-label">Drip Queue</div><div class="stat-value">${queued}</div><div class="stat-sub"><span class="stat-badge paused">PAUSED</span></div></div>
     <div class="stat-card" id="backlink-health-card"><div class="stat-label">Backlink Health</div><div class="stat-value" id="bl-health-pct" style="color:${healthColor};">—%</div><div class="stat-sub" id="bl-health-sub">verifying…</div></div>`;
 }

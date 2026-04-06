@@ -136,7 +136,7 @@ jobs:
           curl -s -o /dev/null -w "%{http_code}" -X POST \
             -H "Authorization: token ${FEEDER_TRIGGER_TOKEN}" \
             -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/Lordshrrred/TTWF_GithubPages/actions/workflows/daily-post.yml/dispatches \
+            https://api.github.com/repos/Lordshrrred/TWTF_Feeder/actions/workflows/daily-post.yml/dispatches \
             -d "$(jq -n \
               --arg slug  "$NEW_SLUG" \
               --arg url   "$NEW_URL" \
