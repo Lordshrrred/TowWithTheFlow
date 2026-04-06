@@ -143,7 +143,7 @@
     .plat-badge.soon { background:transparent; color:rgba(107,114,128,0.35); border:1px solid rgba(107,114,128,0.12); font-size:0.6rem; }
 
     /* ── Matrix ── */
-    .matrix-wrap { overflow-x:auto; margin:-0.2rem; padding:0.2rem; }
+    .matrix-wrap { overflow:auto; margin:-0.2rem; padding:0.2rem; max-height:420px; border:1px solid rgba(245,166,35,0.08); border-radius:8px; }
     .matrix-table { width:100%; border-collapse:collapse; font-size:0.77rem; min-width:840px; }
     .matrix-table th { padding:0.5rem 0.55rem; text-align:left; font-size:0.6rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); border-bottom:1px solid var(--border); background:var(--surface); white-space:nowrap; position:sticky; top:0; }
     .matrix-table th.plat-h { text-align:center; }
@@ -156,6 +156,9 @@
     .cell-btn { display:inline-flex; align-items:center; justify-content:center; width:26px; height:20px; border-radius:3px; font-size:0.68rem; font-weight:700; font-family:"Rajdhani",sans-serif; border:none; cursor:default; text-decoration:none; }
     .cell-btn.success { background:var(--green-dim); color:var(--green); cursor:pointer; }
     .cell-btn.success:hover { background:rgba(34,197,94,0.22); }
+    .cell-btn.success.bl-ok { box-shadow: inset 0 0 0 1px rgba(34,197,94,0.55); }
+    .cell-btn.success.bl-bad { box-shadow: inset 0 0 0 1px rgba(239,68,68,0.65); }
+    .cell-btn.success.bl-unknown { box-shadow: inset 0 0 0 1px rgba(234,179,8,0.55); }
     .cell-btn.fail { background:var(--red-dim); color:var(--red); }
     .cell-btn.na { background:transparent; color:rgba(107,114,128,0.35); border:1px solid rgba(107,114,128,0.12); }
     .cell-btn.soon { background:transparent; color:rgba(107,114,128,0.2); border:1px solid rgba(107,114,128,0.08); font-size:0.58rem; }
@@ -291,7 +294,7 @@
       <div class="card">
         <div class="drip-header">
           <span class="drip-title">Drip Queue</span>
-          <span class="drip-badge paused" id="drip-badge">● PAUSED</span>
+          <span class="drip-badge active" id="drip-badge">● SCHEDULED</span>
         </div>
         <div class="drip-stats">
           <div class="drip-stat"><div class="drip-stat-label">Published</div><div class="drip-stat-value" id="ds-published">—</div></div>
@@ -303,13 +306,13 @@
           <div class="drip-stat"><div class="drip-stat-label">Feeder</div><div class="drip-stat-value">Auto</div></div>
         </div>
         <div class="drip-actions">
-          <button class="drip-btn primary" onclick="triggerWorkflow('daily-post.yml','Activate Drip',0,{job:'generate-general'})">▶ Activate Drip</button>
-          <button class="drip-btn danger" onclick="showToast('Drip runs on schedule — to pause, disable the workflow in the GitHub Actions tab.')">⏸ Pause Drip</button>
-          <button class="drip-btn secondary" onclick="triggerWorkflow('daily-post.yml','Publish Next Now',0,{job:'generate-general'})">⚡ Publish Next Now</button>
+          <button class="drip-btn primary" onclick="triggerWorkflow('daily-post.yml','Run General Generate',0,{job:'generate-general'})">⚡ Run General Now</button>
+          <button class="drip-btn secondary" onclick="triggerWorkflow('daily-post.yml','Run Local Generate',0,{job:'generate-local'})">📍 Run Local Now</button>
+          <button class="drip-btn secondary" onclick="triggerWorkflow('daily-post.yml','Run Backlog Syndication',2,{job:'syndicate-backlog'})">📤 Run Backlog Now</button>
         </div>
         <div class="status-indicators">
           <div class="status-pill"><div class="status-dot green"></div><span>New Posts: <strong>ACTIVE ✓</strong></span></div>
-          <div class="status-pill"><div class="status-dot yellow"></div><span>Backlog Drip: <strong>PAUSED</strong></span></div>
+          <div class="status-pill"><div class="status-dot green"></div><span>Backlog Drip: <strong>ACTIVE ✓</strong></span></div>
         </div>
 
         <!-- Per-platform drip rates -->
@@ -339,6 +342,7 @@
     <!-- Syndication Matrix -->
     <div class="section-title">Syndication Matrix</div>
     <div class="card" style="margin-bottom:1.5rem;padding:1rem 1.2rem;">
+      <div style="font-size:0.72rem;color:var(--text-muted);margin:0 0 0.6rem 0.1rem;">Existing posts, newest to oldest. Backlink column verifies destination pages contain TWTF backlinks.</div>
       <div class="matrix-wrap">
         <div class="matrix-loading" id="matrix-loading">⟳ Loading post list…</div>
         <table class="matrix-table" id="matrix-table" style="display:none;">
@@ -506,6 +510,17 @@ function parseLog(txt){
 function s2t(slug){ return slug.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase()); }
 function catTag(slug){ const s=slug.toLowerCase(); if(s.includes("towing-cost")||s.includes("tow-truck-price"))return"Cost"; if(s.includes("battery")||s.includes("alternator"))return"Battery"; if(s.includes("tire")||s.includes("flat")||s.includes("axle"))return"Tires"; if(s.includes("overheat")||s.includes("radiator"))return"Overheat"; if(s.includes("wont-start")||s.includes("clicking"))return"No Start"; if(s.includes("died")||s.includes("breaks-down")||s.includes("broke-down"))return"Breakdown"; if(s.includes("oil")||s.includes("stall"))return"Engine"; return"Guide"; }
 function dripDate(i){ const d=new Date(); d.setDate(d.getDate()+i+1); d.setUTCHours(9,0,0,0); return d.toLocaleDateString("en-US",{month:"short",day:"numeric"}); }
+function extractFrontmatterDate(md){ const m=(md||"").match(/^date:\s*([^\n]+)$/m); if(!m) return ""; return m[1].trim().replace(/^["']|["']$/g,"").slice(0,10); }
+function formatDate(iso){ return iso||"—"; }
+async function buildPostDateMap(slugs){
+  const out={}; const batchSize=12;
+  for(let i=0;i<slugs.length;i+=batchSize){
+    const batch=slugs.slice(i,i+batchSize);
+    const rows=await Promise.all(batch.map(async slug=>[slug,extractFrontmatterDate(await ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/content/posts/${slug}.md`))]));
+    for(const [slug,d] of rows) out[slug]=d||"";
+  }
+  return out;
+}
 
 // ── Load all ──────────────────────────────────────────────────────────────────
 async function loadDashboard(){
@@ -521,6 +536,12 @@ async function loadDashboard(){
   const logMap     = parseLog(logTxt);
   const postFiles  = (ghTree?.tree||[]).filter(f=>f.path?.startsWith("content/posts/")&&f.path.endsWith(".md")&&!f.path.endsWith("_index.md"));
   const allSlugs   = postFiles.map(f=>f.path.replace("content/posts/","").replace(".md","")).filter(Boolean);
+  const postDateMap = await buildPostDateMap(allSlugs);
+  const sortedSlugs = [...allSlugs].sort((a,b)=>{
+    const da=postDateMap[a]||"", db=postDateMap[b]||"";
+    if(db!==da) return db.localeCompare(da);
+    return a.localeCompare(b);
+  });
   const syncedSet  = new Set((syncedTxt||"").split("\n").map(l=>l.trim()).filter(Boolean));
   const kwLines    = (kwTxt||"").split("\n").filter(l=>l.trim()&&!l.trim().startsWith("#"));
   const feederFiles= (feederTree?.tree||[]).filter(f=>f.path?.startsWith("content/posts/")&&f.path.endsWith(".md")&&!f.path.endsWith("_index.md"));
@@ -529,7 +550,7 @@ async function loadDashboard(){
   renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet});
   renderDrip({allSlugs,syncedSet,logMap});
   renderRecent({logMap});
-  renderMatrix({allSlugs,logMap,feederSet});
+  renderMatrix({sortedSlugs,logMap,feederSet,postDateMap});
   renderPostQueue({allSlugs,syncedSet,logMap,kwLines});
   renderBottom({allSlugs,syncedSet,kwLines,feederFiles,deployInfo,logMap});
 
@@ -560,7 +581,7 @@ function renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet}){
     <div class="stat-card"><div class="stat-label">This Week</div><div class="stat-value">${thisWeek}</div><div class="stat-sub">last 7 days</div></div>
     <div class="stat-card"><div class="stat-label">Success Rate</div><div class="stat-value">${rate}%</div><div class="stat-sub">${suc}/${tot} attempts</div></div>
     <div class="stat-card"><div class="stat-label">Platforms Active</div><div class="stat-value" style="color:${platColor};">${activePlats.length}/4</div><div class="stat-sub">${activePlatSub}</div></div>
-    <div class="stat-card"><div class="stat-label">Drip Queue</div><div class="stat-value">${queued}</div><div class="stat-sub"><span class="stat-badge paused">PAUSED</span></div></div>
+    <div class="stat-card"><div class="stat-label">Drip Queue</div><div class="stat-value">${queued}</div><div class="stat-sub"><span class="stat-badge active">SCHEDULED</span></div></div>
     <div class="stat-card" id="backlink-health-card"><div class="stat-label">Backlink Health</div><div class="stat-value" id="bl-health-pct" style="color:${healthColor};">—%</div><div class="stat-sub" id="bl-health-sub">verifying…</div></div>`;
 }
 
@@ -584,6 +605,8 @@ function renderDripRates(){
 // ── Drip Queue ────────────────────────────────────────────────────────────────
 function renderDrip({allSlugs,syncedSet,logMap}){
   const queued=allSlugs.filter(s=>!syncedSet.has(s));
+  const badge=document.getElementById("drip-badge");
+  if(badge){ badge.textContent="● SCHEDULED"; badge.classList.remove("paused"); badge.classList.add("active"); }
   document.getElementById("ds-published").textContent=allSlugs.length-queued.length;
   document.getElementById("ds-remaining").textContent=queued.length;
   const next=new Date(); next.setDate(next.getDate()+1); next.setUTCHours(9,0,0,0);
@@ -628,21 +651,21 @@ function renderRecent({logMap}){
 }
 
 // ── Matrix ────────────────────────────────────────────────────────────────────
-function renderMatrix({allSlugs,logMap,feederSet}){
+function renderMatrix({sortedSlugs,logMap,feederSet,postDateMap}){
   document.getElementById("matrix-loading").style.display="none";
   const tbl=document.getElementById("matrix-table"); tbl.style.display="table";
-  document.getElementById("matrix-body").innerHTML=allSlugs.map(slug=>{
+  document.getElementById("matrix-body").innerHTML=sortedSlugs.map(slug=>{
     const plats={...logMap[slug]||{}};
     if(feederSet.has(slug)&&!plats.feeder) plats.feeder={status:"success",url:`https://lordshrrred.github.io/TWTF_Feeder/${slug}/`,date:""};
     let score=0;
     const activeCells=ACTIVE_PLATS.map(p=>{
       const d=plats[p];
       if(!d)return`<td class="matrix-cell"><span class="cell-btn na">—</span></td>`;
-      if(d.status==="success"){score++;return`<td class="matrix-cell">${d.url?`<a class="cell-btn success" href="${d.url}" target="_blank" rel="noopener" title="Open on ${PLAT_LABEL[p]}">✓</a>`:`<span class="cell-btn success">✓</span>`}</td>`;}
+      if(d.status==="success"){score++;return`<td class="matrix-cell">${d.url?`<a id="plat-${slug}-${p}" class="cell-btn success bl-unknown" href="${d.url}" target="_blank" rel="noopener" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</a>`:`<span id="plat-${slug}-${p}" class="cell-btn success bl-unknown" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</span>`}</td>`;}
       return`<td class="matrix-cell"><span class="cell-btn fail">✗</span></td>`;
     }).join("");
     const sc=score>=4?"var(--green)":score>=2?"var(--amber)":"var(--text-muted)";
-    const firstDate=Object.values(plats).sort((a,b)=>(a.date||"").localeCompare(b.date||""))[0]?.date||"";
+    const firstDate=postDateMap[slug]||"";
     // Backlink cell starts as "checking" if this post has any successes, "—" otherwise
     const hasAny=score>0;
     const blCell=hasAny
@@ -650,7 +673,7 @@ function renderMatrix({allSlugs,logMap,feederSet}){
       : `<td class="matrix-cell"><span class="bl-badge na">—</span></td>`;
     return`<tr>
       <td><a class="post-slug" href="${TWTF_BASE}/${slug}/" target="_blank" rel="noopener" title="Open on towwiththeflow.com">${s2t(slug)}</a></td>
-      <td><span class="post-date-cell">${firstDate||"—"}</span></td>
+      <td><span class="post-date-cell">${formatDate(firstDate)}</span></td>
       ${activeCells}
       <td><span class="score-badge" style="color:${sc};border-color:${sc}50;background:${sc}14;">${score}/${ACTIVE_PLATS.length}</span></td>
       ${blCell}
@@ -698,10 +721,7 @@ function renderBottom({allSlugs,syncedSet,kwLines,feederFiles,deployInfo,logMap}
     document.getElementById("bs-last-deploy").textContent=d.toLocaleDateString("en-US",{month:"short",day:"numeric"})+" — "+msg;
   }
   document.getElementById("bs-feeder-posts").textContent=feederFiles.length;
-  // bl-count: feeder posts confirmed to have a backlink to towwiththeflow.com
-  // Audit (2026-03-27): all 71 feeder posts contain specific post URLs → 71/71 verified
-  const blVerified=feederFiles.length; // all feeder posts generated with backlinks
-  document.getElementById("bs-backlink").textContent=`${blVerified}/${feederFiles.length} posts have verified backlinks`;
+  document.getElementById("bs-backlink").textContent="Verifying backlinks…";
   document.getElementById("bs-feeder-checked").textContent=new Date().toLocaleDateString("en-US",{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"});
 }
 
@@ -739,12 +759,37 @@ async function checkSlugBacklinks(slug, platData, feederSet){
     results.feeder = await checkFeeder(slug);
   }
 
-  // Tumblr + Blogger: mark unverified (auth required to read content API)
-  if(platData.tumblr?.status==="success") results.tumblr={verified:null,anchor:""}; // null = unverified
-  if(platData.blog?.status==="success")   results.blog  ={verified:null,anchor:""};
+  // Tumblr + Blogger: verify backlink on public permalink HTML
+  if(platData.tumblr?.status==="success"&&platData.tumblr?.url){
+    results.tumblr = await checkPublicPageForBacklink(platData.tumblr.url);
+  }else if(platData.tumblr?.status==="success"){
+    results.tumblr = {verified:null,anchor:"",reason:"missing URL"};
+  }
+  if(platData.blog?.status==="success"&&platData.blog?.url){
+    results.blog = await checkPublicPageForBacklink(platData.blog.url);
+  }else if(platData.blog?.status==="success"){
+    results.blog = {verified:null,anchor:"",reason:"missing URL"};
+  }
 
   BL_CACHE[slug]=results;
+  updatePlatformBacklinkMarkers(slug, results, platData);
   updateBacklinkCell(slug, results, platData);
+}
+
+async function checkPublicPageForBacklink(url){
+  try{
+    // Direct browser fetch can fail on CORS; use jina mirror fallback.
+    let txt=await ftext(url);
+    if(!txt || !txt.includes("towwiththeflow.com")){
+      txt=await ftext(`https://r.jina.ai/http://${url.replace(/^https?:\/\//,"")}`);
+    }
+    if(!txt) return{verified:null,anchor:"",reason:"unreadable"};
+    const hasLink=/towwiththeflow\.com/i.test(txt);
+    const anchorM=txt.match(/href="https?:\/\/towwiththeflow\.com[^"]*"[^>]*>([^<]+)</i);
+    return{verified:hasLink,anchor:anchorM?anchorM[1]:"",url};
+  }catch{
+    return{verified:null,anchor:"",reason:"error"};
+  }
 }
 
 async function checkDevto(slug, url){
@@ -767,14 +812,39 @@ async function checkDevto(slug, url){
 
 async function checkFeeder(slug){
   try{
-    const rawUrl=`${GITHUB_RAW}/${GITHUB_OWNER}/${FEEDER_REPO}/main/content/posts/${slug}.md`;
-    const txt=await ftext(rawUrl);
+    let txt="", matchedSlug=slug;
+    for(const cand of [slug,`${slug}-guide`]){
+      const rawUrl=`${GITHUB_RAW}/${GITHUB_OWNER}/${FEEDER_REPO}/main/content/posts/${cand}.md`;
+      const hit=await ftext(rawUrl);
+      if(hit){ txt=hit; matchedSlug=cand; break; }
+    }
     if(!txt) return{verified:false,anchor:""};
     const hasCanon=/canonical[:\s].*towwiththeflow\.com/i.test(txt);
     const hasLink=/towwiththeflow\.com/i.test(txt);
     const anchorM=txt.match(/\[([^\]]+)\]\(https?:\/\/towwiththeflow\.com[^)]*\)/);
-    return{verified:hasCanon||hasLink, canonical:hasCanon, anchor:anchorM?anchorM[1]:"canonical link", url:`https://lordshrrred.github.io/TWTF_Feeder/${slug}-guide/`};
+    return{verified:hasCanon||hasLink, canonical:hasCanon, anchor:anchorM?anchorM[1]:"canonical link", url:`https://lordshrrred.github.io/TWTF_Feeder/${matchedSlug}/`};
   }catch{ return{verified:false,anchor:"",error:true}; }
+}
+
+function updatePlatformBacklinkMarkers(slug, results, platData){
+  for(const p of ACTIVE_PLATS){
+    const pr=platData[p];
+    if(!pr||pr.status!=="success") continue;
+    const el=document.getElementById(`plat-${slug}-${p}`);
+    if(!el) continue;
+    const br=results[p];
+    el.classList.remove("bl-ok","bl-bad","bl-unknown");
+    if(!br || br.verified===null){
+      el.classList.add("bl-unknown");
+      el.title=`${PLAT_LABEL[p]} syndicated. Backlink: unknown`;
+    }else if(br.verified){
+      el.classList.add("bl-ok");
+      el.title=`${PLAT_LABEL[p]} syndicated. Backlink: verified`;
+    }else{
+      el.classList.add("bl-bad");
+      el.title=`${PLAT_LABEL[p]} syndicated. Backlink: missing`;
+    }
+  }
 }
 
 function updateBacklinkCell(slug, results, platData){
@@ -836,6 +906,15 @@ function updateBacklinkHealthCard(logMap, feederSet){
       return`${PLAT_LABEL[p]} ${pct}%`;
     }).filter(Boolean).join(" | ");
     subEl.textContent=breakdown||`${totalVerified}/${totalChecked} verified`;
+  }
+  const bottomEl=document.getElementById("bs-backlink");
+  if(bottomEl){
+    const parts=ACTIVE_PLATS.map(p=>`${PLAT_LABEL[p]} ${perPlat[p].v}/${perPlat[p].t}`);
+    bottomEl.textContent=`${totalVerified}/${totalChecked} verified (${parts.join(" · ")})`;
+  }
+  const checkedEl=document.getElementById("bs-feeder-checked");
+  if(checkedEl){
+    checkedEl.textContent=new Date().toLocaleDateString("en-US",{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"});
   }
 }
 
