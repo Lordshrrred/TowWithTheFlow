@@ -719,7 +719,7 @@ function renderMatrix({sortedSlugs,logMap,feederSet,postDateMap}){
     let successCount=0;
     const activeCells=ACTIVE_PLATS.map(p=>{
       const d=plats[p];
-      if(!d)return`<td class="matrix-cell"><span class="cell-btn na">—</span></td>`;
+      if(!d)return`<td class="matrix-cell"><span id="plat-${slug}-${p}" class="cell-btn na">—</span></td>`;
       if(d.status==="success"){
         successCount++;
         return`<td class="matrix-cell">${d.url?`<a id="plat-${slug}-${p}" class="cell-btn success bl-unknown" href="${normalizePlatformUrl(p, slug, d.url)}" target="_blank" rel="noopener" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</a>`:`<span id="plat-${slug}-${p}" class="cell-btn success bl-unknown" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</span>`}</td>`;
@@ -982,7 +982,17 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
     const pr=platData[p];
     const hadSuccess=!!(pr&&pr.status==="success");
     const recoveredLive=!!(br&&br.recovered_live&&br.verified);
+    const liveFromAudit=!!(br&&br.verified&&br.url);
     const targetUrl=normalizePlatformUrl(p, slug, (br&&br.url)|| (pr&&pr.url) || "");
+
+    // If audit proves a live destination, promote NA/FAIL to success even without log success.
+    if((liveFromAudit || recoveredLive) && !hadSuccess){
+      if(el.classList.contains("na") || el.classList.contains("fail")){
+        el.classList.remove("na","fail");
+        el.classList.add("success");
+        el.textContent="✓";
+      }
+    }
 
     // Make matrix green badges clickable whenever we have a destination URL.
     if(targetUrl && el.tagName==="SPAN" && el.classList.contains("success")){
@@ -1002,7 +1012,7 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
     }
 
     el.classList.remove("bl-ok","bl-bad","bl-unknown");
-    if(!hadSuccess && !recoveredLive){
+    if(!hadSuccess && !recoveredLive && !liveFromAudit){
       continue; // keep original fail/na state
     }
 
