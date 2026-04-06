@@ -252,14 +252,39 @@ def syndicate_tumblr(slug: str, meta: dict, body: str) -> tuple[bool, str]:
 
 
 # ── Platform: Blogger ─────────────────────────────────────────────────────────
-def get_blogger_token() -> str:
-    r = requests.post("https://oauth2.googleapis.com/token", data={
-        "client_id":     BLOGGER_CLIENT_ID,
-        "client_secret": BLOGGER_CLIENT_SECRET,
-        "refresh_token": BLOGGER_REFRESH_TOKEN,
-        "grant_type":    "refresh_token",
-    }, timeout=20)
-    return r.json().get("access_token", "")
+def get_blogger_token() -> tuple[str, str]:
+    """Exchange refresh token for an access token.
+    Returns (access_token, error_msg). On success error_msg is empty.
+    Common Google error codes:
+      invalid_grant  — refresh token expired/revoked (needs new OAuth consent)
+      invalid_client — client_id or client_secret is wrong
+      invalid_request — refresh_token value is malformed
+    """
+    try:
+        r = requests.post("https://oauth2.googleapis.com/token", data={
+            "client_id":     BLOGGER_CLIENT_ID,
+            "client_secret": BLOGGER_CLIENT_SECRET,
+            "refresh_token": BLOGGER_REFRESH_TOKEN,
+            "grant_type":    "refresh_token",
+        }, timeout=20)
+        data = r.json()
+    except Exception as e:
+        return "", f"network error: {e}"
+
+    token = data.get("access_token", "")
+    if token:
+        return token, ""
+
+    err  = data.get("error", "unknown_error")
+    desc = data.get("error_description", "no description from Google")
+    hint = ""
+    if err == "invalid_grant":
+        hint = " [refresh token is expired or revoked — needs new OAuth consent flow]"
+    elif err == "invalid_client":
+        hint = " [client_id or client_secret is wrong]"
+    elif err == "invalid_request":
+        hint = " [refresh_token value is malformed or empty]"
+    return "", f"{err}: {desc}{hint}"
 
 
 def md_to_html(text: str) -> str:
@@ -290,16 +315,28 @@ def md_to_html(text: str) -> str:
 
 
 def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
-    if not all([BLOGGER_CLIENT_ID, BLOGGER_CLIENT_SECRET, BLOGGER_REFRESH_TOKEN, BLOGGER_BLOG_ID]):
-        return False, "SKIP: missing Blogger credentials"
+    # Step 1/3 — preflight: check which credentials are missing (no values exposed)
+    missing = [name for name, val in [
+        ("BLOGGER_CLIENT_ID",     BLOGGER_CLIENT_ID),
+        ("BLOGGER_CLIENT_SECRET", BLOGGER_CLIENT_SECRET),
+        ("BLOGGER_REFRESH_TOKEN", BLOGGER_REFRESH_TOKEN),
+        ("BLOGGER_BLOG_ID",       BLOGGER_BLOG_ID),
+    ] if not val]
+    if missing:
+        return False, f"SKIP: missing Blogger credentials: {', '.join(missing)}"
 
+    log(f"BLOGGER | {slug} | step 1/3: refreshing access token")
+    access_token, token_err = get_blogger_token()
+    if not access_token:
+        log(f"BLOGGER | {slug} | token refresh failed: {token_err}")
+        return False, f"ERROR: token refresh failed — {token_err}"
+
+    log(f"BLOGGER | {slug} | step 2/3: converting markdown to HTML")
     canonical = f"{BASE_URL}/{slug}/"
     varied_body = get_variation(body, "Blogger")
     html_content = md_to_html(varied_body)
-    access_token = get_blogger_token()
-    if not access_token:
-        return False, "ERROR: could not refresh Blogger token"
 
+    log(f"BLOGGER | {slug} | step 3/3: posting to blog {BLOGGER_BLOG_ID}")
     try:
         r = requests.post(
             f"https://www.googleapis.com/blogger/v3/blogs/{BLOGGER_BLOG_ID}/posts/",
@@ -318,7 +355,7 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         return False, str(e)
 
 
-# ── Platform: Feeder (TTWF_GithubPages) ───────────────────────────────────────
+# ── Platform: Feeder (TWTF_Feeder) ────────────────────────────────────────────
 def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     token = FEEDER_TRIGGER_TOKEN
     if not token:
