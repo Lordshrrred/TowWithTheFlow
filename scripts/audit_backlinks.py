@@ -19,6 +19,7 @@ RAW_BASE = f"https://raw.githubusercontent.com/{FEEDER_OWNER}/{FEEDER_REPO}/main
 TWTF_BASE = "https://towwiththeflow.com"
 
 PLAT_KEYS = {"DEVTO": "dev", "TUMBLR": "tumblr", "BLOGGER": "blog", "FEEDER": "feeder"}
+TUMBLR_BLOG = "towwiththeflow"
 
 
 def expected_urls(slug: str) -> tuple[str, str]:
@@ -172,6 +173,62 @@ def recover_blogger(slug: str, sess: requests.Session) -> dict | None:
     return None
 
 
+def recover_dev(slug: str, sess: requests.Session) -> dict | None:
+    """Discover live Dev.to article by canonical URL/backlink when no success URL is logged."""
+    try:
+        exp_a, exp_b = expected_urls(slug)
+        r = sess.get("https://dev.to/api/articles?username=towwiththeflowyoo&per_page=100", timeout=20)
+        if not r.ok:
+            return None
+        for art in r.json() or []:
+            canon = (art.get("canonical_url") or "").lower().strip()
+            if canon not in (exp_a, exp_b):
+                continue
+            url = art.get("url") or ""
+            chk = verify_dev(slug, url, sess)
+            if chk.get("verified") is True:
+                chk["recovered_live"] = True
+                return chk
+    except Exception:
+        return None
+    return None
+
+
+def recover_tumblr(slug: str, sess: requests.Session) -> dict | None:
+    """Discover live Tumblr post by exact TWTF slug backlink."""
+    try:
+        r = sess.get("https://towwiththeflow.tumblr.com/api/read/json?num=120", timeout=20)
+        if not r.ok:
+            return None
+        m = re.match(r"var tumblr_api_read = (.*);\s*$", r.text, re.S)
+        if not m:
+            return None
+        data = json.loads(m.group(1))
+        posts = data.get("posts") or []
+        for p in posts:
+            body = p.get("regular-body") or ""
+            links = href_links(body)
+            if not any(matches_slug(l, slug) for l in links):
+                continue
+            post_id = str(p.get("id") or "").strip()
+            if not post_id:
+                continue
+            post_url = f"https://www.tumblr.com/{TUMBLR_BLOG}/{post_id}/{slug}"
+            return {"verified": True, "reason": "ok", "url": post_url, "recovered_live": True}
+    except Exception:
+        return None
+    return None
+
+
+def recover_feeder(slug: str, sess: requests.Session) -> dict | None:
+    """Discover live feeder page by checking known slug candidates for exact canonical backlink."""
+    chk = verify_feeder(slug, "", sess)
+    if chk.get("verified") is True:
+        chk["recovered_live"] = True
+        return chk
+    return None
+
+
 def main() -> None:
     text = LOG_FILE.read_text(encoding="utf-8", errors="ignore") if LOG_FILE.exists() else ""
     successes = parse_successes(text)
@@ -192,10 +249,22 @@ def main() -> None:
             row["feeder"] = verify_feeder(slug, plats["feeder"]["url"], sess)
 
         # Recovery for blogger when no success URL logged
+        if "dev" not in row:
+            rec = recover_dev(slug, sess)
+            if rec:
+                row["dev"] = rec
+        if "tumblr" not in row:
+            rec = recover_tumblr(slug, sess)
+            if rec:
+                row["tumblr"] = rec
         if "blog" not in row:
             rec = recover_blogger(slug, sess)
             if rec:
                 row["blog"] = rec
+        if "feeder" not in row:
+            rec = recover_feeder(slug, sess)
+            if rec:
+                row["feeder"] = rec
 
         slugs_out[slug] = row
 

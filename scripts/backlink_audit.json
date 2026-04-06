@@ -1,11 +1,17 @@
 {
-  "generated_at": "2026-04-06T05:33:14.254338+00:00",
+  "generated_at": "2026-04-06T05:38:57.984770+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
         "reason": "no_url",
         "url": "",
         "verified": null
+      },
+      "tumblr": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://www.tumblr.com/towwiththeflow/811961137409228800/battery-dead-but-lights-turn-on",
+        "verified": true
       }
     },
     "can-i-drive-with-a-broken-axle": {
@@ -19,6 +25,12 @@
         "reason": "no_url",
         "url": "",
         "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/can-i-drive-with-a-broken-axle-guide/",
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -62,6 +74,12 @@
         "reason": "no_url",
         "url": "",
         "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-overheated-can-i-drive-it-guide/",
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -136,6 +154,12 @@
         "url": "https://denverroadsideguide.blogspot.com/2026/03/tow-truck-price-for-50-miles-from-city.html",
         "verified": true
       },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-price-50-miles-from-city-guide/",
+        "verified": true
+      },
       "tumblr": {
         "reason": "ok",
         "url": "https://towwiththeflow.tumblr.com/post/812017595940208640",
@@ -176,6 +200,24 @@
         "reason": "ok",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html",
         "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-houston-texas-what-youll-pay-and-what-to-do-586n",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-houston-texas-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://www.tumblr.com/towwiththeflow/813115595071553536/towing-cost-houston-texas",
+        "verified": true
       }
     },
     "what-happens-if-you-run-out-of-oil-while-driving": {
@@ -200,16 +242,16 @@
       "verified": 4
     },
     "dev": {
-      "checked": 3,
-      "verified": 3
+      "checked": 4,
+      "verified": 4
     },
     "feeder": {
-      "checked": 2,
-      "verified": 2
+      "checked": 6,
+      "verified": 6
     },
     "tumblr": {
-      "checked": 11,
-      "verified": 10
+      "checked": 13,
+      "verified": 12
     }
   }
 }
