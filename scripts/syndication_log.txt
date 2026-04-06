@@ -396,3 +396,29 @@
 [2026-04-06 00:14:09] SYNCED | towing-cost-denver-colorado marked in synced-posts.txt
 [2026-04-06 00:14:09] BACKLOG: Backlog run complete: 1/4 succeeded for towing-cost-denver-colorado
 [2026-04-06 00:14:09] BACKLOG: Total progress: 10/72 posts synced
+[2026-04-06 01:49:03] BACKLOG: Posts total=72  synced=10  backlog=62  (today's posts excluded from backlog)
+[2026-04-06 01:49:03] BACKLOG: Syndicating backlog: car-wont-start-in-cold-weather-what-to-do  (post date=2026-02-24)
+[2026-04-06 01:49:03] === SYNDICATE START: car-wont-start-in-cold-weather-what-to-do ===
+[2026-04-06 01:49:03] PREFLIGHT | title: Car Won't Start in Cold Weather: What To Do
+[2026-04-06 01:49:03] PREFLIGHT | date: 2026-02-24
+[2026-04-06 01:49:03] PREFLIGHT | timestamp: 2026-04-06 01:49:03
+[2026-04-06 01:49:03] PREFLIGHT | DEVTO:   configured
+[2026-04-06 01:49:03] PREFLIGHT | TUMBLR:  configured
+[2026-04-06 01:49:03] PREFLIGHT | BLOGGER: configured
+[2026-04-06 01:49:03] PREFLIGHT | FEEDER:  configured (dedicated PAT)
+[2026-04-06 01:49:03] BACKLINK | car-wont-start-in-cold-weather-what-to-do | missing — injecting before syndication
+[2026-04-06 01:49:03] DEVTO | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-06 01:49:04] DEVTO | car-wont-start-in-cold-weather-what-to-do | SUCCESS | https://dev.to/towwiththeflowyoo/car-wont-start-in-cold-weather-what-to-do-43o2
+[2026-04-06 01:49:04] --- waiting 60s before next platform ---
+[2026-04-06 01:50:04] TUMBLR | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-06 01:50:04] TUMBLR | car-wont-start-in-cold-weather-what-to-do | SUCCESS | https://towwiththeflow.tumblr.com/post/813107987761741824
+[2026-04-06 01:50:04] --- waiting 60s before next platform ---
+[2026-04-06 01:51:04] BLOGGER | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-06 01:51:04] BLOGGER | car-wont-start-in-cold-weather-what-to-do | FAIL | ERROR: could not refresh Blogger token
+[2026-04-06 01:51:04] --- waiting 60s before next platform ---
+[2026-04-06 01:52:04] FEEDER | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-06 01:52:05] FEEDER | car-wont-start-in-cold-weather-what-to-do | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-in-cold-weather-what-to-do-guide/
+[2026-04-06 01:52:05] === SYNDICATE DONE: car-wont-start-in-cold-weather-what-to-do | 3/4 succeeded | 4 attempted | 1 failed ===
+[2026-04-06 01:52:05] SYNCED | car-wont-start-in-cold-weather-what-to-do marked in synced-posts.txt
+[2026-04-06 01:52:05] BACKLOG: Backlog run complete: 3/4 succeeded for car-wont-start-in-cold-weather-what-to-do
+[2026-04-06 01:52:05] BACKLOG: Total progress: 11/72 posts synced
