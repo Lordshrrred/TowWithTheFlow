@@ -549,15 +549,17 @@ function normalizePlatformUrl(platform, slug, url){
 function parseLog(txt){
   const map={};
   for(const line of (txt||"").split("\n")){
-    const m=line.match(/^\[(\d{4}-\d{2}-\d{2}) [\d:]+\] (\w+) \| ([\w-]+) \| (SUCCESS|FAIL|ERROR)/);
+    const m=line.match(/^\[(\d{4}-\d{2}-\d{2} [\d:]+)\] (\w+) \| ([\w-]+) \| (SUCCESS|FAIL|ERROR)/);
     if(!m) continue;
-    const [,date,platRaw,slug,statusRaw]=m;
+    const [_,tsRaw,platRaw,slug,statusRaw]=m;
+    const date = tsRaw.slice(0,10);
+    const tsMs = Date.parse(tsRaw.replace(" ","T")) || 0;
     const plat=LOG_PLAT_MAP[platRaw]; if(!plat) continue;
     const status=statusRaw==="SUCCESS"?"success":"fail";
     const um=line.match(/url=(https?:\/\/[^\s|]+)/i) || line.match(/(https?:\/\/[^\s|]+)/i);
     const url=normalizePlatformUrl(plat, slug, um?um[1]:"");
     if(!map[slug])map[slug]={};
-    map[slug][plat]={status,url,date};
+    map[slug][plat]={status,url,date,tsMs,tsRaw};
   }
   return map;
 }
@@ -688,10 +690,10 @@ function renderRecent({logMap}){
   for(const[slug,plats]of Object.entries(logMap)){
     const succ=Object.values(plats).filter(v=>v.status==="success");
     if(!succ.length)continue;
-    const latest=succ.sort((a,b)=>b.date.localeCompare(a.date))[0];
-    wd.push({slug,date:latest.date,plats});
+    const latest=succ.sort((a,b)=>(b.tsMs||0)-(a.tsMs||0))[0];
+    wd.push({slug,date:latest.date,tsMs:latest.tsMs||0,plats});
   }
-  wd.sort((a,b)=>b.date.localeCompare(a.date));
+  wd.sort((a,b)=>(b.tsMs||0)-(a.tsMs||0));
   const el=document.getElementById("recent-list");
   if(!wd.length){el.innerHTML='<div style="color:var(--text-muted);font-size:0.82rem;">No syndications yet.</div>';return;}
   el.innerHTML=wd.slice(0,7).map(({slug,date,plats})=>{
