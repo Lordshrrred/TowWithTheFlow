@@ -961,13 +961,28 @@ async function checkFeeder(slug){
 
 function updatePlatformBacklinkMarkers(slug, results, platData){
   for(const p of ACTIVE_PLATS){
-    const el=document.getElementById(`plat-${slug}-${p}`);
+    let el=document.getElementById(`plat-${slug}-${p}`);
     const recentEl=document.getElementById(`recent-${slug}-${p}`);
     if(!el) continue;
     const br=results[p];
     const pr=platData[p];
     const hadSuccess=!!(pr&&pr.status==="success");
     const recoveredLive=!!(br&&br.recovered_live&&br.verified);
+    const targetUrl=(br&&br.url)|| (pr&&pr.url) || "";
+
+    // Make matrix green badges clickable whenever we have a destination URL.
+    if(targetUrl && el.tagName==="SPAN" && el.classList.contains("success")){
+      const a=document.createElement("a");
+      a.id=el.id;
+      a.className=el.className;
+      a.href=targetUrl;
+      a.target="_blank";
+      a.rel="noopener";
+      a.textContent=el.textContent||"✓";
+      a.title=el.title||`Open on ${PLAT_LABEL[p]}`;
+      el.replaceWith(a);
+      el=a;
+    }
 
     el.classList.remove("bl-ok","bl-bad","bl-unknown");
     if(!hadSuccess && !recoveredLive){
@@ -990,7 +1005,7 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
       }
       el.classList.add("bl-ok");
       el.title=`${PLAT_LABEL[p]} ${recoveredLive?"live-recovered":"syndicated"}. Backlink: verified`;
-      if(recoveredLive && br.url && el.tagName==="SPAN"){
+      if(br.url && el.tagName==="SPAN"){
         const a=document.createElement("a");
         a.id=el.id;
         a.className=el.className;
