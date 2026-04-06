@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  TZ: America/Denver
+
 jobs:
   fetch:
     runs-on: ubuntu-latest

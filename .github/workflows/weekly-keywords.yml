@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  TZ: America/Denver
+
 jobs:
   keyword-research:
     runs-on: ubuntu-latest

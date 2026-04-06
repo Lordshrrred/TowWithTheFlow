@@ -2,11 +2,11 @@ name: Daily Post and Syndication
 
 on:
   schedule:
-    - cron: '0 9 * * *'    # 9:00am UTC  — generate general post
-    - cron: '30 9 * * *'   # 9:30am UTC  — generate local/city post
-    - cron: '30 10 * * *'  # 10:30am UTC — syndicate general post
-    - cron: '30 12 * * *'  # 12:30pm UTC — syndicate local post
-    - cron: '30 14 * * *'  # 2:30pm UTC  — syndicate 1 backlog post
+    - cron: '0 9 * * *'    # 09:00 UTC (03:00 Denver, MDT) — generate general post
+    - cron: '30 9 * * *'   # 09:30 UTC (03:30 Denver, MDT) — generate local/city post
+    - cron: '30 10 * * *'  # 10:30 UTC (04:30 Denver, MDT) — syndicate general post
+    - cron: '30 12 * * *'  # 12:30 UTC (06:30 Denver, MDT) — syndicate local post
+    - cron: '30 14 * * *'  # 14:30 UTC (08:30 Denver, MDT) — syndicate 1 backlog post
   workflow_dispatch:
     inputs:
       job:
@@ -24,6 +24,9 @@ on:
 permissions:
   contents: write
   actions: write
+
+env:
+  TZ: America/Denver
 
 # ────────────────────────────────────────────────────────────────────────────────
 # SHARED STEPS (reused via anchors where possible)

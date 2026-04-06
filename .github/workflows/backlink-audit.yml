@@ -13,6 +13,9 @@ on:
 permissions:
   contents: write
 
+env:
+  TZ: America/Denver
+
 jobs:
   audit:
     runs-on: ubuntu-latest
