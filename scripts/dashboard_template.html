@@ -638,10 +638,10 @@ function renderRecent({logMap}){
   el.innerHTML=wd.slice(0,7).map(({slug,date,plats})=>{
     const badges=ACTIVE_PLATS.map(p=>{
       const d=plats[p];
-      if(!d)return`<span class="plat-badge na">${PLAT_LABEL[p]} —</span>`;
-      if(d.status==="success"&&d.url)return`<a class="plat-badge success" href="${d.url}" target="_blank" rel="noopener" title="Open on ${PLAT_LABEL[p]}">${PLAT_LABEL[p]} ✓</a>`;
-      if(d.status==="success")return`<span class="plat-badge success">${PLAT_LABEL[p]} ✓</span>`;
-      return`<span class="plat-badge fail">${PLAT_LABEL[p]} ✗</span>`;
+      if(!d)return`<span id="recent-${slug}-${p}" class="plat-badge na">${PLAT_LABEL[p]} —</span>`;
+      if(d.status==="success"&&d.url)return`<a id="recent-${slug}-${p}" class="plat-badge success" href="${d.url}" target="_blank" rel="noopener" title="Open on ${PLAT_LABEL[p]}">${PLAT_LABEL[p]} ✓</a>`;
+      if(d.status==="success")return`<span id="recent-${slug}-${p}" class="plat-badge success">${PLAT_LABEL[p]} ✓</span>`;
+      return`<span id="recent-${slug}-${p}" class="plat-badge fail">${PLAT_LABEL[p]} ✗</span>`;
     }).join("");
     return`<div class="recent-row">
       <div class="recent-top"><a class="recent-title" href="${TWTF_BASE}/${slug}/" target="_blank" rel="noopener" title="Open on towwiththeflow.com" style="color:var(--text);text-decoration:none;">${s2t(slug)}</a><span class="recent-date">${date}</span></div>
@@ -869,6 +869,7 @@ async function checkFeeder(slug){
 function updatePlatformBacklinkMarkers(slug, results, platData){
   for(const p of ACTIVE_PLATS){
     const el=document.getElementById(`plat-${slug}-${p}`);
+    const recentEl=document.getElementById(`recent-${slug}-${p}`);
     if(!el) continue;
     const br=results[p];
     const pr=platData[p];
@@ -883,6 +884,11 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
     if(!br || br.verified===null){
       el.classList.add("bl-unknown");
       el.title=`${PLAT_LABEL[p]} ${hadSuccess?"syndicated":"live-recovered"}. Backlink: unknown`;
+      if(recentEl && hadSuccess){
+        recentEl.classList.remove("fail","na");
+        recentEl.classList.add("success");
+        recentEl.textContent=`${PLAT_LABEL[p]} ?`;
+      }
     }else if(br.verified){
       if(el.classList.contains("fail")){
         el.classList.remove("fail");
@@ -902,9 +908,33 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
         a.title=el.title;
         el.replaceWith(a);
       }
+      if(recentEl){
+        if(recentEl.tagName==="SPAN" && br.url){
+          const a=document.createElement("a");
+          a.id=recentEl.id;
+          a.className="plat-badge success";
+          a.href=br.url;
+          a.target="_blank";
+          a.rel="noopener";
+          a.textContent=`${PLAT_LABEL[p]} ✓`;
+          a.title=`Open on ${PLAT_LABEL[p]} (${recoveredLive?"live-recovered":"verified"})`;
+          recentEl.replaceWith(a);
+        }else{
+          recentEl.classList.remove("fail","na");
+          recentEl.classList.add("success");
+          recentEl.textContent=`${PLAT_LABEL[p]} ✓`;
+          recentEl.title=`${PLAT_LABEL[p]} backlink verified`;
+        }
+      }
     }else{
       el.classList.add("bl-bad");
       el.title=`${PLAT_LABEL[p]} ${hadSuccess?"syndicated":"live-recovered"}. Backlink: missing`;
+      if(recentEl){
+        recentEl.classList.remove("success","na");
+        recentEl.classList.add("fail");
+        recentEl.textContent=`${PLAT_LABEL[p]} ✗`;
+        recentEl.title=`${PLAT_LABEL[p]} backlink missing`;
+      }
     }
   }
 }
