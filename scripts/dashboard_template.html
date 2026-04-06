@@ -425,7 +425,7 @@
         <div class="bstat-row"><span class="bstat-label">Next Scheduled Post</span><span class="bstat-value">9:00 AM UTC daily</span></div>
       </div>
       <div class="card">
-        <h3>Feeder Site <a class="bstat-link" href="https://lordshrrred.github.io/TTWF_GithubPages/" target="_blank" rel="noopener">↗ Lordshrrred/TTWF_GithubPages (GitHub Pages)</a></h3>
+        <h3>Feeder Site <a class="bstat-link" href="https://lordshrrred.github.io/TWTF_Feeder/" target="_blank" rel="noopener">↗ lordshrrred.github.io/TWTF_Feeder</a></h3>
         <div class="bstat-row"><span class="bstat-label">Total Feeder Posts</span><span class="bstat-value" id="bs-feeder-posts">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Backlink Coverage</span><span class="bstat-value" id="bs-backlink">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Platform</span><span class="bstat-value">GitHub Pages</span></div>
@@ -443,12 +443,13 @@
 const SESSION_KEY  = "twtf_dashboard_auth";
 const PW_HASH       = "__PASSWORD_HASH__";
 const GH_TOKEN      = "__GITHUB_TOKEN__";      // ephemeral — read API only
-const TRIGGER_TOKEN = "__DASHBOARD_TOKEN__";   // long-lived PAT — workflow dispatch
+const TRIGGER_TOKEN    = "__DASHBOARD_TOKEN__";  // long-lived PAT — used only for auth header
+const TRIGGERS_ENABLED = __TRIGGERS_ENABLED__;   // JS bool injected at build time — not derived from token string
 const BLOGGER_ID    = "__BLOGGER_BLOG_ID__";
 const BLOGGER_KEY   = "__BLOGGER_API_KEY__";
 const GITHUB_OWNER = "Lordshrrred";
 const TWTF_REPO    = "TowWithTheFlow";
-const FEEDER_REPO  = "TTWF_GithubPages";
+const FEEDER_REPO  = "TWTF_Feeder";
 const GITHUB_RAW   = "https://raw.githubusercontent.com";
 const GITHUB_API   = "https://api.github.com";
 
@@ -628,7 +629,7 @@ function renderMatrix({allSlugs,logMap,feederSet}){
   const tbl=document.getElementById("matrix-table"); tbl.style.display="table";
   document.getElementById("matrix-body").innerHTML=allSlugs.map(slug=>{
     const plats={...logMap[slug]||{}};
-    if(feederSet.has(slug)&&!plats.feeder) plats.feeder={status:"success",url:`https://lordshrrred.github.io/TTWF_GithubPages/${slug}/`,date:""};
+    if(feederSet.has(slug)&&!plats.feeder) plats.feeder={status:"success",url:`https://lordshrrred.github.io/TWTF_Feeder/${slug}/`,date:""};
     let score=0;
     const activeCells=ACTIVE_PLATS.map(p=>{
       const d=plats[p];
@@ -768,7 +769,7 @@ async function checkFeeder(slug){
     const hasCanon=/canonical[:\s].*towwiththeflow\.com/i.test(txt);
     const hasLink=/towwiththeflow\.com/i.test(txt);
     const anchorM=txt.match(/\[([^\]]+)\]\(https?:\/\/towwiththeflow\.com[^)]*\)/);
-    return{verified:hasCanon||hasLink, canonical:hasCanon, anchor:anchorM?anchorM[1]:"canonical link", url:`https://lordshrrred.github.io/TTWF_GithubPages/${slug}-guide/`};
+    return{verified:hasCanon||hasLink, canonical:hasCanon, anchor:anchorM?anchorM[1]:"canonical link", url:`https://lordshrrred.github.io/TWTF_Feeder/${slug}-guide/`};
   }catch{ return{verified:false,anchor:"",error:true}; }
 }
 
@@ -860,8 +861,8 @@ async function triggerWorkflow(wf,label,qaIdx,inputs,cb){
   // inputs is optional — if a function is passed as 4th arg, treat it as cb with no inputs
   if(typeof inputs==="function"){ cb=inputs; inputs={}; }
   inputs=inputs||{};
-  if(!TRIGGER_TOKEN||TRIGGER_TOKEN==="__DASHBOARD_TOKEN__"){
-    showToast("⚠ Workflow triggers require a DASHBOARD_TRIGGER_TOKEN secret (PAT with workflow scope). Use the GitHub Actions tab for now.");
+  if(!TRIGGERS_ENABLED){
+    showToast("⚠ Workflow triggers disabled — DASHBOARD_TRIGGER_TOKEN secret was missing at build time. Add it and redeploy.");
     return;
   }
   const el=document.getElementById(`qa-${qaIdx}`);
@@ -881,8 +882,7 @@ async function triggerWorkflow(wf,label,qaIdx,inputs,cb){
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
 (function applyTriggerState(){
-  const hasToken = TRIGGER_TOKEN && TRIGGER_TOKEN !== "__DASHBOARD_TOKEN__";
-  if(hasToken) return; // buttons active — nothing to do
+  if(TRIGGERS_ENABLED) return; // token present at build time — buttons active
   // Show warning in build strip
   const note = document.getElementById("build-trigger-note");
   if(note) note.style.display = "inline";

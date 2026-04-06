@@ -45,7 +45,7 @@ SKIP_FILES = {"_index.md", "tow-content-log.md"}
 FEEDER_BACKLOG_FILE  = Path(__file__).parent / "feeder_backlog.txt"
 FEEDER_SYNCED_FILE   = Path(__file__).parent / "feeder-synced.txt"
 FEEDER_BASE_URL      = "https://denverroadsideguide.blogspot.com"
-FEEDER_RAW_BASE      = "https://raw.githubusercontent.com/Lordshrrred/TTWF_GithubPages/main/content/posts"
+FEEDER_RAW_BASE      = "https://raw.githubusercontent.com/Lordshrrred/TWTF_Feeder/main/content/posts"
 # Don't start syndicating feeder posts until this date (let them age first)
 FEEDER_HOLD_UNTIL    = date(2026, 3, 31)
 

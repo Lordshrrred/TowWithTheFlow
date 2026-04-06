@@ -49,7 +49,7 @@ POSTS_DIR      = ROOT / "content" / "posts"
 LOG_FILE       = Path(__file__).parent / "syndication_log.txt"
 SYNCED_FILE    = Path(__file__).parent / "synced-posts.txt"
 FEEDER_OWNER   = "Lordshrrred"
-FEEDER_REPO    = "TTWF_GithubPages"
+FEEDER_REPO    = "TWTF_Feeder"
 
 # Backlink block injected when missing
 BACKLINK_TMPL = (
@@ -329,7 +329,7 @@ def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
 
     # Build a feeder slug (add -guide suffix if not already varied)
     feeder_slug = f"{slug}-guide" if not slug.endswith("-guide") else slug
-    feeder_url  = f"https://lordshrrred.github.io/TTWF_GithubPages/{feeder_slug}/"
+    feeder_url  = f"https://lordshrrred.github.io/TWTF_Feeder/{feeder_slug}/"
 
     today = date.today().isoformat()
     fm = (

@@ -15,6 +15,8 @@ Injected placeholders:
   __BUILD_TIMESTAMP__    -- ISO timestamp of when this build ran
   __BUILD_TOKEN_STATUS__ -- "configured" or "missing" (never the token value)
   __BUILD_COMMIT__       -- Git commit SHA (GITHUB_SHA env var, or "local")
+  __TRIGGERS_ENABLED__   -- JS boolean literal true/false (separate from token value,
+                            so token substitution cannot corrupt the enable/disable check)
 
 NOTE: __GITHUB_TOKEN__ is the ephemeral Actions token — only good for read API calls during
 the current workflow run. DO NOT use it for browser-side workflow dispatch.
@@ -64,10 +66,11 @@ def main():
     blogger_id  = os.environ.get("BLOGGER_BLOG_ID", "")
     blogger_key = os.environ.get("BLOGGER_API_KEY", "")
 
-    build_ts     = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    token_status = "configured" if trigger_token else "missing"
-    token_color  = "#22c55e" if trigger_token else "#ef4444"
-    commit_sha   = os.environ.get("GITHUB_SHA", "local")[:8]
+    build_ts          = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    token_status      = "configured" if trigger_token else "missing"
+    token_color       = "#22c55e" if trigger_token else "#ef4444"
+    triggers_enabled  = "true" if trigger_token else "false"   # JS boolean literal
+    commit_sha        = os.environ.get("GITHUB_SHA", "local")[:8]
 
     pw_hash = hashlib.sha256(password.encode()).hexdigest() if password else ""
 
@@ -88,6 +91,7 @@ def main():
         html = html.replace("__BUILD_TIMESTAMP__",    build_ts)
         html = html.replace("__BUILD_TOKEN_STATUS__", token_status)
         html = html.replace("__TOKEN_COLOR__",        token_color)
+        html = html.replace("__TRIGGERS_ENABLED__",   triggers_enabled)
         html = html.replace("__BUILD_COMMIT__",       commit_sha)
 
         out.parent.mkdir(parents=True, exist_ok=True)
