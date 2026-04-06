@@ -21,6 +21,8 @@ package-lock.json
 admin/
 aura/
 images/
+!static/images/
+!static/images/**
 netlify/
 .github/workflows/deploy.yml
 
