@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T17:08:31.189691+00:00",
+  "generated_at": "2026-04-06T20:29:15.987432+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -100,6 +100,11 @@
       }
     },
     "car-smoking-from-hood-need-tow-truck-now": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-smoking-from-hood-need-tow-truck-now.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-smoking-from-hood-need-tow-truck-now-jhm",
@@ -151,6 +156,11 @@
       }
     },
     "cheapest-tow-truck-service-near-me-sunday": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/find-cheapest-tow-truck-service-open.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/find-cheapest-tow-truck-service-open-sundays-near-you-4jnm",
@@ -168,6 +178,11 @@
       }
     },
     "driving-in-snow-emergency-kit-checklist": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/driving-in-snow-emergency-kit-checklist.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/driving-in-snow-emergency-kit-checklist-3io1",
@@ -289,8 +304,8 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 5,
-      "verified": 4
+      "checked": 8,
+      "verified": 7
     },
     "dev": {
       "checked": 7,
