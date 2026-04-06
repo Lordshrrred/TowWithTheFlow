@@ -1,0 +1,62 @@
+name: Blogger Health Check
+
+on:
+  schedule:
+    - cron: '45 11 * * *'  # daily 11:45 UTC (~5:45 AM MDT)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests python-dotenv
+
+      - name: Run Blogger health check
+        id: health
+        continue-on-error: true
+        env:
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python scripts/check_blogger_health.py
+
+      - name: Commit health state
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/blogger_health.json
+          if git diff --staged --quiet; then
+            echo "No blogger health state changes"
+            exit 0
+          fi
+          git commit -m "Auto: refresh blogger health $(date +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push
+
+      - name: Fail workflow when unhealthy
+        if: steps.health.outcome == 'failure'
+        run: |
+          echo "Blogger health check failed (alert should have been sent)."
+          exit 1
