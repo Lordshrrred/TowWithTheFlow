@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T13:48:26.684245+00:00",
+  "generated_at": "2026-04-06T17:08:31.189691+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -150,6 +150,40 @@
         "verified": true
       }
     },
+    "cheapest-tow-truck-service-near-me-sunday": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/find-cheapest-tow-truck-service-open-sundays-near-you-4jnm",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/cheapest-tow-truck-service-near-me-sunday-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://towwiththeflow.tumblr.com/post/813153411664068609",
+        "verified": true
+      }
+    },
+    "driving-in-snow-emergency-kit-checklist": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/driving-in-snow-emergency-kit-checklist-3io1",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/driving-in-snow-emergency-kit-checklist-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://towwiththeflow.tumblr.com/post/813158358768123904",
+        "verified": true
+      }
+    },
     "engine-stalls-at-stop-sign-causes": {
       "dev": {
         "reason": "no_url",
@@ -259,16 +293,16 @@
       "verified": 4
     },
     "dev": {
-      "checked": 5,
-      "verified": 5
-    },
-    "feeder": {
       "checked": 7,
       "verified": 7
     },
+    "feeder": {
+      "checked": 9,
+      "verified": 9
+    },
     "tumblr": {
-      "checked": 14,
-      "verified": 13
+      "checked": 16,
+      "verified": 15
     }
   }
 }
