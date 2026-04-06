@@ -461,31 +461,103 @@
 [2026-04-05 20:13:02] VARIATION | Feeder | Claude error: No module named 'anthropic' — using original body
 [2026-04-05 20:13:03] FEEDER | car-wont-start-in-cold-weather-what-to-do | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-in-cold-weather-what-to-do-guide/
 [2026-04-05 20:13:03] === SYNDICATE DONE: car-wont-start-in-cold-weather-what-to-do | 1/4 succeeded | 1 attempted | 0 failed ===
-[2026-04-06 03:49:58] BACKLOG: Posts total=73  synced=11  backlog=61  (today's posts excluded from backlog)
-[2026-04-06 03:49:58] BACKLOG: Syndicating backlog: towing-cost-houston-texas  (post date=2026-02-24)
-[2026-04-06 03:49:58] === SYNDICATE START: towing-cost-houston-texas ===
-[2026-04-06 03:49:58] PREFLIGHT | title: Towing Cost in Houston Texas: What You'll Pay and What to Do
-[2026-04-06 03:49:58] PREFLIGHT | date: 2026-02-24T08:47:00+00:00
-[2026-04-06 03:49:58] PREFLIGHT | timestamp: 2026-04-06 03:49:58
-[2026-04-06 03:49:58] PREFLIGHT | DEVTO:   configured
-[2026-04-06 03:49:58] PREFLIGHT | TUMBLR:  configured
-[2026-04-06 03:49:58] PREFLIGHT | BLOGGER: configured
-[2026-04-06 03:49:58] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
-[2026-04-06 03:49:58] BACKLINK | towing-cost-houston-texas | missing — injecting before syndication
-[2026-04-06 03:49:58] DEVTO | towing-cost-houston-texas | START
-[2026-04-06 03:49:59] DEVTO | towing-cost-houston-texas | SUCCESS | https://dev.to/towwiththeflowyoo/towing-cost-in-houston-texas-what-youll-pay-and-what-to-do-586n
-[2026-04-06 03:49:59] --- waiting 60s before next platform ---
-[2026-04-06 03:50:59] TUMBLR | towing-cost-houston-texas | START
-[2026-04-06 03:50:59] TUMBLR | towing-cost-houston-texas | SUCCESS | https://towwiththeflow.tumblr.com/post/813115595071553536
-[2026-04-06 03:50:59] --- waiting 60s before next platform ---
-[2026-04-06 03:51:59] BLOGGER | towing-cost-houston-texas | START
-[2026-04-06 03:51:59] BLOGGER | towing-cost-houston-texas | step 1/3: refreshing access token
-[2026-04-06 03:51:59] BLOGGER | towing-cost-houston-texas | token refresh failed: invalid_grant: Token has been expired or revoked. [refresh token is expired or revoked — needs new OAuth consent flow]
-[2026-04-06 03:51:59] BLOGGER | towing-cost-houston-texas | FAIL | ERROR: token refresh failed — invalid_grant: Token has been expired or revoked. [refresh token is expired or revoked — needs new OAuth consent flow]
-[2026-04-06 03:51:59] --- waiting 60s before next platform ---
-[2026-04-06 03:52:59] FEEDER | towing-cost-houston-texas | START
-[2026-04-06 03:53:00] FEEDER | towing-cost-houston-texas | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-houston-texas-guide/
-[2026-04-06 03:53:00] === SYNDICATE DONE: towing-cost-houston-texas | 3/4 succeeded | 4 attempted | 1 failed ===
-[2026-04-06 03:53:00] SYNCED | towing-cost-houston-texas marked in synced-posts.txt
-[2026-04-06 03:53:00] BACKLOG: Backlog run complete: 3/4 succeeded for towing-cost-houston-texas
-[2026-04-06 03:53:00] BACKLOG: Total progress: 12/73 posts synced
+[2026-04-05 20:20:42] === SYNDICATE START: car-wont-start-in-cold-weather-what-to-do ===
+[2026-04-05 20:20:42] PREFLIGHT | title: Car Won't Start in Cold Weather: What To Do
+[2026-04-05 20:20:42] PREFLIGHT | date: 2026-02-24
+[2026-04-05 20:20:42] PREFLIGHT | timestamp: 2026-04-05 20:20:42
+[2026-04-05 20:20:42] PREFLIGHT | DEVTO:   MISSING — will SKIP
+[2026-04-05 20:20:42] PREFLIGHT | TUMBLR:  MISSING — will SKIP
+[2026-04-05 20:20:42] PREFLIGHT | BLOGGER: configured
+[2026-04-05 20:20:42] PREFLIGHT | FEEDER:  MISSING — will SKIP
+[2026-04-05 20:20:42] BACKLINK | car-wont-start-in-cold-weather-what-to-do | missing — injecting before syndication
+[2026-04-05 20:20:42] DEVTO | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:20:42] DEVTO | car-wont-start-in-cold-weather-what-to-do | SKIP | SKIP: no DEVTO_API_KEY
+[2026-04-05 20:20:42] TUMBLR | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:20:42] TUMBLR | car-wont-start-in-cold-weather-what-to-do | SKIP | SKIP: missing Tumblr OAuth credentials
+[2026-04-05 20:20:42] BLOGGER | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:20:42] BLOGGER | car-wont-start-in-cold-weather-what-to-do | step 1/3: refreshing access token
+[2026-04-05 20:20:42] BLOGGER | car-wont-start-in-cold-weather-what-to-do | token refresh failed: network error: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+[2026-04-05 20:20:42] BLOGGER | car-wont-start-in-cold-weather-what-to-do | FAIL | ERROR: token refresh failed — network error: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+[2026-04-05 20:20:42] --- waiting 60s before next platform ---
+[2026-04-05 20:21:42] FEEDER | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:21:42] FEEDER | car-wont-start-in-cold-weather-what-to-do | SKIP | SKIP: no feeder token set (FEEDER_TRIGGER_TOKEN preferred)
+[2026-04-05 20:21:42] === SYNDICATE DONE: car-wont-start-in-cold-weather-what-to-do | 0/4 succeeded | 1 attempted | 1 failed ===
+[2026-04-05 20:21:42] NOT SYNCED | car-wont-start-in-cold-weather-what-to-do — 0 platforms succeeded, not marking as synced
+[2026-04-05 20:25:46] === SYNDICATE START: car-wont-start-in-cold-weather-what-to-do ===
+[2026-04-05 20:25:46] PREFLIGHT | title: Car Won't Start in Cold Weather: What To Do
+[2026-04-05 20:25:46] PREFLIGHT | date: 2026-02-24
+[2026-04-05 20:25:46] PREFLIGHT | timestamp: 2026-04-05 20:25:46
+[2026-04-05 20:25:46] PREFLIGHT | DEVTO:   MISSING — will SKIP
+[2026-04-05 20:25:46] PREFLIGHT | TUMBLR:  MISSING — will SKIP
+[2026-04-05 20:25:46] PREFLIGHT | BLOGGER: configured
+[2026-04-05 20:25:46] PREFLIGHT | FEEDER:  MISSING — will SKIP
+[2026-04-05 20:25:46] BACKLINK | car-wont-start-in-cold-weather-what-to-do | missing — injecting before syndication
+[2026-04-05 20:25:46] DEVTO | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:25:46] DEVTO | car-wont-start-in-cold-weather-what-to-do | SKIP | SKIP: no DEVTO_API_KEY
+[2026-04-05 20:25:46] TUMBLR | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:25:46] TUMBLR | car-wont-start-in-cold-weather-what-to-do | SKIP | SKIP: missing Tumblr OAuth credentials
+[2026-04-05 20:25:46] BLOGGER | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:25:46] BLOGGER | car-wont-start-in-cold-weather-what-to-do | step 1/3: refreshing access token
+[2026-04-05 20:25:47] BLOGGER | car-wont-start-in-cold-weather-what-to-do | step 2/3: converting markdown to HTML
+[2026-04-05 20:25:47] VARIATION | Blogger | Claude error: No module named 'anthropic' — using original body
+[2026-04-05 20:25:47] BLOGGER | car-wont-start-in-cold-weather-what-to-do | step 3/3: posting to blog 8497274145791324308
+[2026-04-05 20:25:48] BLOGGER | car-wont-start-in-cold-weather-what-to-do | SUCCESS | https://denverroadsideguide.blogspot.com/2026/04/car-wont-start-in-cold-weather-what-to.html
+[2026-04-05 20:25:48] --- waiting 60s before next platform ---
+[2026-04-05 20:26:48] FEEDER | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:26:48] FEEDER | car-wont-start-in-cold-weather-what-to-do | SKIP | SKIP: no feeder token set (FEEDER_TRIGGER_TOKEN preferred)
+[2026-04-05 20:26:48] === SYNDICATE DONE: car-wont-start-in-cold-weather-what-to-do | 1/4 succeeded | 1 attempted | 0 failed ===
+[2026-04-05 20:38:58] === SYNDICATE START: car-wont-start-in-cold-weather-what-to-do ===
+[2026-04-05 20:38:58] PREFLIGHT | title: Car Won't Start in Cold Weather: What To Do
+[2026-04-05 20:38:58] PREFLIGHT | date: 2026-02-24
+[2026-04-05 20:38:58] PREFLIGHT | timestamp: 2026-04-05 20:38:58
+[2026-04-05 20:38:58] PREFLIGHT | DEVTO:   configured
+[2026-04-05 20:38:58] PREFLIGHT | TUMBLR:  MISSING — will SKIP
+[2026-04-05 20:38:58] PREFLIGHT | BLOGGER: MISSING — will SKIP
+[2026-04-05 20:38:58] PREFLIGHT | FEEDER:  MISSING — will SKIP
+[2026-04-05 20:38:58] BACKLINK | car-wont-start-in-cold-weather-what-to-do | missing — injecting before syndication
+[2026-04-05 20:38:58] DEVTO | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:38:58] VARIATION | Dev.to | Claude error: No module named 'anthropic' — using original body
+[2026-04-05 20:38:58] DEVTO | car-wont-start-in-cold-weather-what-to-do | FAIL | HTTP 422: {"error":"Canonical url has already been taken. Email support@dev.to for further details.","status":422}
+[2026-04-05 20:38:58] --- waiting 60s before next platform ---
+[2026-04-05 20:39:58] TUMBLR | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:39:58] TUMBLR | car-wont-start-in-cold-weather-what-to-do | SKIP | SKIP: missing Tumblr OAuth credentials
+[2026-04-05 20:39:58] --- waiting 60s before next platform ---
+[2026-04-05 20:40:58] BLOGGER | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:40:58] BLOGGER | car-wont-start-in-cold-weather-what-to-do | SKIP | SKIP: missing Blogger credentials: BLOGGER_CLIENT_ID, BLOGGER_CLIENT_SECRET, BLOGGER_REFRESH_TOKEN, BLOGGER_BLOG_ID
+[2026-04-05 20:40:58] --- waiting 60s before next platform ---
+[2026-04-05 20:41:58] FEEDER | car-wont-start-in-cold-weather-what-to-do | START
+[2026-04-05 20:41:58] FEEDER | car-wont-start-in-cold-weather-what-to-do | SKIP | SKIP: no feeder token set (FEEDER_TRIGGER_TOKEN preferred)
+[2026-04-05 20:41:58] === SYNDICATE DONE: car-wont-start-in-cold-weather-what-to-do | 0/4 succeeded | 1 attempted | 1 failed ===
+[2026-04-05 20:41:58] NOT SYNCED | car-wont-start-in-cold-weather-what-to-do — 0 platforms succeeded, not marking as synced
+[2026-04-05 21:28:12] === SYNDICATE START: tow-truck-damaged-my-car-who-pays ===
+[2026-04-05 21:28:12] PREFLIGHT | title: Tow Truck Damaged My Car: Who Pays for the Repairs?
+[2026-04-05 21:28:12] PREFLIGHT | date: 2026-04-05
+[2026-04-05 21:28:12] PREFLIGHT | timestamp: 2026-04-05 21:28:12
+[2026-04-05 21:28:12] PREFLIGHT | DEVTO:   configured
+[2026-04-05 21:28:12] PREFLIGHT | TUMBLR:  MISSING — will SKIP
+[2026-04-05 21:28:12] PREFLIGHT | BLOGGER: MISSING — will SKIP
+[2026-04-05 21:28:12] PREFLIGHT | FEEDER:  MISSING — will SKIP
+[2026-04-05 21:28:12] DEVTO | tow-truck-damaged-my-car-who-pays | START
+[2026-04-05 21:28:12] VARIATION | Dev.to | Claude error: No module named 'anthropic' — using original body
+[2026-04-05 21:28:13] DEVTO | tow-truck-damaged-my-car-who-pays | SUCCESS | https://dev.to/towwiththeflowyoo/tow-truck-damaged-my-car-who-pays-for-the-repairs-6hi
+[2026-04-05 21:28:13] --- waiting 60s before next platform ---
+[2026-04-05 21:29:13] TUMBLR | tow-truck-damaged-my-car-who-pays | START
+[2026-04-05 21:29:13] TUMBLR | tow-truck-damaged-my-car-who-pays | SKIP | SKIP: missing Tumblr OAuth credentials
+[2026-04-05 21:29:13] --- waiting 60s before next platform ---
+[2026-04-05 21:30:13] BLOGGER | tow-truck-damaged-my-car-who-pays | START
+[2026-04-05 21:30:13] BLOGGER | tow-truck-damaged-my-car-who-pays | SKIP | SKIP: missing Blogger credentials: BLOGGER_CLIENT_ID, BLOGGER_CLIENT_SECRET, BLOGGER_REFRESH_TOKEN, BLOGGER_BLOG_ID
+[2026-04-05 21:30:13] --- waiting 60s before next platform ---
+[2026-04-05 21:31:13] FEEDER | tow-truck-damaged-my-car-who-pays | START
+[2026-04-05 21:31:13] FEEDER | tow-truck-damaged-my-car-who-pays | SKIP | SKIP: no feeder token set (FEEDER_TRIGGER_TOKEN preferred)
+[2026-04-05 21:31:13] === SYNDICATE DONE: tow-truck-damaged-my-car-who-pays | 1/4 succeeded | 1 attempted | 0 failed ===
+[2026-04-05 21:31:13] SYNCED | tow-truck-damaged-my-car-who-pays marked in synced-posts.txt
+[2026-04-05 23:18:05] BACKLINK | towing-cost-houston-texas | missing — injecting before syndication
+[2026-04-05 23:18:05] === BLOGGER-ONLY START: towing-cost-houston-texas ===
+[2026-04-05 23:18:05] BLOGGER | towing-cost-houston-texas | START
+[2026-04-05 23:18:05] BLOGGER | towing-cost-houston-texas | step 1/3: refreshing access token
+[2026-04-05 23:18:05] BLOGGER | towing-cost-houston-texas | step 2/3: converting markdown to HTML
+[2026-04-05 23:18:06] VARIATION | Blogger | Claude error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-haiku-4-20250514'}, 'request_id': 'req_011CZmxA6M6EAeH3EBBqYkAX'} — using original body
+[2026-04-05 23:18:06] BLOGGER | towing-cost-houston-texas | step 3/3: posting to blog 8497274145791324308
+[2026-04-05 23:18:07] BLOGGER | towing-cost-houston-texas | SUCCESS | https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html
+[2026-04-05 23:18:07] === BLOGGER-ONLY DONE: towing-cost-houston-texas | 1/1 succeeded ===
+[2026-04-05 23:18:07] SYNCED | towing-cost-houston-texas marked in synced-posts.txt
