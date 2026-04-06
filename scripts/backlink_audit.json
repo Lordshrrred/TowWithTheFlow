@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T05:09:58.345814+00:00",
+  "generated_at": "2026-04-06T05:20:03.569927+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -96,7 +96,6 @@
     "car-wont-start-in-cold-weather-what-to-do": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-wont-start-in-cold-weather-what-to.html",
         "verified": true
       },
@@ -121,6 +120,13 @@
         "reason": "no_url",
         "url": "",
         "verified": null
+      }
+    },
+    "tow-truck-damaged-my-car-who-pays": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/tow-truck-damaged-my-car-who-pays-for-the-repairs-6hi",
+        "verified": true
       }
     },
     "tow-truck-price-50-miles-from-city": {
@@ -166,19 +172,9 @@
       }
     },
     "towing-cost-houston-texas": {
-      "dev": {
+      "blog": {
         "reason": "ok",
-        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-houston-texas-what-youll-pay-and-what-to-do-586n",
-        "verified": true
-      },
-      "feeder": {
-        "reason": "ok",
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-houston-texas-guide/",
-        "verified": true
-      },
-      "tumblr": {
-        "reason": "ok",
-        "url": "https://towwiththeflow.tumblr.com/post/813115595071553536",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html",
         "verified": true
       }
     },
@@ -200,20 +196,20 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 4,
-      "verified": 3
+      "checked": 5,
+      "verified": 4
     },
     "dev": {
       "checked": 3,
       "verified": 3
     },
     "feeder": {
-      "checked": 3,
-      "verified": 3
+      "checked": 2,
+      "verified": 2
     },
     "tumblr": {
-      "checked": 12,
-      "verified": 11
+      "checked": 11,
+      "verified": 10
     }
   }
 }
