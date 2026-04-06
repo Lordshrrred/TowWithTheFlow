@@ -661,8 +661,11 @@ function renderMatrix({sortedSlugs,logMap,feederSet,postDateMap}){
     const activeCells=ACTIVE_PLATS.map(p=>{
       const d=plats[p];
       if(!d)return`<td class="matrix-cell"><span class="cell-btn na">—</span></td>`;
-      if(d.status==="success"){score++;return`<td class="matrix-cell">${d.url?`<a id="plat-${slug}-${p}" class="cell-btn success bl-unknown" href="${d.url}" target="_blank" rel="noopener" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</a>`:`<span id="plat-${slug}-${p}" class="cell-btn success bl-unknown" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</span>`}</td>`;}
-      return`<td class="matrix-cell"><span class="cell-btn fail">✗</span></td>`;
+      if(d.status==="success"){
+        score++;
+        return`<td class="matrix-cell">${d.url?`<a id="plat-${slug}-${p}" class="cell-btn success bl-unknown" href="${d.url}" target="_blank" rel="noopener" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</a>`:`<span id="plat-${slug}-${p}" class="cell-btn success bl-unknown" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</span>`}</td>`;
+      }
+      return`<td class="matrix-cell"><span id="plat-${slug}-${p}" class="cell-btn fail" title="${PLAT_LABEL[p]} failed in log. Checking for live recovery…">✗</span></td>`;
     }).join("");
     const sc=score>=4?"var(--green)":score>=2?"var(--amber)":"var(--text-muted)";
     const firstDate=postDateMap[slug]||"";
@@ -769,11 +772,48 @@ async function checkSlugBacklinks(slug, platData, feederSet){
     results.blog = await checkPublicPageForBacklink(platData.blog.url);
   }else if(platData.blog?.status==="success"){
     results.blog = {verified:null,anchor:"",reason:"missing URL"};
+  }else{
+    // Recover-after-fact: if log says fail/stale, discover live Blogger URL and verify backlink.
+    const recovered = await recoverBloggerLive(slug);
+    if(recovered) results.blog = recovered;
   }
 
   BL_CACHE[slug]=results;
   updatePlatformBacklinkMarkers(slug, results, platData);
   updateBacklinkCell(slug, results, platData);
+}
+
+async function recoverBloggerLive(slug){
+  const sitemapUrl = "https://denverroadsideguide.blogspot.com/sitemap.xml";
+  let xml = await ftext(sitemapUrl);
+  if(!xml) xml = await ftext(`https://r.jina.ai/http://${sitemapUrl.replace(/^https?:\/\//,"")}`);
+  if(!xml) return null;
+
+  const locs = Array.from(xml.matchAll(/<loc>(https?:\/\/[^<]+)<\/loc>/g)).map(m=>m[1]);
+  if(!locs.length) return null;
+
+  const slugParts = slug.split("-").filter(Boolean);
+  const coreParts = slugParts.filter(w=>!["what","to","do","the","a","an","in","for","and","or","with"].includes(w));
+  const candidates = locs
+    .filter(u=>u.includes("denverroadsideguide.blogspot.com/20"))
+    .map(u=>{
+      const low=u.toLowerCase();
+      let score = 0;
+      if(low.includes(slug)) score += 8;
+      for(const w of coreParts.slice(0,8)) if(low.includes(w)) score += 1;
+      return {url:u,score};
+    })
+    .filter(x=>x.score>0)
+    .sort((a,b)=>b.score-a.score)
+    .slice(0,8);
+
+  for(const c of candidates){
+    const chk = await checkPublicPageForBacklink(c.url);
+    if(chk?.verified){
+      return {...chk, recovered_live:true};
+    }
+  }
+  return null;
 }
 
 async function checkPublicPageForBacklink(url){
@@ -828,21 +868,43 @@ async function checkFeeder(slug){
 
 function updatePlatformBacklinkMarkers(slug, results, platData){
   for(const p of ACTIVE_PLATS){
-    const pr=platData[p];
-    if(!pr||pr.status!=="success") continue;
     const el=document.getElementById(`plat-${slug}-${p}`);
     if(!el) continue;
     const br=results[p];
+    const pr=platData[p];
+    const hadSuccess=!!(pr&&pr.status==="success");
+    const recoveredLive=!!(br&&br.recovered_live&&br.verified);
+
     el.classList.remove("bl-ok","bl-bad","bl-unknown");
+    if(!hadSuccess && !recoveredLive){
+      continue; // keep original fail/na state
+    }
+
     if(!br || br.verified===null){
       el.classList.add("bl-unknown");
-      el.title=`${PLAT_LABEL[p]} syndicated. Backlink: unknown`;
+      el.title=`${PLAT_LABEL[p]} ${hadSuccess?"syndicated":"live-recovered"}. Backlink: unknown`;
     }else if(br.verified){
+      if(el.classList.contains("fail")){
+        el.classList.remove("fail");
+        el.classList.add("success");
+        el.textContent="✓";
+      }
       el.classList.add("bl-ok");
-      el.title=`${PLAT_LABEL[p]} syndicated. Backlink: verified`;
+      el.title=`${PLAT_LABEL[p]} ${recoveredLive?"live-recovered":"syndicated"}. Backlink: verified`;
+      if(recoveredLive && br.url && el.tagName==="SPAN"){
+        const a=document.createElement("a");
+        a.id=el.id;
+        a.className=el.className;
+        a.href=br.url;
+        a.target="_blank";
+        a.rel="noopener";
+        a.textContent="✓";
+        a.title=el.title;
+        el.replaceWith(a);
+      }
     }else{
       el.classList.add("bl-bad");
-      el.title=`${PLAT_LABEL[p]} syndicated. Backlink: missing`;
+      el.title=`${PLAT_LABEL[p]} ${hadSuccess?"syndicated":"live-recovered"}. Backlink: missing`;
     }
   }
 }
@@ -856,9 +918,11 @@ function updateBacklinkCell(slug, results, platData){
   const details=[];
 
   for(const p of ACTIVE_PLATS){
-    const pr=platData[p]; if(!pr||pr.status!=="success") continue;
-    total++;
+    const pr=platData[p];
     const br=results[p];
+    const include = !!(pr&&pr.status==="success") || !!(br&&br.recovered_live);
+    if(!include) continue;
+    total++;
     if(!br){ unknown++; details.push(`${PLAT_LABEL[p]}:?`); continue; }
     if(br.verified===null){ unknown++; details.push(`${PLAT_LABEL[p]}:?`); continue; }
     if(br.verified){ verified++; details.push(`${PLAT_LABEL[p]}:✓`); }
@@ -884,7 +948,9 @@ function updateBacklinkHealthCard(logMap, feederSet){
   for(const[slug,cache]of Object.entries(BL_CACHE)){
     const platData=logMap[slug]||{};
     for(const p of ACTIVE_PLATS){
-      if(!platData[p]||platData[p].status!=="success") continue;
+      const fromLog = !!(platData[p]&&platData[p].status==="success");
+      const recovered = !!(cache[p]&&cache[p].recovered_live);
+      if(!fromLog && !recovered) continue;
       perPlat[p].t++;
       totalChecked++;
       const br=cache[p];
