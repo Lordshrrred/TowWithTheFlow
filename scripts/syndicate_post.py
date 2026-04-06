@@ -12,6 +12,8 @@ Rules enforced:
   - Content variation per platform via Claude API
 """
 
+from __future__ import annotations
+
 import os
 import sys
 import re
@@ -28,21 +30,49 @@ import requests
 ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
-DEVTO_API_KEY         = os.getenv("DEVTO_API_KEY", "")
-TUMBLR_CONSUMER_KEY   = os.getenv("TUMBLR_CONSUMER_KEY", "")
-TUMBLR_CONSUMER_SECRET= os.getenv("TUMBLR_CONSUMER_SECRET", "")
-TUMBLR_TOKEN          = os.getenv("TUMBLR_TOKEN", "")
-TUMBLR_TOKEN_SECRET   = os.getenv("TUMBLR_TOKEN_SECRET", "")
-TUMBLR_BLOG           = os.getenv("TUMBLR_BLOG_NAME", "")
-BLOGGER_CLIENT_ID     = os.getenv("BLOGGER_CLIENT_ID", "")
-BLOGGER_CLIENT_SECRET = os.getenv("BLOGGER_CLIENT_SECRET", "")
-BLOGGER_REFRESH_TOKEN = os.getenv("BLOGGER_REFRESH_TOKEN", "")
-BLOGGER_BLOG_ID       = os.getenv("BLOGGER_BLOG_ID", "")
-GITHUB_TOKEN          = os.getenv("GITHUB_TOKEN", "")
-FEEDER_TRIGGER_TOKEN  = os.getenv("FEEDER_TRIGGER_TOKEN", "") or GITHUB_TOKEN  # PAT with cross-repo write access
-ANTHROPIC_API_KEY     = os.getenv("ANTHROPIC_API_KEY", "")
-GMAIL_ADDRESS         = os.getenv("GMAIL_ADDRESS", "")
-GMAIL_APP_PASSWORD    = os.getenv("GMAIL_APP_PASSWORD", "")
+def env_clean(key: str, default: str = "") -> str:
+    """Read env var and normalize accidental quoting/whitespace from pasted secrets."""
+    val = os.getenv(key, default)
+    if not isinstance(val, str):
+        return default
+    val = val.strip()
+    if len(val) >= 2 and (
+        (val[0] == '"' and val[-1] == '"') or
+        (val[0] == "'" and val[-1] == "'")
+    ):
+        val = val[1:-1].strip()
+    return val
+
+
+DEVTO_API_KEY         = env_clean("DEVTO_API_KEY")
+TUMBLR_CONSUMER_KEY   = env_clean("TUMBLR_CONSUMER_KEY")
+TUMBLR_CONSUMER_SECRET= env_clean("TUMBLR_CONSUMER_SECRET")
+TUMBLR_TOKEN          = env_clean("TUMBLR_TOKEN")
+TUMBLR_TOKEN_SECRET   = env_clean("TUMBLR_TOKEN_SECRET")
+TUMBLR_BLOG           = env_clean("TUMBLR_BLOG_NAME")
+BLOGGER_CLIENT_ID     = env_clean("BLOGGER_CLIENT_ID")
+BLOGGER_CLIENT_SECRET = env_clean("BLOGGER_CLIENT_SECRET")
+BLOGGER_REFRESH_TOKEN = env_clean("BLOGGER_REFRESH_TOKEN")
+BLOGGER_BLOG_ID       = env_clean("BLOGGER_BLOG_ID")
+GITHUB_TOKEN          = env_clean("GITHUB_TOKEN")
+
+# FEEDER token precedence:
+# 1) FEEDER_TRIGGER_TOKEN (preferred)
+# 2) FEEDER_GITHUB_TOKEN / FEEDER_PAT (legacy aliases)
+# 3) GITHUB_TOKEN fallback (may fail for cross-repo writes in Actions)
+FEEDER_TOKEN_SOURCE   = ""
+for _k in ("FEEDER_TRIGGER_TOKEN", "FEEDER_GITHUB_TOKEN", "FEEDER_PAT", "GITHUB_TOKEN"):
+    _v = env_clean(_k)
+    if _v:
+        FEEDER_TRIGGER_TOKEN = _v
+        FEEDER_TOKEN_SOURCE = _k
+        break
+else:
+    FEEDER_TRIGGER_TOKEN = ""
+
+ANTHROPIC_API_KEY     = env_clean("ANTHROPIC_API_KEY")
+GMAIL_ADDRESS         = env_clean("GMAIL_ADDRESS")
+GMAIL_APP_PASSWORD    = env_clean("GMAIL_APP_PASSWORD")
 
 BASE_URL       = "https://towwiththeflow.com"
 POSTS_DIR      = ROOT / "content" / "posts"
@@ -359,7 +389,7 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
 def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     token = FEEDER_TRIGGER_TOKEN
     if not token:
-        return False, "SKIP: no FEEDER_TRIGGER_TOKEN (or GITHUB_TOKEN) set"
+        return False, "SKIP: no feeder token set (FEEDER_TRIGGER_TOKEN preferred)"
 
     canonical = f"{BASE_URL}/{slug}/"
     varied_body = get_variation(body, "Feeder")
@@ -404,6 +434,18 @@ def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         r = requests.put(api_url, headers=headers, json=payload, timeout=30)
         if r.status_code in (200, 201):
             return True, feeder_url
+        if r.status_code == 401:
+            return False, (
+                "HTTP 401: feeder token rejected (bad/expired token). "
+                "Set FEEDER_TRIGGER_TOKEN to a valid PAT with contents:write on "
+                f"{FEEDER_OWNER}/{FEEDER_REPO}."
+            )
+        if r.status_code == 403:
+            return False, (
+                "HTTP 403: token lacks permission for feeder repo. "
+                "Use FEEDER_TRIGGER_TOKEN PAT with contents:write on "
+                f"{FEEDER_OWNER}/{FEEDER_REPO}."
+            )
         return False, f"HTTP {r.status_code}: {r.text[:300]}"
     except Exception as e:
         return False, str(e)
@@ -467,10 +509,10 @@ def run_syndication(slug: str):
     log(f"PREFLIGHT | TUMBLR:  {'configured' if tumblr_ok else 'MISSING — will SKIP'}")
     blogger_ok = all([BLOGGER_CLIENT_ID, BLOGGER_CLIENT_SECRET, BLOGGER_REFRESH_TOKEN, BLOGGER_BLOG_ID])
     log(f"PREFLIGHT | BLOGGER: {'configured' if blogger_ok else 'MISSING — will SKIP'}")
-    if FEEDER_TRIGGER_TOKEN and FEEDER_TRIGGER_TOKEN != GITHUB_TOKEN:
-        log(f"PREFLIGHT | FEEDER:  configured (dedicated PAT)")
+    if FEEDER_TRIGGER_TOKEN and FEEDER_TOKEN_SOURCE != "GITHUB_TOKEN":
+        log(f"PREFLIGHT | FEEDER:  configured (source={FEEDER_TOKEN_SOURCE}, dedicated token)")
     elif FEEDER_TRIGGER_TOKEN:
-        log(f"PREFLIGHT | FEEDER:  configured (GITHUB_TOKEN — may lack cross-repo write)")
+        log(f"PREFLIGHT | FEEDER:  configured (source=GITHUB_TOKEN — may lack cross-repo write)")
     else:
         log(f"PREFLIGHT | FEEDER:  MISSING — will SKIP")
 
