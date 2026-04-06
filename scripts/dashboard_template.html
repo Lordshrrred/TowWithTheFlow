@@ -488,6 +488,17 @@ let _tt; function showToast(m,d=3500){ const t=document.getElementById("toast");
 function ghHdrs(){ const h={"Accept":"application/vnd.github.v3+json"}; if(GH_TOKEN&&GH_TOKEN!=="__GITHUB_TOKEN__")h["Authorization"]=`token ${GH_TOKEN}`; return h; }
 async function ftext(url){ try{const r=await fetch(url);return r.ok?await r.text():"";}catch{return "";} }
 async function fjson(url,opts={}){ try{const r=await fetch(url,opts);return r.ok?await r.json():null;}catch{return null;} }
+async function ftextCors(url){
+  const direct = await ftext(url);
+  if(direct) return direct;
+  try{
+    const proxied = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+    const r = await fetch(proxied);
+    return r.ok ? await r.text() : "";
+  }catch{
+    return "";
+  }
+}
 
 // ── Log parser ────────────────────────────────────────────────────────────────
 function parseLog(txt){
@@ -785,8 +796,7 @@ async function checkSlugBacklinks(slug, platData, feederSet){
 
 async function recoverBloggerLive(slug){
   const sitemapUrl = "https://denverroadsideguide.blogspot.com/sitemap.xml";
-  let xml = await ftext(sitemapUrl);
-  if(!xml) xml = await ftext(`https://r.jina.ai/http://${sitemapUrl.replace(/^https?:\/\//,"")}`);
+  const xml = await ftextCors(sitemapUrl);
   if(!xml) return null;
 
   const locs = Array.from(xml.matchAll(/<loc>(https?:\/\/[^<]+)<\/loc>/g)).map(m=>m[1]);
@@ -818,11 +828,8 @@ async function recoverBloggerLive(slug){
 
 async function checkPublicPageForBacklink(url){
   try{
-    // Direct browser fetch can fail on CORS; use jina mirror fallback.
-    let txt=await ftext(url);
-    if(!txt || !txt.includes("towwiththeflow.com")){
-      txt=await ftext(`https://r.jina.ai/http://${url.replace(/^https?:\/\//,"")}`);
-    }
+    // Browser CORS-safe fetch.
+    let txt=await ftextCors(url);
     if(!txt) return{verified:null,anchor:"",reason:"unreadable"};
     const hasLink=/towwiththeflow\.com/i.test(txt);
     const anchorM=txt.match(/href="https?:\/\/towwiththeflow\.com[^"]*"[^>]*>([^<]+)</i);
