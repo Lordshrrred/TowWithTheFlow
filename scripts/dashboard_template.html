@@ -531,6 +531,20 @@ function fetchJsonp(url, timeoutMs=15000){
   });
 }
 
+function normalizePlatformUrl(platform, slug, url){
+  if(!url) return "";
+  let out = String(url).trim();
+  if(platform==="tumblr"){
+    const m = out.match(/^https?:\/\/www\.tumblr\.com\/blog\/([^\/]+)\/(\d+)(?:\/.*)?$/i);
+    if(m){
+      const blog = m[1];
+      const pid = m[2];
+      out = `https://www.tumblr.com/${blog}/${pid}/${slug}`;
+    }
+  }
+  return out;
+}
+
 // ── Log parser ────────────────────────────────────────────────────────────────
 function parseLog(txt){
   const map={};
@@ -540,8 +554,8 @@ function parseLog(txt){
     const [,date,platRaw,slug,statusRaw]=m;
     const plat=LOG_PLAT_MAP[platRaw]; if(!plat) continue;
     const status=statusRaw==="SUCCESS"?"success":"fail";
-    const um=line.match(/url=(https?:\/\/[^\s|]+)/);
-    const url=um?um[1]:"";
+    const um=line.match(/url=(https?:\/\/[^\s|]+)/i) || line.match(/(https?:\/\/[^\s|]+)/i);
+    const url=normalizePlatformUrl(plat, slug, um?um[1]:"");
     if(!map[slug])map[slug]={};
     map[slug][plat]={status,url,date};
   }
@@ -684,7 +698,7 @@ function renderRecent({logMap}){
     const badges=ACTIVE_PLATS.map(p=>{
       const d=plats[p];
       if(!d)return`<span id="recent-${slug}-${p}" class="plat-badge na">${PLAT_LABEL[p]} —</span>`;
-      if(d.status==="success"&&d.url)return`<a id="recent-${slug}-${p}" class="plat-badge success" href="${d.url}" target="_blank" rel="noopener" title="Open on ${PLAT_LABEL[p]}">${PLAT_LABEL[p]} ✓</a>`;
+      if(d.status==="success"&&d.url)return`<a id="recent-${slug}-${p}" class="plat-badge success" href="${normalizePlatformUrl(p, slug, d.url)}" target="_blank" rel="noopener" title="Open on ${PLAT_LABEL[p]}">${PLAT_LABEL[p]} ✓</a>`;
       if(d.status==="success")return`<span id="recent-${slug}-${p}" class="plat-badge success">${PLAT_LABEL[p]} ✓</span>`;
       return`<span id="recent-${slug}-${p}" class="plat-badge fail">${PLAT_LABEL[p]} ✗</span>`;
     }).join("");
@@ -708,7 +722,7 @@ function renderMatrix({sortedSlugs,logMap,feederSet,postDateMap}){
       if(!d)return`<td class="matrix-cell"><span class="cell-btn na">—</span></td>`;
       if(d.status==="success"){
         successCount++;
-        return`<td class="matrix-cell">${d.url?`<a id="plat-${slug}-${p}" class="cell-btn success bl-unknown" href="${d.url}" target="_blank" rel="noopener" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</a>`:`<span id="plat-${slug}-${p}" class="cell-btn success bl-unknown" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</span>`}</td>`;
+        return`<td class="matrix-cell">${d.url?`<a id="plat-${slug}-${p}" class="cell-btn success bl-unknown" href="${normalizePlatformUrl(p, slug, d.url)}" target="_blank" rel="noopener" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</a>`:`<span id="plat-${slug}-${p}" class="cell-btn success bl-unknown" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</span>`}</td>`;
       }
       return`<td class="matrix-cell"><span id="plat-${slug}-${p}" class="cell-btn fail" title="${PLAT_LABEL[p]} failed in log. Checking for live recovery…">✗</span></td>`;
     }).join("");
@@ -968,7 +982,7 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
     const pr=platData[p];
     const hadSuccess=!!(pr&&pr.status==="success");
     const recoveredLive=!!(br&&br.recovered_live&&br.verified);
-    const targetUrl=(br&&br.url)|| (pr&&pr.url) || "";
+    const targetUrl=normalizePlatformUrl(p, slug, (br&&br.url)|| (pr&&pr.url) || "");
 
     // Make matrix green badges clickable whenever we have a destination URL.
     if(targetUrl && el.tagName==="SPAN" && el.classList.contains("success")){
@@ -982,6 +996,9 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
       a.title=el.title||`Open on ${PLAT_LABEL[p]}`;
       el.replaceWith(a);
       el=a;
+    }
+    if(targetUrl && el.tagName==="A" && el.getAttribute("href")!==targetUrl){
+      el.setAttribute("href", targetUrl);
     }
 
     el.classList.remove("bl-ok","bl-bad","bl-unknown");
@@ -1009,24 +1026,28 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
         const a=document.createElement("a");
         a.id=el.id;
         a.className=el.className;
-        a.href=br.url;
+        a.href=normalizePlatformUrl(p, slug, br.url);
         a.target="_blank";
         a.rel="noopener";
         a.textContent="✓";
         a.title=el.title;
         el.replaceWith(a);
+      }else if(br.url && el.tagName==="A"){
+        el.setAttribute("href", normalizePlatformUrl(p, slug, br.url));
       }
       if(recentEl){
         if(recentEl.tagName==="SPAN" && br.url){
           const a=document.createElement("a");
           a.id=recentEl.id;
           a.className="plat-badge success";
-          a.href=br.url;
+          a.href=normalizePlatformUrl(p, slug, br.url);
           a.target="_blank";
           a.rel="noopener";
           a.textContent=`${PLAT_LABEL[p]} ✓`;
           a.title=`Open on ${PLAT_LABEL[p]} (${recoveredLive?"live-recovered":"verified"})`;
           recentEl.replaceWith(a);
+        }else if(recentEl.tagName==="A" && br.url){
+          recentEl.setAttribute("href", normalizePlatformUrl(p, slug, br.url));
         }else{
           recentEl.classList.remove("fail","na");
           recentEl.classList.add("success");
