@@ -30,8 +30,10 @@ def log(msg: str) -> None:
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{ts}] BLOGGER_HEALTH | {msg}\n"
     print(line, end="", flush=True)
-    with LOG_FILE.open("a", encoding="utf-8") as f:
-        f.write(line)
+    # Optional: write to syndication_log only when explicitly enabled.
+    if os.getenv("BLOGGER_HEALTH_LOG_TO_FILE", "0") == "1":
+        with LOG_FILE.open("a", encoding="utf-8") as f:
+            f.write(line)
 
 
 def load_state() -> dict:
