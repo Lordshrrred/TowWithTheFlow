@@ -1,0 +1,47 @@
+name: Backlink Audit
+
+on:
+  schedule:
+    - cron: '15 */4 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/syndication_log.txt
+      - scripts/audit_backlinks.py
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run backlink audit
+        run: python scripts/audit_backlinks.py
+
+      - name: Commit audit json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/backlink_audit.json
+          if git diff --staged --quiet; then
+            echo "No backlink audit changes"
+            exit 0
+          fi
+          git commit -m "Auto: refresh backlink audit $(date +%Y-%m-%d)"
+          git push

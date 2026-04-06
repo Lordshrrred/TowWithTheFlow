@@ -566,13 +566,14 @@ async function buildPostDateMap(slugs){
 
 // ── Load all ──────────────────────────────────────────────────────────────────
 async function loadDashboard(){
-  const [logTxt,syncedTxt,kwTxt,ghTree,feederTree,deployInfo] = await Promise.all([
+  const [logTxt,syncedTxt,kwTxt,ghTree,feederTree,deployInfo,auditJson] = await Promise.all([
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/syndication_log.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/synced-posts.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/keywords.txt`),
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}),
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${FEEDER_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}),
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/commits/main`,{headers:ghHdrs()}),
+    fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/backlink_audit.json`),
   ]);
 
   const logMap     = parseLog(logTxt);
@@ -598,7 +599,9 @@ async function loadDashboard(){
 
   document.getElementById("last-refreshed").textContent="Refreshed: "+new Date().toLocaleTimeString();
 
-  // Async backlink verification — runs after first paint
+  // Apply server-side backlink audit first (authoritative), then browser fallback checks.
+  applyServerAudit(auditJson, logMap);
+  updateBacklinkHealthCard(logMap, feederSet);
   runBacklinkChecks(logMap, feederSet);
 }
 
@@ -774,7 +777,17 @@ let BLOGGER_FEED_CACHE = null;
 async function runBacklinkChecks(logMap, feederSet){
   // Get all slugs that have at least one success
   const slugsToCheck = Object.entries(logMap)
-    .filter(([,p])=>Object.values(p).some(v=>v.status==="success"))
+    .filter(([slug,p])=>{
+      const hasSuccess = Object.values(p).some(v=>v.status==="success") || feederSet?.has(slug);
+      if(!hasSuccess) return false;
+      const cached = BL_CACHE[slug] || {};
+      return ACTIVE_PLATS.some(pl=>{
+        const fromLog = (p[pl]?.status==="success") || (pl==="feeder" && feederSet?.has(slug));
+        if(!fromLog) return false;
+        const c = cached[pl];
+        return !c || c.verified===null;
+      });
+    })
     .map(([s])=>s);
 
   // Run checks in batches of 5 to avoid hammering APIs
@@ -787,29 +800,29 @@ async function runBacklinkChecks(logMap, feederSet){
 }
 
 async function checkSlugBacklinks(slug, platData, feederSet){
-  const results={};
+  const results={...(BL_CACHE[slug]||{})};
 
   // DEV.to — use public API: GET /api/articles/{username}/{devslug}
-  if(platData.dev?.status==="success"&&platData.dev?.url){
+  if((!results.dev || results.dev.verified===null) && platData.dev?.status==="success"&&platData.dev?.url){
     results.dev = await checkDevto(slug, platData.dev.url);
   }
 
   // Feeder — read via GitHub Raw
-  if(feederSet?.has(slug)||platData.feeder?.status==="success"){
+  if((!results.feeder || results.feeder.verified===null) && (feederSet?.has(slug)||platData.feeder?.status==="success")){
     results.feeder = await checkFeeder(slug);
   }
 
   // Tumblr + Blogger: verify backlink on public permalink HTML
-  if(platData.tumblr?.status==="success"&&platData.tumblr?.url){
+  if((!results.tumblr || results.tumblr.verified===null) && platData.tumblr?.status==="success"&&platData.tumblr?.url){
     results.tumblr = await checkPublicPageForBacklink(platData.tumblr.url, slug);
-  }else if(platData.tumblr?.status==="success"){
+  }else if((!results.tumblr || results.tumblr.verified===null) && platData.tumblr?.status==="success"){
     results.tumblr = {verified:null,anchor:"",reason:"missing URL"};
   }
-  if(platData.blog?.status==="success"&&platData.blog?.url){
+  if((!results.blog || results.blog.verified===null) && platData.blog?.status==="success"&&platData.blog?.url){
     results.blog = await checkPublicPageForBacklink(platData.blog.url, slug);
-  }else if(platData.blog?.status==="success"){
+  }else if((!results.blog || results.blog.verified===null) && platData.blog?.status==="success"){
     results.blog = {verified:null,anchor:"",reason:"missing URL"};
-  }else{
+  }else if(!results.blog){
     // Recover-after-fact: if log says fail/stale, discover live Blogger URL and verify backlink.
     const recovered = await recoverBloggerLive(slug);
     if(recovered) results.blog = recovered;
@@ -818,6 +831,22 @@ async function checkSlugBacklinks(slug, platData, feederSet){
   BL_CACHE[slug]=results;
   updatePlatformBacklinkMarkers(slug, results, platData);
   updateBacklinkCell(slug, results, platData);
+}
+
+function applyServerAudit(auditJson, logMap){
+  const slugs = auditJson?.slugs || {};
+  for(const [slug, plats] of Object.entries(slugs)){
+    const row = BL_CACHE[slug] || {};
+    for(const p of ACTIVE_PLATS){
+      if(plats[p]) row[p] = plats[p];
+    }
+    BL_CACHE[slug] = row;
+    if(document.getElementById(`bl-${slug}`)){
+      updatePlatformBacklinkMarkers(slug, row, logMap[slug] || {});
+      updateBacklinkCell(slug, row, logMap[slug] || {});
+    }
+  }
+  return slugs;
 }
 
 async function recoverBloggerLive(slug){
