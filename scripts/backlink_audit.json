@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T05:09:02.779552+00:00",
+  "generated_at": "2026-04-06T05:09:58.345814+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -96,6 +96,7 @@
     "car-wont-start-in-cold-weather-what-to-do": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-wont-start-in-cold-weather-what-to.html",
         "verified": true
       },
@@ -120,13 +121,6 @@
         "reason": "no_url",
         "url": "",
         "verified": null
-      }
-    },
-    "tow-truck-damaged-my-car-who-pays": {
-      "dev": {
-        "reason": "ok",
-        "url": "https://dev.to/towwiththeflowyoo/tow-truck-damaged-my-car-who-pays-for-the-repairs-6hi",
-        "verified": true
       }
     },
     "tow-truck-price-50-miles-from-city": {
@@ -171,6 +165,23 @@
         "verified": true
       }
     },
+    "towing-cost-houston-texas": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-houston-texas-what-youll-pay-and-what-to-do-586n",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-houston-texas-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://towwiththeflow.tumblr.com/post/813115595071553536",
+        "verified": true
+      }
+    },
     "what-happens-if-you-run-out-of-oil-while-driving": {
       "dev": {
         "reason": "no_url",
@@ -197,12 +208,12 @@
       "verified": 3
     },
     "feeder": {
-      "checked": 2,
-      "verified": 2
+      "checked": 3,
+      "verified": 3
     },
     "tumblr": {
-      "checked": 11,
-      "verified": 10
+      "checked": 12,
+      "verified": 11
     }
   }
 }
