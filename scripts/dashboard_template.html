@@ -158,7 +158,7 @@
     .cell-btn.success:hover { background:rgba(34,197,94,0.22); }
     .cell-btn.success.bl-ok { box-shadow: inset 0 0 0 1px rgba(34,197,94,0.55); }
     .cell-btn.success.bl-bad { box-shadow: inset 0 0 0 1px rgba(239,68,68,0.65); }
-    .cell-btn.success.bl-unknown { box-shadow: inset 0 0 0 1px rgba(234,179,8,0.55); }
+    .cell-btn.success.bl-unknown { box-shadow: inset 0 0 0 1px rgba(34,197,94,0.45); }
     .cell-btn.fail { background:var(--red-dim); color:var(--red); }
     .cell-btn.na { background:transparent; color:rgba(107,114,128,0.35); border:1px solid rgba(107,114,128,0.12); }
     .cell-btn.soon { background:transparent; color:rgba(107,114,128,0.2); border:1px solid rgba(107,114,128,0.08); font-size:0.58rem; }
@@ -354,7 +354,6 @@
               <th class="plat-h">TUMBLR<button class="test-btn" onclick="testPlatform('tumblr',this)">test</button></th>
               <th class="plat-h">BLOG<button class="test-btn" onclick="testPlatform('blog',this)">test</button></th>
               <th class="plat-h">FEEDER<button class="test-btn" onclick="testPlatform('feeder',this)">test</button></th>
-              <th>Score</th>
               <th>Backlink</th>
             </tr>
           </thead>
@@ -498,6 +497,38 @@ async function ftextCors(url){
   }catch{
     return "";
   }
+}
+function fetchJsonp(url, timeoutMs=15000){
+  return new Promise((resolve,reject)=>{
+    const cb=`_jsonp_${Math.random().toString(36).slice(2)}`;
+    const script=document.createElement("script");
+    let done=false;
+    const timer=setTimeout(()=>{
+      if(done) return;
+      done=true;
+      cleanup();
+      reject(new Error("jsonp timeout"));
+    }, timeoutMs);
+    function cleanup(){
+      clearTimeout(timer);
+      try{ delete window[cb]; }catch{}
+      script.remove();
+    }
+    window[cb]=(data)=>{
+      if(done) return;
+      done=true;
+      cleanup();
+      resolve(data);
+    };
+    script.onerror=()=>{
+      if(done) return;
+      done=true;
+      cleanup();
+      reject(new Error("jsonp error"));
+    };
+    script.src=`${url}${url.includes("?")?"&":"?"}callback=${cb}`;
+    document.head.appendChild(script);
+  });
 }
 
 // ── Log parser ────────────────────────────────────────────────────────────────
@@ -668,28 +699,22 @@ function renderMatrix({sortedSlugs,logMap,feederSet,postDateMap}){
   document.getElementById("matrix-body").innerHTML=sortedSlugs.map(slug=>{
     const plats={...logMap[slug]||{}};
     if(feederSet.has(slug)&&!plats.feeder) plats.feeder={status:"success",url:`https://lordshrrred.github.io/TWTF_Feeder/${slug}/`,date:""};
-    let score=0;
+    let successCount=0;
     const activeCells=ACTIVE_PLATS.map(p=>{
       const d=plats[p];
       if(!d)return`<td class="matrix-cell"><span class="cell-btn na">—</span></td>`;
       if(d.status==="success"){
-        score++;
+        successCount++;
         return`<td class="matrix-cell">${d.url?`<a id="plat-${slug}-${p}" class="cell-btn success bl-unknown" href="${d.url}" target="_blank" rel="noopener" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</a>`:`<span id="plat-${slug}-${p}" class="cell-btn success bl-unknown" title="${PLAT_LABEL[p]} syndicated. Backlink: checking.">✓</span>`}</td>`;
       }
       return`<td class="matrix-cell"><span id="plat-${slug}-${p}" class="cell-btn fail" title="${PLAT_LABEL[p]} failed in log. Checking for live recovery…">✗</span></td>`;
     }).join("");
-    const sc=score>=4?"var(--green)":score>=2?"var(--amber)":"var(--text-muted)";
     const firstDate=postDateMap[slug]||"";
-    // Backlink cell starts as "checking" if this post has any successes, "—" otherwise
-    const hasAny=score>0;
-    const blCell=hasAny
-      ? `<td class="matrix-cell"><span class="bl-badge checking" id="bl-${slug}" title="Checking backlinks…">⟳</span></td>`
-      : `<td class="matrix-cell"><span class="bl-badge na">—</span></td>`;
+    const blCell=`<td class="matrix-cell"><span class="bl-badge checking" id="bl-${slug}" title="Checking backlinks…">⟳</span></td>`;
     return`<tr>
       <td><a class="post-slug" href="${TWTF_BASE}/${slug}/" target="_blank" rel="noopener" title="Open on towwiththeflow.com">${s2t(slug)}</a></td>
       <td><span class="post-date-cell">${formatDate(firstDate)}</span></td>
       ${activeCells}
-      <td><span class="score-badge" style="color:${sc};border-color:${sc}50;background:${sc}14;">${score}/${ACTIVE_PLATS.length}</span></td>
       ${blCell}
     </tr>`;
   }).join("");
@@ -744,6 +769,7 @@ function renderBottom({allSlugs,syncedSet,kwLines,feederFiles,deployInfo,logMap}
 // Runs async after initial paint, updates cells individually as results arrive.
 
 const BL_CACHE = {}; // slug -> { dev, hash, tumblr, blog, feeder }
+let BLOGGER_FEED_CACHE = null;
 
 async function runBacklinkChecks(logMap, feederSet){
   // Get all slugs that have at least one success
@@ -775,12 +801,12 @@ async function checkSlugBacklinks(slug, platData, feederSet){
 
   // Tumblr + Blogger: verify backlink on public permalink HTML
   if(platData.tumblr?.status==="success"&&platData.tumblr?.url){
-    results.tumblr = await checkPublicPageForBacklink(platData.tumblr.url);
+    results.tumblr = await checkPublicPageForBacklink(platData.tumblr.url, slug);
   }else if(platData.tumblr?.status==="success"){
     results.tumblr = {verified:null,anchor:"",reason:"missing URL"};
   }
   if(platData.blog?.status==="success"&&platData.blog?.url){
-    results.blog = await checkPublicPageForBacklink(platData.blog.url);
+    results.blog = await checkPublicPageForBacklink(platData.blog.url, slug);
   }else if(platData.blog?.status==="success"){
     results.blog = {verified:null,anchor:"",reason:"missing URL"};
   }else{
@@ -795,45 +821,73 @@ async function checkSlugBacklinks(slug, platData, feederSet){
 }
 
 async function recoverBloggerLive(slug){
-  const sitemapUrl = "https://denverroadsideguide.blogspot.com/sitemap.xml";
-  const xml = await ftextCors(sitemapUrl);
-  if(!xml) return null;
-
-  const locs = Array.from(xml.matchAll(/<loc>(https?:\/\/[^<]+)<\/loc>/g)).map(m=>m[1]);
-  if(!locs.length) return null;
-
-  const slugParts = slug.split("-").filter(Boolean);
-  const coreParts = slugParts.filter(w=>!["what","to","do","the","a","an","in","for","and","or","with"].includes(w));
-  const candidates = locs
-    .filter(u=>u.includes("denverroadsideguide.blogspot.com/20"))
-    .map(u=>{
-      const low=u.toLowerCase();
-      let score = 0;
-      if(low.includes(slug)) score += 8;
-      for(const w of coreParts.slice(0,8)) if(low.includes(w)) score += 1;
-      return {url:u,score};
-    })
-    .filter(x=>x.score>0)
-    .sort((a,b)=>b.score-a.score)
-    .slice(0,8);
-
-  for(const c of candidates){
-    const chk = await checkPublicPageForBacklink(c.url);
-    if(chk?.verified){
-      return {...chk, recovered_live:true};
+  try{
+    if(!BLOGGER_FEED_CACHE){
+      BLOGGER_FEED_CACHE = await fetchJsonp("https://denverroadsideguide.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=500");
     }
-  }
+    const entries = BLOGGER_FEED_CACHE?.feed?.entry || [];
+    if(!entries.length) return null;
+
+    const slugParts = slug.split("-").filter(Boolean);
+    const coreParts = slugParts.filter(w=>!["what","to","do","the","a","an","in","for","and","or","with"].includes(w));
+    const expected1 = `https://towwiththeflow.com/${slug}/`;
+    const expected2 = `https://towwiththeflow.com/${slug}`;
+
+    const candidates = entries.map(e=>{
+      const links = e.link || [];
+      const postUrl = (links.find(l=>l.rel==="alternate")||{}).href || "";
+      const title = (e.title?.$t || "").toLowerCase();
+      const body = ((e.content?.$t || e.summary?.$t || "")+"").toLowerCase();
+      let score = 0;
+      const postLow = postUrl.toLowerCase();
+      if(postLow.includes(slug)) score += 8;
+      for(const w of coreParts.slice(0,8)){
+        if(postLow.includes(w)) score += 1;
+        if(title.includes(w)) score += 1;
+      }
+      const hasExact = body.includes(expected1.toLowerCase()) || body.includes(expected2.toLowerCase());
+      if(hasExact) score += 12;
+      return {postUrl, score, hasExact};
+    }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).slice(0,20);
+
+    const winner = candidates.find(c=>c.hasExact);
+    if(winner){
+      return {
+        verified: true,
+        anchor: "feed backlink",
+        url: winner.postUrl,
+        matched: expected1,
+        recovered_live: true,
+      };
+    }
+
+    // Fallback: check top candidate pages directly
+    for(const c of candidates.slice(0,5)){
+      const chk = await checkPublicPageForBacklink(c.postUrl, slug);
+      if(chk?.verified){
+        return {...chk, recovered_live:true};
+      }
+    }
+  }catch{}
   return null;
 }
 
-async function checkPublicPageForBacklink(url){
+function matchesExpectedSlugBacklink(link, expectedSlug){
+  const norm=(link||"").toLowerCase();
+  const want=`https://towwiththeflow.com/${expectedSlug.toLowerCase()}/`;
+  const want2=`https://towwiththeflow.com/${expectedSlug.toLowerCase()}`;
+  return norm===want || norm.startsWith(want+"?") || norm===want2 || norm.startsWith(want2+"?");
+}
+
+async function checkPublicPageForBacklink(url, expectedSlug){
   try{
     // Browser CORS-safe fetch.
     let txt=await ftextCors(url);
     if(!txt) return{verified:null,anchor:"",reason:"unreadable"};
-    const hasLink=/towwiththeflow\.com/i.test(txt);
+    const links=Array.from(txt.matchAll(/href="(https?:\/\/towwiththeflow\.com[^"]*)"/ig)).map(m=>m[1]);
+    const exact=links.find(l=>matchesExpectedSlugBacklink(l, expectedSlug));
     const anchorM=txt.match(/href="https?:\/\/towwiththeflow\.com[^"]*"[^>]*>([^<]+)</i);
-    return{verified:hasLink,anchor:anchorM?anchorM[1]:"",url};
+    return{verified:!!exact,anchor:anchorM?anchorM[1]:"",url,matched:exact||""};
   }catch{
     return{verified:null,anchor:"",reason:"error"};
   }
@@ -848,10 +902,12 @@ async function checkDevto(slug, url){
     const r=await fetch(apiUrl); if(!r.ok) return{verified:false,anchor:""};
     const d=await r.json();
     // Check canonical_url (the real SEO backlink) + body_html for any mention
-    const canon=d.canonical_url||"";
+    const canon=(d.canonical_url||"").toLowerCase();
     const body=d.body_html||"";
-    const canonOk=canon.includes("towwiththeflow.com");
-    const bodyOk=body.includes("towwiththeflow.com");
+    const expected1=`https://towwiththeflow.com/${slug.toLowerCase()}/`;
+    const expected2=`https://towwiththeflow.com/${slug.toLowerCase()}`;
+    const canonOk=canon===expected1||canon===expected2;
+    const bodyOk=body.toLowerCase().includes(expected1)||body.toLowerCase().includes(expected2);
     const anchorM=body.match(/href="(https?:\/\/towwiththeflow\.com[^"]*)"[^>]*>([^<]+)</);
     return{verified:canonOk||bodyOk, canonical:canonOk, anchor:anchorM?anchorM[2]:"", url};
   }catch{ return{verified:false,anchor:"",error:true}; }
@@ -866,8 +922,9 @@ async function checkFeeder(slug){
       if(hit){ txt=hit; matchedSlug=cand; break; }
     }
     if(!txt) return{verified:false,anchor:""};
-    const hasCanon=/canonical[:\s].*towwiththeflow\.com/i.test(txt);
-    const hasLink=/towwiththeflow\.com/i.test(txt);
+    const expected=`https://towwiththeflow.com/${slug.toLowerCase()}/`;
+    const hasCanon=new RegExp(`canonical[:\\s].*${expected.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}`,"i").test(txt);
+    const hasLink=txt.toLowerCase().includes(expected);
     const anchorM=txt.match(/\[([^\]]+)\]\(https?:\/\/towwiththeflow\.com[^)]*\)/);
     return{verified:hasCanon||hasLink, canonical:hasCanon, anchor:anchorM?anchorM[1]:"canonical link", url:`https://lordshrrred.github.io/TWTF_Feeder/${matchedSlug}/`};
   }catch{ return{verified:false,anchor:"",error:true}; }
@@ -950,30 +1007,28 @@ function updateBacklinkCell(slug, results, platData){
   const el=document.getElementById(`bl-${slug}`);
   if(!el) return;
 
-  // Count verified / unverified / unknown
-  let verified=0, failed=0, unknown=0, total=0;
+  // Always show out of 4 platforms for consistency.
+  let verified=0, failed=0, unknown=0;
   const details=[];
 
   for(const p of ACTIVE_PLATS){
     const pr=platData[p];
     const br=results[p];
     const include = !!(pr&&pr.status==="success") || !!(br&&br.recovered_live);
-    if(!include) continue;
-    total++;
+    if(!include){ details.push(`${PLAT_LABEL[p]}:—`); continue; }
     if(!br){ unknown++; details.push(`${PLAT_LABEL[p]}:?`); continue; }
     if(br.verified===null){ unknown++; details.push(`${PLAT_LABEL[p]}:?`); continue; }
     if(br.verified){ verified++; details.push(`${PLAT_LABEL[p]}:✓`); }
     else{ failed++; details.push(`${PLAT_LABEL[p]}:✗`); }
   }
 
-  if(total===0){ el.className="bl-badge na"; el.textContent="—"; return; }
-
   const detailStr=details.join(" ");
-  const color=verified>=total*0.8?"var(--green)":verified>=total*0.5?"var(--amber)":"var(--red)";
+  const total=ACTIVE_PLATS.length;
+  const color=verified===4?"var(--green)":verified>=2?"var(--amber)":"var(--red)";
 
   el.className="bl-badge ok";
   el.style.cssText=`color:${color};border-color:${color}50;background:${color}14;cursor:pointer;`;
-  el.textContent=`${verified}/${total}`;
+  el.textContent=`${verified}/4`;
   el.title=`Backlinks verified: ${detailStr}`;
   el.onclick=()=>showToast(`${s2t(slug)}: ${detailStr}`,5000);
 }
