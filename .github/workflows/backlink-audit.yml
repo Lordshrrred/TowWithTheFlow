@@ -44,4 +44,5 @@ jobs:
             exit 0
           fi
           git commit -m "Auto: refresh backlink audit $(date +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
