@@ -19,6 +19,7 @@ import sys
 import re
 import json
 import time
+import hashlib
 import smtplib
 from datetime import datetime, date
 from pathlib import Path
@@ -143,27 +144,67 @@ def ensure_backlink(body: str, slug: str) -> str:
 
 
 # ── Content variation via Claude ───────────────────────────────────────────────
-VARIATION_SYSTEM = """You are rewriting a car breakdown/roadside help article for a specific syndication platform.
-Keep all the same facts and structure. Change the phrasing, opening sentence, and wording throughout.
-Do NOT change the canonical URL or backlink block at the end — preserve it exactly.
-Do NOT use em dashes (—). Return ONLY the rewritten markdown body (no frontmatter).
-Keep it between 400-600 words total."""
+def variation_length_profile(slug: str, platform: str) -> tuple[str, int]:
+    """Choose a deterministic mixed length target by slug+platform.
+    Distribution:
+      - ~70% medium (500-900)
+      - ~20% long (900-1200)
+      - ~10% short (420-650)
+    Tumblr gets a slightly shorter cap for readability."""
+    seed = int(hashlib.sha1(f"{slug}:{platform}".encode("utf-8")).hexdigest()[:8], 16) % 10
+    if seed < 7:
+        rng = "500-900"
+        max_tokens = 1800
+    elif seed < 9:
+        rng = "900-1200"
+        max_tokens = 2200
+    else:
+        rng = "420-650"
+        max_tokens = 1400
+    if platform.lower() == "tumblr" and rng == "900-1200":
+        rng = "500-850"
+        max_tokens = 1700
+    return rng, max_tokens
 
-def get_variation(body: str, platform: str) -> str:
+
+def build_variation_system(length_range: str) -> str:
+    return f"""You are rewriting a car breakdown/roadside help article for syndication.
+Keep all core facts accurate, but make this a genuinely distinct version.
+
+SEO + uniqueness requirements:
+- Use a different headline style and opening hook than the original.
+- Reorder sections when natural; do not mirror the exact paragraph order.
+- Add one concrete practical element (mini checklist, cost example, or caution scenario).
+- Keep the same intent, safety guidance, and canonical destination.
+
+Hard constraints:
+- Keep total body length between {length_range} words.
+- Do NOT change the canonical URL or final backlink block; preserve it exactly.
+- Do NOT use em dashes (—).
+- Return ONLY rewritten markdown body (no frontmatter)."""
+
+
+def get_variation(body: str, platform: str, slug: str) -> str:
     """Get a lightly rephrased version of the body for a specific platform.
     Falls back to original body if Claude API is unavailable."""
     if not ANTHROPIC_API_KEY:
         return body
     try:
+        length_range, max_tokens = variation_length_profile(slug, platform)
         import anthropic
         client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
         msg = client.messages.create(
             model="claude-haiku-4-20250514",
-            max_tokens=1200,
-            system=VARIATION_SYSTEM,
+            max_tokens=max_tokens,
+            system=build_variation_system(length_range),
             messages=[{
                 "role": "user",
-                "content": f"Platform: {platform}\n\nRewrite this article body:\n\n{body}"
+                "content": (
+                    f"Platform: {platform}\n"
+                    f"Slug: {slug}\n"
+                    f"Target length: {length_range} words\n\n"
+                    f"Rewrite this article body:\n\n{body}"
+                )
             }]
         )
         result = msg.content[0].text.strip()
@@ -183,7 +224,7 @@ def syndicate_devto(slug: str, meta: dict, body: str) -> tuple[bool, str]:
 
     canonical = f"{BASE_URL}/{slug}/"
     tags = [re.sub(r'[^a-z0-9]', '', t.lower()) for t in meta.get("tags", [])[:4]]
-    varied_body = get_variation(body, "Dev.to")
+    varied_body = get_variation(body, "Dev.to", slug)
 
     try:
         r = requests.post(
@@ -245,7 +286,7 @@ def syndicate_tumblr(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         return False, "ERROR: requests-oauthlib not installed"
 
     canonical = f"{BASE_URL}/{slug}/"
-    varied_body = get_variation(body, "Tumblr")
+    varied_body = get_variation(body, "Tumblr", slug)
     plain = strip_markdown(varied_body)
     body_text = f"{meta.get('title', slug)}\n\n{plain}"
 
@@ -363,7 +404,7 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
 
     log(f"BLOGGER | {slug} | step 2/3: converting markdown to HTML")
     canonical = f"{BASE_URL}/{slug}/"
-    varied_body = get_variation(body, "Blogger")
+    varied_body = get_variation(body, "Blogger", slug)
     html_content = md_to_html(varied_body)
 
     log(f"BLOGGER | {slug} | step 3/3: posting to blog {BLOGGER_BLOG_ID}")
@@ -392,7 +433,7 @@ def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         return False, "SKIP: no feeder token set (FEEDER_TRIGGER_TOKEN preferred)"
 
     canonical = f"{BASE_URL}/{slug}/"
-    varied_body = get_variation(body, "Feeder")
+    varied_body = get_variation(body, "Feeder", slug)
 
     # Build a feeder slug (add -guide suffix if not already varied)
     feeder_slug = f"{slug}-guide" if not slug.endswith("-guide") else slug

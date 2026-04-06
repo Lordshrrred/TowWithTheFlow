@@ -7,6 +7,8 @@ Usage:
 Saves slug to last_general_slug.txt or last_local_slug.txt for syndication jobs.
 """
 
+from __future__ import annotations
+
 import argparse
 import os
 import re
@@ -23,12 +25,25 @@ import requests
 ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+def env_clean(key: str, default: str = "") -> str:
+    val = os.getenv(key, default)
+    if not isinstance(val, str):
+        return default
+    val = val.strip()
+    if len(val) >= 2 and (
+        (val[0] == '"' and val[-1] == '"') or
+        (val[0] == "'" and val[-1] == "'")
+    ):
+        val = val[1:-1].strip()
+    return val
+
+
+ANTHROPIC_API_KEY = env_clean("ANTHROPIC_API_KEY")
 if not ANTHROPIC_API_KEY:
     print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
     sys.exit(1)
 
-PEXELS_API_KEY = os.getenv("PEXELS_API_KEY", "")
+PEXELS_API_KEY = env_clean("PEXELS_API_KEY")
 IMAGES_DIR = ROOT / "static" / "images"
 
 KEYWORDS_FILE = Path(__file__).parent / "keywords.txt"
@@ -115,7 +130,12 @@ def fetch_pexels_photo(search_term: str, index: int = 1) -> dict | None:
             timeout=20
         )
         if resp.status_code != 200:
-            print(f"Pexels API error {resp.status_code} for '{search_term}'")
+            detail = ""
+            try:
+                detail = resp.json().get("error", "")
+            except Exception:
+                detail = resp.text[:160]
+            print(f"Pexels API error {resp.status_code} for '{search_term}': {detail}")
             return None
         photos = resp.json().get("photos", [])
         if not photos:
@@ -156,42 +176,46 @@ def add_images_to_post(content: str, slug: str) -> str:
 
     # Hero image
     hero_path = img_dir / "hero.jpg"
+    hero_ok = hero_path.exists()
     if not hero_path.exists():
         photo = fetch_pexels_photo(hero_term, index=1)
         if photo:
             if download_pexels_image(photo, hero_path):
                 print(f"Downloaded hero: {hero_path}")
+                hero_ok = True
             else:
                 print(f"Failed to download hero image for {slug}")
 
     # Mid image
     mid_path = img_dir / "mid.jpg"
+    mid_ok = mid_path.exists()
     if not mid_path.exists():
         photo = fetch_pexels_photo(mid_term, index=1)
         if photo:
             if download_pexels_image(photo, mid_path):
                 print(f"Downloaded mid: {mid_path}")
+                mid_ok = True
 
     # Bottom image
     bottom_path = img_dir / "bottom.jpg"
+    bottom_ok = bottom_path.exists()
     if not bottom_path.exists():
         photo = fetch_pexels_photo(bottom_term, index=1)
         if photo:
             if download_pexels_image(photo, bottom_path):
                 print(f"Downloaded bottom: {bottom_path}")
+                bottom_ok = True
 
-    # Add image field to frontmatter
+    # Add image field to frontmatter only when hero file exists.
     image_field = f'image: "/images/{slug}/hero.jpg"'
-    if 'image:' not in content[:500]:
-        content = re.sub(
-            r'^(---\n)',
-            f'\\1{image_field}\n',
-            content,
-            count=1
-        )
+    if hero_ok and 'image:' not in content[:500]:
+        content = re.sub(r'^(---\n)', f'\\1{image_field}\n', content, count=1)
+    elif not hero_ok:
+        # Prevent broken featured image URLs if downloads failed.
+        content = re.sub(r'^image:\s*["\']?.+?["\']?\s*$', '', content, flags=re.MULTILINE)
 
     # Insert mid image after "What To Do" section (before next ## heading)
-    if mid_path.exists():
+    if mid_ok:
         mid_md = f'\n![{mid_term}](/images/{slug}/mid.jpg)\n*Photo: Pexels*\n'
         # Find the ## What To Do section and the next ## after it
         match = re.search(r'(## What To Do.*?)(\n## )', content, re.DOTALL | re.IGNORECASE)
@@ -206,7 +230,7 @@ def add_images_to_post(content: str, slug: str) -> str:
             content = content[:fm_end + mid_point] + mid_md + content[fm_end + mid_point:]
 
     # Insert bottom image before the end (just before last ## or at end)
-    if bottom_path.exists():
+    if bottom_ok:
         bottom_md = f'\n![{bottom_term}](/images/{slug}/bottom.jpg)\n*Photo: Pexels*\n'
         # Find last ## section (## Stay Safe or last heading) to insert before it
         matches = list(re.finditer(r'\n## ', content))
@@ -215,6 +239,9 @@ def add_images_to_post(content: str, slug: str) -> str:
             content = content[:last_section] + '\n' + bottom_md + content[last_section:]
         else:
             content = content.rstrip() + '\n' + bottom_md
+
+    if not any([hero_ok, mid_ok, bottom_ok]):
+        print(f"Pexels image downloads unavailable for '{slug}' — post will publish without local images.")
 
     return content
 

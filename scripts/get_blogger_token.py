@@ -48,7 +48,16 @@ try:
 except OSError:
     print("Port 8080 unavailable. Falling back to OOB flow.")
     print("Google will display an authorization code on-screen — copy and paste it here.\n")
-    credentials = flow.run_console()
+    auth_url, _ = flow.authorization_url(
+        access_type="offline",
+        prompt="consent",
+        include_granted_scopes="true",
+    )
+    print("Open this URL in your browser and authorize:\n")
+    print(auth_url + "\n")
+    code = input("Paste the authorization code here: ").strip()
+    flow.fetch_token(code=code)
+    credentials = flow.credentials
 
 print("\n" + "=" * 60)
 print("SUCCESS! Add this to your .env file:")
