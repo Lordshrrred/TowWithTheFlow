@@ -584,3 +584,26 @@
 [2026-04-06 09:12:36] KEYWORD_RESEARCH:   [6] towing cost in atlanta georgia holiday weekend
 [2026-04-06 09:12:36] KEYWORD_RESEARCH:   [6] towing cost in miami florida hurricane season
 [2026-04-06 09:12:36] KEYWORD_RESEARCH:   [6] towing cost in portland oregon rainy weather
+[2026-04-06 11:27:21] === SYNDICATE START: car-smoking-from-hood-need-tow-truck-now ===
+[2026-04-06 11:27:21] PREFLIGHT | title: Car Smoking From Hood: Need Tow Truck Now
+[2026-04-06 11:27:21] PREFLIGHT | date: 2026-04-06
+[2026-04-06 11:27:21] PREFLIGHT | timestamp: 2026-04-06 11:27:21
+[2026-04-06 11:27:21] PREFLIGHT | DEVTO:   configured
+[2026-04-06 11:27:21] PREFLIGHT | TUMBLR:  configured
+[2026-04-06 11:27:21] PREFLIGHT | BLOGGER: configured
+[2026-04-06 11:27:21] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-06 11:27:21] DEVTO | car-smoking-from-hood-need-tow-truck-now | START
+[2026-04-06 11:27:22] DEVTO | car-smoking-from-hood-need-tow-truck-now | SUCCESS | https://dev.to/towwiththeflowyoo/car-smoking-from-hood-need-tow-truck-now-jhm
+[2026-04-06 11:27:22] --- waiting 60s before next platform ---
+[2026-04-06 11:28:22] TUMBLR | car-smoking-from-hood-need-tow-truck-now | START
+[2026-04-06 11:28:22] TUMBLR | car-smoking-from-hood-need-tow-truck-now | SUCCESS | https://towwiththeflow.tumblr.com/post/813144371254919168
+[2026-04-06 11:28:22] --- waiting 60s before next platform ---
+[2026-04-06 11:29:22] BLOGGER | car-smoking-from-hood-need-tow-truck-now | START
+[2026-04-06 11:29:22] BLOGGER | car-smoking-from-hood-need-tow-truck-now | step 1/3: refreshing access token
+[2026-04-06 11:29:22] BLOGGER | car-smoking-from-hood-need-tow-truck-now | token refresh failed: invalid_grant: Token has been expired or revoked. [refresh token is expired or revoked — needs new OAuth consent flow]
+[2026-04-06 11:29:22] BLOGGER | car-smoking-from-hood-need-tow-truck-now | FAIL | ERROR: token refresh failed — invalid_grant: Token has been expired or revoked. [refresh token is expired or revoked — needs new OAuth consent flow]
+[2026-04-06 11:29:22] --- waiting 60s before next platform ---
+[2026-04-06 11:30:22] FEEDER | car-smoking-from-hood-need-tow-truck-now | START
+[2026-04-06 11:30:23] FEEDER | car-smoking-from-hood-need-tow-truck-now | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-smoking-from-hood-need-tow-truck-now-guide/
+[2026-04-06 11:30:23] === SYNDICATE DONE: car-smoking-from-hood-need-tow-truck-now | 3/4 succeeded | 4 attempted | 1 failed ===
+[2026-04-06 11:30:23] SYNCED | car-smoking-from-hood-need-tow-truck-now marked in synced-posts.txt
