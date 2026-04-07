@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07T09:36:02.699983+00:00",
+  "generated_at": "2026-04-07T14:03:06.352311+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -66,6 +66,28 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812600104275050496/car-makes-grinding-noise-when-driving",
+        "verified": true
+      }
+    },
+    "car-making-grinding-noise-when-braking-tow-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-making-grinding-noise-when-braking.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/car-making-grinding-noise-when-braking-tow-cost-and-what-to-do-og9",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-making-grinding-noise-when-braking-tow-cost-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813235128152342528/car-making-grinding-noise-when-braking-tow-cost",
         "verified": true
       }
     },
@@ -304,20 +326,20 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 8,
-      "verified": 8
-    },
-    "dev": {
-      "checked": 7,
-      "verified": 7
-    },
-    "feeder": {
       "checked": 9,
       "verified": 9
     },
+    "dev": {
+      "checked": 8,
+      "verified": 8
+    },
+    "feeder": {
+      "checked": 10,
+      "verified": 10
+    },
     "tumblr": {
-      "checked": 16,
-      "verified": 16
+      "checked": 17,
+      "verified": 17
     }
   }
 }
