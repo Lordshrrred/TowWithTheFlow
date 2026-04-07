@@ -46,12 +46,30 @@ def extract_url(detail: str) -> str:
     return m.group(1) if m else ""
 
 
-def parse_successes(text: str) -> dict[str, dict[str, dict]]:
+def normalize_tumblr_url(url: str, slug: str) -> str:
+    """Normalize Tumblr URLs to canonical /{blog}/{post_id}/{slug} form when possible."""
+    u = (url or "").strip()
+    if not u:
+        return u
+    m = re.match(r"^https?://(?:www\.)?tumblr\.com/blog/([^/]+)/(\d+)(?:/.*)?$", u, re.I)
+    if m:
+        return f"https://www.tumblr.com/{m.group(1)}/{m.group(2)}/{slug}"
+    m = re.match(r"^https?://(?:www\.)?tumblr\.com/([^/]+)/(\d+)(?:/.*)?$", u, re.I)
+    if m:
+        return f"https://www.tumblr.com/{m.group(1)}/{m.group(2)}/{slug}"
+    m = re.match(r"^https?://([^.]+)\.tumblr\.com/post/(\d+)(?:/.*)?$", u, re.I)
+    if m:
+        return f"https://www.tumblr.com/{m.group(1)}/{m.group(2)}/{slug}"
+    return u
+
+
+def parse_successes(text: str) -> tuple[dict[str, dict[str, dict]], dict[str, dict[str, list[dict]]]]:
     """
     Return latest success entry per slug/platform:
       {slug: {dev|tumblr|blog|feeder: {timestamp, url, detail}}}
     """
     out: dict[str, dict[str, dict]] = {}
+    history: dict[str, dict[str, list[dict]]] = {}
     rx = re.compile(
         r"^\[(?P<ts>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\] "
         r"(?P<plat>DEVTO|TUMBLR|BLOGGER|FEEDER) \| "
@@ -66,11 +84,18 @@ def parse_successes(text: str) -> dict[str, dict[str, dict]]:
         ts = m.group("ts")
         detail = m.group("detail").strip()
         url = extract_url(detail)
+        if plat == "tumblr" and url:
+            url = normalize_tumblr_url(url, slug)
         out.setdefault(slug, {})
+        history.setdefault(slug, {}).setdefault(plat, []).append({"timestamp": ts, "url": url, "detail": detail})
         prev = out[slug].get(plat)
         if (prev is None) or (ts > prev["timestamp"]):
             out[slug][plat] = {"timestamp": ts, "url": url, "detail": detail}
-    return out
+    # Sort histories newest -> oldest
+    for slug, plats in history.items():
+        for plat, rows in plats.items():
+            rows.sort(key=lambda r: r["timestamp"], reverse=True)
+    return out, history
 
 
 def verify_dev(slug: str, url: str, sess: requests.Session) -> dict:
@@ -213,7 +238,7 @@ def recover_tumblr(slug: str, sess: requests.Session) -> dict | None:
             post_id = str(p.get("id") or "").strip()
             if not post_id:
                 continue
-            post_url = f"https://www.tumblr.com/{TUMBLR_BLOG}/{post_id}/{slug}"
+            post_url = normalize_tumblr_url(f"https://www.tumblr.com/{TUMBLR_BLOG}/{post_id}/{slug}", slug)
             return {"verified": True, "reason": "ok", "url": post_url, "recovered_live": True}
     except Exception:
         return None
@@ -229,9 +254,30 @@ def recover_feeder(slug: str, sess: requests.Session) -> dict | None:
     return None
 
 
+def first_verified_from_history(
+    slug: str,
+    platform: str,
+    history: dict[str, dict[str, list[dict]]],
+    verify_fn,
+    sess: requests.Session,
+) -> dict | None:
+    """
+    Walk success history newest->oldest for a slug/platform and return first verified URL.
+    """
+    rows = history.get(slug, {}).get(platform, [])
+    for row in rows:
+        url = row.get("url", "")
+        if not url:
+            continue
+        chk = verify_fn(slug, url, sess)
+        if chk.get("verified") is True:
+            return chk
+    return None
+
+
 def main() -> None:
     text = LOG_FILE.read_text(encoding="utf-8", errors="ignore") if LOG_FILE.exists() else ""
-    successes = parse_successes(text)
+    successes, history = parse_successes(text)
     sess = requests.Session()
     sess.headers.update({"User-Agent": "TWTF-Backlink-Audit/1.0"})
 
@@ -248,6 +294,24 @@ def main() -> None:
         if "feeder" in plats:
             row["feeder"] = verify_feeder(slug, plats["feeder"]["url"], sess)
 
+        # If latest success URL now fails, walk older successful URLs before marking red.
+        if row.get("tumblr", {}).get("verified") is False:
+            older = first_verified_from_history(slug, "tumblr", history, verify_html_slug, sess)
+            if older:
+                row["tumblr"] = older
+        if row.get("blog", {}).get("verified") is False:
+            older = first_verified_from_history(slug, "blog", history, verify_html_slug, sess)
+            if older:
+                row["blog"] = older
+        if row.get("dev", {}).get("verified") is False:
+            older = first_verified_from_history(slug, "dev", history, verify_dev, sess)
+            if older:
+                row["dev"] = older
+        if row.get("feeder", {}).get("verified") is False:
+            older = first_verified_from_history(slug, "feeder", history, verify_feeder, sess)
+            if older:
+                row["feeder"] = older
+
         # Recovery for blogger when no success URL logged
         if "dev" not in row:
             rec = recover_dev(slug, sess)
@@ -258,6 +322,11 @@ def main() -> None:
             if rec:
                 row["tumblr"] = rec
         if "blog" not in row:
+            rec = recover_blogger(slug, sess)
+            if rec:
+                row["blog"] = rec
+        elif row["blog"].get("verified") is not True:
+            # Also try blogger recovery when we have a stale/broken logged URL.
             rec = recover_blogger(slug, sess)
             if rec:
                 row["blog"] = rec

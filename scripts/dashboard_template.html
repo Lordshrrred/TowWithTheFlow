@@ -535,12 +535,18 @@ function normalizePlatformUrl(platform, slug, url){
   if(!url) return "";
   let out = String(url).trim();
   if(platform==="tumblr"){
-    const m = out.match(/^https?:\/\/www\.tumblr\.com\/blog\/([^\/]+)\/(\d+)(?:\/.*)?$/i);
+    let m = out.match(/^https?:\/\/(?:www\.)?tumblr\.com\/blog\/([^\/]+)\/(\d+)(?:\/.*)?$/i);
+    if(!m) m = out.match(/^https?:\/\/(?:www\.)?tumblr\.com\/([^\/]+)\/(\d+)(?:\/.*)?$/i);
+    if(!m) m = out.match(/^https?:\/\/([^.]+)\.tumblr\.com\/post\/(\d+)(?:\/.*)?$/i);
     if(m){
       const blog = m[1];
       const pid = m[2];
       out = `https://www.tumblr.com/${blog}/${pid}/${slug}`;
     }
+  }
+  if(platform==="feeder"){
+    // Normalize legacy feeder URL variants to the current GitHub Pages project path.
+    out = out.replace("https://lordshrrred.github.io/TTWF_GithubPages/", "https://lordshrrred.github.io/TWTF_Feeder/");
   }
   return out;
 }
