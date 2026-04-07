@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07T14:03:06.352311+00:00",
+  "generated_at": "2026-04-07T17:17:30.901849+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -308,6 +308,50 @@
         "verified": true
       }
     },
+    "towing-cost-phoenix-arizona": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-what.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-what-youll-pay-and-what-to-do-jff",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-phoenix-arizona-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813251545490685952/towing-cost-phoenix-arizona",
+        "verified": true
+      }
+    },
+    "towing-cost-phoenix-arizona-after-hours": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-after.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-after-hours-what-youll-pay-514b",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-phoenix-arizona-after-hours-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813245061424922624/towing-cost-phoenix-arizona-after-hours",
+        "verified": true
+      }
+    },
     "what-happens-if-you-run-out-of-oil-while-driving": {
       "dev": {
         "reason": "no_url",
@@ -326,20 +370,20 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 9,
-      "verified": 9
+      "checked": 11,
+      "verified": 11
     },
     "dev": {
-      "checked": 8,
-      "verified": 8
-    },
-    "feeder": {
       "checked": 10,
       "verified": 10
     },
+    "feeder": {
+      "checked": 12,
+      "verified": 12
+    },
     "tumblr": {
-      "checked": 17,
-      "verified": 17
+      "checked": 19,
+      "verified": 19
     }
   }
 }
