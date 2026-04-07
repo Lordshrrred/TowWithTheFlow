@@ -1,4 +1,5 @@
 ---
+image: "/images/driving-in-snow-emergency-kit-checklist/hero.jpg"
 title: "Driving in Snow: Emergency Kit Checklist"
 date: 2026-02-25
 description: "Before you drive in winter weather, make sure your car has these items. A complete snow emergency kit can save your life if you get stuck."

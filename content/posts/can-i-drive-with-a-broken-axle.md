@@ -1,4 +1,5 @@
 ---
+image: "/images/can-i-drive-with-a-broken-axle/hero.jpg"
 title: "Can I Drive With a Broken Axle?"
 date: 2026-02-16
 description: "Driving with a broken axle is dangerous and will cause more damage. Here's what to look for and what to do right now."

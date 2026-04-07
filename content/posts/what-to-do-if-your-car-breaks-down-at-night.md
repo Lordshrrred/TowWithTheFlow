@@ -1,4 +1,5 @@
 ---
+image: "/images/what-to-do-if-your-car-breaks-down-at-night/hero.jpg"
 title: "What To Do If Your Car Breaks Down at Night"
 date: 2026-03-06
 description: "Breaking down after dark raises the danger level fast. Here's the exact sequence to follow to stay visible, safe, and get help quickly."

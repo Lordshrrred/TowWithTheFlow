@@ -1,4 +1,5 @@
 ---
+image: "/images/tow-content-log/hero.jpg"
 title: "Content Publishing Log"
 draft: false
 ---

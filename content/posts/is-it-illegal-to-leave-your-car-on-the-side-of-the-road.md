@@ -1,4 +1,5 @@
 ---
+image: "/images/is-it-illegal-to-leave-your-car-on-the-side-of-the-road/hero.jpg"
 title: "Is It Illegal to Leave Your Car on the Side of the Road?"
 date: 2026-03-03
 description: "Laws vary by state but most allow 24-48 hours before your car can be towed. Here's what you need to know to avoid a fine or impound."

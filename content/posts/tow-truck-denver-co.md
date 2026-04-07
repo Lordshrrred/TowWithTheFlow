@@ -1,4 +1,5 @@
 ---
+image: "/images/tow-truck-denver-co/hero.jpg"
 title: "Tow Truck Denver CO: What It Costs and What To Do When You're Stranded"
 date: 2026-03-20
 description: "Need a tow truck in Denver, CO? Average costs, response times, best routes, and what to do if your car breaks down on I-25, I-70, or downtown Denver."

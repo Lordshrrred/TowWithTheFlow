@@ -1,4 +1,5 @@
 ---
+image: "/images/battery-dead-but-lights-turn-on/hero.jpg"
 title: "Battery Dead But Lights Turn On, What's Going On?"
 date: 2026-02-15
 description: "If your lights work but the car won't start, the battery isn't fully dead. Here's what's actually wrong and how to fix it."

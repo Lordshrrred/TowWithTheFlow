@@ -1,4 +1,5 @@
 ---
+image: "/images/how-long-can-a-car-sit-broken-down-on-roadside/hero.jpg"
 title: "How Long Can a Car Sit Broken Down on the Roadside?"
 date: 2026-02-27
 description: "Most states allow 24-72 hours before a roadside car can be towed at your expense. Here's how long you actually have and how to protect yourself."

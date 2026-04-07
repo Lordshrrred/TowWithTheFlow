@@ -1,4 +1,5 @@
 ---
+image: "/images/how-much-does-aaa-towing-cost-without-membership/hero.jpg"
 title: "How Much Does AAA Towing Cost Without a Membership?"
 date: 2026-03-01
 description: "AAA will tow non-members but charges full market rates, $75–$150+. Here's what it costs and whether joining on the spot makes sense."

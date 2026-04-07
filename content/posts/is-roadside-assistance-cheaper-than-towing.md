@@ -1,4 +1,5 @@
 ---
+image: "/images/is-roadside-assistance-cheaper-than-towing/hero.jpg"
 title: "Is Roadside Assistance Cheaper Than Towing?"
 date: 2026-03-04
 description: "Roadside assistance costs $50–$150/year and often covers towing for free. Paying out of pocket for a tow runs $75–$300+. The math is clear."

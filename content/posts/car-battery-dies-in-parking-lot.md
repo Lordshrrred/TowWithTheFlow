@@ -1,4 +1,5 @@
 ---
+image: "/images/car-battery-dies-in-parking-lot/hero.jpg"
 title: "Car Battery Dies in Parking Lot: Exactly What To Do"
 date: 2026-03-20
 description: "Car battery died in a parking lot? Here's your step-by-step plan: jump start options, what to do without cables, when to call a tow, and how to prevent it."

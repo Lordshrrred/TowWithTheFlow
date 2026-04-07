@@ -1,4 +1,5 @@
 ---
+image: "/images/how-to-start-a-frozen-car-battery/hero.jpg"
 title: "How To Start a Frozen Car Battery"
 date: 2026-03-02
 description: "A frozen battery is dangerous to jump-start. Here's how to tell if yours is frozen and what to do safely before attempting a start."

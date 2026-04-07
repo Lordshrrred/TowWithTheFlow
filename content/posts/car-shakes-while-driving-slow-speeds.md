@@ -1,4 +1,5 @@
 ---
+image: "/images/car-shakes-while-driving-slow-speeds/hero.jpg"
 title: "Car Shakes While Driving at Slow Speeds"
 date: 2026-02-21
 description: "Shaking at slow speeds points to a short list of specific problems. Here's how to tell what's causing it and whether it's safe to keep driving."

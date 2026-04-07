@@ -1,4 +1,5 @@
 ---
+image: "/images/car-wont-start-in-cold-weather-what-to-do/hero.jpg"
 title: "Car Won't Start in Cold Weather: What To Do"
 date: 2026-02-24
 description: "Cold mornings are hard on batteries, oil, and fuel systems. Here's how to diagnose why your car won't start and get moving fast."

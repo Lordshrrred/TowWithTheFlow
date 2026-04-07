@@ -1,4 +1,5 @@
 ---
+image: "/images/alternator-vs-battery-symptoms-difference/hero.jpg"
 title: "Alternator vs Battery: How to Tell the Difference"
 date: 2026-03-15
 description: "Battery problems kill your car once. Alternator problems keep killing it. Here's how to tell which one is failing so you fix the right part."

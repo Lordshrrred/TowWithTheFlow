@@ -1,4 +1,5 @@
 ---
+image: "/images/what-to-keep-in-your-car-for-emergencies/hero.jpg"
 title: "What To Keep in Your Car for Emergencies"
 date: 2026-03-07
 description: "A breakdown or accident is not when you want to realize you're unprepared. These are the items every driver should keep in their car year-round."

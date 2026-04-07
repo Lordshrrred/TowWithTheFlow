@@ -1,4 +1,5 @@
 ---
+image: "/images/what-happens-if-your-car-breaks-down-on-highway/hero.jpg"
 title: "What Happens If Your Car Breaks Down on the Highway?"
 date: 2026-03-17
 description: "A highway breakdown is one of the most dangerous situations a driver faces. Here's exactly what to do in the right order to stay safe."

@@ -1,4 +1,5 @@
 ---
+image: "/images/car-wont-start-but-battery-is-good/hero.jpg"
 title: "Car Won't Start But Battery Is Good"
 date: 2026-03-16
 description: "If your battery is fine but the car won't start, the likely culprits are the alternator, starter motor, fuel system, or ignition. Here's how to diagnose it."

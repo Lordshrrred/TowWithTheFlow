@@ -1,4 +1,5 @@
 ---
+image: "/images/car-died-while-driving-what-now/hero.jpg"
 title: "Car Died While Driving, What Now?"
 date: 2026-02-18
 description: "If your car suddenly died while driving, here's exactly what to do in the next 60 seconds and what likely caused it."

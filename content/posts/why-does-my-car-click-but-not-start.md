@@ -1,4 +1,5 @@
 ---
+image: "/images/why-does-my-car-click-but-not-start/hero.jpg"
 title: "Why Does My Car Click But Not Start?"
 date: 2026-03-14
 description: "Clicking when you turn the key points to a dead or weak battery, corroded terminals, or a bad starter solenoid. Here's how to diagnose which one fast."

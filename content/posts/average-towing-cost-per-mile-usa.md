@@ -1,4 +1,5 @@
 ---
+image: "/images/average-towing-cost-per-mile-usa/hero.jpg"
 title: "Average Towing Cost Per Mile in the USA"
 date: 2026-03-09
 description: "National average towing rates run $2.50–$7 per mile after a base hook-up fee. Here's what you'll actually pay by region and situation."

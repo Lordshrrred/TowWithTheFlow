@@ -15,6 +15,8 @@ import re
 import sys
 import random
 import subprocess
+import hashlib
+import json
 from datetime import date
 from pathlib import Path
 from dotenv import load_dotenv
@@ -39,12 +41,10 @@ def env_clean(key: str, default: str = "") -> str:
 
 
 ANTHROPIC_API_KEY = env_clean("ANTHROPIC_API_KEY")
-if not ANTHROPIC_API_KEY:
-    print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
-    sys.exit(1)
 
 PEXELS_API_KEY = env_clean("PEXELS_API_KEY")
 IMAGES_DIR = ROOT / "static" / "images"
+PEXELS_INDEX_FILE = IMAGES_DIR / "_pexels_index.json"
 
 KEYWORDS_FILE = Path(__file__).parent / "keywords.txt"
 POSTS_DIR = ROOT / "content" / "posts"
@@ -119,14 +119,48 @@ def get_image_search_terms(slug: str) -> tuple[str, str, str]:
     return PEXELS_DEFAULT
 
 
-def fetch_pexels_photo(search_term: str, index: int = 1) -> dict | None:
+def load_pexels_index() -> dict:
+    if not PEXELS_INDEX_FILE.exists():
+        return {"used_ids": [], "by_slug": {}}
+    try:
+        data = json.loads(PEXELS_INDEX_FILE.read_text(encoding="utf-8"))
+        if not isinstance(data, dict):
+            return {"used_ids": [], "by_slug": {}}
+        data.setdefault("used_ids", [])
+        data.setdefault("by_slug", {})
+        return data
+    except Exception:
+        return {"used_ids": [], "by_slug": {}}
+
+
+def save_pexels_index(index: dict) -> None:
+    PEXELS_INDEX_FILE.parent.mkdir(parents=True, exist_ok=True)
+    PEXELS_INDEX_FILE.write_text(json.dumps(index, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def _seed_int(*parts: str) -> int:
+    raw = "|".join(parts).encode("utf-8")
+    return int(hashlib.sha1(raw).hexdigest()[:8], 16)
+
+
+def fetch_pexels_photo(search_term: str, slug: str, slot: str, used_ids: set[int] | None = None) -> dict | None:
     if not PEXELS_API_KEY:
         return None
     try:
+        used_ids = used_ids or set()
+        seed = _seed_int(slug, slot, search_term)
+        per_page = 30
+        page = (seed % 8) + 1
         resp = requests.get(
             "https://api.pexels.com/v1/search",
             headers={"Authorization": PEXELS_API_KEY},
-            params={"query": search_term, "orientation": "landscape", "per_page": 5, "size": "large"},
+            params={
+                "query": search_term,
+                "orientation": "landscape",
+                "per_page": per_page,
+                "size": "large",
+                "page": page,
+            },
             timeout=20
         )
         if resp.status_code != 200:
@@ -140,7 +174,13 @@ def fetch_pexels_photo(search_term: str, index: int = 1) -> dict | None:
         photos = resp.json().get("photos", [])
         if not photos:
             return None
-        return photos[min(index, len(photos) - 1)]
+        # Prefer photos not used before across the site.
+        fresh = [p for p in photos if int(p.get("id", 0) or 0) not in used_ids]
+        pool = fresh if fresh else photos
+        if not pool:
+            return None
+        idx = seed % len(pool)
+        return pool[idx]
     except Exception as e:
         print(f"Pexels fetch error: {e}")
         return None
@@ -173,15 +213,33 @@ def add_images_to_post(content: str, slug: str) -> str:
     hero_term, mid_term, bottom_term = get_image_search_terms(slug)
     img_dir = IMAGES_DIR / slug
     img_dir.mkdir(parents=True, exist_ok=True)
+    pindex = load_pexels_index()
+    used_ids = {int(x) for x in pindex.get("used_ids", []) if isinstance(x, int) or str(x).isdigit()}
+
+    def _remember(slot: str, term: str, photo: dict) -> None:
+        pid = int(photo.get("id", 0) or 0)
+        if pid:
+            used_ids.add(pid)
+        pindex["used_ids"] = sorted(list(used_ids))
+        by_slug = pindex.setdefault("by_slug", {})
+        row = by_slug.setdefault(slug, {})
+        row[slot] = {
+            "id": pid,
+            "query": term,
+            "url": photo.get("url", ""),
+            "photographer": photo.get("photographer", ""),
+        }
+        save_pexels_index(pindex)
 
     # Hero image
     hero_path = img_dir / "hero.jpg"
     hero_ok = hero_path.exists()
     if not hero_path.exists():
-        photo = fetch_pexels_photo(hero_term, index=1)
+        photo = fetch_pexels_photo(hero_term, slug, "hero", used_ids)
         if photo:
             if download_pexels_image(photo, hero_path):
                 print(f"Downloaded hero: {hero_path}")
+                _remember("hero", hero_term, photo)
                 hero_ok = True
             else:
                 print(f"Failed to download hero image for {slug}")
@@ -190,20 +248,22 @@ def add_images_to_post(content: str, slug: str) -> str:
     mid_path = img_dir / "mid.jpg"
     mid_ok = mid_path.exists()
     if not mid_path.exists():
-        photo = fetch_pexels_photo(mid_term, index=1)
+        photo = fetch_pexels_photo(mid_term, slug, "mid", used_ids)
         if photo:
             if download_pexels_image(photo, mid_path):
                 print(f"Downloaded mid: {mid_path}")
+                _remember("mid", mid_term, photo)
                 mid_ok = True
 
     # Bottom image
     bottom_path = img_dir / "bottom.jpg"
     bottom_ok = bottom_path.exists()
     if not bottom_path.exists():
-        photo = fetch_pexels_photo(bottom_term, index=1)
+        photo = fetch_pexels_photo(bottom_term, slug, "bottom", used_ids)
         if photo:
             if download_pexels_image(photo, bottom_path):
                 print(f"Downloaded bottom: {bottom_path}")
+                _remember("bottom", bottom_term, photo)
                 bottom_ok = True
 
     # Add image field to frontmatter only when hero file exists.
@@ -309,6 +369,9 @@ def append_long_tails(keyword: str):
 
 def generate_post(keyword: str) -> str:
     """Call Claude API and return Hugo markdown content"""
+    if not ANTHROPIC_API_KEY:
+        print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
+        sys.exit(1)
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     today = date.today().isoformat()
 
