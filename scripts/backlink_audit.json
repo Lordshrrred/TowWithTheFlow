@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T09:35:34.626666+00:00",
+  "generated_at": "2026-04-08T14:04:42.074684+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -140,6 +140,28 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813144371254919168/car-smoking-from-hood-need-tow-truck-now",
+        "verified": true
+      }
+    },
+    "car-wont-shift-into-drive-need-tow-truck": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-wont-shift-into-drive-need-tow-truck.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/car-wont-shift-into-drive-need-a-tow-truck-1lpn",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "slug_mismatch",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-shift-into-drive-need-tow-truck-advice/",
+        "verified": false
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813325799706017792/car-wont-shift-into-drive-need-tow-truck",
         "verified": true
       }
     },
@@ -370,20 +392,20 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 11,
-      "verified": 11
-    },
-    "dev": {
-      "checked": 10,
-      "verified": 10
-    },
-    "feeder": {
       "checked": 12,
       "verified": 12
     },
+    "dev": {
+      "checked": 11,
+      "verified": 11
+    },
+    "feeder": {
+      "checked": 13,
+      "verified": 12
+    },
     "tumblr": {
-      "checked": 19,
-      "verified": 19
+      "checked": 20,
+      "verified": 20
     }
   }
 }
