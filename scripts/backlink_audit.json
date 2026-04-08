@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T14:04:42.074684+00:00",
+  "generated_at": "2026-04-08T17:33:59.039540+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -244,10 +244,25 @@
       }
     },
     "engine-stalls-at-stop-sign-causes": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/engine-stalls-at-stop-signs-causes-and.html",
+        "verified": true
+      },
       "dev": {
-        "reason": "no_url",
-        "url": "",
-        "verified": null
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/engine-stalls-at-stop-signs-causes-and-fixes-3p69",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "slug_mismatch",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/engine-stalls-at-stop-sign-causes-tips/",
+        "verified": false
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813342265689915392/engine-stalls-at-stop-sign-causes",
+        "verified": true
       }
     },
     "tow-truck-damaged-my-car-who-pays": {
@@ -330,6 +345,28 @@
         "verified": true
       }
     },
+    "towing-cost-houston-texas-sunday-emergency": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/sunday-emergency-towing-costs-in.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/sunday-emergency-towing-costs-in-houston-what-youll-pay-right-now-1hc0",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "slug_mismatch",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-houston-texas-sunday-emergency-advice/",
+        "verified": false
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813335695099854848/towing-cost-houston-texas-sunday-emergency",
+        "verified": true
+      }
+    },
     "towing-cost-phoenix-arizona": {
       "blog": {
         "reason": "ok",
@@ -392,20 +429,20 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 12,
-      "verified": 12
+      "checked": 14,
+      "verified": 14
     },
     "dev": {
-      "checked": 11,
-      "verified": 11
+      "checked": 13,
+      "verified": 13
     },
     "feeder": {
-      "checked": 13,
+      "checked": 15,
       "verified": 12
     },
     "tumblr": {
-      "checked": 20,
-      "verified": 20
+      "checked": 22,
+      "verified": 22
     }
   }
 }
