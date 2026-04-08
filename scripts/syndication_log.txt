@@ -760,3 +760,27 @@
 [2026-04-07 09:53:53] SYNCED | towing-cost-phoenix-arizona marked in synced-posts.txt
 [2026-04-07 09:53:53] BACKLOG: Backlog run complete: 4/4 succeeded for towing-cost-phoenix-arizona
 [2026-04-07 09:53:53] BACKLOG: Total progress: 19/77 posts synced
+[2026-04-08 05:31:05] === SYNDICATE START: car-wont-shift-into-drive-need-tow-truck ===
+[2026-04-08 05:31:05] PREFLIGHT | title: Car Won't Shift Into Drive: Need a Tow Truck?
+[2026-04-08 05:31:05] PREFLIGHT | date: 2026-04-08
+[2026-04-08 05:31:05] PREFLIGHT | timestamp: 2026-04-08 05:31:05
+[2026-04-08 05:31:05] PREFLIGHT | DEVTO:   configured
+[2026-04-08 05:31:05] PREFLIGHT | TUMBLR:  configured
+[2026-04-08 05:31:05] PREFLIGHT | BLOGGER: configured
+[2026-04-08 05:31:05] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-08 05:31:05] DEVTO | car-wont-shift-into-drive-need-tow-truck | START
+[2026-04-08 05:31:05] DEVTO | car-wont-shift-into-drive-need-tow-truck | SUCCESS | https://dev.to/towwiththeflowyoo/car-wont-shift-into-drive-need-a-tow-truck-1lpn
+[2026-04-08 05:31:05] --- waiting 60s before next platform ---
+[2026-04-08 05:32:05] TUMBLR | car-wont-shift-into-drive-need-tow-truck | START
+[2026-04-08 05:32:06] TUMBLR | car-wont-shift-into-drive-need-tow-truck | SUCCESS | https://towwiththeflow.tumblr.com/post/813325799706017792
+[2026-04-08 05:32:06] --- waiting 60s before next platform ---
+[2026-04-08 05:33:06] BLOGGER | car-wont-shift-into-drive-need-tow-truck | START
+[2026-04-08 05:33:06] BLOGGER | car-wont-shift-into-drive-need-tow-truck | step 1/3: refreshing access token
+[2026-04-08 05:33:06] BLOGGER | car-wont-shift-into-drive-need-tow-truck | step 2/3: converting markdown to HTML
+[2026-04-08 05:33:06] BLOGGER | car-wont-shift-into-drive-need-tow-truck | step 3/3: posting to blog 8497274145791324308
+[2026-04-08 05:33:06] BLOGGER | car-wont-shift-into-drive-need-tow-truck | SUCCESS | https://denverroadsideguide.blogspot.com/2026/04/car-wont-shift-into-drive-need-tow-truck.html
+[2026-04-08 05:33:06] --- waiting 60s before next platform ---
+[2026-04-08 05:34:06] FEEDER | car-wont-shift-into-drive-need-tow-truck | START
+[2026-04-08 05:34:07] FEEDER | car-wont-shift-into-drive-need-tow-truck | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-wont-shift-into-drive-need-tow-truck-advice/
+[2026-04-08 05:34:07] === SYNDICATE DONE: car-wont-shift-into-drive-need-tow-truck | 4/4 succeeded | 4 attempted | 0 failed ===
+[2026-04-08 05:34:07] SYNCED | car-wont-shift-into-drive-need-tow-truck marked in synced-posts.txt
