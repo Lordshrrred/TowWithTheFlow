@@ -81,6 +81,7 @@ LOG_FILE       = Path(__file__).parent / "syndication_log.txt"
 SYNCED_FILE    = Path(__file__).parent / "synced-posts.txt"
 FEEDER_OWNER   = "Lordshrrred"
 FEEDER_REPO    = "TWTF_Feeder"
+FEEDER_SUFFIXES = ["-tips", "-advice", "-help", "-guide"]
 
 # Backlink block injected when missing
 BACKLINK_TMPL = (
@@ -217,6 +218,12 @@ def get_variation(body: str, platform: str, slug: str) -> str:
         return body
 
 
+def pick_feeder_suffix(source_slug: str) -> str:
+    """Match feeder variation slugging so one source post maps to one feeder post."""
+    idx = int(hashlib.md5(source_slug.encode("utf-8")).hexdigest(), 16) % len(FEEDER_SUFFIXES)
+    return FEEDER_SUFFIXES[idx]
+
+
 # ── Platform: Dev.to ──────────────────────────────────────────────────────────
 def syndicate_devto(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     if not DEVTO_API_KEY:
@@ -288,7 +295,8 @@ def syndicate_tumblr(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     canonical = f"{BASE_URL}/{slug}/"
     varied_body = get_variation(body, "Tumblr", slug)
     plain = strip_markdown(varied_body)
-    body_text = f"{meta.get('title', slug)}\n\n{plain}"
+    attribution = f"Originally published on Tow With The Flow: {canonical}"
+    body_text = f"{meta.get('title', slug)}\n\n{attribution}\n\n{plain}"
 
     cta_label    = "Read the full guide on TowWithTheFlow.com"
     cta_sentence = f"{cta_label}: {canonical}"
@@ -405,7 +413,11 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     log(f"BLOGGER | {slug} | step 2/3: converting markdown to HTML")
     canonical = f"{BASE_URL}/{slug}/"
     varied_body = get_variation(body, "Blogger", slug)
-    html_content = md_to_html(varied_body)
+    source_note = (
+        f'<p><em>Originally published on '
+        f'<a href="{canonical}">Tow With The Flow</a>.</em></p>'
+    )
+    html_content = source_note + "\n" + md_to_html(varied_body)
 
     log(f"BLOGGER | {slug} | step 3/3: posting to blog {BLOGGER_BLOG_ID}")
     try:
@@ -435,8 +447,8 @@ def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     canonical = f"{BASE_URL}/{slug}/"
     varied_body = get_variation(body, "Feeder", slug)
 
-    # Build a feeder slug (add -guide suffix if not already varied)
-    feeder_slug = f"{slug}-guide" if not slug.endswith("-guide") else slug
+    # Match the feeder workflow's deterministic suffixing so we only maintain one support URL per source post.
+    feeder_slug = f"{slug}{pick_feeder_suffix(slug)}"
     feeder_url  = f"https://lordshrrred.github.io/TWTF_Feeder/{feeder_slug}/"
 
     today = date.today().isoformat()
