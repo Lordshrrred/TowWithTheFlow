@@ -1,6 +1,8 @@
 ---
 image: "/images/tow-content-log/hero.jpg"
 title: "Content Publishing Log"
+description: "Internal publishing log for Tow With The Flow content updates."
+robots: "noindex,follow"
 draft: false
 ---
 

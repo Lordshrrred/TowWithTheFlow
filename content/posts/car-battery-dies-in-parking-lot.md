@@ -166,6 +166,6 @@ Usually yes. If you're in a public lot, let management know. Most shopping cente
 
 ## Need a Tow or Jump Start?
 
-If you're stuck right now and need help, [contact us here](/). We can connect you with a local tow service fast. Whether you need a jump, a tow to the nearest shop, or just someone to talk you through your options, don't sit in that parking lot longer than you have to.
+If you're stuck right now and need help, [contact us here](/contact/). We can point you toward the right next step and help you think through your options without guessing.
 
 Also see: [Does Insurance Cover Towing After an Accident?](/posts/does-insurance-cover-towing-after-accident/) and [Can You Call a Tow Truck Without Insurance?](/posts/can-you-call-a-tow-truck-without-insurance/)

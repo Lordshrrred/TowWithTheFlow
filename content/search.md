@@ -2,6 +2,7 @@
 title: "Search Guides"
 type: "page"
 description: "Search all car breakdown and roadside emergency guides on Tow With The Flow."
+robots: "noindex,follow"
 ---
 
 <div class="search-results">
@@ -28,7 +29,7 @@ description: "Search all car breakdown and roadside emergency guides on Tow With
 
       function render(results) {
         if (!results.length) {
-          list.innerHTML = '<p style="color:var( - text-dim); padding: 1rem 0;">No results found. Try different keywords.</p>';
+          list.innerHTML = '<p style="color:var(--text-dim); padding: 1rem 0;">No results found. Try different keywords.</p>';
           return;
         }
         list.innerHTML = results.map(function(r) {
@@ -49,7 +50,7 @@ description: "Search all car breakdown and roadside emergency guides on Tow With
       });
     })
     .catch(function() {
-      list.innerHTML = '<p style="color:var( - text-dim);">Search unavailable. Try browsing <a href="/posts/">all guides</a>.</p>';
+      list.innerHTML = '<p style="color:var(--text-dim);">Search unavailable. Try browsing <a href="/posts/">all guides</a>.</p>';
     });
 })();
 </script>

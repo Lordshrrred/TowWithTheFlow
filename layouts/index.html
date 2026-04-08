@@ -3,16 +3,19 @@
 <!-- Hero -->
 <section class="hero">
   <div class="container">
-    <h1 class="hero__title">Real Answers When Your Car Breaks Down</h1>
-    <p class="hero__sub">No fluff. No runaround. Just what to do next.</p>
-    <form class="search-bar" action="{{ "/search/" | relURL }}" method="get">
-      <input type="text" name="q" placeholder="e.g. car won't start, towing cost..." aria-label="Search guides">
-      <button type="submit">Find Your Answer</button>
-    </form>
-    <div class="hero__stats">
-      <span>{{ len (where .Site.RegularPages "Type" "posts") }} guides</span>
-      <span>Updated daily</span>
-      <span>No signup needed</span>
+    <div class="hero__eyebrow">Calm, practical roadside advice</div>
+    <div class="hero__panel">
+      <h1 class="hero__title">Real Answers When Your Car Breaks Down</h1>
+      <p class="hero__sub">Helpful, fast, plain-English guidance for the moments when you need to know what to do next without second-guessing it.</p>
+      <form class="search-bar" action="{{ "/search/" | relURL }}" method="get">
+        <input type="text" name="q" placeholder="e.g. car won't start, towing cost..." aria-label="Search guides">
+        <button type="submit">Find Your Answer</button>
+      </form>
+      <div class="hero__stats">
+        <span>{{ len (where .Site.RegularPages "Type" "posts") }} guides</span>
+        <span>Updated daily</span>
+        <span>No signup needed</span>
+      </div>
     </div>
   </div>
 </section>

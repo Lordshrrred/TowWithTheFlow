@@ -154,6 +154,6 @@ Most established towing companies in Denver operate 24/7. Response times at 3am 
 
 ## Need a Tow Truck in Denver Right Now?
 
-Don't sit on the side of I-25 longer than you have to. [Get connected with a local tow service fast](/). Whether you're downtown, in Aurora, near the Tech Center, or on the highway, we can help you find a tow truck quickly.
+Don't sit on the side of I-25 longer than you have to. [Contact us](/contact/) if you found an issue in this guide or want us to cover a Denver towing scenario in more detail.
 
 And if you're not sure whether your situation needs a tow or just a jump start, check out our guide: [Roadside Assistance vs. Towing: Which Do You Actually Need?](/posts/towing-cost-vs-roadside-assistance-comparison/)
