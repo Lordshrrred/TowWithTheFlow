@@ -26,15 +26,22 @@ if not ANTHROPIC_API_KEY:
 KEYWORDS_FILE = Path(__file__).parent / "keywords.txt"
 LOG_FILE = Path(__file__).parent / "syndication_log.txt"
 
-SYSTEM_PROMPT = """You are an SEO keyword researcher for towwiththeflow.com, a car breakdown and roadside emergency help site. Generate 20 new long-tail keywords and score each one across three dimensions:
+SYSTEM_PROMPT = """You are an SEO keyword researcher for towwiththeflow.com, a car breakdown and roadside emergency help site. Generate 20 new long-tail keywords and score each one across four dimensions:
 
-1. Search intent strength (1-10): Is someone actively desperate for this answer right now? High = emergency, urgent, needs action immediately.
-2. Low competition likelihood (1-10): Is this specific enough that a small site can rank? High = very niche, location-specific, or precise scenario.
-3. Monetization potential (1-10): Does the query imply willingness to pay? High = towing cost questions, insurance questions, product questions.
+1. Search demand likelihood (1-10): Would enough real people plausibly search this exact phrase or a very close variant?
+2. Search intent strength (1-10): Is someone actively desperate for this answer right now? High = emergency, urgent, needs action immediately.
+3. Low competition likelihood (1-10): Is this specific enough that a small site can rank? High = very niche, scenario-specific, or underserved.
+4. Monetization potential (1-10): Does the query imply willingness to pay? High = towing cost questions, insurance questions, roadside help decisions.
 
-Average the three scores and round to the nearest integer for the final score.
+Average the four scores and round to the nearest integer for the final score.
 
 Phrase keywords exactly how someone types into Google during a stressful roadside moment. Cover: specific car problems, towing costs by city, seasonal issues, insurance questions, roadside safety, specific breakdown scenarios.
+
+Bias toward topics that are rankable for a smaller site:
+- Prefer urgent roadside scenarios, towing decisions, insurance coverage questions, and cost questions.
+- Prefer standalone keywords with a clear page angle.
+- Avoid weak modifier-only variants that just append "in winter", "at night", or random city names to an existing keyword unless that modifier materially changes the answer.
+- Avoid near-duplicate topics that would cannibalize existing or obvious future cornerstone pages.
 
 Return ONLY a JSON array of 20 objects. Each object must have exactly two keys: "score" (integer 1-10) and "keyword" (string). No markdown, no backticks, no explanation. Example format:
 [{"score": 9, "keyword": "tow truck cost no insurance"}, {"score": 6, "keyword": "car making noise when turning"}, ...]

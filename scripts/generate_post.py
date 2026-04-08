@@ -13,7 +13,6 @@ import argparse
 import os
 import re
 import sys
-import random
 import subprocess
 import hashlib
 import json
@@ -49,8 +48,6 @@ PEXELS_INDEX_FILE = IMAGES_DIR / "_pexels_index.json"
 KEYWORDS_FILE = Path(__file__).parent / "keywords.txt"
 POSTS_DIR = ROOT / "content" / "posts"
 POSTS_DIR.mkdir(parents=True, exist_ok=True)
-
-CITIES = ["Denver", "Houston", "Phoenix", "Atlanta", "Chicago", "Seattle", "Dallas", "Miami"]
 
 SYSTEM_PROMPT = """You are writing a page for towwiththeflow.com, a car breakdown and roadside emergency help site. Write in the voice of a knowledgeable mechanic who is direct and wastes no words.
 
@@ -353,18 +350,70 @@ def mark_done(keyword: str):
     KEYWORDS_FILE.write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
+LOW_SIGNAL_MODIFIERS = [
+    " in winter",
+    " at night",
+    " in denver",
+    " in houston",
+    " in phoenix",
+    " in atlanta",
+    " in chicago",
+    " in seattle",
+    " in dallas",
+    " in miami",
+]
+
+
 def append_long_tails(keyword: str):
-    """Add 3 long-tail variations to keywords.txt"""
-    city = random.choice(CITIES)
-    variations = [
-        f"{keyword} in winter",
-        f"{keyword} at night",
-        f"{keyword} in {city}",
-    ]
+    """Append only a couple of supporting variations when they add a new angle."""
+    lowered = keyword.lower()
+    if any(token in lowered for token in LOCAL_INDICATORS):
+        print(f"Skipping supporting variations for local keyword: {keyword}")
+        return
+    if any(token in lowered for token in [" in winter", " at night", " after hours", " near me"]):
+        print(f"Skipping supporting variations for modifier-heavy keyword: {keyword}")
+        return
+
+    candidates = []
+    if "tow" in lowered or "towing" in lowered:
+        candidates.extend([
+            f"[5] {keyword} insurance coverage",
+            f"[5] {keyword} roadside assistance",
+        ])
+    elif "cost" in lowered or "price" in lowered:
+        candidates.extend([
+            f"[5] {keyword} after hours",
+            f"[4] {keyword} without insurance",
+        ])
+    else:
+        candidates.extend([
+            f"[4] {keyword} can i drive",
+            f"[4] {keyword} repair cost",
+        ])
+
+    existing = {
+        _parse_keyword_line(line.replace("# DONE", "").strip())[0].lower()
+        for line in KEYWORDS_FILE.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    }
+    to_add = []
+    for raw in candidates:
+        variant, _score = _parse_keyword_line(raw)
+        if variant.lower() in existing:
+            continue
+        if any(variant.lower().endswith(modifier) for modifier in LOW_SIGNAL_MODIFIERS):
+            continue
+        to_add.append(raw)
+        existing.add(variant.lower())
+
+    if not to_add:
+        print(f"No new supporting variations to append for: {keyword}")
+        return
+
     with KEYWORDS_FILE.open('a', encoding='utf-8') as f:
-        for v in variations:
-            f.write(v + '\n')
-    print(f"Appended 3 long-tail variations for: {keyword}")
+        for variation in to_add:
+            f.write(variation + '\n')
+    print(f"Appended {len(to_add)} supporting variations for: {keyword}")
 
 
 def generate_post(keyword: str) -> str:
