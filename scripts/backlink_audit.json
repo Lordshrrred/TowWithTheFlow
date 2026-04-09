@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T09:42:24.170029+00:00",
+  "generated_at": "2026-04-09T14:16:30.862150+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -54,6 +54,28 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812510478983151616/car-died-while-driving-what-now",
+        "verified": true
+      }
+    },
+    "car-leaking-fluid-underneath-emergency-tow": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-leaking-fluid-underneath-when-you.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/car-leaking-fluid-underneath-when-you-need-emergency-tow-253n",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-leaking-fluid-underneath-emergency-tow-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813416411711029248/car-leaking-fluid-underneath-emergency-tow",
         "verified": true
       }
     },
@@ -429,20 +451,20 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
+      "checked": 15,
+      "verified": 15
+    },
+    "dev": {
       "checked": 14,
       "verified": 14
     },
-    "dev": {
-      "checked": 13,
+    "feeder": {
+      "checked": 16,
       "verified": 13
     },
-    "feeder": {
-      "checked": 15,
-      "verified": 12
-    },
     "tumblr": {
-      "checked": 22,
-      "verified": 22
+      "checked": 23,
+      "verified": 23
     }
   }
 }
