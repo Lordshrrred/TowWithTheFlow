@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T14:16:30.862150+00:00",
+  "generated_at": "2026-04-09T17:33:37.007053+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -335,6 +335,50 @@
         "verified": true
       }
     },
+    "towing-cost-atlanta-georgia": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-what.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-atlanta-georgia-what-youll-pay-and-what-to-do-4b3c",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "slug_mismatch",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-atlanta-georgia-advice/",
+        "verified": false
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813433278906417152/towing-cost-atlanta-georgia",
+        "verified": true
+      }
+    },
+    "towing-cost-atlanta-georgia-holiday-weekend": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-holiday.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-atlanta-georgia-holiday-weekend-what-youll-pay-1njj",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-atlanta-georgia-holiday-weekend-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813426983183728640/towing-cost-atlanta-georgia-holiday-weekend",
+        "verified": true
+      }
+    },
     "towing-cost-denver-colorado": {
       "tumblr": {
         "reason": "ok",
@@ -451,20 +495,20 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 15,
-      "verified": 15
+      "checked": 17,
+      "verified": 17
     },
     "dev": {
-      "checked": 14,
-      "verified": 14
+      "checked": 16,
+      "verified": 16
     },
     "feeder": {
-      "checked": 16,
-      "verified": 13
+      "checked": 18,
+      "verified": 14
     },
     "tumblr": {
-      "checked": 23,
-      "verified": 23
+      "checked": 25,
+      "verified": 25
     }
   }
 }
