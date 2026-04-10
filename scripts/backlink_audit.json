@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T13:52:25.624800+00:00",
+  "generated_at": "2026-04-10T17:09:35.870869+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -309,6 +309,28 @@
         "verified": true
       }
     },
+    "how-long-can-a-car-sit-broken-down-on-roadside": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/how-long-can-car-sit-broken-down-on.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/how-long-can-a-car-sit-broken-down-on-the-roadside-5c6k",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-long-can-a-car-sit-broken-down-on-roadside-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813520847332589568/how-long-can-a-car-sit-broken-down-on-roadside",
+        "verified": true
+      }
+    },
     "tow-truck-damaged-my-car-who-pays": {
       "dev": {
         "reason": "ok",
@@ -455,6 +477,28 @@
         "verified": true
       }
     },
+    "towing-cost-miami-florida-hurricane-season": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-miami-florida-hurricane.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-miami-florida-hurricane-season-what-youll-pay-4h8b",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "slug_mismatch",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-miami-florida-hurricane-season-help/",
+        "verified": false
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813516021934768128/towing-cost-miami-florida-hurricane-season",
+        "verified": true
+      }
+    },
     "towing-cost-phoenix-arizona": {
       "blog": {
         "reason": "ok",
@@ -517,20 +561,20 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 18,
-      "verified": 18
+      "checked": 20,
+      "verified": 20
     },
     "dev": {
-      "checked": 17,
-      "verified": 17
+      "checked": 19,
+      "verified": 19
     },
     "feeder": {
-      "checked": 19,
-      "verified": 14
+      "checked": 21,
+      "verified": 15
     },
     "tumblr": {
-      "checked": 26,
-      "verified": 26
+      "checked": 28,
+      "verified": 28
     }
   }
 }
