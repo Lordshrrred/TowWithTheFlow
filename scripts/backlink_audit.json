@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T09:40:24.160305+00:00",
+  "generated_at": "2026-04-10T13:52:25.624800+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -140,6 +140,28 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812797405981491200/car-shakes-while-driving-slow-speeds",
+        "verified": true
+      }
+    },
+    "car-shaking-violently-while-driving-tow-needed": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-shaking-violently-while-driving.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/car-shaking-violently-while-driving-when-you-need-a-tow-3k33",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "slug_mismatch",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-shaking-violently-while-driving-tow-needed-advice/",
+        "verified": false
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813506665373728768/car-shaking-violently-while-driving-tow-needed",
         "verified": true
       }
     },
@@ -495,20 +517,20 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
+      "checked": 18,
+      "verified": 18
+    },
+    "dev": {
       "checked": 17,
       "verified": 17
     },
-    "dev": {
-      "checked": 16,
-      "verified": 16
-    },
     "feeder": {
-      "checked": 18,
+      "checked": 19,
       "verified": 14
     },
     "tumblr": {
-      "checked": 25,
-      "verified": 25
+      "checked": 26,
+      "verified": 26
     }
   }
 }
