@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-04-11T03:43:06.469015+00:00",
+  "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/hello-world/"
+  ],
+  "site": "https://towwiththeflowyo.wordpress.com",
+  "slugs": {
+    "car-died-while-driving-what-now": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-died-while-driving-what-now/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+        "verified": true
+      }
+    },
+    "engine-stalls-at-stop-sign-causes": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/engine-stalls-at-stop-sign-causes/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
+        "verified": true
+      }
+    },
+    "hello-world": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/hello-world/",
+        "verified": false
+      }
+    }
+  },
+  "source": "wordpress-sitemap-scan",
+  "summary": {
+    "wordpress": {
+      "checked": 3,
+      "verified": 2
+    }
+  }
+}

@@ -593,7 +593,7 @@ async function buildPostDateMap(slugs){
 
 // ── Load all ──────────────────────────────────────────────────────────────────
 async function loadDashboard(){
-  const [logTxt,syncedTxt,wpSyncedTxt,kwTxt,ghTree,feederTree,deployInfo,auditJson] = await Promise.all([
+  const [logTxt,syncedTxt,wpSyncedTxt,kwTxt,ghTree,feederTree,deployInfo,auditJson,wpAuditJson] = await Promise.all([
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/syndication_log.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/synced-posts.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/wordpress-synced-posts.txt`),
@@ -602,6 +602,7 @@ async function loadDashboard(){
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${FEEDER_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}),
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/commits/main`,{headers:ghHdrs()}),
     fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/backlink_audit.json`),
+    fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/wordpress_backlink_audit.json`),
   ]);
 
   const logMap     = parseLog(logTxt);
@@ -630,6 +631,7 @@ async function loadDashboard(){
 
   // Apply server-side backlink audit first (authoritative), then browser fallback checks.
   applyServerAudit(auditJson, logMap);
+  applyServerAudit(wpAuditJson, logMap);
   updateBacklinkHealthCard(logMap, feederSet);
   runBacklinkChecks(logMap, feederSet);
 }

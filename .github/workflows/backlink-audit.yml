@@ -9,6 +9,7 @@ on:
     paths:
       - scripts/syndication_log.txt
       - scripts/audit_backlinks.py
+      - scripts/audit_wordpress_site.py
 
 permissions:
   contents: write
@@ -34,14 +35,16 @@ jobs:
       - name: Install deps
         run: pip install requests
 
-      - name: Run backlink audit
-        run: python scripts/audit_backlinks.py
+      - name: Run backlink audits
+        run: |
+          python scripts/audit_backlinks.py
+          python scripts/audit_wordpress_site.py
 
       - name: Commit audit json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add scripts/backlink_audit.json
+          git add scripts/backlink_audit.json scripts/wordpress_backlink_audit.json
           if git diff --staged --quiet; then
             echo "No backlink audit changes"
             exit 0
