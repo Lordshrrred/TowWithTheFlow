@@ -1015,6 +1015,7 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
     const br=results[p];
     const pr=platData[p];
     const hadSuccess=!!(pr&&pr.status==="success");
+    const hasAuditEntry=!!br;
     const recoveredLive=!!(br&&br.recovered_live&&br.verified);
     const liveFromAudit=!!(br&&br.verified&&br.url);
     const targetUrl=normalizePlatformUrl(p, slug, (br&&br.url)|| (pr&&pr.url) || "");
@@ -1046,7 +1047,7 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
     }
 
     el.classList.remove("bl-ok","bl-bad","bl-unknown");
-    if(!hadSuccess && !recoveredLive && !liveFromAudit){
+    if(!hadSuccess && !hasAuditEntry && !recoveredLive && !liveFromAudit){
       continue; // keep original fail/na state
     }
 
@@ -1123,7 +1124,7 @@ function updateBacklinkCell(slug, results, platData){
   for(const p of ACTIVE_PLATS){
     const pr=platData[p];
     const br=results[p];
-    const include = !!(pr&&pr.status==="success") || !!(br&&br.recovered_live);
+    const include = !!(pr&&pr.status==="success") || !!br || !!(br&&br.recovered_live);
     if(!include){ details.push(`${PLAT_LABEL[p]}:—`); continue; }
     if(!br){ unknown++; details.push(`${PLAT_LABEL[p]}:?`); continue; }
     if(br.verified===null){ unknown++; details.push(`${PLAT_LABEL[p]}:?`); continue; }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T03:44:17.551367+00:00",
+  "generated_at": "2026-04-11T04:37:43.219775+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -58,6 +58,11 @@
       }
     },
     "car-died-while-driving-what-now": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-died-while-driving-what-now.html",
+        "verified": true
+      },
       "dev": {
         "reason": "no_url",
         "url": "",
@@ -619,8 +624,8 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 20,
-      "verified": 20
+      "checked": 21,
+      "verified": 21
     },
     "dev": {
       "checked": 19,
