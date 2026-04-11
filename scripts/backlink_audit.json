@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T13:32:25.394645+00:00",
+  "generated_at": "2026-04-11T16:56:44.164681+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -374,6 +374,12 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813520847332589568/how-long-can-a-car-sit-broken-down-on-roadside",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
+        "verified": true
       }
     },
     "tire-blowout-highway-emergency-tow-cost": {
@@ -455,6 +461,12 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813433278906417152/towing-cost-atlanta-georgia",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-atlanta-georgia/",
+        "verified": true
       }
     },
     "towing-cost-atlanta-georgia-holiday-weekend": {
@@ -476,6 +488,23 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813426983183728640/towing-cost-atlanta-georgia-holiday-weekend",
+        "verified": true
+      }
+    },
+    "towing-cost-chicago-illinois": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-chicago-illinois-what-youll-pay-and-what-to-do-roadside-tips-35g9",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-chicago-illinois-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813610701321093120/towing-cost-chicago-illinois",
         "verified": true
       }
     },
@@ -553,6 +582,12 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813516021934768128/towing-cost-miami-florida-hurricane-season",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
+        "verified": true
       }
     },
     "towing-cost-phoenix-arizona": {
@@ -599,6 +634,23 @@
         "verified": true
       }
     },
+    "towing-cost-portland-oregon-rainy-weather": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-portland-oregon-rainy-weather-what-to-expect-quick-guide-442k",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-portland-oregon-rainy-weather-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813605414798327808/towing-cost-portland-oregon-rainy-weather",
+        "verified": true
+      }
+    },
     "what-happens-if-you-run-out-of-oil-while-driving": {
       "dev": {
         "reason": "no_url",
@@ -633,20 +685,20 @@
       "verified": 0
     },
     "dev": {
-      "checked": 20,
-      "verified": 20
+      "checked": 22,
+      "verified": 22
     },
     "feeder": {
-      "checked": 30,
-      "verified": 30
+      "checked": 32,
+      "verified": 32
     },
     "tumblr": {
-      "checked": 29,
-      "verified": 29
+      "checked": 31,
+      "verified": 31
     },
     "wordpress": {
-      "checked": 2,
-      "verified": 2
+      "checked": 5,
+      "verified": 5
     }
   }
 }
