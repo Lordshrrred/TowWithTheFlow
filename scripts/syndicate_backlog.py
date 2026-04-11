@@ -233,7 +233,7 @@ def send_completion_email(total: int):
     body = (
         "Hey Matt,\n\n"
         "All posts on Tow With The Flow have been fully syndicated\n"
-        "across Dev.to, Tumblr, Blogger, and Feeder.\n\n"
+        "across Dev.to, Tumblr, Blogger, WordPress, and Feeder.\n\n"
         f"Total posts synced: {total}\n\n"
         "The daily automation is now running on its own.\n"
         "New posts will continue to syndicate automatically.\n\n"
@@ -357,7 +357,7 @@ def main():
     post_date, slug = backlog[0]
     log(f"Syndicating backlog: {slug}  (post date={post_date})")
 
-    # Delegate to the full 4-platform engine in syndicate_post.py.
+    # Delegate to the full 5-platform engine in syndicate_post.py.
     # Enforces: backlink check, 60s waits between attempted platforms,
     # failure alerts, and marks synced-posts.txt on success.
     try:
@@ -366,7 +366,7 @@ def main():
         _sys.path.insert(0, str(Path(__file__).parent))
         from syndicate_post import run_syndication
         successes, failures = run_syndication(slug)
-        log(f"Backlog run complete: {successes}/4 succeeded for {slug}")
+        log(f"Backlog run complete: {successes}/5 succeeded for {slug}")
     except Exception as e:
         log(f"ERROR: syndicate_post.run_syndication failed: {e}")
         mark_synced(slug)

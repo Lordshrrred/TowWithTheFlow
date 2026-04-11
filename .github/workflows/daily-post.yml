@@ -7,6 +7,7 @@ on:
     - cron: '30 10 * * *'  # 10:30 UTC (04:30 Denver, MDT) — syndicate general post
     - cron: '30 12 * * *'  # 12:30 UTC (06:30 Denver, MDT) — syndicate local post
     - cron: '30 14 * * *'  # 14:30 UTC (08:30 Denver, MDT) — syndicate 1 backlog post
+    - cron: '35 14 * * *'  # 14:35 UTC (08:35 Denver, MDT) — syndicate 1 WordPress backlog post
   workflow_dispatch:
     inputs:
       job:
@@ -20,6 +21,7 @@ on:
           - syndicate-new-1
           - syndicate-new-2
           - syndicate-backlog
+          - syndicate-wordpress-backlog
 
 permissions:
   contents: write
@@ -200,6 +202,9 @@ jobs:
           BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          PUBLER_API_KEY: ${{ secrets.PUBLER_API_KEY }}
+          PUBLER_WORKSPACE_ID: ${{ secrets.PUBLER_WORKSPACE_ID }}
+          PUBLER_WORDPRESS_ACCOUNT_ID: ${{ secrets.PUBLER_WORDPRESS_ACCOUNT_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
@@ -255,6 +260,9 @@ jobs:
           BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          PUBLER_API_KEY: ${{ secrets.PUBLER_API_KEY }}
+          PUBLER_WORKSPACE_ID: ${{ secrets.PUBLER_WORKSPACE_ID }}
+          PUBLER_WORDPRESS_ACCOUNT_ID: ${{ secrets.PUBLER_WORDPRESS_ACCOUNT_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
@@ -310,6 +318,9 @@ jobs:
           BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          PUBLER_API_KEY: ${{ secrets.PUBLER_API_KEY }}
+          PUBLER_WORKSPACE_ID: ${{ secrets.PUBLER_WORKSPACE_ID }}
+          PUBLER_WORDPRESS_ACCOUNT_ID: ${{ secrets.PUBLER_WORDPRESS_ACCOUNT_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
@@ -325,4 +336,56 @@ jobs:
         run: |
           git add scripts/synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: backlog syndication $(date +%Y-%m-%d)"
+          git push
+
+  syndicate-wordpress-backlog:
+    runs-on: ubuntu-latest
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '35 14 * * *') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.job == 'syndicate-wordpress-backlog')
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install anthropic python-dotenv requests requests-oauthlib
+
+      - name: Syndicate WordPress backlog post (oldest missing WordPress)
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
+          TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
+          TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
+          TUMBLR_TOKEN_SECRET: ${{ secrets.TUMBLR_TOKEN_SECRET }}
+          TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          PUBLER_API_KEY: ${{ secrets.PUBLER_API_KEY }}
+          PUBLER_WORKSPACE_ID: ${{ secrets.PUBLER_WORKSPACE_ID }}
+          PUBLER_WORDPRESS_ACCOUNT_ID: ${{ secrets.PUBLER_WORDPRESS_ACCOUNT_ID }}
+          PUBLER_WORDPRESS_CATEGORY_IDS: ${{ secrets.PUBLER_WORDPRESS_CATEGORY_IDS }}
+          PUBLER_WORDPRESS_TAG_IDS: ${{ secrets.PUBLER_WORDPRESS_TAG_IDS }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python scripts/syndicate_wordpress_backlog.py
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit WordPress backlog results
+        run: |
+          git add scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
+          git diff --staged --quiet || git commit -m "Auto: WordPress backlog syndication $(date +%Y-%m-%d)"
           git push

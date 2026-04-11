@@ -1,11 +1,17 @@
 {
-  "generated_at": "2026-04-11T03:21:34.229738+00:00",
+  "generated_at": "2026-04-11T03:38:39.565623+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
         "reason": "no_url",
         "url": "",
         "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/battery-dead-but-lights-turn-on-help/",
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -39,6 +45,12 @@
       }
     },
     "can-you-call-a-tow-truck-without-insurance": {
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/can-you-call-a-tow-truck-without-insurance-tips/",
+        "verified": true
+      },
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812417750066724864/can-you-call-a-tow-truck-without-insurance",
@@ -51,9 +63,20 @@
         "url": "",
         "verified": null
       },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-died-while-driving-what-now-tips/",
+        "verified": true
+      },
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812510478983151616/car-died-while-driving-what-now",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
         "verified": true
       }
     },
@@ -84,6 +107,12 @@
         "reason": "no_url",
         "url": "",
         "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-makes-grinding-noise-when-driving-advice/",
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -137,6 +166,12 @@
         "url": "",
         "verified": null
       },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-shakes-while-driving-slow-speeds-advice/",
+        "verified": true
+      },
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812797405981491200/car-shakes-while-driving-slow-speeds",
@@ -155,9 +190,9 @@
         "verified": true
       },
       "feeder": {
-        "reason": "slug_mismatch",
+        "reason": "ok",
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-shaking-violently-while-driving-tow-needed-advice/",
-        "verified": false
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -178,7 +213,7 @@
       },
       "feeder": {
         "reason": "ok",
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-smoking-from-hood-need-tow-truck-now-guide/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-smoking-from-hood-need-tow-truck-now-tips/",
         "verified": true
       },
       "tumblr": {
@@ -199,9 +234,9 @@
         "verified": true
       },
       "feeder": {
-        "reason": "slug_mismatch",
+        "reason": "ok",
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-shift-into-drive-need-tow-truck-advice/",
-        "verified": false
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -214,6 +249,12 @@
         "reason": "no_url",
         "url": "",
         "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-clicking-noise-what-to-do-tips/",
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -234,7 +275,7 @@
       },
       "feeder": {
         "reason": "ok",
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-in-cold-weather-what-to-do-guide/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-in-cold-weather-what-to-do-advice/",
         "verified": true
       },
       "tumblr": {
@@ -278,7 +319,7 @@
       },
       "feeder": {
         "reason": "ok",
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/driving-in-snow-emergency-kit-checklist-guide/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/driving-in-snow-emergency-kit-checklist-tips/",
         "verified": true
       },
       "tumblr": {
@@ -299,13 +340,18 @@
         "verified": true
       },
       "feeder": {
-        "reason": "slug_mismatch",
+        "reason": "ok",
         "url": "https://lordshrrred.github.io/TWTF_Feeder/engine-stalls-at-stop-sign-causes-tips/",
-        "verified": false
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813342265689915392/engine-stalls-at-stop-sign-causes",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
         "verified": true
       }
     },
@@ -322,7 +368,7 @@
       },
       "feeder": {
         "reason": "ok",
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-long-can-a-car-sit-broken-down-on-roadside-guide/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-long-can-a-car-sit-broken-down-on-roadside-tips/",
         "verified": true
       },
       "tumblr": {
@@ -391,9 +437,9 @@
         "verified": true
       },
       "feeder": {
-        "reason": "slug_mismatch",
+        "reason": "ok",
         "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-atlanta-georgia-advice/",
-        "verified": false
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -467,9 +513,9 @@
         "verified": true
       },
       "feeder": {
-        "reason": "slug_mismatch",
+        "reason": "ok",
         "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-houston-texas-sunday-emergency-advice/",
-        "verified": false
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -489,9 +535,9 @@
         "verified": true
       },
       "feeder": {
-        "reason": "slug_mismatch",
+        "reason": "ok",
         "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-miami-florida-hurricane-season-help/",
-        "verified": false
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -548,6 +594,12 @@
         "reason": "no_url",
         "url": "",
         "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/what-happens-if-you-run-out-of-oil-while-driving-help/",
+        "verified": true
       }
     },
     "what-to-do-if-your-car-breaks-down-at-night": {
@@ -555,6 +607,12 @@
         "reason": "no_url",
         "url": "",
         "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/what-to-do-if-your-car-breaks-down-at-night-tips/",
+        "verified": true
       }
     }
   },
@@ -569,12 +627,16 @@
       "verified": 19
     },
     "feeder": {
-      "checked": 21,
-      "verified": 15
+      "checked": 29,
+      "verified": 29
     },
     "tumblr": {
       "checked": 28,
       "verified": 28
+    },
+    "wordpress": {
+      "checked": 2,
+      "verified": 2
     }
   }
 }

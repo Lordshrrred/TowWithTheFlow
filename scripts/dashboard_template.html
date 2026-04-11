@@ -353,6 +353,7 @@
               <th class="plat-h">DEV<button class="test-btn" onclick="testPlatform('dev',this)">test</button></th>
               <th class="plat-h">TUMBLR<button class="test-btn" onclick="testPlatform('tumblr',this)">test</button></th>
               <th class="plat-h">BLOG<button class="test-btn" onclick="testPlatform('blog',this)">test</button></th>
+              <th class="plat-h">WORDPRESS<button class="test-btn" onclick="testPlatform('wordpress',this)">test</button></th>
               <th class="plat-h">FEEDER<button class="test-btn" onclick="testPlatform('feeder',this)">test</button></th>
               <th>Backlink</th>
             </tr>
@@ -428,10 +429,13 @@
         <div class="bstat-row"><span class="bstat-label">Next Scheduled Post</span><span class="bstat-value">3:00 AM Denver daily (9:00 UTC)</span></div>
       </div>
       <div class="card">
-        <h3>Feeder Site <a class="bstat-link" href="https://lordshrrred.github.io/TWTF_Feeder/" target="_blank" rel="noopener">↗ lordshrrred.github.io/TWTF_Feeder</a></h3>
+        <h3>Syndication Destinations</h3>
         <div class="bstat-row"><span class="bstat-label">Total Feeder Posts</span><span class="bstat-value" id="bs-feeder-posts">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">WordPress Posts</span><span class="bstat-value" id="bs-wordpress-posts">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">WordPress Backlog</span><span class="bstat-value" id="bs-wordpress-backlog">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">WordPress Site</span><span class="bstat-value" id="bs-wordpress-site">Connected via Publer</span></div>
         <div class="bstat-row"><span class="bstat-label">Backlink Coverage</span><span class="bstat-value" id="bs-backlink">—</span></div>
-        <div class="bstat-row"><span class="bstat-label">Platform</span><span class="bstat-value">GitHub Pages</span></div>
+        <div class="bstat-row"><span class="bstat-label">Feeder Site</span><span class="bstat-value"><a class="bstat-link" href="https://lordshrrred.github.io/TWTF_Feeder/" target="_blank" rel="noopener">lordshrrred.github.io/TWTF_Feeder ↗</a></span></div>
         <div class="bstat-row"><span class="bstat-label">Last Checked</span><span class="bstat-value" id="bs-feeder-checked">—</span></div>
       </div>
     </div>
@@ -455,10 +459,11 @@ const TWTF_REPO    = "TowWithTheFlow";
 const FEEDER_REPO  = "TWTF_Feeder";
 const GITHUB_RAW   = "https://raw.githubusercontent.com";
 const GITHUB_API   = "https://api.github.com";
+const FEEDER_SUFFIXES = ["-tips","-advice","-help","-guide"];
 
-const ACTIVE_PLATS   = ["dev","tumblr","blog","feeder"];
-const PLAT_LABEL     = {dev:"DEV",tumblr:"TUMBLR",blog:"BLOG",feeder:"FEEDER"};
-const LOG_PLAT_MAP   = {DEVTO:"dev",TUMBLR:"tumblr",BLOGGER:"blog",FEEDER:"feeder"};
+const ACTIVE_PLATS   = ["dev","tumblr","blog","wordpress","feeder"];
+const PLAT_LABEL     = {dev:"DEV",tumblr:"TUMBLR",blog:"BLOG",wordpress:"WORDPRESS",feeder:"FEEDER"};
+const LOG_PLAT_MAP   = {DEVTO:"dev",TUMBLR:"tumblr",BLOGGER:"blog",WORDPRESS:"wordpress",FEEDER:"feeder"};
 const TWTF_BASE      = "https://towwiththeflow.com";
 
 // ── Stars ─────────────────────────────────────────────────────────────────────
@@ -588,9 +593,10 @@ async function buildPostDateMap(slugs){
 
 // ── Load all ──────────────────────────────────────────────────────────────────
 async function loadDashboard(){
-  const [logTxt,syncedTxt,kwTxt,ghTree,feederTree,deployInfo,auditJson] = await Promise.all([
+  const [logTxt,syncedTxt,wpSyncedTxt,kwTxt,ghTree,feederTree,deployInfo,auditJson] = await Promise.all([
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/syndication_log.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/synced-posts.txt`),
+    ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/wordpress-synced-posts.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/keywords.txt`),
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}),
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${FEEDER_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}),
@@ -608,6 +614,7 @@ async function loadDashboard(){
     return a.localeCompare(b);
   });
   const syncedSet  = new Set((syncedTxt||"").split("\n").map(l=>l.trim()).filter(Boolean));
+  const wpSyncedSet= new Set((wpSyncedTxt||"").split("\n").map(l=>l.trim()).filter(Boolean));
   const kwLines    = (kwTxt||"").split("\n").filter(l=>l.trim()&&!l.trim().startsWith("#"));
   const feederFiles= (feederTree?.tree||[]).filter(f=>f.path?.startsWith("content/posts/")&&f.path.endsWith(".md")&&!f.path.endsWith("_index.md"));
   const feederSet  = new Set(feederFiles.map(f=>f.path.replace("content/posts/","").replace(".md","")));
@@ -616,8 +623,8 @@ async function loadDashboard(){
   renderDrip({allSlugs,syncedSet,logMap});
   renderRecent({logMap});
   renderMatrix({sortedSlugs,logMap,feederSet,postDateMap});
-  renderPostQueue({allSlugs,syncedSet,logMap,kwLines});
-  renderBottom({allSlugs,syncedSet,kwLines,feederFiles,deployInfo,logMap});
+  renderPostQueue({allSlugs,syncedSet,wpSyncedSet,logMap,kwLines});
+  renderBottom({allSlugs,syncedSet,wpSyncedSet,kwLines,feederFiles,deployInfo,logMap});
 
   document.getElementById("last-refreshed").textContent="Refreshed: "+new Date().toLocaleTimeString();
 
@@ -647,7 +654,7 @@ function renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet}){
     <div class="stat-card"><div class="stat-label">Posts Syndicated</div><div class="stat-value">${syndSlugs.length}</div><div class="stat-sub">unique posts</div></div>
     <div class="stat-card"><div class="stat-label">This Week</div><div class="stat-value">${thisWeek}</div><div class="stat-sub">last 7 days</div></div>
     <div class="stat-card"><div class="stat-label">Success Rate</div><div class="stat-value">${rate}%</div><div class="stat-sub">${suc}/${tot} attempts</div></div>
-    <div class="stat-card"><div class="stat-label">Platforms Active</div><div class="stat-value" style="color:${platColor};">${activePlats.length}/4</div><div class="stat-sub">${activePlatSub}</div></div>
+    <div class="stat-card"><div class="stat-label">Platforms Active</div><div class="stat-value" style="color:${platColor};">${activePlats.length}/${ACTIVE_PLATS.length}</div><div class="stat-sub">${activePlatSub}</div></div>
     <div class="stat-card"><div class="stat-label">Drip Queue</div><div class="stat-value">${queued}</div><div class="stat-sub"><span class="stat-badge active">SCHEDULED</span></div></div>
     <div class="stat-card" id="backlink-health-card"><div class="stat-label">Backlink Health</div><div class="stat-value" id="bl-health-pct" style="color:${healthColor};">—%</div><div class="stat-sub" id="bl-health-sub">verifying…</div></div>`;
 }
@@ -660,6 +667,7 @@ function renderDripRates(){
     {label:"DEV.TO",  rate:"1/day",          color:"var(--amber)"},
     {label:"TUMBLR",  rate:"1/day",          color:"var(--amber)"},
     {label:"BLOGGER", rate:"1/day",          color:"var(--amber)"},
+    {label:"WORDPRESS", rate:"1/day via Publer", color:"var(--amber)"},
     {label:"FEEDER",  rate:"auto on publish", color:"var(--blue)"},
   ];
   el.innerHTML=rates.map(r=>`
@@ -746,7 +754,7 @@ function renderMatrix({sortedSlugs,logMap,feederSet,postDateMap}){
 }
 
 // ── Post Queue Panels ─────────────────────────────────────────────────────────
-function renderPostQueue({allSlugs,syncedSet,logMap,kwLines}){
+function renderPostQueue({allSlugs,syncedSet,wpSyncedSet,logMap,kwLines}){
   const synced=allSlugs.filter(s=>syncedSet.has(s));
   const queued=allSlugs.filter(s=>!syncedSet.has(s));
   const upcoming=kwLines.slice(0,10);
@@ -762,7 +770,7 @@ function renderPostQueue({allSlugs,syncedSet,logMap,kwLines}){
   document.getElementById("pq-queued").innerHTML=queued.map((s,i)=>`
     <div class="panel-item queued">
       <div class="item-title" title="${s2t(s)}">${s2t(s)}</div>
-      <div class="item-meta"><span class="item-pos">#${i+1}</span><span>~${dripDate(i)}</span><span class="item-tag">${catTag(s)}</span><button class="syn-now-btn" onclick="synNow('${s}',this)">Syndicate Now</button></div>
+      <div class="item-meta"><span class="item-pos">#${i+1}</span><span>~${dripDate(i)}</span><span class="item-tag">${catTag(s)}</span><span class="item-tag">${wpSyncedSet.has(s)?"WP ✓":"WP backlog"}</span><button class="syn-now-btn" onclick="synNow('${s}',this)">Syndicate Now</button></div>
     </div>`).join()||'<div style="padding:0.8rem 1.1rem;color:var(--text-muted);font-size:0.8rem;">All posts synced ✓</div>';
 
   document.getElementById("pq-sched-count").textContent=`${kwLines.length} keywords`;
@@ -776,7 +784,7 @@ function renderPostQueue({allSlugs,syncedSet,logMap,kwLines}){
 function synNow(slug,btn){ btn.disabled=true; btn.textContent="Triggering…"; triggerWorkflow("daily-post.yml","Syndicate Now",2,{job:"syndicate-backlog"},()=>{ btn.textContent="Triggered ✓"; showToast("Syndicate-backlog triggered — will process oldest unsynced post.",4000); }); }
 
 // ── Bottom Stats ──────────────────────────────────────────────────────────────
-function renderBottom({allSlugs,syncedSet,kwLines,feederFiles,deployInfo,logMap}){
+function renderBottom({allSlugs,syncedSet,wpSyncedSet,kwLines,feederFiles,deployInfo,logMap}){
   document.getElementById("bs-total-posts").textContent=allSlugs.length;
   document.getElementById("bs-kw-remaining").textContent=kwLines.length;
   if(deployInfo?.commit){
@@ -785,6 +793,17 @@ function renderBottom({allSlugs,syncedSet,kwLines,feederFiles,deployInfo,logMap}
     document.getElementById("bs-last-deploy").textContent=d.toLocaleDateString("en-US",{month:"short",day:"numeric"})+" — "+msg;
   }
   document.getElementById("bs-feeder-posts").textContent=feederFiles.length;
+  const wpSlugs=allSlugs.filter(s=>wpSyncedSet.has(s) || logMap[s]?.wordpress?.status==="success");
+  document.getElementById("bs-wordpress-posts").textContent=wpSlugs.length;
+  document.getElementById("bs-wordpress-backlog").textContent=Math.max(allSlugs.length - wpSlugs.length, 0);
+  const wpUrl=Object.values(logMap).map(p=>p?.wordpress?.url).find(Boolean);
+  const wpSite=document.getElementById("bs-wordpress-site");
+  if(wpSite&&wpUrl){
+    try{
+      const u=new URL(wpUrl);
+      wpSite.innerHTML=`<a class="bstat-link" href="${u.origin}" target="_blank" rel="noopener">${u.host} ↗</a>`;
+    }catch{}
+  }
   document.getElementById("bs-backlink").textContent="Verifying backlinks…";
   document.getElementById("bs-feeder-checked").textContent=new Date().toLocaleDateString("en-US",{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"});
 }
@@ -793,7 +812,7 @@ function renderBottom({allSlugs,syncedSet,kwLines,feederFiles,deployInfo,logMap}
 // Checks each platform's syndicated page for a link back to towwiththeflow.com
 // Runs async after initial paint, updates cells individually as results arrive.
 
-const BL_CACHE = {}; // slug -> { dev, hash, tumblr, blog, feeder }
+const BL_CACHE = {}; // slug -> { dev, tumblr, blog, wordpress, feeder }
 let BLOGGER_FEED_CACHE = null;
 
 async function runBacklinkChecks(logMap, feederSet){
@@ -834,7 +853,12 @@ async function checkSlugBacklinks(slug, platData, feederSet){
     results.feeder = await checkFeeder(slug);
   }
 
-  // Tumblr + Blogger: verify backlink on public permalink HTML
+  // WordPress, Tumblr, and Blogger: verify backlink on public permalink HTML
+  if((!results.wordpress || results.wordpress.verified===null) && platData.wordpress?.status==="success"&&platData.wordpress?.url){
+    results.wordpress = await checkPublicPageForBacklink(platData.wordpress.url, slug);
+  }else if((!results.wordpress || results.wordpress.verified===null) && platData.wordpress?.status==="success"){
+    results.wordpress = {verified:null,anchor:"",reason:"missing URL"};
+  }
   if((!results.tumblr || results.tumblr.verified===null) && platData.tumblr?.status==="success"&&platData.tumblr?.url){
     results.tumblr = await checkPublicPageForBacklink(platData.tumblr.url, slug);
   }else if((!results.tumblr || results.tumblr.verified===null) && platData.tumblr?.status==="success"){
@@ -967,7 +991,7 @@ async function checkDevto(slug, url){
 async function checkFeeder(slug){
   try{
     let txt="", matchedSlug=slug;
-    for(const cand of [slug,`${slug}-guide`]){
+    for(const cand of [slug,...FEEDER_SUFFIXES.map(s=>`${slug}${s}`),`${slug}-guide`]){
       const rawUrl=`${GITHUB_RAW}/${GITHUB_OWNER}/${FEEDER_REPO}/main/content/posts/${cand}.md`;
       const hit=await ftext(rawUrl);
       if(hit){ txt=hit; matchedSlug=cand; break; }
@@ -1118,7 +1142,7 @@ function updateBacklinkCell(slug, results, platData){
 
 function updateBacklinkHealthCard(logMap, feederSet){
   // Compute per-platform backlink %
-  const perPlat={dev:{v:0,t:0},tumblr:{v:0,t:0},blog:{v:0,t:0},feeder:{v:0,t:0}};
+  const perPlat={dev:{v:0,t:0},tumblr:{v:0,t:0},blog:{v:0,t:0},wordpress:{v:0,t:0},feeder:{v:0,t:0}};
   let totalVerified=0, totalChecked=0;
   for(const[slug,cache]of Object.entries(BL_CACHE)){
     const platData=logMap[slug]||{};
@@ -1164,6 +1188,7 @@ const PLAT_TESTS={
   dev:    async()=>{ const r=await fetch("https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1"); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
   tumblr: async()=>({ok:null,msg:"Tumblr requires OAuth — cannot test from browser. Check syndication_log.txt for real results."}),
   blog:   async()=>{ if(!BLOGGER_KEY||BLOGGER_KEY==="__BLOGGER_API_KEY__")return{ok:false,msg:"No API key"}; const r=await fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOGGER_ID}/posts?key=${BLOGGER_KEY}&maxResults=1`); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
+  wordpress: async()=>({ok:null,msg:"WordPress runs through Publer server-side. Check syndication_log.txt for live results."}),
   feeder: async()=>{ const r=await fetch(`${GITHUB_API}/repos/${GITHUB_OWNER}/${FEEDER_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
 };
 

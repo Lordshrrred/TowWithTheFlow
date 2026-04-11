@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tow With The Flow — Post Syndication (4-Platform Engine)
+Tow With The Flow — Post Syndication (5-Platform Engine)
 Called by daily-post.yml at 10:30am UTC — 30 minutes after post generation.
 Also called directly: python scripts/syndicate_post.py <slug>
 
@@ -21,6 +21,7 @@ import json
 import time
 import hashlib
 import smtplib
+import secrets
 from datetime import datetime, date
 from pathlib import Path
 from email.mime.text import MIMEText
@@ -29,7 +30,23 @@ from dotenv import load_dotenv
 import requests
 
 ROOT = Path(__file__).parent.parent
-load_dotenv(ROOT / ".env")
+
+def load_env_stack():
+    """Load local env plus sibling feeder env as a fallback source.
+
+    Root repo env keeps precedence. This lets local runs see Publer creds that
+    may currently live in the feeder repo without forcing a duplicate secret.
+    """
+    candidates = [
+        ROOT / ".env",
+        ROOT / "TWTF_Feeder" / ".env",
+        ROOT.parent / "TWTF_Feeder" / ".env",
+    ]
+    for idx, path in enumerate(candidates):
+        if path.exists():
+            load_dotenv(path, override=(idx == 0))
+
+load_env_stack()
 
 def env_clean(key: str, default: str = "") -> str:
     """Read env var and normalize accidental quoting/whitespace from pasted secrets."""
@@ -72,16 +89,24 @@ else:
     FEEDER_TRIGGER_TOKEN = ""
 
 ANTHROPIC_API_KEY     = env_clean("ANTHROPIC_API_KEY")
+ANTHROPIC_VARIATION_MODEL = env_clean("ANTHROPIC_VARIATION_MODEL") or "claude-sonnet-4-20250514"
 GMAIL_ADDRESS         = env_clean("GMAIL_ADDRESS")
 GMAIL_APP_PASSWORD    = env_clean("GMAIL_APP_PASSWORD")
+PUBLER_API_KEY        = env_clean("PUBLER_API_KEY")
+PUBLER_WORKSPACE_ID   = env_clean("PUBLER_WORKSPACE_ID")
+PUBLER_WORDPRESS_ACCOUNT_ID = env_clean("PUBLER_WORDPRESS_ACCOUNT_ID")
+PUBLER_WORDPRESS_CATEGORY_IDS = env_clean("PUBLER_WORDPRESS_CATEGORY_IDS")
+PUBLER_WORDPRESS_TAG_IDS = env_clean("PUBLER_WORDPRESS_TAG_IDS")
 
 BASE_URL       = "https://towwiththeflow.com"
 POSTS_DIR      = ROOT / "content" / "posts"
 LOG_FILE       = Path(__file__).parent / "syndication_log.txt"
 SYNCED_FILE    = Path(__file__).parent / "synced-posts.txt"
+WORDPRESS_SYNCED_FILE = Path(__file__).parent / "wordpress-synced-posts.txt"
 FEEDER_OWNER   = "Lordshrrred"
 FEEDER_REPO    = "TWTF_Feeder"
 FEEDER_SUFFIXES = ["-tips", "-advice", "-help", "-guide"]
+PUBLER_API_BASE = "https://app.publer.com/api/v1"
 
 # Backlink block injected when missing
 BACKLINK_TMPL = (
@@ -185,6 +210,23 @@ Hard constraints:
 - Return ONLY rewritten markdown body (no frontmatter)."""
 
 
+def get_variant_title(title: str, slug: str, platform: str) -> str:
+    """Generate a deterministic, lightly distinct title per platform."""
+    title = (title or slug).strip()
+    suffixes = [
+        "Quick Guide",
+        "What Drivers Should Know",
+        "Roadside Tips",
+        "Explained",
+        "What To Do Next",
+    ]
+    idx = int(hashlib.sha1(f"title:{slug}:{platform}".encode("utf-8")).hexdigest()[:8], 16) % len(suffixes)
+    suffix = suffixes[idx]
+    if suffix.lower() in title.lower():
+        return title
+    return f"{title}: {suffix}"
+
+
 def get_variation(body: str, platform: str, slug: str) -> str:
     """Get a lightly rephrased version of the body for a specific platform.
     Falls back to original body if Claude API is unavailable."""
@@ -195,7 +237,7 @@ def get_variation(body: str, platform: str, slug: str) -> str:
         import anthropic
         client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
         msg = client.messages.create(
-            model="claude-haiku-4-20250514",
+            model=ANTHROPIC_VARIATION_MODEL,
             max_tokens=max_tokens,
             system=build_variation_system(length_range),
             messages=[{
@@ -229,6 +271,7 @@ def syndicate_devto(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     if not DEVTO_API_KEY:
         return False, "SKIP: no DEVTO_API_KEY"
 
+    varied_title = get_variant_title(meta.get("title", slug), slug, "Dev.to")
     canonical = f"{BASE_URL}/{slug}/"
     tags = [re.sub(r'[^a-z0-9]', '', t.lower()) for t in meta.get("tags", [])[:4]]
     varied_body = get_variation(body, "Dev.to", slug)
@@ -238,7 +281,7 @@ def syndicate_devto(slug: str, meta: dict, body: str) -> tuple[bool, str]:
             "https://dev.to/api/articles",
             headers={"api-key": DEVTO_API_KEY, "Content-Type": "application/json"},
             json={"article": {
-                "title":         meta.get("title", slug),
+                "title":         varied_title,
                 "body_markdown": varied_body,
                 "published":     True,
                 "tags":          tags,
@@ -292,11 +335,12 @@ def syndicate_tumblr(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     except ImportError:
         return False, "ERROR: requests-oauthlib not installed"
 
+    varied_title = get_variant_title(meta.get("title", slug), slug, "Tumblr")
     canonical = f"{BASE_URL}/{slug}/"
     varied_body = get_variation(body, "Tumblr", slug)
     plain = strip_markdown(varied_body)
     attribution = f"Originally published on Tow With The Flow: {canonical}"
-    body_text = f"{meta.get('title', slug)}\n\n{attribution}\n\n{plain}"
+    body_text = f"{varied_title}\n\n{attribution}\n\n{plain}"
 
     cta_label    = "Read the full guide on TowWithTheFlow.com"
     cta_sentence = f"{cta_label}: {canonical}"
@@ -393,6 +437,20 @@ def md_to_html(text: str) -> str:
     return '\n'.join(filter(None, out))
 
 
+def html_excerpt(text: str, limit: int = 260) -> str:
+    plain = strip_markdown(text)
+    if len(plain) <= limit:
+        return plain
+    cut = plain[:limit].rsplit(" ", 1)[0].strip()
+    return (cut or plain[:limit]).rstrip(" .,;:") + "..."
+
+
+def parse_csv_env_ids(value: str, fallback: list[str]) -> list[str]:
+    if not value.strip():
+        return fallback
+    return [part.strip() for part in value.split(",") if part.strip()]
+
+
 def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     # Step 1/3 — preflight: check which credentials are missing (no values exposed)
     missing = [name for name, val in [
@@ -412,6 +470,7 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
 
     log(f"BLOGGER | {slug} | step 2/3: converting markdown to HTML")
     canonical = f"{BASE_URL}/{slug}/"
+    varied_title = get_variant_title(meta.get("title", slug), slug, "Blogger")
     varied_body = get_variation(body, "Blogger", slug)
     source_note = (
         f'<p><em>Originally published on '
@@ -425,7 +484,7 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
             f"https://www.googleapis.com/blogger/v3/blogs/{BLOGGER_BLOG_ID}/posts/",
             headers={"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"},
             json={
-                "title":   meta.get("title", slug),
+                "title":   varied_title,
                 "content": html_content,
                 "labels":  meta.get("tags", [])[:5],
             },
@@ -438,6 +497,188 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         return False, str(e)
 
 
+# ── Platform: WordPress via Publer ────────────────────────────────────────────
+def publer_headers() -> dict[str, str]:
+    return {
+        "Authorization": f"Bearer-API {PUBLER_API_KEY}",
+        "Publer-Workspace-Id": PUBLER_WORKSPACE_ID,
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+    }
+
+
+def publer_wordpress_content_blocks(html: str) -> list[dict]:
+    return [{
+        "id": f"html_{secrets.token_hex(5)}",
+        "type": "html",
+        "data": {"html": html.strip()},
+    }]
+
+
+def publer_get_wordpress_account() -> tuple[dict | None, str]:
+    if not PUBLER_API_KEY:
+        return None, "SKIP: no PUBLER_API_KEY"
+    if not PUBLER_WORKSPACE_ID:
+        return None, "SKIP: no PUBLER_WORKSPACE_ID"
+
+    try:
+        r = requests.get(f"{PUBLER_API_BASE}/accounts", headers=publer_headers(), timeout=30)
+        if r.status_code != 200:
+            return None, f"HTTP {r.status_code}: {r.text[:300]}"
+        data = r.json()
+    except Exception as e:
+        return None, str(e)
+
+    accounts = data.get("data") if isinstance(data, dict) and isinstance(data.get("data"), list) else data
+    if not isinstance(accounts, list):
+        return None, "unexpected Publer accounts response"
+
+    if PUBLER_WORDPRESS_ACCOUNT_ID:
+        for account in accounts:
+            if str(account.get("id")) == PUBLER_WORDPRESS_ACCOUNT_ID:
+                return account, ""
+        return None, f"PUBLER_WORDPRESS_ACCOUNT_ID {PUBLER_WORDPRESS_ACCOUNT_ID} not found in workspace"
+
+    wordpress_accounts = [
+        account for account in accounts
+        if "wordpress" in str(account.get("provider", account.get("type", ""))).lower()
+    ]
+    if not wordpress_accounts:
+        return None, "no WordPress account connected in Publer workspace"
+    preferred_names = ["tow with the flow", "towwiththeflow"]
+    for preferred in preferred_names:
+        for account in wordpress_accounts:
+            if preferred in str(account.get("name", "")).lower():
+                return account, ""
+    return wordpress_accounts[0], ""
+
+
+def publer_poll_job(job_id: str, timeout_seconds: int = 45) -> tuple[bool, dict]:
+    deadline = time.time() + timeout_seconds
+    last = {}
+    while time.time() < deadline:
+        try:
+            r = requests.get(f"{PUBLER_API_BASE}/job_status/{job_id}", headers=publer_headers(), timeout=20)
+            last = r.json() if r.ok else {"status": "error", "error": r.text[:300]}
+        except Exception as e:
+            last = {"status": "error", "error": str(e)}
+        status = str(last.get("status", "")).lower()
+        if status in {"complete", "completed", "failed", "error"}:
+            return status in {"complete", "completed"}, last
+        time.sleep(2)
+    return False, {"status": "timeout", "error": f"job {job_id} did not finish within {timeout_seconds}s", "last": last}
+
+
+def publer_recent_wordpress_post(account_id: str, title: str) -> str:
+    try:
+        params = {
+            "account_ids[]": account_id,
+            "limit": "10",
+        }
+        r = requests.get(f"{PUBLER_API_BASE}/posts", headers=publer_headers(), params=params, timeout=30)
+        if r.status_code != 200:
+            return ""
+        data = r.json()
+        posts = data.get("posts", []) if isinstance(data, dict) else []
+        title_norm = title.strip().lower()
+        for post in posts:
+            if str(post.get("title", "")).strip().lower() == title_norm and post.get("post_link"):
+                return str(post["post_link"])
+    except Exception:
+        pass
+    return ""
+
+
+def syndicate_wordpress(slug: str, meta: dict, body: str) -> tuple[bool, str]:
+    account, account_err = publer_get_wordpress_account()
+    if not account:
+        return False, account_err
+
+    canonical = f"{BASE_URL}/{slug}/"
+    varied_body = get_variation(body, "WordPress", slug)
+    html_content = md_to_html(varied_body)
+    title = get_variant_title(meta.get("title", slug), slug, "WordPress")
+
+    account_category_ids = [str(cat.get("id")) for cat in (account.get("wordpress_categories") or []) if cat.get("id")]
+    account_tag_ids = [str(tag.get("id")) for tag in (account.get("wordpress_tags") or []) if tag.get("id")]
+    category_ids = parse_csv_env_ids(PUBLER_WORDPRESS_CATEGORY_IDS, account_category_ids or ["1"])
+    tag_ids = parse_csv_env_ids(PUBLER_WORDPRESS_TAG_IDS, account_tag_ids or [])
+
+    network = {
+        "type": "article",
+        "title": title,
+        "excerpt": meta.get("description") or html_excerpt(varied_body),
+        "url": slug,
+        "content": publer_wordpress_content_blocks(html_content),
+        "categories": category_ids,
+        "tags": tag_ids,
+    }
+    post_payload = {
+        "accounts": [{"id": str(account.get("id"))}],
+        "networks": {"wordpress_oauth": network},
+    }
+
+    try:
+        r = requests.post(
+            f"{PUBLER_API_BASE}/posts/schedule/publish",
+            headers=publer_headers(),
+            json={"bulk": {"state": "scheduled", "posts": [post_payload]}},
+            timeout=30,
+        )
+        data = r.json() if r.content else {}
+    except Exception as e:
+        return False, str(e)
+
+    if r.status_code not in (200, 201):
+        return False, f"HTTP {r.status_code}: {json.dumps(data)[:300] if data else r.text[:300]}"
+
+    job_id = data.get("job_id") or data.get("data", {}).get("job_id")
+    if job_id:
+        ok, job = publer_poll_job(job_id)
+        payload = job.get("payload")
+        if isinstance(payload, list):
+            for item in payload:
+                failure = (item or {}).get("failure") or {}
+                item_status = str((item or {}).get("status", "")).lower()
+                if failure.get("message"):
+                    return False, str(failure["message"])
+                if item_status in {"failed", "error"}:
+                    return False, json.dumps(item)[:300]
+        if not ok:
+            failures = ((job.get("payload") or {}).get("failures") or {})
+            if failures:
+                first_group = next(iter(failures.values()), [])
+                first = first_group[0] if first_group else {}
+                return False, str(first.get("message") or job)
+            return False, json.dumps(job)[:400]
+
+        payload = payload or {}
+        if isinstance(payload, dict):
+            post_link = (
+                payload.get("post_link")
+                or payload.get("url")
+                or payload.get("post", {}).get("post_link")
+                or payload.get("post", {}).get("url")
+            )
+            if post_link:
+                return True, str(post_link)
+            successes = payload.get("successes")
+            if isinstance(successes, list) and successes:
+                post_link = successes[0].get("post_link") or successes[0].get("url")
+                if post_link:
+                    return True, str(post_link)
+        if isinstance(payload, list) and payload:
+            for item in payload:
+                if str(item.get("status", "")).lower() in {"success", "published", "complete", "completed"}:
+                    success = item.get("success") or item.get("post") or item
+                    post_link = success.get("post_link") or success.get("url")
+                    if post_link:
+                        return True, str(post_link)
+
+    post_link = data.get("post_link") or data.get("url") or publer_recent_wordpress_post(str(account.get("id")), title)
+    return (True, post_link) if post_link else (True, "queued in Publer")
+
+
 # ── Platform: Feeder (TWTF_Feeder) ────────────────────────────────────────────
 def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     token = FEEDER_TRIGGER_TOKEN
@@ -445,6 +686,7 @@ def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         return False, "SKIP: no feeder token set (FEEDER_TRIGGER_TOKEN preferred)"
 
     canonical = f"{BASE_URL}/{slug}/"
+    varied_title = get_variant_title(meta.get("title", slug), slug, "Feeder")
     varied_body = get_variation(body, "Feeder", slug)
 
     # Match the feeder workflow's deterministic suffixing so we only maintain one support URL per source post.
@@ -454,7 +696,7 @@ def syndicate_feeder(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     today = date.today().isoformat()
     fm = (
         f"---\n"
-        f'title: "{meta.get("title", slug)}"\n'
+        f'title: "{varied_title}"\n'
         f"date: {today}\n"
         f'description: "{meta.get("description", "")}"\n'
         f"tags: {json.dumps(meta.get('tags', []))}\n"
@@ -541,6 +783,21 @@ def mark_synced(slug: str):
         f.write(slug + "\n")
 
 
+def load_wordpress_synced() -> set[str]:
+    if not WORDPRESS_SYNCED_FILE.exists():
+        WORDPRESS_SYNCED_FILE.write_text("", encoding="utf-8")
+        return set()
+    return {l.strip() for l in WORDPRESS_SYNCED_FILE.read_text(encoding="utf-8").splitlines() if l.strip()}
+
+
+def mark_wordpress_synced(slug: str):
+    synced = load_wordpress_synced()
+    if slug in synced:
+        return
+    with WORDPRESS_SYNCED_FILE.open("a", encoding="utf-8") as f:
+        f.write(slug + "\n")
+
+
 # ── Main orchestrator ──────────────────────────────────────────────────────────
 def run_syndication(slug: str):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -562,6 +819,8 @@ def run_syndication(slug: str):
     log(f"PREFLIGHT | TUMBLR:  {'configured' if tumblr_ok else 'MISSING — will SKIP'}")
     blogger_ok = all([BLOGGER_CLIENT_ID, BLOGGER_CLIENT_SECRET, BLOGGER_REFRESH_TOKEN, BLOGGER_BLOG_ID])
     log(f"PREFLIGHT | BLOGGER: {'configured' if blogger_ok else 'MISSING — will SKIP'}")
+    wp_ok = bool(PUBLER_API_KEY and PUBLER_WORKSPACE_ID)
+    log(f"PREFLIGHT | WORDPRESS: {'configured via Publer' if wp_ok else 'MISSING PUBLER_API_KEY/PUBLER_WORKSPACE_ID — will SKIP'}")
     if FEEDER_TRIGGER_TOKEN and FEEDER_TOKEN_SOURCE != "GITHUB_TOKEN":
         log(f"PREFLIGHT | FEEDER:  configured (source={FEEDER_TOKEN_SOURCE}, dedicated token)")
     elif FEEDER_TRIGGER_TOKEN:
@@ -576,6 +835,7 @@ def run_syndication(slug: str):
         ("DEVTO",   lambda: syndicate_devto(slug, meta, body)),
         ("TUMBLR",  lambda: syndicate_tumblr(slug, meta, body)),
         ("BLOGGER", lambda: syndicate_blogger(slug, meta, body)),
+        ("WORDPRESS", lambda: syndicate_wordpress(slug, meta, body)),
         ("FEEDER",  lambda: syndicate_feeder(slug, meta, body)),
     ]
 
@@ -603,10 +863,12 @@ def run_syndication(slug: str):
 
         if ok:
             successes += 1
+            if platform == "WORDPRESS":
+                mark_wordpress_synced(slug)
         elif not is_skip:
             failures.append(f"{platform}: {detail[:100]}")
 
-    log(f"=== SYNDICATE DONE: {slug} | {successes}/4 succeeded | {attempted} attempted | {len(failures)} failed ===")
+    log(f"=== SYNDICATE DONE: {slug} | {successes}/5 succeeded | {attempted} attempted | {len(failures)} failed ===")
 
     if successes >= 1:
         synced = load_synced()

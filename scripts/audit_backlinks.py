@@ -18,8 +18,9 @@ FEEDER_REPO = "TWTF_Feeder"
 RAW_BASE = f"https://raw.githubusercontent.com/{FEEDER_OWNER}/{FEEDER_REPO}/main/content/posts"
 TWTF_BASE = "https://towwiththeflow.com"
 
-PLAT_KEYS = {"DEVTO": "dev", "TUMBLR": "tumblr", "BLOGGER": "blog", "FEEDER": "feeder"}
+PLAT_KEYS = {"DEVTO": "dev", "TUMBLR": "tumblr", "BLOGGER": "blog", "WORDPRESS": "wordpress", "FEEDER": "feeder"}
 TUMBLR_BLOG = "towwiththeflow"
+FEEDER_SUFFIXES = ["-tips", "-advice", "-help", "-guide"]
 
 
 def expected_urls(slug: str) -> tuple[str, str]:
@@ -72,7 +73,7 @@ def parse_successes(text: str) -> tuple[dict[str, dict[str, dict]], dict[str, di
     history: dict[str, dict[str, list[dict]]] = {}
     rx = re.compile(
         r"^\[(?P<ts>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\] "
-        r"(?P<plat>DEVTO|TUMBLR|BLOGGER|FEEDER) \| "
+        r"(?P<plat>DEVTO|TUMBLR|BLOGGER|WORDPRESS|FEEDER) \| "
         r"(?P<slug>[\w-]+) \| SUCCESS \| (?P<detail>.*)$"
     )
     for line in text.splitlines():
@@ -141,7 +142,9 @@ def verify_feeder(slug: str, url: str, sess: requests.Session) -> dict:
             p = urlparse(url).path.strip("/")
             if p:
                 candidates.append(p.split("/")[0])
-        candidates.extend([slug, f"{slug}-guide"])
+        candidates.extend([slug])
+        candidates.extend([f"{slug}{suffix}" for suffix in FEEDER_SUFFIXES])
+        candidates.extend([f"{slug}-guide"])
         seen = set()
         unique = []
         for c in candidates:
@@ -254,6 +257,32 @@ def recover_feeder(slug: str, sess: requests.Session) -> dict | None:
     return None
 
 
+def recover_wordpress(slug: str, sess: requests.Session) -> dict | None:
+    try:
+        url = f"https://towwiththeflowyo.wordpress.com/{datetime.now(timezone.utc).year}/"
+        r = sess.get(f"https://towwiththeflowyo.wordpress.com/tag/{slug}/", timeout=20)
+        if r.ok:
+            chk = verify_html_slug(slug, r.url, sess)
+            if chk.get("verified") is True:
+                chk["recovered_live"] = True
+                return chk
+        sitemap = sess.get("https://towwiththeflowyo.wordpress.com/sitemap.xml", timeout=20)
+        if not sitemap.ok:
+            return None
+        locs = [m.group(1) for m in re.finditer(r"<loc>(https?://[^<]+)</loc>", sitemap.text)]
+        for cand in locs:
+            low = cand.lower()
+            if slug not in low:
+                continue
+            chk = verify_html_slug(slug, cand, sess)
+            if chk.get("verified") is True:
+                chk["recovered_live"] = True
+                return chk
+    except Exception:
+        return None
+    return None
+
+
 def first_verified_from_history(
     slug: str,
     platform: str,
@@ -291,6 +320,8 @@ def main() -> None:
             row["tumblr"] = verify_html_slug(slug, plats["tumblr"]["url"], sess)
         if "blog" in plats:
             row["blog"] = verify_html_slug(slug, plats["blog"]["url"], sess)
+        if "wordpress" in plats:
+            row["wordpress"] = verify_html_slug(slug, plats["wordpress"]["url"], sess)
         if "feeder" in plats:
             row["feeder"] = verify_feeder(slug, plats["feeder"]["url"], sess)
 
@@ -307,6 +338,10 @@ def main() -> None:
             older = first_verified_from_history(slug, "dev", history, verify_dev, sess)
             if older:
                 row["dev"] = older
+        if row.get("wordpress", {}).get("verified") is False:
+            older = first_verified_from_history(slug, "wordpress", history, verify_html_slug, sess)
+            if older:
+                row["wordpress"] = older
         if row.get("feeder", {}).get("verified") is False:
             older = first_verified_from_history(slug, "feeder", history, verify_feeder, sess)
             if older:
@@ -330,6 +365,14 @@ def main() -> None:
             rec = recover_blogger(slug, sess)
             if rec:
                 row["blog"] = rec
+        if "wordpress" not in row:
+            rec = recover_wordpress(slug, sess)
+            if rec:
+                row["wordpress"] = rec
+        elif row["wordpress"].get("verified") is not True:
+            rec = recover_wordpress(slug, sess)
+            if rec:
+                row["wordpress"] = rec
         if "feeder" not in row:
             rec = recover_feeder(slug, sess)
             if rec:
@@ -337,7 +380,7 @@ def main() -> None:
 
         slugs_out[slug] = row
 
-    summary = {p: {"verified": 0, "checked": 0} for p in ["dev", "tumblr", "blog", "feeder"]}
+    summary = {p: {"verified": 0, "checked": 0} for p in ["dev", "tumblr", "blog", "wordpress", "feeder"]}
     for _, row in slugs_out.items():
         for p, d in row.items():
             if d.get("verified") is None:
