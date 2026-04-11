@@ -225,7 +225,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: syndicate general post $(date +%Y-%m-%d)"
           git push
 
@@ -283,7 +283,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: syndicate local post $(date +%Y-%m-%d)"
           git push
 
@@ -334,7 +334,7 @@ jobs:
 
       - name: Commit syndication results
         run: |
-          git add scripts/synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: backlog syndication $(date +%Y-%m-%d)"
           git push
 

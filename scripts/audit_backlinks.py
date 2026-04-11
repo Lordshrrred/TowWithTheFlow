@@ -21,6 +21,8 @@ TWTF_BASE = "https://towwiththeflow.com"
 PLAT_KEYS = {"DEVTO": "dev", "TUMBLR": "tumblr", "BLOGGER": "blog", "WORDPRESS": "wordpress", "FEEDER": "feeder"}
 TUMBLR_BLOG = "towwiththeflow"
 FEEDER_SUFFIXES = ["-tips", "-advice", "-help", "-guide"]
+BLOGGER_BASE = "https://denverroadsideguide.blogspot.com"
+_BLOGGER_SITE_AVAILABLE: bool | None = None
 
 
 def expected_urls(slug: str) -> tuple[str, str]:
@@ -135,6 +137,18 @@ def verify_html_slug(slug: str, url: str, sess: requests.Session) -> dict:
         return {"verified": None, "reason": f"error:{type(e).__name__}", "url": url}
 
 
+def blogger_site_available(sess: requests.Session) -> bool:
+    global _BLOGGER_SITE_AVAILABLE
+    if _BLOGGER_SITE_AVAILABLE is not None:
+        return _BLOGGER_SITE_AVAILABLE
+    try:
+        r = sess.get(BLOGGER_BASE, timeout=15)
+        _BLOGGER_SITE_AVAILABLE = bool(r.ok)
+    except Exception:
+        _BLOGGER_SITE_AVAILABLE = False
+    return _BLOGGER_SITE_AVAILABLE
+
+
 def verify_feeder(slug: str, url: str, sess: requests.Session) -> dict:
     try:
         candidates: list[str] = []
@@ -173,7 +187,9 @@ def verify_feeder(slug: str, url: str, sess: requests.Session) -> dict:
 def recover_blogger(slug: str, sess: requests.Session) -> dict | None:
     """If log doesn't show Blogger success URL, discover likely live post and verify exact slug backlink."""
     try:
-        r = sess.get("https://denverroadsideguide.blogspot.com/sitemap.xml", timeout=20)
+        if not blogger_site_available(sess):
+            return None
+        r = sess.get(f"{BLOGGER_BASE}/sitemap.xml", timeout=20)
         if not r.ok:
             return None
         locs = [m.group(1) for m in re.finditer(r"<loc>(https?://[^<]+)</loc>", r.text)]
@@ -319,7 +335,14 @@ def main() -> None:
         if "tumblr" in plats:
             row["tumblr"] = verify_html_slug(slug, plats["tumblr"]["url"], sess)
         if "blog" in plats:
-            row["blog"] = verify_html_slug(slug, plats["blog"]["url"], sess)
+            if blogger_site_available(sess):
+                row["blog"] = verify_html_slug(slug, plats["blog"]["url"], sess)
+            else:
+                row["blog"] = {
+                    "verified": False,
+                    "reason": "site_unavailable",
+                    "url": plats["blog"]["url"],
+                }
         if "wordpress" in plats:
             row["wordpress"] = verify_html_slug(slug, plats["wordpress"]["url"], sess)
         if "feeder" in plats:

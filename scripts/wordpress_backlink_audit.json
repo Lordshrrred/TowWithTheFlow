@@ -1,11 +1,13 @@
 {
-  "generated_at": "2026-04-11T16:56:44.873532+00:00",
+  "generated_at": "2026-04-11T17:02:31.229414+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-atlanta-georgia/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-atlanta-georgia-holiday-weekend/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/11/car-shaking-violently-while-driving-tow-needed/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -15,6 +17,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+        "verified": true
+      }
+    },
+    "car-shaking-violently-while-driving-tow-needed": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-shaking-violently-while-driving-tow-needed/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/car-shaking-violently-while-driving-tow-needed/",
         "verified": true
       }
     },
@@ -45,6 +56,15 @@
         "verified": true
       }
     },
+    "towing-cost-atlanta-georgia-holiday-weekend": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-atlanta-georgia-holiday-weekend/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-atlanta-georgia-holiday-weekend/",
+        "verified": true
+      }
+    },
     "towing-cost-miami-florida-hurricane-season": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-miami-florida-hurricane-season/",
@@ -58,8 +78,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 5,
-      "verified": 5
+      "checked": 7,
+      "verified": 7
     }
   }
 }

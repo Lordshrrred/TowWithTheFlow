@@ -103,6 +103,7 @@ POSTS_DIR      = ROOT / "content" / "posts"
 LOG_FILE       = Path(__file__).parent / "syndication_log.txt"
 SYNCED_FILE    = Path(__file__).parent / "synced-posts.txt"
 WORDPRESS_SYNCED_FILE = Path(__file__).parent / "wordpress-synced-posts.txt"
+_PUBLER_WORDPRESS_ACCOUNT_CACHE: dict | None = None
 FEEDER_OWNER   = "Lordshrrred"
 FEEDER_REPO    = "TWTF_Feeder"
 FEEDER_SUFFIXES = ["-tips", "-advice", "-help", "-guide"]
@@ -516,18 +517,35 @@ def publer_wordpress_content_blocks(html: str) -> list[dict]:
 
 
 def publer_get_wordpress_account() -> tuple[dict | None, str]:
+    global _PUBLER_WORDPRESS_ACCOUNT_CACHE
     if not PUBLER_API_KEY:
         return None, "SKIP: no PUBLER_API_KEY"
     if not PUBLER_WORKSPACE_ID:
         return None, "SKIP: no PUBLER_WORKSPACE_ID"
+    if _PUBLER_WORDPRESS_ACCOUNT_CACHE:
+        return _PUBLER_WORDPRESS_ACCOUNT_CACHE, ""
 
-    try:
-        r = requests.get(f"{PUBLER_API_BASE}/accounts", headers=publer_headers(), timeout=30)
-        if r.status_code != 200:
-            return None, f"HTTP {r.status_code}: {r.text[:300]}"
-        data = r.json()
-    except Exception as e:
-        return None, str(e)
+    retry_delays = [5, 15, 30]
+    data = None
+    r = None
+    for attempt in range(len(retry_delays) + 1):
+        try:
+            r = requests.get(f"{PUBLER_API_BASE}/accounts", headers=publer_headers(), timeout=30)
+        except Exception as e:
+            return None, str(e)
+        if r.status_code != 429:
+            data = r.json()
+            break
+        if attempt >= len(retry_delays):
+            return None, f"HTTP 429: {r.text[:300]}"
+        delay = retry_delays[attempt]
+        log(f"WORDPRESS | Publer accounts rate limited (429). Retrying in {delay}s")
+        time.sleep(delay)
+
+    if r is None:
+        return None, "no response from Publer accounts endpoint"
+    if r.status_code != 200:
+        return None, f"HTTP {r.status_code}: {r.text[:300]}"
 
     accounts = data.get("data") if isinstance(data, dict) and isinstance(data.get("data"), list) else data
     if not isinstance(accounts, list):
@@ -536,6 +554,7 @@ def publer_get_wordpress_account() -> tuple[dict | None, str]:
     if PUBLER_WORDPRESS_ACCOUNT_ID:
         for account in accounts:
             if str(account.get("id")) == PUBLER_WORDPRESS_ACCOUNT_ID:
+                _PUBLER_WORDPRESS_ACCOUNT_CACHE = account
                 return account, ""
         return None, f"PUBLER_WORDPRESS_ACCOUNT_ID {PUBLER_WORDPRESS_ACCOUNT_ID} not found in workspace"
 
@@ -549,7 +568,9 @@ def publer_get_wordpress_account() -> tuple[dict | None, str]:
     for preferred in preferred_names:
         for account in wordpress_accounts:
             if preferred in str(account.get("name", "")).lower():
+                _PUBLER_WORDPRESS_ACCOUNT_CACHE = account
                 return account, ""
+    _PUBLER_WORDPRESS_ACCOUNT_CACHE = wordpress_accounts[0]
     return wordpress_accounts[0], ""
 
 
@@ -618,17 +639,31 @@ def syndicate_wordpress(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         "networks": {"wordpress_oauth": network},
     }
 
-    try:
-        r = requests.post(
-            f"{PUBLER_API_BASE}/posts/schedule/publish",
-            headers=publer_headers(),
-            json={"bulk": {"state": "scheduled", "posts": [post_payload]}},
-            timeout=30,
-        )
-        data = r.json() if r.content else {}
-    except Exception as e:
-        return False, str(e)
+    r = None
+    data: dict | list | str = {}
+    retry_delays = [5, 15, 30]
+    for attempt in range(len(retry_delays) + 1):
+        try:
+            r = requests.post(
+                f"{PUBLER_API_BASE}/posts/schedule/publish",
+                headers=publer_headers(),
+                json={"bulk": {"state": "scheduled", "posts": [post_payload]}},
+                timeout=30,
+            )
+            data = r.json() if r.content else {}
+        except Exception as e:
+            return False, str(e)
 
+        if r.status_code != 429:
+            break
+        if attempt >= len(retry_delays):
+            break
+        delay = retry_delays[attempt]
+        log(f"WORDPRESS | {slug} | Publer rate limited (429). Retrying in {delay}s")
+        time.sleep(delay)
+
+    if r is None:
+        return False, "no response from Publer"
     if r.status_code not in (200, 201):
         return False, f"HTTP {r.status_code}: {json.dumps(data)[:300] if data else r.text[:300]}"
 
