@@ -1053,3 +1053,35 @@
 [2026-04-11 07:39:29] FEEDER | towing-cost-portland-oregon-rainy-weather | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-portland-oregon-rainy-weather-guide/
 [2026-04-11 07:39:29] === SYNDICATE DONE: towing-cost-portland-oregon-rainy-weather | 3/5 succeeded | 4 attempted | 1 failed ===
 [2026-04-11 07:39:29] SYNCED | towing-cost-portland-oregon-rainy-weather marked in synced-posts.txt
+[2026-04-11 08:59:28] BACKLOG: Posts total=85  synced=30  backlog=55  (today's posts excluded from backlog)
+[2026-04-11 08:59:28] BACKLOG: Syndicating backlog: towing-cost-chicago-illinois  (post date=2026-02-27)
+[2026-04-11 08:59:28] === SYNDICATE START: towing-cost-chicago-illinois ===
+[2026-04-11 08:59:28] PREFLIGHT | title: Towing Cost in Chicago Illinois: What You'll Pay and What to Do
+[2026-04-11 08:59:28] PREFLIGHT | date: 2026-02-27T09:38:00+00:00
+[2026-04-11 08:59:28] PREFLIGHT | timestamp: 2026-04-11 08:59:28
+[2026-04-11 08:59:28] PREFLIGHT | DEVTO:   configured
+[2026-04-11 08:59:28] PREFLIGHT | TUMBLR:  configured
+[2026-04-11 08:59:28] PREFLIGHT | BLOGGER: configured
+[2026-04-11 08:59:28] PREFLIGHT | WORDPRESS: MISSING PUBLER_API_KEY/PUBLER_WORKSPACE_ID — will SKIP
+[2026-04-11 08:59:28] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-11 08:59:28] BACKLINK | towing-cost-chicago-illinois | missing — injecting before syndication
+[2026-04-11 08:59:28] DEVTO | towing-cost-chicago-illinois | START
+[2026-04-11 08:59:29] DEVTO | towing-cost-chicago-illinois | SUCCESS | https://dev.to/towwiththeflowyoo/towing-cost-in-chicago-illinois-what-youll-pay-and-what-to-do-roadside-tips-35g9
+[2026-04-11 08:59:29] --- waiting 60s before next platform ---
+[2026-04-11 09:00:29] TUMBLR | towing-cost-chicago-illinois | START
+[2026-04-11 09:00:29] TUMBLR | towing-cost-chicago-illinois | SUCCESS | https://towwiththeflow.tumblr.com/post/813610701321093120
+[2026-04-11 09:00:29] --- waiting 60s before next platform ---
+[2026-04-11 09:01:29] BLOGGER | towing-cost-chicago-illinois | START
+[2026-04-11 09:01:29] BLOGGER | towing-cost-chicago-illinois | step 1/3: refreshing access token
+[2026-04-11 09:01:29] BLOGGER | towing-cost-chicago-illinois | token refresh failed: disabled_client: The OAuth client was disabled.
+[2026-04-11 09:01:29] BLOGGER | towing-cost-chicago-illinois | FAIL | ERROR: token refresh failed — disabled_client: The OAuth client was disabled.
+[2026-04-11 09:01:29] --- waiting 60s before next platform ---
+[2026-04-11 09:02:29] WORDPRESS | towing-cost-chicago-illinois | START
+[2026-04-11 09:02:29] WORDPRESS | towing-cost-chicago-illinois | SKIP | SKIP: no PUBLER_API_KEY
+[2026-04-11 09:02:29] --- waiting 60s before next platform ---
+[2026-04-11 09:03:29] FEEDER | towing-cost-chicago-illinois | START
+[2026-04-11 09:03:30] FEEDER | towing-cost-chicago-illinois | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-chicago-illinois-help/
+[2026-04-11 09:03:30] === SYNDICATE DONE: towing-cost-chicago-illinois | 3/5 succeeded | 4 attempted | 1 failed ===
+[2026-04-11 09:03:30] SYNCED | towing-cost-chicago-illinois marked in synced-posts.txt
+[2026-04-11 09:03:30] BACKLOG: Backlog run complete: 3/5 succeeded for towing-cost-chicago-illinois
+[2026-04-11 09:03:30] BACKLOG: Total progress: 31/85 posts synced
