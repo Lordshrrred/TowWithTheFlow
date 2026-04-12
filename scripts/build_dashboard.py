@@ -76,6 +76,26 @@ def main():
 
     pw_hash = hashlib.sha256(password.encode()).hexdigest() if password else ""
 
+    def normalize_env(value: str, key_name: str) -> str:
+        raw = str(value or "").strip()
+        prefix = f"{key_name}="
+        return raw[len(prefix):] if raw.startswith(prefix) else raw
+
+    def escape_js_string(value: str) -> str:
+        return (
+            str(value or "")
+            .replace("\\", "\\\\")
+            .replace('"', '\\"')
+            .replace("\r", "\\r")
+            .replace("\n", "\\n")
+        )
+
+    github_token = escape_js_string(normalize_env(github_token, "GITHUB_TOKEN"))
+    trigger_token = escape_js_string(normalize_env(trigger_token, "DASHBOARD_TRIGGER_TOKEN"))
+    blogger_id = escape_js_string(normalize_env(blogger_id, "BLOGGER_BLOG_ID"))
+    blogger_key = escape_js_string(normalize_env(blogger_key, "BLOGGER_API_KEY"))
+    blogger_url = escape_js_string(normalize_env(blogger_url, "BLOGGER_BASE_URL"))
+
     for build in BUILDS:
         tmpl = build["template"]
         out  = build["output"]
