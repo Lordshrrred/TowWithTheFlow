@@ -8,6 +8,7 @@ on:
     - cron: '30 12 * * *'  # 12:30 UTC (06:30 Denver, MDT) — syndicate local post
     - cron: '30 14 * * *'  # 14:30 UTC (08:30 Denver, MDT) — syndicate 1 backlog post
     - cron: '35 14 * * *'  # 14:35 UTC (08:35 Denver, MDT) — syndicate 1 WordPress backlog post
+    - cron: '40 14 * * *'  # 14:40 UTC (08:40 Denver, MDT) — syndicate up to 3 Blogger backlog posts
   workflow_dispatch:
     inputs:
       job:
@@ -22,6 +23,7 @@ on:
           - syndicate-new-2
           - syndicate-backlog
           - syndicate-wordpress-backlog
+          - syndicate-blogger-backlog
 
 permissions:
   contents: write
@@ -225,7 +227,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: syndicate general post $(date +%Y-%m-%d)"
           git push
 
@@ -283,7 +285,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: syndicate local post $(date +%Y-%m-%d)"
           git push
 
@@ -334,7 +336,7 @@ jobs:
 
       - name: Commit syndication results
         run: |
-          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: backlog syndication $(date +%Y-%m-%d)"
           git push
 
@@ -388,4 +390,43 @@ jobs:
         run: |
           git add scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: WordPress backlog syndication $(date +%Y-%m-%d)"
+          git push
+
+  syndicate-blogger-backlog:
+    runs-on: ubuntu-latest
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '40 14 * * *') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.job == 'syndicate-blogger-backlog')
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install anthropic python-dotenv requests requests-oauthlib
+
+      - name: Syndicate Blogger backlog posts (up to 3/day)
+        env:
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          BLOGGER_BASE_URL: ${{ secrets.BLOGGER_BASE_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/syndicate_blogger_backlog.py --limit 3 --order oldest
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit Blogger backlog results
+        run: |
+          git add scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
+          git diff --staged --quiet || git commit -m "Auto: Blogger backlog syndication $(date +%Y-%m-%d)"
           git push

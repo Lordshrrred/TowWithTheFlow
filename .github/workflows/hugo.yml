@@ -48,6 +48,7 @@ jobs:
           DASHBOARD_TRIGGER_TOKEN: ${{ secrets.DASHBOARD_TRIGGER_TOKEN }}
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
           BLOGGER_API_KEY: ${{ secrets.BLOGGER_API_KEY }}
+          BLOGGER_BASE_URL: ${{ secrets.BLOGGER_BASE_URL }}
         run: |
           pip install python-dotenv --quiet
           python scripts/build_dashboard.py

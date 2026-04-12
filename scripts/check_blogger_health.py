@@ -23,6 +23,9 @@ def env_clean(key: str, default: str = "") -> str:
     val = val.strip()
     if len(val) >= 2 and ((val[0] == '"' and val[-1] == '"') or (val[0] == "'" and val[-1] == "'")):
         val = val[1:-1].strip()
+    prefix = f"{key}="
+    if val.startswith(prefix):
+        val = val[len(prefix):].strip()
     return val
 
 

@@ -12,6 +12,7 @@ Injected placeholders:
   __DASHBOARD_TOKEN__    -- Long-lived PAT for workflow dispatch (DASHBOARD_TRIGGER_TOKEN secret)
   __BLOGGER_BLOG_ID__    -- Blogger blog ID
   __BLOGGER_API_KEY__    -- Blogger API key (optional)
+  __BLOGGER_BASE_URL__   -- Blogger site URL
   __BUILD_TIMESTAMP__    -- ISO timestamp of when this build ran
   __BUILD_TOKEN_STATUS__ -- "configured" or "missing" (never the token value)
   __BUILD_COMMIT__       -- Git commit SHA (GITHUB_SHA env var, or "local")
@@ -65,6 +66,7 @@ def main():
 
     blogger_id  = os.environ.get("BLOGGER_BLOG_ID", "")
     blogger_key = os.environ.get("BLOGGER_API_KEY", "")
+    blogger_url = os.environ.get("BLOGGER_BASE_URL", "https://towingandflowingroadsidedenver.blogspot.com")
 
     build_ts          = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     token_status      = "configured" if trigger_token else "missing"
@@ -88,6 +90,7 @@ def main():
         html = html.replace("__DASHBOARD_TOKEN__",    trigger_token)
         html = html.replace("__BLOGGER_BLOG_ID__",    blogger_id)
         html = html.replace("__BLOGGER_API_KEY__",    blogger_key)
+        html = html.replace("__BLOGGER_BASE_URL__",   blogger_url)
         html = html.replace("__BUILD_TIMESTAMP__",    build_ts)
         html = html.replace("__BUILD_TOKEN_STATUS__", token_status)
         html = html.replace("__TOKEN_COLOR__",        token_color)

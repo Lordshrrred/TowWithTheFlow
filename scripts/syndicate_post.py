@@ -59,6 +59,10 @@ def env_clean(key: str, default: str = "") -> str:
         (val[0] == "'" and val[-1] == "'")
     ):
         val = val[1:-1].strip()
+    # Be forgiving when a full KEY=value line gets pasted as the env value.
+    prefix = f"{key}="
+    if val.startswith(prefix):
+        val = val[len(prefix):].strip()
     return val
 
 
@@ -72,6 +76,7 @@ BLOGGER_CLIENT_ID     = env_clean("BLOGGER_CLIENT_ID")
 BLOGGER_CLIENT_SECRET = env_clean("BLOGGER_CLIENT_SECRET")
 BLOGGER_REFRESH_TOKEN = env_clean("BLOGGER_REFRESH_TOKEN")
 BLOGGER_BLOG_ID       = env_clean("BLOGGER_BLOG_ID")
+BLOGGER_BASE_URL      = env_clean("BLOGGER_BASE_URL") or "https://towingandflowingroadsidedenver.blogspot.com"
 GITHUB_TOKEN          = env_clean("GITHUB_TOKEN")
 
 # FEEDER token precedence:
@@ -103,6 +108,7 @@ POSTS_DIR      = ROOT / "content" / "posts"
 LOG_FILE       = Path(__file__).parent / "syndication_log.txt"
 SYNCED_FILE    = Path(__file__).parent / "synced-posts.txt"
 WORDPRESS_SYNCED_FILE = Path(__file__).parent / "wordpress-synced-posts.txt"
+BLOGGER_SYNCED_FILE = Path(__file__).parent / "blogger-synced-posts.txt"
 _PUBLER_WORDPRESS_ACCOUNT_CACHE: dict | None = None
 FEEDER_OWNER   = "Lordshrrred"
 FEEDER_REPO    = "TWTF_Feeder"
@@ -411,31 +417,79 @@ def get_blogger_token() -> tuple[str, str]:
     return "", f"{err}: {desc}{hint}"
 
 
+def md_inline_to_html(text: str) -> str:
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
+    text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', text)
+    return text
+
+
 def md_to_html(text: str) -> str:
-    """Minimal markdown-to-HTML for Blogger."""
-    lines = text.split('\n')
-    out = []
-    for line in lines:
-        line = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', line)
-        line = re.sub(r'\*(.+?)\*', r'<em>\1</em>', line)
-        line = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', line)
-        m = re.match(r'^#{1,6}\s+(.+)', line)
-        if m:
-            n = len(re.match(r'^(#+)', line).group(1))
-            line = f"<h{n}>{m.group(1)}</h{n}>"
-        elif line.startswith('> '):
-            line = f"<blockquote>{line[2:]}</blockquote>"
-        elif re.match(r'^\d+\.\s+', line):
-            line = re.sub(r'^\d+\.\s+', '', line)
-            line = f"<p>{line}</p>"
-        elif line.startswith('- ') or line.startswith('• '):
-            line = f"<p>{line}</p>"
-        elif line.strip() == '' or line.strip() == '---':
-            line = '<br>'
-        else:
-            line = f"<p>{line}</p>" if line.strip() else ''
-        out.append(line)
-    return '\n'.join(filter(None, out))
+    """Convert the subset of markdown we use into cleaner Blogger-ready HTML."""
+    lines = text.splitlines()
+    out: list[str] = []
+    paragraph: list[str] = []
+    list_items: list[str] = []
+    list_tag: str | None = None
+
+    def flush_paragraph():
+        nonlocal paragraph
+        if paragraph:
+            joined = " ".join(part.strip() for part in paragraph if part.strip()).strip()
+            if joined:
+                out.append(f"<p>{md_inline_to_html(joined)}</p>")
+            paragraph = []
+
+    def flush_list():
+        nonlocal list_items, list_tag
+        if list_items and list_tag:
+            items = "".join(f"<li>{md_inline_to_html(item)}</li>" for item in list_items)
+            out.append(f"<{list_tag}>{items}</{list_tag}>")
+        list_items = []
+        list_tag = None
+
+    for raw_line in lines:
+        line = raw_line.rstrip()
+        stripped = line.strip()
+
+        if not stripped or stripped == "---":
+            flush_paragraph()
+            flush_list()
+            continue
+
+        heading_match = re.match(r"^(#{1,6})\s+(.+)$", stripped)
+        if heading_match:
+            flush_paragraph()
+            flush_list()
+            level = len(heading_match.group(1))
+            out.append(f"<h{level}>{md_inline_to_html(heading_match.group(2).strip())}</h{level}>")
+            continue
+
+        quote_match = re.match(r"^>\s?(.*)$", stripped)
+        if quote_match:
+            flush_paragraph()
+            flush_list()
+            out.append(f"<blockquote>{md_inline_to_html(quote_match.group(1).strip())}</blockquote>")
+            continue
+
+        ordered_match = re.match(r"^\d+\.\s+(.+)$", stripped)
+        unordered_match = re.match(r"^[-*•]\s+(.+)$", stripped)
+        if ordered_match or unordered_match:
+            flush_paragraph()
+            desired_tag = "ol" if ordered_match else "ul"
+            item = (ordered_match or unordered_match).group(1).strip()
+            if list_tag and list_tag != desired_tag:
+                flush_list()
+            list_tag = desired_tag
+            list_items.append(item)
+            continue
+
+        flush_list()
+        paragraph.append(stripped)
+
+    flush_paragraph()
+    flush_list()
+    return "\n".join(out)
 
 
 def html_excerpt(text: str, limit: int = 260) -> str:
@@ -444,6 +498,36 @@ def html_excerpt(text: str, limit: int = 260) -> str:
         return plain
     cut = plain[:limit].rsplit(" ", 1)[0].strip()
     return (cut or plain[:limit]).rstrip(" .,;:") + "..."
+
+
+def build_blogger_labels(meta: dict, slug: str) -> list[str]:
+    raw_tags = meta.get("tags", [])
+    labels: list[str] = []
+    seen: set[str] = set()
+
+    def add_label(value: str):
+        cleaned = re.sub(r"\s+", " ", str(value or "").replace("-", " ")).strip(" ,")
+        if not cleaned:
+            return
+        key = cleaned.lower()
+        if key in seen:
+            return
+        seen.add(key)
+        labels.append(cleaned[:40])
+
+    if isinstance(raw_tags, list):
+        for tag in raw_tags:
+            add_label(tag)
+
+    for token in slug.split("-"):
+        if token.lower() in {"how", "what", "when", "with", "your", "from", "that", "this", "into", "cost"}:
+            continue
+        if len(token) >= 5:
+            add_label(token)
+
+    add_label("Towing Advice")
+    add_label("Roadside Help")
+    return labels[:8]
 
 
 def parse_csv_env_ids(value: str, fallback: list[str]) -> list[str]:
@@ -473,11 +557,21 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     canonical = f"{BASE_URL}/{slug}/"
     varied_title = get_variant_title(meta.get("title", slug), slug, "Blogger")
     varied_body = get_variation(body, "Blogger", slug)
+    intro = meta.get("description") or html_excerpt(varied_body, 180)
     source_note = (
-        f'<p><em>Originally published on '
+        '<div style="margin:20px 0;padding:14px 16px;border:1px solid #d8dee9;'
+        'border-radius:12px;background:#f7f9fc;">'
+        f'<p style="margin:0 0 8px 0;"><strong>Quick takeaway:</strong> {intro}</p>'
+        f'<p style="margin:0;"><em>Originally published on '
         f'<a href="{canonical}">Tow With The Flow</a>.</em></p>'
+        '</div>'
     )
-    html_content = source_note + "\n" + md_to_html(varied_body)
+    closing_cta = (
+        '<hr>'
+        '<p><strong>Need the full guide?</strong> '
+        f'<a href="{canonical}">Read the original article on Tow With The Flow</a>.</p>'
+    )
+    html_content = source_note + "\n" + md_to_html(varied_body) + "\n" + closing_cta
 
     log(f"BLOGGER | {slug} | step 3/3: posting to blog {BLOGGER_BLOG_ID}")
     try:
@@ -487,7 +581,7 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
             json={
                 "title":   varied_title,
                 "content": html_content,
-                "labels":  meta.get("tags", [])[:5],
+                "labels":  build_blogger_labels(meta, slug),
             },
             timeout=30
         )
@@ -833,6 +927,21 @@ def mark_wordpress_synced(slug: str):
         f.write(slug + "\n")
 
 
+def load_blogger_synced() -> set[str]:
+    if not BLOGGER_SYNCED_FILE.exists():
+        BLOGGER_SYNCED_FILE.write_text("", encoding="utf-8")
+        return set()
+    return {l.strip() for l in BLOGGER_SYNCED_FILE.read_text(encoding="utf-8").splitlines() if l.strip()}
+
+
+def mark_blogger_synced(slug: str):
+    synced = load_blogger_synced()
+    if slug in synced:
+        return
+    with BLOGGER_SYNCED_FILE.open("a", encoding="utf-8") as f:
+        f.write(slug + "\n")
+
+
 # ── Main orchestrator ──────────────────────────────────────────────────────────
 def run_syndication(slug: str):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -900,6 +1009,8 @@ def run_syndication(slug: str):
             successes += 1
             if platform == "WORDPRESS":
                 mark_wordpress_synced(slug)
+            if platform == "BLOGGER":
+                mark_blogger_synced(slug)
         elif not is_skip:
             failures.append(f"{platform}: {detail[:100]}")
 

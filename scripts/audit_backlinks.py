@@ -21,7 +21,7 @@ TWTF_BASE = "https://towwiththeflow.com"
 PLAT_KEYS = {"DEVTO": "dev", "TUMBLR": "tumblr", "BLOGGER": "blog", "WORDPRESS": "wordpress", "FEEDER": "feeder"}
 TUMBLR_BLOG = "towwiththeflow"
 FEEDER_SUFFIXES = ["-tips", "-advice", "-help", "-guide"]
-BLOGGER_BASE = "https://denverroadsideguide.blogspot.com"
+BLOGGER_BASE = "https://towingandflowingroadsidedenver.blogspot.com"
 _BLOGGER_SITE_AVAILABLE: bool | None = None
 
 
@@ -197,7 +197,7 @@ def recover_blogger(slug: str, sess: requests.Session) -> dict | None:
         scored: list[tuple[int, str]] = []
         for u in locs:
             low = u.lower()
-            if "denverroadsideguide.blogspot.com/20" not in low:
+            if urlparse(BLOGGER_BASE).netloc.lower() not in low:
                 continue
             score = 0
             if slug in low:
