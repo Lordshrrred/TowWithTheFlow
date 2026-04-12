@@ -1155,3 +1155,39 @@
 [2026-04-12 05:10:48] FEEDER | car-breaks-down-on-bridge-who-to-call | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-breaks-down-on-bridge-who-to-call-guide/
 [2026-04-12 05:10:48] === SYNDICATE DONE: car-breaks-down-on-bridge-who-to-call | 3/5 succeeded | 4 attempted | 1 failed ===
 [2026-04-12 05:10:48] SYNCED | car-breaks-down-on-bridge-who-to-call marked in synced-posts.txt
+[2026-04-12 07:38:32] === SYNDICATE START: car-battery-dies-parking-lot-phoenix ===
+[2026-04-12 07:38:32] PREFLIGHT | title: Car Battery Dies in Parking Lot: What to Do in Phoenix
+[2026-04-12 07:38:32] PREFLIGHT | date: 2026-04-12
+[2026-04-12 07:38:32] PREFLIGHT | timestamp: 2026-04-12 07:38:32
+[2026-04-12 07:38:32] PREFLIGHT | DEVTO:   configured
+[2026-04-12 07:38:32] PREFLIGHT | TUMBLR:  configured
+[2026-04-12 07:38:32] PREFLIGHT | BLOGGER: configured
+[2026-04-12 07:38:32] PREFLIGHT | WORDPRESS: MISSING PUBLER_API_KEY/PUBLER_WORKSPACE_ID — will SKIP
+[2026-04-12 07:38:32] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-12 07:38:32] DEVTO | car-battery-dies-parking-lot-phoenix | START
+[2026-04-12 07:38:33] DEVTO | car-battery-dies-parking-lot-phoenix | SUCCESS | https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23
+[2026-04-12 07:38:33] --- waiting 60s before next platform ---
+[2026-04-12 07:39:33] TUMBLR | car-battery-dies-parking-lot-phoenix | START
+[2026-04-12 07:39:33] TUMBLR | car-battery-dies-parking-lot-phoenix | SUCCESS | https://towwiththeflow.tumblr.com/post/813696206154956800
+[2026-04-12 07:39:33] --- waiting 60s before next platform ---
+[2026-04-12 07:40:33] BLOGGER | car-battery-dies-parking-lot-phoenix | START
+[2026-04-12 07:40:33] BLOGGER | car-battery-dies-parking-lot-phoenix | step 1/3: refreshing access token
+[2026-04-12 07:40:33] BLOGGER | car-battery-dies-parking-lot-phoenix | step 2/3: converting markdown to HTML
+[2026-04-12 07:40:33] BLOGGER | car-battery-dies-parking-lot-phoenix | step 3/3: posting to blog BLOGGER_BLOG_ID=1959471973457654666
+[2026-04-12 07:40:33] BLOGGER | car-battery-dies-parking-lot-phoenix | FAIL | HTTP 400: {
+  "error": {
+    "code": 400,
+    "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+    "errors": [
+      {
+        "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+        "domain": "global",
+        "reason": "require
+[2026-04-12 07:40:33] --- waiting 60s before next platform ---
+[2026-04-12 07:41:33] WORDPRESS | car-battery-dies-parking-lot-phoenix | START
+[2026-04-12 07:41:33] WORDPRESS | car-battery-dies-parking-lot-phoenix | SKIP | SKIP: no PUBLER_API_KEY
+[2026-04-12 07:41:33] --- waiting 60s before next platform ---
+[2026-04-12 07:42:33] FEEDER | car-battery-dies-parking-lot-phoenix | START
+[2026-04-12 07:42:34] FEEDER | car-battery-dies-parking-lot-phoenix | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-battery-dies-parking-lot-phoenix-advice/
+[2026-04-12 07:42:34] === SYNDICATE DONE: car-battery-dies-parking-lot-phoenix | 3/5 succeeded | 4 attempted | 1 failed ===
+[2026-04-12 07:42:34] SYNCED | car-battery-dies-parking-lot-phoenix marked in synced-posts.txt
