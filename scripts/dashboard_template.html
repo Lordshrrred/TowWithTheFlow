@@ -299,11 +299,11 @@
         <div class="drip-stats">
           <div class="drip-stat"><div class="drip-stat-label">Published</div><div class="drip-stat-value" id="ds-published">—</div></div>
           <div class="drip-stat"><div class="drip-stat-label">Remaining</div><div class="drip-stat-value" id="ds-remaining">—</div></div>
-          <div class="drip-stat"><div class="drip-stat-label">Drip Rate</div><div class="drip-stat-value">1/day</div></div>
-          <div class="drip-stat"><div class="drip-stat-label">Schedule</div><div class="drip-stat-value">3AM Denver (9AM UTC)</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Drip Rate</div><div class="drip-stat-value">2 new/day + catch-up</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Schedule</div><div class="drip-stat-value">3:00 AM, 3:30 AM + backlog lanes</div></div>
           <div class="drip-stat"><div class="drip-stat-label">Next Pub</div><div class="drip-stat-value" id="ds-next">—</div></div>
-          <div class="drip-stat"><div class="drip-stat-label">Syndicate</div><div class="drip-stat-value">On Pub</div></div>
-          <div class="drip-stat"><div class="drip-stat-label">Feeder</div><div class="drip-stat-value">Auto</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Syndicate</div><div class="drip-stat-value">2 new + backlog</div></div>
+          <div class="drip-stat"><div class="drip-stat-label">Feeder</div><div class="drip-stat-value">Auto on syndication</div></div>
         </div>
         <div class="drip-actions">
           <button class="drip-btn primary" onclick="triggerWorkflow('daily-post.yml','Run General Generate',0,{job:'generate-general'})">⚡ Run General Now</button>
@@ -312,7 +312,7 @@
         </div>
         <div class="status-indicators">
           <div class="status-pill"><div class="status-dot green"></div><span>New Posts: <strong>ACTIVE ✓</strong></span></div>
-          <div class="status-pill"><div class="status-dot green"></div><span>Backlog Drip: <strong>ACTIVE ✓</strong></span></div>
+          <div class="status-pill"><div class="status-dot green"></div><span>Platform Catch-Up: <strong>ACTIVE ✓</strong></span></div>
         </div>
 
         <!-- Per-platform drip rates -->
@@ -413,7 +413,7 @@
       <div class="qa-card" onclick="triggerWorkflow('daily-post.yml','Run Blogger Backlog',4,{job:'syndicate-blogger-backlog'})">
         <div class="qa-icon">📝</div>
         <div class="qa-label">Run Blogger Backlog</div>
-        <div class="qa-desc">Publishes up to 3 Blogger backfills</div>
+        <div class="qa-desc">Publishes up to 2 Blogger backfills</div>
         <div class="qa-status" id="qa-4"></div>
       </div>
       <div class="qa-card" onclick="testAllConnections()">
@@ -432,7 +432,7 @@
         <div class="bstat-row"><span class="bstat-label">Total Posts Published</span><span class="bstat-value" id="bs-total-posts">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Keywords Remaining</span><span class="bstat-value" id="bs-kw-remaining">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Last Deploy</span><span class="bstat-value" id="bs-last-deploy" style="font-size:0.75rem;">—</span></div>
-        <div class="bstat-row"><span class="bstat-label">Next Scheduled Post</span><span class="bstat-value">3:00 AM Denver daily (9:00 UTC)</span></div>
+        <div class="bstat-row"><span class="bstat-label">Next Scheduled Post</span><span class="bstat-value">2 new posts each morning, catch-up daily</span></div>
       </div>
       <div class="card">
         <h3>Syndication Destinations</h3>
@@ -630,7 +630,7 @@ async function loadDashboard(){
   const feederFiles= (feederTree?.tree||[]).filter(f=>f.path?.startsWith("content/posts/")&&f.path.endsWith(".md")&&!f.path.endsWith("_index.md"));
   const feederSet  = new Set(feederFiles.map(f=>f.path.replace("content/posts/","").replace(".md","")));
 
-  renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet});
+  renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet,wpSyncedSet,bloggerSyncedSet,auditJson,wpAuditJson});
   renderDrip({allSlugs,syncedSet,logMap});
   renderRecent({logMap});
   renderMatrix({sortedSlugs,logMap,feederSet,postDateMap});
@@ -647,7 +647,7 @@ async function loadDashboard(){
 }
 
 // ── Stats bar ─────────────────────────────────────────────────────────────────
-function renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet}){
+function renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet,wpSyncedSet,bloggerSyncedSet,auditJson,wpAuditJson}){
   const syndSlugs=allSlugs.filter(s=>Object.values(logMap[s]||{}).some(v=>v.status==="success"));
   const weekAgo=new Date(); weekAgo.setDate(weekAgo.getDate()-7);
   const thisWeek=Object.entries(logMap).filter(([,p])=>Object.values(p).some(v=>v.status==="success"&&new Date(v.date)>=weekAgo)).length;
@@ -658,8 +658,19 @@ function renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet}){
   const covered=syndSlugs.filter(s=>feederSet.has(s)).length;
   const health=syndSlugs.length>0?Math.round(covered/syndSlugs.length*100):0;
   const healthColor=health>=80?"var(--green)":health>=50?"var(--amber)":"var(--red)";
-  // Platforms Active: count platforms with at least one success in the log
-  const activePlats=ACTIVE_PLATS.filter(p=>Object.values(logMap).some(pm=>pm[p]?.status==="success"));
+  // Platforms Active: use trackers/audits too so rebuilt lanes count as live even
+  // when their history is uneven or partially backfilled.
+  const auditSummary = auditJson?.summary || {};
+  const wpSummary = wpAuditJson?.summary?.wordpress || {};
+  const activePlats=ACTIVE_PLATS.filter(p=>{
+    if (Object.values(logMap).some(pm=>pm[p]?.status==="success")) return true;
+    if (p==="blog") return bloggerSyncedSet.size > 0 || (auditSummary.blog?.verified || 0) > 0;
+    if (p==="wordpress") return wpSyncedSet.size > 0 || (auditSummary.wordpress?.verified || 0) > 0 || (wpSummary.verified || 0) > 0;
+    if (p==="feeder") return feederFiles.length > 0 || (auditSummary.feeder?.verified || 0) > 0;
+    if (p==="dev") return (auditSummary.dev?.verified || 0) > 0;
+    if (p==="tumblr") return (auditSummary.tumblr?.verified || 0) > 0;
+    return false;
+  });
   const activePlatSub=activePlats.length===ACTIVE_PLATS.length?"all platforms live":activePlats.length===0?"none working":`${activePlats.map(p=>PLAT_LABEL[p]).join(", ")} working`;
   const platColor=activePlats.length===ACTIVE_PLATS.length?"var(--green)":activePlats.length>0?"var(--amber)":"var(--red)";
   document.getElementById("stats-bar").innerHTML=`
@@ -676,11 +687,11 @@ function renderDripRates(){
   const el=document.getElementById("drip-rates");
   if(!el) return;
   const rates=[
-    {label:"DEV.TO",  rate:"1/day",          color:"var(--amber)"},
-    {label:"TUMBLR",  rate:"1/day",          color:"var(--amber)"},
-    {label:"BLOGGER", rate:"up to 3/day",    color:"var(--amber)"},
-    {label:"WORDPRESS", rate:"1/day via Publer", color:"var(--amber)"},
-    {label:"FEEDER",  rate:"auto on publish", color:"var(--blue)"},
+    {label:"DEV.TO",  rate:"up to 3/day",    color:"var(--amber)"},
+    {label:"TUMBLR",  rate:"up to 3/day",    color:"var(--amber)"},
+    {label:"BLOGGER", rate:"up to 5/day",    color:"var(--amber)"},
+    {label:"WORDPRESS", rate:"up to 4/day via Publer", color:"var(--amber)"},
+    {label:"FEEDER",  rate:"up to 3/day",    color:"var(--blue)"},
   ];
   el.innerHTML=rates.map(r=>`
     <div style="display:flex;align-items:center;justify-content:space-between;padding:0.3rem 0;border-bottom:1px solid rgba(245,166,35,0.06);">

@@ -8,7 +8,7 @@ on:
     - cron: '30 12 * * *'  # 12:30 UTC (06:30 Denver, MDT) — syndicate local post
     - cron: '30 14 * * *'  # 14:30 UTC (08:30 Denver, MDT) — syndicate 1 backlog post
     - cron: '35 14 * * *'  # 14:35 UTC (08:35 Denver, MDT) — syndicate 1 WordPress backlog post
-    - cron: '40 14 * * *'  # 14:40 UTC (08:40 Denver, MDT) — syndicate up to 3 Blogger backlog posts
+    - cron: '40 14 * * *'  # 14:40 UTC (08:40 Denver, MDT) — syndicate up to 2 Blogger backlog posts
   workflow_dispatch:
     inputs:
       job:
@@ -410,7 +410,7 @@ jobs:
 
       - run: pip install anthropic python-dotenv requests requests-oauthlib
 
-      - name: Syndicate Blogger backlog posts (up to 3/day)
+      - name: Syndicate Blogger backlog posts (up to 2/day)
         env:
           BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
           BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
@@ -418,7 +418,7 @@ jobs:
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
           BLOGGER_BASE_URL: ${{ secrets.BLOGGER_BASE_URL }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/syndicate_blogger_backlog.py --limit 3 --order oldest
+        run: python scripts/syndicate_blogger_backlog.py --limit 2 --order oldest
 
       - name: Configure git
         run: |

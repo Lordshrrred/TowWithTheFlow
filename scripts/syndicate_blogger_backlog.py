@@ -36,7 +36,7 @@ def get_all_posts() -> list[tuple[date, str]]:
 
 def main():
     parser = argparse.ArgumentParser(description="Backfill Blogger posts to the new Blogger site.")
-    parser.add_argument("--limit", type=int, default=3, help="Maximum posts to publish in one run")
+    parser.add_argument("--limit", type=int, default=2, help="Maximum posts to publish in one run")
     parser.add_argument("--order", choices=["oldest", "newest"], default="oldest", help="Backlog selection order")
     args = parser.parse_args()
 
