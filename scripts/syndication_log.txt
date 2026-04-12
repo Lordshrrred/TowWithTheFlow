@@ -1191,3 +1191,44 @@
 [2026-04-12 07:42:34] FEEDER | car-battery-dies-parking-lot-phoenix | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-battery-dies-parking-lot-phoenix-advice/
 [2026-04-12 07:42:34] === SYNDICATE DONE: car-battery-dies-parking-lot-phoenix | 3/5 succeeded | 4 attempted | 1 failed ===
 [2026-04-12 07:42:34] SYNCED | car-battery-dies-parking-lot-phoenix marked in synced-posts.txt
+[2026-04-12 09:01:17] BACKLOG: Posts total=87  synced=33  backlog=54  (today's posts excluded from backlog)
+[2026-04-12 09:01:17] BACKLOG: Syndicating backlog: how-much-does-a-tow-cost-in-colorado  (post date=2026-02-28)
+[2026-04-12 09:01:17] === SYNDICATE START: how-much-does-a-tow-cost-in-colorado ===
+[2026-04-12 09:01:17] PREFLIGHT | title: How Much Does a Tow Cost in Colorado?
+[2026-04-12 09:01:17] PREFLIGHT | date: 2026-02-28
+[2026-04-12 09:01:17] PREFLIGHT | timestamp: 2026-04-12 09:01:17
+[2026-04-12 09:01:17] PREFLIGHT | DEVTO:   configured
+[2026-04-12 09:01:17] PREFLIGHT | TUMBLR:  configured
+[2026-04-12 09:01:17] PREFLIGHT | BLOGGER: configured
+[2026-04-12 09:01:17] PREFLIGHT | WORDPRESS: MISSING PUBLER_API_KEY/PUBLER_WORKSPACE_ID — will SKIP
+[2026-04-12 09:01:17] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-12 09:01:17] BACKLINK | how-much-does-a-tow-cost-in-colorado | missing — injecting before syndication
+[2026-04-12 09:01:17] DEVTO | how-much-does-a-tow-cost-in-colorado | START
+[2026-04-12 09:01:17] DEVTO | how-much-does-a-tow-cost-in-colorado | SUCCESS | https://dev.to/towwiththeflowyoo/how-much-does-a-tow-cost-in-colorado-what-drivers-should-know-3p4g
+[2026-04-12 09:01:17] --- waiting 60s before next platform ---
+[2026-04-12 09:02:17] TUMBLR | how-much-does-a-tow-cost-in-colorado | START
+[2026-04-12 09:02:18] TUMBLR | how-much-does-a-tow-cost-in-colorado | SUCCESS | https://towwiththeflow.tumblr.com/post/813701411985653760
+[2026-04-12 09:02:18] --- waiting 60s before next platform ---
+[2026-04-12 09:03:18] BLOGGER | how-much-does-a-tow-cost-in-colorado | START
+[2026-04-12 09:03:18] BLOGGER | how-much-does-a-tow-cost-in-colorado | step 1/3: refreshing access token
+[2026-04-12 09:03:18] BLOGGER | how-much-does-a-tow-cost-in-colorado | step 2/3: converting markdown to HTML
+[2026-04-12 09:03:18] BLOGGER | how-much-does-a-tow-cost-in-colorado | step 3/3: posting to blog BLOGGER_BLOG_ID=1959471973457654666
+[2026-04-12 09:03:18] BLOGGER | how-much-does-a-tow-cost-in-colorado | FAIL | HTTP 400: {
+  "error": {
+    "code": 400,
+    "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+    "errors": [
+      {
+        "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+        "domain": "global",
+        "reason": "require
+[2026-04-12 09:03:18] --- waiting 60s before next platform ---
+[2026-04-12 09:04:18] WORDPRESS | how-much-does-a-tow-cost-in-colorado | START
+[2026-04-12 09:04:18] WORDPRESS | how-much-does-a-tow-cost-in-colorado | SKIP | SKIP: no PUBLER_API_KEY
+[2026-04-12 09:04:18] --- waiting 60s before next platform ---
+[2026-04-12 09:05:18] FEEDER | how-much-does-a-tow-cost-in-colorado | START
+[2026-04-12 09:05:18] FEEDER | how-much-does-a-tow-cost-in-colorado | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/how-much-does-a-tow-cost-in-colorado-help/
+[2026-04-12 09:05:18] === SYNDICATE DONE: how-much-does-a-tow-cost-in-colorado | 3/5 succeeded | 4 attempted | 1 failed ===
+[2026-04-12 09:05:18] SYNCED | how-much-does-a-tow-cost-in-colorado marked in synced-posts.txt
+[2026-04-12 09:05:18] BACKLOG: Backlog run complete: 3/5 succeeded for how-much-does-a-tow-cost-in-colorado
+[2026-04-12 09:05:18] BACKLOG: Total progress: 34/87 posts synced
