@@ -458,9 +458,7 @@
 // ── Config ──────────────────────────────────────────────────────────────────
 const SESSION_KEY  = "twtf_dashboard_auth";
 const PW_HASH       = "__PASSWORD_HASH__";
-const GH_TOKEN      = "__GITHUB_TOKEN__";      // ephemeral — read API only
-const TRIGGER_TOKEN    = "__DASHBOARD_TOKEN__";  // long-lived PAT — used only for auth header
-const TRIGGERS_ENABLED = __TRIGGERS_ENABLED__;   // JS bool injected at build time — not derived from token string
+const TRIGGERS_ENABLED = false;
 const BLOGGER_ID    = "__BLOGGER_BLOG_ID__";
 const BLOGGER_KEY   = "__BLOGGER_API_KEY__";
 const BLOGGER_BASE_URL = "__BLOGGER_BASE_URL__";
@@ -499,7 +497,7 @@ document.getElementById("lock-btn").addEventListener("click",()=>{sessionStorage
 let _tt; function showToast(m,d=3500){ const t=document.getElementById("toast"); t.textContent=m; t.classList.add("show"); clearTimeout(_tt); _tt=setTimeout(()=>t.classList.remove("show"),d); }
 
 // ── Fetch helpers ─────────────────────────────────────────────────────────────
-function ghHdrs(){ const h={"Accept":"application/vnd.github.v3+json"}; if(GH_TOKEN&&GH_TOKEN!=="__GITHUB_TOKEN__")h["Authorization"]=`token ${GH_TOKEN}`; return h; }
+function ghHdrs(){ return {"Accept":"application/vnd.github.v3+json"}; }
 async function ftext(url){ try{const r=await fetch(url);return r.ok?await r.text():"";}catch{return "";} }
 async function fjson(url,opts={}){ try{const r=await fetch(url,opts);return r.ok?await r.json():null;}catch{return null;} }
 async function ftextCors(url){
@@ -1236,21 +1234,13 @@ async function triggerWorkflow(wf,label,qaIdx,inputs,cb){
   if(typeof inputs==="function"){ cb=inputs; inputs={}; }
   inputs=inputs||{};
   if(!TRIGGERS_ENABLED){
-    showToast("⚠ Workflow triggers disabled — DASHBOARD_TRIGGER_TOKEN secret was missing at build time. Add it and redeploy.");
+    showToast("⚠ Workflow triggers are disabled until a safe backend is restored.");
     return;
   }
   const el=document.getElementById(`qa-${qaIdx}`);
   if(el){ el.textContent="Triggering…"; el.style.color="var(--amber)"; }
   try{
-    const body={ref:"main"};
-    if(Object.keys(inputs).length>0) body.inputs=inputs;
-    const r=await fetch(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/actions/workflows/${wf}/dispatches`,{
-      method:"POST",
-      headers:{"Authorization":`token ${TRIGGER_TOKEN}`,"Accept":"application/vnd.github.v3+json","Content-Type":"application/json"},
-      body:JSON.stringify(body)
-    });
-    if(r.ok||r.status===204){ showToast(`✓ ${label} triggered — check Actions tab in ~30s.`); if(el){el.textContent="Triggered ✓";el.style.color="var(--green)";} if(cb)cb(); }
-    else{ showToast(`✗ ${label} failed: HTTP ${r.status}`); if(el){el.textContent=`Failed (${r.status})`;el.style.color="var(--red)";} }
+    throw new Error("Workflow triggers are disabled.");
   }catch(e){ showToast(`✗ Error: ${e.message}`); if(el){el.textContent="Error";el.style.color="var(--red)";} }
 }
 
@@ -1266,7 +1256,7 @@ async function triggerWorkflow(wf,label,qaIdx,inputs,cb){
     if(!onclick.includes("triggerWorkflow")) return;
     card.style.opacity = "0.45";
     card.style.cursor  = "not-allowed";
-    card.title = "Disabled — DASHBOARD_TRIGGER_TOKEN not configured at build time. Add the secret and redeploy.";
+    card.title = "Disabled until a safe backend is restored.";
   });
 })();
 initAuth();

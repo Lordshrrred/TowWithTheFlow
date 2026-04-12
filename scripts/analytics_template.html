@@ -375,7 +375,6 @@ const PW_HASH      = "__PASSWORD_HASH__";   // injected by build_dashboard.py
 const DATA_URL     = "/data/analytics.json";
 const GH_OWNER     = "Lordshrrred";
 const GH_REPO      = "TowWithTheFlow";
-const GH_TOKEN     = "__GITHUB_TOKEN__";
 const REFRESH_MS   = 5 * 60 * 1000;
 
 // Chart.js palette — amber spectrum
@@ -503,18 +502,7 @@ function checkActivating(d) {
 
 // ── Trigger GH Actions workflow manually ─────────────────────────────────────
 async function triggerFetch() {
-  if (!GH_TOKEN || GH_TOKEN === "__GITHUB_TOKEN__") {
-    alert("GitHub token not configured — trigger the workflow manually in GitHub Actions."); return;
-  }
-  try {
-    const r = await fetch(
-      `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/actions/workflows/fetch-analytics.yml/dispatches`,
-      { method: "POST",
-        headers: { "Authorization": `token ${GH_TOKEN}`, "Accept": "application/vnd.github.v3+json", "Content-Type": "application/json" },
-        body: JSON.stringify({ ref: "main" }) }
-    );
-    alert(r.ok ? "✓ Fetch workflow triggered — check Actions tab in ~30s." : `Failed: ${r.status}`);
-  } catch(e) { alert("Error: " + e.message); }
+  alert("Manual analytics fetch is disabled until a safe backend is restored. Use GitHub Actions directly if needed.");
 }
 
 // ── Overview / Stat Cards ─────────────────────────────────────────────────────

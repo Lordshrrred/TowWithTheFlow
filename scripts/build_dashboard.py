@@ -8,8 +8,6 @@ Outputs:
 
 Injected placeholders:
   __PASSWORD_HASH__      -- SHA256 of DASHBOARD_PASSWORD
-  __GITHUB_TOKEN__       -- Ephemeral Actions token for GitHub API reads (expires after run)
-  __DASHBOARD_TOKEN__    -- Long-lived PAT for workflow dispatch (DASHBOARD_TRIGGER_TOKEN secret)
   __BLOGGER_BLOG_ID__    -- Blogger blog ID
   __BLOGGER_API_KEY__    -- Blogger API key (optional)
   __BLOGGER_BASE_URL__   -- Blogger site URL
@@ -18,11 +16,6 @@ Injected placeholders:
   __BUILD_COMMIT__       -- Git commit SHA (GITHUB_SHA env var, or "local")
   __TRIGGERS_ENABLED__   -- JS boolean literal true/false (separate from token value,
                             so token substitution cannot corrupt the enable/disable check)
-
-NOTE: __GITHUB_TOKEN__ is the ephemeral Actions token — only good for read API calls during
-the current workflow run. DO NOT use it for browser-side workflow dispatch.
-Use __DASHBOARD_TOKEN__ (backed by DASHBOARD_TRIGGER_TOKEN secret, a real PAT with
-workflow scope) for any trigger operations from the dashboard.
 """
 import hashlib
 import os
@@ -58,20 +51,14 @@ def main():
         print("WARNING: DASHBOARD_PASSWORD not set -- dashboards will be inaccessible",
               file=sys.stderr)
 
-    github_token    = os.environ.get("GITHUB_TOKEN", "")
-    trigger_token   = os.environ.get("DASHBOARD_TRIGGER_TOKEN", "")
-    if not trigger_token:
-        print("WARNING: DASHBOARD_TRIGGER_TOKEN not set -- dashboard workflow triggers will be disabled",
-              file=sys.stderr)
-
     blogger_id  = os.environ.get("BLOGGER_BLOG_ID", "")
     blogger_key = os.environ.get("BLOGGER_API_KEY", "")
     blogger_url = os.environ.get("BLOGGER_BASE_URL", "https://towingandflowingroadsidedenver.blogspot.com")
 
     build_ts          = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    token_status      = "configured" if trigger_token else "missing"
-    token_color       = "#22c55e" if trigger_token else "#ef4444"
-    triggers_enabled  = "true" if trigger_token else "false"   # JS boolean literal
+    token_status      = "disabled"
+    token_color       = "#ef4444"
+    triggers_enabled  = "false"   # client-side triggers stay disabled without a safe backend
     commit_sha        = os.environ.get("GITHUB_SHA", "local")[:8]
 
     pw_hash = hashlib.sha256(password.encode()).hexdigest() if password else ""
@@ -90,8 +77,6 @@ def main():
             .replace("\n", "\\n")
         )
 
-    github_token = escape_js_string(normalize_env(github_token, "GITHUB_TOKEN"))
-    trigger_token = escape_js_string(normalize_env(trigger_token, "DASHBOARD_TRIGGER_TOKEN"))
     blogger_id = escape_js_string(normalize_env(blogger_id, "BLOGGER_BLOG_ID"))
     blogger_key = escape_js_string(normalize_env(blogger_key, "BLOGGER_API_KEY"))
     blogger_url = escape_js_string(normalize_env(blogger_url, "BLOGGER_BASE_URL"))
@@ -106,8 +91,6 @@ def main():
 
         html = tmpl.read_text(encoding="utf-8")
         html = html.replace("__PASSWORD_HASH__",      pw_hash)
-        html = html.replace("__GITHUB_TOKEN__",       github_token)
-        html = html.replace("__DASHBOARD_TOKEN__",    trigger_token)
         html = html.replace("__BLOGGER_BLOG_ID__",    blogger_id)
         html = html.replace("__BLOGGER_API_KEY__",    blogger_key)
         html = html.replace("__BLOGGER_BASE_URL__",   blogger_url)
