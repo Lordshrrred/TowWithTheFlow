@@ -1,8 +1,8 @@
 {
   "alert_target": "earthlingoflight@gmail.com",
-  "checked_at": "2026-04-12T01:08:38.722398+00:00",
-  "detail": "",
+  "checked_at": "2026-04-12T12:03:10.447986+00:00",
+  "detail": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid blog id: For input string: \\\"BLOGGER_BLOG_ID=1959471973457654666\\\"\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid blog id: For input string: \\\"BLOGGER_BLOG_ID=195947197345765466",
   "last_alert_at": "",
-  "reason": "ok",
-  "status": "healthy"
+  "reason": "blog_api_http_400",
+  "status": "unhealthy"
 }
