@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T10:07:43.050038+00:00",
+  "generated_at": "2026-04-13T14:10:33.925134+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -155,7 +155,7 @@
     },
     "car-making-grinding-noise-when-braking-tow-cost": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-making-grinding-noise-when-braking.html",
         "verified": false
       },
@@ -260,9 +260,26 @@
         "verified": true
       }
     },
+    "car-stuck-mud-towing-cost": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/car-stuck-in-mud-who-pays-the-towing-cost-what-drivers-should-know-89g",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-stuck-mud-towing-cost-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813780026236469248/car-stuck-mud-towing-cost",
+        "verified": true
+      }
+    },
     "car-wont-shift-into-drive-need-tow-truck": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-wont-shift-into-drive-need-tow-truck.html",
         "verified": false
       },
@@ -611,7 +628,7 @@
     },
     "towing-cost-houston-texas-sunday-emergency": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/sunday-emergency-towing-costs-in.html",
         "verified": false
       },
@@ -660,7 +677,7 @@
     },
     "towing-cost-phoenix-arizona": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-what.html",
         "verified": false
       },
@@ -682,7 +699,7 @@
     },
     "towing-cost-phoenix-arizona-after-hours": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-after.html",
         "verified": false
       },
@@ -753,16 +770,16 @@
       "verified": 2
     },
     "dev": {
-      "checked": 25,
-      "verified": 25
+      "checked": 26,
+      "verified": 26
     },
     "feeder": {
-      "checked": 35,
-      "verified": 35
+      "checked": 36,
+      "verified": 36
     },
     "tumblr": {
-      "checked": 34,
-      "verified": 34
+      "checked": 35,
+      "verified": 35
     },
     "wordpress": {
       "checked": 8,
