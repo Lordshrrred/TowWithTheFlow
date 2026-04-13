@@ -1292,3 +1292,39 @@
 [2026-04-13 03:57:54] KEYWORD_RESEARCH:   [6] alternator failed car wont stay running tow
 [2026-04-13 03:57:54] KEYWORD_RESEARCH:   [6] car making loud banging noise underneath emergency
 [2026-04-13 03:57:54] KEYWORD_RESEARCH:   [6] timing belt broke while driving need immediate tow
+[2026-04-13 05:50:49] === SYNDICATE START: car-stuck-mud-towing-cost ===
+[2026-04-13 05:50:49] PREFLIGHT | title: Car Stuck in Mud: Who Pays the Towing Cost?
+[2026-04-13 05:50:49] PREFLIGHT | date: 2026-04-13
+[2026-04-13 05:50:49] PREFLIGHT | timestamp: 2026-04-13 05:50:49
+[2026-04-13 05:50:49] PREFLIGHT | DEVTO:   configured
+[2026-04-13 05:50:49] PREFLIGHT | TUMBLR:  configured
+[2026-04-13 05:50:49] PREFLIGHT | BLOGGER: configured
+[2026-04-13 05:50:49] PREFLIGHT | WORDPRESS: MISSING PUBLER_API_KEY/PUBLER_WORKSPACE_ID — will SKIP
+[2026-04-13 05:50:49] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-13 05:50:49] DEVTO | car-stuck-mud-towing-cost | START
+[2026-04-13 05:50:50] DEVTO | car-stuck-mud-towing-cost | SUCCESS | https://dev.to/towwiththeflowyoo/car-stuck-in-mud-who-pays-the-towing-cost-what-drivers-should-know-89g
+[2026-04-13 05:50:50] --- waiting 60s before next platform ---
+[2026-04-13 05:51:50] TUMBLR | car-stuck-mud-towing-cost | START
+[2026-04-13 05:51:50] TUMBLR | car-stuck-mud-towing-cost | SUCCESS | https://towwiththeflow.tumblr.com/post/813780026236469248
+[2026-04-13 05:51:50] --- waiting 60s before next platform ---
+[2026-04-13 05:52:50] BLOGGER | car-stuck-mud-towing-cost | START
+[2026-04-13 05:52:50] BLOGGER | car-stuck-mud-towing-cost | step 1/3: refreshing access token
+[2026-04-13 05:52:50] BLOGGER | car-stuck-mud-towing-cost | step 2/3: converting markdown to HTML
+[2026-04-13 05:52:50] BLOGGER | car-stuck-mud-towing-cost | step 3/3: posting to blog BLOGGER_BLOG_ID=1959471973457654666
+[2026-04-13 05:52:50] BLOGGER | car-stuck-mud-towing-cost | FAIL | HTTP 400: {
+  "error": {
+    "code": 400,
+    "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+    "errors": [
+      {
+        "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+        "domain": "global",
+        "reason": "require
+[2026-04-13 05:52:50] --- waiting 60s before next platform ---
+[2026-04-13 05:53:50] WORDPRESS | car-stuck-mud-towing-cost | START
+[2026-04-13 05:53:50] WORDPRESS | car-stuck-mud-towing-cost | SKIP | SKIP: no PUBLER_API_KEY
+[2026-04-13 05:53:50] --- waiting 60s before next platform ---
+[2026-04-13 05:54:50] FEEDER | car-stuck-mud-towing-cost | START
+[2026-04-13 05:54:51] FEEDER | car-stuck-mud-towing-cost | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-stuck-mud-towing-cost-tips/
+[2026-04-13 05:54:51] === SYNDICATE DONE: car-stuck-mud-towing-cost | 3/5 succeeded | 4 attempted | 1 failed ===
+[2026-04-13 05:54:51] SYNCED | car-stuck-mud-towing-cost marked in synced-posts.txt
