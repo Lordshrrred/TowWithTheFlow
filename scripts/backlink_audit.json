@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14T14:15:59.124559+00:00",
+  "generated_at": "2026-04-14T17:37:13.193941+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "dev": {
@@ -87,7 +87,7 @@
     },
     "car-died-while-driving-what-now": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-died-while-driving-what-now.html",
         "verified": false
       },
@@ -385,7 +385,7 @@
     },
     "engine-stalls-at-stop-sign-causes": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/engine-stalls-at-stop-signs-causes-and.html",
         "verified": false
       },
@@ -471,6 +471,23 @@
         "verified": true
       }
     },
+    "how-much-does-aaa-towing-cost-without-membership": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/how-much-does-aaa-towing-cost-without-a-membership-quick-guide-4a89",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-much-does-aaa-towing-cost-without-membership-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813885472235569152/how-much-does-aaa-towing-cost-without-membership",
+        "verified": true
+      }
+    },
     "tire-blowout-highway-emergency-tow-cost": {
       "blog": {
         "reason": "ok",
@@ -520,7 +537,7 @@
     },
     "towing-cost-albuquerque-new-mexico": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/03/towing-cost-in-albuquerque-new-mexico_0998162076.html",
         "verified": false
       },
@@ -753,6 +770,23 @@
         "verified": true
       }
     },
+    "towing-cost-phoenix-arizona-summer-heat": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-summer-heat-what-to-expect-what-drivers-should-know-36f5",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-phoenix-arizona-summer-heat-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/813879858118672384/towing-cost-phoenix-arizona-summer-heat",
+        "verified": true
+      }
+    },
     "towing-cost-portland-oregon-rainy-weather": {
       "dev": {
         "reason": "ok",
@@ -821,16 +855,16 @@
       "verified": 2
     },
     "dev": {
-      "checked": 29,
-      "verified": 29
+      "checked": 31,
+      "verified": 31
     },
     "feeder": {
-      "checked": 39,
-      "verified": 39
+      "checked": 41,
+      "verified": 41
     },
     "tumblr": {
-      "checked": 38,
-      "verified": 38
+      "checked": 40,
+      "verified": 40
     },
     "wordpress": {
       "checked": 8,
