@@ -1441,3 +1441,39 @@
         "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
         "domain": "global",
         "reason": "require
+[2026-04-14 05:37:34] === SYNDICATE START: geico-roadside-assistance-vs-tow-truck-cost ===
+[2026-04-14 05:37:34] PREFLIGHT | title: GEICO Roadside Assistance vs Tow Truck Cost: What You'll Actually Pay
+[2026-04-14 05:37:34] PREFLIGHT | date: 2026-04-14
+[2026-04-14 05:37:34] PREFLIGHT | timestamp: 2026-04-14 05:37:34
+[2026-04-14 05:37:34] PREFLIGHT | DEVTO:   configured
+[2026-04-14 05:37:34] PREFLIGHT | TUMBLR:  configured
+[2026-04-14 05:37:34] PREFLIGHT | BLOGGER: configured
+[2026-04-14 05:37:34] PREFLIGHT | WORDPRESS: MISSING PUBLER_API_KEY/PUBLER_WORKSPACE_ID — will SKIP
+[2026-04-14 05:37:34] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-14 05:37:34] DEVTO | geico-roadside-assistance-vs-tow-truck-cost | START
+[2026-04-14 05:37:35] DEVTO | geico-roadside-assistance-vs-tow-truck-cost | SUCCESS | https://dev.to/towwiththeflowyoo/geico-roadside-assistance-vs-tow-truck-cost-what-youll-actually-pay-what-drivers-should-know-1bcj
+[2026-04-14 05:37:35] --- waiting 60s before next platform ---
+[2026-04-14 05:38:35] TUMBLR | geico-roadside-assistance-vs-tow-truck-cost | START
+[2026-04-14 05:38:35] TUMBLR | geico-roadside-assistance-vs-tow-truck-cost | SUCCESS | https://towwiththeflow.tumblr.com/post/813869789782130688
+[2026-04-14 05:38:35] --- waiting 60s before next platform ---
+[2026-04-14 05:39:35] BLOGGER | geico-roadside-assistance-vs-tow-truck-cost | START
+[2026-04-14 05:39:35] BLOGGER | geico-roadside-assistance-vs-tow-truck-cost | step 1/3: refreshing access token
+[2026-04-14 05:39:35] BLOGGER | geico-roadside-assistance-vs-tow-truck-cost | step 2/3: converting markdown to HTML
+[2026-04-14 05:39:35] BLOGGER | geico-roadside-assistance-vs-tow-truck-cost | step 3/3: posting to blog BLOGGER_BLOG_ID=1959471973457654666
+[2026-04-14 05:39:36] BLOGGER | geico-roadside-assistance-vs-tow-truck-cost | FAIL | HTTP 400: {
+  "error": {
+    "code": 400,
+    "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+    "errors": [
+      {
+        "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+        "domain": "global",
+        "reason": "require
+[2026-04-14 05:39:36] --- waiting 60s before next platform ---
+[2026-04-14 05:40:36] WORDPRESS | geico-roadside-assistance-vs-tow-truck-cost | START
+[2026-04-14 05:40:36] WORDPRESS | geico-roadside-assistance-vs-tow-truck-cost | SKIP | SKIP: no PUBLER_API_KEY
+[2026-04-14 05:40:36] --- waiting 60s before next platform ---
+[2026-04-14 05:41:36] FEEDER | geico-roadside-assistance-vs-tow-truck-cost | START
+[2026-04-14 05:41:37] FEEDER | geico-roadside-assistance-vs-tow-truck-cost | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/geico-roadside-assistance-vs-tow-truck-cost-help/
+[2026-04-14 05:41:37] === SYNDICATE DONE: geico-roadside-assistance-vs-tow-truck-cost | 3/5 succeeded | 4 attempted | 1 failed ===
+[2026-04-14 05:41:37] SYNCED | geico-roadside-assistance-vs-tow-truck-cost marked in synced-posts.txt
