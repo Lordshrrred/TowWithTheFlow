@@ -1554,3 +1554,7 @@
 [2026-04-14 09:50:52] SYNCED | how-much-does-aaa-towing-cost-without-membership marked in synced-posts.txt
 [2026-04-14 09:50:52] BACKLOG: Backlog run complete: 3/5 succeeded for how-much-does-aaa-towing-cost-without-membership
 [2026-04-14 09:50:52] BACKLOG: Total progress: 40/91 posts synced
+[2026-04-14 09:53:44] WORDPRESS_BACKLOG | total=91 wordpress_synced=8 backlog=81
+[2026-04-14 09:53:44] BACKLINK | battery-dead-but-lights-turn-on | missing — injecting before syndication
+[2026-04-14 09:53:44] WORDPRESS_BACKLOG | battery-dead-but-lights-turn-on | START
+[2026-04-14 09:53:44] WORDPRESS | battery-dead-but-lights-turn-on | FAIL | SKIP: no PUBLER_API_KEY
