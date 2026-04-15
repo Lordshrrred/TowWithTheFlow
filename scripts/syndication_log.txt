@@ -1660,3 +1660,44 @@
 [2026-04-15 08:13:33] FEEDER | change-tire-highway-safely-houston | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/change-tire-highway-safely-houston-help/
 [2026-04-15 08:13:33] === SYNDICATE DONE: change-tire-highway-safely-houston | 3/5 succeeded | 4 attempted | 1 failed ===
 [2026-04-15 08:13:33] SYNCED | change-tire-highway-safely-houston marked in synced-posts.txt
+[2026-04-15 09:44:25] BACKLOG: Posts total=93  synced=42  backlog=51  (today's posts excluded from backlog)
+[2026-04-15 09:44:25] BACKLOG: Syndicating backlog: towing-cost-dallas-texas  (post date=2026-03-01)
+[2026-04-15 09:44:25] === SYNDICATE START: towing-cost-dallas-texas ===
+[2026-04-15 09:44:25] PREFLIGHT | title: Towing Cost in Dallas Texas: What You'll Pay and What to Do
+[2026-04-15 09:44:25] PREFLIGHT | date: 2026-03-01T10:51:00+00:00
+[2026-04-15 09:44:25] PREFLIGHT | timestamp: 2026-04-15 09:44:25
+[2026-04-15 09:44:25] PREFLIGHT | DEVTO:   configured
+[2026-04-15 09:44:25] PREFLIGHT | TUMBLR:  configured
+[2026-04-15 09:44:25] PREFLIGHT | BLOGGER: configured
+[2026-04-15 09:44:25] PREFLIGHT | WORDPRESS: MISSING PUBLER_API_KEY/PUBLER_WORKSPACE_ID — will SKIP
+[2026-04-15 09:44:25] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-15 09:44:25] BACKLINK | towing-cost-dallas-texas | missing — injecting before syndication
+[2026-04-15 09:44:25] DEVTO | towing-cost-dallas-texas | START
+[2026-04-15 09:44:26] DEVTO | towing-cost-dallas-texas | SUCCESS | https://dev.to/towwiththeflowyoo/towing-cost-in-dallas-texas-what-youll-pay-and-what-to-do-roadside-tips-2nif
+[2026-04-15 09:44:26] --- waiting 60s before next platform ---
+[2026-04-15 09:45:26] TUMBLR | towing-cost-dallas-texas | START
+[2026-04-15 09:45:26] TUMBLR | towing-cost-dallas-texas | SUCCESS | https://towwiththeflow.tumblr.com/post/813975916914081792
+[2026-04-15 09:45:26] --- waiting 60s before next platform ---
+[2026-04-15 09:46:26] BLOGGER | towing-cost-dallas-texas | START
+[2026-04-15 09:46:26] BLOGGER | towing-cost-dallas-texas | step 1/3: refreshing access token
+[2026-04-15 09:46:26] BLOGGER | towing-cost-dallas-texas | step 2/3: converting markdown to HTML
+[2026-04-15 09:46:26] BLOGGER | towing-cost-dallas-texas | step 3/3: posting to blog BLOGGER_BLOG_ID=1959471973457654666
+[2026-04-15 09:46:26] BLOGGER | towing-cost-dallas-texas | FAIL | HTTP 400: {
+  "error": {
+    "code": 400,
+    "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+    "errors": [
+      {
+        "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+        "domain": "global",
+        "reason": "require
+[2026-04-15 09:46:26] --- waiting 60s before next platform ---
+[2026-04-15 09:47:26] WORDPRESS | towing-cost-dallas-texas | START
+[2026-04-15 09:47:26] WORDPRESS | towing-cost-dallas-texas | SKIP | SKIP: no PUBLER_API_KEY
+[2026-04-15 09:47:26] --- waiting 60s before next platform ---
+[2026-04-15 09:48:26] FEEDER | towing-cost-dallas-texas | START
+[2026-04-15 09:48:27] FEEDER | towing-cost-dallas-texas | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-dallas-texas-guide/
+[2026-04-15 09:48:27] === SYNDICATE DONE: towing-cost-dallas-texas | 3/5 succeeded | 4 attempted | 1 failed ===
+[2026-04-15 09:48:27] SYNCED | towing-cost-dallas-texas marked in synced-posts.txt
+[2026-04-15 09:48:27] BACKLOG: Backlog run complete: 3/5 succeeded for towing-cost-dallas-texas
+[2026-04-15 09:48:27] BACKLOG: Total progress: 43/93 posts synced
