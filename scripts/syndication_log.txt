@@ -1822,3 +1822,33 @@
 [2026-04-16 10:09:58] BACKLINK | battery-dead-but-lights-turn-on | missing — injecting before syndication
 [2026-04-16 10:09:58] WORDPRESS_BACKLOG | battery-dead-but-lights-turn-on | START
 [2026-04-16 10:09:58] WORDPRESS | battery-dead-but-lights-turn-on | FAIL | SKIP: no PUBLER_API_KEY
+[2026-04-16 10:10:33] BLOGGER_BACKLOG | total=95 blogger_synced=2 backlog=91 limit=2 order=oldest
+[2026-04-16 10:10:33] BACKLINK | battery-dead-but-lights-turn-on | missing — injecting before syndication
+[2026-04-16 10:10:33] BLOGGER_BACKLOG | battery-dead-but-lights-turn-on | START
+[2026-04-16 10:10:33] BLOGGER | battery-dead-but-lights-turn-on | step 1/3: refreshing access token
+[2026-04-16 10:10:33] BLOGGER | battery-dead-but-lights-turn-on | step 2/3: converting markdown to HTML
+[2026-04-16 10:10:54] BLOGGER | battery-dead-but-lights-turn-on | step 3/3: posting to blog BLOGGER_BLOG_ID=1959471973457654666
+[2026-04-16 10:10:54] BLOGGER | battery-dead-but-lights-turn-on | FAIL | HTTP 400: {
+  "error": {
+    "code": 400,
+    "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+    "errors": [
+      {
+        "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+        "domain": "global",
+        "reason": "require
+[2026-04-16 10:10:54] BLOGGER_BACKLOG | waiting 65s before next Blogger post
+[2026-04-16 10:11:59] BACKLINK | can-i-drive-with-a-broken-axle | missing — injecting before syndication
+[2026-04-16 10:11:59] BLOGGER_BACKLOG | can-i-drive-with-a-broken-axle | START
+[2026-04-16 10:11:59] BLOGGER | can-i-drive-with-a-broken-axle | step 1/3: refreshing access token
+[2026-04-16 10:11:59] BLOGGER | can-i-drive-with-a-broken-axle | step 2/3: converting markdown to HTML
+[2026-04-16 10:12:18] BLOGGER | can-i-drive-with-a-broken-axle | step 3/3: posting to blog BLOGGER_BLOG_ID=1959471973457654666
+[2026-04-16 10:12:18] BLOGGER | can-i-drive-with-a-broken-axle | FAIL | HTTP 400: {
+  "error": {
+    "code": 400,
+    "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+    "errors": [
+      {
+        "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
+        "domain": "global",
+        "reason": "require
