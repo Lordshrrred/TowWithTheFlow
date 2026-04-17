@@ -1954,3 +1954,50 @@
 [2026-04-17 08:10:43] FEEDER | transmission-slipping-symptoms-houston | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-symptoms-houston-guide/
 [2026-04-17 08:10:43] === SYNDICATE DONE: transmission-slipping-symptoms-houston | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-04-17 08:10:43] SYNCED | transmission-slipping-symptoms-houston marked in synced-posts.txt
+[2026-04-17 09:33:43] BACKLOG: Posts total=97  synced=48  backlog=49  (today's posts excluded from backlog)
+[2026-04-17 09:33:43] BACKLOG: Syndicating backlog: towing-cost-miami-florida  (post date=2026-03-02)
+[2026-04-17 09:33:43] === SYNDICATE START: towing-cost-miami-florida ===
+[2026-04-17 09:33:43] PREFLIGHT | title: Towing Cost in Miami Florida: What You'll Pay and What to Do
+[2026-04-17 09:33:43] PREFLIGHT | date: 2026-03-02T09:29:00+00:00
+[2026-04-17 09:33:43] PREFLIGHT | timestamp: 2026-04-17 09:33:43
+[2026-04-17 09:33:43] PREFLIGHT | DEVTO:   configured
+[2026-04-17 09:33:43] PREFLIGHT | TUMBLR:  configured
+[2026-04-17 09:33:43] PREFLIGHT | BLOGGER: configured
+[2026-04-17 09:33:43] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-17 09:33:43] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-17 09:33:43] BACKLINK | towing-cost-miami-florida | missing — injecting before syndication
+[2026-04-17 09:33:43] DEVTO | towing-cost-miami-florida | START
+[2026-04-17 09:33:44] DEVTO | towing-cost-miami-florida | SUCCESS | https://dev.to/towwiththeflowyoo/towing-cost-in-miami-florida-what-youll-pay-and-what-to-do-roadside-tips-34h1
+[2026-04-17 09:33:44] --- waiting 60s before next platform ---
+[2026-04-17 09:34:44] TUMBLR | towing-cost-miami-florida | START
+[2026-04-17 09:34:44] TUMBLR | towing-cost-miami-florida | SUCCESS | https://towwiththeflow.tumblr.com/post/814156438155952128
+[2026-04-17 09:34:44] --- waiting 60s before next platform ---
+[2026-04-17 09:35:44] BLOGGER | towing-cost-miami-florida | START
+[2026-04-17 09:35:44] BLOGGER | towing-cost-miami-florida | step 1/3: refreshing access token
+[2026-04-17 09:35:45] BLOGGER | towing-cost-miami-florida | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-17 09:35:45] BLOGGER | towing-cost-miami-florida | step 2/3: converting markdown to HTML
+[2026-04-17 09:35:45] BLOGGER | towing-cost-miami-florida | step 3/3: posting to blog 1959471973457654666
+[2026-04-17 09:35:45] BLOGGER | towing-cost-miami-florida | FAIL | HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "errors": [
+      {
+        "message": "The caller does not have permission",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+[2026-04-17 09:35:45] --- waiting 60s before next platform ---
+[2026-04-17 09:36:45] WORDPRESS | towing-cost-miami-florida | START
+[2026-04-17 09:36:54] WORDPRESS | towing-cost-miami-florida | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/17/towing-cost-miami-florida/
+[2026-04-17 09:36:54] --- waiting 60s before next platform ---
+[2026-04-17 09:37:54] FEEDER | towing-cost-miami-florida | START
+[2026-04-17 09:37:55] FEEDER | towing-cost-miami-florida | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-miami-florida-help/
+[2026-04-17 09:37:55] === SYNDICATE DONE: towing-cost-miami-florida | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-17 09:37:55] SYNCED | towing-cost-miami-florida marked in synced-posts.txt
+[2026-04-17 09:37:55] BACKLOG: Backlog run complete: 4/5 succeeded for towing-cost-miami-florida
+[2026-04-17 09:37:55] BACKLOG: Total progress: 49/97 posts synced
