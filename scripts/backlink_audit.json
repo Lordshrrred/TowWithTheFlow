@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T09:51:10.846860+00:00",
+  "generated_at": "2026-04-17T14:00:33.376895+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "blog": {
@@ -291,6 +291,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/car-shaking-violently-while-driving-tow-needed/",
+        "verified": true
+      }
+    },
+    "car-slides-off-road-ice-who-pays-towing": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-slides-off-road-in-ice-who-pays-for.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/car-slides-off-road-in-ice-who-pays-for-towing-roadside-tips-4nn8",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-slides-off-road-ice-who-pays-towing-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814141150250385408/car-slides-off-road-ice-who-pays-towing",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/17/car-slides-off-road-ice-who-pays-towing/",
         "verified": true
       }
     },
@@ -1004,24 +1031,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 25,
-      "verified": 7
+      "checked": 26,
+      "verified": 8
     },
     "dev": {
-      "checked": 37,
-      "verified": 37
+      "checked": 38,
+      "verified": 38
     },
     "feeder": {
+      "checked": 48,
+      "verified": 48
+    },
+    "tumblr": {
       "checked": 47,
       "verified": 47
     },
-    "tumblr": {
-      "checked": 46,
-      "verified": 46
-    },
     "wordpress": {
-      "checked": 12,
-      "verified": 12
+      "checked": 13,
+      "verified": 13
     }
   }
 }
