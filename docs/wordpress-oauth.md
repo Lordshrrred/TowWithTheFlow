@@ -16,7 +16,7 @@ http://localhost:9878/callback
 ```
 
 4. Copy the client id and client secret.
-5. Create a WordPress.com Application Password for your account if you use 2FA.
+5. Application Password is optional. The repo now supports the normal browser-based OAuth code flow, which is the preferred setup.
 
 ## Env Vars
 
@@ -28,25 +28,9 @@ WORDPRESS_CLIENT_SECRET=...
 WORDPRESS_REDIRECT_URI=http://localhost:9878/callback
 WORDPRESS_SCOPE=posts media
 WORDPRESS_BLOG=https://towwiththeflowyo.wordpress.com
-WORDPRESS_USERNAME=...
-WORDPRESS_APPLICATION_PASSWORD=...
 ```
 
-## Fast Dev Token For Your Own Site
-
-This is the quickest way to let Codex manage your WordPress.com content during development.
-
-```bash
-python3 scripts/get_wordpress_oauth_token.py --flow password --write-env
-```
-
-That stores:
-
-```env
-WORDPRESS_OAUTH2_TOKEN=...
-```
-
-## Full OAuth Code Flow
+## Preferred Flow: Browser OAuth
 
 Generate the authorization URL:
 
@@ -58,6 +42,29 @@ Authorize in the browser, then paste either the `code` value or the full callbac
 
 ```bash
 python3 scripts/get_wordpress_oauth_token.py --flow exchange --code 'PASTE_CODE_OR_CALLBACK_URL' --write-env
+```
+
+## Optional Fast Dev Token Flow
+
+If you want automatic token re-issuance from username + app password during development, you can still set:
+
+```env
+WORDPRESS_USERNAME=...
+WORDPRESS_APPLICATION_PASSWORD=...
+```
+
+Then run:
+
+This is the quickest way to let Codex manage your WordPress.com content during development.
+
+```bash
+python3 scripts/get_wordpress_oauth_token.py --flow password --write-env
+```
+
+That stores:
+
+```env
+WORDPRESS_OAUTH2_TOKEN=...
 ```
 
 ## Verify The Token

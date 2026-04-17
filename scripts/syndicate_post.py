@@ -26,6 +26,7 @@ from datetime import datetime, date
 from pathlib import Path
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from urllib.parse import urlparse
 from dotenv import load_dotenv
 import requests
 
@@ -63,6 +64,9 @@ def env_clean(key: str, default: str = "") -> str:
     prefix = f"{key}="
     if val.startswith(prefix):
         val = val[len(prefix):].strip()
+    export_prefix = f"export {key}="
+    if val.startswith(export_prefix):
+        val = val[len(export_prefix):].strip()
     return val
 
 
@@ -102,6 +106,13 @@ PUBLER_WORKSPACE_ID   = env_clean("PUBLER_WORKSPACE_ID")
 PUBLER_WORDPRESS_ACCOUNT_ID = env_clean("PUBLER_WORDPRESS_ACCOUNT_ID")
 PUBLER_WORDPRESS_CATEGORY_IDS = env_clean("PUBLER_WORDPRESS_CATEGORY_IDS")
 PUBLER_WORDPRESS_TAG_IDS = env_clean("PUBLER_WORDPRESS_TAG_IDS")
+WORDPRESS_CLIENT_ID   = env_clean("WORDPRESS_CLIENT_ID")
+WORDPRESS_CLIENT_SECRET = env_clean("WORDPRESS_CLIENT_SECRET")
+WORDPRESS_USERNAME    = env_clean("WORDPRESS_USERNAME")
+WORDPRESS_APPLICATION_PASSWORD = env_clean("WORDPRESS_APPLICATION_PASSWORD")
+WORDPRESS_OAUTH2_TOKEN = env_clean("WORDPRESS_OAUTH2_TOKEN")
+WORDPRESS_BLOG        = env_clean("WORDPRESS_BLOG") or env_clean("WORDPRESS_SITE_URL")
+WORDPRESS_SITE_URL    = env_clean("WORDPRESS_SITE_URL") or WORDPRESS_BLOG
 
 BASE_URL       = "https://towwiththeflow.com"
 POSTS_DIR      = ROOT / "content" / "posts"
@@ -114,6 +125,9 @@ FEEDER_OWNER   = "Lordshrrred"
 FEEDER_REPO    = "TWTF_Feeder"
 FEEDER_SUFFIXES = ["-tips", "-advice", "-help", "-guide"]
 PUBLER_API_BASE = "https://app.publer.com/api/v1"
+WORDPRESS_OAUTH_TOKEN_URL = "https://public-api.wordpress.com/oauth2/token"
+WORDPRESS_REST_POSTS_NEW_BASE = "https://public-api.wordpress.com/rest/v1/sites"
+WORDPRESS_TOKEN_INFO_URL = "https://public-api.wordpress.com/oauth2/token-info"
 
 # Backlink block injected when missing
 BACKLINK_TMPL = (
@@ -417,6 +431,55 @@ def get_blogger_token() -> tuple[str, str]:
     return "", f"{err}: {desc}{hint}"
 
 
+def _normalize_urlish(value: str) -> str:
+    raw = str(value or "").strip()
+    if not raw:
+        return ""
+    parsed = urlparse(raw if "://" in raw else f"https://{raw}")
+    host = (parsed.netloc or parsed.path).strip().lower()
+    path = parsed.path.strip("/")
+    return f"{host}/{path}".strip("/")
+
+
+def resolve_blogger_blog_id(access_token: str) -> tuple[str, str]:
+    configured = BLOGGER_BLOG_ID.strip()
+    if configured.isdigit():
+        return configured, ""
+
+    try:
+        r = requests.get(
+            "https://www.googleapis.com/blogger/v3/users/self/blogs",
+            headers={"Authorization": f"Bearer {access_token}"},
+            timeout=20,
+        )
+        data = r.json() if r.headers.get("content-type", "").startswith("application/json") else {}
+    except Exception as e:
+        return "", f"could not list Blogger blogs: {e}"
+
+    if not r.ok:
+        return "", f"could not list Blogger blogs: HTTP {r.status_code}: {r.text[:240]}"
+
+    items = data.get("items", []) if isinstance(data, dict) else []
+    if not items:
+        return "", "no Blogger blogs available for this account"
+
+    target = _normalize_urlish(BLOGGER_BASE_URL)
+    if target:
+        for item in items:
+            if _normalize_urlish(item.get("url", "")) == target:
+                return str(item.get("id", "")).strip(), ""
+
+    if len(items) == 1:
+        return str(items[0].get("id", "")).strip(), ""
+
+    for item in items:
+        blog_id = str(item.get("id", "")).strip()
+        if blog_id == configured:
+            return blog_id, ""
+
+    return "", "configured BLOGGER_BLOG_ID was invalid and auto-discovery could not choose a single blog"
+
+
 def md_inline_to_html(text: str) -> str:
     text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
     text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
@@ -552,6 +615,11 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     if not access_token:
         log(f"BLOGGER | {slug} | token refresh failed: {token_err}")
         return False, f"ERROR: token refresh failed — {token_err}"
+    blog_id, blog_err = resolve_blogger_blog_id(access_token)
+    if not blog_id:
+        return False, f"ERROR: could not resolve Blogger blog id — {blog_err}"
+    if blog_id != BLOGGER_BLOG_ID.strip():
+        log(f"BLOGGER | {slug} | auto-recovered blog id mismatch: using {blog_id}")
 
     log(f"BLOGGER | {slug} | step 2/3: converting markdown to HTML")
     canonical = f"{BASE_URL}/{slug}/"
@@ -573,10 +641,10 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     )
     html_content = source_note + "\n" + md_to_html(varied_body) + "\n" + closing_cta
 
-    log(f"BLOGGER | {slug} | step 3/3: posting to blog {BLOGGER_BLOG_ID}")
+    log(f"BLOGGER | {slug} | step 3/3: posting to blog {blog_id}")
     try:
         r = requests.post(
-            f"https://www.googleapis.com/blogger/v3/blogs/{BLOGGER_BLOG_ID}/posts/",
+            f"https://www.googleapis.com/blogger/v3/blogs/{blog_id}/posts/",
             headers={"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"},
             json={
                 "title":   varied_title,
@@ -592,7 +660,179 @@ def syndicate_blogger(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         return False, str(e)
 
 
-# ── Platform: WordPress via Publer ────────────────────────────────────────────
+# ── Platform: WordPress direct API / Publer fallback ──────────────────────────
+def wordpress_site_identifier() -> str:
+    raw = (WORDPRESS_SITE_URL or WORDPRESS_BLOG).strip()
+    if not raw:
+        return ""
+    if re.fullmatch(r"\d+", raw):
+        return raw
+    parsed = urlparse(raw if "://" in raw else f"https://{raw}")
+    host = parsed.netloc or parsed.path
+    return host.strip().strip("/")
+
+
+def wordpress_direct_ready() -> bool:
+    site = wordpress_site_identifier()
+    token_ready = bool(WORDPRESS_OAUTH2_TOKEN)
+    password_flow_ready = bool(
+        WORDPRESS_CLIENT_ID and WORDPRESS_CLIENT_SECRET and WORDPRESS_USERNAME and WORDPRESS_APPLICATION_PASSWORD
+    )
+    return bool(site and (token_ready or password_flow_ready))
+
+
+def wordpress_get_access_token() -> tuple[str, str]:
+    if WORDPRESS_OAUTH2_TOKEN:
+        try:
+            info = requests.get(
+                WORDPRESS_TOKEN_INFO_URL,
+                params={"client_id": WORDPRESS_CLIENT_ID, "token": WORDPRESS_OAUTH2_TOKEN},
+                timeout=20,
+            )
+            if info.ok:
+                return WORDPRESS_OAUTH2_TOKEN, ""
+            log(f"WORDPRESS | stored OAuth token rejected: HTTP {info.status_code} {info.text[:180]}")
+        except Exception as e:
+            log(f"WORDPRESS | stored OAuth token validation failed: {e}")
+
+    missing = [
+        name for name, value in [
+            ("WORDPRESS_CLIENT_ID", WORDPRESS_CLIENT_ID),
+            ("WORDPRESS_CLIENT_SECRET", WORDPRESS_CLIENT_SECRET),
+            ("WORDPRESS_USERNAME", WORDPRESS_USERNAME),
+            ("WORDPRESS_APPLICATION_PASSWORD", WORDPRESS_APPLICATION_PASSWORD),
+        ]
+        if not value
+    ]
+    if missing:
+        return "", f"SKIP: missing WordPress direct API credentials: {', '.join(missing)}"
+
+    try:
+        r = requests.post(
+            WORDPRESS_OAUTH_TOKEN_URL,
+            data={
+                "client_id": WORDPRESS_CLIENT_ID,
+                "client_secret": WORDPRESS_CLIENT_SECRET,
+                "grant_type": "password",
+                "username": WORDPRESS_USERNAME,
+                "password": WORDPRESS_APPLICATION_PASSWORD,
+            },
+            timeout=30,
+        )
+        data = r.json()
+    except Exception as e:
+        return "", f"WordPress token request failed: {e}"
+
+    token = str(data.get("access_token", "")).strip()
+    if token:
+        return token, ""
+
+    err = data.get("error", "unknown_error")
+    desc = data.get("error_description", "no description from WordPress.com")
+    return "", f"WordPress token request failed: {err}: {desc}"
+
+
+def build_wordpress_terms(meta: dict, slug: str) -> tuple[list[str], list[str]]:
+    raw_tags = meta.get("tags", [])
+    tags: list[str] = []
+    seen: set[str] = set()
+
+    def add_term(target: list[str], value: str):
+        cleaned = re.sub(r"\s+", " ", str(value or "").replace("-", " ")).strip(" ,")
+        if not cleaned:
+            return
+        key = cleaned.lower()
+        if key in seen:
+            return
+        seen.add(key)
+        target.append(cleaned[:60])
+
+    if isinstance(raw_tags, list):
+        for tag in raw_tags:
+            add_term(tags, tag)
+    for token in slug.split("-"):
+        if len(token) >= 5 and token.lower() not in {"truck", "service", "while", "cost", "what", "need"}:
+            add_term(tags, token)
+
+    categories = ["Roadside Help", "Towing Advice"]
+    if any(token in slug for token in ("cost", "price", "cheap")):
+        categories = ["Towing Costs", "Roadside Help"]
+    elif any(token in slug for token in ("battery", "start", "alternator", "stall")):
+        categories = ["Car Won't Start", "Roadside Help"]
+    elif any(token in slug for token in ("snow", "winter", "cold")):
+        categories = ["Winter Driving", "Roadside Help"]
+
+    return categories, tags[:10]
+
+
+def build_wordpress_seo_excerpt(meta: dict, body: str, slug: str) -> str:
+    preferred = meta.get("description") or html_excerpt(body, 150)
+    preferred = re.sub(r"\s+", " ", preferred).strip()
+    return preferred[:155]
+
+
+def syndicate_wordpress_direct(slug: str, meta: dict, body: str) -> tuple[bool, str]:
+    site = wordpress_site_identifier()
+    if not site:
+        return False, "SKIP: missing WORDPRESS_BLOG or WORDPRESS_SITE_URL"
+
+    access_token, token_err = wordpress_get_access_token()
+    if not access_token:
+        return False, token_err
+
+    canonical = f"{BASE_URL}/{slug}/"
+    varied_body = get_variation(body, "WordPress", slug)
+    title = meta.get("title", slug).strip() or slug
+    intro = meta.get("description") or html_excerpt(varied_body, 180)
+    categories, tags = build_wordpress_terms(meta, slug)
+    excerpt = build_wordpress_seo_excerpt(meta, varied_body, slug)
+
+    source_note = (
+        '<div class="twtf-source-note" style="margin:20px 0;padding:14px 16px;border:1px solid #d8dee9;border-radius:12px;background:#f7f9fc;">'
+        f"<p><strong>Quick takeaway:</strong> {intro}</p>"
+        f'<p><em>Originally published on <a href="{canonical}">Tow With The Flow</a>.</em></p>'
+        "</div>"
+    )
+    closing_cta = (
+        "<hr>"
+        '<p><strong>Need the full guide?</strong> '
+        f'<a href="{canonical}">Read the original article on Tow With The Flow</a>.</p>'
+    )
+    html_content = source_note + "\n" + md_to_html(varied_body) + "\n" + closing_cta
+
+    try:
+        r = requests.post(
+            f"{WORDPRESS_REST_POSTS_NEW_BASE}/{site}/posts/new",
+            headers={
+                "Authorization": f"Bearer {access_token}",
+                "Accept": "application/json",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            data={
+                "title": title,
+                "content": html_content,
+                "excerpt": excerpt,
+                "slug": slug,
+                "status": "publish",
+                "categories": ",".join(categories),
+                "tags": ",".join(tags),
+            },
+            timeout=30,
+        )
+        data = r.json()
+    except Exception as e:
+        return False, str(e)
+
+    if not r.ok:
+        detail = data if isinstance(data, dict) else {"error": r.text[:300]}
+        err = detail.get("error", f"HTTP {r.status_code}")
+        desc = detail.get("message") or detail.get("error_description") or r.text[:300]
+        return False, f"{err}: {desc}"
+
+    return True, str(data.get("URL") or data.get("url") or canonical)
+
+
+# Publer fallback
 def publer_headers() -> dict[str, str]:
     return {
         "Authorization": f"Bearer-API {PUBLER_API_KEY}",
@@ -705,6 +945,12 @@ def publer_recent_wordpress_post(account_id: str, title: str) -> str:
 
 
 def syndicate_wordpress(slug: str, meta: dict, body: str) -> tuple[bool, str]:
+    if wordpress_direct_ready():
+        ok, detail = syndicate_wordpress_direct(slug, meta, body)
+        if ok or not (PUBLER_API_KEY and PUBLER_WORKSPACE_ID):
+            return ok, detail
+        log(f"WORDPRESS | {slug} | direct API failed, falling back to Publer: {detail}")
+
     account, account_err = publer_get_wordpress_account()
     if not account:
         return False, account_err
@@ -712,17 +958,18 @@ def syndicate_wordpress(slug: str, meta: dict, body: str) -> tuple[bool, str]:
     canonical = f"{BASE_URL}/{slug}/"
     varied_body = get_variation(body, "WordPress", slug)
     html_content = md_to_html(varied_body)
-    title = get_variant_title(meta.get("title", slug), slug, "WordPress")
+    title = meta.get("title", slug).strip() or slug
 
     account_category_ids = [str(cat.get("id")) for cat in (account.get("wordpress_categories") or []) if cat.get("id")]
     account_tag_ids = [str(tag.get("id")) for tag in (account.get("wordpress_tags") or []) if tag.get("id")]
     category_ids = parse_csv_env_ids(PUBLER_WORDPRESS_CATEGORY_IDS, account_category_ids or ["1"])
     tag_ids = parse_csv_env_ids(PUBLER_WORDPRESS_TAG_IDS, account_tag_ids or [])
+    excerpt = build_wordpress_seo_excerpt(meta, varied_body, slug)
 
     network = {
         "type": "article",
         "title": title,
-        "excerpt": meta.get("description") or html_excerpt(varied_body),
+        "excerpt": excerpt,
         "url": slug,
         "content": publer_wordpress_content_blocks(html_content),
         "categories": category_ids,
@@ -963,8 +1210,16 @@ def run_syndication(slug: str):
     log(f"PREFLIGHT | TUMBLR:  {'configured' if tumblr_ok else 'MISSING — will SKIP'}")
     blogger_ok = all([BLOGGER_CLIENT_ID, BLOGGER_CLIENT_SECRET, BLOGGER_REFRESH_TOKEN, BLOGGER_BLOG_ID])
     log(f"PREFLIGHT | BLOGGER: {'configured' if blogger_ok else 'MISSING — will SKIP'}")
-    wp_ok = bool(PUBLER_API_KEY and PUBLER_WORKSPACE_ID)
-    log(f"PREFLIGHT | WORDPRESS: {'configured via Publer' if wp_ok else 'MISSING PUBLER_API_KEY/PUBLER_WORKSPACE_ID — will SKIP'}")
+    wp_direct_ok = wordpress_direct_ready()
+    wp_publer_ok = bool(PUBLER_API_KEY and PUBLER_WORKSPACE_ID)
+    if wp_direct_ok:
+        log(f"PREFLIGHT | WORDPRESS: configured via direct WordPress.com API")
+    elif wp_publer_ok:
+        log(f"PREFLIGHT | WORDPRESS: configured via Publer fallback")
+    else:
+        log(
+            "PREFLIGHT | WORDPRESS: MISSING direct API creds and Publer creds — will SKIP"
+        )
     if FEEDER_TRIGGER_TOKEN and FEEDER_TOKEN_SOURCE != "GITHUB_TOKEN":
         log(f"PREFLIGHT | FEEDER:  configured (source={FEEDER_TOKEN_SOURCE}, dedicated token)")
     elif FEEDER_TRIGGER_TOKEN:

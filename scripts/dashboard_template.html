@@ -445,7 +445,7 @@
         <div class="bstat-row"><span class="bstat-label">WordPress Backlog</span><span class="bstat-value" id="bs-wordpress-backlog">—</span></div>
         <div class="bstat-row"><span class="bstat-label">WordPress Catch-Up ETA</span><span class="bstat-value" id="bs-wordpress-eta">—</span></div>
         <div class="bstat-row"><span class="bstat-label">All Platforms ETA</span><span class="bstat-value" id="bs-full-eta">—</span></div>
-        <div class="bstat-row"><span class="bstat-label">WordPress Site</span><span class="bstat-value" id="bs-wordpress-site">Connected via Publer</span></div>
+        <div class="bstat-row"><span class="bstat-label">WordPress Site</span><span class="bstat-value" id="bs-wordpress-site">Connected server-side</span></div>
         <div class="bstat-row"><span class="bstat-label">Backlink Coverage</span><span class="bstat-value" id="bs-backlink">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Feeder Site</span><span class="bstat-value"><a class="bstat-link" href="https://lordshrrred.github.io/TWTF_Feeder/" target="_blank" rel="noopener">lordshrrred.github.io/TWTF_Feeder ↗</a></span></div>
         <div class="bstat-row"><span class="bstat-label">Last Checked</span><span class="bstat-value" id="bs-feeder-checked">—</span></div>
@@ -693,7 +693,7 @@ function renderDripRates(){
     {label:"DEV.TO",  rate:"up to 3/day",    color:"var(--amber)"},
     {label:"TUMBLR",  rate:"up to 3/day",    color:"var(--amber)"},
     {label:"BLOGGER", rate:"up to 5/day",    color:"var(--amber)"},
-    {label:"WORDPRESS", rate:"up to 4/day via Publer", color:"var(--amber)"},
+    {label:"WORDPRESS", rate:"up to 4/day server-side", color:"var(--amber)"},
     {label:"FEEDER",  rate:"up to 3/day",    color:"var(--blue)"},
   ];
   el.innerHTML=rates.map(r=>`
@@ -1239,7 +1239,7 @@ const PLAT_TESTS={
   dev:    async()=>{ const r=await fetch("https://dev.to/api/articles?username=towwiththeflowyoo&per_page=1"); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
   tumblr: async()=>({ok:null,msg:"Tumblr requires OAuth — cannot test from browser. Check syndication_log.txt for real results."}),
   blog:   async()=>{ if(!BLOGGER_KEY||BLOGGER_KEY==="__BLOGGER_API_KEY__")return{ok:false,msg:"No API key"}; const r=await fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOGGER_ID}/posts?key=${BLOGGER_KEY}&maxResults=1`); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
-  wordpress: async()=>({ok:null,msg:"WordPress runs through Publer server-side. Check syndication_log.txt for live results."}),
+  wordpress: async()=>({ok:null,msg:"WordPress runs through the server-side syndication job. Check syndication_log.txt for live results."}),
   feeder: async()=>{ const r=await fetch(`${GITHUB_API}/repos/${GITHUB_OWNER}/${FEEDER_REPO}/git/trees/main?recursive=1`,{headers:ghHdrs()}); return{ok:r.ok,msg:r.ok?"Connected ✓":"Failed"}; },
 };
 

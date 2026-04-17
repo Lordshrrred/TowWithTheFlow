@@ -14,6 +14,7 @@ ROOT = Path(__file__).parent.parent
 DEFAULT_SCOPE = "posts media"
 AUTH_BASE = "https://public-api.wordpress.com/oauth2"
 ME_URL = "https://public-api.wordpress.com/rest/v1.1/me"
+TOKEN_INFO_URL = "https://public-api.wordpress.com/oauth2/token-info"
 
 
 def load_env_stack() -> None:
@@ -29,6 +30,12 @@ def env_clean(key: str, default: str = "") -> str:
     val = val.strip()
     if len(val) >= 2 and ((val[0] == '"' and val[-1] == '"') or (val[0] == "'" and val[-1] == "'")):
         val = val[1:-1].strip()
+    prefix = f"{key}="
+    if val.startswith(prefix):
+        val = val[len(prefix):].strip()
+    export_prefix = f"export {key}="
+    if val.startswith(export_prefix):
+        val = val[len(export_prefix):].strip()
     return val
 
 
@@ -157,17 +164,37 @@ def main() -> int:
         if not access_token:
             print("Missing WORDPRESS_OAUTH2_TOKEN")
             return 1
-        resp = requests.get(
-            ME_URL,
-            headers={"Authorization": f"Bearer {access_token}", "Accept": "application/json"},
+        token_info = requests.get(
+            TOKEN_INFO_URL,
+            params={"client_id": client_id, "token": access_token},
             timeout=30,
         )
-        data = resp.json()
-        if not resp.ok:
+        token_data = token_info.json()
+        if not token_info.ok:
             print("Verification failed:")
-            print(json.dumps(data, indent=2))
+            print(json.dumps(token_data, indent=2))
             return 1
-        print(json.dumps(data, indent=2))
+
+        scopes = {part.strip() for part in str(token_data.get("scope", "")).replace(",", " ").split() if part.strip()}
+        if "auth" in scopes:
+            resp = requests.get(
+                ME_URL,
+                headers={"Authorization": f"Bearer {access_token}", "Accept": "application/json"},
+                timeout=30,
+            )
+            data = resp.json()
+            if not resp.ok:
+                print("Verification failed:")
+                print(json.dumps(data, indent=2))
+                return 1
+            print(json.dumps(data, indent=2))
+            return 0
+
+        print(json.dumps({
+            "verified": True,
+            "token_info": token_data,
+            "note": "Token is valid. /me verification skipped because this token does not include auth scope.",
+        }, indent=2))
         return 0
 
     missing = [

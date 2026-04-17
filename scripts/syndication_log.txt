@@ -1852,3 +1852,34 @@
         "message": "Invalid blog id: For input string: \"BLOGGER_BLOG_ID=1959471973457654666\"",
         "domain": "global",
         "reason": "require
+[2026-04-16 20:55:45] MANUAL_WORDPRESS | car-breaks-down-on-bridge-who-to-call | START
+[2026-04-16 20:55:45] MANUAL_BLOGGER | car-breaks-down-on-bridge-who-to-call | START
+[2026-04-16 20:55:45] BLOGGER | car-breaks-down-on-bridge-who-to-call | step 1/3: refreshing access token
+[2026-04-16 20:55:45] BLOGGER | car-breaks-down-on-bridge-who-to-call | step 2/3: converting markdown to HTML
+[2026-04-16 20:56:08] MANUAL_WORDPRESS | car-breaks-down-on-bridge-who-to-call | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/16/car-breaks-down-on-bridge-who-to-call/
+[2026-04-16 20:56:09] BLOGGER | car-breaks-down-on-bridge-who-to-call | step 3/3: posting to blog 1959471973457654666
+[2026-04-16 20:56:10] MANUAL_BLOGGER | car-breaks-down-on-bridge-who-to-call | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html
+[2026-04-16 20:59:58] BLOGGER | car-battery-dies-parking-lot-phoenix | step 1/3: refreshing access token
+[2026-04-16 20:59:58] BLOGGER | car-battery-dies-parking-lot-phoenix | step 2/3: converting markdown to HTML
+[2026-04-16 21:00:25] BLOGGER | car-battery-dies-parking-lot-phoenix | step 3/3: posting to blog 1959471973457654666
+[2026-04-16 21:00:47] BLOGGER | towing-cost-portland-oregon-rainy-weather | step 1/3: refreshing access token
+[2026-04-16 21:00:47] BLOGGER | towing-cost-portland-oregon-rainy-weather | step 2/3: converting markdown to HTML
+[2026-04-16 21:01:16] BLOGGER | towing-cost-portland-oregon-rainy-weather | step 3/3: posting to blog 1959471973457654666
+[2026-04-16 21:03:48] WORDPRESS_BACKLOG | total=87 wordpress_synced=11 backlog=76
+[2026-04-16 21:03:48] BACKLINK | battery-dead-but-lights-turn-on | missing — injecting before syndication
+[2026-04-16 21:03:48] WORDPRESS_BACKLOG | battery-dead-but-lights-turn-on | START
+[2026-04-16 21:03:48] BLOGGER_BACKLOG | total=87 blogger_synced=5 backlog=82 limit=2 order=oldest
+[2026-04-16 21:03:48] BACKLINK | battery-dead-but-lights-turn-on | missing — injecting before syndication
+[2026-04-16 21:03:48] BLOGGER_BACKLOG | battery-dead-but-lights-turn-on | START
+[2026-04-16 21:03:48] BLOGGER | battery-dead-but-lights-turn-on | step 1/3: refreshing access token
+[2026-04-16 21:03:49] BLOGGER | battery-dead-but-lights-turn-on | step 2/3: converting markdown to HTML
+[2026-04-16 21:04:07] BLOGGER | battery-dead-but-lights-turn-on | step 3/3: posting to blog 1959471973457654666
+[2026-04-16 21:04:07] BLOGGER | battery-dead-but-lights-turn-on | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/battery-dead-but-lights-turn-on-whats.html
+[2026-04-16 21:04:07] BLOGGER_BACKLOG | waiting 65s before next Blogger post
+[2026-04-16 21:04:13] WORDPRESS | battery-dead-but-lights-turn-on | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/16/battery-dead-but-lights-turn-on/
+[2026-04-16 21:05:12] BACKLINK | can-i-drive-with-a-broken-axle | missing — injecting before syndication
+[2026-04-16 21:05:12] BLOGGER_BACKLOG | can-i-drive-with-a-broken-axle | START
+[2026-04-16 21:05:12] BLOGGER | can-i-drive-with-a-broken-axle | step 1/3: refreshing access token
+[2026-04-16 21:05:13] BLOGGER | can-i-drive-with-a-broken-axle | step 2/3: converting markdown to HTML
+[2026-04-16 21:05:33] BLOGGER | can-i-drive-with-a-broken-axle | step 3/3: posting to blog 1959471973457654666
+[2026-04-16 21:05:34] BLOGGER | can-i-drive-with-a-broken-axle | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/can-i-drive-with-broken-axle-explained.html
