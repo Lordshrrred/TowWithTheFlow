@@ -1912,3 +1912,45 @@
 [2026-04-17 05:34:59] FEEDER | car-slides-off-road-ice-who-pays-towing | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-slides-off-road-ice-who-pays-towing-advice/
 [2026-04-17 05:34:59] === SYNDICATE DONE: car-slides-off-road-ice-who-pays-towing | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-04-17 05:34:59] SYNCED | car-slides-off-road-ice-who-pays-towing marked in synced-posts.txt
+[2026-04-17 08:06:38] === SYNDICATE START: transmission-slipping-symptoms-houston ===
+[2026-04-17 08:06:38] PREFLIGHT | title: Transmission Slipping Symptoms: What Houston Drivers Need to Know
+[2026-04-17 08:06:38] PREFLIGHT | date: 2026-04-17
+[2026-04-17 08:06:38] PREFLIGHT | timestamp: 2026-04-17 08:06:38
+[2026-04-17 08:06:38] PREFLIGHT | DEVTO:   configured
+[2026-04-17 08:06:38] PREFLIGHT | TUMBLR:  configured
+[2026-04-17 08:06:38] PREFLIGHT | BLOGGER: configured
+[2026-04-17 08:06:38] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-17 08:06:38] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-17 08:06:38] DEVTO | transmission-slipping-symptoms-houston | START
+[2026-04-17 08:06:38] DEVTO | transmission-slipping-symptoms-houston | SUCCESS | https://dev.to/towwiththeflowyoo/transmission-slipping-symptoms-what-houston-drivers-need-to-know-explained-47ej
+[2026-04-17 08:06:38] --- waiting 60s before next platform ---
+[2026-04-17 08:07:38] TUMBLR | transmission-slipping-symptoms-houston | START
+[2026-04-17 08:07:39] TUMBLR | transmission-slipping-symptoms-houston | SUCCESS | https://towwiththeflow.tumblr.com/post/814150958838857728
+[2026-04-17 08:07:39] --- waiting 60s before next platform ---
+[2026-04-17 08:08:39] BLOGGER | transmission-slipping-symptoms-houston | START
+[2026-04-17 08:08:39] BLOGGER | transmission-slipping-symptoms-houston | step 1/3: refreshing access token
+[2026-04-17 08:08:40] BLOGGER | transmission-slipping-symptoms-houston | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-17 08:08:40] BLOGGER | transmission-slipping-symptoms-houston | step 2/3: converting markdown to HTML
+[2026-04-17 08:08:40] BLOGGER | transmission-slipping-symptoms-houston | step 3/3: posting to blog 1959471973457654666
+[2026-04-17 08:08:40] BLOGGER | transmission-slipping-symptoms-houston | FAIL | HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "errors": [
+      {
+        "message": "The caller does not have permission",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+[2026-04-17 08:08:40] --- waiting 60s before next platform ---
+[2026-04-17 08:09:40] WORDPRESS | transmission-slipping-symptoms-houston | START
+[2026-04-17 08:09:42] WORDPRESS | transmission-slipping-symptoms-houston | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/17/transmission-slipping-symptoms-houston/
+[2026-04-17 08:09:42] --- waiting 60s before next platform ---
+[2026-04-17 08:10:42] FEEDER | transmission-slipping-symptoms-houston | START
+[2026-04-17 08:10:43] FEEDER | transmission-slipping-symptoms-houston | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-symptoms-houston-guide/
+[2026-04-17 08:10:43] === SYNDICATE DONE: transmission-slipping-symptoms-houston | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-17 08:10:43] SYNCED | transmission-slipping-symptoms-houston marked in synced-posts.txt
