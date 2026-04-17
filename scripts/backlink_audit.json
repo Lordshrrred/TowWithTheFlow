@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-17T14:00:33.376895+00:00",
+  "generated_at": "2026-04-17T17:09:51.318432+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/battery-dead-but-lights-turn-on-whats.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -50,6 +50,11 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812327050399580160/can-i-drive-with-a-broken-axle",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/17/can-i-drive-with-a-broken-axle/",
         "verified": true
       }
     },
@@ -485,7 +490,7 @@
     },
     "engine-stalls-at-stop-sign-causes": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/engine-stalls-at-stop-signs-causes-and.html",
         "verified": false
       },
@@ -671,7 +676,7 @@
     },
     "towing-cost-albuquerque-new-mexico": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/03/towing-cost-in-albuquerque-new-mexico_0998162076.html",
         "verified": false
       },
@@ -867,6 +872,28 @@
         "verified": true
       }
     },
+    "towing-cost-miami-florida": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-miami-florida-what-youll-pay-and-what-to-do-roadside-tips-34h1",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-miami-florida-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814156438155952128/towing-cost-miami-florida",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/17/towing-cost-miami-florida/",
+        "verified": true
+      }
+    },
     "towing-cost-miami-florida-hurricane-season": {
       "blog": {
         "reason": "ok",
@@ -1001,6 +1028,28 @@
         "verified": true
       }
     },
+    "transmission-slipping-symptoms-houston": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/transmission-slipping-symptoms-what-houston-drivers-need-to-know-explained-47ej",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-symptoms-houston-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814150958838857728/transmission-slipping-symptoms-houston",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/17/transmission-slipping-symptoms-houston/",
+        "verified": true
+      }
+    },
     "what-happens-if-you-run-out-of-oil-while-driving": {
       "dev": {
         "reason": "no_url",
@@ -1032,23 +1081,23 @@
   "summary": {
     "blog": {
       "checked": 26,
-      "verified": 8
+      "verified": 7
     },
     "dev": {
-      "checked": 38,
-      "verified": 38
+      "checked": 40,
+      "verified": 40
     },
     "feeder": {
-      "checked": 48,
-      "verified": 48
+      "checked": 50,
+      "verified": 50
     },
     "tumblr": {
-      "checked": 47,
-      "verified": 47
+      "checked": 49,
+      "verified": 49
     },
     "wordpress": {
-      "checked": 13,
-      "verified": 13
+      "checked": 16,
+      "verified": 16
     }
   }
 }
