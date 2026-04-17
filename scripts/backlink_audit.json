@@ -1,7 +1,12 @@
 {
-  "generated_at": "2026-04-16T21:06:07.920779+00:00",
+  "generated_at": "2026-04-17T03:07:44.536090+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/battery-dead-but-lights-turn-on-whats.html",
+        "verified": true
+      },
       "dev": {
         "reason": "no_url",
         "url": "",
@@ -18,9 +23,19 @@
         "recovered_live": true,
         "url": "https://www.tumblr.com/towwiththeflow/811961137409228800/battery-dead-but-lights-turn-on",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/battery-dead-but-lights-turn-on/",
+        "verified": true
       }
     },
     "can-i-drive-with-a-broken-axle": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/can-i-drive-with-broken-axle-explained.html",
+        "verified": true
+      },
       "dev": {
         "reason": "no_url",
         "url": "",
@@ -52,6 +67,12 @@
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-battery-dies-in-parking-lot-what-to.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
@@ -66,9 +87,21 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813696206154956800/car-battery-dies-parking-lot-phoenix",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/car-battery-dies-parking-lot-phoenix/",
+        "verified": true
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-breaks-down-on-bridge-who-to-call-and-what-to-do-roadside-tips-51mf",
@@ -82,6 +115,12 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813686657069072384/car-breaks-down-on-bridge-who-to-call",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/car-breaks-down-on-bridge-who-to-call/",
         "verified": true
       }
     },
@@ -890,6 +929,12 @@
       }
     },
     "towing-cost-portland-oregon-rainy-weather": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-portland-oregon-rainy.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-portland-oregon-rainy-weather-what-to-expect-quick-guide-442k",
@@ -903,6 +948,12 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813605414798327808/towing-cost-portland-oregon-rainy-weather",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/towing-cost-portland-oregon-rainy-weather/",
         "verified": true
       }
     },
@@ -953,8 +1004,8 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 20,
-      "verified": 2
+      "checked": 25,
+      "verified": 7
     },
     "dev": {
       "checked": 37,
@@ -969,8 +1020,8 @@
       "verified": 46
     },
     "wordpress": {
-      "checked": 8,
-      "verified": 8
+      "checked": 12,
+      "verified": 12
     }
   }
 }
