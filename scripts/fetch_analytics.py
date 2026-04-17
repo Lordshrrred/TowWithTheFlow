@@ -211,7 +211,7 @@ def main():
     except ImportError:
         pass
 
-    property_id = os.environ.get("GA_PROPERTY_ID", "")
+    property_id = os.environ.get("GA_PROPERTY_ID", "").strip()
     if not property_id:
         print("ERROR: GA_PROPERTY_ID not set", file=sys.stderr)
         sys.exit(1)
