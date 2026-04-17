@@ -1,17 +1,63 @@
 {
-  "pageviews": 0,
-  "sessions": 0,
+  "pageviews": 3,
+  "sessions": 3,
   "avgSessionDur": 0,
-  "bounceRate": 0.0,
-  "newUsers": 0,
+  "bounceRate": 1.0,
+  "newUsers": 3,
   "returningUsers": 0,
-  "daily": [],
-  "topPages": [],
-  "trafficSources": [],
-  "topCountries": [],
-  "topCities": [],
-  "devices": [],
-  "browsers": [],
-  "os": [],
-  "lastUpdated": "2026-04-17T03:59:38.080200+00:00"
+  "daily": [
+    {
+      "date": "20260416",
+      "pageviews": 3
+    }
+  ],
+  "topPages": [
+    {
+      "rank": 1,
+      "page": "/",
+      "title": "Tow With The Flow | Real help when your car breaks down.",
+      "pageviews": 3,
+      "avgDur": 0,
+      "bounceRate": 100.0,
+      "sessions": 3
+    }
+  ],
+  "trafficSources": [
+    {
+      "channel": "Unassigned",
+      "sessions": 3,
+      "pct": 100.0
+    }
+  ],
+  "topCountries": [
+    {
+      "country": "",
+      "sessions": 3
+    }
+  ],
+  "topCities": [
+    {
+      "city": "",
+      "sessions": 3
+    }
+  ],
+  "devices": [
+    {
+      "device": "mobile",
+      "sessions": 3
+    }
+  ],
+  "browsers": [
+    {
+      "browser": "Chrome",
+      "sessions": 3
+    }
+  ],
+  "os": [
+    {
+      "os": "Android",
+      "sessions": 3
+    }
+  ],
+  "lastUpdated": "2026-04-17T08:04:01.827322+00:00"
 }
