@@ -581,6 +581,10 @@ function parseLog(txt){
     const um=line.match(/url=(https?:\/\/[^\s|]+)/i) || line.match(/(https?:\/\/[^\s|]+)/i);
     const url=normalizePlatformUrl(plat, slug, um?um[1]:"");
     if(!map[slug])map[slug]={};
+    const prev = map[slug][plat];
+    // Once a platform has a confirmed success for a slug, do not let later retry
+    // failures overwrite that published state in the dashboard.
+    if(prev?.status==="success" && status==="fail") continue;
     map[slug][plat]={status,url,date,tsMs,tsRaw};
   }
   return map;

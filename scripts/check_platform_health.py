@@ -14,6 +14,8 @@ ROOT = Path(__file__).parent.parent
 STATE_FILE = ROOT / "scripts" / "platform_health.json"
 ALERT_TO = "earthlingoflight@gmail.com"
 WORDPRESS_TOKEN_INFO_URL = "https://public-api.wordpress.com/oauth2/token-info"
+WRITE_PROBE_TITLE = "TWTF Blogger Health Check Draft"
+WRITE_PROBE_CONTENT = "<p>Temporary unpublished draft created by health check.</p>"
 
 
 def env_clean(key: str, default: str = "") -> str:
@@ -123,6 +125,33 @@ def check_tumblr() -> dict:
         return {"status": "unhealthy", "detail": str(e)}
 
 
+def blogger_write_probe(access_token: str, blog_id: str) -> tuple[bool, str]:
+    headers = {"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"}
+    create = requests.post(
+        f"https://www.googleapis.com/blogger/v3/blogs/{blog_id}/posts/",
+        params={"isDraft": "true"},
+        headers=headers,
+        json={"title": WRITE_PROBE_TITLE, "content": WRITE_PROBE_CONTENT, "labels": ["health-check"]},
+        timeout=20,
+    )
+    if not create.ok:
+        return False, f"draft create HTTP {create.status_code}: {(create.text or '')[:180]}"
+
+    post_id = str(create.json().get("id", "")).strip()
+    if not post_id:
+        return False, "draft create succeeded but response had no post id"
+
+    delete = requests.delete(
+        f"https://www.googleapis.com/blogger/v3/blogs/{blog_id}/posts/{post_id}",
+        headers={"Authorization": f"Bearer {access_token}"},
+        timeout=20,
+    )
+    if not delete.ok:
+        return False, f"draft delete HTTP {delete.status_code}: {(delete.text or '')[:180]}"
+
+    return True, ""
+
+
 def check_blogger() -> dict:
     cid = env_clean("BLOGGER_CLIENT_ID")
     csec = env_clean("BLOGGER_CLIENT_SECRET")
@@ -140,14 +169,10 @@ def check_blogger() -> dict:
         access = tdata.get("access_token", "")
         if not access:
             return {"status": "unhealthy", "detail": str(tdata)[:180]}
-        r = requests.get(
-            "https://www.googleapis.com/blogger/v3/users/self/blogs",
-            headers={"Authorization": f"Bearer {access}"},
-            timeout=20,
-        )
-        if r.ok:
+        ok, detail = blogger_write_probe(access, blog_id)
+        if ok:
             return {"status": "healthy"}
-        return {"status": "unhealthy", "detail": f"HTTP {r.status_code}: {r.text[:180]}"}
+        return {"status": "unhealthy", "detail": detail}
     except Exception as e:
         return {"status": "unhealthy", "detail": str(e)}
 

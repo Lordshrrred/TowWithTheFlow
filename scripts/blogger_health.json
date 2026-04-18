@@ -1,8 +1,8 @@
 {
   "alert_target": "earthlingoflight@gmail.com",
-  "checked_at": "2026-04-17T12:43:28.410443+00:00",
-  "detail": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid blog id: For input string: \\\"BLOGGER_BLOG_ID=1959471973457654666\\\"\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid blog id: For input string: \\\"BLOGGER_BLOG_ID=195947197345765466",
+  "checked_at": "2026-04-18T02:48:52.104078+00:00",
+  "detail": "draft create HTTP 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The caller does not have permission\",\n    \"errors\": [\n      {\n        \"message\": \"The caller does not have permission\",\n        \"domain\": \"global\",\n        \"reason\": \"forbidden\"\n      }\n    ],",
   "last_alert_at": "",
-  "reason": "blog_api_http_400",
+  "reason": "write_probe_failed",
   "status": "unhealthy"
 }
