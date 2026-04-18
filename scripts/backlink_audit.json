@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T09:07:22.159582+00:00",
+  "generated_at": "2026-04-18T13:38:09.101402+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "blog": {
@@ -16,12 +16,6 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/battery-dead-but-lights-turn-on-help/",
-        "verified": true
-      },
-      "tumblr": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://www.tumblr.com/towwiththeflow/811961137409228800/battery-dead-but-lights-turn-on",
         "verified": true
       },
       "wordpress": {
@@ -622,6 +616,28 @@
         "verified": true
       }
     },
+    "insurance-covers-towing-but-not-after-midnight": {
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/insurance-covers-towing-but-not-after-midnight-what-you-need-to-know-what-to-do-next-44lh",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/insurance-covers-towing-but-not-after-midnight-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814230301816553472/insurance-covers-towing-but-not-after-midnight",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/18/insurance-covers-towing-but-not-after-midnight/",
+        "verified": true
+      }
+    },
     "locked-keys-in-car-with-engine-running-cost": {
       "dev": {
         "reason": "ok",
@@ -1096,20 +1112,20 @@
       "verified": 10
     },
     "dev": {
-      "checked": 41,
-      "verified": 41
+      "checked": 42,
+      "verified": 42
     },
     "feeder": {
-      "checked": 50,
-      "verified": 50
+      "checked": 51,
+      "verified": 51
     },
     "tumblr": {
       "checked": 49,
       "verified": 49
     },
     "wordpress": {
-      "checked": 16,
-      "verified": 16
+      "checked": 17,
+      "verified": 17
     }
   }
 }
