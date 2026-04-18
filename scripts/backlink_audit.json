@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T03:32:07.485856+00:00",
+  "generated_at": "2026-04-18T05:53:00.979633+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "blog": {
@@ -220,6 +220,12 @@
       }
     },
     "car-making-noise-when-turning-steering-wheel-houston": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-making-noise-when-turning-steering.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-making-noise-when-turning-steering-wheel-in-houston-whats-wrong-and-how-to-fix-it-explained-5bkp",
@@ -594,6 +600,12 @@
       }
     },
     "how-to-start-a-frozen-car-battery": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-to-start-frozen-car-battery.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/how-to-start-a-frozen-car-battery-explained-2eae",
@@ -1080,8 +1092,8 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 26,
-      "verified": 8
+      "checked": 28,
+      "verified": 10
     },
     "dev": {
       "checked": 41,
