@@ -2132,3 +2132,50 @@
 [2026-04-18 07:43:42] FEEDER | car-overheating-in-traffic-what-to-do-in-phoenix | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-overheating-in-traffic-what-to-do-in-phoenix-advice/
 [2026-04-18 07:43:42] === SYNDICATE DONE: car-overheating-in-traffic-what-to-do-in-phoenix | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-04-18 07:43:42] SYNCED | car-overheating-in-traffic-what-to-do-in-phoenix marked in synced-posts.txt
+[2026-04-18 09:02:47] BACKLOG: Posts total=99  synced=51  backlog=48  (today's posts excluded from backlog)
+[2026-04-18 09:02:47] BACKLOG: Syndicating backlog: is-it-illegal-to-leave-your-car-on-the-side-of-the-road  (post date=2026-03-03)
+[2026-04-18 09:02:47] === SYNDICATE START: is-it-illegal-to-leave-your-car-on-the-side-of-the-road ===
+[2026-04-18 09:02:47] PREFLIGHT | title: Is It Illegal to Leave Your Car on the Side of the Road?
+[2026-04-18 09:02:47] PREFLIGHT | date: 2026-03-03
+[2026-04-18 09:02:47] PREFLIGHT | timestamp: 2026-04-18 09:02:47
+[2026-04-18 09:02:47] PREFLIGHT | DEVTO:   configured
+[2026-04-18 09:02:47] PREFLIGHT | TUMBLR:  configured
+[2026-04-18 09:02:47] PREFLIGHT | BLOGGER: configured
+[2026-04-18 09:02:47] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-18 09:02:47] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-18 09:02:47] BACKLINK | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | missing — injecting before syndication
+[2026-04-18 09:02:47] DEVTO | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | START
+[2026-04-18 09:02:48] DEVTO | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | SUCCESS | https://dev.to/towwiththeflowyoo/is-it-illegal-to-leave-your-car-on-the-side-of-the-road-roadside-tips-3c1o
+[2026-04-18 09:02:48] --- waiting 60s before next platform ---
+[2026-04-18 09:03:48] TUMBLR | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | START
+[2026-04-18 09:03:48] TUMBLR | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | SUCCESS | https://towwiththeflow.tumblr.com/post/814245088888766464
+[2026-04-18 09:03:48] --- waiting 60s before next platform ---
+[2026-04-18 09:04:48] BLOGGER | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | START
+[2026-04-18 09:04:48] BLOGGER | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | step 1/3: refreshing access token
+[2026-04-18 09:04:49] BLOGGER | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-18 09:04:49] BLOGGER | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | step 2/3: converting markdown to HTML
+[2026-04-18 09:04:49] BLOGGER | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | step 3/3: posting to blog 1959471973457654666
+[2026-04-18 09:04:50] BLOGGER | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | FAIL | HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "errors": [
+      {
+        "message": "The caller does not have permission",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+[2026-04-18 09:04:50] --- waiting 60s before next platform ---
+[2026-04-18 09:05:50] WORDPRESS | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | START
+[2026-04-18 09:06:03] WORDPRESS | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/18/is-it-illegal-to-leave-your-car-on-the-side-of-the-road/
+[2026-04-18 09:06:03] --- waiting 60s before next platform ---
+[2026-04-18 09:07:03] FEEDER | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | START
+[2026-04-18 09:07:04] FEEDER | is-it-illegal-to-leave-your-car-on-the-side-of-the-road | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/is-it-illegal-to-leave-your-car-on-the-side-of-the-road-help/
+[2026-04-18 09:07:04] === SYNDICATE DONE: is-it-illegal-to-leave-your-car-on-the-side-of-the-road | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-18 09:07:04] SYNCED | is-it-illegal-to-leave-your-car-on-the-side-of-the-road marked in synced-posts.txt
+[2026-04-18 09:07:04] BACKLOG: Backlog run complete: 4/5 succeeded for is-it-illegal-to-leave-your-car-on-the-side-of-the-road
+[2026-04-18 09:07:04] BACKLOG: Total progress: 52/99 posts synced
