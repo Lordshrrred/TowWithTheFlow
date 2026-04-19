@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T13:36:35.448282+00:00",
+  "generated_at": "2026-04-19T17:00:50.287249+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "blog": {
@@ -53,6 +53,11 @@
       }
     },
     "can-you-call-a-tow-truck-without-insurance": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/can-you-call-tow-truck-without.html",
+        "verified": true
+      },
       "feeder": {
         "reason": "ok",
         "recovered_live": true,
@@ -193,6 +198,11 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812600104275050496/car-makes-grinding-noise-when-driving",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/car-makes-grinding-noise-when-driving/",
         "verified": true
       }
     },
@@ -763,6 +773,33 @@
         "verified": true
       }
     },
+    "tow-truck-cost-aaa-vs-non-aaa-chicago-winter": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-aaa-vs-non-aaa-in.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/tow-truck-cost-aaa-vs-non-aaa-in-chicago-winter-roadside-tips-4i2m",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-aaa-vs-non-aaa-chicago-winter-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814330376060387328/tow-truck-cost-aaa-vs-non-aaa-chicago-winter",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/tow-truck-cost-aaa-vs-non-aaa-chicago-winter/",
+        "verified": true
+      }
+    },
     "tow-truck-damaged-my-car-who-pays": {
       "dev": {
         "reason": "ok",
@@ -961,6 +998,33 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813789039899639808/towing-cost-las-vegas-nevada-strip-area",
+        "verified": true
+      }
+    },
+    "towing-cost-los-angeles-california": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-los-angeles-california.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-los-angeles-california-what-youll-pay-and-what-to-do-quick-guide-2m5h",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-los-angeles-california-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814335691133747200/towing-cost-los-angeles-california",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/towing-cost-los-angeles-california/",
         "verified": true
       }
     },
@@ -1189,24 +1253,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 30,
-      "verified": 12
+      "checked": 33,
+      "verified": 15
     },
     "dev": {
-      "checked": 45,
-      "verified": 45
+      "checked": 47,
+      "verified": 47
     },
     "feeder": {
+      "checked": 56,
+      "verified": 56
+    },
+    "tumblr": {
       "checked": 54,
       "verified": 54
     },
-    "tumblr": {
-      "checked": 52,
-      "verified": 52
-    },
     "wordpress": {
-      "checked": 21,
-      "verified": 21
+      "checked": 24,
+      "verified": 24
     }
   }
 }

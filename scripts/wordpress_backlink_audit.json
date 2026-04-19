@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T13:36:36.881318+00:00",
+  "generated_at": "2026-04-19T17:00:51.907981+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/04/19/roadside-assistance-vs-calling-tow-truck-direct/",
     "https://towwiththeflowyo.wordpress.com/2026/04/18/can-you-call-a-tow-truck-without-insurance/",
@@ -21,7 +21,10 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/19/car-makes-grinding-noise-when-driving/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/19/towing-cost-los-angeles-california/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/19/tow-truck-cost-aaa-vs-non-aaa-chicago-winter/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -76,6 +79,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+        "verified": true
+      }
+    },
+    "car-makes-grinding-noise-when-driving": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-makes-grinding-noise-when-driving/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/car-makes-grinding-noise-when-driving/",
         "verified": true
       }
     },
@@ -160,6 +172,15 @@
         "verified": true
       }
     },
+    "tow-truck-cost-aaa-vs-non-aaa-chicago-winter": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/tow-truck-cost-aaa-vs-non-aaa-chicago-winter/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/tow-truck-cost-aaa-vs-non-aaa-chicago-winter/",
+        "verified": true
+      }
+    },
     "towing-cost-atlanta-georgia": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-atlanta-georgia/",
@@ -175,6 +196,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-atlanta-georgia-holiday-weekend/",
+        "verified": true
+      }
+    },
+    "towing-cost-los-angeles-california": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-los-angeles-california/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/towing-cost-los-angeles-california/",
         "verified": true
       }
     },
@@ -218,8 +248,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 21,
-      "verified": 21
+      "checked": 24,
+      "verified": 24
     }
   }
 }
