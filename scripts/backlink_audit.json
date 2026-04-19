@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T09:09:16.194285+00:00",
+  "generated_at": "2026-04-19T13:36:35.448282+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "blog": {
@@ -709,6 +709,33 @@
         "verified": true
       }
     },
+    "roadside-assistance-vs-calling-tow-truck-direct": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/roadside-assistance-vs-calling-tow.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/roadside-assistance-vs-calling-tow-truck-direct-which-is-better-quick-guide-2d2d",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/roadside-assistance-vs-calling-tow-truck-direct-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814320893533765632/roadside-assistance-vs-calling-tow-truck-direct",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/roadside-assistance-vs-calling-tow-truck-direct/",
+        "verified": true
+      }
+    },
     "tire-blowout-highway-emergency-tow-cost": {
       "blog": {
         "reason": "ok",
@@ -1162,24 +1189,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 29,
-      "verified": 11
+      "checked": 30,
+      "verified": 12
     },
     "dev": {
-      "checked": 44,
-      "verified": 44
+      "checked": 45,
+      "verified": 45
     },
     "feeder": {
-      "checked": 53,
-      "verified": 53
+      "checked": 54,
+      "verified": 54
     },
     "tumblr": {
-      "checked": 51,
-      "verified": 51
+      "checked": 52,
+      "verified": 52
     },
     "wordpress": {
-      "checked": 20,
-      "verified": 20
+      "checked": 21,
+      "verified": 21
     }
   }
 }
