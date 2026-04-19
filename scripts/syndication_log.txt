@@ -2225,3 +2225,32 @@
     "status": "PERMISSION_DENIED",
     "details": [
       {
+[2026-04-19 05:07:40] === SYNDICATE START: roadside-assistance-vs-calling-tow-truck-direct ===
+[2026-04-19 05:07:40] PREFLIGHT | title: Roadside Assistance vs Calling Tow Truck Direct: Which Is Better?
+[2026-04-19 05:07:40] PREFLIGHT | date: 2026-04-19
+[2026-04-19 05:07:40] PREFLIGHT | timestamp: 2026-04-19 05:07:40
+[2026-04-19 05:07:40] PREFLIGHT | DEVTO:   configured
+[2026-04-19 05:07:40] PREFLIGHT | TUMBLR:  configured
+[2026-04-19 05:07:40] PREFLIGHT | BLOGGER: configured
+[2026-04-19 05:07:40] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-19 05:07:40] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-19 05:07:40] DEVTO | roadside-assistance-vs-calling-tow-truck-direct | START
+[2026-04-19 05:07:41] DEVTO | roadside-assistance-vs-calling-tow-truck-direct | SUCCESS | https://dev.to/towwiththeflowyoo/roadside-assistance-vs-calling-tow-truck-direct-which-is-better-quick-guide-2d2d
+[2026-04-19 05:07:41] --- waiting 60s before next platform ---
+[2026-04-19 05:08:41] TUMBLR | roadside-assistance-vs-calling-tow-truck-direct | START
+[2026-04-19 05:08:41] TUMBLR | roadside-assistance-vs-calling-tow-truck-direct | SUCCESS | https://towwiththeflow.tumblr.com/post/814320893533765632
+[2026-04-19 05:08:41] --- waiting 60s before next platform ---
+[2026-04-19 05:09:41] BLOGGER | roadside-assistance-vs-calling-tow-truck-direct | START
+[2026-04-19 05:09:41] BLOGGER | roadside-assistance-vs-calling-tow-truck-direct | step 1/3: refreshing access token
+[2026-04-19 05:09:42] BLOGGER | roadside-assistance-vs-calling-tow-truck-direct | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-19 05:09:42] BLOGGER | roadside-assistance-vs-calling-tow-truck-direct | step 2/3: converting markdown to HTML
+[2026-04-19 05:09:42] BLOGGER | roadside-assistance-vs-calling-tow-truck-direct | step 3/3: posting to blog 1959471973457654666
+[2026-04-19 05:09:42] BLOGGER | roadside-assistance-vs-calling-tow-truck-direct | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/roadside-assistance-vs-calling-tow.html
+[2026-04-19 05:09:42] --- waiting 60s before next platform ---
+[2026-04-19 05:10:42] WORDPRESS | roadside-assistance-vs-calling-tow-truck-direct | START
+[2026-04-19 05:10:53] WORDPRESS | roadside-assistance-vs-calling-tow-truck-direct | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/19/roadside-assistance-vs-calling-tow-truck-direct/
+[2026-04-19 05:10:53] --- waiting 60s before next platform ---
+[2026-04-19 05:11:53] FEEDER | roadside-assistance-vs-calling-tow-truck-direct | START
+[2026-04-19 05:11:53] FEEDER | roadside-assistance-vs-calling-tow-truck-direct | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/roadside-assistance-vs-calling-tow-truck-direct-advice/
+[2026-04-19 05:11:53] === SYNDICATE DONE: roadside-assistance-vs-calling-tow-truck-direct | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-04-19 05:11:53] SYNCED | roadside-assistance-vs-calling-tow-truck-direct marked in synced-posts.txt
