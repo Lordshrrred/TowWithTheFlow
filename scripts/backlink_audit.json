@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T06:29:58.460694+00:00",
+  "generated_at": "2026-04-20T10:12:36.073215+00:00",
   "slugs": {
     "battery-dead-but-lights-turn-on": {
       "blog": {
@@ -1101,9 +1101,9 @@
         "verified": false
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-what-youll-pay-and-what-to-do-jff",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -1257,8 +1257,8 @@
       "verified": 15
     },
     "dev": {
-      "checked": 47,
-      "verified": 47
+      "checked": 46,
+      "verified": 46
     },
     "feeder": {
       "checked": 56,
