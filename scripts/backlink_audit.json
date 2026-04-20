@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-04-20T10:12:36.073215+00:00",
+  "generated_at": "2026-04-20T14:17:25.788610+00:00",
   "slugs": {
+    "allstate-roadside-assistance-towing-distance-covered": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/allstate-roadside-assistance-towing.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/allstate-roadside-assistance-towing-distance-how-far-will-they-tow-explained-475l",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/allstate-roadside-assistance-towing-distance-covered-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814414270925258752/allstate-roadside-assistance-towing-distance-covered",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/20/allstate-roadside-assistance-towing-distance-covered/",
+        "verified": true
+      }
+    },
     "battery-dead-but-lights-turn-on": {
       "blog": {
         "reason": "ok",
@@ -163,7 +190,7 @@
     },
     "car-leaking-fluid-underneath-emergency-tow": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-leaking-fluid-underneath-when-you.html",
         "verified": false
       },
@@ -316,7 +343,7 @@
     },
     "car-shaking-violently-while-driving-tow-needed": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-shaking-violently-while-driving.html",
         "verified": false
       },
@@ -409,7 +436,7 @@
     },
     "car-wont-shift-into-drive-need-tow-truck": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-wont-shift-into-drive-need-tow-truck.html",
         "verified": false
       },
@@ -844,7 +871,7 @@
     },
     "towing-cost-atlanta-georgia": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-what.html",
         "verified": false
       },
@@ -871,7 +898,7 @@
     },
     "towing-cost-atlanta-georgia-holiday-weekend": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-holiday.html",
         "verified": false
       },
@@ -964,7 +991,7 @@
     },
     "towing-cost-houston-texas-sunday-emergency": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/sunday-emergency-towing-costs-in.html",
         "verified": false
       },
@@ -1096,14 +1123,14 @@
     },
     "towing-cost-phoenix-arizona": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-what.html",
         "verified": false
       },
       "dev": {
-        "reason": "error:ReadTimeout",
+        "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-what-youll-pay-and-what-to-do-jff",
-        "verified": null
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -1253,24 +1280,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 33,
-      "verified": 15
+      "checked": 34,
+      "verified": 16
     },
     "dev": {
-      "checked": 46,
-      "verified": 46
+      "checked": 48,
+      "verified": 48
     },
     "feeder": {
-      "checked": 56,
-      "verified": 56
+      "checked": 57,
+      "verified": 57
     },
     "tumblr": {
-      "checked": 54,
-      "verified": 54
+      "checked": 55,
+      "verified": 55
     },
     "wordpress": {
-      "checked": 24,
-      "verified": 24
+      "checked": 25,
+      "verified": 25
     }
   }
 }
