@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T14:11:41.007747+00:00",
+  "generated_at": "2026-04-21T17:19:28.905431+00:00",
   "slugs": {
     "allstate-roadside-assistance-towing-distance-covered": {
       "blog": {
@@ -284,6 +284,11 @@
       }
     },
     "car-overheated-can-i-drive-it": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-overheated-can-i-drive-it-roadside.html",
+        "verified": true
+      },
       "dev": {
         "reason": "no_url",
         "url": "",
@@ -334,6 +339,11 @@
       }
     },
     "car-shakes-while-driving-slow-speeds": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-shakes-while-driving-at-slow-speeds.html",
+        "verified": true
+      },
       "dev": {
         "reason": "no_url",
         "url": "",
@@ -348,6 +358,11 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812797405981491200/car-shakes-while-driving-slow-speeds",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/21/car-shakes-while-driving-slow-speeds/",
         "verified": true
       }
     },
@@ -1212,6 +1227,33 @@
         "verified": true
       }
     },
+    "towing-cost-new-york-city": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-new-york-city-what-youll.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-new-york-city-what-youll-pay-and-what-to-do-what-to-do-next-48mp",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-new-york-city-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814519747242868736/towing-cost-new-york-city",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/21/towing-cost-new-york-city/",
+        "verified": true
+      }
+    },
     "towing-cost-phoenix-arizona": {
       "blog": {
         "reason": "http_404",
@@ -1302,6 +1344,33 @@
         "verified": true
       }
     },
+    "towing-cost-san-antonio-texas-after-midnight": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-san-antonio-texas-after.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-san-antonio-texas-after-midnight-what-youll-pay-explained-fb3",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-san-antonio-texas-after-midnight-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814513840790355968/towing-cost-san-antonio-texas-after-midnight",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/21/towing-cost-san-antonio-texas-after-midnight/",
+        "verified": true
+      }
+    },
     "towing-cost-seattle-washington": {
       "dev": {
         "reason": "ok",
@@ -1371,24 +1440,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 38,
-      "verified": 21
+      "checked": 42,
+      "verified": 25
     },
     "dev": {
-      "checked": 51,
-      "verified": 51
+      "checked": 53,
+      "verified": 53
     },
     "feeder": {
+      "checked": 62,
+      "verified": 62
+    },
+    "tumblr": {
       "checked": 60,
       "verified": 60
     },
-    "tumblr": {
-      "checked": 58,
-      "verified": 58
-    },
     "wordpress": {
-      "checked": 29,
-      "verified": 29
+      "checked": 32,
+      "verified": 32
     }
   }
 }
