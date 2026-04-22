@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T14:12:31.900617+00:00",
+  "generated_at": "2026-04-22T17:17:22.134119+00:00",
   "slugs": {
     "allstate-roadside-assistance-towing-distance-covered": {
       "blog": {
@@ -509,6 +509,11 @@
       }
     },
     "car-wont-start-clicking-noise-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-wont-start-clicking-noise-what-to.html",
+        "verified": true
+      },
       "dev": {
         "reason": "no_url",
         "url": "",
@@ -523,6 +528,11 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812886375195082752/car-wont-start-clicking-noise-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/22/car-wont-start-clicking-noise-what-to-do/",
         "verified": true
       }
     },
@@ -1064,6 +1074,11 @@
       }
     },
     "towing-cost-denver-colorado": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-denver-colorado-what.html",
+        "verified": true
+      },
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813101826499051520/towing-cost-denver-colorado",
@@ -1086,12 +1101,6 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-houston-texas-guide/",
-        "verified": true
-      },
-      "tumblr": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://www.tumblr.com/towwiththeflow/813115595071553536/towing-cost-houston-texas",
         "verified": true
       }
     },
@@ -1141,6 +1150,60 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813335695099854848/towing-cost-houston-texas-sunday-emergency",
+        "verified": true
+      }
+    },
+    "towing-cost-in-phoenix-arizona-24-hour-service": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-24-hour.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-24-hour-service-what-youll-pay-quick-guide-l0a",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-phoenix-arizona-24-hour-service-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814604456506310656/towing-cost-in-phoenix-arizona-24-hour-service",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/22/towing-cost-in-phoenix-arizona-24-hour-service/",
+        "verified": true
+      }
+    },
+    "towing-cost-las-vegas-nevada": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-las-vegas-nevada.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-las-vegas-nevada-complete-breakdown-and-emergency-guide-roadside-tips-1p5l",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-las-vegas-nevada-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814610247835598848/towing-cost-las-vegas-nevada",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/22/towing-cost-las-vegas-nevada/",
         "verified": true
       }
     },
@@ -1467,24 +1530,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 43,
-      "verified": 26
+      "checked": 47,
+      "verified": 30
     },
     "dev": {
-      "checked": 54,
-      "verified": 54
+      "checked": 56,
+      "verified": 56
     },
     "feeder": {
-      "checked": 63,
-      "verified": 63
+      "checked": 65,
+      "verified": 65
     },
     "tumblr": {
-      "checked": 61,
-      "verified": 61
+      "checked": 62,
+      "verified": 62
     },
     "wordpress": {
-      "checked": 33,
-      "verified": 33
+      "checked": 36,
+      "verified": 36
     }
   }
 }
