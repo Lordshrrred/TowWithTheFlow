@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T03:44:55.582849+00:00",
+  "generated_at": "2026-04-22T06:14:45.924507+00:00",
   "slugs": {
     "allstate-roadside-assistance-towing-distance-covered": {
       "blog": {
@@ -1300,9 +1300,9 @@
     },
     "towing-cost-phoenix-arizona-summer-heat": {
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-summer-heat-what-to-expect-what-drivers-should-know-36f5",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -1444,8 +1444,8 @@
       "verified": 25
     },
     "dev": {
-      "checked": 53,
-      "verified": 53
+      "checked": 52,
+      "verified": 52
     },
     "feeder": {
       "checked": 62,
