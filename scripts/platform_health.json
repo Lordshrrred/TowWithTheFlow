@@ -1,12 +1,13 @@
 {
-  "checked_at": "2026-04-23T14:13:32.883563+00:00",
+  "checked_at": "2026-04-23T19:42:09.754124+00:00",
   "checks": {
     "blogger": {
       "detail": "draft create HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid blog id: For input string: \\\"BLOGGER_BLOG_ID=1959471973457654666\\\"\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid blo",
       "status": "unhealthy"
     },
     "devto": {
-      "status": "healthy"
+      "detail": "HTTP 401: {\"error\":\"unauthorized\",\"status\":401}",
+      "status": "unhealthy"
     },
     "feeder": {
       "status": "healthy"
@@ -20,5 +21,5 @@
     }
   },
   "last_alert_at": "",
-  "unhealthy_count": 1
+  "unhealthy_count": 2
 }
