@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-04-24T14:11:17.321169+00:00",
+  "generated_at": "2026-04-24T17:15:45.066651+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/04/24/car-wont-start-in-cold-weather-what-to-do/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/24/what-happens-if-you-run-out-of-oil-while-driving-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/24/tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix/",
     "https://towwiththeflowyo.wordpress.com/2026/04/24/car-key-broke-in-ignition-need-tow-truck/",
     "https://towwiththeflowyo.wordpress.com/2026/04/23/towing-cost-denver-colorado/",
     "https://towwiththeflowyo.wordpress.com/2026/04/23/what-happens-if-you-run-out-of-oil-while-driving/",
@@ -198,6 +201,15 @@
         "verified": true
       }
     },
+    "car-wont-start-in-cold-weather-what-to-do": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-wont-start-in-cold-weather-what-to-do/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/car-wont-start-in-cold-weather-what-to-do/",
+        "verified": true
+      }
+    },
     "engine-stalls-at-stop-sign-causes": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/engine-stalls-at-stop-sign-causes/",
@@ -276,6 +288,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/23/tow-truck-cost-aaa-vs-non-aaa-chicago-night/",
+        "verified": true
+      }
+    },
+    "tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix/",
         "verified": true
       }
     },
@@ -413,13 +434,22 @@
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/23/what-happens-if-you-run-out-of-oil-while-driving/",
         "verified": true
       }
+    },
+    "what-happens-if-you-run-out-of-oil-while-driving-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/what-happens-if-you-run-out-of-oil-while-driving-2/",
+        "verified": false
+      }
     }
   },
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 41,
-      "verified": 41
+      "checked": 44,
+      "verified": 43
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T14:11:15.496463+00:00",
+  "generated_at": "2026-04-24T17:15:43.597351+00:00",
   "slugs": {
     "allstate-roadside-assistance-towing-distance-covered": {
       "blog": {
@@ -605,6 +605,11 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813107987761741824/car-wont-start-in-cold-weather-what-to-do",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/car-wont-start-in-cold-weather-what-to-do/",
+        "verified": true
       }
     },
     "change-tire-highway-safely-houston": {
@@ -648,9 +653,10 @@
     },
     "driving-in-snow-emergency-kit-checklist": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/04/driving-in-snow-emergency-kit-checklist.html",
-        "verified": false
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/driving-in-snow-emergency-kit-checklist.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -989,6 +995,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/23/tow-truck-cost-aaa-vs-non-aaa-chicago-night/",
+        "verified": true
+      }
+    },
+    "tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-aaa-vs-non-aaa-in_0749603130.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814785546669932544/tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix/",
         "verified": true
       }
     },
@@ -1427,9 +1455,10 @@
     },
     "towing-cost-phoenix-arizona": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-what.html",
-        "verified": false
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-what.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1584,8 +1613,7 @@
     "what-happens-if-you-run-out-of-oil-while-driving": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/what-happens-if-you-run-out-of-oil.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/what-happens-if-you-run-out-of-oil_01667661264.html",
         "verified": true
       },
       "dev": {
@@ -1595,20 +1623,17 @@
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/what-happens-if-you-run-out-of-oil-while-driving-help/",
         "verified": true
       },
       "tumblr": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://www.tumblr.com/towwiththeflow/814702614413557761/what-happens-if-you-run-out-of-oil-while-driving",
+        "url": "https://www.tumblr.com/towwiththeflow/814791202037727232/what-happens-if-you-run-out-of-oil-while-driving",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/04/23/what-happens-if-you-run-out-of-oil-while-driving/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/what-happens-if-you-run-out-of-oil-while-driving-2/",
         "verified": true
       }
     },
@@ -1629,24 +1654,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 51,
-      "verified": 36
+      "checked": 52,
+      "verified": 39
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 68,
-      "verified": 68
+      "checked": 69,
+      "verified": 69
     },
     "tumblr": {
-      "checked": 66,
-      "verified": 66
+      "checked": 67,
+      "verified": 67
     },
     "wordpress": {
-      "checked": 41,
-      "verified": 41
+      "checked": 43,
+      "verified": 43
     }
   }
 }
