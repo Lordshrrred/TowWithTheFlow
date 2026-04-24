@@ -2814,3 +2814,32 @@
 [2026-04-24 05:44:27] FEEDER | car-key-broke-in-ignition-need-tow-truck | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-key-broke-in-ignition-need-tow-truck-guide/
 [2026-04-24 05:44:27] === SYNDICATE DONE: car-key-broke-in-ignition-need-tow-truck | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-04-24 05:44:27] SYNCED | car-key-broke-in-ignition-need-tow-truck marked in synced-posts.txt
+[2026-04-24 08:13:08] === SYNDICATE START: tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix ===
+[2026-04-24 08:13:08] PREFLIGHT | title: Tow Truck Cost: AAA vs Non-AAA in Chicago and Phoenix
+[2026-04-24 08:13:08] PREFLIGHT | date: 2026-04-24
+[2026-04-24 08:13:08] PREFLIGHT | timestamp: 2026-04-24 08:13:08
+[2026-04-24 08:13:08] PREFLIGHT | DEVTO:   configured
+[2026-04-24 08:13:08] PREFLIGHT | TUMBLR:  configured
+[2026-04-24 08:13:08] PREFLIGHT | BLOGGER: configured
+[2026-04-24 08:13:08] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-24 08:13:08] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-24 08:13:08] DEVTO | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | START
+[2026-04-24 08:13:08] DEVTO | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-04-24 08:13:08] --- waiting 60s before next platform ---
+[2026-04-24 08:14:08] TUMBLR | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | START
+[2026-04-24 08:14:09] TUMBLR | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | SUCCESS | https://towwiththeflow.tumblr.com/post/814785546669932544
+[2026-04-24 08:14:09] --- waiting 60s before next platform ---
+[2026-04-24 08:15:09] BLOGGER | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | START
+[2026-04-24 08:15:09] BLOGGER | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | step 1/3: refreshing access token
+[2026-04-24 08:15:10] BLOGGER | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-24 08:15:10] BLOGGER | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | step 2/3: converting markdown to HTML
+[2026-04-24 08:15:10] BLOGGER | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | step 3/3: posting to blog 1959471973457654666
+[2026-04-24 08:15:11] BLOGGER | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-aaa-vs-non-aaa-in_0749603130.html
+[2026-04-24 08:15:11] --- waiting 60s before next platform ---
+[2026-04-24 08:16:11] WORDPRESS | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | START
+[2026-04-24 08:16:19] WORDPRESS | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/24/tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix/
+[2026-04-24 08:16:19] --- waiting 60s before next platform ---
+[2026-04-24 08:17:19] FEEDER | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | START
+[2026-04-24 08:17:20] FEEDER | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix-advice/
+[2026-04-24 08:17:20] === SYNDICATE DONE: tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-24 08:17:20] SYNCED | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix marked in synced-posts.txt
