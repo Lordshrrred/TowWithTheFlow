@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T09:57:24.450664+00:00",
+  "generated_at": "2026-04-24T14:11:15.496463+00:00",
   "slugs": {
     "allstate-roadside-assistance-towing-distance-covered": {
       "blog": {
@@ -185,6 +185,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+        "verified": true
+      }
+    },
+    "car-key-broke-in-ignition-need-tow-truck": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-key-broke-in-ignition-do-you-need.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-key-broke-in-ignition-need-tow-truck-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814775936499220480/car-key-broke-in-ignition-need-tow-truck",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/car-key-broke-in-ignition-need-tow-truck/",
         "verified": true
       }
     },
@@ -1607,24 +1629,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 50,
-      "verified": 35
+      "checked": 51,
+      "verified": 36
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 67,
-      "verified": 67
+      "checked": 68,
+      "verified": 68
     },
     "tumblr": {
-      "checked": 65,
-      "verified": 65
+      "checked": 66,
+      "verified": 66
     },
     "wordpress": {
-      "checked": 40,
-      "verified": 40
+      "checked": 41,
+      "verified": 41
     }
   }
 }
