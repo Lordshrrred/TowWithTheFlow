@@ -2843,3 +2843,37 @@
 [2026-04-24 08:17:20] FEEDER | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix-advice/
 [2026-04-24 08:17:20] === SYNDICATE DONE: tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-04-24 08:17:20] SYNCED | tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix marked in synced-posts.txt
+[2026-04-24 09:43:02] BACKLOG: Posts total=111  synced=68  backlog=43  (today's posts excluded from backlog)
+[2026-04-24 09:43:02] BACKLOG: Syndicating backlog: what-happens-if-you-run-out-of-oil-while-driving  (post date=2026-03-05)
+[2026-04-24 09:43:02] === SYNDICATE START: what-happens-if-you-run-out-of-oil-while-driving ===
+[2026-04-24 09:43:02] PREFLIGHT | title: What Happens If You Run Out of Oil While Driving?
+[2026-04-24 09:43:02] PREFLIGHT | date: 2026-03-05
+[2026-04-24 09:43:02] PREFLIGHT | timestamp: 2026-04-24 09:43:02
+[2026-04-24 09:43:02] PREFLIGHT | DEVTO:   configured
+[2026-04-24 09:43:02] PREFLIGHT | TUMBLR:  configured
+[2026-04-24 09:43:02] PREFLIGHT | BLOGGER: configured
+[2026-04-24 09:43:02] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-24 09:43:02] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-24 09:43:02] BACKLINK | what-happens-if-you-run-out-of-oil-while-driving | missing — injecting before syndication
+[2026-04-24 09:43:02] DEVTO | what-happens-if-you-run-out-of-oil-while-driving | START
+[2026-04-24 09:43:02] DEVTO | what-happens-if-you-run-out-of-oil-while-driving | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-04-24 09:43:02] --- waiting 60s before next platform ---
+[2026-04-24 09:44:02] TUMBLR | what-happens-if-you-run-out-of-oil-while-driving | START
+[2026-04-24 09:44:02] TUMBLR | what-happens-if-you-run-out-of-oil-while-driving | SUCCESS | https://towwiththeflow.tumblr.com/post/814791202037727232
+[2026-04-24 09:44:02] --- waiting 60s before next platform ---
+[2026-04-24 09:45:02] BLOGGER | what-happens-if-you-run-out-of-oil-while-driving | START
+[2026-04-24 09:45:02] BLOGGER | what-happens-if-you-run-out-of-oil-while-driving | step 1/3: refreshing access token
+[2026-04-24 09:45:03] BLOGGER | what-happens-if-you-run-out-of-oil-while-driving | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-24 09:45:03] BLOGGER | what-happens-if-you-run-out-of-oil-while-driving | step 2/3: converting markdown to HTML
+[2026-04-24 09:45:03] BLOGGER | what-happens-if-you-run-out-of-oil-while-driving | step 3/3: posting to blog 1959471973457654666
+[2026-04-24 09:45:03] BLOGGER | what-happens-if-you-run-out-of-oil-while-driving | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/what-happens-if-you-run-out-of-oil_01667661264.html
+[2026-04-24 09:45:03] --- waiting 60s before next platform ---
+[2026-04-24 09:46:03] WORDPRESS | what-happens-if-you-run-out-of-oil-while-driving | START
+[2026-04-24 09:46:10] WORDPRESS | what-happens-if-you-run-out-of-oil-while-driving | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/24/what-happens-if-you-run-out-of-oil-while-driving-2/
+[2026-04-24 09:46:10] --- waiting 60s before next platform ---
+[2026-04-24 09:47:10] FEEDER | what-happens-if-you-run-out-of-oil-while-driving | START
+[2026-04-24 09:47:11] FEEDER | what-happens-if-you-run-out-of-oil-while-driving | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/what-happens-if-you-run-out-of-oil-while-driving-help/
+[2026-04-24 09:47:11] === SYNDICATE DONE: what-happens-if-you-run-out-of-oil-while-driving | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-24 09:47:11] SYNCED | what-happens-if-you-run-out-of-oil-while-driving marked in synced-posts.txt
+[2026-04-24 09:47:11] BACKLOG: Backlog run complete: 4/5 succeeded for what-happens-if-you-run-out-of-oil-while-driving
+[2026-04-24 09:47:11] BACKLOG: Total progress: 69/111 posts synced
