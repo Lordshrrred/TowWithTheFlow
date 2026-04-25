@@ -2881,3 +2881,32 @@
 [2026-04-24 09:50:48] BACKLINK | car-wont-start-in-cold-weather-what-to-do | missing — injecting before syndication
 [2026-04-24 09:50:48] WORDPRESS_BACKLOG | car-wont-start-in-cold-weather-what-to-do | START
 [2026-04-24 09:50:59] WORDPRESS | car-wont-start-in-cold-weather-what-to-do | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/24/car-wont-start-in-cold-weather-what-to-do/
+[2026-04-25 05:11:58] === SYNDICATE START: car-wont-start-after-getting-gas-what-to-do ===
+[2026-04-25 05:11:58] PREFLIGHT | title: Car Won't Start After Getting Gas: Quick Fixes That Work
+[2026-04-25 05:11:58] PREFLIGHT | date: 2026-04-25
+[2026-04-25 05:11:58] PREFLIGHT | timestamp: 2026-04-25 05:11:58
+[2026-04-25 05:11:58] PREFLIGHT | DEVTO:   configured
+[2026-04-25 05:11:58] PREFLIGHT | TUMBLR:  configured
+[2026-04-25 05:11:58] PREFLIGHT | BLOGGER: configured
+[2026-04-25 05:11:58] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-25 05:11:58] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-25 05:11:58] DEVTO | car-wont-start-after-getting-gas-what-to-do | START
+[2026-04-25 05:11:58] DEVTO | car-wont-start-after-getting-gas-what-to-do | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-04-25 05:11:58] --- waiting 60s before next platform ---
+[2026-04-25 05:12:58] TUMBLR | car-wont-start-after-getting-gas-what-to-do | START
+[2026-04-25 05:12:59] TUMBLR | car-wont-start-after-getting-gas-what-to-do | SUCCESS | https://towwiththeflow.tumblr.com/post/814864745212559360
+[2026-04-25 05:12:59] --- waiting 60s before next platform ---
+[2026-04-25 05:13:59] BLOGGER | car-wont-start-after-getting-gas-what-to-do | START
+[2026-04-25 05:13:59] BLOGGER | car-wont-start-after-getting-gas-what-to-do | step 1/3: refreshing access token
+[2026-04-25 05:13:59] BLOGGER | car-wont-start-after-getting-gas-what-to-do | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-25 05:13:59] BLOGGER | car-wont-start-after-getting-gas-what-to-do | step 2/3: converting markdown to HTML
+[2026-04-25 05:13:59] BLOGGER | car-wont-start-after-getting-gas-what-to-do | step 3/3: posting to blog 1959471973457654666
+[2026-04-25 05:13:59] BLOGGER | car-wont-start-after-getting-gas-what-to-do | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-wont-start-after-getting-gas-quick.html
+[2026-04-25 05:13:59] --- waiting 60s before next platform ---
+[2026-04-25 05:14:59] WORDPRESS | car-wont-start-after-getting-gas-what-to-do | START
+[2026-04-25 05:15:00] WORDPRESS | car-wont-start-after-getting-gas-what-to-do | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/25/car-wont-start-after-getting-gas-what-to-do/
+[2026-04-25 05:15:00] --- waiting 60s before next platform ---
+[2026-04-25 05:16:00] FEEDER | car-wont-start-after-getting-gas-what-to-do | START
+[2026-04-25 05:16:01] FEEDER | car-wont-start-after-getting-gas-what-to-do | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-after-getting-gas-what-to-do-help/
+[2026-04-25 05:16:01] === SYNDICATE DONE: car-wont-start-after-getting-gas-what-to-do | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-25 05:16:01] SYNCED | car-wont-start-after-getting-gas-what-to-do marked in synced-posts.txt
