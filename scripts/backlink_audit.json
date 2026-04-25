@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T13:41:42.076994+00:00",
+  "generated_at": "2026-04-25T17:04:14.225971+00:00",
   "slugs": {
     "allstate-roadside-assistance-towing-distance-covered": {
       "blog": {
@@ -676,8 +676,7 @@
     "driving-in-snow-emergency-kit-checklist": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/driving-in-snow-emergency-kit-checklist.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/driving-in-snow-emergency-kit-checklist_02130691165.html",
         "verified": true
       },
       "dev": {
@@ -693,6 +692,28 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813158358768123904/driving-in-snow-emergency-kit-checklist",
+        "verified": true
+      }
+    },
+    "engine-seized-up-while-driving-towing-cost-seattle": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/engine-seized-while-driving-towing.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/engine-seized-up-while-driving-towing-cost-seattle-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814874217627664384/engine-seized-up-while-driving-towing-cost-seattle",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/25/engine-seized-up-while-driving-towing-cost-seattle/",
         "verified": true
       }
     },
@@ -1059,9 +1080,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/814330376060387328/tow-truck-cost-aaa-vs-non-aaa-chicago-winter",
-        "verified": false
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -1232,6 +1253,11 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-houston-texas-guide/",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/25/towing-cost-houston-texas/",
         "verified": true
       }
     },
@@ -1478,8 +1504,7 @@
     "towing-cost-phoenix-arizona": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-what.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-what_01142095675.html",
         "verified": true
       },
       "dev": {
@@ -1563,6 +1588,28 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/towing-cost-portland-oregon-rainy-weather/",
+        "verified": true
+      }
+    },
+    "towing-cost-san-antonio-texas": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-san-antonio-texas-what.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-san-antonio-texas-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814879388874276864/towing-cost-san-antonio-texas",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/25/towing-cost-san-antonio-texas/",
         "verified": true
       }
     },
@@ -1676,24 +1723,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 53,
-      "verified": 40
+      "checked": 55,
+      "verified": 42
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
+      "checked": 72,
+      "verified": 72
+    },
+    "tumblr": {
       "checked": 70,
       "verified": 70
     },
-    "tumblr": {
-      "checked": 68,
-      "verified": 67
-    },
     "wordpress": {
-      "checked": 44,
-      "verified": 44
+      "checked": 47,
+      "verified": 47
     }
   }
 }
