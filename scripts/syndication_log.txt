@@ -2910,3 +2910,32 @@
 [2026-04-25 05:16:01] FEEDER | car-wont-start-after-getting-gas-what-to-do | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-after-getting-gas-what-to-do-help/
 [2026-04-25 05:16:01] === SYNDICATE DONE: car-wont-start-after-getting-gas-what-to-do | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-04-25 05:16:01] SYNCED | car-wont-start-after-getting-gas-what-to-do marked in synced-posts.txt
+[2026-04-25 07:42:31] === SYNDICATE START: engine-seized-up-while-driving-towing-cost-seattle ===
+[2026-04-25 07:42:31] PREFLIGHT | title: Engine Seized While Driving: Towing Costs in Seattle
+[2026-04-25 07:42:31] PREFLIGHT | date: 2026-04-25
+[2026-04-25 07:42:31] PREFLIGHT | timestamp: 2026-04-25 07:42:31
+[2026-04-25 07:42:31] PREFLIGHT | DEVTO:   configured
+[2026-04-25 07:42:31] PREFLIGHT | TUMBLR:  configured
+[2026-04-25 07:42:31] PREFLIGHT | BLOGGER: configured
+[2026-04-25 07:42:31] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-25 07:42:31] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-25 07:42:31] DEVTO | engine-seized-up-while-driving-towing-cost-seattle | START
+[2026-04-25 07:42:32] DEVTO | engine-seized-up-while-driving-towing-cost-seattle | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-04-25 07:42:32] --- waiting 60s before next platform ---
+[2026-04-25 07:43:32] TUMBLR | engine-seized-up-while-driving-towing-cost-seattle | START
+[2026-04-25 07:43:32] TUMBLR | engine-seized-up-while-driving-towing-cost-seattle | SUCCESS | https://towwiththeflow.tumblr.com/post/814874217627664384
+[2026-04-25 07:43:32] --- waiting 60s before next platform ---
+[2026-04-25 07:44:32] BLOGGER | engine-seized-up-while-driving-towing-cost-seattle | START
+[2026-04-25 07:44:32] BLOGGER | engine-seized-up-while-driving-towing-cost-seattle | step 1/3: refreshing access token
+[2026-04-25 07:44:33] BLOGGER | engine-seized-up-while-driving-towing-cost-seattle | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-25 07:44:33] BLOGGER | engine-seized-up-while-driving-towing-cost-seattle | step 2/3: converting markdown to HTML
+[2026-04-25 07:44:33] BLOGGER | engine-seized-up-while-driving-towing-cost-seattle | step 3/3: posting to blog 1959471973457654666
+[2026-04-25 07:44:33] BLOGGER | engine-seized-up-while-driving-towing-cost-seattle | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/engine-seized-while-driving-towing.html
+[2026-04-25 07:44:33] --- waiting 60s before next platform ---
+[2026-04-25 07:45:33] WORDPRESS | engine-seized-up-while-driving-towing-cost-seattle | START
+[2026-04-25 07:45:44] WORDPRESS | engine-seized-up-while-driving-towing-cost-seattle | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/25/engine-seized-up-while-driving-towing-cost-seattle/
+[2026-04-25 07:45:44] --- waiting 60s before next platform ---
+[2026-04-25 07:46:44] FEEDER | engine-seized-up-while-driving-towing-cost-seattle | START
+[2026-04-25 07:46:45] FEEDER | engine-seized-up-while-driving-towing-cost-seattle | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/engine-seized-up-while-driving-towing-cost-seattle-advice/
+[2026-04-25 07:46:45] === SYNDICATE DONE: engine-seized-up-while-driving-towing-cost-seattle | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-25 07:46:45] SYNCED | engine-seized-up-while-driving-towing-cost-seattle marked in synced-posts.txt
