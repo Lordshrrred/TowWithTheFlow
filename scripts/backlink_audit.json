@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T13:43:09.640495+00:00",
+  "generated_at": "2026-04-26T17:05:32.620683+00:00",
   "slugs": {
     "aaa-towing-vs-private-tow-truck-cost-comparison": {
       "blog": {
@@ -715,6 +715,11 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813158358768123904/driving-in-snow-emergency-kit-checklist",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/26/driving-in-snow-emergency-kit-checklist/",
+        "verified": true
       }
     },
     "engine-seized-up-while-driving-towing-cost-seattle": {
@@ -741,9 +746,9 @@
     },
     "engine-stalls-at-stop-sign-causes": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/04/engine-stalls-at-stop-signs-causes-and.html",
-        "verified": false
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/engine-stalls-at-stop-signs-causes-and.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1132,6 +1137,28 @@
         "verified": true
       }
     },
+    "tow-truck-price-50-miles-miami": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-price-for-50-miles-from-miami.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-price-50-miles-miami-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814964997558059008/tow-truck-price-50-miles-miami",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/26/tow-truck-price-50-miles-miami/",
+        "verified": true
+      }
+    },
     "towing-cost-albuquerque-new-mexico": {
       "blog": {
         "reason": "http_404",
@@ -1156,9 +1183,9 @@
     },
     "towing-cost-atlanta-georgia": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-what.html",
-        "verified": false
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-what.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1729,6 +1756,11 @@
       }
     },
     "what-to-do-if-your-car-breaks-down-at-night": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/what-to-do-if-your-car-breaks-down-at.html",
+        "verified": true
+      },
       "dev": {
         "reason": "no_url",
         "url": "",
@@ -1736,8 +1768,17 @@
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/what-to-do-if-your-car-breaks-down-at-night-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/814970055056097280/what-to-do-if-your-car-breaks-down-at-night",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/26/what-to-do-if-your-car-breaks-down-at-night/",
         "verified": true
       }
     }
@@ -1745,24 +1786,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 56,
-      "verified": 43
+      "checked": 58,
+      "verified": 47
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
+      "checked": 74,
+      "verified": 74
+    },
+    "tumblr": {
       "checked": 73,
       "verified": 73
     },
-    "tumblr": {
-      "checked": 71,
-      "verified": 71
-    },
     "wordpress": {
-      "checked": 48,
-      "verified": 48
+      "checked": 51,
+      "verified": 51
     }
   }
 }
