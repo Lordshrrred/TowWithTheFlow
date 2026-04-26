@@ -3022,3 +3022,32 @@
 [2026-04-26 05:16:07] FEEDER | aaa-towing-vs-private-tow-truck-cost-comparison | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/aaa-towing-vs-private-tow-truck-cost-comparison-advice/
 [2026-04-26 05:16:07] === SYNDICATE DONE: aaa-towing-vs-private-tow-truck-cost-comparison | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-04-26 05:16:07] SYNCED | aaa-towing-vs-private-tow-truck-cost-comparison marked in synced-posts.txt
+[2026-04-26 07:45:26] === SYNDICATE START: tow-truck-price-50-miles-miami ===
+[2026-04-26 07:45:26] PREFLIGHT | title: Tow Truck Price for 50 Miles from Miami: What You'll Pay
+[2026-04-26 07:45:26] PREFLIGHT | date: 2026-04-26
+[2026-04-26 07:45:26] PREFLIGHT | timestamp: 2026-04-26 07:45:26
+[2026-04-26 07:45:26] PREFLIGHT | DEVTO:   configured
+[2026-04-26 07:45:26] PREFLIGHT | TUMBLR:  configured
+[2026-04-26 07:45:26] PREFLIGHT | BLOGGER: configured
+[2026-04-26 07:45:26] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-26 07:45:26] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-26 07:45:26] DEVTO | tow-truck-price-50-miles-miami | START
+[2026-04-26 07:45:26] DEVTO | tow-truck-price-50-miles-miami | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-04-26 07:45:26] --- waiting 60s before next platform ---
+[2026-04-26 07:46:26] TUMBLR | tow-truck-price-50-miles-miami | START
+[2026-04-26 07:46:27] TUMBLR | tow-truck-price-50-miles-miami | SUCCESS | https://towwiththeflow.tumblr.com/post/814964997558059008
+[2026-04-26 07:46:27] --- waiting 60s before next platform ---
+[2026-04-26 07:47:27] BLOGGER | tow-truck-price-50-miles-miami | START
+[2026-04-26 07:47:27] BLOGGER | tow-truck-price-50-miles-miami | step 1/3: refreshing access token
+[2026-04-26 07:47:27] BLOGGER | tow-truck-price-50-miles-miami | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-26 07:47:27] BLOGGER | tow-truck-price-50-miles-miami | step 2/3: converting markdown to HTML
+[2026-04-26 07:47:27] BLOGGER | tow-truck-price-50-miles-miami | step 3/3: posting to blog 1959471973457654666
+[2026-04-26 07:47:28] BLOGGER | tow-truck-price-50-miles-miami | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-price-for-50-miles-from-miami.html
+[2026-04-26 07:47:28] --- waiting 60s before next platform ---
+[2026-04-26 07:48:28] WORDPRESS | tow-truck-price-50-miles-miami | START
+[2026-04-26 07:48:39] WORDPRESS | tow-truck-price-50-miles-miami | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/26/tow-truck-price-50-miles-miami/
+[2026-04-26 07:48:39] --- waiting 60s before next platform ---
+[2026-04-26 07:49:39] FEEDER | tow-truck-price-50-miles-miami | START
+[2026-04-26 07:49:40] FEEDER | tow-truck-price-50-miles-miami | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tow-truck-price-50-miles-miami-tips/
+[2026-04-26 07:49:40] === SYNDICATE DONE: tow-truck-price-50-miles-miami | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-26 07:49:40] SYNCED | tow-truck-price-50-miles-miami marked in synced-posts.txt
