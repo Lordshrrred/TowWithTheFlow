@@ -3051,3 +3051,37 @@
 [2026-04-26 07:49:40] FEEDER | tow-truck-price-50-miles-miami | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tow-truck-price-50-miles-miami-tips/
 [2026-04-26 07:49:40] === SYNDICATE DONE: tow-truck-price-50-miles-miami | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-04-26 07:49:40] SYNCED | tow-truck-price-50-miles-miami marked in synced-posts.txt
+[2026-04-26 09:05:49] BACKLOG: Posts total=115  synced=74  backlog=41  (today's posts excluded from backlog)
+[2026-04-26 09:05:49] BACKLOG: Syndicating backlog: what-to-do-if-your-car-breaks-down-at-night  (post date=2026-03-06)
+[2026-04-26 09:05:49] === SYNDICATE START: what-to-do-if-your-car-breaks-down-at-night ===
+[2026-04-26 09:05:49] PREFLIGHT | title: What To Do If Your Car Breaks Down at Night
+[2026-04-26 09:05:49] PREFLIGHT | date: 2026-03-06
+[2026-04-26 09:05:49] PREFLIGHT | timestamp: 2026-04-26 09:05:49
+[2026-04-26 09:05:49] PREFLIGHT | DEVTO:   configured
+[2026-04-26 09:05:49] PREFLIGHT | TUMBLR:  configured
+[2026-04-26 09:05:49] PREFLIGHT | BLOGGER: configured
+[2026-04-26 09:05:49] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-26 09:05:49] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-26 09:05:49] BACKLINK | what-to-do-if-your-car-breaks-down-at-night | missing — injecting before syndication
+[2026-04-26 09:05:49] DEVTO | what-to-do-if-your-car-breaks-down-at-night | START
+[2026-04-26 09:05:49] DEVTO | what-to-do-if-your-car-breaks-down-at-night | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-04-26 09:05:49] --- waiting 60s before next platform ---
+[2026-04-26 09:06:49] TUMBLR | what-to-do-if-your-car-breaks-down-at-night | START
+[2026-04-26 09:06:50] TUMBLR | what-to-do-if-your-car-breaks-down-at-night | SUCCESS | https://towwiththeflow.tumblr.com/post/814970055056097280
+[2026-04-26 09:06:50] --- waiting 60s before next platform ---
+[2026-04-26 09:07:50] BLOGGER | what-to-do-if-your-car-breaks-down-at-night | START
+[2026-04-26 09:07:50] BLOGGER | what-to-do-if-your-car-breaks-down-at-night | step 1/3: refreshing access token
+[2026-04-26 09:07:50] BLOGGER | what-to-do-if-your-car-breaks-down-at-night | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-26 09:07:50] BLOGGER | what-to-do-if-your-car-breaks-down-at-night | step 2/3: converting markdown to HTML
+[2026-04-26 09:07:50] BLOGGER | what-to-do-if-your-car-breaks-down-at-night | step 3/3: posting to blog 1959471973457654666
+[2026-04-26 09:07:51] BLOGGER | what-to-do-if-your-car-breaks-down-at-night | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/what-to-do-if-your-car-breaks-down-at.html
+[2026-04-26 09:07:51] --- waiting 60s before next platform ---
+[2026-04-26 09:08:51] WORDPRESS | what-to-do-if-your-car-breaks-down-at-night | START
+[2026-04-26 09:09:00] WORDPRESS | what-to-do-if-your-car-breaks-down-at-night | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/26/what-to-do-if-your-car-breaks-down-at-night/
+[2026-04-26 09:09:00] --- waiting 60s before next platform ---
+[2026-04-26 09:10:00] FEEDER | what-to-do-if-your-car-breaks-down-at-night | START
+[2026-04-26 09:10:00] FEEDER | what-to-do-if-your-car-breaks-down-at-night | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/what-to-do-if-your-car-breaks-down-at-night-help/
+[2026-04-26 09:10:00] === SYNDICATE DONE: what-to-do-if-your-car-breaks-down-at-night | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-26 09:10:00] SYNCED | what-to-do-if-your-car-breaks-down-at-night marked in synced-posts.txt
+[2026-04-26 09:10:00] BACKLOG: Backlog run complete: 4/5 succeeded for what-to-do-if-your-car-breaks-down-at-night
+[2026-04-26 09:10:00] BACKLOG: Total progress: 75/115 posts synced
