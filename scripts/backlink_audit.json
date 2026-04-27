@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T10:29:20.148861+00:00",
+  "generated_at": "2026-04-27T14:30:09.313728+00:00",
   "slugs": {
     "aaa-towing-vs-private-tow-truck-cost-comparison": {
       "blog": {
@@ -906,9 +906,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/814245088888766464/is-it-illegal-to-leave-your-car-on-the-side-of-the-road",
-        "verified": false
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -1114,6 +1114,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/tow-truck-cost-aaa-vs-non-aaa-chicago-winter/",
+        "verified": true
+      }
+    },
+    "tow-truck-cost-flat-tire-sunday-night": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-with-flat-tire-sunday.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-flat-tire-sunday-night-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815049446422364160/tow-truck-cost-flat-tire-sunday-night",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/27/tow-truck-cost-flat-tire-sunday-night/",
         "verified": true
       }
     },
@@ -1652,9 +1674,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/814879388874276864/towing-cost-san-antonio-texas",
-        "verified": false
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -1786,24 +1808,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 58,
-      "verified": 47
+      "checked": 59,
+      "verified": 48
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
+      "checked": 75,
+      "verified": 75
+    },
+    "tumblr": {
       "checked": 74,
       "verified": 74
     },
-    "tumblr": {
-      "checked": 73,
-      "verified": 71
-    },
     "wordpress": {
-      "checked": 51,
-      "verified": 51
+      "checked": 52,
+      "verified": 52
     }
   }
 }
