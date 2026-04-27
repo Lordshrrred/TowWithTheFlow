@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T14:30:09.313728+00:00",
+  "generated_at": "2026-04-27T17:44:26.126004+00:00",
   "slugs": {
     "aaa-towing-vs-private-tow-truck-cost-comparison": {
       "blog": {
@@ -790,9 +790,9 @@
     },
     "how-long-can-a-car-sit-broken-down-on-roadside": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/04/how-long-can-car-sit-broken-down-on.html",
-        "verified": false
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-long-can-car-sit-broken-down-on.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1257,7 +1257,34 @@
         "verified": true
       }
     },
+    "towing-cost-austin-texas": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-austin-texas-what-youll.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-austin-texas-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815064113890885632/towing-cost-austin-texas",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/27/towing-cost-austin-texas/",
+        "verified": true
+      }
+    },
     "towing-cost-chicago-illinois": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-chicago-illinois-what.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-chicago-illinois-what-youll-pay-and-what-to-do-roadside-tips-35g9",
@@ -1592,6 +1619,11 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813251545490685952/towing-cost-phoenix-arizona",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/27/towing-cost-phoenix-arizona/",
+        "verified": true
       }
     },
     "towing-cost-phoenix-arizona-after-hours": {
@@ -1630,6 +1662,28 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813879858118672384/towing-cost-phoenix-arizona-summer-heat",
+        "verified": true
+      }
+    },
+    "towing-cost-phoenix-arizona-weekend-rates": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-weekend.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-phoenix-arizona-weekend-rates-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815058634044293120/towing-cost-phoenix-arizona-weekend-rates",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/27/towing-cost-phoenix-arizona-weekend-rates/",
         "verified": true
       }
     },
@@ -1808,24 +1862,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 59,
-      "verified": 48
+      "checked": 62,
+      "verified": 52
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 75,
-      "verified": 75
+      "checked": 77,
+      "verified": 77
     },
     "tumblr": {
-      "checked": 74,
-      "verified": 74
+      "checked": 76,
+      "verified": 76
     },
     "wordpress": {
-      "checked": 52,
-      "verified": 52
+      "checked": 55,
+      "verified": 55
     }
   }
 }
