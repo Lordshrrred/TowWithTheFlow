@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T10:27:04.207936+00:00",
+  "generated_at": "2026-04-28T17:58:21.354995+00:00",
   "slugs": {
     "aaa-towing-vs-private-tow-truck-cost-comparison": {
       "blog": {
@@ -557,6 +557,28 @@
         "verified": true
       }
     },
+    "car-stuck-snow-ditch-towing-cost-who-pays": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-stuck-in-snow-ditch-towing-costs.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-stuck-snow-ditch-towing-cost-who-pays-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815140202502848512/car-stuck-snow-ditch-towing-cost-who-pays",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/28/car-stuck-snow-ditch-towing-cost-who-pays/",
+        "verified": true
+      }
+    },
     "car-wont-shift-into-drive-need-tow-truck": {
       "blog": {
         "reason": "http_404",
@@ -816,6 +838,11 @@
       }
     },
     "how-much-does-a-tow-cost-in-colorado": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-tow-cost-in-colorado.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/how-much-does-a-tow-cost-in-colorado-what-drivers-should-know-3p4g",
@@ -1299,6 +1326,11 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813610701321093120/towing-cost-chicago-illinois",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/28/towing-cost-chicago-illinois/",
+        "verified": true
       }
     },
     "towing-cost-dallas-texas": {
@@ -1459,6 +1491,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/22/towing-cost-las-vegas-nevada/",
+        "verified": true
+      }
+    },
+    "towing-cost-las-vegas-nevada-casino-parking-lot": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-las-vegas-nevada-casino.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-las-vegas-nevada-casino-parking-lot-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815151090832130048/towing-cost-las-vegas-nevada-casino-parking-lot",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/28/towing-cost-las-vegas-nevada-casino-parking-lot/",
         "verified": true
       }
     },
@@ -1766,6 +1820,11 @@
       }
     },
     "towing-cost-seattle-washington": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-seattle-washington-what.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-seattle-washington-what-youll-pay-and-what-to-do-what-drivers-should-know-286",
@@ -1862,24 +1921,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 62,
-      "verified": 52
+      "checked": 66,
+      "verified": 56
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 77,
-      "verified": 77
+      "checked": 79,
+      "verified": 79
     },
     "tumblr": {
-      "checked": 76,
-      "verified": 76
+      "checked": 78,
+      "verified": 78
     },
     "wordpress": {
-      "checked": 55,
-      "verified": 55
+      "checked": 58,
+      "verified": 58
     }
   }
 }
