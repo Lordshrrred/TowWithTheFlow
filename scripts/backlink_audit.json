@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T10:21:01.126813+00:00",
+  "generated_at": "2026-04-29T14:34:32.519477+00:00",
   "slugs": {
     "aaa-towing-vs-private-tow-truck-cost-comparison": {
       "blog": {
@@ -1863,6 +1863,28 @@
         "verified": true
       }
     },
+    "usaa-roadside-assistance-vs-private-tow-truck-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/usaa-roadside-assistance-vs-private-tow.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/usaa-roadside-assistance-vs-private-tow-truck-cost-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815230297445629952/usaa-roadside-assistance-vs-private-tow-truck-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/29/usaa-roadside-assistance-vs-private-tow-truck-cost/",
+        "verified": true
+      }
+    },
     "what-happens-if-you-run-out-of-oil-while-driving": {
       "blog": {
         "reason": "ok",
@@ -1921,24 +1943,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 66,
-      "verified": 56
+      "checked": 67,
+      "verified": 57
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
+      "checked": 80,
+      "verified": 80
+    },
+    "tumblr": {
       "checked": 79,
       "verified": 79
     },
-    "tumblr": {
-      "checked": 78,
-      "verified": 78
-    },
     "wordpress": {
-      "checked": 58,
-      "verified": 58
+      "checked": 59,
+      "verified": 59
     }
   }
 }
