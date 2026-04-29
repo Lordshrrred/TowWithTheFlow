@@ -1,6 +1,10 @@
 {
-  "generated_at": "2026-04-29T14:34:33.983382+00:00",
+  "generated_at": "2026-04-29T17:53:48.636585+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/04/29/how-much-does-a-tow-cost-in-colorado/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/29/what-to-keep-in-your-car-for-emergencies-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/29/24-hour-towing-cost-extra-houston/",
+    "https://towwiththeflowyo.wordpress.com/2026/04/29/usaa-roadside-assistance-vs-private-tow-truck-cost/",
     "https://towwiththeflowyo.wordpress.com/2026/04/28/towing-cost-chicago-illinois/",
     "https://towwiththeflowyo.wordpress.com/2026/04/28/what-to-keep-in-your-car-for-emergencies/",
     "https://towwiththeflowyo.wordpress.com/2026/04/28/towing-cost-las-vegas-nevada-casino-parking-lot/",
@@ -60,11 +64,19 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/29/usaa-roadside-assistance-vs-private-tow-truck-cost/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
+    "24-hour-towing-cost-extra-houston": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/24-hour-towing-cost-extra-houston/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/29/24-hour-towing-cost-extra-houston/",
+        "verified": true
+      }
+    },
     "aaa-towing-vs-private-tow-truck-cost-comparison": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/aaa-towing-vs-private-tow-truck-cost-comparison/",
@@ -287,6 +299,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
+        "verified": true
+      }
+    },
+    "how-much-does-a-tow-cost-in-colorado": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/how-much-does-a-tow-cost-in-colorado/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/29/how-much-does-a-tow-cost-in-colorado/",
         "verified": true
       }
     },
@@ -613,13 +634,22 @@
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/28/what-to-keep-in-your-car-for-emergencies/",
         "verified": true
       }
+    },
+    "what-to-keep-in-your-car-for-emergencies-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/29/what-to-keep-in-your-car-for-emergencies-2/",
+        "verified": false
+      }
     }
   },
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 61,
-      "verified": 60
+      "checked": 64,
+      "verified": 62
     }
   }
 }
