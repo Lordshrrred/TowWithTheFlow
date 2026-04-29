@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T21:32:29.554183+00:00",
+  "generated_at": "2026-04-29T04:06:45.086146+00:00",
   "slugs": {
     "aaa-towing-vs-private-tow-truck-cost-comparison": {
       "blog": {
@@ -332,6 +332,12 @@
       }
     },
     "car-making-noise-when-turning-steering-wheel-houston": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-making-noise-when-turning-steering.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-making-noise-when-turning-steering-wheel-in-houston-whats-wrong-and-how-to-fix-it-explained-5bkp",
@@ -378,9 +384,9 @@
     },
     "car-overheating-in-traffic-what-to-do-in-phoenix": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-overheating-in-traffic-what-to-do.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -487,9 +493,9 @@
     },
     "car-slides-off-road-ice-who-pays-towing": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-slides-off-road-in-ice-who-pays-for.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1010,9 +1016,9 @@
     },
     "roadside-assistance-vs-calling-tow-truck-direct": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/roadside-assistance-vs-calling-tow.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1113,9 +1119,9 @@
     },
     "tow-truck-cost-aaa-vs-non-aaa-chicago-winter": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-aaa-vs-non-aaa-in.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1915,8 +1921,8 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 65,
-      "verified": 51
+      "checked": 66,
+      "verified": 56
     },
     "dev": {
       "checked": 58,
