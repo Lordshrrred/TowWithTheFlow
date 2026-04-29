@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T17:53:47.157278+00:00",
+  "generated_at": "2026-04-29T21:32:56.800580+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -176,6 +176,12 @@
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-breaks-down-on-bridge-who-to-call-and-what-to-do-roadside-tips-51mf",
@@ -482,7 +488,7 @@
     },
     "car-shaking-violently-while-driving-tow-needed": {
       "blog": {
-        "reason": "http_429",
+        "reason": "http_404",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-shaking-violently-while-driving.html",
         "verified": false
       },
@@ -855,9 +861,9 @@
     },
     "how-much-does-a-tow-cost-in-colorado": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-tow-cost-in-colorado.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -882,9 +888,9 @@
     },
     "how-much-does-aaa-towing-cost-without-membership": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-aaa-towing-cost-without.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1069,9 +1075,9 @@
     },
     "tire-blowout-highway-emergency-tow-cost": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tire-blowout-on-highway-emergency-tow.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1335,7 +1341,6 @@
     "towing-cost-chicago-illinois": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-chicago-illinois-what.html",
         "verified": true
       },
@@ -1634,7 +1639,6 @@
     "towing-cost-miami-florida-hurricane-season": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-miami-florida-hurricane.html",
         "verified": true
       },
@@ -1775,6 +1779,12 @@
       }
     },
     "towing-cost-portland-oregon-rainy-weather": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-portland-oregon-rainy.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-portland-oregon-rainy-weather-what-to-expect-quick-guide-442k",
@@ -1992,8 +2002,8 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 69,
-      "verified": 56
+      "checked": 71,
+      "verified": 61
     },
     "dev": {
       "checked": 58,
