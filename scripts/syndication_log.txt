@@ -3488,3 +3488,37 @@
 [2026-04-30 08:36:05] FEEDER | tow-truck-damaged-my-car-who-pays-chicago | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tow-truck-damaged-my-car-who-pays-chicago-guide/
 [2026-04-30 08:36:05] === SYNDICATE DONE: tow-truck-damaged-my-car-who-pays-chicago | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-04-30 08:36:05] SYNCED | tow-truck-damaged-my-car-who-pays-chicago marked in synced-posts.txt
+[2026-04-30 09:58:27] BACKLOG: Posts total=123  synced=85  backlog=38  (today's posts excluded from backlog)
+[2026-04-30 09:58:27] BACKLOG: Syndicating backlog: towing-cost-nashville-tennessee  (post date=2026-03-08)
+[2026-04-30 09:58:27] === SYNDICATE START: towing-cost-nashville-tennessee ===
+[2026-04-30 09:58:27] PREFLIGHT | title: Towing Cost in Nashville Tennessee: What You'll Pay for Roadside Help
+[2026-04-30 09:58:27] PREFLIGHT | date: 2026-03-08T11:42:00+00:00
+[2026-04-30 09:58:27] PREFLIGHT | timestamp: 2026-04-30 09:58:27
+[2026-04-30 09:58:27] PREFLIGHT | DEVTO:   configured
+[2026-04-30 09:58:27] PREFLIGHT | TUMBLR:  configured
+[2026-04-30 09:58:27] PREFLIGHT | BLOGGER: configured
+[2026-04-30 09:58:27] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-04-30 09:58:27] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-04-30 09:58:27] BACKLINK | towing-cost-nashville-tennessee | missing — injecting before syndication
+[2026-04-30 09:58:27] DEVTO | towing-cost-nashville-tennessee | START
+[2026-04-30 09:58:27] DEVTO | towing-cost-nashville-tennessee | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-04-30 09:58:27] --- waiting 60s before next platform ---
+[2026-04-30 09:59:27] TUMBLR | towing-cost-nashville-tennessee | START
+[2026-04-30 09:59:27] TUMBLR | towing-cost-nashville-tennessee | SUCCESS | https://towwiththeflow.tumblr.com/post/815335753611608064
+[2026-04-30 09:59:27] --- waiting 60s before next platform ---
+[2026-04-30 10:00:27] BLOGGER | towing-cost-nashville-tennessee | START
+[2026-04-30 10:00:27] BLOGGER | towing-cost-nashville-tennessee | step 1/3: refreshing access token
+[2026-04-30 10:00:28] BLOGGER | towing-cost-nashville-tennessee | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-04-30 10:00:28] BLOGGER | towing-cost-nashville-tennessee | step 2/3: converting markdown to HTML
+[2026-04-30 10:00:28] BLOGGER | towing-cost-nashville-tennessee | step 3/3: posting to blog 1959471973457654666
+[2026-04-30 10:00:28] BLOGGER | towing-cost-nashville-tennessee | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-nashville-tennessee-what.html
+[2026-04-30 10:00:28] --- waiting 60s before next platform ---
+[2026-04-30 10:01:28] WORDPRESS | towing-cost-nashville-tennessee | START
+[2026-04-30 10:01:36] WORDPRESS | towing-cost-nashville-tennessee | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/04/30/towing-cost-nashville-tennessee/
+[2026-04-30 10:01:36] --- waiting 60s before next platform ---
+[2026-04-30 10:02:36] FEEDER | towing-cost-nashville-tennessee | START
+[2026-04-30 10:02:37] FEEDER | towing-cost-nashville-tennessee | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-nashville-tennessee-help/
+[2026-04-30 10:02:37] === SYNDICATE DONE: towing-cost-nashville-tennessee | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-04-30 10:02:37] SYNCED | towing-cost-nashville-tennessee marked in synced-posts.txt
+[2026-04-30 10:02:37] BACKLOG: Backlog run complete: 4/5 succeeded for towing-cost-nashville-tennessee
+[2026-04-30 10:02:37] BACKLOG: Total progress: 86/123 posts synced
