@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T10:21:11.731417+00:00",
+  "generated_at": "2026-04-30T14:27:41.531757+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -256,7 +256,7 @@
     },
     "car-leaking-fluid-underneath-emergency-tow": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-leaking-fluid-underneath-when-you.html",
         "verified": false
       },
@@ -603,7 +603,7 @@
     },
     "car-wont-shift-into-drive-need-tow-truck": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-wont-shift-into-drive-need-tow-truck.html",
         "verified": false
       },
@@ -1176,6 +1176,28 @@
         "verified": true
       }
     },
+    "tow-truck-cost-accident-scene-police-report-required": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-at-accident-scene-police.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-accident-scene-police-report-required-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815320668518449152/tow-truck-cost-accident-scene-police-report-required",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/30/tow-truck-cost-accident-scene-police-report-required/",
+        "verified": true
+      }
+    },
     "tow-truck-cost-flat-tire-sunday-night": {
       "blog": {
         "reason": "ok",
@@ -1291,7 +1313,7 @@
     },
     "towing-cost-atlanta-georgia-holiday-weekend": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-holiday.html",
         "verified": false
       },
@@ -1457,7 +1479,7 @@
     },
     "towing-cost-houston-texas-sunday-emergency": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/sunday-emergency-towing-costs-in.html",
         "verified": false
       },
@@ -1693,6 +1715,7 @@
     "towing-cost-phoenix-arizona": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-what_01142095675.html",
         "verified": true
       },
@@ -2002,24 +2025,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 71,
-      "verified": 61
+      "checked": 72,
+      "verified": 62
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
+      "checked": 83,
+      "verified": 83
+    },
+    "tumblr": {
       "checked": 82,
       "verified": 82
     },
-    "tumblr": {
-      "checked": 81,
-      "verified": 81
-    },
     "wordpress": {
-      "checked": 62,
-      "verified": 62
+      "checked": 63,
+      "verified": 63
     }
   }
 }
