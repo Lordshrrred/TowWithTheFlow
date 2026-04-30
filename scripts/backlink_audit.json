@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T14:27:41.531757+00:00",
+  "generated_at": "2026-04-30T17:48:54.665455+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -256,7 +256,7 @@
     },
     "car-leaking-fluid-underneath-emergency-tow": {
       "blog": {
-        "reason": "http_429",
+        "reason": "http_404",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-leaking-fluid-underneath-when-you.html",
         "verified": false
       },
@@ -603,7 +603,7 @@
     },
     "car-wont-shift-into-drive-need-tow-truck": {
       "blog": {
-        "reason": "http_429",
+        "reason": "http_404",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-wont-shift-into-drive-need-tow-truck.html",
         "verified": false
       },
@@ -911,8 +911,7 @@
     "how-to-start-a-frozen-car-battery": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-to-start-frozen-car-battery.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-to-start-frozen-car-battery_01688926430.html",
         "verified": true
       },
       "dev": {
@@ -1227,6 +1226,28 @@
         "verified": true
       }
     },
+    "tow-truck-damaged-my-car-who-pays-chicago": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-damaged-my-car-who-pays-in.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-damaged-my-car-who-pays-chicago-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815330304764084224/tow-truck-damaged-my-car-who-pays-chicago",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/30/tow-truck-damaged-my-car-who-pays-chicago/",
+        "verified": true
+      }
+    },
     "tow-truck-price-50-miles-from-city": {
       "feeder": {
         "reason": "ok",
@@ -1313,7 +1334,7 @@
     },
     "towing-cost-atlanta-georgia-holiday-weekend": {
       "blog": {
-        "reason": "http_429",
+        "reason": "http_404",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-holiday.html",
         "verified": false
       },
@@ -1479,7 +1500,7 @@
     },
     "towing-cost-houston-texas-sunday-emergency": {
       "blog": {
-        "reason": "http_429",
+        "reason": "http_404",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/sunday-emergency-towing-costs-in.html",
         "verified": false
       },
@@ -1637,6 +1658,11 @@
       }
     },
     "towing-cost-miami-florida": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-miami-florida-what-youll.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-miami-florida-what-youll-pay-and-what-to-do-roadside-tips-34h1",
@@ -1685,6 +1711,28 @@
         "verified": true
       }
     },
+    "towing-cost-nashville-tennessee": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-nashville-tennessee-what.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-nashville-tennessee-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815335753611608064/towing-cost-nashville-tennessee",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/30/towing-cost-nashville-tennessee/",
+        "verified": true
+      }
+    },
     "towing-cost-new-york-city": {
       "blog": {
         "reason": "ok",
@@ -1715,7 +1763,6 @@
     "towing-cost-phoenix-arizona": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-what_01142095675.html",
         "verified": true
       },
@@ -1899,6 +1946,11 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813795199417499648/towing-cost-seattle-washington",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/04/30/towing-cost-seattle-washington/",
+        "verified": true
       }
     },
     "transmission-slipping-symptoms-houston": {
@@ -2025,24 +2077,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 72,
-      "verified": 62
+      "checked": 75,
+      "verified": 65
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 83,
-      "verified": 83
+      "checked": 85,
+      "verified": 85
     },
     "tumblr": {
-      "checked": 82,
-      "verified": 82
+      "checked": 84,
+      "verified": 84
     },
     "wordpress": {
-      "checked": 63,
-      "verified": 63
+      "checked": 66,
+      "verified": 66
     }
   }
 }
