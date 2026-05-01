@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T10:00:34.859824+00:00",
+  "generated_at": "2026-05-01T13:57:39.319176+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -201,6 +201,28 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/car-breaks-down-on-bridge-who-to-call/",
+        "verified": true
+      }
+    },
+    "car-broke-down-toll-road-towing-cost-responsibility": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-broke-down-on-toll-road-who-pays.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-toll-road-towing-cost-responsibility-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815410033823219712/car-broke-down-toll-road-towing-cost-responsibility",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/01/car-broke-down-toll-road-towing-cost-responsibility/",
         "verified": true
       }
     },
@@ -2077,24 +2099,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 75,
-      "verified": 65
+      "checked": 76,
+      "verified": 66
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
+      "checked": 86,
+      "verified": 86
+    },
+    "tumblr": {
       "checked": 85,
       "verified": 85
     },
-    "tumblr": {
-      "checked": 84,
-      "verified": 84
-    },
     "wordpress": {
-      "checked": 66,
-      "verified": 66
+      "checked": 67,
+      "verified": 67
     }
   }
 }
