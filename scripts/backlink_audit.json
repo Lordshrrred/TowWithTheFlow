@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T13:57:39.319176+00:00",
+  "generated_at": "2026-05-01T17:17:05.616259+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -69,6 +69,19 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/20/allstate-roadside-assistance-towing-distance-covered/",
+        "verified": true
+      }
+    },
+    "average-towing-cost-per-mile-usa": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/average-towing-cost-per-mile-in-usa.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/average-towing-cost-per-mile-usa-advice/",
         "verified": true
       }
     },
@@ -623,6 +636,28 @@
         "verified": true
       }
     },
+    "car-stuck-snow-tow-truck-cost-atlanta": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-stuck-in-snow-tow-truck-cost-in.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-stuck-snow-tow-truck-cost-atlanta-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815418789002936320/car-stuck-snow-tow-truck-cost-atlanta",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/01/car-stuck-snow-tow-truck-cost-atlanta/",
+        "verified": true
+      }
+    },
     "car-wont-shift-into-drive-need-tow-truck": {
       "blog": {
         "reason": "http_404",
@@ -928,6 +963,11 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813885472235569152/how-much-does-aaa-towing-cost-without-membership",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/01/how-much-does-aaa-towing-cost-without-membership/",
+        "verified": true
       }
     },
     "how-to-start-a-frozen-car-battery": {
@@ -975,6 +1015,11 @@
       }
     },
     "is-it-illegal-to-leave-your-car-on-the-side-of-the-road": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/is-it-illegal-to-leave-your-car-on-side.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/is-it-illegal-to-leave-your-car-on-the-side-of-the-road-roadside-tips-3c1o",
@@ -1975,6 +2020,28 @@
         "verified": true
       }
     },
+    "towing-cost-vs-roadside-assistance-comparison": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-vs-roadside-assistance-full.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-vs-roadside-assistance-comparison-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815424582374801408/towing-cost-vs-roadside-assistance-comparison",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/01/towing-cost-vs-roadside-assistance-comparison/",
+        "verified": true
+      }
+    },
     "transmission-slipping-symptoms-houston": {
       "dev": {
         "reason": "ok",
@@ -2099,24 +2166,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 76,
-      "verified": 66
+      "checked": 80,
+      "verified": 70
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 86,
-      "verified": 86
+      "checked": 89,
+      "verified": 89
     },
     "tumblr": {
-      "checked": 85,
-      "verified": 85
+      "checked": 87,
+      "verified": 87
     },
     "wordpress": {
-      "checked": 67,
-      "verified": 67
+      "checked": 70,
+      "verified": 70
     }
   }
 }
