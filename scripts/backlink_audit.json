@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T13:51:33.490000+00:00",
+  "generated_at": "2026-05-02T17:10:00.135005+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -75,13 +75,22 @@
     "average-towing-cost-per-mile-usa": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/average-towing-cost-per-mile-in-usa.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/average-towing-cost-per-mile-in-usa_02133633049.html",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/average-towing-cost-per-mile-usa-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815513843199541248/average-towing-cost-per-mile-usa",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/02/average-towing-cost-per-mile-usa/",
         "verified": true
       }
     },
@@ -619,6 +628,28 @@
         "verified": true
       }
     },
+    "car-smoking-hood-tow-truck-miami": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-smoking-from-hood-need-tow-truck.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-smoking-hood-tow-truck-miami-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815509049682657280/car-smoking-hood-tow-truck-miami",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/02/car-smoking-hood-tow-truck-miami/",
+        "verified": true
+      }
+    },
     "car-stuck-mud-towing-cost": {
       "dev": {
         "reason": "ok",
@@ -815,6 +846,19 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813153411664068609/cheapest-tow-truck-service-near-me-sunday",
+        "verified": true
+      }
+    },
+    "does-insurance-cover-towing-after-accident": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/does-insurance-cover-towing-after.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/does-insurance-cover-towing-after-accident-guide/",
         "verified": true
       }
     },
@@ -1517,6 +1561,11 @@
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813975916914081792/towing-cost-dallas-texas",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/02/towing-cost-dallas-texas/",
+        "verified": true
       }
     },
     "towing-cost-denver-colorado": {
@@ -1937,6 +1986,13 @@
         "verified": true
       }
     },
+    "towing-cost-portland-oregon": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-portland-oregon-what.html",
+        "verified": true
+      }
+    },
     "towing-cost-portland-oregon-rainy-weather": {
       "blog": {
         "reason": "ok",
@@ -2188,24 +2244,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 81,
-      "verified": 71
+      "checked": 84,
+      "verified": 74
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
+      "checked": 92,
+      "verified": 92
+    },
+    "tumblr": {
       "checked": 90,
       "verified": 90
     },
-    "tumblr": {
-      "checked": 88,
-      "verified": 88
-    },
     "wordpress": {
-      "checked": 71,
-      "verified": 71
+      "checked": 74,
+      "verified": 74
     }
   }
 }
