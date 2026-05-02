@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T09:36:20.237892+00:00",
+  "generated_at": "2026-05-02T13:51:33.490000+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -156,6 +156,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/18/can-you-call-a-tow-truck-without-insurance/",
+        "verified": true
+      }
+    },
+    "car-accident-towing-cost-insurance-deductible-applies": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/does-insurance-deductible-apply-to.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-accident-towing-cost-insurance-deductible-applies-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815499608542298112/car-accident-towing-cost-insurance-deductible-applies",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/02/car-accident-towing-cost-insurance-deductible-applies/",
         "verified": true
       }
     },
@@ -2166,24 +2188,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 80,
-      "verified": 70
+      "checked": 81,
+      "verified": 71
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 89,
-      "verified": 89
+      "checked": 90,
+      "verified": 90
     },
     "tumblr": {
-      "checked": 87,
-      "verified": 87
+      "checked": 88,
+      "verified": 88
     },
     "wordpress": {
-      "checked": 70,
-      "verified": 70
+      "checked": 71,
+      "verified": 71
     }
   }
 }
