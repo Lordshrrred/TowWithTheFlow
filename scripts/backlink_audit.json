@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T13:51:48.605679+00:00",
+  "generated_at": "2026-05-03T17:11:55.030368+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -165,6 +165,19 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/18/can-you-call-a-tow-truck-without-insurance/",
+        "verified": true
+      }
+    },
+    "can-you-jump-start-a-completely-dead-battery": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/can-you-jump-start-completely-dead.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/can-you-jump-start-a-completely-dead-battery-advice/",
         "verified": true
       }
     },
@@ -394,9 +407,9 @@
     },
     "car-making-loud-knocking-sound-while-driving": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-making-loud-knocking-sound-while.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -499,9 +512,9 @@
     },
     "car-overheating-red-light-dashboard-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-overheating-red-light-on-dashboard.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -849,6 +862,28 @@
         "verified": true
       }
     },
+    "cheapest-tow-truck-service-near-me-sunday-winter": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/find-cheapest-tow-truck-service-near.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/cheapest-tow-truck-service-near-me-sunday-winter-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815599712523665408/cheapest-tow-truck-service-near-me-sunday-winter",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/03/cheapest-tow-truck-service-near-me-sunday-winter/",
+        "verified": true
+      }
+    },
     "does-insurance-cover-towing-after-accident": {
       "blog": {
         "reason": "ok",
@@ -1055,6 +1090,11 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/814067517482041344/how-to-start-a-frozen-car-battery",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/03/how-to-start-a-frozen-car-battery/",
         "verified": true
       }
     },
@@ -1682,9 +1722,9 @@
     },
     "towing-cost-in-phoenix-arizona-24-hour-service": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-24-hour.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1709,9 +1749,9 @@
     },
     "towing-cost-las-vegas-nevada": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-las-vegas-nevada.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1871,6 +1911,13 @@
         "verified": true
       }
     },
+    "towing-cost-minneapolis-minnesota": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-minneapolis-minnesota.html",
+        "verified": true
+      }
+    },
     "towing-cost-nashville-tennessee": {
       "blog": {
         "reason": "ok",
@@ -2011,7 +2058,22 @@
     "towing-cost-portland-oregon": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-portland-oregon-what.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-portland-oregon-what_0424354565.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-portland-oregon-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815604444404301824/towing-cost-portland-oregon",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/03/towing-cost-portland-oregon/",
         "verified": true
       }
     },
@@ -2266,24 +2328,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 85,
-      "verified": 75
+      "checked": 88,
+      "verified": 74
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
+      "checked": 96,
+      "verified": 96
+    },
+    "tumblr": {
       "checked": 93,
       "verified": 93
     },
-    "tumblr": {
-      "checked": 91,
-      "verified": 91
-    },
     "wordpress": {
-      "checked": 75,
-      "verified": 75
+      "checked": 78,
+      "verified": 78
     }
   }
 }
