@@ -1,6 +1,10 @@
 {
-  "generated_at": "2026-05-06T14:51:30.842447+00:00",
+  "generated_at": "2026-05-06T17:55:03.943319+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/05/06/towing-cost-minneapolis-minnesota-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/06/towing-cost-detroit-michigan/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/06/cheapest-tow-truck-service-near-me-sunday-night/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/06/insurance-deductible-applies-to-towing-costs-when/",
     "https://towwiththeflowyo.wordpress.com/2026/05/05/can-you-jump-start-a-completely-dead-battery/",
     "https://towwiththeflowyo.wordpress.com/2026/05/05/rental-car-broke-down-who-pays-towing-enterprise-hertz-3/",
     "https://towwiththeflowyo.wordpress.com/2026/05/04/towing-cost-minneapolis-minnesota/",
@@ -86,8 +90,7 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
-    "https://towwiththeflowyo.wordpress.com/2026/05/06/insurance-deductible-applies-to-towing-costs-when/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -340,6 +343,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/car-wont-start-in-cold-weather-what-to-do/",
+        "verified": true
+      }
+    },
+    "cheapest-tow-truck-service-near-me-sunday-night": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/cheapest-tow-truck-service-near-me-sunday-night/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/06/cheapest-tow-truck-service-near-me-sunday-night/",
         "verified": true
       }
     },
@@ -640,6 +652,15 @@
         "verified": true
       }
     },
+    "towing-cost-detroit-michigan": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-detroit-michigan/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/06/towing-cost-detroit-michigan/",
+        "verified": true
+      }
+    },
     "towing-cost-houston-texas": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-houston-texas/",
@@ -719,6 +740,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/04/towing-cost-minneapolis-minnesota/",
         "verified": true
+      }
+    },
+    "towing-cost-minneapolis-minnesota-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/06/towing-cost-minneapolis-minnesota-2/",
+        "verified": false
       }
     },
     "towing-cost-nashville-tennessee": {
@@ -878,8 +908,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 87,
-      "verified": 82
+      "checked": 90,
+      "verified": 84
     }
   }
 }
