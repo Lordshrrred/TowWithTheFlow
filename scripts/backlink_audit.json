@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T10:30:18.845309+00:00",
+  "generated_at": "2026-05-06T14:51:29.035201+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1131,6 +1131,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/18/insurance-covers-towing-but-not-after-midnight/",
+        "verified": true
+      }
+    },
+    "insurance-deductible-applies-to-towing-costs-when": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/when-your-insurance-deductible-applies.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/insurance-deductible-applies-to-towing-costs-when-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815865287607025664/insurance-deductible-applies-to-towing-costs-when",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/06/insurance-deductible-applies-to-towing-costs-when/",
         "verified": true
       }
     },
@@ -2347,24 +2369,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 88,
-      "verified": 78
+      "checked": 89,
+      "verified": 79
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 96,
-      "verified": 96
+      "checked": 97,
+      "verified": 97
     },
     "tumblr": {
-      "checked": 94,
-      "verified": 94
+      "checked": 95,
+      "verified": 95
     },
     "wordpress": {
-      "checked": 81,
-      "verified": 81
+      "checked": 82,
+      "verified": 82
     }
   }
 }
