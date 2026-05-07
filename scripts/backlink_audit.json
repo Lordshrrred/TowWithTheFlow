@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T15:07:10.160117+00:00",
+  "generated_at": "2026-05-07T18:01:15.648995+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -670,14 +670,20 @@
     },
     "car-starts-then-dies-immediately-causes": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-starts-then-dies-immediately-causes_01346318726.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-starts-then-dies-immediately-causes-help/",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/07/car-starts-then-dies-immediately-causes/",
         "verified": true
       }
     },
@@ -921,6 +927,41 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/04/cheapest-tow-truck-service-near-me-sunday-winter-2/",
+        "verified": true
+      }
+    },
+    "cheapest-tow-truck-service-sunday-chicago": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/cheapest-tow-truck-service-near-me_01756753700.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/cheapest-tow-truck-service-sunday-chicago-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/815966966152036352/cheapest-tow-truck-service-sunday-chicago",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/07/cheapest-tow-truck-service-sunday-chicago/",
+        "verified": true
+      }
+    },
+    "check-engine-light-flashing-then-stops": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/check-engine-light-flashing-then-stops.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/check-engine-light-flashing-then-stops-help/",
         "verified": true
       }
     },
@@ -1340,9 +1381,9 @@
     },
     "state-farm-covers-towing-how-much-per-year": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/state-farm-towing-coverage-annual.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -1666,6 +1707,13 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/27/towing-cost-austin-texas/",
+        "verified": true
+      }
+    },
+    "towing-cost-charlotte-north-carolina": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-charlotte-north-carolina.html",
         "verified": true
       }
     },
@@ -2019,24 +2067,22 @@
     "towing-cost-minneapolis-minnesota": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-minneapolis-minnesota.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-minneapolis-minnesota_0665100419.html",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-minneapolis-minnesota-guide/",
         "verified": true
       },
       "tumblr": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://www.tumblr.com/towwiththeflow/815880286617452544/towing-cost-minneapolis-minnesota",
+        "url": "https://www.tumblr.com/towwiththeflow/815971338061758464/towing-cost-minneapolis-minnesota",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/04/towing-cost-minneapolis-minnesota/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/07/towing-cost-minneapolis-minnesota-3/",
         "verified": true
       }
     },
@@ -2450,24 +2496,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 93,
-      "verified": 81
+      "checked": 96,
+      "verified": 86
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 101,
-      "verified": 101
+      "checked": 103,
+      "verified": 103
     },
     "tumblr": {
-      "checked": 98,
-      "verified": 98
+      "checked": 99,
+      "verified": 99
     },
     "wordpress": {
-      "checked": 85,
-      "verified": 85
+      "checked": 87,
+      "verified": 87
     }
   }
 }
