@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T17:46:32.823727+00:00",
+  "generated_at": "2026-05-08T21:20:25.301778+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -147,9 +147,9 @@
     },
     "can-you-call-a-tow-truck-without-insurance": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/can-you-call-tow-truck-without.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -652,7 +652,7 @@
     },
     "car-smoking-from-hood-need-tow-truck-now": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-smoking-from-hood-need-tow-truck-now.html",
         "verified": false
       },
@@ -847,9 +847,9 @@
     },
     "car-wont-start-in-cold-weather-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-wont-start-in-cold-weather-what-to.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -891,7 +891,7 @@
     },
     "cheapest-tow-truck-service-near-me-sunday": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/find-cheapest-tow-truck-service-open.html",
         "verified": false
       },
@@ -1015,7 +1015,8 @@
     "driving-in-snow-emergency-kit-checklist": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/driving-in-snow-emergency-kit-checklist_02130691165.html",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/driving-in-snow-emergency-kit-checklist.html",
         "verified": true
       },
       "dev": {
@@ -1820,9 +1821,9 @@
     },
     "towing-cost-denver-colorado": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-denver-colorado-what.html",
-        "verified": true
+        "verified": false
       },
       "tumblr": {
         "reason": "ok",
@@ -1849,9 +1850,9 @@
     },
     "towing-cost-houston-texas": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2544,7 +2545,7 @@
   "summary": {
     "blog": {
       "checked": 98,
-      "verified": 88
+      "verified": 84
     },
     "dev": {
       "checked": 58,
