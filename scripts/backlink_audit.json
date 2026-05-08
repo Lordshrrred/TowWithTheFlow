@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T09:57:32.306064+00:00",
+  "generated_at": "2026-05-08T14:19:20.736887+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1330,6 +1330,28 @@
         "verified": true
       }
     },
+    "progressive-roadside-assistance-towing-limit-miles": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/progressive-roadside-assistance-towing.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/progressive-roadside-assistance-towing-limit-miles-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816045157362335744/progressive-roadside-assistance-towing-limit-miles",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/08/progressive-roadside-assistance-towing-limit-miles/",
+        "verified": true
+      }
+    },
     "rental-car-broke-down-who-pays-towing-enterprise-hertz": {
       "blog": {
         "reason": "ok",
@@ -2496,24 +2518,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 96,
-      "verified": 86
+      "checked": 97,
+      "verified": 87
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 103,
-      "verified": 103
+      "checked": 104,
+      "verified": 104
     },
     "tumblr": {
-      "checked": 99,
-      "verified": 99
+      "checked": 100,
+      "verified": 100
     },
     "wordpress": {
-      "checked": 87,
-      "verified": 87
+      "checked": 88,
+      "verified": 88
     }
   }
 }
