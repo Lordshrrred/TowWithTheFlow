@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T14:19:20.736887+00:00",
+  "generated_at": "2026-05-08T17:46:32.823727+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -171,18 +171,22 @@
     "can-you-jump-start-a-completely-dead-battery": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/can-you-jump-start-completely-dead.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/can-you-jump-start-completely-dead_02043383696.html",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/can-you-jump-start-a-completely-dead-battery-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816060412778905600/can-you-jump-start-a-completely-dead-battery",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/05/can-you-jump-start-a-completely-dead-battery/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/08/can-you-jump-start-a-completely-dead-battery-2/",
         "verified": true
       }
     },
@@ -407,6 +411,28 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813235128152342528/car-making-grinding-noise-when-braking-tow-cost",
+        "verified": true
+      }
+    },
+    "car-making-grinding-noise-when-braking-tow-cost-phoenix": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-making-grinding-noise-when-braking.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-making-grinding-noise-when-braking-tow-cost-phoenix-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816054469369430016/car-making-grinding-noise-when-braking-tow-cost-phoenix",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/08/car-making-grinding-noise-when-braking-tow-cost-phoenix/",
         "verified": true
       }
     },
@@ -682,8 +708,7 @@
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/07/car-starts-then-dies-immediately-causes/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/08/car-starts-then-dies-immediately-causes-2/",
         "verified": true
       }
     },
@@ -2518,24 +2543,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 97,
-      "verified": 87
+      "checked": 98,
+      "verified": 88
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 104,
-      "verified": 104
+      "checked": 105,
+      "verified": 105
     },
     "tumblr": {
-      "checked": 100,
-      "verified": 100
+      "checked": 102,
+      "verified": 102
     },
     "wordpress": {
-      "checked": 88,
-      "verified": 88
+      "checked": 89,
+      "verified": 89
     }
   }
 }
