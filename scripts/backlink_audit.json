@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T09:46:22.737338+00:00",
+  "generated_at": "2026-05-09T13:56:38.096129+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -69,6 +69,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/20/allstate-roadside-assistance-towing-distance-covered/",
+        "verified": true
+      }
+    },
+    "allstate-roadside-assistance-vs-calling-tow-truck": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/allstate-roadside-assistance-vs-calling.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/allstate-roadside-assistance-vs-calling-tow-truck-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816133979801567232/allstate-roadside-assistance-vs-calling-tow-truck",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/09/allstate-roadside-assistance-vs-calling-tow-truck/",
         "verified": true
       }
     },
@@ -2543,24 +2565,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 98,
-      "verified": 88
+      "checked": 99,
+      "verified": 89
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 105,
-      "verified": 105
+      "checked": 106,
+      "verified": 106
     },
     "tumblr": {
-      "checked": 102,
-      "verified": 102
+      "checked": 103,
+      "verified": 103
     },
     "wordpress": {
-      "checked": 89,
-      "verified": 89
+      "checked": 90,
+      "verified": 90
     }
   }
 }
