@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T13:56:38.096129+00:00",
+  "generated_at": "2026-05-09T17:17:00.797844+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1813,6 +1813,13 @@
         "verified": true
       }
     },
+    "towing-cost-columbus-ohio": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-columbus-ohio-what-youll.html",
+        "verified": true
+      }
+    },
     "towing-cost-dallas-texas": {
       "blog": {
         "reason": "ok",
@@ -1860,12 +1867,22 @@
     "towing-cost-detroit-michigan": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-detroit-michigan-what_056217045.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-detroit-michigan-what_01778387310.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-detroit-michigan-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816149188475846656/towing-cost-detroit-michigan",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/06/towing-cost-detroit-michigan/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/09/towing-cost-detroit-michigan-2/",
         "verified": true
       }
     },
@@ -1966,6 +1983,13 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/22/towing-cost-in-phoenix-arizona-24-hour-service/",
+        "verified": true
+      }
+    },
+    "towing-cost-indianapolis-indiana": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-indianapolis-indiana_01654723338.html",
         "verified": true
       }
     },
@@ -2250,6 +2274,28 @@
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/813245061424922624/towing-cost-phoenix-arizona-after-hours",
+        "verified": true
+      }
+    },
+    "towing-cost-phoenix-arizona-after-hours-winter": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-phoenix-arizona-after.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-phoenix-arizona-after-hours-winter-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816143522883420160/towing-cost-phoenix-arizona-after-hours-winter",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/09/towing-cost-phoenix-arizona-after-hours-winter/",
         "verified": true
       }
     },
@@ -2565,24 +2611,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 99,
-      "verified": 89
+      "checked": 102,
+      "verified": 92
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 106,
-      "verified": 106
+      "checked": 108,
+      "verified": 108
     },
     "tumblr": {
-      "checked": 103,
-      "verified": 103
+      "checked": 105,
+      "verified": 105
     },
     "wordpress": {
-      "checked": 90,
-      "verified": 90
+      "checked": 91,
+      "verified": 91
     }
   }
 }
