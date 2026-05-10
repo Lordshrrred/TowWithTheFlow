@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-05-10T13:59:11.714984+00:00",
+  "generated_at": "2026-05-10T17:16:14.419752+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/05/10/towing-cost-charlotte-north-carolina-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/10/car-starts-then-dies-immediately-causes-3/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/10/towing-cost-phoenix-arizona-after-hours-night/",
     "https://towwiththeflowyo.wordpress.com/2026/05/10/geico-covers-towing-how-many-times-per-year/",
     "https://towwiththeflowyo.wordpress.com/2026/05/09/towing-cost-charlotte-north-carolina/",
     "https://towwiththeflowyo.wordpress.com/2026/05/09/towing-cost-detroit-michigan-2/",
@@ -356,6 +359,15 @@
         "reason": "slug_mismatch",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/08/car-starts-then-dies-immediately-causes-2/",
+        "verified": false
+      }
+    },
+    "car-starts-then-dies-immediately-causes-3": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/car-starts-then-dies-immediately-causes-3/",
         "verified": false
       }
     },
@@ -728,6 +740,15 @@
         "verified": true
       }
     },
+    "towing-cost-charlotte-north-carolina-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/towing-cost-charlotte-north-carolina-2/",
+        "verified": false
+      }
+    },
     "towing-cost-chicago-illinois": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-chicago-illinois/",
@@ -899,6 +920,15 @@
         "verified": true
       }
     },
+    "towing-cost-phoenix-arizona-after-hours-night": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-phoenix-arizona-after-hours-night/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/towing-cost-phoenix-arizona-after-hours-night/",
+        "verified": true
+      }
+    },
     "towing-cost-phoenix-arizona-after-hours-winter": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-phoenix-arizona-after-hours-winter/",
@@ -1038,8 +1068,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 103,
-      "verified": 93
+      "checked": 106,
+      "verified": 94
     }
   }
 }

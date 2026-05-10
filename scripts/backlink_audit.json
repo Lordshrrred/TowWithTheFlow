@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T13:59:08.230875+00:00",
+  "generated_at": "2026-05-10T17:16:11.578308+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -91,6 +91,19 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/09/allstate-roadside-assistance-vs-calling-tow-truck/",
+        "verified": true
+      }
+    },
+    "alternator-vs-battery-symptoms-difference": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/alternator-vs-battery-how-to-tell.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/alternator-vs-battery-symptoms-difference-tips/",
         "verified": true
       }
     },
@@ -719,18 +732,22 @@
     "car-starts-then-dies-immediately-causes": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-starts-then-dies-immediately-causes_01346318726.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-starts-then-dies-immediately-causes_0674555775.html",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-starts-then-dies-immediately-causes-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816239863359799296/car-starts-then-dies-immediately-causes",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/08/car-starts-then-dies-immediately-causes-2/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/car-starts-then-dies-immediately-causes-3/",
         "verified": true
       }
     },
@@ -1809,8 +1826,7 @@
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/09/towing-cost-charlotte-north-carolina/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/towing-cost-charlotte-north-carolina-2/",
         "verified": true
       }
     },
@@ -2305,6 +2321,28 @@
         "verified": true
       }
     },
+    "towing-cost-phoenix-arizona-after-hours-night": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-phoenix-arizona-after_0737704292.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-phoenix-arizona-after-hours-night-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816234238732009472/towing-cost-phoenix-arizona-after-hours-night",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/towing-cost-phoenix-arizona-after-hours-night/",
+        "verified": true
+      }
+    },
     "towing-cost-phoenix-arizona-after-hours-winter": {
       "blog": {
         "reason": "ok",
@@ -2634,29 +2672,42 @@
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/29/what-to-keep-in-your-car-for-emergencies-2/",
         "verified": true
       }
+    },
+    "why-does-my-car-click-but-not-start": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/why-does-my-car-click-but-not-start.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/why-does-my-car-click-but-not-start-help/",
+        "verified": true
+      }
     }
   },
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 103,
-      "verified": 93
+      "checked": 106,
+      "verified": 96
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 109,
-      "verified": 109
+      "checked": 112,
+      "verified": 112
     },
     "tumblr": {
-      "checked": 106,
-      "verified": 106
+      "checked": 108,
+      "verified": 108
     },
     "wordpress": {
-      "checked": 93,
-      "verified": 93
+      "checked": 94,
+      "verified": 94
     }
   }
 }
