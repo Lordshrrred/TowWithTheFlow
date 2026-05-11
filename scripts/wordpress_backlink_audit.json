@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T15:40:50.746405+00:00",
+  "generated_at": "2026-05-11T18:13:38.116033+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/05/11/car-battery-died-parking-garage-tow-truck-can-reach/",
     "https://towwiththeflowyo.wordpress.com/2026/05/10/towing-cost-charlotte-north-carolina-2/",
@@ -107,7 +107,10 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/11/check-engine-light-flashing-then-stops/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/11/towing-cost-charlotte-north-carolina-3/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/11/towing-cost-phoenix-arizona-after-hours-chicago/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -462,6 +465,15 @@
         "verified": true
       }
     },
+    "check-engine-light-flashing-then-stops": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/check-engine-light-flashing-then-stops/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/11/check-engine-light-flashing-then-stops/",
+        "verified": true
+      }
+    },
     "does-insurance-cover-towing-after-accident": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/does-insurance-cover-towing-after-accident/",
@@ -759,6 +771,15 @@
         "verified": false
       }
     },
+    "towing-cost-charlotte-north-carolina-3": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/11/towing-cost-charlotte-north-carolina-3/",
+        "verified": false
+      }
+    },
     "towing-cost-chicago-illinois": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-chicago-illinois/",
@@ -930,6 +951,15 @@
         "verified": true
       }
     },
+    "towing-cost-phoenix-arizona-after-hours-chicago": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-phoenix-arizona-after-hours-chicago/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/11/towing-cost-phoenix-arizona-after-hours-chicago/",
+        "verified": true
+      }
+    },
     "towing-cost-phoenix-arizona-after-hours-night": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-phoenix-arizona-after-hours-night/",
@@ -1078,8 +1108,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 107,
-      "verified": 95
+      "checked": 110,
+      "verified": 97
     }
   }
 }

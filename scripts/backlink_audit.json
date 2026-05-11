@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T15:40:49.299921+00:00",
+  "generated_at": "2026-05-11T18:13:35.157009+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1049,6 +1049,11 @@
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/check-engine-light-flashing-then-stops-help/",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/11/check-engine-light-flashing-then-stops/",
+        "verified": true
       }
     },
     "does-insurance-cover-towing-after-accident": {
@@ -1846,6 +1851,18 @@
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-charlotte-north-carolina.html",
         "verified": true
       },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-charlotte-north-carolina-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://www.tumblr.com/towwiththeflow/816336637383540736/towing-cost-charlotte-north-carolina",
+        "verified": true
+      },
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/towing-cost-charlotte-north-carolina-2/",
@@ -2343,6 +2360,28 @@
         "verified": true
       }
     },
+    "towing-cost-phoenix-arizona-after-hours-chicago": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-phoenix-arizona-after_01342144152.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-phoenix-arizona-after-hours-chicago-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816331377161175040/towing-cost-phoenix-arizona-after-hours-chicago",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/11/towing-cost-phoenix-arizona-after-hours-chicago/",
+        "verified": true
+      }
+    },
     "towing-cost-phoenix-arizona-after-hours-night": {
       "blog": {
         "reason": "ok",
@@ -2712,24 +2751,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 107,
-      "verified": 97
+      "checked": 108,
+      "verified": 98
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 113,
-      "verified": 113
+      "checked": 115,
+      "verified": 115
     },
     "tumblr": {
-      "checked": 109,
-      "verified": 109
+      "checked": 111,
+      "verified": 111
     },
     "wordpress": {
-      "checked": 95,
-      "verified": 95
+      "checked": 97,
+      "verified": 97
     }
   }
 }
