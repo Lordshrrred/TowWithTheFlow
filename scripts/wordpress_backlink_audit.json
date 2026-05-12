@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-05-12T15:12:14.538744+00:00",
+  "generated_at": "2026-05-12T18:20:15.470001+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/05/12/towing-cost-indianapolis-indiana/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/12/towing-cost-charlotte-north-carolina-4/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/12/towing-cost-credit-card-roadside-assistance-covers/",
     "https://towwiththeflowyo.wordpress.com/2026/05/12/tow-truck-cost-flat-tire-cant-change-myself/",
     "https://towwiththeflowyo.wordpress.com/2026/05/11/check-engine-light-flashing-then-stops/",
     "https://towwiththeflowyo.wordpress.com/2026/05/11/towing-cost-charlotte-north-carolina-3/",
@@ -790,12 +793,30 @@
         "verified": false
       }
     },
+    "towing-cost-charlotte-north-carolina-4": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/12/towing-cost-charlotte-north-carolina-4/",
+        "verified": false
+      }
+    },
     "towing-cost-chicago-illinois": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-chicago-illinois/",
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/28/towing-cost-chicago-illinois/",
+        "verified": true
+      }
+    },
+    "towing-cost-credit-card-roadside-assistance-covers": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-credit-card-roadside-assistance-covers/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/12/towing-cost-credit-card-roadside-assistance-covers/",
         "verified": true
       }
     },
@@ -859,6 +880,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/22/towing-cost-in-phoenix-arizona-24-hour-service/",
+        "verified": true
+      }
+    },
+    "towing-cost-indianapolis-indiana": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-indianapolis-indiana/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/12/towing-cost-indianapolis-indiana/",
         "verified": true
       }
     },
@@ -1118,8 +1148,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 111,
-      "verified": 98
+      "checked": 114,
+      "verified": 100
     }
   }
 }
