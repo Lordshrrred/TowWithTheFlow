@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T10:45:25.500780+00:00",
+  "generated_at": "2026-05-12T15:12:10.430248+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -270,12 +270,6 @@
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-battery-dies-in-parking-lot-what-to.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
@@ -299,12 +293,6 @@
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-breaks-down-on-bridge-who-to-call-and-what-to-do-roadside-tips-51mf",
@@ -1222,9 +1210,9 @@
     },
     "how-much-does-a-tow-cost-in-colorado": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-tow-cost-in-colorado.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1539,6 +1527,7 @@
     "tire-blowout-highway-emergency-tow-cost": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tire-blowout-on-highway-emergency-tow.html",
         "verified": true
       },
@@ -1658,6 +1647,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/30/tow-truck-cost-accident-scene-police-report-required/",
+        "verified": true
+      }
+    },
+    "tow-truck-cost-flat-tire-cant-change-myself": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/tow-truck-cost-for-flat-tire-when-you.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-flat-tire-cant-change-myself-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816409415268827136/tow-truck-cost-flat-tire-cant-change-myself",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/12/tow-truck-cost-flat-tire-cant-change-myself/",
         "verified": true
       }
     },
@@ -1871,9 +1882,9 @@
     },
     "towing-cost-chicago-illinois": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-chicago-illinois-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2215,9 +2226,9 @@
     },
     "towing-cost-miami-florida-hurricane-season": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-miami-florida-hurricane.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2751,24 +2762,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 108,
-      "verified": 98
+      "checked": 107,
+      "verified": 94
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 115,
-      "verified": 115
+      "checked": 116,
+      "verified": 116
     },
     "tumblr": {
-      "checked": 111,
-      "verified": 111
+      "checked": 112,
+      "verified": 112
     },
     "wordpress": {
-      "checked": 97,
-      "verified": 97
+      "checked": 98,
+      "verified": 98
     }
   }
 }
