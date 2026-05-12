@@ -4591,3 +4591,32 @@
 [2026-05-11 11:10:48] BACKLINK | check-engine-light-flashing-then-stops | missing — injecting before syndication
 [2026-05-11 11:10:48] WORDPRESS_BACKLOG | check-engine-light-flashing-then-stops | START
 [2026-05-11 11:11:00] WORDPRESS | check-engine-light-flashing-then-stops | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/05/11/check-engine-light-flashing-then-stops/
+[2026-05-12 06:23:50] === SYNDICATE START: tow-truck-cost-flat-tire-cant-change-myself ===
+[2026-05-12 06:23:50] PREFLIGHT | title: Tow Truck Cost for Flat Tire When You Can't Change It Yourself
+[2026-05-12 06:23:50] PREFLIGHT | date: 2026-05-12
+[2026-05-12 06:23:50] PREFLIGHT | timestamp: 2026-05-12 06:23:50
+[2026-05-12 06:23:50] PREFLIGHT | DEVTO:   configured
+[2026-05-12 06:23:50] PREFLIGHT | TUMBLR:  configured
+[2026-05-12 06:23:50] PREFLIGHT | BLOGGER: configured
+[2026-05-12 06:23:50] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-05-12 06:23:50] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-05-12 06:23:50] DEVTO | tow-truck-cost-flat-tire-cant-change-myself | START
+[2026-05-12 06:23:50] DEVTO | tow-truck-cost-flat-tire-cant-change-myself | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-05-12 06:23:50] --- waiting 60s before next platform ---
+[2026-05-12 06:24:50] TUMBLR | tow-truck-cost-flat-tire-cant-change-myself | START
+[2026-05-12 06:24:51] TUMBLR | tow-truck-cost-flat-tire-cant-change-myself | SUCCESS | https://towwiththeflow.tumblr.com/post/816409415268827136
+[2026-05-12 06:24:51] --- waiting 60s before next platform ---
+[2026-05-12 06:25:51] BLOGGER | tow-truck-cost-flat-tire-cant-change-myself | START
+[2026-05-12 06:25:51] BLOGGER | tow-truck-cost-flat-tire-cant-change-myself | step 1/3: refreshing access token
+[2026-05-12 06:25:52] BLOGGER | tow-truck-cost-flat-tire-cant-change-myself | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-05-12 06:25:52] BLOGGER | tow-truck-cost-flat-tire-cant-change-myself | step 2/3: converting markdown to HTML
+[2026-05-12 06:25:52] BLOGGER | tow-truck-cost-flat-tire-cant-change-myself | step 3/3: posting to blog 1959471973457654666
+[2026-05-12 06:25:53] BLOGGER | tow-truck-cost-flat-tire-cant-change-myself | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/05/tow-truck-cost-for-flat-tire-when-you.html
+[2026-05-12 06:25:53] --- waiting 60s before next platform ---
+[2026-05-12 06:26:53] WORDPRESS | tow-truck-cost-flat-tire-cant-change-myself | START
+[2026-05-12 06:27:02] WORDPRESS | tow-truck-cost-flat-tire-cant-change-myself | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/05/12/tow-truck-cost-flat-tire-cant-change-myself/
+[2026-05-12 06:27:02] --- waiting 60s before next platform ---
+[2026-05-12 06:28:02] FEEDER | tow-truck-cost-flat-tire-cant-change-myself | START
+[2026-05-12 06:28:03] FEEDER | tow-truck-cost-flat-tire-cant-change-myself | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-flat-tire-cant-change-myself-help/
+[2026-05-12 06:28:03] === SYNDICATE DONE: tow-truck-cost-flat-tire-cant-change-myself | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-05-12 06:28:03] SYNCED | tow-truck-cost-flat-tire-cant-change-myself marked in synced-posts.txt
