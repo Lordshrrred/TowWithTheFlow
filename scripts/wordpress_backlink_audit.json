@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T15:17:15.858792+00:00",
+  "generated_at": "2026-05-13T18:22:01.111686+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/05/13/costco-auto-insurance-roadside-assistance-towing-coverage/",
     "https://towwiththeflowyo.wordpress.com/2026/05/12/towing-cost-indianapolis-indiana/",
@@ -115,7 +115,10 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/13/towing-cost-columbus-ohio/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/13/towing-cost-charlotte-north-carolina-5/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/13/farmers-insurance-towing-benefit-how-many-times/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -524,6 +527,15 @@
         "verified": true
       }
     },
+    "farmers-insurance-towing-benefit-how-many-times": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/farmers-insurance-towing-benefit-how-many-times/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/13/farmers-insurance-towing-benefit-how-many-times/",
+        "verified": true
+      }
+    },
     "geico-covers-towing-how-many-times-per-year": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/geico-covers-towing-how-many-times-per-year/",
@@ -812,12 +824,30 @@
         "verified": false
       }
     },
+    "towing-cost-charlotte-north-carolina-5": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/13/towing-cost-charlotte-north-carolina-5/",
+        "verified": false
+      }
+    },
     "towing-cost-chicago-illinois": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-chicago-illinois/",
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/28/towing-cost-chicago-illinois/",
+        "verified": true
+      }
+    },
+    "towing-cost-columbus-ohio": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-columbus-ohio/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/13/towing-cost-columbus-ohio/",
         "verified": true
       }
     },
@@ -1158,8 +1188,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 115,
-      "verified": 101
+      "checked": 118,
+      "verified": 103
     }
   }
 }
