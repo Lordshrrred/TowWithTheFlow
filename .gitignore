@@ -24,7 +24,9 @@ aura/
 images/
 !static/images/
 !static/images/**
-netlify/
+netlify/*
+!netlify/functions/
+!netlify/functions/**
 .github/workflows/deploy.yml
 
 
@@ -45,3 +47,4 @@ static/_data/dashboard-config.json
 
 # Built dashboard outputs contain injected secrets — never commit
 static/dashboard/
+.vercel

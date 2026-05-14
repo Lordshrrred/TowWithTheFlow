@@ -896,6 +896,8 @@ async function runBacklinkChecks(logMap, feederSet){
 
 async function checkSlugBacklinks(slug, platData, feederSet){
   const results={...(BL_CACHE[slug]||{})};
+  const backendResults = await checkSlugBacklinksBackend(slug, platData, feederSet, results);
+  Object.assign(results, backendResults);
 
   // DEV.to — use public API: GET /api/articles/{username}/{devslug}
   if((!results.dev || results.dev.verified===null) && platData.dev?.status==="success"&&platData.dev?.url){
@@ -931,6 +933,34 @@ async function checkSlugBacklinks(slug, platData, feederSet){
   BL_CACHE[slug]=results;
   updatePlatformBacklinkMarkers(slug, results, platData);
   updateBacklinkCell(slug, results, platData);
+}
+
+async function checkSlugBacklinksBackend(slug, platData, feederSet, currentResults={}){
+  const checks = [];
+  for(const p of ACTIVE_PLATS){
+    const d = platData[p];
+    const fromFeeder = p==="feeder" && feederSet?.has(slug);
+    if(!(d?.status==="success" || fromFeeder)) continue;
+    if(currentResults[p]?.verified===true) continue;
+    checks.push({
+      slug,
+      platform: p,
+      url: d?.url || (fromFeeder ? `https://lordshrrred.github.io/TWTF_Feeder/${slug}/` : ""),
+    });
+  }
+  if(!checks.length) return {};
+  try{
+    const res = await fetch("/api/backlinks", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({checks}),
+    });
+    if(!res.ok) return {};
+    const data = await res.json();
+    return data?.slugs?.[slug] || {};
+  }catch{
+    return {};
+  }
 }
 
 function applyServerAudit(auditJson, logMap){
@@ -1169,7 +1199,7 @@ function updateBacklinkCell(slug, results, platData){
   const el=document.getElementById(`bl-${slug}`);
   if(!el) return;
 
-  // Always show out of 4 platforms for consistency.
+  // Always show out of the active platform count for consistency.
   let verified=0, failed=0, unknown=0;
   const details=[];
 
@@ -1186,11 +1216,11 @@ function updateBacklinkCell(slug, results, platData){
 
   const detailStr=details.join(" ");
   const total=ACTIVE_PLATS.length;
-  const color=verified===4?"var(--green)":verified>=2?"var(--amber)":"var(--red)";
+  const color=verified===total?"var(--green)":verified>=Math.ceil(total/2)?"var(--amber)":"var(--red)";
 
   el.className="bl-badge ok";
   el.style.cssText=`color:${color};border-color:${color}50;background:${color}14;cursor:pointer;`;
-  el.textContent=`${verified}/4`;
+  el.textContent=`${verified}/${total}`;
   el.title=`Backlinks verified: ${detailStr}`;
   el.onclick=()=>showToast(`${s2t(slug)}: ${detailStr}`,5000);
 }

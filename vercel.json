@@ -1,0 +1,13 @@
+{
+  "framework": "hugo",
+  "buildCommand": "python3 scripts/build_dashboard.py && hugo --minify",
+  "outputDirectory": "public",
+  "env": {
+    "HUGO_VERSION": "0.150.0"
+  },
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 30
+    }
+  }
+}
