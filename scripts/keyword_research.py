@@ -37,6 +37,12 @@ Average the four scores and round to the nearest integer for the final score.
 
 Phrase keywords exactly how someone types into Google during a stressful roadside moment. Cover: specific car problems, towing costs by city, seasonal issues, insurance questions, roadside safety, specific breakdown scenarios.
 
+Keyword mix:
+- Keep a healthy split between nationwide reach keywords and local/city keywords.
+- Nationwide keywords should work for drivers anywhere in the United States and should not mention a city.
+- Local keywords should focus on Denver first, then other high-density, high-traffic metros where roadside assistance demand is plausible, such as Los Angeles, New York, Chicago, Houston, Phoenix, Dallas, Atlanta, Miami, Seattle, Las Vegas, San Diego, Charlotte, Jacksonville, Columbus, Indianapolis, Nashville, Memphis, Austin, Portland, Detroit, and Boston.
+- Do not generate random small-city keywords just to make a topic local. Only use a smaller place if the search intent is obviously strong.
+
 Bias toward topics that are rankable for a smaller site:
 - Prefer urgent roadside scenarios, towing decisions, insurance coverage questions, and cost questions.
 - Prefer standalone keywords with a clear page angle.

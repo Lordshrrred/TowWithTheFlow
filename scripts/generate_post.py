@@ -72,7 +72,21 @@ OTHER RULES:
 - Return ONLY valid Hugo markdown with frontmatter
 - Frontmatter fields: title, date (today), description (under 155 chars), tags (array of 3-5 relevant tags), slug
 - NEVER use em dashes (—) under any circumstances. Use periods, commas, or colons instead.
-- Do not use double hyphens (--) as em dashes either."""
+- Do not use double hyphens (--) as em dashes either.
+
+CONTENT STRATEGY:
+- The site intentionally publishes both nationwide roadside-help posts and local/city posts.
+- For general keywords, write for drivers anywhere in the United States. Do not force Denver, Colorado, or any city into the article unless the keyword asks for it.
+- For local or city keywords, include useful local context. Denver is the core local market, but other high-density, high-traffic metros are valid when the keyword names them.
+- Do not create local context for small, low-volume places unless the keyword already targets that place.
+
+VOICE:
+- Calm, practical, and specific. Help the reader make the next good decision while they are stressed.
+- Open by naming the exact car problem or towing question in plain language.
+- Use short paragraphs, concrete examples, and at least one specific actionable tip.
+- Never open with "In today's world" or "In this article we will".
+- Never end with "I hope this helps".
+"""
 
 
 PEXELS_SEARCH_MAP = {
