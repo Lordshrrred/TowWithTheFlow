@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T10:37:53.428299+00:00",
+  "generated_at": "2026-05-14T14:45:50.672326+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -622,6 +622,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/22/car-overheating-red-light-dashboard-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-radiator-leak-steam-coming-out-tow-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-radiator-leak-with-steam-what-to-do.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-radiator-leak-steam-coming-out-tow-cost-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816589807178432512/car-radiator-leak-steam-coming-out-tow-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-radiator-leak-steam-coming-out-tow-cost/",
         "verified": true
       }
     },
@@ -2881,24 +2903,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 116,
-      "verified": 106
+      "checked": 117,
+      "verified": 107
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 120,
-      "verified": 120
+      "checked": 121,
+      "verified": 121
     },
     "tumblr": {
-      "checked": 115,
-      "verified": 115
+      "checked": 116,
+      "verified": 116
     },
     "wordpress": {
-      "checked": 103,
-      "verified": 103
+      "checked": 104,
+      "verified": 104
     }
   }
 }
