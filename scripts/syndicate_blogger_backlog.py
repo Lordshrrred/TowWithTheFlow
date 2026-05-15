@@ -73,6 +73,9 @@ def main():
         if ok:
             mark_blogger_synced(slug)
         log(f"BLOGGER | {slug} | {'SUCCESS' if ok else 'FAIL'} | {detail}")
+        if not ok and "HTTP 403" in detail:
+            log("BLOGGER_BACKLOG | stopping early after HTTP 403 to avoid repeated rejected writes")
+            break
 
 
 if __name__ == "__main__":
