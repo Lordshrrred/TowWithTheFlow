@@ -870,15 +870,17 @@ const BL_CACHE = {}; // slug -> { dev, tumblr, blog, wordpress, feeder }
 let BLOGGER_FEED_CACHE = null;
 
 async function runBacklinkChecks(logMap, feederSet){
-  // Get all slugs that have at least one success
+  // Check slugs with any recorded platform activity, not only successes.
+  // This lets the Vercel checker recover live backlinks when an old log row says
+  // fail/stale but the destination page now exists.
   const slugsToCheck = Object.entries(logMap)
     .filter(([slug,p])=>{
-      const hasSuccess = Object.values(p).some(v=>v.status==="success") || feederSet?.has(slug);
-      if(!hasSuccess) return false;
+      const hasPlatformActivity = Object.values(p).some(Boolean) || feederSet?.has(slug);
+      if(!hasPlatformActivity) return false;
       const cached = BL_CACHE[slug] || {};
       return ACTIVE_PLATS.some(pl=>{
-        const fromLog = (p[pl]?.status==="success") || (pl==="feeder" && feederSet?.has(slug));
-        if(!fromLog) return false;
+        const hasAttempt = !!p[pl] || (pl==="feeder" && feederSet?.has(slug));
+        if(!hasAttempt) return false;
         const c = cached[pl];
         return !c || c.verified===null;
       });
@@ -940,7 +942,7 @@ async function checkSlugBacklinksBackend(slug, platData, feederSet, currentResul
   for(const p of ACTIVE_PLATS){
     const d = platData[p];
     const fromFeeder = p==="feeder" && feederSet?.has(slug);
-    if(!(d?.status==="success" || fromFeeder)) continue;
+    if(!d && !fromFeeder) continue;
     if(currentResults[p]?.verified===true) continue;
     checks.push({
       slug,
@@ -1093,7 +1095,6 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
   for(const p of ACTIVE_PLATS){
     let el=document.getElementById(`plat-${slug}-${p}`);
     const recentEl=document.getElementById(`recent-${slug}-${p}`);
-    if(!el) continue;
     const br=results[p];
     const pr=platData[p];
     const hadSuccess=!!(pr&&pr.status==="success");
@@ -1103,7 +1104,7 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
     const targetUrl=normalizePlatformUrl(p, slug, (br&&br.url)|| (pr&&pr.url) || "");
 
     // If audit proves a live destination, promote NA/FAIL to success even without log success.
-    if((liveFromAudit || recoveredLive) && !hadSuccess){
+    if(el && (liveFromAudit || recoveredLive) && !hadSuccess){
       if(el.classList.contains("na") || el.classList.contains("fail")){
         el.classList.remove("na","fail");
         el.classList.add("success");
@@ -1112,7 +1113,7 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
     }
 
     // Make matrix green badges clickable whenever we have a destination URL.
-    if(targetUrl && el.tagName==="SPAN" && el.classList.contains("success")){
+    if(el && targetUrl && el.tagName==="SPAN" && el.classList.contains("success")){
       const a=document.createElement("a");
       a.id=el.id;
       a.className=el.className;
@@ -1124,32 +1125,37 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
       el.replaceWith(a);
       el=a;
     }
-    if(targetUrl && el.tagName==="A" && el.getAttribute("href")!==targetUrl){
+    if(el && targetUrl && el.tagName==="A" && el.getAttribute("href")!==targetUrl){
       el.setAttribute("href", targetUrl);
     }
 
-    el.classList.remove("bl-ok","bl-bad","bl-unknown");
+    if(el) el.classList.remove("bl-ok","bl-bad","bl-unknown");
     if(!hadSuccess && !hasAuditEntry && !recoveredLive && !liveFromAudit){
       continue; // keep original fail/na state
     }
 
     if(!br || br.verified===null){
-      el.classList.add("bl-unknown");
-      el.title=`${PLAT_LABEL[p]} ${hadSuccess?"syndicated":"live-recovered"}. Backlink: unknown`;
-      if(recentEl && hadSuccess){
+      if(el){
+        el.classList.add("bl-unknown");
+        el.title=`${PLAT_LABEL[p]} ${hadSuccess?"syndicated":"checked"}. Backlink: unknown`;
+      }
+      if(recentEl && (hadSuccess || hasAuditEntry)){
         recentEl.classList.remove("fail","na");
         recentEl.classList.add("success");
         recentEl.textContent=`${PLAT_LABEL[p]} ?`;
+        recentEl.title=`${PLAT_LABEL[p]} backlink unknown`;
       }
     }else if(br.verified){
-      if(el.classList.contains("fail")){
+      if(el && el.classList.contains("fail")){
         el.classList.remove("fail");
         el.classList.add("success");
         el.textContent="✓";
       }
-      el.classList.add("bl-ok");
-      el.title=`${PLAT_LABEL[p]} ${recoveredLive?"live-recovered":"syndicated"}. Backlink: verified`;
-      if(br.url && el.tagName==="SPAN"){
+      if(el){
+        el.classList.add("bl-ok");
+        el.title=`${PLAT_LABEL[p]} ${recoveredLive?"live-recovered":"syndicated"}. Backlink: verified`;
+      }
+      if(el && br.url && el.tagName==="SPAN"){
         const a=document.createElement("a");
         a.id=el.id;
         a.className=el.className;
@@ -1159,7 +1165,7 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
         a.textContent="✓";
         a.title=el.title;
         el.replaceWith(a);
-      }else if(br.url && el.tagName==="A"){
+      }else if(el && br.url && el.tagName==="A"){
         el.setAttribute("href", normalizePlatformUrl(p, slug, br.url));
       }
       if(recentEl){
@@ -1183,8 +1189,10 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
         }
       }
     }else{
-      el.classList.add("bl-bad");
-      el.title=`${PLAT_LABEL[p]} ${hadSuccess?"syndicated":"live-recovered"}. Backlink: missing`;
+      if(el){
+        el.classList.add("bl-bad");
+        el.title=`${PLAT_LABEL[p]} ${hadSuccess?"syndicated":"checked"}. Backlink: missing`;
+      }
       if(recentEl){
         recentEl.classList.remove("success","na");
         recentEl.classList.add("fail");

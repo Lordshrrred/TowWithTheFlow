@@ -279,12 +279,21 @@ export const handler = async event => {
       checks.push(event.queryStringParameters || {});
     }
 
+    const validChecks = checks
+      .map(check => ({
+        check,
+        slug: cleanSlug(check?.slug),
+        platform: String(check?.platform || '').trim().toLowerCase(),
+      }))
+      .filter(row => row.slug && ALLOWED_PLATFORMS.has(row.platform));
+
+    const checkedRows = await Promise.all(validChecks.map(async row => ({
+      ...row,
+      result: await checkOne(row.check),
+    })));
+
     const results = {};
-    for (const check of checks) {
-      const slug = cleanSlug(check?.slug);
-      const platform = String(check?.platform || '').trim().toLowerCase();
-      if (!slug || !ALLOWED_PLATFORMS.has(platform)) continue;
-      const result = await checkOne(check);
+    for (const { slug, platform, result } of checkedRows) {
       results[slug] ||= {};
       results[slug][platform] = result;
     }
