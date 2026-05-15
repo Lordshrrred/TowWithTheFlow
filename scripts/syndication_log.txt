@@ -4919,3 +4919,32 @@
     "status": "PERMISSION_DENIED",
     "details": [
       {
+[2026-05-15 06:17:15] === SYNDICATE START: motorcycle-towing-cost-accident-scene-police-called ===
+[2026-05-15 06:17:15] PREFLIGHT | title: Motorcycle Towing Cost When Police Are Called to Accident Scene
+[2026-05-15 06:17:15] PREFLIGHT | date: 2026-05-15
+[2026-05-15 06:17:15] PREFLIGHT | timestamp: 2026-05-15 06:17:15
+[2026-05-15 06:17:15] PREFLIGHT | DEVTO:   configured
+[2026-05-15 06:17:15] PREFLIGHT | TUMBLR:  configured
+[2026-05-15 06:17:15] PREFLIGHT | BLOGGER: configured
+[2026-05-15 06:17:15] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-05-15 06:17:15] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-05-15 06:17:15] DEVTO | motorcycle-towing-cost-accident-scene-police-called | START
+[2026-05-15 06:17:15] DEVTO | motorcycle-towing-cost-accident-scene-police-called | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-05-15 06:17:15] --- waiting 60s before next platform ---
+[2026-05-15 06:18:15] TUMBLR | motorcycle-towing-cost-accident-scene-police-called | START
+[2026-05-15 06:18:15] TUMBLR | motorcycle-towing-cost-accident-scene-police-called | SUCCESS | https://towwiththeflow.tumblr.com/post/816680791563272192
+[2026-05-15 06:18:15] --- waiting 60s before next platform ---
+[2026-05-15 06:19:15] BLOGGER | motorcycle-towing-cost-accident-scene-police-called | START
+[2026-05-15 06:19:15] BLOGGER | motorcycle-towing-cost-accident-scene-police-called | step 1/3: refreshing access token
+[2026-05-15 06:19:16] BLOGGER | motorcycle-towing-cost-accident-scene-police-called | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-05-15 06:19:16] BLOGGER | motorcycle-towing-cost-accident-scene-police-called | step 2/3: converting markdown to HTML
+[2026-05-15 06:19:16] BLOGGER | motorcycle-towing-cost-accident-scene-police-called | step 3/3: posting to blog 1959471973457654666
+[2026-05-15 06:19:17] BLOGGER | motorcycle-towing-cost-accident-scene-police-called | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/05/motorcycle-towing-cost-when-police-are.html
+[2026-05-15 06:19:17] --- waiting 60s before next platform ---
+[2026-05-15 06:20:17] WORDPRESS | motorcycle-towing-cost-accident-scene-police-called | START
+[2026-05-15 06:20:30] WORDPRESS | motorcycle-towing-cost-accident-scene-police-called | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/05/15/motorcycle-towing-cost-accident-scene-police-called/
+[2026-05-15 06:20:30] --- waiting 60s before next platform ---
+[2026-05-15 06:21:30] FEEDER | motorcycle-towing-cost-accident-scene-police-called | START
+[2026-05-15 06:21:31] FEEDER | motorcycle-towing-cost-accident-scene-police-called | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/motorcycle-towing-cost-accident-scene-police-called-guide/
+[2026-05-15 06:21:31] === SYNDICATE DONE: motorcycle-towing-cost-accident-scene-police-called | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-05-15 06:21:31] SYNCED | motorcycle-towing-cost-accident-scene-police-called marked in synced-posts.txt
