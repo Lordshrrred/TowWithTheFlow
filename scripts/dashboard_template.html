@@ -590,6 +590,19 @@ function parseLog(txt){
   return map;
 }
 
+function parseFullSyndicationRuns(txt){
+  const runs={};
+  for(const line of (txt||"").split("\n")){
+    const m=line.match(/^\[(\d{4}-\d{2}-\d{2} [\d:]+)\] === SYNDICATE START: ([\w-]+) ===$/);
+    if(!m) continue;
+    const [_,tsRaw,slug]=m;
+    const tsMs=Date.parse(tsRaw.replace(" ","T"))||0;
+    const prev=runs[slug];
+    if(!prev || tsMs>(prev.tsMs||0)) runs[slug]={date:tsRaw.slice(0,10),tsMs,tsRaw};
+  }
+  return runs;
+}
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function s2t(slug){ return slug.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase()); }
 function catTag(slug){ const s=slug.toLowerCase(); if(s.includes("towing-cost")||s.includes("tow-truck-price"))return"Cost"; if(s.includes("battery")||s.includes("alternator"))return"Battery"; if(s.includes("tire")||s.includes("flat")||s.includes("axle"))return"Tires"; if(s.includes("overheat")||s.includes("radiator"))return"Overheat"; if(s.includes("wont-start")||s.includes("clicking"))return"No Start"; if(s.includes("died")||s.includes("breaks-down")||s.includes("broke-down"))return"Breakdown"; if(s.includes("oil")||s.includes("stall"))return"Engine"; return"Guide"; }
@@ -622,6 +635,7 @@ async function loadDashboard(){
   ]);
 
   const logMap     = parseLog(logTxt);
+  const fullRuns   = parseFullSyndicationRuns(logTxt);
   const postFiles  = (ghTree?.tree||[]).filter(f=>f.path?.startsWith("content/posts/")&&f.path.endsWith(".md")&&!f.path.endsWith("_index.md"));
   const allSlugs   = postFiles.map(f=>f.path.replace("content/posts/","").replace(".md","")).filter(Boolean);
   const postDateMap = await buildPostDateMap(allSlugs);
@@ -639,7 +653,7 @@ async function loadDashboard(){
 
   renderStats({logMap,allSlugs,syncedSet,feederFiles,feederSet,wpSyncedSet,bloggerSyncedSet,auditJson,wpAuditJson});
   renderDrip({allSlugs,syncedSet,logMap});
-  renderRecent({logMap});
+  renderRecent({logMap,fullRuns});
   renderMatrix({sortedSlugs,logMap,feederSet,postDateMap});
   renderPostQueue({allSlugs,syncedSet,wpSyncedSet,logMap,kwLines});
   renderBottom({allSlugs,syncedSet,wpSyncedSet,bloggerSyncedSet,kwLines,feederFiles,deployInfo,logMap});
@@ -729,13 +743,11 @@ function renderDrip({allSlugs,syncedSet,logMap}){
 }
 
 // ── Recent Syndications ───────────────────────────────────────────────────────
-function renderRecent({logMap}){
+function renderRecent({logMap,fullRuns}){
   const wd=[];
-  for(const[slug,plats]of Object.entries(logMap)){
-    const succ=Object.values(plats).filter(v=>v.status==="success");
-    if(!succ.length)continue;
-    const latest=succ.sort((a,b)=>(b.tsMs||0)-(a.tsMs||0))[0];
-    wd.push({slug,date:latest.date,tsMs:latest.tsMs||0,plats});
+  for(const[slug,run]of Object.entries(fullRuns||{})){
+    const plats=logMap[slug]||{};
+    wd.push({slug,date:run.date,tsMs:run.tsMs||0,plats});
   }
   wd.sort((a,b)=>(b.tsMs||0)-(a.tsMs||0));
   const el=document.getElementById("recent-list");
@@ -1139,7 +1151,7 @@ function updatePlatformBacklinkMarkers(slug, results, platData){
         el.classList.add("bl-unknown");
         el.title=`${PLAT_LABEL[p]} ${hadSuccess?"syndicated":"checked"}. Backlink: unknown`;
       }
-      if(recentEl && (hadSuccess || hasAuditEntry)){
+      if(recentEl && hadSuccess){
         recentEl.classList.remove("fail","na");
         recentEl.classList.add("success");
         recentEl.textContent=`${PLAT_LABEL[p]} ?`;
