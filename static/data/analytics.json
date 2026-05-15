@@ -1,9 +1,9 @@
 {
-  "pageviews": 4,
-  "sessions": 4,
+  "pageviews": 5,
+  "sessions": 5,
   "avgSessionDur": 0,
   "bounceRate": 1.0,
-  "newUsers": 4,
+  "newUsers": 5,
   "returningUsers": 0,
   "daily": [
     {
@@ -13,6 +13,10 @@
     {
       "date": "20260423",
       "pageviews": 1
+    },
+    {
+      "date": "20260514",
+      "pageviews": 1
     }
   ],
   "topPages": [
@@ -20,16 +24,16 @@
       "rank": 1,
       "page": "/",
       "title": "Tow With The Flow | Real help when your car breaks down.",
-      "pageviews": 4,
+      "pageviews": 5,
       "avgDur": 0,
       "bounceRate": 100.0,
-      "sessions": 4
+      "sessions": 5
     }
   ],
   "trafficSources": [
     {
       "channel": "Direct",
-      "sessions": 4,
+      "sessions": 5,
       "pct": 100.0
     }
   ],
@@ -37,6 +41,10 @@
     {
       "country": "(not set)",
       "sessions": 3
+    },
+    {
+      "country": "Germany",
+      "sessions": 1
     },
     {
       "country": "United States",
@@ -47,6 +55,10 @@
     {
       "city": "(not set)",
       "sessions": 3
+    },
+    {
+      "city": "",
+      "sessions": 1
     },
     {
       "city": "Flint Hill",
@@ -60,13 +72,13 @@
     },
     {
       "device": "desktop",
-      "sessions": 1
+      "sessions": 2
     }
   ],
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 4
+      "sessions": 5
     }
   ],
   "os": [
@@ -77,7 +89,11 @@
     {
       "os": "Linux",
       "sessions": 1
+    },
+    {
+      "os": "Macintosh",
+      "sessions": 1
     }
   ],
-  "lastUpdated": "2026-05-14T08:50:33.845697+00:00"
+  "lastUpdated": "2026-05-15T09:24:43.816780+00:00"
 }
