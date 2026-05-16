@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T09:53:12.068174+00:00",
+  "generated_at": "2026-05-16T14:04:21.775039+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -275,12 +275,6 @@
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-battery-dies-in-parking-lot-what-to.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
@@ -304,12 +298,6 @@
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-breaks-down-on-bridge-who-to-call-and-what-to-do-roadside-tips-51mf",
@@ -1412,6 +1400,7 @@
     "how-much-does-a-tow-cost-in-colorado": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-tow-cost-in-colorado.html",
         "verified": true
       },
@@ -1660,6 +1649,28 @@
         "verified": true
       }
     },
+    "progressive-insurance-towing-coverage-how-many-times": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/progressive-insurance-towing-coverage.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/progressive-insurance-towing-coverage-how-many-times-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816768526904852480/progressive-insurance-towing-coverage-how-many-times",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/16/progressive-insurance-towing-coverage-how-many-times/",
+        "verified": true
+      }
+    },
     "progressive-roadside-assistance-towing-limit-miles": {
       "blog": {
         "reason": "ok",
@@ -1756,6 +1767,7 @@
     "tire-blowout-highway-emergency-tow-cost": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tire-blowout-on-highway-emergency-tow.html",
         "verified": true
       },
@@ -2126,9 +2138,9 @@
     },
     "towing-cost-chicago-illinois": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-chicago-illinois-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2831,12 +2843,6 @@
       }
     },
     "towing-cost-portland-oregon-rainy-weather": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-portland-oregon-rainy.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-portland-oregon-rainy-weather-what-to-expect-quick-guide-442k",
@@ -3119,24 +3125,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 121,
-      "verified": 114
+      "checked": 119,
+      "verified": 111
     },
     "dev": {
       "checked": 58,
       "verified": 58
     },
     "feeder": {
-      "checked": 126,
-      "verified": 126
-    },
-    "tumblr": {
-      "checked": 121,
-      "verified": 121
-    },
-    "wordpress": {
       "checked": 127,
       "verified": 127
+    },
+    "tumblr": {
+      "checked": 122,
+      "verified": 122
+    },
+    "wordpress": {
+      "checked": 128,
+      "verified": 128
     }
   }
 }
