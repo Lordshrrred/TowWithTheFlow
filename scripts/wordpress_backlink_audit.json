@@ -1,6 +1,10 @@
 {
-  "generated_at": "2026-05-16T14:04:24.356264+00:00",
+  "generated_at": "2026-05-16T17:18:35.615547+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/05/16/towing-cost-san-diego-california/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/16/towing-cost-indianapolis-indiana-3/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/16/allstate-covers-towing-but-car-totaled-who-pays/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/16/progressive-insurance-towing-coverage-how-many-times/",
     "https://towwiththeflowyo.wordpress.com/2026/05/15/towing-cost-indianapolis-indiana-2/",
     "https://towwiththeflowyo.wordpress.com/2026/05/15/alternator-vs-battery-symptoms-difference/",
     "https://towwiththeflowyo.wordpress.com/2026/05/15/car-making-grinding-noise-when-starting-tow-truck-needed/",
@@ -144,8 +148,7 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
-    "https://towwiththeflowyo.wordpress.com/2026/05/16/progressive-insurance-towing-coverage-how-many-times/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -164,6 +167,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/26/aaa-towing-vs-private-tow-truck-cost-comparison/",
+        "verified": true
+      }
+    },
+    "allstate-covers-towing-but-car-totaled-who-pays": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/allstate-covers-towing-but-car-totaled-who-pays/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/16/allstate-covers-towing-but-car-totaled-who-pays/",
         "verified": true
       }
     },
@@ -1157,6 +1169,15 @@
         "verified": false
       }
     },
+    "towing-cost-indianapolis-indiana-3": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/16/towing-cost-indianapolis-indiana-3/",
+        "verified": false
+      }
+    },
     "towing-cost-las-vegas-nevada": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-las-vegas-nevada/",
@@ -1364,6 +1385,15 @@
         "verified": true
       }
     },
+    "towing-cost-san-diego-california": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-san-diego-california/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/16/towing-cost-san-diego-california/",
+        "verified": true
+      }
+    },
     "towing-cost-seattle-washington": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-seattle-washington/",
@@ -1458,8 +1488,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 145,
-      "verified": 128
+      "checked": 148,
+      "verified": 130
     }
   }
 }
