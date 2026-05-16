@@ -5018,3 +5018,37 @@
 [2026-05-16 05:35:50] FEEDER | progressive-insurance-towing-coverage-how-many-times | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/progressive-insurance-towing-coverage-how-many-times-help/
 [2026-05-16 05:35:50] === SYNDICATE DONE: progressive-insurance-towing-coverage-how-many-times | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-05-16 05:35:50] SYNCED | progressive-insurance-towing-coverage-how-many-times marked in synced-posts.txt
+[2026-05-16 09:31:29] BACKLOG: Posts total=151  synced=123  backlog=27  (today's posts excluded from backlog)
+[2026-05-16 09:31:29] BACKLOG: Syndicating backlog: towing-cost-indianapolis-indiana  (post date=2026-03-13)
+[2026-05-16 09:31:29] === SYNDICATE START: towing-cost-indianapolis-indiana ===
+[2026-05-16 09:31:29] PREFLIGHT | title: Towing Cost in Indianapolis Indiana: What You'll Pay for Emergency Roadside Help
+[2026-05-16 09:31:29] PREFLIGHT | date: 2026-03-13T10:37:00+00:00
+[2026-05-16 09:31:29] PREFLIGHT | timestamp: 2026-05-16 09:31:29
+[2026-05-16 09:31:29] PREFLIGHT | DEVTO:   configured
+[2026-05-16 09:31:29] PREFLIGHT | TUMBLR:  configured
+[2026-05-16 09:31:29] PREFLIGHT | BLOGGER: configured
+[2026-05-16 09:31:29] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-05-16 09:31:29] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-05-16 09:31:29] BACKLINK | towing-cost-indianapolis-indiana | missing — injecting before syndication
+[2026-05-16 09:31:29] DEVTO | towing-cost-indianapolis-indiana | START
+[2026-05-16 09:31:29] DEVTO | towing-cost-indianapolis-indiana | FAIL | HTTP 401: {"error":"unauthorized","status":401}
+[2026-05-16 09:31:29] --- waiting 60s before next platform ---
+[2026-05-16 09:32:29] TUMBLR | towing-cost-indianapolis-indiana | START
+[2026-05-16 09:32:29] TUMBLR | towing-cost-indianapolis-indiana | SUCCESS | https://towwiththeflow.tumblr.com/post/816783608799952896
+[2026-05-16 09:32:29] --- waiting 60s before next platform ---
+[2026-05-16 09:33:29] BLOGGER | towing-cost-indianapolis-indiana | START
+[2026-05-16 09:33:29] BLOGGER | towing-cost-indianapolis-indiana | step 1/3: refreshing access token
+[2026-05-16 09:33:30] BLOGGER | towing-cost-indianapolis-indiana | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-05-16 09:33:30] BLOGGER | towing-cost-indianapolis-indiana | step 2/3: converting markdown to HTML
+[2026-05-16 09:33:30] BLOGGER | towing-cost-indianapolis-indiana | step 3/3: posting to blog 1959471973457654666
+[2026-05-16 09:33:30] BLOGGER | towing-cost-indianapolis-indiana | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-indianapolis-indiana_0558415653.html
+[2026-05-16 09:33:30] --- waiting 60s before next platform ---
+[2026-05-16 09:34:30] WORDPRESS | towing-cost-indianapolis-indiana | START
+[2026-05-16 09:34:37] WORDPRESS | towing-cost-indianapolis-indiana | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/05/16/towing-cost-indianapolis-indiana-3/
+[2026-05-16 09:34:37] --- waiting 60s before next platform ---
+[2026-05-16 09:35:37] FEEDER | towing-cost-indianapolis-indiana | START
+[2026-05-16 09:35:37] FEEDER | towing-cost-indianapolis-indiana | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-indianapolis-indiana-tips/
+[2026-05-16 09:35:37] === SYNDICATE DONE: towing-cost-indianapolis-indiana | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-05-16 09:35:37] SYNCED | towing-cost-indianapolis-indiana marked in synced-posts.txt
+[2026-05-16 09:35:37] BACKLOG: Backlog run complete: 4/5 succeeded for towing-cost-indianapolis-indiana
+[2026-05-16 09:35:37] BACKLOG: Total progress: 124/151 posts synced
