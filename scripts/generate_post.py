@@ -51,13 +51,16 @@ POSTS_DIR.mkdir(parents=True, exist_ok=True)
 
 SYSTEM_PROMPT = """You are writing a page for towwiththeflow.com, a car breakdown and roadside emergency help site. Write in the voice of a knowledgeable mechanic who is direct and wastes no words.
 
-TARGET LENGTH: 400-600 words total (body only, not counting frontmatter). Be concise. No filler, no padding, no AI-sounding transitions, no conclusions.
+TARGET LENGTH: 500-900 words total (body only, not counting frontmatter). Be thorough but tight. Every sentence must earn its place. No filler, no padding, no AI-sounding transitions, no conclusions that just restate what you said.
 
 STRUCTURE:
 1. Quick Answer block: 50-80 words inside a markdown blockquote starting with **Quick Answer:**
 2. What To Do: numbered steps, direct and actionable
 3. What It Might Cost: if relevant, keep it short
 4. Stay Safe: if relevant, bullet points only
+
+INTERNAL LINKING (REQUIRED):
+The user message will include a list of existing articles on towwiththeflow.com. Include 2-4 internal links using markdown [anchor text](/{slug}/) where the link is genuinely useful to the reader mid-sentence or at the end of a relevant paragraph. Only link to articles that are semantically related to the topic being written. Never dump a link list. Never force a link that does not fit.
 
 BACKLINK REQUIREMENT — NON-NEGOTIABLE:
 Every post MUST end with EXACTLY this block (substituting the actual slug):
@@ -364,73 +367,7 @@ def mark_done(keyword: str):
     KEYWORDS_FILE.write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
-LOW_SIGNAL_MODIFIERS = [
-    " in winter",
-    " at night",
-    " in denver",
-    " in houston",
-    " in phoenix",
-    " in atlanta",
-    " in chicago",
-    " in seattle",
-    " in dallas",
-    " in miami",
-]
-
-
-def append_long_tails(keyword: str):
-    """Append only a couple of supporting variations when they add a new angle."""
-    lowered = keyword.lower()
-    if any(token in lowered for token in LOCAL_INDICATORS):
-        print(f"Skipping supporting variations for local keyword: {keyword}")
-        return
-    if any(token in lowered for token in [" in winter", " at night", " after hours", " near me"]):
-        print(f"Skipping supporting variations for modifier-heavy keyword: {keyword}")
-        return
-
-    candidates = []
-    if "tow" in lowered or "towing" in lowered:
-        candidates.extend([
-            f"[5] {keyword} insurance coverage",
-            f"[5] {keyword} roadside assistance",
-        ])
-    elif "cost" in lowered or "price" in lowered:
-        candidates.extend([
-            f"[5] {keyword} after hours",
-            f"[4] {keyword} without insurance",
-        ])
-    else:
-        candidates.extend([
-            f"[4] {keyword} can i drive",
-            f"[4] {keyword} repair cost",
-        ])
-
-    existing = {
-        _parse_keyword_line(line.replace("# DONE", "").strip())[0].lower()
-        for line in KEYWORDS_FILE.read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    }
-    to_add = []
-    for raw in candidates:
-        variant, _score = _parse_keyword_line(raw)
-        if variant.lower() in existing:
-            continue
-        if any(variant.lower().endswith(modifier) for modifier in LOW_SIGNAL_MODIFIERS):
-            continue
-        to_add.append(raw)
-        existing.add(variant.lower())
-
-    if not to_add:
-        print(f"No new supporting variations to append for: {keyword}")
-        return
-
-    with KEYWORDS_FILE.open('a', encoding='utf-8') as f:
-        for variation in to_add:
-            f.write(variation + '\n')
-    print(f"Appended {len(to_add)} supporting variations for: {keyword}")
-
-
-def generate_post(keyword: str) -> str:
+def generate_post(keyword: str, post_index: list[tuple[str, str]] | None = None) -> str:
     """Call Claude API and return Hugo markdown content"""
     if not ANTHROPIC_API_KEY:
         print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
@@ -438,11 +375,25 @@ def generate_post(keyword: str) -> str:
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     today = date.today().isoformat()
 
-    user_message = f"Write a complete Hugo markdown post for the keyword: \"{keyword}\"\nToday's date: {today}\nMake it genuinely useful for someone searching this exact phrase in a stressful moment."
+    index_section = ""
+    if post_index:
+        lines = [f"/{slug}/ | {title}" for slug, title in post_index[:80]]
+        index_section = (
+            "\n\nEXISTING ARTICLES ON towwiththeflow.com (for internal linking):\n"
+            + "\n".join(lines)
+            + "\n\nInclude 2-4 internal links to semantically related articles from this list."
+        )
+
+    user_message = (
+        f"Write a complete Hugo markdown post for the keyword: \"{keyword}\"\n"
+        f"Today's date: {today}\n"
+        f"Make it genuinely useful for someone searching this exact phrase in a stressful moment."
+        f"{index_section}"
+    )
 
     message = client.messages.create(
         model="claude-sonnet-4-20250514",
-        max_tokens=1500,
+        max_tokens=2200,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_message}]
     )
@@ -463,6 +414,32 @@ def extract_slug(content: str, keyword: str) -> str:
     if match:
         return match.group(1).strip().strip('"\'')
     return slugify(keyword)
+
+
+def load_post_index() -> list[tuple[str, str]]:
+    """Return (slug, title) for all existing posts, newest first."""
+    entries = []
+    for f in POSTS_DIR.glob("*.md"):
+        if f.name in {"_index.md", "tow-content-log.md"}:
+            continue
+        try:
+            text = f.read_text(encoding="utf-8")
+            date_m = re.search(r'^date:\s*(.+?)\s*$', text, re.MULTILINE)
+            post_date = date_m.group(1).strip()[:10] if date_m else "2000-01-01"
+            title_m = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', text, re.MULTILINE)
+            title = title_m.group(1).strip().strip("\"'") if title_m else f.stem
+        except Exception:
+            post_date, title = "2000-01-01", f.stem
+        entries.append((post_date, f.stem, title))
+    entries.sort(reverse=True)
+    return [(slug, title) for _, slug, title in entries]
+
+
+def count_body_words(content: str) -> int:
+    """Count words in post body, excluding frontmatter and image markdown."""
+    body = re.sub(r'^---\n.*?\n---\n?', '', content, flags=re.DOTALL)
+    body = re.sub(r'!\[.*?\]\(.*?\)', '', body)
+    return len(body.split())
 
 
 # City/location keywords — used to distinguish local vs general
@@ -558,7 +535,10 @@ def main():
 
     keyword, score = pick_keyword(post_type)
 
-    content = generate_post(keyword)
+    post_index = load_post_index()
+    print(f"Loaded {len(post_index)} existing posts for internal linking")
+
+    content = generate_post(keyword, post_index)
     slug = extract_slug(content, keyword)
     filename = POSTS_DIR / f"{slug}.md"
 
@@ -573,6 +553,19 @@ def main():
     # Guarantee backlink is present
     content = ensure_backlink(content, slug)
 
+    # Quality gate: reject posts that are too thin
+    word_count = count_body_words(content)
+    print(f"Word count: {word_count} words")
+    if word_count < 400:
+        print(
+            f"ERROR: Post too thin ({word_count} words, minimum 400). "
+            "The model may have truncated output. Check the keyword and rerun.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    if word_count < 500:
+        print(f"WARNING: Post is below target ({word_count} words, target 500-900). Proceeding.")
+
     filename.write_text(content, encoding='utf-8')
     print(f"Saved: {filename}")
 
@@ -585,7 +578,6 @@ def main():
     print(f"Slug written to scripts/{slug_key}")
 
     mark_done(keyword)
-    append_long_tails(keyword)
 
 
 if __name__ == "__main__":

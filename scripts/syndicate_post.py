@@ -70,7 +70,23 @@ def env_clean(key: str, default: str = "") -> str:
     return val
 
 
-DEVTO_API_KEY         = env_clean("DevTO_TWTF2_API_Key") or env_clean("DEVTO_API_KEY")
+# Dev.to key resolution: the workflow injects only the relevant key per job,
+# so whichever is present wins. Try TWTF2 → TWTF1 → legacy DEVTO_API_KEY.
+_devto_twtf2  = env_clean("DevTO_TWTF2_API_Key")
+_devto_twtf1  = env_clean("DevTO_TWTF1_API_Key")
+_devto_legacy = env_clean("DEVTO_API_KEY")
+if _devto_twtf2:
+    DEVTO_API_KEY       = _devto_twtf2
+    DEVTO_ACCOUNT_LABEL = "TWTF2"
+elif _devto_twtf1:
+    DEVTO_API_KEY       = _devto_twtf1
+    DEVTO_ACCOUNT_LABEL = "TWTF1"
+elif _devto_legacy:
+    DEVTO_API_KEY       = _devto_legacy
+    DEVTO_ACCOUNT_LABEL = "legacy"
+else:
+    DEVTO_API_KEY       = ""
+    DEVTO_ACCOUNT_LABEL = "none"
 TUMBLR_CONSUMER_KEY   = env_clean("TUMBLR_CONSUMER_KEY")
 TUMBLR_CONSUMER_SECRET= env_clean("TUMBLR_CONSUMER_SECRET")
 TUMBLR_TOKEN          = env_clean("TUMBLR_TOKEN")
@@ -99,6 +115,11 @@ else:
 
 ANTHROPIC_API_KEY     = env_clean("ANTHROPIC_API_KEY")
 ANTHROPIC_VARIATION_MODEL = env_clean("ANTHROPIC_VARIATION_MODEL") or "claude-sonnet-4-20250514"
+
+# Set DEVTO_ENABLED=false in GitHub secrets or .env to cleanly disable Dev.to
+# without touching any other platform. Useful when an API key is revoked or
+# the account is under review.
+DEVTO_ENABLED = env_clean("DEVTO_ENABLED", "true").lower() not in ("false", "0", "no")
 GMAIL_ADDRESS         = env_clean("GMAIL_ADDRESS")
 GMAIL_APP_PASSWORD    = env_clean("GMAIL_APP_PASSWORD")
 PUBLER_API_KEY        = env_clean("PUBLER_API_KEY")
@@ -289,9 +310,12 @@ def pick_feeder_suffix(source_slug: str) -> str:
 
 # ── Platform: Dev.to ──────────────────────────────────────────────────────────
 def syndicate_devto(slug: str, meta: dict, body: str) -> tuple[bool, str]:
+    if not DEVTO_ENABLED:
+        return False, "SKIP: Dev.to disabled (DEVTO_ENABLED=false)"
     if not DEVTO_API_KEY:
-        return False, "SKIP: no DEVTO_API_KEY"
+        return False, "SKIP: no Dev.to API key in environment (tried DevTO_TWTF2_API_Key, DevTO_TWTF1_API_Key, DEVTO_API_KEY)"
 
+    log(f"DEVTO | {slug} | account={DEVTO_ACCOUNT_LABEL}")
     varied_title = get_variant_title(meta.get("title", slug), slug, "Dev.to")
     canonical = f"{BASE_URL}/{slug}/"
     tags = [re.sub(r'[^a-z0-9]', '', t.lower()) for t in meta.get("tags", [])[:4]]
@@ -313,6 +337,9 @@ def syndicate_devto(slug: str, meta: dict, body: str) -> tuple[bool, str]:
         )
         if r.status_code in (200, 201):
             return True, r.json().get("url", canonical)
+        if r.status_code == 401:
+            secret_name = f"DevTO_{DEVTO_ACCOUNT_LABEL}_API_Key" if DEVTO_ACCOUNT_LABEL not in ("legacy", "none") else "DEVTO_API_KEY"
+            return False, f"HTTP 401: account {DEVTO_ACCOUNT_LABEL} key is invalid or revoked — rotate GitHub secret {secret_name}"
         return False, f"HTTP {r.status_code}: {r.text[:300]}"
     except Exception as e:
         return False, str(e)
@@ -1205,7 +1232,12 @@ def run_syndication(slug: str):
     log(f"PREFLIGHT | title: {title}")
     log(f"PREFLIGHT | date: {post_date}")
     log(f"PREFLIGHT | timestamp: {ts}")
-    log(f"PREFLIGHT | DEVTO:   {'configured' if DEVTO_API_KEY else 'MISSING — will SKIP'}")
+    if DEVTO_ENABLED and DEVTO_API_KEY:
+        log(f"PREFLIGHT | DEVTO:   configured (account={DEVTO_ACCOUNT_LABEL})")
+    elif not DEVTO_ENABLED:
+        log(f"PREFLIGHT | DEVTO:   disabled (DEVTO_ENABLED=false)")
+    else:
+        log(f"PREFLIGHT | DEVTO:   MISSING — no key in environment, will SKIP")
     tumblr_ok = all([TUMBLR_CONSUMER_KEY, TUMBLR_CONSUMER_SECRET, TUMBLR_TOKEN, TUMBLR_TOKEN_SECRET, TUMBLR_BLOG])
     log(f"PREFLIGHT | TUMBLR:  {'configured' if tumblr_ok else 'MISSING — will SKIP'}")
     blogger_ok = all([BLOGGER_CLIENT_ID, BLOGGER_CLIENT_SECRET, BLOGGER_REFRESH_TOKEN, BLOGGER_BLOG_ID])

@@ -70,12 +70,18 @@ jobs:
             exit 1
           fi
           SLUG=$(cat scripts/last_general_slug.txt)
+          if [ -z "$SLUG" ]; then
+            echo "::error::last_general_slug.txt is empty — generation may have failed silently"
+            exit 1
+          fi
           echo "Generated slug: $SLUG"
           if [ ! -f "content/posts/${SLUG}.md" ]; then
             echo "::error::Expected post file not found: content/posts/${SLUG}.md"
             exit 1
           fi
-          echo "Post verified: content/posts/${SLUG}.md ($(wc -l < content/posts/${SLUG}.md) lines)"
+          LINES=$(wc -l < "content/posts/${SLUG}.md")
+          WORDS=$(wc -w < "content/posts/${SLUG}.md")
+          echo "Post verified: content/posts/${SLUG}.md (${LINES} lines, ~${WORDS} words including frontmatter)"
 
       - uses: peaceiris/actions-hugo@v3
         with:
