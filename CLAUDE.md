@@ -47,6 +47,7 @@ The user is authenticated via keyring (account: Lordshrrred). This works from th
 - `scripts/syndication_log.txt` — per-platform result log (parsed by dashboard)
 - `scripts/wordpress-synced-posts.txt`
 - `scripts/blogger-synced-posts.txt`
+- `scripts/feeder-synced.txt`
 
 ---
 
@@ -59,7 +60,13 @@ Dev.to rate-limits aggressively. Two accounts are used:
 | TWTF1 | `DevTO_TWTF1_API_Key` | Backlog (old posts) | 1/day at 14:30 UTC |
 | TWTF2 | `DevTO_TWTF2_API_Key` | New posts (blog engine) | 2/day at 10:30 & 12:30 UTC |
 
-**Do not use the old `DEVTO_API_KEY` for new work.** It remains as a fallback only.
+- Set `DEVTO_ENABLED=false` to disable Dev.to cleanly without removing keys.
+- Dev.to logs include `DEVTO_ACCOUNT_LABEL` so runs show whether TWTF1, TWTF2, legacy, or no account was selected.
+- `DEVTO_API_KEY` is legacy fallback only; new work should use the TWTF1/TWTF2 split above.
+
+### Feeder Generation
+
+Feeder content is generated during syndication, not by a separate daily generation job.
 
 ---
 

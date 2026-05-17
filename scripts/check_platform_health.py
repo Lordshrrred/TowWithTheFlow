@@ -88,16 +88,29 @@ def should_alert(state: dict, now: datetime, unhealthy_count: int) -> bool:
 
 
 def check_devto() -> dict:
-    key = env_clean("DEVTO_API_KEY")
-    if not key:
-        return {"status": "missing", "detail": "DEVTO_API_KEY missing"}
-    try:
-        r = requests.get("https://dev.to/api/articles/me/published", headers={"api-key": key}, timeout=20)
-        if r.ok:
-            return {"status": "healthy"}
-        return {"status": "unhealthy", "detail": f"HTTP {r.status_code}: {r.text[:180]}"}
-    except Exception as e:
-        return {"status": "unhealthy", "detail": str(e)}
+    keys = [
+        ("TWTF1", env_clean("DevTO_TWTF1_API_Key")),
+        ("TWTF2", env_clean("DevTO_TWTF2_API_Key")),
+    ]
+    configured = [(label, key) for label, key in keys if key]
+    if not configured:
+        legacy_key = env_clean("DEVTO_API_KEY")
+        if not legacy_key:
+            return {"status": "missing", "detail": "DevTO_TWTF1_API_Key and DevTO_TWTF2_API_Key missing"}
+        configured = [("legacy", legacy_key)]
+
+    failures = []
+    for label, key in configured:
+        try:
+            r = requests.get("https://dev.to/api/articles/me/published", headers={"api-key": key}, timeout=20)
+            if not r.ok:
+                failures.append(f"{label}: HTTP {r.status_code}: {r.text[:120]}")
+        except Exception as e:
+            failures.append(f"{label}: {e}")
+
+    if failures:
+        return {"status": "unhealthy", "detail": "; ".join(failures)}
+    return {"status": "healthy", "detail": ", ".join(label for label, _ in configured)}
 
 
 def check_tumblr() -> dict:

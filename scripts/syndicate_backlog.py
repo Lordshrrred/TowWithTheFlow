@@ -9,7 +9,6 @@ Posts generated today are handled by their own syndication jobs (10:30am / 12:30
 
 import os
 import re
-import json
 import sys
 import smtplib
 from datetime import datetime, date
@@ -24,7 +23,6 @@ from requests_oauthlib import OAuth1
 ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
-DEVTO_API_KEY       = os.getenv("DevTO_TWTF1_API_Key", "") or os.getenv("DEVTO_API_KEY", "")
 TUMBLR_CONSUMER_KEY = os.getenv("TUMBLR_CONSUMER_KEY", "")
 TUMBLR_CONSUMER_SEC = os.getenv("TUMBLR_CONSUMER_SECRET", "")
 TUMBLR_TOKEN        = os.getenv("TUMBLR_TOKEN", "")
@@ -151,35 +149,6 @@ def split_npf_blocks(text: str, limit: int = 4096) -> list[dict]:
         blocks.append({"type": "text", "text": text[:cut].rstrip()})
         text = text[cut:].lstrip()
     return blocks
-
-
-# ── Dev.to ─────────────────────────────────────────────────────────────────────
-def syndicate_devto(slug: str, meta: dict, body: str) -> tuple[bool, str]:
-    if not DEVTO_API_KEY:
-        return False, "SKIP: no DEVTO_API_KEY"
-
-    canonical = f"{BASE_URL}/{slug}/"
-    tags = [re.sub(r'[^a-z0-9]', '', t.lower()) for t in meta.get("tags", [])[:4]]
-
-    try:
-        r = requests.post(
-            "https://dev.to/api/articles",
-            headers={"api-key": DEVTO_API_KEY, "Content-Type": "application/json"},
-            json={"article": {
-                "title":         meta.get("title", slug),
-                "body_markdown": body,
-                "published":     True,
-                "tags":          tags,
-                "canonical_url": canonical,
-                "description":   meta.get("description", ""),
-            }},
-            timeout=30
-        )
-        if r.status_code in (200, 201):
-            return True, r.json().get("url", "published")
-        return False, f"HTTP {r.status_code}: {r.text[:300]}"
-    except Exception as e:
-        return False, str(e)
 
 
 # ── Tumblr ─────────────────────────────────────────────────────────────────────

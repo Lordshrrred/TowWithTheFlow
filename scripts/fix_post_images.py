@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# On-demand image repair tool; not part of the daily publishing pipeline.
 from __future__ import annotations
 
 import hashlib

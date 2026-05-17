@@ -13,15 +13,11 @@ import os
 import sys
 import webbrowser
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Load .env
-env_path = Path("C:/Users/Earth/OneDrive/TowWithTheFlow/.env")
-if env_path.exists():
-    for line in env_path.read_text(encoding='utf-8').splitlines():
-        line = line.strip()
-        if line and not line.startswith('#') and '=' in line:
-            k, v = line.split('=', 1)
-            os.environ.setdefault(k.strip(), v.strip())
+ROOT = Path(__file__).parent.parent
+load_dotenv(ROOT / ".env")
 
 CONSUMER_KEY    = os.getenv("TUMBLR_CONSUMER_KEY", "")
 CONSUMER_SECRET = os.getenv("TUMBLR_CONSUMER_SECRET", "")
