@@ -37,6 +37,9 @@ scripts/*.cjs
 # Node
 node_modules/
 
+# Python bytecode
+__pycache__/
+
 # Syndication cache
 .cache/
 
