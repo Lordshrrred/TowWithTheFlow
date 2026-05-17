@@ -24,7 +24,7 @@ from requests_oauthlib import OAuth1
 ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
-DEVTO_API_KEY       = os.getenv("DEVTO_API_KEY", "")
+DEVTO_API_KEY       = os.getenv("DevTO_TWTF1_API_Key", "") or os.getenv("DEVTO_API_KEY", "")
 TUMBLR_CONSUMER_KEY = os.getenv("TUMBLR_CONSUMER_KEY", "")
 TUMBLR_CONSUMER_SEC = os.getenv("TUMBLR_CONSUMER_SECRET", "")
 TUMBLR_TOKEN        = os.getenv("TUMBLR_TOKEN", "")

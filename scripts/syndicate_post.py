@@ -70,7 +70,7 @@ def env_clean(key: str, default: str = "") -> str:
     return val
 
 
-DEVTO_API_KEY         = env_clean("DEVTO_API_KEY")
+DEVTO_API_KEY         = env_clean("DevTO_TWTF2_API_Key") or env_clean("DEVTO_API_KEY")
 TUMBLR_CONSUMER_KEY   = env_clean("TUMBLR_CONSUMER_KEY")
 TUMBLR_CONSUMER_SECRET= env_clean("TUMBLR_CONSUMER_SECRET")
 TUMBLR_TOKEN          = env_clean("TUMBLR_TOKEN")
