@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T14:01:56.582836+00:00",
+  "generated_at": "2026-05-17T17:19:34.187416+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -26,6 +26,7 @@
     "aaa-towing-vs-private-tow-truck-cost-comparison": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/aaa-towing-vs-private-tow-truck-real.html",
         "verified": true
       },
@@ -397,9 +398,9 @@
     },
     "car-key-broke-in-ignition-need-tow-truck": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-key-broke-in-ignition-do-you-need.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -792,7 +793,7 @@
     },
     "car-smoking-from-hood-need-tow-truck-now": {
       "blog": {
-        "reason": "http_429",
+        "reason": "http_404",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-smoking-from-hood-need-tow-truck-now.html",
         "verified": false
       },
@@ -990,6 +991,11 @@
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-but-battery-is-good-guide/",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/17/car-wont-start-but-battery-is-good/",
+        "verified": true
       }
     },
     "car-wont-start-clicking-noise-what-to-do": {
@@ -1072,7 +1078,7 @@
     },
     "cheapest-tow-truck-service-near-me-sunday": {
       "blog": {
-        "reason": "http_429",
+        "reason": "http_404",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/find-cheapest-tow-truck-service-open.html",
         "verified": false
       },
@@ -1259,9 +1265,9 @@
     },
     "engine-seized-up-while-driving-towing-cost-seattle": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/engine-seized-while-driving-towing.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -1628,6 +1634,33 @@
         "verified": true
       }
     },
+    "liberty-mutual-roadside-assistance-towing-distance-limits": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/liberty-mutual-roadside-assistance.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/liberty-mutual-roadside-assistance-towing-distance-limits-what-you-need-to-know-quick-guide-61c",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/liberty-mutual-roadside-assistance-towing-distance-limits-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816868636488794113/liberty-mutual-roadside-assistance-towing-distance-limits",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/17/liberty-mutual-roadside-assistance-towing-distance-limits/",
+        "verified": true
+      }
+    },
     "liberty-mutual-towing-coverage-dollar-amount-limit": {
       "blog": {
         "reason": "ok",
@@ -1871,9 +1904,9 @@
     },
     "tow-truck-cost-aaa-vs-non-aaa-chicago-phoenix": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-aaa-vs-non-aaa-in_0749603130.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -2164,6 +2197,13 @@
         "verified": true
       }
     },
+    "towing-cost-baltimore-maryland": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-baltimore-maryland-what.html",
+        "verified": true
+      }
+    },
     "towing-cost-charlotte-north-carolina": {
       "blog": {
         "reason": "ok",
@@ -2216,12 +2256,22 @@
     "towing-cost-columbus-ohio": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-columbus-ohio-what-youll.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-columbus-ohio-what-youll_0613447720.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-columbus-ohio-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816874260739096576/towing-cost-columbus-ohio",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/13/towing-cost-columbus-ohio/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/17/towing-cost-columbus-ohio-2/",
         "verified": true
       }
     },
@@ -2315,9 +2365,9 @@
     },
     "towing-cost-houston-texas": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -2451,6 +2501,7 @@
     "towing-cost-las-vegas-nevada": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-las-vegas-nevada.html",
         "verified": true
       },
@@ -2922,6 +2973,7 @@
     "towing-cost-san-antonio-texas": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-san-antonio-texas-what.html",
         "verified": true
       },
@@ -3184,24 +3236,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 124,
+      "checked": 126,
       "verified": 116
     },
     "dev": {
-      "checked": 59,
-      "verified": 59
+      "checked": 60,
+      "verified": 60
     },
     "feeder": {
-      "checked": 129,
-      "verified": 129
+      "checked": 131,
+      "verified": 131
     },
     "tumblr": {
-      "checked": 123,
-      "verified": 123
+      "checked": 125,
+      "verified": 125
     },
     "wordpress": {
-      "checked": 130,
-      "verified": 130
+      "checked": 132,
+      "verified": 132
     }
   }
 }
