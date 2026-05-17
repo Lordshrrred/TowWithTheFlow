@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T10:01:56.904827+00:00",
+  "generated_at": "2026-05-17T14:01:56.582836+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -792,7 +792,7 @@
     },
     "car-smoking-from-hood-need-tow-truck-now": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/car-smoking-from-hood-need-tow-truck-now.html",
         "verified": false
       },
@@ -1072,7 +1072,7 @@
     },
     "cheapest-tow-truck-service-near-me-sunday": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/find-cheapest-tow-truck-service-open.html",
         "verified": false
       },
@@ -1347,6 +1347,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/farmers-insurance-towing-benefit-how-much-pays/",
+        "verified": true
+      }
+    },
+    "farmers-insurance-towing-reimbursement-after-breakdown": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/farmers-insurance-towing-reimbursement.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/farmers-insurance-towing-reimbursement-how-to-get-your-money-back-roadside-tips-jl0",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/farmers-insurance-towing-reimbursement-after-breakdown-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816859529218277376/farmers-insurance-towing-reimbursement-after-breakdown",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/17/farmers-insurance-towing-reimbursement-after-breakdown/",
         "verified": true
       }
     },
@@ -2288,9 +2315,9 @@
     },
     "towing-cost-houston-texas": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3157,24 +3184,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 123,
+      "checked": 124,
       "verified": 116
     },
     "dev": {
-      "checked": 58,
-      "verified": 58
+      "checked": 59,
+      "verified": 59
     },
     "feeder": {
-      "checked": 128,
-      "verified": 128
-    },
-    "tumblr": {
-      "checked": 122,
-      "verified": 122
-    },
-    "wordpress": {
       "checked": 129,
       "verified": 129
+    },
+    "tumblr": {
+      "checked": 123,
+      "verified": 123
+    },
+    "wordpress": {
+      "checked": 130,
+      "verified": 130
     }
   }
 }
