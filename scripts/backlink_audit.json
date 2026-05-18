@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T16:00:32.977222+00:00",
+  "generated_at": "2026-05-18T18:14:55.461615+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1535,6 +1535,19 @@
         "verified": true
       }
     },
+    "how-to-change-tire-highway-safely": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/how-to-change-tire-on-highway-safely.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-to-change-tire-highway-safely-help/",
+        "verified": true
+      }
+    },
     "how-to-start-a-frozen-car-battery": {
       "blog": {
         "reason": "ok",
@@ -1996,6 +2009,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/30/tow-truck-cost-accident-scene-police-report-required/",
+        "verified": true
+      }
+    },
+    "tow-truck-cost-denver-snow-emergency": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/tow-truck-cost-denver-snow-emergency.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/tow-truck-cost-denver-snow-emergency-what-youll-pay-right-now-explained-4okp",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-denver-snow-emergency-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816966675574439936/tow-truck-cost-denver-snow-emergency",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/18/tow-truck-cost-denver-snow-emergency/",
         "verified": true
       }
     },
@@ -3241,18 +3281,27 @@
     "why-does-my-car-click-but-not-start": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/why-does-my-car-click-but-not-start.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/why-does-my-car-click-but-not-start_01894956123.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/why-does-my-car-click-but-not-start-quick-guide-bde",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/why-does-my-car-click-but-not-start-help/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/why-does-my-car-click-but-not-start-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/816971280163143680/why-does-my-car-click-but-not-start",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/why-does-my-car-click-but-not-start/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/18/why-does-my-car-click-but-not-start-2/",
         "verified": true
       }
     }
@@ -3260,24 +3309,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 127,
-      "verified": 120
+      "checked": 129,
+      "verified": 122
     },
     "dev": {
-      "checked": 61,
-      "verified": 61
+      "checked": 63,
+      "verified": 63
     },
     "feeder": {
-      "checked": 132,
-      "verified": 132
+      "checked": 134,
+      "verified": 134
     },
     "tumblr": {
-      "checked": 126,
-      "verified": 126
+      "checked": 128,
+      "verified": 128
     },
     "wordpress": {
-      "checked": 133,
-      "verified": 133
+      "checked": 134,
+      "verified": 134
     }
   }
 }
