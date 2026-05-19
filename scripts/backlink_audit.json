@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T04:37:09.212722+00:00",
+  "generated_at": "2026-05-19T11:34:53.132563+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -159,9 +159,9 @@
     },
     "can-i-drive-with-a-broken-axle": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/can-i-drive-with-broken-axle-explained.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -2562,12 +2562,6 @@
         "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-jacksonville-florida.html",
         "verified": true
-      },
-      "wordpress": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/18/towing-cost-jacksonville-florida/",
-        "verified": true
       }
     },
     "towing-cost-las-vegas-nevada": {
@@ -3316,7 +3310,7 @@
   "summary": {
     "blog": {
       "checked": 129,
-      "verified": 122
+      "verified": 121
     },
     "dev": {
       "checked": 63,
@@ -3331,8 +3325,8 @@
       "verified": 128
     },
     "wordpress": {
-      "checked": 135,
-      "verified": 135
+      "checked": 134,
+      "verified": 134
     }
   }
 }
