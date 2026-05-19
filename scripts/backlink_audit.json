@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T15:54:09.674342+00:00",
+  "generated_at": "2026-05-19T18:19:20.595958+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -124,18 +124,27 @@
     "alternator-vs-battery-symptoms-difference": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/alternator-vs-battery-how-to-tell.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/alternator-vs-battery-how-to-tell_01782942570.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/alternator-vs-battery-how-to-tell-the-difference-roadside-tips-2dde",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/alternator-vs-battery-symptoms-difference-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817062412649988096/alternator-vs-battery-symptoms-difference",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/15/alternator-vs-battery-symptoms-difference/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/19/alternator-vs-battery-symptoms-difference-2/",
         "verified": true
       }
     },
@@ -2297,6 +2306,13 @@
         "verified": true
       }
     },
+    "towing-cost-boston-massachusetts": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-boston-massachusetts.html",
+        "verified": true
+      }
+    },
     "towing-cost-charlotte-north-carolina": {
       "blog": {
         "reason": "ok",
@@ -2592,8 +2608,7 @@
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/18/towing-cost-jacksonville-florida/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/19/towing-cost-jacksonville-florida-2/",
         "verified": true
       }
     },
@@ -2693,6 +2708,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/towing-cost-los-angeles-california/",
+        "verified": true
+      }
+    },
+    "towing-cost-los-angeles-freeway-breakdown": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-los-angeles-freeway.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-los-angeles-freeway-breakdown-what-youll-pay-right-now-what-drivers-should-know-17l3",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-los-angeles-freeway-breakdown-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817056987243249664/towing-cost-los-angeles-freeway-breakdown",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/19/towing-cost-los-angeles-freeway-breakdown/",
         "verified": true
       }
     },
@@ -3342,24 +3384,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 130,
-      "verified": 123
+      "checked": 132,
+      "verified": 125
     },
     "dev": {
-      "checked": 64,
-      "verified": 64
+      "checked": 66,
+      "verified": 66
     },
     "feeder": {
-      "checked": 135,
-      "verified": 135
-    },
-    "tumblr": {
-      "checked": 129,
-      "verified": 129
-    },
-    "wordpress": {
       "checked": 136,
       "verified": 136
+    },
+    "tumblr": {
+      "checked": 131,
+      "verified": 131
+    },
+    "wordpress": {
+      "checked": 137,
+      "verified": 137
     }
   }
 }
