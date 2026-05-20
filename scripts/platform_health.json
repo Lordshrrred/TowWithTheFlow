@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-05-20T09:54:36.025567+00:00",
+  "checked_at": "2026-05-20T15:57:08.994210+00:00",
   "checks": {
     "blogger": {
       "detail": "draft create HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid blog id: For input string: \\\"BLOGGER_BLOG_ID=1959471973457654666\\\"\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid blo",
       "status": "unhealthy"
     },
     "devto": {
-      "detail": "TWTF1: HTTPSConnectionPool(host='dev.to', port=443): Read timed out. (read timeout=20)",
-      "status": "unhealthy"
+      "detail": "TWTF1, TWTF2",
+      "status": "healthy"
     },
     "feeder": {
       "status": "healthy"
@@ -21,5 +21,5 @@
     }
   },
   "last_alert_at": "",
-  "unhealthy_count": 2
+  "unhealthy_count": 1
 }
