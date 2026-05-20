@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T11:23:30.744192+00:00",
+  "generated_at": "2026-05-20T16:03:29.020097+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -318,9 +318,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -1469,9 +1469,9 @@
     },
     "geico-roadside-assistance-vs-tow-truck-cost": {
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/geico-roadside-assistance-vs-tow-truck-cost-what-youll-actually-pay-what-drivers-should-know-1bcj",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -1551,9 +1551,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/how-much-does-aaa-towing-cost-without-a-membership-quick-guide-4a89",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -1743,9 +1743,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/liberty-mutual-towing-coverage-dollar-amount-limits-explained-what-drivers-should-know-198n",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -1881,9 +1881,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/roadside-assistance-vs-calling-tow-truck-direct-which-is-better-quick-guide-2d2d",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -2472,16 +2472,37 @@
         "verified": true
       }
     },
-    "towing-cost-houston-texas": {
+    "towing-cost-from-interstate-to-dealership": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-from-interstate-to.html",
         "verified": true
       },
       "dev": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-houston-texas-what-youll-pay-and-what-to-do-586n",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-from-interstate-to-dealership-what-youll-pay-right-now-explained-1e86",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-from-interstate-to-dealership-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817135316277297152/towing-cost-from-interstate-to-dealership",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/20/towing-cost-from-interstate-to-dealership/",
+        "verified": true
+      }
+    },
+    "towing-cost-houston-texas": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html",
         "verified": true
       },
       "feeder": {
@@ -3384,24 +3405,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 132,
-      "verified": 125
+      "checked": 133,
+      "verified": 126
     },
     "dev": {
-      "checked": 66,
-      "verified": 66
+      "checked": 61,
+      "verified": 61
     },
     "feeder": {
-      "checked": 136,
-      "verified": 136
-    },
-    "tumblr": {
-      "checked": 131,
-      "verified": 131
-    },
-    "wordpress": {
       "checked": 137,
       "verified": 137
+    },
+    "tumblr": {
+      "checked": 132,
+      "verified": 132
+    },
+    "wordpress": {
+      "checked": 138,
+      "verified": 138
     }
   }
 }
