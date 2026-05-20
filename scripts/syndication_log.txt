@@ -5458,3 +5458,38 @@
 [2026-05-20 10:08:43] FEEDER | towing-cost-new-york-city-manhattan-rates | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-new-york-city-manhattan-rates-advice/
 [2026-05-20 10:08:43] === SYNDICATE DONE: towing-cost-new-york-city-manhattan-rates | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-05-20 10:08:43] SYNCED | towing-cost-new-york-city-manhattan-rates marked in synced-posts.txt
+[2026-05-20 11:36:08] BACKLOG: Posts total=159  synced=135  backlog=24  (today's posts excluded from backlog)
+[2026-05-20 11:36:08] BACKLOG: Syndicating backlog: towing-cost-san-diego-california  (post date=2026-03-15)
+[2026-05-20 11:36:08] === SYNDICATE START: towing-cost-san-diego-california ===
+[2026-05-20 11:36:08] PREFLIGHT | title: Towing Cost in San Diego California: What You'll Pay and What to Do
+[2026-05-20 11:36:08] PREFLIGHT | date: 2026-03-15T08:19:00+00:00
+[2026-05-20 11:36:08] PREFLIGHT | timestamp: 2026-05-20 11:36:08
+[2026-05-20 11:36:08] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-05-20 11:36:08] PREFLIGHT | TUMBLR:  configured
+[2026-05-20 11:36:08] PREFLIGHT | BLOGGER: configured
+[2026-05-20 11:36:08] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-05-20 11:36:08] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-05-20 11:36:08] BACKLINK | towing-cost-san-diego-california | missing — injecting before syndication
+[2026-05-20 11:36:08] DEVTO | towing-cost-san-diego-california | START
+[2026-05-20 11:36:08] DEVTO | towing-cost-san-diego-california | account=TWTF1
+[2026-05-20 11:36:08] DEVTO | towing-cost-san-diego-california | SUCCESS | https://dev.to/roadsideamericatowing/towing-cost-in-san-diego-california-what-youll-pay-and-what-to-do-what-drivers-should-know-439h
+[2026-05-20 11:36:08] --- waiting 60s before next platform ---
+[2026-05-20 11:37:08] TUMBLR | towing-cost-san-diego-california | START
+[2026-05-20 11:37:09] TUMBLR | towing-cost-san-diego-california | SUCCESS | https://towwiththeflow.tumblr.com/post/817153839383855104
+[2026-05-20 11:37:09] --- waiting 60s before next platform ---
+[2026-05-20 11:38:09] BLOGGER | towing-cost-san-diego-california | START
+[2026-05-20 11:38:09] BLOGGER | towing-cost-san-diego-california | step 1/3: refreshing access token
+[2026-05-20 11:38:10] BLOGGER | towing-cost-san-diego-california | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-05-20 11:38:10] BLOGGER | towing-cost-san-diego-california | step 2/3: converting markdown to HTML
+[2026-05-20 11:38:10] BLOGGER | towing-cost-san-diego-california | step 3/3: posting to blog 1959471973457654666
+[2026-05-20 11:38:11] BLOGGER | towing-cost-san-diego-california | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-san-diego-california_01239152409.html
+[2026-05-20 11:38:11] --- waiting 60s before next platform ---
+[2026-05-20 11:39:11] WORDPRESS | towing-cost-san-diego-california | START
+[2026-05-20 11:39:12] WORDPRESS | towing-cost-san-diego-california | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/05/20/towing-cost-san-diego-california-2/
+[2026-05-20 11:39:12] --- waiting 60s before next platform ---
+[2026-05-20 11:40:12] FEEDER | towing-cost-san-diego-california | START
+[2026-05-20 11:40:13] FEEDER | towing-cost-san-diego-california | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-san-diego-california-guide/
+[2026-05-20 11:40:13] === SYNDICATE DONE: towing-cost-san-diego-california | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-05-20 11:40:13] SYNCED | towing-cost-san-diego-california marked in synced-posts.txt
+[2026-05-20 11:40:13] BACKLOG: Backlog run complete: 5/5 succeeded for towing-cost-san-diego-california
+[2026-05-20 11:40:13] BACKLOG: Total progress: 136/159 posts synced
