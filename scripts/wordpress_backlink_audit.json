@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-05-21T15:55:54.547883+00:00",
+  "generated_at": "2026-05-21T18:17:11.201204+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/05/21/what-happens-if-your-car-breaks-down-on-highway/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/21/car-wont-start-but-battery-is-good-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/21/towing-cost-phoenix-desert-breakdown-summer-heat/",
     "https://towwiththeflowyo.wordpress.com/2026/05/21/geico-roadside-assistance-how-many-calls-per-year/",
     "https://towwiththeflowyo.wordpress.com/2026/05/20/towing-cost-memphis-tennessee/",
     "https://towwiththeflowyo.wordpress.com/2026/05/20/towing-cost-san-diego-california-2/",
@@ -581,6 +584,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/17/car-wont-start-but-battery-is-good/",
         "verified": true
+      }
+    },
+    "car-wont-start-but-battery-is-good-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/21/car-wont-start-but-battery-is-good-2/",
+        "verified": false
       }
     },
     "car-wont-start-clicking-noise-what-to-do": {
@@ -1501,6 +1513,15 @@
         "verified": true
       }
     },
+    "towing-cost-phoenix-desert-breakdown-summer-heat": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-phoenix-desert-breakdown-summer-heat/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/21/towing-cost-phoenix-desert-breakdown-summer-heat/",
+        "verified": true
+      }
+    },
     "towing-cost-portland-oregon": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-portland-oregon/",
@@ -1609,6 +1630,15 @@
         "verified": false
       }
     },
+    "what-happens-if-your-car-breaks-down-on-highway": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/what-happens-if-your-car-breaks-down-on-highway/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/21/what-happens-if-your-car-breaks-down-on-highway/",
+        "verified": true
+      }
+    },
     "what-to-do-if-your-car-breaks-down-at-night": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/what-to-do-if-your-car-breaks-down-at-night/",
@@ -1658,8 +1688,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 165,
-      "verified": 142
+      "checked": 168,
+      "verified": 144
     }
   }
 }
