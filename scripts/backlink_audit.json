@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T15:28:22.726773+00:00",
+  "generated_at": "2026-05-22T18:11:51.321609+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -310,6 +310,19 @@
         "verified": true
       }
     },
+    "car-battery-dies-in-parking-lot": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-dies-in-parking-lot-exactly_01903019990.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-battery-dies-in-parking-lot-help/",
+        "verified": true
+      }
+    },
     "car-battery-dies-parking-lot-phoenix": {
       "blog": {
         "reason": "ok",
@@ -349,6 +362,11 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-battery-dies-parking-lot-what-to-do-guide/",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/22/car-battery-dies-parking-lot-what-to-do/",
         "verified": true
       }
     },
@@ -2425,6 +2443,33 @@
         "verified": true
       }
     },
+    "towing-cost-chicago-winter-storm-surcharge": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-chicago-winter-storm.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-chicago-winter-storm-surcharge-what-youll-pay-right-now-what-to-do-next-2bg7",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-chicago-winter-storm-surcharge-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817327068377399296/towing-cost-chicago-winter-storm-surcharge",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/22/towing-cost-chicago-winter-storm-surcharge/",
+        "verified": true
+      }
+    },
     "towing-cost-columbus-ohio": {
       "blog": {
         "reason": "ok",
@@ -2693,12 +2738,27 @@
     "towing-cost-jacksonville-florida": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-jacksonville-florida.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-jacksonville-florida_01217036873.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-jacksonville-florida-what-youll-pay-for-roadside-help-what-drivers-should-know-1jg7",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-jacksonville-florida-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817331463000375296/towing-cost-jacksonville-florida",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/19/towing-cost-jacksonville-florida-2/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/22/towing-cost-jacksonville-florida-3/",
         "verified": true
       }
     },
@@ -3526,24 +3586,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 136,
-      "verified": 129
+      "checked": 138,
+      "verified": 131
     },
     "dev": {
-      "checked": 72,
-      "verified": 72
+      "checked": 74,
+      "verified": 74
     },
     "feeder": {
-      "checked": 141,
-      "verified": 141
+      "checked": 144,
+      "verified": 144
     },
     "tumblr": {
-      "checked": 137,
-      "verified": 137
+      "checked": 139,
+      "verified": 139
     },
     "wordpress": {
-      "checked": 143,
-      "verified": 143
+      "checked": 145,
+      "verified": 145
     }
   }
 }
