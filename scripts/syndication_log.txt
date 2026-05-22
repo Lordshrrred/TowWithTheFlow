@@ -5626,3 +5626,38 @@
 [2026-05-22 09:33:46] FEEDER | towing-cost-chicago-winter-storm-surcharge | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-chicago-winter-storm-surcharge-advice/
 [2026-05-22 09:33:46] === SYNDICATE DONE: towing-cost-chicago-winter-storm-surcharge | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-05-22 09:33:46] SYNCED | towing-cost-chicago-winter-storm-surcharge marked in synced-posts.txt
+[2026-05-22 10:39:23] BACKLOG: Posts total=163  synced=140  backlog=23  (today's posts excluded from backlog)
+[2026-05-22 10:39:23] BACKLOG: Syndicating backlog: towing-cost-jacksonville-florida  (post date=2026-03-16)
+[2026-05-22 10:39:23] === SYNDICATE START: towing-cost-jacksonville-florida ===
+[2026-05-22 10:39:23] PREFLIGHT | title: Towing Cost in Jacksonville Florida: What You'll Pay for Roadside Help
+[2026-05-22 10:39:23] PREFLIGHT | date: 2026-03-16T10:55:00+00:00
+[2026-05-22 10:39:23] PREFLIGHT | timestamp: 2026-05-22 10:39:23
+[2026-05-22 10:39:23] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-05-22 10:39:23] PREFLIGHT | TUMBLR:  configured
+[2026-05-22 10:39:23] PREFLIGHT | BLOGGER: configured
+[2026-05-22 10:39:23] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-05-22 10:39:23] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-05-22 10:39:23] BACKLINK | towing-cost-jacksonville-florida | missing — injecting before syndication
+[2026-05-22 10:39:23] DEVTO | towing-cost-jacksonville-florida | START
+[2026-05-22 10:39:23] DEVTO | towing-cost-jacksonville-florida | account=TWTF1
+[2026-05-22 10:39:24] DEVTO | towing-cost-jacksonville-florida | SUCCESS | https://dev.to/roadsideamericatowing/towing-cost-in-jacksonville-florida-what-youll-pay-for-roadside-help-what-drivers-should-know-1jg7
+[2026-05-22 10:39:24] --- waiting 60s before next platform ---
+[2026-05-22 10:40:24] TUMBLR | towing-cost-jacksonville-florida | START
+[2026-05-22 10:40:25] TUMBLR | towing-cost-jacksonville-florida | SUCCESS | https://towwiththeflow.tumblr.com/post/817331463000375296
+[2026-05-22 10:40:25] --- waiting 60s before next platform ---
+[2026-05-22 10:41:25] BLOGGER | towing-cost-jacksonville-florida | START
+[2026-05-22 10:41:25] BLOGGER | towing-cost-jacksonville-florida | step 1/3: refreshing access token
+[2026-05-22 10:41:25] BLOGGER | towing-cost-jacksonville-florida | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-05-22 10:41:25] BLOGGER | towing-cost-jacksonville-florida | step 2/3: converting markdown to HTML
+[2026-05-22 10:41:25] BLOGGER | towing-cost-jacksonville-florida | step 3/3: posting to blog 1959471973457654666
+[2026-05-22 10:41:26] BLOGGER | towing-cost-jacksonville-florida | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-jacksonville-florida_01217036873.html
+[2026-05-22 10:41:26] --- waiting 60s before next platform ---
+[2026-05-22 10:42:26] WORDPRESS | towing-cost-jacksonville-florida | START
+[2026-05-22 10:42:32] WORDPRESS | towing-cost-jacksonville-florida | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/05/22/towing-cost-jacksonville-florida-3/
+[2026-05-22 10:42:32] --- waiting 60s before next platform ---
+[2026-05-22 10:43:32] FEEDER | towing-cost-jacksonville-florida | START
+[2026-05-22 10:43:33] FEEDER | towing-cost-jacksonville-florida | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-jacksonville-florida-guide/
+[2026-05-22 10:43:33] === SYNDICATE DONE: towing-cost-jacksonville-florida | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-05-22 10:43:33] SYNCED | towing-cost-jacksonville-florida marked in synced-posts.txt
+[2026-05-22 10:43:33] BACKLOG: Backlog run complete: 5/5 succeeded for towing-cost-jacksonville-florida
+[2026-05-22 10:43:33] BACKLOG: Total progress: 141/163 posts synced
