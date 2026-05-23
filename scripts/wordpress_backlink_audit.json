@@ -1,6 +1,8 @@
 {
-  "generated_at": "2026-05-23T14:05:54.090020+00:00",
+  "generated_at": "2026-05-23T21:11:08.815370+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/05/23/towing-cost-baltimore-maryland/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/23/towing-cost-memphis-tennessee-2/",
     "https://towwiththeflowyo.wordpress.com/2026/05/23/car-key-locked-inside-engine-running-towing-cost/",
     "https://towwiththeflowyo.wordpress.com/2026/05/22/car-battery-dies-parking-lot-what-to-do/",
     "https://towwiththeflowyo.wordpress.com/2026/05/22/towing-cost-jacksonville-florida-3/",
@@ -1140,6 +1142,15 @@
         "verified": true
       }
     },
+    "towing-cost-baltimore-maryland": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-baltimore-maryland/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/23/towing-cost-baltimore-maryland/",
+        "verified": true
+      }
+    },
     "towing-cost-charlotte-north-carolina": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-charlotte-north-carolina/",
@@ -1426,6 +1437,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/20/towing-cost-memphis-tennessee/",
         "verified": true
+      }
+    },
+    "towing-cost-memphis-tennessee-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/23/towing-cost-memphis-tennessee-2/",
+        "verified": false
       }
     },
     "towing-cost-miami-florida": {
@@ -1738,8 +1758,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 173,
-      "verified": 148
+      "checked": 175,
+      "verified": 149
     }
   }
 }
