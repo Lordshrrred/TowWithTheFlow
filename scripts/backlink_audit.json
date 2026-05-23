@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T10:07:42.421838+00:00",
+  "generated_at": "2026-05-23T14:05:51.119513+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -468,6 +468,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/car-key-broke-in-ignition-need-tow-truck/",
+        "verified": true
+      }
+    },
+    "car-key-locked-inside-engine-running-towing-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-key-locked-inside-engine-running.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-key-locked-inside-engine-running-towing-cost-what-youll-pay-right-now-what-drivers-should-2k55",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-key-locked-inside-engine-running-towing-cost-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817403318705995776/car-key-locked-inside-engine-running-towing-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/23/car-key-locked-inside-engine-running-towing-cost/",
         "verified": true
       }
     },
@@ -3586,24 +3613,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 138,
-      "verified": 131
+      "checked": 139,
+      "verified": 132
     },
     "dev": {
-      "checked": 74,
-      "verified": 74
+      "checked": 75,
+      "verified": 75
     },
     "feeder": {
-      "checked": 144,
-      "verified": 144
-    },
-    "tumblr": {
-      "checked": 139,
-      "verified": 139
-    },
-    "wordpress": {
       "checked": 145,
       "verified": 145
+    },
+    "tumblr": {
+      "checked": 140,
+      "verified": 140
+    },
+    "wordpress": {
+      "checked": 146,
+      "verified": 146
     }
   }
 }
