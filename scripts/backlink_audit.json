@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T14:04:29.452045+00:00",
+  "generated_at": "2026-05-24T17:19:51.792613+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -652,6 +652,19 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/23/car-making-loud-knocking-sound-while-driving/",
+        "verified": true
+      }
+    },
+    "car-making-noise-when-turning-steering-wheel": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-making-noise-when-turning-steering_0383102311.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-making-noise-when-turning-steering-wheel-help/",
         "verified": true
       }
     },
@@ -1662,6 +1675,11 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/how-to-change-tire-highway-safely-help/",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/24/how-to-change-tire-highway-safely/",
         "verified": true
       }
     },
@@ -3469,6 +3487,33 @@
         "verified": true
       }
     },
+    "towing-cost-toll-road-breakdown-emergency-lane": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-toll-road-breakdown.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-toll-road-breakdown-emergency-lane-what-youll-pay-right-now-quick-guide-5b3h",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-toll-road-breakdown-emergency-lane-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817503094180118528/towing-cost-toll-road-breakdown-emergency-lane",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/24/towing-cost-toll-road-breakdown-emergency-lane/",
+        "verified": true
+      }
+    },
     "towing-cost-vs-roadside-assistance-comparison": {
       "blog": {
         "reason": "ok",
@@ -3565,18 +3610,27 @@
     "what-happens-if-your-car-breaks-down-on-highway": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/what-happens-if-your-car-breaks-down-on.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/what-happens-if-your-car-breaks-down-on_0319382764.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/what-happens-if-your-car-breaks-down-on-the-highway-what-to-do-next-nma",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/what-happens-if-your-car-breaks-down-on-highway-guide/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/what-happens-if-your-car-breaks-down-on-highway-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817508913277796352/what-happens-if-your-car-breaks-down-on-highway",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/21/what-happens-if-your-car-breaks-down-on-highway/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/24/what-happens-if-your-car-breaks-down-on-highway-2/",
         "verified": true
       }
     },
@@ -3660,24 +3714,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 140,
-      "verified": 133
+      "checked": 142,
+      "verified": 135
     },
     "dev": {
-      "checked": 77,
-      "verified": 77
+      "checked": 79,
+      "verified": 79
     },
     "feeder": {
-      "checked": 147,
-      "verified": 147
+      "checked": 149,
+      "verified": 149
     },
     "tumblr": {
-      "checked": 142,
-      "verified": 142
+      "checked": 144,
+      "verified": 144
     },
     "wordpress": {
-      "checked": 148,
-      "verified": 148
+      "checked": 150,
+      "verified": 150
     }
   }
 }
