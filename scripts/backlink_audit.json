@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T10:14:27.336990+00:00",
+  "generated_at": "2026-05-24T14:04:29.452045+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2524,6 +2524,33 @@
         "verified": true
       }
     },
+    "towing-cost-construction-zone-police-required": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-construction-zone-police.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-construction-zone-police-required-what-youll-pay-right-now-quick-guide-48bj",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-construction-zone-police-required-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817494383193735168/towing-cost-construction-zone-police-required",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/24/towing-cost-construction-zone-police-required/",
+        "verified": true
+      }
+    },
     "towing-cost-credit-card-roadside-assistance-covers": {
       "blog": {
         "reason": "ok",
@@ -3633,24 +3660,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 139,
-      "verified": 132
+      "checked": 140,
+      "verified": 133
     },
     "dev": {
-      "checked": 76,
-      "verified": 76
+      "checked": 77,
+      "verified": 77
     },
     "feeder": {
-      "checked": 146,
-      "verified": 146
-    },
-    "tumblr": {
-      "checked": 141,
-      "verified": 141
-    },
-    "wordpress": {
       "checked": 147,
       "verified": 147
+    },
+    "tumblr": {
+      "checked": 142,
+      "verified": 142
+    },
+    "wordpress": {
+      "checked": 148,
+      "verified": 148
     }
   }
 }
