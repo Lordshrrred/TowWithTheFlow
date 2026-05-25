@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-05-25T15:32:19.853166+00:00",
+  "generated_at": "2026-05-25T18:03:09.392745+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/05/25/car-battery-dies-parking-lot-what-to-do-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/25/towing-cost-boston-massachusetts/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/25/towing-cost-denver-colorado-mountains/",
     "https://towwiththeflowyo.wordpress.com/2026/05/25/car-wont-start-clicking-noise-need-tow-truck-cost/",
     "https://towwiththeflowyo.wordpress.com/2026/05/24/how-to-change-tire-highway-safely/",
     "https://towwiththeflowyo.wordpress.com/2026/05/24/what-happens-if-your-car-breaks-down-on-highway-2/",
@@ -344,6 +347,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/22/car-battery-dies-parking-lot-what-to-do/",
         "verified": true
+      }
+    },
+    "car-battery-dies-parking-lot-what-to-do-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/25/car-battery-dies-parking-lot-what-to-do-2/",
+        "verified": false
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
@@ -1174,6 +1186,15 @@
         "verified": true
       }
     },
+    "towing-cost-boston-massachusetts": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-boston-massachusetts/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/25/towing-cost-boston-massachusetts/",
+        "verified": true
+      }
+    },
     "towing-cost-charlotte-north-carolina": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-charlotte-north-carolina/",
@@ -1288,6 +1309,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/23/towing-cost-denver-colorado/",
+        "verified": true
+      }
+    },
+    "towing-cost-denver-colorado-mountains": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-denver-colorado-mountains/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/25/towing-cost-denver-colorado-mountains/",
         "verified": true
       }
     },
@@ -1808,8 +1838,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 180,
-      "verified": 153
+      "checked": 183,
+      "verified": 155
     }
   }
 }
