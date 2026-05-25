@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T12:02:52.379173+00:00",
+  "generated_at": "2026-05-25T15:32:16.775508+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -669,12 +669,6 @@
       }
     },
     "car-making-noise-when-turning-steering-wheel-houston": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-making-noise-when-turning-steering.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-making-noise-when-turning-steering-wheel-in-houston-whats-wrong-and-how-to-fix-it-explained-5bkp",
@@ -859,9 +853,9 @@
     },
     "car-slides-off-road-ice-who-pays-towing": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-slides-off-road-in-ice-who-pays-for.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1097,6 +1091,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/21/car-wont-start-but-battery-is-good-2/",
+        "verified": true
+      }
+    },
+    "car-wont-start-clicking-noise-need-tow-truck-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-wont-start-clicking-noise-need-tow.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-wont-start-clicking-noise-need-tow-truck-cost-what-youll-pay-right-now-what-drivers-should-k7n",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-clicking-noise-need-tow-truck-cost-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817592312895094784/car-wont-start-clicking-noise-need-tow-truck-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/25/car-wont-start-clicking-noise-need-tow-truck-cost/",
         "verified": true
       }
     },
@@ -1685,9 +1706,9 @@
     },
     "how-to-start-a-frozen-car-battery": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-to-start-frozen-car-battery_01688926430.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3715,23 +3736,23 @@
   "summary": {
     "blog": {
       "checked": 142,
-      "verified": 135
+      "verified": 133
     },
     "dev": {
-      "checked": 79,
-      "verified": 79
+      "checked": 80,
+      "verified": 80
     },
     "feeder": {
-      "checked": 149,
-      "verified": 149
-    },
-    "tumblr": {
-      "checked": 144,
-      "verified": 144
-    },
-    "wordpress": {
       "checked": 150,
       "verified": 150
+    },
+    "tumblr": {
+      "checked": 145,
+      "verified": 145
+    },
+    "wordpress": {
+      "checked": 151,
+      "verified": 151
     }
   }
 }
