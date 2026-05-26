@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-05-26T16:16:09.243432+00:00",
+  "generated_at": "2026-05-26T18:40:07.070931+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/05/26/car-battery-dies-in-parking-lot/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/26/car-battery-dies-parking-lot-what-to-do-3/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/26/towing-cost-denver-colorado-mountains-2/",
     "https://towwiththeflowyo.wordpress.com/2026/05/26/car-wont-start-clicking-noise-need-tow-truck-cost-2/",
     "https://towwiththeflowyo.wordpress.com/2026/05/25/car-battery-dies-parking-lot-what-to-do-2/",
     "https://towwiththeflowyo.wordpress.com/2026/05/25/towing-cost-boston-massachusetts/",
@@ -332,6 +335,15 @@
         "verified": true
       }
     },
+    "car-battery-dies-in-parking-lot": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-battery-dies-in-parking-lot/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/26/car-battery-dies-in-parking-lot/",
+        "verified": true
+      }
+    },
     "car-battery-dies-parking-lot-phoenix": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/car-battery-dies-parking-lot-phoenix/",
@@ -356,6 +368,15 @@
         "reason": "slug_mismatch",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/25/car-battery-dies-parking-lot-what-to-do-2/",
+        "verified": false
+      }
+    },
+    "car-battery-dies-parking-lot-what-to-do-3": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/26/car-battery-dies-parking-lot-what-to-do-3/",
         "verified": false
       }
     },
@@ -1331,6 +1352,15 @@
         "verified": true
       }
     },
+    "towing-cost-denver-colorado-mountains-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/26/towing-cost-denver-colorado-mountains-2/",
+        "verified": false
+      }
+    },
     "towing-cost-detroit-michigan": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-detroit-michigan/",
@@ -1848,8 +1878,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 184,
-      "verified": 155
+      "checked": 187,
+      "verified": 156
     }
   }
 }
