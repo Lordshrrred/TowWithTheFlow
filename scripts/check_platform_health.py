@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import smtplib
 from datetime import datetime, timedelta, timezone
 from email.mime.text import MIMEText
@@ -22,22 +23,21 @@ def env_clean(key: str, default: str = "") -> str:
     val = os.getenv(key, default)
     if not isinstance(val, str):
         return default
-    val = val.strip()
+    val = val.strip().lstrip("\ufeff")
     if len(val) >= 2 and ((val[0] == '"' and val[-1] == '"') or (val[0] == "'" and val[-1] == "'")):
-        val = val[1:-1].strip()
-    prefix = f"{key}="
-    if val.startswith(prefix):
-        val = val[len(prefix):].strip()
-    export_prefix = f"export {key}="
-    if val.startswith(export_prefix):
-        val = val[len(export_prefix):].strip()
+        val = val[1:-1].strip().lstrip("\ufeff")
+    assignment = re.match(rf"^(?:export\s+)?{re.escape(key)}\s*=\s*(.*)$", val)
+    if assignment:
+        val = assignment.group(1).strip()
+        if len(val) >= 2 and ((val[0] == '"' and val[-1] == '"') or (val[0] == "'" and val[-1] == "'")):
+            val = val[1:-1].strip()
     return val
 
 
 def load_env() -> None:
     try:
         from dotenv import load_dotenv
-        load_dotenv(ROOT / ".env", override=True)
+        load_dotenv(ROOT / ".env", override=False)
     except Exception:
         pass
 
