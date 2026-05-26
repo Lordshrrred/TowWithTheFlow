@@ -34,6 +34,14 @@ def env_clean(key: str, default: str = "") -> str:
     return val
 
 
+def env_clean_digits(key: str, default: str = "") -> str:
+    val = env_clean(key, default)
+    if val.isdigit():
+        return val
+    match = re.search(r"\d+", val)
+    return match.group(0) if match else val
+
+
 def load_env() -> None:
     try:
         from dotenv import load_dotenv
@@ -169,7 +177,7 @@ def check_blogger() -> dict:
     cid = env_clean("BLOGGER_CLIENT_ID")
     csec = env_clean("BLOGGER_CLIENT_SECRET")
     rtok = env_clean("BLOGGER_REFRESH_TOKEN")
-    blog_id = env_clean("BLOGGER_BLOG_ID")
+    blog_id = env_clean_digits("BLOGGER_BLOG_ID")
     if not all([cid, csec, rtok, blog_id]):
         return {"status": "missing", "detail": "Blogger credentials missing"}
     try:
