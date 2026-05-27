@@ -6120,3 +6120,38 @@
 [2026-05-27 10:26:52] FEEDER | towing-cost-in-los-angeles-freeway | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-los-angeles-freeway-guide/
 [2026-05-27 10:26:52] === SYNDICATE DONE: towing-cost-in-los-angeles-freeway | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-05-27 10:26:52] SYNCED | towing-cost-in-los-angeles-freeway marked in synced-posts.txt
+[2026-05-27 11:37:53] BACKLOG: Posts total=170  synced=150  backlog=20  (today's posts excluded from backlog)
+[2026-05-27 11:37:53] BACKLOG: Syndicating backlog: towing-cost-baltimore-maryland  (post date=2026-03-18)
+[2026-05-27 11:37:53] === SYNDICATE START: towing-cost-baltimore-maryland ===
+[2026-05-27 11:37:53] PREFLIGHT | title: Towing Cost in Baltimore Maryland: What You'll Pay and What to Do
+[2026-05-27 11:37:53] PREFLIGHT | date: 2026-03-18T11:09:00+00:00
+[2026-05-27 11:37:53] PREFLIGHT | timestamp: 2026-05-27 11:37:53
+[2026-05-27 11:37:53] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-05-27 11:37:53] PREFLIGHT | TUMBLR:  configured
+[2026-05-27 11:37:53] PREFLIGHT | BLOGGER: configured
+[2026-05-27 11:37:53] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-05-27 11:37:53] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-05-27 11:37:53] BACKLINK | towing-cost-baltimore-maryland | missing — injecting before syndication
+[2026-05-27 11:37:53] DEVTO | towing-cost-baltimore-maryland | START
+[2026-05-27 11:37:53] DEVTO | towing-cost-baltimore-maryland | account=TWTF1
+[2026-05-27 11:37:54] DEVTO | towing-cost-baltimore-maryland | SUCCESS | https://dev.to/roadsideamericatowing/towing-cost-in-baltimore-maryland-what-youll-pay-and-what-to-do-quick-guide-19p
+[2026-05-27 11:37:54] --- waiting 60s before next platform ---
+[2026-05-27 11:38:54] TUMBLR | towing-cost-baltimore-maryland | START
+[2026-05-27 11:38:54] TUMBLR | towing-cost-baltimore-maryland | SUCCESS | https://towwiththeflow.tumblr.com/post/817788128419004416
+[2026-05-27 11:38:54] --- waiting 60s before next platform ---
+[2026-05-27 11:39:54] BLOGGER | towing-cost-baltimore-maryland | START
+[2026-05-27 11:39:54] BLOGGER | towing-cost-baltimore-maryland | step 1/3: refreshing access token
+[2026-05-27 11:39:55] BLOGGER | towing-cost-baltimore-maryland | auto-recovered blog id mismatch: using 1959471973457654666
+[2026-05-27 11:39:55] BLOGGER | towing-cost-baltimore-maryland | step 2/3: converting markdown to HTML
+[2026-05-27 11:39:55] BLOGGER | towing-cost-baltimore-maryland | step 3/3: posting to blog 1959471973457654666
+[2026-05-27 11:39:55] BLOGGER | towing-cost-baltimore-maryland | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-baltimore-maryland-what_0710533024.html
+[2026-05-27 11:39:55] --- waiting 60s before next platform ---
+[2026-05-27 11:40:55] WORDPRESS | towing-cost-baltimore-maryland | START
+[2026-05-27 11:41:01] WORDPRESS | towing-cost-baltimore-maryland | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/05/27/towing-cost-baltimore-maryland-2/
+[2026-05-27 11:41:01] --- waiting 60s before next platform ---
+[2026-05-27 11:42:01] FEEDER | towing-cost-baltimore-maryland | START
+[2026-05-27 11:42:02] FEEDER | towing-cost-baltimore-maryland | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-baltimore-maryland-help/
+[2026-05-27 11:42:02] === SYNDICATE DONE: towing-cost-baltimore-maryland | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-05-27 11:42:02] SYNCED | towing-cost-baltimore-maryland marked in synced-posts.txt
+[2026-05-27 11:42:02] BACKLOG: Backlog run complete: 5/5 succeeded for towing-cost-baltimore-maryland
+[2026-05-27 11:42:02] BACKLOG: Total progress: 151/170 posts synced
