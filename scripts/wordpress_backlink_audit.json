@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-05-27T16:15:19.826143+00:00",
+  "generated_at": "2026-05-27T18:38:17.351281+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/05/27/car-making-noise-when-turning-steering-wheel/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/27/towing-cost-baltimore-maryland-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/27/towing-cost-in-los-angeles-freeway/",
     "https://towwiththeflowyo.wordpress.com/2026/05/27/car-wont-start-clicking-noise-need-tow-truck-cost-3/",
     "https://towwiththeflowyo.wordpress.com/2026/05/26/car-battery-dies-in-parking-lot/",
     "https://towwiththeflowyo.wordpress.com/2026/05/26/car-battery-dies-parking-lot-what-to-do-3/",
@@ -477,6 +480,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/23/car-making-loud-knocking-sound-while-driving/",
+        "verified": true
+      }
+    },
+    "car-making-noise-when-turning-steering-wheel": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-making-noise-when-turning-steering-wheel/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/27/car-making-noise-when-turning-steering-wheel/",
         "verified": true
       }
     },
@@ -1227,6 +1239,15 @@
         "verified": true
       }
     },
+    "towing-cost-baltimore-maryland-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/27/towing-cost-baltimore-maryland-2/",
+        "verified": false
+      }
+    },
     "towing-cost-boston-massachusetts": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-boston-massachusetts/",
@@ -1422,6 +1443,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/towing-cost-houston-texas-sunday-emergency/",
+        "verified": true
+      }
+    },
+    "towing-cost-in-los-angeles-freeway": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-in-los-angeles-freeway/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/27/towing-cost-in-los-angeles-freeway/",
         "verified": true
       }
     },
@@ -1888,8 +1918,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 188,
-      "verified": 156
+      "checked": 191,
+      "verified": 158
     }
   }
 }
