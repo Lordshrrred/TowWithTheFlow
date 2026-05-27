@@ -1,14 +1,18 @@
 {
-  "pageviews": 1,
-  "sessions": 1,
-  "avgSessionDur": 0,
+  "pageviews": 8,
+  "sessions": 2,
+  "avgSessionDur": 86,
   "bounceRate": 1.0,
-  "newUsers": 1,
+  "newUsers": 2,
   "returningUsers": 0,
   "daily": [
     {
       "date": "20260514",
       "pageviews": 1
+    },
+    {
+      "date": "20260526",
+      "pageviews": 7
     }
   ],
   "topPages": [
@@ -16,8 +20,44 @@
       "rank": 1,
       "page": "/",
       "title": "Tow With The Flow | Real help when your car breaks down.",
+      "pageviews": 3,
+      "avgDur": 13,
+      "bounceRate": 100.0,
+      "sessions": 2
+    },
+    {
+      "rank": 2,
+      "page": "/about/",
+      "title": "About Tow With The Flow | Tow With The Flow",
+      "pageviews": 2,
+      "avgDur": 14,
+      "bounceRate": 100.0,
+      "sessions": 1
+    },
+    {
+      "rank": 3,
+      "page": "/contact/",
+      "title": "Contact | Tow With The Flow",
+      "pageviews": 1,
+      "avgDur": 26,
+      "bounceRate": 100.0,
+      "sessions": 1
+    },
+    {
+      "rank": 4,
+      "page": "/posts/",
+      "title": "All Guides | Tow With The Flow",
       "pageviews": 1,
       "avgDur": 0,
+      "bounceRate": 100.0,
+      "sessions": 1
+    },
+    {
+      "rank": 5,
+      "page": "/towing-cost-boston-massachusetts/",
+      "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
+      "pageviews": 1,
+      "avgDur": 107,
       "bounceRate": 100.0,
       "sessions": 1
     }
@@ -26,12 +66,26 @@
     {
       "channel": "Direct",
       "sessions": 1,
-      "pct": 100.0
+      "pct": 33.3
+    },
+    {
+      "channel": "Referral",
+      "sessions": 1,
+      "pct": 33.3
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "pct": 33.3
     }
   ],
   "topCountries": [
     {
       "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "country": "United States",
       "sessions": 1
     }
   ],
@@ -39,25 +93,29 @@
     {
       "city": "(not set)",
       "sessions": 1
+    },
+    {
+      "city": "Cambridge",
+      "sessions": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "sessions": 1
+      "sessions": 2
     }
   ],
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 1
+      "sessions": 2
     }
   ],
   "os": [
     {
       "os": "Macintosh",
-      "sessions": 1
+      "sessions": 2
     }
   ],
-  "lastUpdated": "2026-05-26T10:18:36.352141+00:00"
+  "lastUpdated": "2026-05-27T10:20:44.281610+00:00"
 }
