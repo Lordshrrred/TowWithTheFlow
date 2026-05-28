@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T16:36:44.444534+00:00",
+  "generated_at": "2026-05-28T22:14:33.271078+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1709,18 +1709,27 @@
     "how-to-change-tire-highway-safely": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/how-to-change-tire-on-highway-safely.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/how-to-change-tire-on-highway-safely_0458417376.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/how-to-change-a-tire-on-the-highway-safely-roadside-tips-47ai",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-to-change-tire-highway-safely-help/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-to-change-tire-highway-safely-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817879283854884864/how-to-change-tire-highway-safely",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/24/how-to-change-tire-highway-safely/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/28/how-to-change-tire-highway-safely-2/",
         "verified": true
       }
     },
@@ -2564,6 +2573,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/28/towing-cost-chicago-illinois/",
+        "verified": true
+      }
+    },
+    "towing-cost-chicago-illinois-downtown": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-chicago-illinois.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-chicago-illinois-downtown-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817874945600307200/towing-cost-chicago-illinois-downtown",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/28/towing-cost-chicago-illinois-downtown/",
         "verified": true
       }
     },
@@ -3849,24 +3880,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 147,
-      "verified": 140
+      "checked": 148,
+      "verified": 141
     },
     "dev": {
-      "checked": 83,
-      "verified": 83
+      "checked": 84,
+      "verified": 84
     },
     "feeder": {
-      "checked": 154,
-      "verified": 154
+      "checked": 155,
+      "verified": 155
     },
     "tumblr": {
-      "checked": 149,
-      "verified": 149
+      "checked": 151,
+      "verified": 151
     },
     "wordpress": {
-      "checked": 156,
-      "verified": 156
+      "checked": 157,
+      "verified": 157
     }
   }
 }
