@@ -1,8 +1,8 @@
 {
   "pageviews": 8,
   "sessions": 2,
-  "avgSessionDur": 86,
-  "bounceRate": 1.0,
+  "avgSessionDur": 46,
+  "bounceRate": 0.5,
   "newUsers": 2,
   "returningUsers": 0,
   "daily": [
@@ -21,8 +21,8 @@
       "page": "/",
       "title": "Tow With The Flow | Real help when your car breaks down.",
       "pageviews": 3,
-      "avgDur": 13,
-      "bounceRate": 100.0,
+      "avgDur": 9,
+      "bounceRate": 50.0,
       "sessions": 2
     },
     {
@@ -30,8 +30,8 @@
       "page": "/about/",
       "title": "About Tow With The Flow | Tow With The Flow",
       "pageviews": 2,
-      "avgDur": 14,
-      "bounceRate": 100.0,
+      "avgDur": 17,
+      "bounceRate": 0.0,
       "sessions": 1
     },
     {
@@ -39,8 +39,8 @@
       "page": "/contact/",
       "title": "Contact | Tow With The Flow",
       "pageviews": 1,
-      "avgDur": 26,
-      "bounceRate": 100.0,
+      "avgDur": 3,
+      "bounceRate": 0.0,
       "sessions": 1
     },
     {
@@ -48,8 +48,8 @@
       "page": "/posts/",
       "title": "All Guides | Tow With The Flow",
       "pageviews": 1,
-      "avgDur": 0,
-      "bounceRate": 100.0,
+      "avgDur": 4,
+      "bounceRate": 0.0,
       "sessions": 1
     },
     {
@@ -57,8 +57,8 @@
       "page": "/towing-cost-boston-massachusetts/",
       "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
       "pageviews": 1,
-      "avgDur": 107,
-      "bounceRate": 100.0,
+      "avgDur": 50,
+      "bounceRate": 0.0,
       "sessions": 1
     }
   ],
@@ -66,17 +66,12 @@
     {
       "channel": "Direct",
       "sessions": 1,
-      "pct": 33.3
+      "pct": 50.0
     },
     {
       "channel": "Referral",
       "sessions": 1,
-      "pct": 33.3
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 1,
-      "pct": 33.3
+      "pct": 50.0
     }
   ],
   "topCountries": [
@@ -117,5 +112,5 @@
       "sessions": 2
     }
   ],
-  "lastUpdated": "2026-05-27T10:20:44.281610+00:00"
+  "lastUpdated": "2026-05-28T10:33:47.795020+00:00"
 }
