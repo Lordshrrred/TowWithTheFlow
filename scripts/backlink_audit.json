@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T16:13:34.968768+00:00",
+  "generated_at": "2026-05-29T18:47:32.443792+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2341,6 +2341,11 @@
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-denver-co-guide/",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/29/tow-truck-denver-co/",
+        "verified": true
       }
     },
     "tow-truck-price-50-miles-from-city": {
@@ -2518,12 +2523,27 @@
     "towing-cost-boston-massachusetts": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-boston-massachusetts.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-boston-massachusetts_0835800859.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-boston-massachusetts-complete-breakdown-guide-quick-guide-jcn",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-boston-massachusetts-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817969897465315328/towing-cost-boston-massachusetts",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/25/towing-cost-boston-massachusetts/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/29/towing-cost-boston-massachusetts-2/",
         "verified": true
       }
     },
@@ -2789,6 +2809,13 @@
         "verified": true
       }
     },
+    "towing-cost-el-paso-texas": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-el-paso-texas-what-youll_017690582.html",
+        "verified": true
+      }
+    },
     "towing-cost-fort-worth-texas": {
       "blog": {
         "reason": "ok",
@@ -2899,6 +2926,33 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/towing-cost-houston-texas-sunday-emergency/",
+        "verified": true
+      }
+    },
+    "towing-cost-in-atlanta-georgia-highway": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-atlanta-georgia-highway.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-in-atlanta-georgia-highway-what-youll-pay-right-now-explained-a",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-atlanta-georgia-highway-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/817964008768454656/towing-cost-in-atlanta-georgia-highway",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/29/towing-cost-in-atlanta-georgia-highway/",
         "verified": true
       }
     },
@@ -3902,24 +3956,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 148,
-      "verified": 141
+      "checked": 150,
+      "verified": 143
     },
     "dev": {
-      "checked": 85,
-      "verified": 85
+      "checked": 87,
+      "verified": 87
     },
     "feeder": {
-      "checked": 156,
-      "verified": 156
-    },
-    "tumblr": {
-      "checked": 152,
-      "verified": 152
-    },
-    "wordpress": {
       "checked": 158,
       "verified": 158
+    },
+    "tumblr": {
+      "checked": 154,
+      "verified": 154
+    },
+    "wordpress": {
+      "checked": 160,
+      "verified": 160
     }
   }
 }

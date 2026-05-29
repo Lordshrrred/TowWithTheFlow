@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T16:13:40.196303+00:00",
+  "generated_at": "2026-05-29T18:47:36.428164+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/05/29/transmission-fluid-leaking-can-i-drive-to-mechanic/",
     "https://towwiththeflowyo.wordpress.com/2026/05/28/how-to-change-tire-highway-safely-2/",
@@ -195,7 +195,10 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/29/tow-truck-denver-co/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/29/towing-cost-boston-massachusetts-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/29/towing-cost-in-atlanta-georgia-highway/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -1198,6 +1201,15 @@
         "verified": true
       }
     },
+    "tow-truck-denver-co": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/tow-truck-denver-co/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/29/tow-truck-denver-co/",
+        "verified": true
+      }
+    },
     "tow-truck-price-50-miles-from-city": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/tow-truck-price-50-miles-from-city/",
@@ -1277,6 +1289,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/25/towing-cost-boston-massachusetts/",
         "verified": true
+      }
+    },
+    "towing-cost-boston-massachusetts-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/29/towing-cost-boston-massachusetts-2/",
+        "verified": false
       }
     },
     "towing-cost-charlotte-north-carolina": {
@@ -1474,6 +1495,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/towing-cost-houston-texas-sunday-emergency/",
+        "verified": true
+      }
+    },
+    "towing-cost-in-atlanta-georgia-highway": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-in-atlanta-georgia-highway/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/29/towing-cost-in-atlanta-georgia-highway/",
         "verified": true
       }
     },
@@ -1958,8 +1988,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 195,
-      "verified": 160
+      "checked": 198,
+      "verified": 162
     }
   }
 }
