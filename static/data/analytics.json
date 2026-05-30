@@ -1,9 +1,9 @@
 {
-  "pageviews": 9,
-  "sessions": 3,
-  "avgSessionDur": 31,
-  "bounceRate": 0.6666666666666666,
-  "newUsers": 3,
+  "pageviews": 10,
+  "sessions": 4,
+  "avgSessionDur": 24,
+  "bounceRate": 0.75,
+  "newUsers": 4,
   "returningUsers": 0,
   "daily": [
     {
@@ -16,6 +16,10 @@
     },
     {
       "date": "20260527",
+      "pageviews": 1
+    },
+    {
+      "date": "20260529",
       "pageviews": 1
     }
   ],
@@ -40,6 +44,15 @@
     },
     {
       "rank": 3,
+      "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
+      "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
+      "pageviews": 1,
+      "avgDur": 0,
+      "bounceRate": 100.0,
+      "sessions": 1
+    },
+    {
+      "rank": 4,
       "page": "/contact/",
       "title": "Contact | Tow With The Flow",
       "pageviews": 1,
@@ -48,7 +61,7 @@
       "sessions": 1
     },
     {
-      "rank": 4,
+      "rank": 5,
       "page": "/posts/",
       "title": "All Guides | Tow With The Flow",
       "pageviews": 1,
@@ -57,7 +70,7 @@
       "sessions": 1
     },
     {
-      "rank": 5,
+      "rank": 6,
       "page": "/towing-cost-boston-massachusetts/",
       "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
       "pageviews": 1,
@@ -70,15 +83,29 @@
     {
       "channel": "Direct",
       "sessions": 2,
-      "pct": 66.7
+      "pct": 40.0
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 1,
+      "pct": 20.0
     },
     {
       "channel": "Referral",
       "sessions": 1,
-      "pct": 33.3
+      "pct": 20.0
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "pct": 20.0
     }
   ],
   "topCountries": [
+    {
+      "country": "United States",
+      "sessions": 2
+    },
     {
       "country": "Germany",
       "sessions": 1
@@ -86,13 +113,13 @@
     {
       "country": "United Kingdom",
       "sessions": 1
-    },
-    {
-      "country": "United States",
-      "sessions": 1
     }
   ],
   "topCities": [
+    {
+      "city": "",
+      "sessions": 1
+    },
     {
       "city": "(not set)",
       "sessions": 1
@@ -110,12 +137,20 @@
     {
       "device": "desktop",
       "sessions": 3
+    },
+    {
+      "device": "mobile",
+      "sessions": 1
     }
   ],
   "browsers": [
     {
       "browser": "Chrome",
       "sessions": 3
+    },
+    {
+      "browser": "Safari",
+      "sessions": 1
     }
   ],
   "os": [
@@ -126,7 +161,11 @@
     {
       "os": "Windows",
       "sessions": 1
+    },
+    {
+      "os": "iOS",
+      "sessions": 1
     }
   ],
-  "lastUpdated": "2026-05-29T10:14:13.591509+00:00"
+  "lastUpdated": "2026-05-30T08:40:50.704066+00:00"
 }
