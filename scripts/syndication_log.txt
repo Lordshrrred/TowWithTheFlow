@@ -6431,3 +6431,37 @@
 [2026-05-30 08:16:22] FEEDER | check-engine-light-flashing-can-i-drive-home | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/check-engine-light-flashing-can-i-drive-home-guide/
 [2026-05-30 08:16:22] === SYNDICATE DONE: check-engine-light-flashing-can-i-drive-home | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-05-30 08:16:22] SYNCED | check-engine-light-flashing-can-i-drive-home marked in synced-posts.txt
+[2026-05-30 09:42:56] BACKLOG: Posts total=175  synced=158  backlog=17  (today's posts excluded from backlog)
+[2026-05-30 09:42:56] BACKLOG: Syndicating backlog: car-battery-dies-in-parking-lot  (post date=2026-03-20)
+[2026-05-30 09:42:56] === SYNDICATE START: car-battery-dies-in-parking-lot ===
+[2026-05-30 09:42:56] PREFLIGHT | title: Car Battery Dies in Parking Lot: Exactly What To Do
+[2026-05-30 09:42:56] PREFLIGHT | date: 2026-03-20
+[2026-05-30 09:42:56] PREFLIGHT | timestamp: 2026-05-30 09:42:56
+[2026-05-30 09:42:56] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-05-30 09:42:56] PREFLIGHT | TUMBLR:  configured
+[2026-05-30 09:42:56] PREFLIGHT | BLOGGER: configured
+[2026-05-30 09:42:56] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-05-30 09:42:56] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-05-30 09:42:56] BACKLINK | car-battery-dies-in-parking-lot | missing — injecting before syndication
+[2026-05-30 09:42:56] DEVTO | car-battery-dies-in-parking-lot | START
+[2026-05-30 09:42:56] DEVTO | car-battery-dies-in-parking-lot | account=TWTF1
+[2026-05-30 09:42:56] DEVTO | car-battery-dies-in-parking-lot | SUCCESS | https://dev.to/roadsideamericatowing/car-battery-dies-in-parking-lot-exactly-what-to-do-quick-guide-3kb2
+[2026-05-30 09:42:56] --- waiting 60s before next platform ---
+[2026-05-30 09:43:56] TUMBLR | car-battery-dies-in-parking-lot | START
+[2026-05-30 09:43:57] TUMBLR | car-battery-dies-in-parking-lot | SUCCESS | https://towwiththeflow.tumblr.com/post/818052686983413760
+[2026-05-30 09:43:57] --- waiting 60s before next platform ---
+[2026-05-30 09:44:57] BLOGGER | car-battery-dies-in-parking-lot | START
+[2026-05-30 09:44:57] BLOGGER | car-battery-dies-in-parking-lot | step 1/3: refreshing access token
+[2026-05-30 09:44:57] BLOGGER | car-battery-dies-in-parking-lot | step 2/3: converting markdown to HTML
+[2026-05-30 09:44:57] BLOGGER | car-battery-dies-in-parking-lot | step 3/3: posting to blog 1959471973457654666
+[2026-05-30 09:44:57] BLOGGER | car-battery-dies-in-parking-lot | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-dies-in-parking-lot-exactly_01178594773.html
+[2026-05-30 09:44:57] --- waiting 60s before next platform ---
+[2026-05-30 09:45:57] WORDPRESS | car-battery-dies-in-parking-lot | START
+[2026-05-30 09:46:04] WORDPRESS | car-battery-dies-in-parking-lot | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/05/30/car-battery-dies-in-parking-lot-2/
+[2026-05-30 09:46:04] --- waiting 60s before next platform ---
+[2026-05-30 09:47:04] FEEDER | car-battery-dies-in-parking-lot | START
+[2026-05-30 09:47:05] FEEDER | car-battery-dies-in-parking-lot | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-battery-dies-in-parking-lot-help/
+[2026-05-30 09:47:05] === SYNDICATE DONE: car-battery-dies-in-parking-lot | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-05-30 09:47:05] SYNCED | car-battery-dies-in-parking-lot marked in synced-posts.txt
+[2026-05-30 09:47:05] BACKLOG: Backlog run complete: 5/5 succeeded for car-battery-dies-in-parking-lot
+[2026-05-30 09:47:05] BACKLOG: Total progress: 159/175 posts synced
