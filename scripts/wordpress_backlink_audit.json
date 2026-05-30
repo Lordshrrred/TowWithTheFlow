@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T14:08:29.886779+00:00",
+  "generated_at": "2026-05-30T17:35:12.068615+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/05/30/steering-wheel-locked-car-wont-start-tow-cost/",
     "https://towwiththeflowyo.wordpress.com/2026/05/29/tow-truck-denver-co/",
@@ -199,7 +199,10 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/30/towing-cost-fort-worth-texas/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/30/car-battery-dies-in-parking-lot-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/30/check-engine-light-flashing-can-i-drive-home/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -354,6 +357,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/26/car-battery-dies-in-parking-lot/",
         "verified": true
+      }
+    },
+    "car-battery-dies-in-parking-lot-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/30/car-battery-dies-in-parking-lot-2/",
+        "verified": false
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
@@ -785,6 +797,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/07/cheapest-tow-truck-service-sunday-chicago/",
+        "verified": true
+      }
+    },
+    "check-engine-light-flashing-can-i-drive-home": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/check-engine-light-flashing-can-i-drive-home/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/30/check-engine-light-flashing-can-i-drive-home/",
         "verified": true
       }
     },
@@ -1472,6 +1493,15 @@
         "verified": false
       }
     },
+    "towing-cost-fort-worth-texas": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-fort-worth-texas/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/30/towing-cost-fort-worth-texas/",
+        "verified": true
+      }
+    },
     "towing-cost-from-interstate-to-dealership": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-from-interstate-to-dealership/",
@@ -1998,8 +2028,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 199,
-      "verified": 163
+      "checked": 202,
+      "verified": 165
     }
   }
 }

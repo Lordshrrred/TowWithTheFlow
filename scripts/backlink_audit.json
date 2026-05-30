@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T14:08:27.709207+00:00",
+  "generated_at": "2026-05-30T17:35:07.556746+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -313,18 +313,27 @@
     "car-battery-dies-in-parking-lot": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-dies-in-parking-lot-exactly_01903019990.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-dies-in-parking-lot-exactly_01178594773.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-battery-dies-in-parking-lot-exactly-what-to-do-quick-guide-3kb2",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-battery-dies-in-parking-lot-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818052686983413760/car-battery-dies-in-parking-lot",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/26/car-battery-dies-in-parking-lot/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/30/car-battery-dies-in-parking-lot-2/",
         "verified": true
       }
     },
@@ -1310,6 +1319,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/07/cheapest-tow-truck-service-sunday-chicago/",
+        "verified": true
+      }
+    },
+    "check-engine-light-flashing-can-i-drive-home": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/check-engine-light-flashing-can-i-drive.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/check-engine-light-flashing-can-i-drive-home-safely-what-drivers-should-know-3nl7",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/check-engine-light-flashing-can-i-drive-home-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818046977392721920/check-engine-light-flashing-can-i-drive-home",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/30/check-engine-light-flashing-can-i-drive-home/",
         "verified": true
       }
     },
@@ -2848,6 +2884,11 @@
         "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-fort-worth-texas-what.html",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/30/towing-cost-fort-worth-texas/",
+        "verified": true
       }
     },
     "towing-cost-from-interstate-to-dealership": {
@@ -3805,6 +3846,19 @@
         "verified": true
       }
     },
+    "transmission-slipping-symptoms": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/transmission-slipping-symptoms-warning.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-symptoms-advice/",
+        "verified": true
+      }
+    },
     "transmission-slipping-symptoms-houston": {
       "dev": {
         "reason": "ok",
@@ -3983,24 +4037,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 151,
-      "verified": 144
+      "checked": 153,
+      "verified": 146
     },
     "dev": {
-      "checked": 88,
-      "verified": 88
+      "checked": 90,
+      "verified": 90
     },
     "feeder": {
-      "checked": 159,
-      "verified": 159
-    },
-    "tumblr": {
-      "checked": 155,
-      "verified": 155
-    },
-    "wordpress": {
       "checked": 161,
       "verified": 161
+    },
+    "tumblr": {
+      "checked": 157,
+      "verified": 157
+    },
+    "wordpress": {
+      "checked": 163,
+      "verified": 163
     }
   }
 }
