@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-05-30T06:31:51.348718+00:00",
+  "checked_at": "2026-05-30T06:34:57.802388+00:00",
   "checks": {
     "blogger": {
-      "detail": "draft create HTTP 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The caller does not have permission\",\n    \"errors\": [\n      {\n        \"message\": \"The caller does not have permission\",\n        \"dom",
-      "status": "unhealthy"
+      "detail": "TowingandFlowingRoadsideDenver",
+      "status": "healthy"
     },
     "devto": {
       "detail": "TWTF1, TWTF2",
@@ -21,5 +21,5 @@
     }
   },
   "last_alert_at": "",
-  "unhealthy_count": 1
+  "unhealthy_count": 0
 }
