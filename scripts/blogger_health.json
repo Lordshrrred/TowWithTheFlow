@@ -1,8 +1,8 @@
 {
   "alert_target": "earthlingoflight@gmail.com",
-  "checked_at": "2026-05-30T12:48:37.583896+00:00",
-  "detail": "draft create HTTP 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The caller does not have permission\",\n    \"errors\": [\n      {\n        \"message\": \"The caller does not have permission\",\n        \"domain\": \"global\",\n        \"reason\": \"forbidden\"\n      }\n    ],",
+  "checked_at": "2026-05-31T13:01:36.749322+00:00",
+  "detail": "",
   "last_alert_at": "",
-  "reason": "write_probe_failed",
-  "status": "unhealthy"
+  "reason": "ok",
+  "status": "healthy"
 }
