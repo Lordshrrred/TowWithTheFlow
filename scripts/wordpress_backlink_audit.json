@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T14:14:28.143533+00:00",
+  "generated_at": "2026-05-31T17:37:06.304525+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/05/31/airbag-light-on-can-i-drive-to-mechanic/",
     "https://towwiththeflowyo.wordpress.com/2026/05/30/towing-cost-fort-worth-texas/",
@@ -203,7 +203,10 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/31/towing-cost-el-paso-texas/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/31/car-making-noise-when-turning-steering-wheel-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/05/31/gas-pedal-stuck-can-i-drive-safely-home/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -520,6 +523,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/27/car-making-noise-when-turning-steering-wheel/",
         "verified": true
+      }
+    },
+    "car-making-noise-when-turning-steering-wheel-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/31/car-making-noise-when-turning-steering-wheel-2/",
+        "verified": false
       }
     },
     "car-making-noise-when-turning-steering-wheel-houston": {
@@ -906,6 +918,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/17/farmers-insurance-towing-reimbursement-after-breakdown/",
+        "verified": true
+      }
+    },
+    "gas-pedal-stuck-can-i-drive-safely-home": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/gas-pedal-stuck-can-i-drive-safely-home/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/31/gas-pedal-stuck-can-i-drive-safely-home/",
         "verified": true
       }
     },
@@ -1503,6 +1524,15 @@
         "verified": false
       }
     },
+    "towing-cost-el-paso-texas": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-el-paso-texas/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/31/towing-cost-el-paso-texas/",
+        "verified": true
+      }
+    },
     "towing-cost-fort-worth-texas": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-fort-worth-texas/",
@@ -2038,8 +2068,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 203,
-      "verified": 166
+      "checked": 206,
+      "verified": 168
     }
   }
 }

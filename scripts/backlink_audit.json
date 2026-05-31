@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T14:14:25.948486+00:00",
+  "generated_at": "2026-05-31T17:37:02.122235+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -703,18 +703,27 @@
     "car-making-noise-when-turning-steering-wheel": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-making-noise-when-turning-steering_0383102311.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-making-noise-when-turning-steering_01685181255.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-making-noise-when-turning-steering-wheel-diagnose-and-fix-what-drivers-should-know-1dj3",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-making-noise-when-turning-steering-wheel-help/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-making-noise-when-turning-steering-wheel-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818143368111685632/car-making-noise-when-turning-steering-wheel",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/27/car-making-noise-when-turning-steering-wheel/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/31/car-making-noise-when-turning-steering-wheel-2/",
         "verified": true
       }
     },
@@ -772,6 +781,19 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/20/car-overheated-can-i-drive-it/",
+        "verified": true
+      }
+    },
+    "car-overheating-in-traffic-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-overheating-in-traffic-what-to-do.html",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-overheating-in-traffic-what-to-do-tips/",
         "verified": true
       }
     },
@@ -1586,6 +1608,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/17/farmers-insurance-towing-reimbursement-after-breakdown/",
+        "verified": true
+      }
+    },
+    "gas-pedal-stuck-can-i-drive-safely-home": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/gas-pedal-stuck-can-i-drive-safely-home.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/gas-pedal-stuck-can-i-drive-safely-home-or-do-i-need-to-stop-what-drivers-should-know-1c3k",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/gas-pedal-stuck-can-i-drive-safely-home-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818137870363688960/gas-pedal-stuck-can-i-drive-safely-home",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/31/gas-pedal-stuck-can-i-drive-safely-home/",
         "verified": true
       }
     },
@@ -2904,6 +2953,11 @@
         "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-el-paso-texas-what-youll_017690582.html",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/05/31/towing-cost-el-paso-texas/",
+        "verified": true
       }
     },
     "towing-cost-fort-worth-texas": {
@@ -4064,24 +4118,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 154,
-      "verified": 147
+      "checked": 156,
+      "verified": 149
     },
     "dev": {
-      "checked": 91,
-      "verified": 91
+      "checked": 93,
+      "verified": 93
     },
     "feeder": {
-      "checked": 162,
-      "verified": 162
-    },
-    "tumblr": {
-      "checked": 158,
-      "verified": 158
-    },
-    "wordpress": {
       "checked": 164,
       "verified": 164
+    },
+    "tumblr": {
+      "checked": 160,
+      "verified": 160
+    },
+    "wordpress": {
+      "checked": 166,
+      "verified": 166
     }
   }
 }
