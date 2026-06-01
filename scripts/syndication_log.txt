@@ -6658,3 +6658,37 @@
 [2026-06-01 12:26:31] FEEDER | cheapest-towing-service-near-me-after-hours | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/cheapest-towing-service-near-me-after-hours-help/
 [2026-06-01 12:26:31] === SYNDICATE DONE: cheapest-towing-service-near-me-after-hours | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-06-01 12:26:31] SYNCED | cheapest-towing-service-near-me-after-hours marked in synced-posts.txt
+[2026-06-01 13:27:15] BACKLOG: Posts total=179  synced=164  backlog=15  (today's posts excluded from backlog)
+[2026-06-01 13:27:15] BACKLOG: Syndicating backlog: tow-truck-denver-co  (post date=2026-03-20)
+[2026-06-01 13:27:15] === SYNDICATE START: tow-truck-denver-co ===
+[2026-06-01 13:27:15] PREFLIGHT | title: Tow Truck Denver CO: What It Costs and What To Do When You're Stranded
+[2026-06-01 13:27:15] PREFLIGHT | date: 2026-03-20
+[2026-06-01 13:27:15] PREFLIGHT | timestamp: 2026-06-01 13:27:15
+[2026-06-01 13:27:15] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-06-01 13:27:15] PREFLIGHT | TUMBLR:  configured
+[2026-06-01 13:27:15] PREFLIGHT | BLOGGER: configured
+[2026-06-01 13:27:15] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-06-01 13:27:15] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-06-01 13:27:15] BACKLINK | tow-truck-denver-co | missing — injecting before syndication
+[2026-06-01 13:27:15] DEVTO | tow-truck-denver-co | START
+[2026-06-01 13:27:15] DEVTO | tow-truck-denver-co | account=TWTF1
+[2026-06-01 13:27:15] DEVTO | tow-truck-denver-co | SUCCESS | https://dev.to/roadsideamericatowing/tow-truck-denver-co-what-it-costs-and-what-to-do-when-youre-stranded-quick-guide-1pkh
+[2026-06-01 13:27:15] --- waiting 60s before next platform ---
+[2026-06-01 13:28:15] TUMBLR | tow-truck-denver-co | START
+[2026-06-01 13:28:16] TUMBLR | tow-truck-denver-co | SUCCESS | https://towwiththeflow.tumblr.com/post/818247993677496320
+[2026-06-01 13:28:16] --- waiting 60s before next platform ---
+[2026-06-01 13:29:16] BLOGGER | tow-truck-denver-co | START
+[2026-06-01 13:29:16] BLOGGER | tow-truck-denver-co | step 1/3: refreshing access token
+[2026-06-01 13:29:16] BLOGGER | tow-truck-denver-co | step 2/3: converting markdown to HTML
+[2026-06-01 13:29:16] BLOGGER | tow-truck-denver-co | step 3/3: posting to blog 1959471973457654666
+[2026-06-01 13:29:17] BLOGGER | tow-truck-denver-co | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/06/tow-truck-denver-co-what-it-costs-and.html
+[2026-06-01 13:29:17] --- waiting 60s before next platform ---
+[2026-06-01 13:30:17] WORDPRESS | tow-truck-denver-co | START
+[2026-06-01 13:30:25] WORDPRESS | tow-truck-denver-co | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/06/01/tow-truck-denver-co-2/
+[2026-06-01 13:30:25] --- waiting 60s before next platform ---
+[2026-06-01 13:31:25] FEEDER | tow-truck-denver-co | START
+[2026-06-01 13:31:26] FEEDER | tow-truck-denver-co | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tow-truck-denver-co-help/
+[2026-06-01 13:31:26] === SYNDICATE DONE: tow-truck-denver-co | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-06-01 13:31:26] SYNCED | tow-truck-denver-co marked in synced-posts.txt
+[2026-06-01 13:31:26] BACKLOG: Backlog run complete: 5/5 succeeded for tow-truck-denver-co
+[2026-06-01 13:31:26] BACKLOG: Total progress: 165/179 posts synced
