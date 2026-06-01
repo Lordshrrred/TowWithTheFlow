@@ -1,9 +1,9 @@
 {
-  "pageviews": 10,
-  "sessions": 4,
-  "avgSessionDur": 24,
-  "bounceRate": 0.75,
-  "newUsers": 4,
+  "pageviews": 11,
+  "sessions": 5,
+  "avgSessionDur": 34,
+  "bounceRate": 0.6,
+  "newUsers": 5,
   "returningUsers": 0,
   "daily": [
     {
@@ -20,6 +20,10 @@
     },
     {
       "date": "20260529",
+      "pageviews": 1
+    },
+    {
+      "date": "20260530",
       "pageviews": 1
     }
   ],
@@ -47,8 +51,8 @@
       "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
       "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
       "pageviews": 1,
-      "avgDur": 0,
-      "bounceRate": 100.0,
+      "avgDur": 74,
+      "bounceRate": 0.0,
       "sessions": 1
     },
     {
@@ -77,6 +81,15 @@
       "avgDur": 50,
       "bounceRate": 0.0,
       "sessions": 1
+    },
+    {
+      "rank": 7,
+      "page": "/towing-cost-memphis-tennessee/",
+      "title": "Towing Cost in Memphis Tennessee: What You'll Pay and What to Do | Tow With The Flow",
+      "pageviews": 1,
+      "avgDur": 0,
+      "bounceRate": 100.0,
+      "sessions": 1
     }
   ],
   "trafficSources": [
@@ -104,7 +117,7 @@
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 2
+      "sessions": 3
     },
     {
       "country": "Germany",
@@ -117,12 +130,8 @@
   ],
   "topCities": [
     {
-      "city": "",
-      "sessions": 1
-    },
-    {
       "city": "(not set)",
-      "sessions": 1
+      "sessions": 2
     },
     {
       "city": "Aylsham",
@@ -130,6 +139,10 @@
     },
     {
       "city": "Cambridge",
+      "sessions": 1
+    },
+    {
+      "city": "Los Angeles",
       "sessions": 1
     }
   ],
@@ -140,7 +153,7 @@
     },
     {
       "device": "mobile",
-      "sessions": 1
+      "sessions": 2
     }
   ],
   "browsers": [
@@ -150,7 +163,7 @@
     },
     {
       "browser": "Safari",
-      "sessions": 1
+      "sessions": 2
     }
   ],
   "os": [
@@ -159,13 +172,13 @@
       "sessions": 2
     },
     {
-      "os": "Windows",
-      "sessions": 1
+      "os": "iOS",
+      "sessions": 2
     },
     {
-      "os": "iOS",
+      "os": "Windows",
       "sessions": 1
     }
   ],
-  "lastUpdated": "2026-05-30T08:40:50.704066+00:00"
+  "lastUpdated": "2026-06-01T12:09:36.194350+00:00"
 }
