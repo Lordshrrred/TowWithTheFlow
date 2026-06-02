@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T19:57:29.217638+00:00",
+  "generated_at": "2026-06-02T22:31:06.990956+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -545,10 +545,9 @@
     },
     "car-leaking-fluid-underneath-emergency-tow": {
       "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-leaking-fluid-underneath-when-you.html",
-        "verified": true
+        "reason": "http_404",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-leaking-fluid-underneath-when-you.html",
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -903,10 +902,9 @@
     },
     "car-shaking-violently-while-driving-tow-needed": {
       "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-shaking-violently-while-driving.html",
-        "verified": true
+        "reason": "http_429",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-shaking-violently-while-driving.html",
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1766,9 +1764,9 @@
     },
     "how-long-can-a-car-sit-broken-down-on-roadside": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-long-can-car-sit-broken-down-on.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2786,9 +2784,9 @@
     },
     "towing-cost-chicago-illinois": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-chicago-illinois-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4276,7 +4274,7 @@
   "summary": {
     "blog": {
       "checked": 162,
-      "verified": 155
+      "verified": 151
     },
     "dev": {
       "checked": 99,
