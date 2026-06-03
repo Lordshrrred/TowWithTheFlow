@@ -1,9 +1,9 @@
 {
-  "pageviews": 11,
-  "sessions": 5,
-  "avgSessionDur": 34,
-  "bounceRate": 0.6,
-  "newUsers": 5,
+  "pageviews": 12,
+  "sessions": 6,
+  "avgSessionDur": 28,
+  "bounceRate": 0.6666666666666666,
+  "newUsers": 6,
   "returningUsers": 0,
   "daily": [
     {
@@ -25,6 +25,10 @@
     {
       "date": "20260530",
       "pageviews": 1
+    },
+    {
+      "date": "20260602",
+      "pageviews": 1
     }
   ],
   "topPages": [
@@ -32,10 +36,10 @@
       "rank": 1,
       "page": "/",
       "title": "Tow With The Flow | Real help when your car breaks down.",
-      "pageviews": 4,
-      "avgDur": 7,
-      "bounceRate": 66.7,
-      "sessions": 3
+      "pageviews": 5,
+      "avgDur": 6,
+      "bounceRate": 75.0,
+      "sessions": 4
     },
     {
       "rank": 2,
@@ -95,29 +99,29 @@
   "trafficSources": [
     {
       "channel": "Direct",
-      "sessions": 2,
-      "pct": 40.0
+      "sessions": 3,
+      "pct": 50.0
     },
     {
       "channel": "Organic Search",
       "sessions": 1,
-      "pct": 20.0
+      "pct": 16.7
     },
     {
       "channel": "Referral",
       "sessions": 1,
-      "pct": 20.0
+      "pct": 16.7
     },
     {
       "channel": "Unassigned",
       "sessions": 1,
-      "pct": 20.0
+      "pct": 16.7
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 3
+      "sessions": 4
     },
     {
       "country": "Germany",
@@ -134,22 +138,22 @@
       "sessions": 2
     },
     {
+      "city": "Los Angeles",
+      "sessions": 2
+    },
+    {
       "city": "Aylsham",
       "sessions": 1
     },
     {
       "city": "Cambridge",
       "sessions": 1
-    },
-    {
-      "city": "Los Angeles",
-      "sessions": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "sessions": 3
+      "sessions": 4
     },
     {
       "device": "mobile",
@@ -159,7 +163,7 @@
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 3
+      "sessions": 4
     },
     {
       "browser": "Safari",
@@ -172,13 +176,13 @@
       "sessions": 2
     },
     {
-      "os": "iOS",
+      "os": "Windows",
       "sessions": 2
     },
     {
-      "os": "Windows",
-      "sessions": 1
+      "os": "iOS",
+      "sessions": 2
     }
   ],
-  "lastUpdated": "2026-06-02T10:54:49.619521+00:00"
+  "lastUpdated": "2026-06-03T11:23:08.135525+00:00"
 }
