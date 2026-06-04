@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T15:49:56.475649+00:00",
+  "generated_at": "2026-06-04T18:32:30.905853+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -794,6 +794,11 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-overheating-in-traffic-what-to-do-tips/",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/04/car-overheating-in-traffic-what-to-do/",
         "verified": true
       }
     },
@@ -2713,6 +2718,33 @@
         "verified": true
       }
     },
+    "towing-cost-atlanta-georgia-rush-hour-traffic": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-atlanta-georgia-rush.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-in-atlanta-georgia-rush-hour-traffic-what-youll-pay-right-now-explained-4bma",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-atlanta-georgia-rush-hour-traffic-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818506597871517696/towing-cost-atlanta-georgia-rush-hour-traffic",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/04/towing-cost-atlanta-georgia-rush-hour-traffic/",
+        "verified": true
+      }
+    },
     "towing-cost-austin-texas": {
       "blog": {
         "reason": "ok",
@@ -4131,6 +4163,13 @@
         "verified": true
       }
     },
+    "towing-cost-tucson-arizona": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-tucson-arizona-what_01628117497.html",
+        "verified": true
+      }
+    },
     "towing-cost-vs-roadside-assistance-comparison": {
       "blog": {
         "reason": "ok",
@@ -4178,18 +4217,27 @@
     "transmission-slipping-symptoms": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/transmission-slipping-symptoms-warning.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/transmission-slipping-symptoms-warning.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/transmission-slipping-symptoms-warning-signs-your-car-needs-help-roadside-tips-28cc",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-symptoms-advice/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-symptoms-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818512184209555456/transmission-slipping-symptoms",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/06/02/transmission-slipping-symptoms-2/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/04/transmission-slipping-symptoms-3/",
         "verified": true
       }
     },
@@ -4371,24 +4419,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 165,
-      "verified": 158
+      "checked": 167,
+      "verified": 160
     },
     "dev": {
-      "checked": 103,
-      "verified": 103
+      "checked": 105,
+      "verified": 105
     },
     "feeder": {
-      "checked": 174,
-      "verified": 174
+      "checked": 175,
+      "verified": 175
     },
     "tumblr": {
-      "checked": 170,
-      "verified": 170
+      "checked": 172,
+      "verified": 172
     },
     "wordpress": {
-      "checked": 174,
-      "verified": 174
+      "checked": 176,
+      "verified": 176
     }
   }
 }
