@@ -1,9 +1,9 @@
 {
-  "pageviews": 12,
-  "sessions": 6,
-  "avgSessionDur": 28,
-  "bounceRate": 0.6666666666666666,
-  "newUsers": 6,
+  "pageviews": 13,
+  "sessions": 7,
+  "avgSessionDur": 24,
+  "bounceRate": 0.7142857142857143,
+  "newUsers": 7,
   "returningUsers": 0,
   "daily": [
     {
@@ -29,6 +29,10 @@
     {
       "date": "20260602",
       "pageviews": 1
+    },
+    {
+      "date": "20260604",
+      "pageviews": 1
     }
   ],
   "topPages": [
@@ -36,10 +40,10 @@
       "rank": 1,
       "page": "/",
       "title": "Tow With The Flow | Real help when your car breaks down.",
-      "pageviews": 5,
-      "avgDur": 6,
-      "bounceRate": 75.0,
-      "sessions": 4
+      "pageviews": 6,
+      "avgDur": 4,
+      "bounceRate": 80.0,
+      "sessions": 5
     },
     {
       "rank": 2,
@@ -99,29 +103,29 @@
   "trafficSources": [
     {
       "channel": "Direct",
-      "sessions": 3,
-      "pct": 50.0
+      "sessions": 4,
+      "pct": 57.1
     },
     {
       "channel": "Organic Search",
       "sessions": 1,
-      "pct": 16.7
+      "pct": 14.3
     },
     {
       "channel": "Referral",
       "sessions": 1,
-      "pct": 16.7
+      "pct": 14.3
     },
     {
       "channel": "Unassigned",
       "sessions": 1,
-      "pct": 16.7
+      "pct": 14.3
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 4
+      "sessions": 5
     },
     {
       "country": "Germany",
@@ -142,6 +146,10 @@
       "sessions": 2
     },
     {
+      "city": "",
+      "sessions": 1
+    },
+    {
       "city": "Aylsham",
       "sessions": 1
     },
@@ -153,7 +161,7 @@
   "devices": [
     {
       "device": "desktop",
-      "sessions": 4
+      "sessions": 5
     },
     {
       "device": "mobile",
@@ -163,7 +171,7 @@
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 4
+      "sessions": 5
     },
     {
       "browser": "Safari",
@@ -172,11 +180,11 @@
   ],
   "os": [
     {
-      "os": "Macintosh",
-      "sessions": 2
+      "os": "Windows",
+      "sessions": 3
     },
     {
-      "os": "Windows",
+      "os": "Macintosh",
       "sessions": 2
     },
     {
@@ -184,5 +192,5 @@
       "sessions": 2
     }
   ],
-  "lastUpdated": "2026-06-04T10:12:11.998658+00:00"
+  "lastUpdated": "2026-06-05T10:16:29.543143+00:00"
 }
