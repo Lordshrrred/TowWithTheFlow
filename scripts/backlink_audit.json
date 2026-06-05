@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T11:40:47.789719+00:00",
+  "generated_at": "2026-06-05T15:31:26.032610+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -365,12 +365,6 @@
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-battery-dies-in-parking-lot-what-to.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
@@ -416,12 +410,6 @@
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-breaks-down-on-bridge-who-to-call-and-what-to-do-roadside-tips-51mf",
@@ -1771,9 +1759,9 @@
     },
     "how-long-can-a-car-sit-broken-down-on-roadside": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-long-can-car-sit-broken-down-on.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1798,9 +1786,9 @@
     },
     "how-much-does-a-tow-cost-in-colorado": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-tow-cost-in-colorado.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2243,6 +2231,33 @@
         "verified": true
       }
     },
+    "state-farm-roadside-assistance-towing-limit-miles": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/state-farm-roadside-assistance-towing_01666866864.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/state-farm-roadside-assistance-towing-limit-miles-coverage-distance-explained-what-drivers-should-45c9",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/state-farm-roadside-assistance-towing-limit-miles-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818588284908437504/state-farm-roadside-assistance-towing-limit-miles",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/05/state-farm-roadside-assistance-towing-limit-miles/",
+        "verified": true
+      }
+    },
     "state-farm-roadside-assistance-towing-limits-coverage": {
       "blog": {
         "reason": "ok",
@@ -2327,6 +2342,7 @@
     "tire-blowout-highway-emergency-tow-cost": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tire-blowout-on-highway-emergency-tow.html",
         "verified": true
       },
@@ -2666,9 +2682,9 @@
     },
     "towing-cost-atlanta-georgia": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4419,24 +4435,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 167,
-      "verified": 160
+      "checked": 166,
+      "verified": 156
     },
     "dev": {
-      "checked": 105,
-      "verified": 105
+      "checked": 106,
+      "verified": 106
     },
     "feeder": {
-      "checked": 175,
-      "verified": 175
-    },
-    "tumblr": {
-      "checked": 172,
-      "verified": 172
-    },
-    "wordpress": {
       "checked": 176,
       "verified": 176
+    },
+    "tumblr": {
+      "checked": 173,
+      "verified": 173
+    },
+    "wordpress": {
+      "checked": 177,
+      "verified": 177
     }
   }
 }
