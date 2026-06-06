@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T10:25:36.817648+00:00",
+  "generated_at": "2026-06-06T14:14:13.076513+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1792,6 +1792,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/18/geico-roadside-assistance-towing-coverage-how-much-pays/",
+        "verified": true
+      }
+    },
+    "geico-roadside-assistance-towing-limits-how-many-miles": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/geico-roadside-assistance-towing-limits.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/geico-roadside-assistance-towing-limits-how-many-miles-coverage-you-get-explained-2i8p",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/geico-roadside-assistance-towing-limits-how-many-miles-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818672416709591040/geico-roadside-assistance-towing-limits-how-many-miles",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/06/geico-roadside-assistance-towing-limits-how-many-miles/",
         "verified": true
       }
     },
@@ -4500,24 +4527,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 170,
-      "verified": 163
+      "checked": 171,
+      "verified": 164
     },
     "dev": {
-      "checked": 108,
-      "verified": 108
+      "checked": 109,
+      "verified": 109
     },
     "feeder": {
-      "checked": 178,
-      "verified": 178
-    },
-    "tumblr": {
-      "checked": 175,
-      "verified": 175
-    },
-    "wordpress": {
       "checked": 179,
       "verified": 179
+    },
+    "tumblr": {
+      "checked": 176,
+      "verified": 176
+    },
+    "wordpress": {
+      "checked": 180,
+      "verified": 180
     }
   }
 }
