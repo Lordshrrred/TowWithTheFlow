@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T14:24:21.602009+00:00",
+  "generated_at": "2026-06-07T17:44:07.086463+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2231,6 +2231,33 @@
         "verified": true
       }
     },
+    "nationwide-roadside-assistance-towing-distance-limits": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/nationwide-roadside-assistance-towing.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/nationwide-roadside-assistance-towing-distance-limits-what-you-need-to-know-what-drivers-should-3if0",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/nationwide-roadside-assistance-towing-distance-limits-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818772711714226177/nationwide-roadside-assistance-towing-distance-limits",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/07/nationwide-roadside-assistance-towing-distance-limits/",
+        "verified": true
+      }
+    },
     "progressive-insurance-towing-coverage-how-many-times": {
       "blog": {
         "reason": "ok",
@@ -2511,18 +2538,27 @@
     "tow-truck-cost-aaa-vs-non-aaa-chicago": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/aaa-vs-non-aaa-tow-truck-costs-in.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/aaa-vs-non-aaa-tow-truck-costs-in_01787328963.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/aaa-vs-non-aaa-tow-truck-costs-in-chicago-what-youll-actually-pay-what-to-do-next-ecb",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-aaa-vs-non-aaa-chicago-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/818777781039235072/tow-truck-cost-aaa-vs-non-aaa-chicago",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/06/06/tow-truck-cost-aaa-vs-non-aaa-chicago/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/07/tow-truck-cost-aaa-vs-non-aaa-chicago-2/",
         "verified": true
       }
     },
@@ -2805,9 +2841,9 @@
     },
     "towing-cost-albuquerque-new-mexico": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/03/towing-cost-in-albuquerque-new-mexico_0998162076.html",
-        "verified": false
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-albuquerque-new-mexico.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -4355,6 +4391,11 @@
         "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-tucson-arizona-what_01628117497.html",
         "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/07/towing-cost-tucson-arizona/",
+        "verified": true
       }
     },
     "towing-cost-vs-roadside-assistance-comparison": {
@@ -4606,24 +4647,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 174,
-      "verified": 167
+      "checked": 175,
+      "verified": 169
     },
     "dev": {
-      "checked": 112,
-      "verified": 112
+      "checked": 114,
+      "verified": 114
     },
     "feeder": {
-      "checked": 182,
-      "verified": 182
-    },
-    "tumblr": {
-      "checked": 179,
-      "verified": 179
-    },
-    "wordpress": {
       "checked": 183,
       "verified": 183
+    },
+    "tumblr": {
+      "checked": 181,
+      "verified": 181
+    },
+    "wordpress": {
+      "checked": 185,
+      "verified": 185
     }
   }
 }
