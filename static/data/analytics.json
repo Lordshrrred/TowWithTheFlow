@@ -1,9 +1,9 @@
 {
-  "pageviews": 14,
-  "sessions": 8,
-  "avgSessionDur": 21,
-  "bounceRate": 0.75,
-  "newUsers": 8,
+  "pageviews": 16,
+  "sessions": 10,
+  "avgSessionDur": 24,
+  "bounceRate": 0.7,
+  "newUsers": 10,
   "returningUsers": 0,
   "daily": [
     {
@@ -37,6 +37,10 @@
     {
       "date": "20260606",
       "pageviews": 1
+    },
+    {
+      "date": "20260607",
+      "pageviews": 2
     }
   ],
   "topPages": [
@@ -44,10 +48,10 @@
       "rank": 1,
       "page": "/",
       "title": "Tow With The Flow | Real help when your car breaks down.",
-      "pageviews": 6,
-      "avgDur": 4,
-      "bounceRate": 80.0,
-      "sessions": 5
+      "pageviews": 7,
+      "avgDur": 5,
+      "bounceRate": 83.3,
+      "sessions": 6
     },
     {
       "rank": 2,
@@ -78,6 +82,15 @@
     },
     {
       "rank": 5,
+      "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+      "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+      "pageviews": 1,
+      "avgDur": 0,
+      "bounceRate": 100.0,
+      "sessions": 1
+    },
+    {
+      "rank": 6,
       "page": "/posts/",
       "title": "All Guides | Tow With The Flow",
       "pageviews": 1,
@@ -86,7 +99,7 @@
       "sessions": 1
     },
     {
-      "rank": 6,
+      "rank": 7,
       "page": "/towing-cost-boston-massachusetts/",
       "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
       "pageviews": 1,
@@ -95,16 +108,16 @@
       "sessions": 1
     },
     {
-      "rank": 7,
+      "rank": 8,
       "page": "/towing-cost-columbus-ohio/",
       "title": "Towing Cost in Columbus Ohio: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 1,
-      "avgDur": 0,
-      "bounceRate": 100.0,
+      "avgDur": 65,
+      "bounceRate": 0.0,
       "sessions": 1
     },
     {
-      "rank": 8,
+      "rank": 9,
       "page": "/towing-cost-memphis-tennessee/",
       "title": "Towing Cost in Memphis Tennessee: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 1,
@@ -116,32 +129,36 @@
   "trafficSources": [
     {
       "channel": "Direct",
-      "sessions": 4,
-      "pct": 44.4
+      "sessions": 6,
+      "pct": 60.0
     },
     {
       "channel": "Organic Search",
       "sessions": 2,
-      "pct": 22.2
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "pct": 22.2
+      "pct": 20.0
     },
     {
       "channel": "Referral",
       "sessions": 1,
-      "pct": 11.1
+      "pct": 10.0
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "pct": 10.0
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 6
+      "sessions": 7
     },
     {
       "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "country": "T\u00fcrkiye",
       "sessions": 1
     },
     {
@@ -152,29 +169,33 @@
   "topCities": [
     {
       "city": "(not set)",
-      "sessions": 3
+      "sessions": 4
     },
     {
       "city": "Los Angeles",
       "sessions": 2
     },
     {
-      "city": "",
-      "sessions": 1
-    },
-    {
       "city": "Aylsham",
       "sessions": 1
     },
     {
+      "city": "Bursa",
+      "sessions": 1
+    },
+    {
       "city": "Cambridge",
+      "sessions": 1
+    },
+    {
+      "city": "Greenfield",
       "sessions": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "sessions": 6
+      "sessions": 8
     },
     {
       "device": "mobile",
@@ -184,7 +205,7 @@
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 5
+      "sessions": 7
     },
     {
       "browser": "Safari",
@@ -193,11 +214,11 @@
   ],
   "os": [
     {
-      "os": "Macintosh",
-      "sessions": 3
+      "os": "Windows",
+      "sessions": 5
     },
     {
-      "os": "Windows",
+      "os": "Macintosh",
       "sessions": 3
     },
     {
@@ -205,5 +226,5 @@
       "sessions": 2
     }
   ],
-  "lastUpdated": "2026-06-07T09:38:20.200038+00:00"
+  "lastUpdated": "2026-06-08T11:20:36.880766+00:00"
 }
