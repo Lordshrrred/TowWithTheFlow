@@ -7476,3 +7476,37 @@
 [2026-06-09 09:42:36] FEEDER | nationwide-roadside-assistance-towing-distance-limits | START
 [2026-06-09 09:42:37] FEEDER | nationwide-roadside-assistance-towing-distance-limits | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/nationwide-roadside-assistance-towing-distance-limits-guide/
 [2026-06-09 09:42:37] === SYNDICATE DONE: nationwide-roadside-assistance-towing-distance-limits | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-06-09 11:06:35] BACKLOG: Posts total=193  synced=186  backlog=7  (today's posts excluded from backlog)
+[2026-06-09 11:06:35] BACKLOG: Syndicating backlog: engine-seized-driving-towing-cost  (post date=2026-03-24)
+[2026-06-09 11:06:35] === SYNDICATE START: engine-seized-driving-towing-cost ===
+[2026-06-09 11:06:35] PREFLIGHT | title: Engine Seized While Driving: Towing Costs and What to Do
+[2026-06-09 11:06:35] PREFLIGHT | date: 2026-03-24
+[2026-06-09 11:06:35] PREFLIGHT | timestamp: 2026-06-09 11:06:35
+[2026-06-09 11:06:35] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-06-09 11:06:35] PREFLIGHT | TUMBLR:  configured
+[2026-06-09 11:06:35] PREFLIGHT | BLOGGER: configured
+[2026-06-09 11:06:35] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-06-09 11:06:35] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-06-09 11:06:35] BACKLINK | engine-seized-driving-towing-cost | missing — injecting before syndication
+[2026-06-09 11:06:35] DEVTO | engine-seized-driving-towing-cost | START
+[2026-06-09 11:06:35] DEVTO | engine-seized-driving-towing-cost | account=TWTF1
+[2026-06-09 11:06:36] DEVTO | engine-seized-driving-towing-cost | SUCCESS | https://dev.to/roadsideamericatowing/engine-seized-while-driving-towing-costs-and-what-to-do-roadside-tips-5f3b
+[2026-06-09 11:06:36] --- waiting 60s before next platform ---
+[2026-06-09 11:07:36] TUMBLR | engine-seized-driving-towing-cost | START
+[2026-06-09 11:07:36] TUMBLR | engine-seized-driving-towing-cost | SUCCESS | https://towwiththeflow.tumblr.com/post/818963919936929792
+[2026-06-09 11:07:36] --- waiting 60s before next platform ---
+[2026-06-09 11:08:36] BLOGGER | engine-seized-driving-towing-cost | START
+[2026-06-09 11:08:36] BLOGGER | engine-seized-driving-towing-cost | step 1/3: refreshing access token
+[2026-06-09 11:08:37] BLOGGER | engine-seized-driving-towing-cost | step 2/3: converting markdown to HTML
+[2026-06-09 11:08:37] BLOGGER | engine-seized-driving-towing-cost | step 3/3: posting to blog 1959471973457654666
+[2026-06-09 11:08:37] BLOGGER | engine-seized-driving-towing-cost | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/06/engine-seized-while-driving-towing_01607531843.html
+[2026-06-09 11:08:37] --- waiting 60s before next platform ---
+[2026-06-09 11:09:37] WORDPRESS | engine-seized-driving-towing-cost | START
+[2026-06-09 11:09:47] WORDPRESS | engine-seized-driving-towing-cost | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/06/09/engine-seized-driving-towing-cost/
+[2026-06-09 11:09:47] --- waiting 60s before next platform ---
+[2026-06-09 11:10:47] FEEDER | engine-seized-driving-towing-cost | START
+[2026-06-09 11:10:47] FEEDER | engine-seized-driving-towing-cost | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/engine-seized-driving-towing-cost-help/
+[2026-06-09 11:10:47] === SYNDICATE DONE: engine-seized-driving-towing-cost | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-06-09 11:10:47] SYNCED | engine-seized-driving-towing-cost marked in synced-posts.txt
+[2026-06-09 11:10:47] BACKLOG: Backlog run complete: 5/5 succeeded for engine-seized-driving-towing-cost
+[2026-06-09 11:10:47] BACKLOG: Total progress: 187/193 posts synced
