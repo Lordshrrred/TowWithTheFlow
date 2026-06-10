@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T11:51:58.195999+00:00",
+  "generated_at": "2026-06-10T16:13:41.701578+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1210,6 +1210,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/21/car-wont-start-but-battery-is-good-2/",
+        "verified": true
+      }
+    },
+    "car-wont-start-but-has-power-dashboard-lights-on": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-start-but-has-power-dashboard.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-wont-start-but-has-power-dashboard-lights-on-what-to-check-first-roadside-tips-5ma",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-but-has-power-dashboard-lights-on-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819042473640919040/car-wont-start-but-has-power-dashboard-lights-on",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/10/car-wont-start-but-has-power-dashboard-lights-on/",
         "verified": true
       }
     },
@@ -4730,24 +4757,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 177,
-      "verified": 171
+      "checked": 178,
+      "verified": 172
     },
     "dev": {
-      "checked": 118,
-      "verified": 118
+      "checked": 119,
+      "verified": 119
     },
     "feeder": {
+      "checked": 187,
+      "verified": 187
+    },
+    "tumblr": {
       "checked": 186,
       "verified": 186
     },
-    "tumblr": {
-      "checked": 185,
-      "verified": 185
-    },
     "wordpress": {
-      "checked": 188,
-      "verified": 188
+      "checked": 189,
+      "verified": 189
     }
   }
 }
