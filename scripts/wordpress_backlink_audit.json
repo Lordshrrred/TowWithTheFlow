@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T16:13:56.048054+00:00",
+  "generated_at": "2026-06-10T18:48:46.457782+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/06/10/car-wont-start-but-has-power-dashboard-lights-on/",
     "https://towwiththeflowyo.wordpress.com/2026/06/09/engine-seized-driving-towing-cost/",
@@ -240,7 +240,10 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/10/tow-truck-price-50-miles-from-city-3/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/10/tow-truck-price-50-miles-from-city-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/10/tow-truck-cost-houston-highway-breakdown/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -1441,6 +1444,15 @@
         "verified": true
       }
     },
+    "tow-truck-cost-houston-highway-breakdown": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/tow-truck-cost-houston-highway-breakdown/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/10/tow-truck-cost-houston-highway-breakdown/",
+        "verified": true
+      }
+    },
     "tow-truck-damaged-my-car-who-pays": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/tow-truck-damaged-my-car-who-pays/",
@@ -1484,6 +1496,24 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/tow-truck-price-50-miles-from-city/",
         "verified": true
+      }
+    },
+    "tow-truck-price-50-miles-from-city-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/10/tow-truck-price-50-miles-from-city-2/",
+        "verified": false
+      }
+    },
+    "tow-truck-price-50-miles-from-city-3": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/10/tow-truck-price-50-miles-from-city-3/",
+        "verified": false
       }
     },
     "tow-truck-price-50-miles-miami": {
@@ -2408,8 +2438,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 240,
-      "verified": 191
+      "checked": 243,
+      "verified": 192
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T16:13:41.701578+00:00",
+  "generated_at": "2026-06-10T18:48:37.122182+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2799,6 +2799,33 @@
         "verified": true
       }
     },
+    "tow-truck-cost-houston-highway-breakdown": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/tow-truck-cost-houston-highway.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/tow-truck-cost-houston-highway-breakdown-what-youll-pay-right-now-what-to-do-next-3jpa",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-houston-highway-breakdown-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819051195020738560/tow-truck-cost-houston-highway-breakdown",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/10/tow-truck-cost-houston-highway-breakdown/",
+        "verified": true
+      }
+    },
     "tow-truck-damaged-my-car-who-pays": {
       "dev": {
         "reason": "ok",
@@ -2864,24 +2891,27 @@
     "tow-truck-price-50-miles-from-city": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/tow-truck-price-for-50-miles-from-city.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/tow-truck-price-for-50-miles-from-city_01282143662.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/tow-truck-price-for-50-miles-from-city-what-youll-pay-what-drivers-should-know-3mik",
         "verified": true
       },
       "feeder": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-price-50-miles-from-city-guide/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-price-50-miles-from-city-tips/",
         "verified": true
       },
       "tumblr": {
         "reason": "ok",
-        "url": "https://www.tumblr.com/towwiththeflow/812017595940208640/tow-truck-price-50-miles-from-city",
+        "url": "https://www.tumblr.com/towwiththeflow/819056614620495872/tow-truck-price-50-miles-from-city",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/tow-truck-price-50-miles-from-city/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/10/tow-truck-price-50-miles-from-city-2/",
         "verified": true
       }
     },
@@ -4757,24 +4787,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 178,
-      "verified": 172
+      "checked": 179,
+      "verified": 173
     },
     "dev": {
-      "checked": 119,
-      "verified": 119
+      "checked": 121,
+      "verified": 121
     },
     "feeder": {
+      "checked": 188,
+      "verified": 188
+    },
+    "tumblr": {
       "checked": 187,
       "verified": 187
     },
-    "tumblr": {
-      "checked": 186,
-      "verified": 186
-    },
     "wordpress": {
-      "checked": 189,
-      "verified": 189
+      "checked": 190,
+      "verified": 190
     }
   }
 }
