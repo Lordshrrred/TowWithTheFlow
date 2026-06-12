@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T15:46:17.772292+00:00",
+  "generated_at": "2026-06-12T18:22:44.802030+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -999,9 +999,9 @@
     },
     "car-smoking-from-hood-need-tow-truck-now": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-smoking-from-hood-need-tow-truck-now.html",
-        "verified": false
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-smoking-from-hood-need-tow-truck.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1093,6 +1093,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/car-starts-then-dies-immediately-causes-3/",
+        "verified": true
+      }
+    },
+    "car-stuck-in-snow-how-much-tow-truck-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-stuck-in-snow-how-much-does-tow.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-stuck-in-snow-how-much-does-a-tow-truck-cost-what-to-do-next-1ao9",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-stuck-in-snow-how-much-tow-truck-cost-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819236476174958592/car-stuck-in-snow-how-much-tow-truck-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/12/car-stuck-in-snow-how-much-tow-truck-cost/",
         "verified": true
       }
     },
@@ -2920,8 +2947,7 @@
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/tow-truck-damaged-my-car-who-pays/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/12/tow-truck-damaged-my-car-who-pays-2/",
         "verified": true
       }
     },
@@ -4518,7 +4544,7 @@
     "towing-cost-seattle-mountain-pass-breakdown": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-seattle-mountain-pass.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-seattle-mountain-pass_0600458930.html",
         "verified": true
       },
       "dev": {
@@ -4533,12 +4559,12 @@
       },
       "tumblr": {
         "reason": "ok",
-        "url": "https://www.tumblr.com/towwiththeflow/819143059262652416/towing-cost-seattle-mountain-pass-breakdown",
+        "url": "https://www.tumblr.com/towwiththeflow/819230614306816000/towing-cost-seattle-mountain-pass-breakdown",
         "verified": true
       },
       "wordpress": {
         "reason": "ok",
-        "url": "https://towwiththeflowyo.wordpress.com/2026/06/11/towing-cost-seattle-mountain-pass-breakdown/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/12/towing-cost-seattle-mountain-pass-breakdown-2/",
         "verified": true
       }
     },
@@ -4899,24 +4925,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 184,
-      "verified": 178
+      "checked": 185,
+      "verified": 180
     },
     "dev": {
-      "checked": 125,
-      "verified": 125
+      "checked": 126,
+      "verified": 126
     },
     "feeder": {
+      "checked": 193,
+      "verified": 193
+    },
+    "tumblr": {
       "checked": 192,
       "verified": 192
     },
-    "tumblr": {
-      "checked": 191,
-      "verified": 191
-    },
     "wordpress": {
-      "checked": 194,
-      "verified": 194
+      "checked": 195,
+      "verified": 195
     }
   }
 }

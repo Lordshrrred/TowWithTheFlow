@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-06-12T15:46:22.083435+00:00",
+  "generated_at": "2026-06-12T18:22:47.975636+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/06/12/tow-truck-damaged-my-car-who-pays-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/12/car-stuck-in-snow-how-much-tow-truck-cost/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/12/towing-cost-seattle-mountain-pass-breakdown-2/",
     "https://towwiththeflowyo.wordpress.com/2026/06/12/car-wont-shift-out-of-park-towing-options/",
     "https://towwiththeflowyo.wordpress.com/2026/06/11/towing-cost-albuquerque-new-mexico-2/",
     "https://towwiththeflowyo.wordpress.com/2026/06/11/how-much-does-24-hour-towing-cost-extra/",
@@ -727,6 +730,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/car-starts-then-dies-immediately-causes-3/",
         "verified": false
+      }
+    },
+    "car-stuck-in-snow-how-much-tow-truck-cost": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-stuck-in-snow-how-much-tow-truck-cost/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/12/car-stuck-in-snow-how-much-tow-truck-cost/",
+        "verified": true
       }
     },
     "car-stuck-mud-towing-cost": {
@@ -1492,6 +1504,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/tow-truck-damaged-my-car-who-pays/",
         "verified": true
+      }
+    },
+    "tow-truck-damaged-my-car-who-pays-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/12/tow-truck-damaged-my-car-who-pays-2/",
+        "verified": false
       }
     },
     "tow-truck-damaged-my-car-who-pays-chicago": {
@@ -2295,6 +2316,15 @@
         "verified": true
       }
     },
+    "towing-cost-seattle-mountain-pass-breakdown-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/12/towing-cost-seattle-mountain-pass-breakdown-2/",
+        "verified": false
+      }
+    },
     "towing-cost-seattle-washington": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-seattle-washington/",
@@ -2488,8 +2518,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 248,
-      "verified": 196
+      "checked": 251,
+      "verified": 197
     }
   }
 }
