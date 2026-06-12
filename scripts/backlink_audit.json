@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T11:56:10.474384+00:00",
+  "generated_at": "2026-06-12T15:46:17.772292+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1188,6 +1188,33 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-wont-shift-into-drive-need-tow-truck/",
+        "verified": true
+      }
+    },
+    "car-wont-shift-out-of-park-towing-options": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-shift-out-of-park-towing.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-wont-shift-out-of-park-towing-options-what-to-do-when-stuck-roadside-tips-3351",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-shift-out-of-park-towing-options-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819223083564089344/car-wont-shift-out-of-park-towing-options",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/12/car-wont-shift-out-of-park-towing-options/",
         "verified": true
       }
     },
@@ -4872,24 +4899,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 183,
-      "verified": 177
+      "checked": 184,
+      "verified": 178
     },
     "dev": {
-      "checked": 124,
-      "verified": 124
+      "checked": 125,
+      "verified": 125
     },
     "feeder": {
+      "checked": 192,
+      "verified": 192
+    },
+    "tumblr": {
       "checked": 191,
       "verified": 191
     },
-    "tumblr": {
-      "checked": 190,
-      "verified": 190
-    },
     "wordpress": {
-      "checked": 193,
-      "verified": 193
+      "checked": 194,
+      "verified": 194
     }
   }
 }
