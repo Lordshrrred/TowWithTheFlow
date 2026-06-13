@@ -1,9 +1,9 @@
 {
-  "pageviews": 20,
-  "sessions": 14,
-  "avgSessionDur": 36,
-  "bounceRate": 0.5714285714285714,
-  "newUsers": 14,
+  "pageviews": 22,
+  "sessions": 16,
+  "avgSessionDur": 32,
+  "bounceRate": 0.625,
+  "newUsers": 16,
   "returningUsers": 0,
   "daily": [
     {
@@ -49,6 +49,10 @@
     {
       "date": "20260609",
       "pageviews": 2
+    },
+    {
+      "date": "20260612",
+      "pageviews": 2
     }
   ],
   "topPages": [
@@ -72,6 +76,15 @@
     },
     {
       "rank": 3,
+      "page": "/towing-cost-dallas-texas/",
+      "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
+      "pageviews": 2,
+      "avgDur": 0,
+      "bounceRate": 100.0,
+      "sessions": 2
+    },
+    {
+      "rank": 4,
       "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
       "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
       "pageviews": 1,
@@ -80,7 +93,7 @@
       "sessions": 1
     },
     {
-      "rank": 4,
+      "rank": 5,
       "page": "/allstate-roadside-assistance-towing-distance-covered/",
       "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
       "pageviews": 1,
@@ -89,7 +102,7 @@
       "sessions": 1
     },
     {
-      "rank": 5,
+      "rank": 6,
       "page": "/contact/",
       "title": "Contact | Tow With The Flow",
       "pageviews": 1,
@@ -98,7 +111,7 @@
       "sessions": 1
     },
     {
-      "rank": 6,
+      "rank": 7,
       "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
       "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
       "pageviews": 1,
@@ -107,7 +120,7 @@
       "sessions": 1
     },
     {
-      "rank": 7,
+      "rank": 8,
       "page": "/liberty-mutual-towing-coverage-dollar-amount-limit/",
       "title": "Liberty Mutual Towing Coverage Dollar Amount Limits Explained | Tow With The Flow",
       "pageviews": 1,
@@ -116,7 +129,7 @@
       "sessions": 1
     },
     {
-      "rank": 8,
+      "rank": 9,
       "page": "/posts/",
       "title": "All Guides | Tow With The Flow",
       "pageviews": 1,
@@ -125,7 +138,7 @@
       "sessions": 1
     },
     {
-      "rank": 9,
+      "rank": 10,
       "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
       "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
       "pageviews": 1,
@@ -134,7 +147,7 @@
       "sessions": 1
     },
     {
-      "rank": 10,
+      "rank": 11,
       "page": "/towing-cost-boston-massachusetts/",
       "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
       "pageviews": 1,
@@ -143,7 +156,7 @@
       "sessions": 1
     },
     {
-      "rank": 11,
+      "rank": 12,
       "page": "/towing-cost-columbus-ohio/",
       "title": "Towing Cost in Columbus Ohio: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 1,
@@ -152,7 +165,7 @@
       "sessions": 1
     },
     {
-      "rank": 12,
+      "rank": 13,
       "page": "/towing-cost-memphis-tennessee/",
       "title": "Towing Cost in Memphis Tennessee: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 1,
@@ -165,28 +178,28 @@
     {
       "channel": "Direct",
       "sessions": 7,
-      "pct": 50.0
+      "pct": 41.2
     },
     {
       "channel": "Organic Search",
-      "sessions": 5,
-      "pct": 35.7
+      "sessions": 7,
+      "pct": 41.2
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 2,
+      "pct": 11.8
     },
     {
       "channel": "Referral",
       "sessions": 1,
-      "pct": 7.1
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 1,
-      "pct": 7.1
+      "pct": 5.9
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 10
+      "sessions": 12
     },
     {
       "country": "United Kingdom",
@@ -231,32 +244,32 @@
       "sessions": 1
     },
     {
+      "city": "Duncanville",
+      "sessions": 1
+    },
+    {
       "city": "Greenfield",
       "sessions": 1
     },
     {
-      "city": "Peachtree City",
-      "sessions": 1
-    },
-    {
-      "city": "Slough",
+      "city": "Irving",
       "sessions": 1
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "sessions": 9
+      "sessions": 10
     },
     {
       "device": "mobile",
-      "sessions": 5
+      "sessions": 6
     }
   ],
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 8
+      "sessions": 10
     },
     {
       "browser": "Safari",
@@ -270,7 +283,7 @@
   "os": [
     {
       "os": "Windows",
-      "sessions": 6
+      "sessions": 7
     },
     {
       "os": "iOS",
@@ -282,8 +295,8 @@
     },
     {
       "os": "Android",
-      "sessions": 1
+      "sessions": 2
     }
   ],
-  "lastUpdated": "2026-06-12T10:39:59.695943+00:00"
+  "lastUpdated": "2026-06-13T09:34:13.097704+00:00"
 }
