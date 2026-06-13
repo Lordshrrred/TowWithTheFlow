@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T14:33:24.483474+00:00",
+  "generated_at": "2026-06-13T17:51:30.903048+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -96,6 +96,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/31/airbag-light-on-can-i-drive-to-mechanic/",
+        "verified": true
+      }
+    },
+    "allstate-covers-towing-but-car-totaled-who-pays": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/allstate-covers-towing-but-car-totaled.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/allstate-covers-towing-but-car-totaled-who-pays-for-what-what-to-do-next-4dhc",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/allstate-covers-towing-but-car-totaled-who-pays-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819321734945783808/allstate-covers-towing-but-car-totaled-who-pays",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/13/allstate-covers-towing-but-car-totaled-who-pays-2/",
         "verified": true
       }
     },
@@ -1020,8 +1047,7 @@
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-smoking-from-hood-need-tow-truck-now/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/13/car-smoking-from-hood-need-tow-truck-now-2/",
         "verified": true
       }
     },
@@ -1428,9 +1454,9 @@
     },
     "cheapest-tow-truck-service-near-me-sunday": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/04/find-cheapest-tow-truck-service-open.html",
-        "verified": false
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/find-cheapest-tow-truck-service-open.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -3965,6 +3991,33 @@
         "verified": true
       }
     },
+    "towing-cost-las-vegas-strip-breakdown-night": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-las-vegas-strip-breakdown.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-las-vegas-strip-breakdown-night-what-youll-pay-right-now-quick-guide-17o8",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-las-vegas-strip-breakdown-night-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819316904688828416/towing-cost-las-vegas-strip-breakdown-night",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/13/towing-cost-las-vegas-strip-breakdown-night/",
+        "verified": true
+      }
+    },
     "towing-cost-los-angeles-california": {
       "blog": {
         "reason": "ok",
@@ -4952,24 +5005,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 186,
-      "verified": 181
+      "checked": 188,
+      "verified": 184
     },
     "dev": {
-      "checked": 127,
-      "verified": 127
+      "checked": 129,
+      "verified": 129
     },
     "feeder": {
-      "checked": 194,
-      "verified": 194
-    },
-    "tumblr": {
-      "checked": 193,
-      "verified": 193
-    },
-    "wordpress": {
       "checked": 196,
       "verified": 196
+    },
+    "tumblr": {
+      "checked": 195,
+      "verified": 195
+    },
+    "wordpress": {
+      "checked": 198,
+      "verified": 198
     }
   }
 }

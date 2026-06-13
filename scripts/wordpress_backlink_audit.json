@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T14:33:28.822544+00:00",
+  "generated_at": "2026-06-13T17:51:35.691641+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/06/13/towing-cost-accident-scene-police-report-required/",
     "https://towwiththeflowyo.wordpress.com/2026/06/12/tow-truck-damaged-my-car-who-pays-2/",
@@ -252,7 +252,10 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/13/car-smoking-from-hood-need-tow-truck-now-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/13/allstate-covers-towing-but-car-totaled-who-pays-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/13/towing-cost-las-vegas-strip-breakdown-night/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -299,6 +302,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/16/allstate-covers-towing-but-car-totaled-who-pays/",
         "verified": true
+      }
+    },
+    "allstate-covers-towing-but-car-totaled-who-pays-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/13/allstate-covers-towing-but-car-totaled-who-pays-2/",
+        "verified": false
       }
     },
     "allstate-roadside-assistance-towing-benefit-amount-coverage": {
@@ -686,6 +698,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-smoking-from-hood-need-tow-truck-now/",
         "verified": true
+      }
+    },
+    "car-smoking-from-hood-need-tow-truck-now-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/13/car-smoking-from-hood-need-tow-truck-now-2/",
+        "verified": false
       }
     },
     "car-smoking-hood-tow-truck-miami": {
@@ -2047,6 +2068,15 @@
         "verified": true
       }
     },
+    "towing-cost-las-vegas-strip-breakdown-night": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-las-vegas-strip-breakdown-night/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/13/towing-cost-las-vegas-strip-breakdown-night/",
+        "verified": true
+      }
+    },
     "towing-cost-los-angeles-california": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-los-angeles-california/",
@@ -2528,8 +2558,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 252,
-      "verified": 198
+      "checked": 255,
+      "verified": 199
     }
   }
 }
