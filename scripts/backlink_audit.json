@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T10:41:54.700627+00:00",
+  "generated_at": "2026-06-13T14:33:24.483474+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -3049,6 +3049,33 @@
         "verified": true
       }
     },
+    "towing-cost-accident-scene-police-report-required": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-accident-scene-police.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-accident-scene-police-report-required-what-youll-pay-right-now-roadside-tips-16g9",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-accident-scene-police-report-required-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819307582208589824/towing-cost-accident-scene-police-report-required",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/13/towing-cost-accident-scene-police-report-required/",
+        "verified": true
+      }
+    },
     "towing-cost-albuquerque-new-mexico": {
       "blog": {
         "reason": "ok",
@@ -4925,24 +4952,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 185,
-      "verified": 180
+      "checked": 186,
+      "verified": 181
     },
     "dev": {
-      "checked": 126,
-      "verified": 126
+      "checked": 127,
+      "verified": 127
     },
     "feeder": {
+      "checked": 194,
+      "verified": 194
+    },
+    "tumblr": {
       "checked": 193,
       "verified": 193
     },
-    "tumblr": {
-      "checked": 192,
-      "verified": 192
-    },
     "wordpress": {
-      "checked": 195,
-      "verified": 195
+      "checked": 196,
+      "verified": 196
     }
   }
 }
