@@ -1,15 +1,11 @@
 {
-  "pageviews": 22,
-  "sessions": 16,
-  "avgSessionDur": 32,
-  "bounceRate": 0.625,
-  "newUsers": 16,
+  "pageviews": 21,
+  "sessions": 15,
+  "avgSessionDur": 45,
+  "bounceRate": 0.5333333333333333,
+  "newUsers": 15,
   "returningUsers": 0,
   "daily": [
-    {
-      "date": "20260514",
-      "pageviews": 1
-    },
     {
       "date": "20260526",
       "pageviews": 7
@@ -60,10 +56,10 @@
       "rank": 1,
       "page": "/",
       "title": "Tow With The Flow | Real help when your car breaks down.",
-      "pageviews": 8,
+      "pageviews": 7,
       "avgDur": 5,
-      "bounceRate": 85.7,
-      "sessions": 7
+      "bounceRate": 83.3,
+      "sessions": 6
     },
     {
       "rank": 2,
@@ -79,8 +75,8 @@
       "page": "/towing-cost-dallas-texas/",
       "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 2,
-      "avgDur": 0,
-      "bounceRate": 100.0,
+      "avgDur": 84,
+      "bounceRate": 50.0,
       "sessions": 2
     },
     {
@@ -176,24 +172,24 @@
   ],
   "trafficSources": [
     {
-      "channel": "Direct",
-      "sessions": 7,
-      "pct": 41.2
-    },
-    {
       "channel": "Organic Search",
       "sessions": 7,
-      "pct": 41.2
+      "pct": 46.7
     },
     {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "pct": 11.8
+      "channel": "Direct",
+      "sessions": 6,
+      "pct": 40.0
     },
     {
       "channel": "Referral",
       "sessions": 1,
-      "pct": 5.9
+      "pct": 6.7
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "pct": 6.7
     }
   ],
   "topCountries": [
@@ -206,10 +202,6 @@
       "sessions": 2
     },
     {
-      "country": "Germany",
-      "sessions": 1
-    },
-    {
       "country": "T\u00fcrkiye",
       "sessions": 1
     }
@@ -217,7 +209,7 @@
   "topCities": [
     {
       "city": "(not set)",
-      "sessions": 4
+      "sessions": 3
     },
     {
       "city": "Los Angeles",
@@ -259,7 +251,7 @@
   "devices": [
     {
       "device": "desktop",
-      "sessions": 10
+      "sessions": 9
     },
     {
       "device": "mobile",
@@ -269,7 +261,7 @@
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 10
+      "sessions": 9
     },
     {
       "browser": "Safari",
@@ -290,13 +282,13 @@
       "sessions": 4
     },
     {
-      "os": "Macintosh",
-      "sessions": 3
+      "os": "Android",
+      "sessions": 2
     },
     {
-      "os": "Android",
+      "os": "Macintosh",
       "sessions": 2
     }
   ],
-  "lastUpdated": "2026-06-13T09:34:13.097704+00:00"
+  "lastUpdated": "2026-06-14T09:56:23.306567+00:00"
 }
