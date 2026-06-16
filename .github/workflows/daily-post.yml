@@ -2,13 +2,16 @@ name: Daily Post and Syndication
 
 on:
   schedule:
-    - cron: '0 9 * * *'    # 09:00 UTC (03:00 Denver, MDT) — generate general post
-    - cron: '30 9 * * *'   # 09:30 UTC (03:30 Denver, MDT) — generate local/city post
-    - cron: '30 10 * * *'  # 10:30 UTC (04:30 Denver, MDT) — syndicate general post
-    - cron: '30 12 * * *'  # 12:30 UTC (06:30 Denver, MDT) — syndicate local post
-    - cron: '30 14 * * *'  # 14:30 UTC (08:30 Denver, MDT) — syndicate 1 backlog post
-    - cron: '35 14 * * *'  # 14:35 UTC (08:35 Denver, MDT) — syndicate 1 WordPress backlog post
-    - cron: '40 14 * * *'  # 14:40 UTC (08:40 Denver, MDT) — syndicate 1 Blogger backlog post
+    - cron: '0 9 * * *'    # 09:00 UTC — generate post 1 (general, TWTF2)
+    - cron: '30 9 * * *'   # 09:30 UTC — generate post 2 (local, TWTF2)
+    - cron: '30 10 * * *'  # 10:30 UTC — syndicate post 1 (TWTF2)
+    - cron: '0 11 * * *'   # 11:00 UTC — generate post 3 (general, TWTF1)
+    - cron: '30 11 * * *'  # 11:30 UTC — generate post 4 (local, TWTF1)
+    - cron: '30 12 * * *'  # 12:30 UTC — syndicate post 2 (TWTF2)
+    - cron: '30 14 * * *'  # 14:30 UTC — syndicate post 3 (TWTF1)
+    - cron: '35 14 * * *'  # 14:35 UTC — syndicate WordPress backlog (until exhausted)
+    - cron: '40 14 * * *'  # 14:40 UTC — syndicate Blogger backlog (until exhausted)
+    - cron: '30 16 * * *'  # 16:30 UTC — syndicate post 4 (TWTF1)
   workflow_dispatch:
     inputs:
       job:
@@ -19,9 +22,12 @@ on:
         options:
           - generate-general
           - generate-local
+          - generate-general-2
+          - generate-local-2
           - syndicate-new-1
           - syndicate-new-2
-          - syndicate-backlog
+          - syndicate-new-3
+          - syndicate-new-4
           - syndicate-wordpress-backlog
           - syndicate-blogger-backlog
 
@@ -315,12 +321,12 @@ jobs:
           git pull --rebase --autostash origin main
           git push
 
-  # ── JOB 5: Syndicate backlog post (2:30pm UTC) ────────────────────────────────
-  syndicate-backlog:
+  # ── JOB 5: Syndicate post 3 via TWTF1 (2:30pm UTC) ──────────────────────────
+  syndicate-new-3:
     runs-on: ubuntu-latest
     if: >-
       (github.event_name == 'schedule' && github.event.schedule == '30 14 * * *') ||
-      (github.event_name == 'workflow_dispatch' && github.event.inputs.job == 'syndicate-backlog')
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.job == 'syndicate-new-3')
 
     steps:
       - uses: actions/checkout@v4
@@ -334,7 +340,7 @@ jobs:
 
       - run: pip install anthropic python-dotenv requests requests-oauthlib
 
-      - name: Syndicate backlog post (oldest unsynced)
+      - name: Syndicate post 3 (TWTF1)
         env:
           DevTO_TWTF1_API_Key: ${{ secrets.DevTO_TWTF1_API_Key }}
           TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
@@ -346,9 +352,6 @@ jobs:
           BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
-          PUBLER_API_KEY: ${{ secrets.PUBLER_API_KEY }}
-          PUBLER_WORKSPACE_ID: ${{ secrets.PUBLER_WORKSPACE_ID }}
-          PUBLER_WORDPRESS_ACCOUNT_ID: ${{ secrets.PUBLER_WORDPRESS_ACCOUNT_ID }}
           WORDPRESS_CLIENT_ID: ${{ secrets.WORDPRESS_CLIENT_ID }}
           WORDPRESS_CLIENT_SECRET: ${{ secrets.WORDPRESS_CLIENT_SECRET }}
           WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
@@ -357,19 +360,24 @@ jobs:
           WORDPRESS_BLOG: ${{ secrets.WORDPRESS_BLOG }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
-          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: python scripts/syndicate_backlog.py
+        run: |
+          SLUG=$(cat scripts/last_general_slug_2.txt 2>/dev/null || echo "")
+          if [ -z "$SLUG" ]; then
+            echo "No last_general_slug_2.txt found — skipping"
+            exit 0
+          fi
+          echo "Syndicating post 3 (TWTF1): $SLUG"
+          python scripts/syndicate_post.py "$SLUG"
 
       - name: Configure git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit syndication results
+      - name: Commit syndication log
         run: |
           git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
-          git diff --staged --quiet || git commit -m "Auto: backlog syndication $(date +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "Auto: syndicate post 3 $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
 
@@ -469,5 +477,188 @@ jobs:
         run: |
           git add scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
           git diff --staged --quiet || git commit -m "Auto: Blogger backlog syndication $(date +%Y-%m-%d)"
+          git pull --rebase --autostash origin main
+          git push
+
+  # ── JOB 8: Generate general post 3 (11:00am UTC, TWTF1) ─────────────────────
+  generate-general-2:
+    runs-on: ubuntu-latest
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '0 11 * * *') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.job == 'generate-general-2')
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install anthropic python-dotenv requests requests-oauthlib
+
+      - name: Generate general post 3
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python scripts/generate_post.py --type general --slug-file last_general_slug_2.txt
+
+      - name: Verify post was created
+        run: |
+          if [ ! -f scripts/last_general_slug_2.txt ]; then
+            echo "::error::generate_post.py did not write scripts/last_general_slug_2.txt"
+            exit 1
+          fi
+          SLUG=$(cat scripts/last_general_slug_2.txt)
+          if [ -z "$SLUG" ]; then
+            echo "::error::last_general_slug_2.txt is empty — generation may have failed silently"
+            exit 1
+          fi
+          echo "Generated slug: $SLUG"
+          if [ ! -f "content/posts/${SLUG}.md" ]; then
+            echo "::error::Expected post file not found: content/posts/${SLUG}.md"
+            exit 1
+          fi
+          echo "Post verified: content/posts/${SLUG}.md"
+
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - run: hugo --minify
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit general post 3
+        run: |
+          SLUG=$(cat scripts/last_general_slug_2.txt)
+          git add "content/posts/${SLUG}.md"
+          git add "static/images/${SLUG}/" 2>/dev/null || true
+          git add scripts/keywords.txt scripts/last_general_slug_2.txt scripts/last_generated_slug.txt || true
+          git diff --staged --quiet || git commit -m "Auto: general post 3 $(date +%Y-%m-%d)"
+          git pull --rebase --autostash origin main
+          git push
+
+      - name: Trigger site deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          HTTP_STATUS=$(curl -s -o /tmp/dispatch_response.txt -w "%{http_code}" -X POST \
+            -H "Authorization: token ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/hugo.yml/dispatches" \
+            -d '{"ref":"main"}')
+          [ "$HTTP_STATUS" = "204" ] && echo "Deploy triggered" || echo "::warning::Deploy dispatch returned $HTTP_STATUS"
+
+  # ── JOB 9: Generate local post 4 (11:30am UTC, TWTF1) ───────────────────────
+  generate-local-2:
+    runs-on: ubuntu-latest
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '30 11 * * *') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.job == 'generate-local-2')
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install anthropic python-dotenv requests requests-oauthlib
+
+      - name: Generate local post 4
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python scripts/generate_post.py --type local --slug-file last_local_slug_2.txt
+
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - run: hugo --minify
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit local post 4
+        run: |
+          SLUG=$(cat scripts/last_local_slug_2.txt)
+          git add "content/posts/${SLUG}.md"
+          git add "static/images/${SLUG}/" 2>/dev/null || true
+          git add scripts/keywords.txt scripts/last_local_slug_2.txt scripts/last_generated_slug.txt || true
+          git diff --staged --quiet || git commit -m "Auto: local post 4 $(date +%Y-%m-%d)"
+          git pull --rebase --autostash origin main
+          git push
+
+  # ── JOB 10: Syndicate post 4 via TWTF1 (4:30pm UTC) ─────────────────────────
+  syndicate-new-4:
+    runs-on: ubuntu-latest
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '30 16 * * *') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.job == 'syndicate-new-4')
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install anthropic python-dotenv requests requests-oauthlib
+
+      - name: Syndicate post 4 (TWTF1)
+        env:
+          DevTO_TWTF1_API_Key: ${{ secrets.DevTO_TWTF1_API_Key }}
+          TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
+          TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
+          TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
+          TUMBLR_TOKEN_SECRET: ${{ secrets.TUMBLR_TOKEN_SECRET }}
+          TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          WORDPRESS_CLIENT_ID: ${{ secrets.WORDPRESS_CLIENT_ID }}
+          WORDPRESS_CLIENT_SECRET: ${{ secrets.WORDPRESS_CLIENT_SECRET }}
+          WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
+          WORDPRESS_APPLICATION_PASSWORD: ${{ secrets.WORDPRESS_APPLICATION_PASSWORD }}
+          WORDPRESS_OAUTH2_TOKEN: ${{ secrets.WORDPRESS_OAUTH2_TOKEN }}
+          WORDPRESS_BLOG: ${{ secrets.WORDPRESS_BLOG }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
+        run: |
+          SLUG=$(cat scripts/last_local_slug_2.txt 2>/dev/null || echo "")
+          if [ -z "$SLUG" ]; then
+            echo "No last_local_slug_2.txt found — skipping"
+            exit 0
+          fi
+          echo "Syndicating post 4 (TWTF1): $SLUG"
+          python scripts/syndicate_post.py "$SLUG"
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit syndication log
+        run: |
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
+          git diff --staged --quiet || git commit -m "Auto: syndicate post 4 $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push

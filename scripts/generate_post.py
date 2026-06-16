@@ -530,6 +530,11 @@ def main():
         default="general",
         help="general = non-local keyword; local = city/location keyword",
     )
+    parser.add_argument(
+        "--slug-file",
+        default=None,
+        help="Override slug output filename (relative to scripts/). E.g. last_general_slug_2.txt",
+    )
     args = parser.parse_args()
     post_type = args.type
 
@@ -570,12 +575,15 @@ def main():
     print(f"Saved: {filename}")
 
     # Record slug for the syndication job that follows
-    slug_key = "last_local_slug.txt" if post_type == "local" else "last_general_slug.txt"
-    slug_file = Path(__file__).parent / slug_key
+    if args.slug_file:
+        slug_file = Path(__file__).parent / args.slug_file
+    else:
+        slug_key = "last_local_slug.txt" if post_type == "local" else "last_general_slug.txt"
+        slug_file = Path(__file__).parent / slug_key
     slug_file.write_text(slug, encoding='utf-8')
     # Also update legacy file so any existing tooling still works
     (Path(__file__).parent / "last_generated_slug.txt").write_text(slug, encoding='utf-8')
-    print(f"Slug written to scripts/{slug_key}")
+    print(f"Slug written to {slug_file.name}")
 
     mark_done(keyword)
 

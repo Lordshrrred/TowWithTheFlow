@@ -1,8 +1,8 @@
-name: Weekly Keyword Research
+name: Keyword Research
 
 on:
   schedule:
-    - cron: '0 8 * * 1'  # Every Monday at 8am UTC
+    - cron: '0 8 * * 1,3,5'  # Mon/Wed/Fri at 8am UTC — 40 keywords/run
   workflow_dispatch:
 
 permissions:
@@ -43,5 +43,5 @@ jobs:
       - name: Commit and push
         run: |
           git add scripts/keywords.txt scripts/syndication_log.txt || true
-          git diff --staged --quiet || git commit -m "Auto: weekly keyword research $(date +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "Auto: keyword research $(date +%Y-%m-%d)"
           git push

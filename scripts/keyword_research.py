@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Tow With The Flow — Weekly Keyword Research
-Discovers 20 new long-tail keyword opportunities via Claude API,
+Discovers 40 new long-tail keyword opportunities via Claude API,
 scores each one 1-10, and appends unique ones to keywords.txt
 sorted by score descending.
 """
@@ -26,7 +26,7 @@ if not ANTHROPIC_API_KEY:
 KEYWORDS_FILE = Path(__file__).parent / "keywords.txt"
 LOG_FILE = Path(__file__).parent / "syndication_log.txt"
 
-SYSTEM_PROMPT = """You are an SEO keyword researcher for towwiththeflow.com, a car breakdown and roadside emergency help site. Generate 20 new long-tail keywords and score each one across four dimensions:
+SYSTEM_PROMPT = """You are an SEO keyword researcher for towwiththeflow.com, a car breakdown and roadside emergency help site. Generate 40 new long-tail keywords and score each one across four dimensions:
 
 1. Search demand likelihood (1-10): Would enough real people plausibly search this exact phrase or a very close variant?
 2. Search intent strength (1-10): Is someone actively desperate for this answer right now? High = emergency, urgent, needs action immediately.
@@ -49,7 +49,7 @@ Bias toward topics that are rankable for a smaller site:
 - Avoid weak modifier-only variants that just append "in winter", "at night", or random city names to an existing keyword unless that modifier materially changes the answer.
 - Avoid near-duplicate topics that would cannibalize existing or obvious future cornerstone pages.
 
-Return ONLY a JSON array of 20 objects. Each object must have exactly two keys: "score" (integer 1-10) and "keyword" (string). No markdown, no backticks, no explanation. Example format:
+Return ONLY a JSON array of 40 objects. Each object must have exactly two keys: "score" (integer 1-10) and "keyword" (string). No markdown, no backticks, no explanation. Example format:
 [{"score": 9, "keyword": "tow truck cost no insurance"}, {"score": 6, "keyword": "car making noise when turning"}, ...]
 
 NEVER use em dashes (—) or double hyphens (--) in keyword strings."""
@@ -92,7 +92,7 @@ def main():
     user_message = (
         f"Here are some existing keywords on the site (avoid duplicating these topics):\n"
         f"{existing_sample}\n\n"
-        f"Now generate 20 new keyword opportunities with scores."
+        f"Now generate 40 new keyword opportunities with scores."
     )
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
