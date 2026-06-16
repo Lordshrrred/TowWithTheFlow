@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T22:32:19.246277+00:00",
+  "generated_at": "2026-06-16T05:38:07.198917+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -599,10 +599,9 @@
     },
     "car-leaking-fluid-underneath-emergency-tow": {
       "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-leaking-fluid-underneath-when-you.html",
-        "verified": true
+        "reason": "http_429",
+        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-leaking-fluid-underneath-when-you.html",
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3789,7 +3788,7 @@
     },
     "towing-cost-houston-texas-sunday-emergency": {
       "blog": {
-        "reason": "http_404",
+        "reason": "http_429",
         "url": "https://denverroadsideguide.blogspot.com/2026/04/sunday-emergency-towing-costs-in.html",
         "verified": false
       },
@@ -5162,7 +5161,7 @@
   "summary": {
     "blog": {
       "checked": 194,
-      "verified": 190
+      "verified": 189
     },
     "dev": {
       "checked": 134,
