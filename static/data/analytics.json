@@ -1,9 +1,9 @@
 {
-  "pageviews": 27,
-  "sessions": 21,
+  "pageviews": 28,
+  "sessions": 22,
   "avgSessionDur": 38,
-  "bounceRate": 0.6190476190476191,
-  "newUsers": 21,
+  "bounceRate": 0.5454545454545454,
+  "newUsers": 22,
   "returningUsers": 0,
   "daily": [
     {
@@ -56,7 +56,7 @@
     },
     {
       "date": "20260615",
-      "pageviews": 1
+      "pageviews": 2
     }
   ],
   "topPages": [
@@ -75,7 +75,7 @@
       "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
       "pageviews": 2,
       "avgDur": 57,
-      "bounceRate": 50.0,
+      "bounceRate": 0.0,
       "sessions": 2
     },
     {
@@ -93,7 +93,7 @@
       "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
       "pageviews": 2,
       "avgDur": 38,
-      "bounceRate": 50.0,
+      "bounceRate": 0.0,
       "sessions": 2
     },
     {
@@ -179,6 +179,15 @@
     },
     {
       "rank": 14,
+      "page": "/state-farm-towing-coverage-maximum-distance-miles/",
+      "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
+      "pageviews": 1,
+      "avgDur": 36,
+      "bounceRate": 100.0,
+      "sessions": 1
+    },
+    {
+      "rank": 15,
       "page": "/towing-cost-columbus-ohio/",
       "title": "Towing Cost in Columbus Ohio: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 1,
@@ -187,16 +196,16 @@
       "sessions": 1
     },
     {
-      "rank": 15,
+      "rank": 16,
       "page": "/towing-cost-detroit-michigan/",
       "title": "Towing Cost in Detroit Michigan: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 1,
-      "avgDur": 0,
+      "avgDur": 7,
       "bounceRate": 100.0,
       "sessions": 1
     },
     {
-      "rank": 16,
+      "rank": 17,
       "page": "/towing-cost-memphis-tennessee/",
       "title": "Towing Cost in Memphis Tennessee: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 1,
@@ -208,8 +217,8 @@
   "trafficSources": [
     {
       "channel": "Organic Search",
-      "sessions": 12,
-      "pct": 52.2
+      "sessions": 13,
+      "pct": 56.5
     },
     {
       "channel": "Direct",
@@ -218,8 +227,8 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": 3,
-      "pct": 13.0
+      "sessions": 2,
+      "pct": 8.7
     },
     {
       "channel": "Referral",
@@ -230,7 +239,7 @@
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 18
+      "sessions": 19
     },
     {
       "country": "United Kingdom",
@@ -286,7 +295,7 @@
   "devices": [
     {
       "device": "desktop",
-      "sessions": 13
+      "sessions": 14
     },
     {
       "device": "mobile",
@@ -303,18 +312,18 @@
       "sessions": 8
     },
     {
-      "browser": "Android Webview",
-      "sessions": 1
+      "browser": "Edge",
+      "sessions": 2
     },
     {
-      "browser": "Edge",
+      "browser": "Android Webview",
       "sessions": 1
     }
   ],
   "os": [
     {
       "os": "Windows",
-      "sessions": 9
+      "sessions": 10
     },
     {
       "os": "iOS",
@@ -333,5 +342,5 @@
       "sessions": 1
     }
   ],
-  "lastUpdated": "2026-06-15T12:42:58.569127+00:00"
+  "lastUpdated": "2026-06-16T11:34:27.126549+00:00"
 }
