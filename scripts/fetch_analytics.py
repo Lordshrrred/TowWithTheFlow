@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch GA4 analytics data and write static/data/analytics.json
+Fetch GA4 analytics data for all date ranges and write static/data/analytics.json
 
 Required env vars:
   GA_CREDENTIALS_JSON  -- service account JSON as a single-line string
@@ -20,6 +20,13 @@ OUT  = ROOT / "static" / "data" / "analytics.json"
 
 GA4_BASE = "https://analyticsdata.googleapis.com/v1beta"
 
+RANGES = {
+    "30d":   "30daysAgo",
+    "90d":   "90daysAgo",
+    "180d":  "180daysAgo",
+    "365d":  "365daysAgo",
+}
+
 # ── Auth ──────────────────────────────────────────────────────────────────────
 def get_access_token():
     creds_json = os.environ.get("GA_CREDENTIALS_JSON", "")
@@ -30,9 +37,7 @@ def get_access_token():
         import google.oauth2.service_account as sa
         import google.auth.transport.requests as gtr
     except ImportError:
-        raise RuntimeError(
-            "google-auth not installed — run: pip install google-auth"
-        )
+        raise RuntimeError("google-auth not installed — run: pip install google-auth")
 
     creds = sa.Credentials.from_service_account_info(
         json.loads(creds_json),
@@ -46,7 +51,7 @@ def get_access_token():
 # ── GA4 helpers ───────────────────────────────────────────────────────────────
 def run_report(property_id, token, body):
     import urllib.request
-    url = f"{GA4_BASE}/properties/{property_id}:runReport"
+    url  = f"{GA4_BASE}/properties/{property_id}:runReport"
     data = json.dumps(body).encode()
     req  = urllib.request.Request(
         url, data=data,
@@ -67,10 +72,11 @@ def rows(data):
     ]
 
 
-# ── Sections ──────────────────────────────────────────────────────────────────
-def fetch_overview(pid, token):
+# ── Fetch sections (all accept start_date) ────────────────────────────────────
+def fetch_overview(pid, token, start_date):
+    dr = [{"startDate": start_date, "endDate": "today"}]
     summary = run_report(pid, token, {
-        "dateRanges": [{"startDate": "30daysAgo", "endDate": "today"}],
+        "dateRanges": dr,
         "metrics": [
             {"name": "screenPageViews"},
             {"name": "sessions"},
@@ -81,7 +87,7 @@ def fetch_overview(pid, token):
         ],
     })
     daily = run_report(pid, token, {
-        "dateRanges": [{"startDate": "30daysAgo", "endDate": "today"}],
+        "dateRanges": dr,
         "dimensions": [{"name": "date"}],
         "metrics":    [{"name": "screenPageViews"}],
         "orderBys":   [{"dimension": {"dimensionName": "date"}}],
@@ -108,9 +114,9 @@ def fetch_overview(pid, token):
     }
 
 
-def fetch_top_pages(pid, token):
+def fetch_top_pages(pid, token, start_date):
     data = run_report(pid, token, {
-        "dateRanges": [{"startDate": "30daysAgo", "endDate": "today"}],
+        "dateRanges": [{"startDate": start_date, "endDate": "today"}],
         "dimensions": [{"name": "pagePath"}, {"name": "pageTitle"}],
         "metrics": [
             {"name": "screenPageViews"},
@@ -135,9 +141,9 @@ def fetch_top_pages(pid, token):
     ]
 
 
-def fetch_sources(pid, token):
+def fetch_sources(pid, token, start_date):
     data = run_report(pid, token, {
-        "dateRanges": [{"startDate": "30daysAgo", "endDate": "today"}],
+        "dateRanges": [{"startDate": start_date, "endDate": "today"}],
         "dimensions": [{"name": "sessionDefaultChannelGrouping"}],
         "metrics":    [{"name": "sessions"}],
         "orderBys":   [{"metric": {"metricName": "sessions"}, "desc": True}],
@@ -154,16 +160,39 @@ def fetch_sources(pid, token):
     ]
 
 
-def fetch_geo(pid, token):
+def fetch_sources_detail(pid, token, start_date):
+    """sessionSource + sessionMedium breakdown — shows what's really in Direct."""
+    data = run_report(pid, token, {
+        "dateRanges": [{"startDate": start_date, "endDate": "today"}],
+        "dimensions": [{"name": "sessionSource"}, {"name": "sessionMedium"}],
+        "metrics":    [{"name": "sessions"}],
+        "orderBys":   [{"metric": {"metricName": "sessions"}, "desc": True}],
+        "limit": 25,
+    })
+    all_rows = rows(data)
+    total = sum(int(r["mets"][0]) for r in all_rows)
+    return [
+        {
+            "source":   r["dims"][0],
+            "medium":   r["dims"][1],
+            "sessions": int(r["mets"][0]),
+            "pct":      round((int(r["mets"][0]) / total) * 1000) / 10 if total else 0,
+        }
+        for r in all_rows
+    ]
+
+
+def fetch_geo(pid, token, start_date):
+    dr = [{"startDate": start_date, "endDate": "today"}]
     countries = run_report(pid, token, {
-        "dateRanges": [{"startDate": "30daysAgo", "endDate": "today"}],
+        "dateRanges": dr,
         "dimensions": [{"name": "country"}],
         "metrics":    [{"name": "sessions"}],
         "orderBys":   [{"metric": {"metricName": "sessions"}, "desc": True}],
         "limit": 20,
     })
     cities = run_report(pid, token, {
-        "dateRanges": [{"startDate": "30daysAgo", "endDate": "today"}],
+        "dateRanges": dr,
         "dimensions": [{"name": "city"}],
         "metrics":    [{"name": "sessions"}],
         "orderBys":   [{"metric": {"metricName": "sessions"}, "desc": True}],
@@ -175,22 +204,23 @@ def fetch_geo(pid, token):
     }
 
 
-def fetch_devices(pid, token):
+def fetch_devices(pid, token, start_date):
+    dr = [{"startDate": start_date, "endDate": "today"}]
     device_cats = run_report(pid, token, {
-        "dateRanges": [{"startDate": "30daysAgo", "endDate": "today"}],
+        "dateRanges": dr,
         "dimensions": [{"name": "deviceCategory"}],
         "metrics":    [{"name": "sessions"}],
         "orderBys":   [{"metric": {"metricName": "sessions"}, "desc": True}],
     })
     browsers = run_report(pid, token, {
-        "dateRanges": [{"startDate": "30daysAgo", "endDate": "today"}],
+        "dateRanges": dr,
         "dimensions": [{"name": "browser"}],
         "metrics":    [{"name": "sessions"}],
         "orderBys":   [{"metric": {"metricName": "sessions"}, "desc": True}],
         "limit": 5,
     })
     os_data = run_report(pid, token, {
-        "dateRanges": [{"startDate": "30daysAgo", "endDate": "today"}],
+        "dateRanges": dr,
         "dimensions": [{"name": "operatingSystem"}],
         "metrics":    [{"name": "sessions"}],
         "orderBys":   [{"metric": {"metricName": "sessions"}, "desc": True}],
@@ -200,6 +230,23 @@ def fetch_devices(pid, token):
         "devices":  [{"device":  r["dims"][0], "sessions": int(r["mets"][0])} for r in rows(device_cats)],
         "browsers": [{"browser": r["dims"][0], "sessions": int(r["mets"][0])} for r in rows(browsers)],
         "os":       [{"os":      r["dims"][0], "sessions": int(r["mets"][0])} for r in rows(os_data)],
+    }
+
+
+def fetch_for_range(pid, token, start_date):
+    overview   = fetch_overview(pid, token, start_date)
+    top_pages  = fetch_top_pages(pid, token, start_date)
+    sources    = fetch_sources(pid, token, start_date)
+    src_detail = fetch_sources_detail(pid, token, start_date)
+    geo        = fetch_geo(pid, token, start_date)
+    devices    = fetch_devices(pid, token, start_date)
+    return {
+        **overview,
+        "topPages":       top_pages,
+        "trafficSources": sources,
+        "sourcesDetail":  src_detail,
+        **geo,
+        **devices,
     }
 
 
@@ -219,24 +266,22 @@ def main():
     print(f"Fetching GA4 data for property {property_id}...")
     token = get_access_token()
 
-    overview   = fetch_overview(property_id, token)
-    top_pages  = fetch_top_pages(property_id, token)
-    sources    = fetch_sources(property_id, token)
-    geo        = fetch_geo(property_id, token)
-    devices    = fetch_devices(property_id, token)
+    ranges_data = {}
+    for label, start_date in RANGES.items():
+        print(f"  Fetching {label} ({start_date})...")
+        ranges_data[label] = fetch_for_range(property_id, token, start_date)
+        print(f"    {ranges_data[label]['pageviews']:,} pageviews, {len(ranges_data[label]['topPages'])} pages")
 
+    # Flat 30d keys at root for backward compatibility
     payload = {
-        **overview,
-        "topPages":      top_pages,
-        "trafficSources": sources,
-        **geo,
-        **devices,
+        **ranges_data["30d"],
+        "ranges":      ranges_data,
         "lastUpdated": datetime.now(timezone.utc).isoformat(),
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    print(f"Wrote {OUT.relative_to(ROOT)}  ({len(top_pages)} pages, {overview['pageviews']:,} pageviews)")
+    print(f"Wrote {OUT.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

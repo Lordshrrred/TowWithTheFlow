@@ -233,6 +233,21 @@
     .topic-bar-fill { height: 100%; background: linear-gradient(90deg, var(--amber), var(--amber2)); border-radius: 3px; }
     .topic-val { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); min-width: 44px; text-align: right; }
 
+    /* ── Range buttons ── */
+    .range-bar { display:flex; align-items:center; gap:0.3rem; padding:0 2rem 0.9rem; background:rgba(15,17,23,0.92); flex-wrap:wrap; }
+    .range-label-txt { font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin-right:0.4rem; font-family:"Rajdhani",sans-serif; }
+    .range-btn { padding:0.28rem 0.7rem; font-size:0.72rem; font-weight:600; letter-spacing:0.07em; text-transform:uppercase; border:1px solid rgba(245,166,35,0.2); border-radius:4px; color:var(--text-muted); background:transparent; cursor:pointer; transition:all 0.18s; font-family:"Rajdhani",sans-serif; }
+    .range-btn:hover { color:var(--amber); border-color:rgba(245,166,35,0.45); }
+    .range-btn.active { color:var(--amber); background:var(--amber-dim); border-color:rgba(245,166,35,0.5); }
+
+    /* ── Source detail ── */
+    .src-detail-table { width:100%; border-collapse:collapse; font-size:0.78rem; }
+    .src-detail-table th { text-align:left; padding:0.3rem 0.5rem; color:var(--text-muted); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; border-bottom:1px solid var(--border); }
+    .src-detail-table td { padding:0.35rem 0.5rem; border-bottom:1px solid rgba(255,255,255,0.03); color:var(--text); }
+    .src-detail-table tr:hover td { background:var(--amber-glow); }
+    .src-detail-table .td-pct { color:var(--text-muted); font-weight:600; }
+    .src-detail-note { font-size:0.72rem; color:var(--text-muted); margin-top:0.8rem; padding:0.6rem 0.8rem; background:rgba(245,166,35,0.04); border-left:2px solid rgba(245,166,35,0.25); border-radius:0 4px 4px 0; line-height:1.5; }
+
     /* ── Error / Empty ── */
     .error-msg { color: var(--text-muted); font-style: italic; font-size: 0.82rem; text-align: center; padding: 1.5rem; }
     .empty-msg { color: var(--text-muted); font-size: 0.82rem; text-align: center; padding: 2rem; opacity: 0.7; }
@@ -277,6 +292,15 @@
     </div>
   </header>
 
+  <!-- Range bar -->
+  <div class="range-bar">
+    <span class="range-label-txt">Range:</span>
+    <button class="range-btn active" data-range="30d">30 Days</button>
+    <button class="range-btn" data-range="90d">90 Days</button>
+    <button class="range-btn" data-range="180d">6 Months</button>
+    <button class="range-btn" data-range="365d">1 Year</button>
+  </div>
+
   <main class="dash-main">
 
     <!-- Activating banner (hidden by default, shown when data is empty) -->
@@ -300,7 +324,7 @@
     <!-- Row 2: Pageviews over time + Traffic Sources -->
     <div class="two-col split-6040">
       <div class="chart-card">
-        <h3>Pageviews Over Time <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— last 30 days</span></h3>
+        <h3>Pageviews Over Time <span id="pv-range-label" style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— last 30 days</span></h3>
         <div class="chart-wrap">
           <div class="skeleton chart-skel" id="pv-skel" style="height:200px;"></div>
           <canvas id="pv-chart" style="display:none;"></canvas>
@@ -316,10 +340,16 @@
       </div>
     </div>
 
+    <!-- Source detail -->
+    <div class="chart-card" style="margin-bottom:1.5rem;">
+      <h3>Where Traffic Actually Comes From <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— source/medium breakdown</span></h3>
+      <div id="src-detail-wrap"><div class="skeleton chart-skel" style="height:120px;"></div></div>
+    </div>
+
     <!-- Row 3: Top Pages + Geo -->
     <div class="two-col split-5050">
       <div class="chart-card">
-        <h3>Top Pages <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— last 30 days</span></h3>
+        <h3>Top Pages <span id="pages-range-label" style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— last 30 days</span></h3>
         <div id="pages-list"><div class="skeleton chart-skel" style="height:320px;"></div></div>
       </div>
       <div class="chart-card">
@@ -370,12 +400,16 @@
 
 <script>
 // ── Config ──────────────────────────────────────────────────────────────────
-const SESSION_KEY  = "twtf_dashboard_auth"; // shared with syndication dashboard
-const PW_HASH      = "__PASSWORD_HASH__";   // injected by build_dashboard.py
+const SESSION_KEY  = "twtf_dashboard_auth";
+const PW_HASH      = "__PASSWORD_HASH__";
 const DATA_URL     = "/data/analytics.json";
 const GH_OWNER     = "Lordshrrred";
 const GH_REPO      = "TowWithTheFlow";
 const REFRESH_MS   = 5 * 60 * 1000;
+
+const RANGE_LABELS = { "30d":"last 30 days", "90d":"last 90 days", "180d":"last 6 months", "365d":"last 1 year" };
+let currentRange = "30d";
+let _fullData = null;
 
 // Chart.js palette — amber spectrum
 const PALETTE = [
@@ -438,20 +472,39 @@ async function initAuth() {
 function showApp() {
   document.getElementById("gate").style.display = "none";
   document.getElementById("app").style.display = "flex";
+  initRangeButtons();
   loadAll();
+}
+
+function initRangeButtons() {
+  document.querySelectorAll(".range-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      currentRange = btn.dataset.range;
+      document.querySelectorAll(".range-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      if (_fullData) renderAll(_fullData);
+    });
+  });
 }
 
 document.getElementById("lock-btn").addEventListener("click", () => {
   sessionStorage.removeItem(SESSION_KEY); location.reload();
 });
 
-// ── Data fetch (reads static JSON written by GH Actions) ─────────────────────
-let _data = null;
+// ── Data fetch + range resolution ─────────────────────────────────────────────
 async function fetchData() {
   const resp = await fetch(DATA_URL + "?t=" + Date.now());
   if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching analytics.json`);
-  _data = await resp.json();
-  return _data;
+  _fullData = await resp.json();
+  return _fullData;
+}
+
+// Returns the slice of data for the currently-selected range.
+// Falls back to flat root keys (30d) if ranges aren't stored yet.
+function getRangeData(full) {
+  if (full.ranges && full.ranges[currentRange]) return full.ranges[currentRange];
+  // Old format or first run after deploy — only 30d flat keys exist
+  return full;
 }
 
 // ── Utilities ─────────────────────────────────────────────────────────────────
@@ -508,16 +561,22 @@ async function triggerFetch() {
 // ── Overview / Stat Cards ─────────────────────────────────────────────────────
 function renderOverview(d) {
   const isActivating = !d.pageviews && !d.sessions;
+  const rl = RANGE_LABELS[currentRange] || "last 30 days";
+  const pvLabel    = document.getElementById("pv-range-label");
+  const pagesLabel = document.getElementById("pages-range-label");
+  if (pvLabel)    pvLabel.textContent    = `— ${rl}`;
+  if (pagesLabel) pagesLabel.textContent = `— ${rl}`;
+
   document.getElementById("stat-row").innerHTML = `
     <div class="stat-card">
       <div class="stat-label">Pageviews</div>
       <div class="stat-value">${fmtNum(d.pageviews || 0)}</div>
-      <div class="stat-sub">last 30 days</div>
+      <div class="stat-sub">${rl}</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Sessions</div>
       <div class="stat-value">${fmtNum(d.sessions || 0)}</div>
-      <div class="stat-sub">last 30 days</div>
+      <div class="stat-sub">${rl}</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Avg. Session Duration</div>
@@ -750,32 +809,66 @@ function renderDevices(d) {
   buildDonut("os-chart", "os-skel", "os-legend",  d.os,       "os");
 }
 
+// ── Source detail ──────────────────────────────────────────────────────────────
+function renderSourceDetail(d) {
+  const rows = d.sourcesDetail || [];
+  const wrap = document.getElementById("src-detail-wrap");
+  if (!wrap) return;
+  if (!rows.length) {
+    wrap.innerHTML = `<div class="empty-msg">Source detail not yet available. Will appear after the next daily workflow run.</div>`;
+    return;
+  }
+  const tableRows = rows.map(r => `
+    <tr>
+      <td>${r.source}</td>
+      <td>${r.medium}</td>
+      <td>${r.sessions.toLocaleString()}</td>
+      <td class="td-pct">${r.pct}%</td>
+    </tr>`).join("");
+  wrap.innerHTML = `
+    <table class="src-detail-table">
+      <thead><tr><th>Source</th><th>Medium</th><th>Sessions</th><th>%</th></tr></thead>
+      <tbody>${tableRows}</tbody>
+    </table>
+    <div class="src-detail-note">
+      <strong style="color:var(--amber);">Why so much Direct?</strong> GA4 calls a session "Direct" when it can't identify the referrer.
+      Most common causes: email links without UTM parameters, links shared in iMessage/WhatsApp/SMS (dark social),
+      and some Facebook app traffic that strips referrers.
+    </div>`;
+}
+
 // ── Timestamp ─────────────────────────────────────────────────────────────────
 function updateTimestamp(d) {
   const lu = d?.lastUpdated ? new Date(d.lastUpdated).toLocaleString() : new Date().toLocaleTimeString();
   document.getElementById("last-updated").textContent = "Data: " + lu;
 }
 
+// ── Render all sections from a data slice ─────────────────────────────────────
+function renderAll(full) {
+  const d = getRangeData(full);
+  checkActivating(d);
+  renderOverview(d);
+  renderSources(d);
+  renderSourceDetail(d);
+  renderTopPages(d);
+  renderGeo(d);
+  renderDevices(d);
+  renderTopics(d);
+  renderCityPages(d);
+  updateTimestamp(full);
+}
+
 // ── Load all ──────────────────────────────────────────────────────────────────
 async function loadAll() {
   try {
-    const d = await fetchData();
-    checkActivating(d);
-    renderOverview(d);
-    renderSources(d);
-    renderTopPages(d);
-    renderGeo(d);
-    renderDevices(d);
-    renderTopics(d);
-    renderCityPages(d);
-    updateTimestamp(d);
+    const full = await fetchData();
+    renderAll(full);
   } catch(err) {
     document.getElementById("stat-row").innerHTML =
       `<div class="stat-card" style="grid-column:1/-1;">${errHtml(err.message)}</div>`;
     document.getElementById("activating-banner").style.display = "flex";
     document.getElementById("ab-last-fetch").textContent = "";
   }
-  // Auto-refresh every 5 min
   setTimeout(loadAll, REFRESH_MS);
 }
 
