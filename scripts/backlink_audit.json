@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T18:38:35.101441+00:00",
+  "generated_at": "2026-06-17T22:18:27.861541+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -4433,6 +4433,33 @@
         "verified": true
       }
     },
+    "towing-cost-new-york-city-manhattan": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-new-york-city-manhattan.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-new-york-city-manhattan-what-youll-pay-right-now-quick-guide-1j51",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-new-york-city-manhattan-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819694667217125376/towing-cost-new-york-city-manhattan",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/17/towing-cost-new-york-city-manhattan/",
+        "verified": true
+      }
+    },
     "towing-cost-new-york-city-manhattan-rates": {
       "blog": {
         "reason": "ok",
@@ -5239,24 +5266,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 197,
-      "verified": 194
+      "checked": 198,
+      "verified": 195
     },
     "dev": {
-      "checked": 137,
-      "verified": 137
+      "checked": 138,
+      "verified": 138
     },
     "feeder": {
+      "checked": 206,
+      "verified": 206
+    },
+    "tumblr": {
       "checked": 205,
       "verified": 205
     },
-    "tumblr": {
-      "checked": 204,
-      "verified": 204
-    },
     "wordpress": {
-      "checked": 207,
-      "verified": 207
+      "checked": 208,
+      "verified": 208
     }
   }
 }
