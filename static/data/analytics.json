@@ -1,8 +1,8 @@
 {
   "pageviews": 28,
   "sessions": 22,
-  "avgSessionDur": 38,
-  "bounceRate": 0.5454545454545454,
+  "avgSessionDur": 39,
+  "bounceRate": 0.45454545454545453,
   "newUsers": 22,
   "returningUsers": 0,
   "daily": [
@@ -146,8 +146,8 @@
       "page": "/how-much-does-a-tow-cost-in-colorado/",
       "title": "How Much Does a Tow Cost in Colorado? | Tow With The Flow",
       "pageviews": 1,
-      "avgDur": 0,
-      "bounceRate": 100.0,
+      "avgDur": 19,
+      "bounceRate": 0.0,
       "sessions": 1
     },
     {
@@ -183,7 +183,7 @@
       "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
       "pageviews": 1,
       "avgDur": 36,
-      "bounceRate": 100.0,
+      "bounceRate": 0.0,
       "sessions": 1
     },
     {
@@ -218,22 +218,72 @@
     {
       "channel": "Organic Search",
       "sessions": 13,
-      "pct": 56.5
+      "pct": 59.1
     },
     {
       "channel": "Direct",
       "sessions": 7,
-      "pct": 30.4
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 2,
-      "pct": 8.7
+      "pct": 31.8
     },
     {
       "channel": "Referral",
       "sessions": 1,
-      "pct": 4.3
+      "pct": 4.5
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "pct": 4.5
+    }
+  ],
+  "sourcesDetail": [
+    {
+      "source": "(direct)",
+      "medium": "(none)",
+      "sessions": 7,
+      "pct": 31.8
+    },
+    {
+      "source": "duckduckgo",
+      "medium": "organic",
+      "sessions": 4,
+      "pct": 18.2
+    },
+    {
+      "source": "google",
+      "medium": "organic",
+      "sessions": 4,
+      "pct": 18.2
+    },
+    {
+      "source": "bing",
+      "medium": "organic",
+      "sessions": 2,
+      "pct": 9.1
+    },
+    {
+      "source": "yahoo",
+      "medium": "organic",
+      "sessions": 2,
+      "pct": 9.1
+    },
+    {
+      "source": "chatgpt.com",
+      "medium": "referral",
+      "sessions": 1,
+      "pct": 4.5
+    },
+    {
+      "source": "copilot.com",
+      "medium": "(not set)",
+      "sessions": 1,
+      "pct": 4.5
+    },
+    {
+      "source": "us.search.yahoo.com",
+      "medium": "referral",
+      "sessions": 1,
+      "pct": 4.5
     }
   ],
   "topCountries": [
@@ -342,5 +392,1647 @@
       "sessions": 1
     }
   ],
-  "lastUpdated": "2026-06-16T11:34:27.126549+00:00"
+  "ranges": {
+    "30d": {
+      "pageviews": 28,
+      "sessions": 22,
+      "avgSessionDur": 39,
+      "bounceRate": 0.45454545454545453,
+      "newUsers": 22,
+      "returningUsers": 0,
+      "daily": [
+        {
+          "date": "20260526",
+          "pageviews": 7
+        },
+        {
+          "date": "20260527",
+          "pageviews": 1
+        },
+        {
+          "date": "20260529",
+          "pageviews": 1
+        },
+        {
+          "date": "20260530",
+          "pageviews": 1
+        },
+        {
+          "date": "20260602",
+          "pageviews": 1
+        },
+        {
+          "date": "20260604",
+          "pageviews": 1
+        },
+        {
+          "date": "20260606",
+          "pageviews": 1
+        },
+        {
+          "date": "20260607",
+          "pageviews": 3
+        },
+        {
+          "date": "20260608",
+          "pageviews": 1
+        },
+        {
+          "date": "20260609",
+          "pageviews": 2
+        },
+        {
+          "date": "20260612",
+          "pageviews": 2
+        },
+        {
+          "date": "20260614",
+          "pageviews": 5
+        },
+        {
+          "date": "20260615",
+          "pageviews": 2
+        }
+      ],
+      "topPages": [
+        {
+          "rank": 1,
+          "page": "/",
+          "title": "Tow With The Flow | Real help when your car breaks down.",
+          "pageviews": 8,
+          "avgDur": 5,
+          "bounceRate": 85.7,
+          "sessions": 7
+        },
+        {
+          "rank": 2,
+          "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
+          "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 57,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 3,
+          "page": "/about/",
+          "title": "About Tow With The Flow | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 17,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 4,
+          "page": "/towing-cost-boston-massachusetts/",
+          "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 38,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 5,
+          "page": "/towing-cost-dallas-texas/",
+          "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 84,
+          "bounceRate": 50.0,
+          "sessions": 2
+        },
+        {
+          "rank": 6,
+          "page": "/allstate-roadside-assistance-towing-distance-covered/",
+          "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 84,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 7,
+          "page": "/contact/",
+          "title": "Contact | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 3,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 8,
+          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
+        },
+        {
+          "rank": 9,
+          "page": "/farmers-insurance-towing-benefit-how-much-pays/",
+          "title": "How Much Does Farmers Insurance Pay for Towing? Coverage Limits Explained | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 61,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 10,
+          "page": "/how-much-does-a-tow-cost-in-colorado/",
+          "title": "How Much Does a Tow Cost in Colorado? | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 19,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 11,
+          "page": "/liberty-mutual-towing-coverage-dollar-amount-limit/",
+          "title": "Liberty Mutual Towing Coverage Dollar Amount Limits Explained | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 42,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 12,
+          "page": "/posts/",
+          "title": "All Guides | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 4,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 13,
+          "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
+          "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 138,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 14,
+          "page": "/state-farm-towing-coverage-maximum-distance-miles/",
+          "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 36,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 15,
+          "page": "/towing-cost-columbus-ohio/",
+          "title": "Towing Cost in Columbus Ohio: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 65,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 16,
+          "page": "/towing-cost-detroit-michigan/",
+          "title": "Towing Cost in Detroit Michigan: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 7,
+          "bounceRate": 100.0,
+          "sessions": 1
+        },
+        {
+          "rank": 17,
+          "page": "/towing-cost-memphis-tennessee/",
+          "title": "Towing Cost in Memphis Tennessee: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
+        }
+      ],
+      "trafficSources": [
+        {
+          "channel": "Organic Search",
+          "sessions": 13,
+          "pct": 59.1
+        },
+        {
+          "channel": "Direct",
+          "sessions": 7,
+          "pct": 31.8
+        },
+        {
+          "channel": "Referral",
+          "sessions": 1,
+          "pct": 4.5
+        },
+        {
+          "channel": "Unassigned",
+          "sessions": 1,
+          "pct": 4.5
+        }
+      ],
+      "sourcesDetail": [
+        {
+          "source": "(direct)",
+          "medium": "(none)",
+          "sessions": 7,
+          "pct": 31.8
+        },
+        {
+          "source": "duckduckgo",
+          "medium": "organic",
+          "sessions": 4,
+          "pct": 18.2
+        },
+        {
+          "source": "google",
+          "medium": "organic",
+          "sessions": 4,
+          "pct": 18.2
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 2,
+          "pct": 9.1
+        },
+        {
+          "source": "yahoo",
+          "medium": "organic",
+          "sessions": 2,
+          "pct": 9.1
+        },
+        {
+          "source": "chatgpt.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 4.5
+        },
+        {
+          "source": "copilot.com",
+          "medium": "(not set)",
+          "sessions": 1,
+          "pct": 4.5
+        },
+        {
+          "source": "us.search.yahoo.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 4.5
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "United States",
+          "sessions": 19
+        },
+        {
+          "country": "United Kingdom",
+          "sessions": 2
+        },
+        {
+          "country": "T\u00fcrkiye",
+          "sessions": 1
+        }
+      ],
+      "topCities": [
+        {
+          "city": "(not set)",
+          "sessions": 3
+        },
+        {
+          "city": "Los Angeles",
+          "sessions": 2
+        },
+        {
+          "city": "Aylsham",
+          "sessions": 1
+        },
+        {
+          "city": "Boardman",
+          "sessions": 1
+        },
+        {
+          "city": "Boston",
+          "sessions": 1
+        },
+        {
+          "city": "Bursa",
+          "sessions": 1
+        },
+        {
+          "city": "Cambridge",
+          "sessions": 1
+        },
+        {
+          "city": "Chicago",
+          "sessions": 1
+        },
+        {
+          "city": "Dallas",
+          "sessions": 1
+        },
+        {
+          "city": "Denver",
+          "sessions": 1
+        }
+      ],
+      "devices": [
+        {
+          "device": "desktop",
+          "sessions": 14
+        },
+        {
+          "device": "mobile",
+          "sessions": 8
+        }
+      ],
+      "browsers": [
+        {
+          "browser": "Chrome",
+          "sessions": 11
+        },
+        {
+          "browser": "Safari",
+          "sessions": 8
+        },
+        {
+          "browser": "Edge",
+          "sessions": 2
+        },
+        {
+          "browser": "Android Webview",
+          "sessions": 1
+        }
+      ],
+      "os": [
+        {
+          "os": "Windows",
+          "sessions": 10
+        },
+        {
+          "os": "iOS",
+          "sessions": 6
+        },
+        {
+          "os": "Macintosh",
+          "sessions": 3
+        },
+        {
+          "os": "Android",
+          "sessions": 2
+        },
+        {
+          "os": "Linux",
+          "sessions": 1
+        }
+      ]
+    },
+    "90d": {
+      "pageviews": 33,
+      "sessions": 27,
+      "avgSessionDur": 32,
+      "bounceRate": 0.5555555555555556,
+      "newUsers": 27,
+      "returningUsers": 0,
+      "daily": [
+        {
+          "date": "20260416",
+          "pageviews": 3
+        },
+        {
+          "date": "20260423",
+          "pageviews": 1
+        },
+        {
+          "date": "20260514",
+          "pageviews": 1
+        },
+        {
+          "date": "20260526",
+          "pageviews": 7
+        },
+        {
+          "date": "20260527",
+          "pageviews": 1
+        },
+        {
+          "date": "20260529",
+          "pageviews": 1
+        },
+        {
+          "date": "20260530",
+          "pageviews": 1
+        },
+        {
+          "date": "20260602",
+          "pageviews": 1
+        },
+        {
+          "date": "20260604",
+          "pageviews": 1
+        },
+        {
+          "date": "20260606",
+          "pageviews": 1
+        },
+        {
+          "date": "20260607",
+          "pageviews": 3
+        },
+        {
+          "date": "20260608",
+          "pageviews": 1
+        },
+        {
+          "date": "20260609",
+          "pageviews": 2
+        },
+        {
+          "date": "20260612",
+          "pageviews": 2
+        },
+        {
+          "date": "20260614",
+          "pageviews": 5
+        },
+        {
+          "date": "20260615",
+          "pageviews": 2
+        }
+      ],
+      "topPages": [
+        {
+          "rank": 1,
+          "page": "/",
+          "title": "Tow With The Flow | Real help when your car breaks down.",
+          "pageviews": 13,
+          "avgDur": 3,
+          "bounceRate": 91.7,
+          "sessions": 12
+        },
+        {
+          "rank": 2,
+          "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
+          "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 57,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 3,
+          "page": "/about/",
+          "title": "About Tow With The Flow | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 17,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 4,
+          "page": "/towing-cost-boston-massachusetts/",
+          "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 38,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 5,
+          "page": "/towing-cost-dallas-texas/",
+          "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 84,
+          "bounceRate": 50.0,
+          "sessions": 2
+        },
+        {
+          "rank": 6,
+          "page": "/allstate-roadside-assistance-towing-distance-covered/",
+          "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 84,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 7,
+          "page": "/contact/",
+          "title": "Contact | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 3,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 8,
+          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
+        },
+        {
+          "rank": 9,
+          "page": "/farmers-insurance-towing-benefit-how-much-pays/",
+          "title": "How Much Does Farmers Insurance Pay for Towing? Coverage Limits Explained | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 61,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 10,
+          "page": "/how-much-does-a-tow-cost-in-colorado/",
+          "title": "How Much Does a Tow Cost in Colorado? | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 19,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 11,
+          "page": "/liberty-mutual-towing-coverage-dollar-amount-limit/",
+          "title": "Liberty Mutual Towing Coverage Dollar Amount Limits Explained | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 42,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 12,
+          "page": "/posts/",
+          "title": "All Guides | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 4,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 13,
+          "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
+          "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 138,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 14,
+          "page": "/state-farm-towing-coverage-maximum-distance-miles/",
+          "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 36,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 15,
+          "page": "/towing-cost-columbus-ohio/",
+          "title": "Towing Cost in Columbus Ohio: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 65,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 16,
+          "page": "/towing-cost-detroit-michigan/",
+          "title": "Towing Cost in Detroit Michigan: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 7,
+          "bounceRate": 100.0,
+          "sessions": 1
+        },
+        {
+          "rank": 17,
+          "page": "/towing-cost-memphis-tennessee/",
+          "title": "Towing Cost in Memphis Tennessee: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
+        }
+      ],
+      "trafficSources": [
+        {
+          "channel": "Organic Search",
+          "sessions": 13,
+          "pct": 48.1
+        },
+        {
+          "channel": "Direct",
+          "sessions": 12,
+          "pct": 44.4
+        },
+        {
+          "channel": "Referral",
+          "sessions": 1,
+          "pct": 3.7
+        },
+        {
+          "channel": "Unassigned",
+          "sessions": 1,
+          "pct": 3.7
+        }
+      ],
+      "sourcesDetail": [
+        {
+          "source": "(direct)",
+          "medium": "(none)",
+          "sessions": 12,
+          "pct": 44.4
+        },
+        {
+          "source": "duckduckgo",
+          "medium": "organic",
+          "sessions": 4,
+          "pct": 14.8
+        },
+        {
+          "source": "google",
+          "medium": "organic",
+          "sessions": 4,
+          "pct": 14.8
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 2,
+          "pct": 7.4
+        },
+        {
+          "source": "yahoo",
+          "medium": "organic",
+          "sessions": 2,
+          "pct": 7.4
+        },
+        {
+          "source": "chatgpt.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 3.7
+        },
+        {
+          "source": "copilot.com",
+          "medium": "(not set)",
+          "sessions": 1,
+          "pct": 3.7
+        },
+        {
+          "source": "us.search.yahoo.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 3.7
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "United States",
+          "sessions": 20
+        },
+        {
+          "country": "(not set)",
+          "sessions": 3
+        },
+        {
+          "country": "United Kingdom",
+          "sessions": 2
+        },
+        {
+          "country": "Germany",
+          "sessions": 1
+        },
+        {
+          "country": "T\u00fcrkiye",
+          "sessions": 1
+        }
+      ],
+      "topCities": [
+        {
+          "city": "(not set)",
+          "sessions": 7
+        },
+        {
+          "city": "Los Angeles",
+          "sessions": 2
+        },
+        {
+          "city": "Aylsham",
+          "sessions": 1
+        },
+        {
+          "city": "Boardman",
+          "sessions": 1
+        },
+        {
+          "city": "Boston",
+          "sessions": 1
+        },
+        {
+          "city": "Bursa",
+          "sessions": 1
+        },
+        {
+          "city": "Cambridge",
+          "sessions": 1
+        },
+        {
+          "city": "Chicago",
+          "sessions": 1
+        },
+        {
+          "city": "Dallas",
+          "sessions": 1
+        },
+        {
+          "city": "Denver",
+          "sessions": 1
+        }
+      ],
+      "devices": [
+        {
+          "device": "desktop",
+          "sessions": 16
+        },
+        {
+          "device": "mobile",
+          "sessions": 11
+        }
+      ],
+      "browsers": [
+        {
+          "browser": "Chrome",
+          "sessions": 16
+        },
+        {
+          "browser": "Safari",
+          "sessions": 8
+        },
+        {
+          "browser": "Edge",
+          "sessions": 2
+        },
+        {
+          "browser": "Android Webview",
+          "sessions": 1
+        }
+      ],
+      "os": [
+        {
+          "os": "Windows",
+          "sessions": 10
+        },
+        {
+          "os": "iOS",
+          "sessions": 6
+        },
+        {
+          "os": "Android",
+          "sessions": 5
+        },
+        {
+          "os": "Macintosh",
+          "sessions": 4
+        },
+        {
+          "os": "Linux",
+          "sessions": 2
+        }
+      ]
+    },
+    "180d": {
+      "pageviews": 33,
+      "sessions": 27,
+      "avgSessionDur": 32,
+      "bounceRate": 0.5555555555555556,
+      "newUsers": 27,
+      "returningUsers": 0,
+      "daily": [
+        {
+          "date": "20260416",
+          "pageviews": 3
+        },
+        {
+          "date": "20260423",
+          "pageviews": 1
+        },
+        {
+          "date": "20260514",
+          "pageviews": 1
+        },
+        {
+          "date": "20260526",
+          "pageviews": 7
+        },
+        {
+          "date": "20260527",
+          "pageviews": 1
+        },
+        {
+          "date": "20260529",
+          "pageviews": 1
+        },
+        {
+          "date": "20260530",
+          "pageviews": 1
+        },
+        {
+          "date": "20260602",
+          "pageviews": 1
+        },
+        {
+          "date": "20260604",
+          "pageviews": 1
+        },
+        {
+          "date": "20260606",
+          "pageviews": 1
+        },
+        {
+          "date": "20260607",
+          "pageviews": 3
+        },
+        {
+          "date": "20260608",
+          "pageviews": 1
+        },
+        {
+          "date": "20260609",
+          "pageviews": 2
+        },
+        {
+          "date": "20260612",
+          "pageviews": 2
+        },
+        {
+          "date": "20260614",
+          "pageviews": 5
+        },
+        {
+          "date": "20260615",
+          "pageviews": 2
+        }
+      ],
+      "topPages": [
+        {
+          "rank": 1,
+          "page": "/",
+          "title": "Tow With The Flow | Real help when your car breaks down.",
+          "pageviews": 13,
+          "avgDur": 3,
+          "bounceRate": 91.7,
+          "sessions": 12
+        },
+        {
+          "rank": 2,
+          "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
+          "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 57,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 3,
+          "page": "/about/",
+          "title": "About Tow With The Flow | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 17,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 4,
+          "page": "/towing-cost-boston-massachusetts/",
+          "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 38,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 5,
+          "page": "/towing-cost-dallas-texas/",
+          "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 84,
+          "bounceRate": 50.0,
+          "sessions": 2
+        },
+        {
+          "rank": 6,
+          "page": "/allstate-roadside-assistance-towing-distance-covered/",
+          "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 84,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 7,
+          "page": "/contact/",
+          "title": "Contact | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 3,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 8,
+          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
+        },
+        {
+          "rank": 9,
+          "page": "/farmers-insurance-towing-benefit-how-much-pays/",
+          "title": "How Much Does Farmers Insurance Pay for Towing? Coverage Limits Explained | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 61,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 10,
+          "page": "/how-much-does-a-tow-cost-in-colorado/",
+          "title": "How Much Does a Tow Cost in Colorado? | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 19,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 11,
+          "page": "/liberty-mutual-towing-coverage-dollar-amount-limit/",
+          "title": "Liberty Mutual Towing Coverage Dollar Amount Limits Explained | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 42,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 12,
+          "page": "/posts/",
+          "title": "All Guides | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 4,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 13,
+          "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
+          "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 138,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 14,
+          "page": "/state-farm-towing-coverage-maximum-distance-miles/",
+          "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 36,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 15,
+          "page": "/towing-cost-columbus-ohio/",
+          "title": "Towing Cost in Columbus Ohio: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 65,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 16,
+          "page": "/towing-cost-detroit-michigan/",
+          "title": "Towing Cost in Detroit Michigan: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 7,
+          "bounceRate": 100.0,
+          "sessions": 1
+        },
+        {
+          "rank": 17,
+          "page": "/towing-cost-memphis-tennessee/",
+          "title": "Towing Cost in Memphis Tennessee: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
+        }
+      ],
+      "trafficSources": [
+        {
+          "channel": "Organic Search",
+          "sessions": 13,
+          "pct": 48.1
+        },
+        {
+          "channel": "Direct",
+          "sessions": 12,
+          "pct": 44.4
+        },
+        {
+          "channel": "Referral",
+          "sessions": 1,
+          "pct": 3.7
+        },
+        {
+          "channel": "Unassigned",
+          "sessions": 1,
+          "pct": 3.7
+        }
+      ],
+      "sourcesDetail": [
+        {
+          "source": "(direct)",
+          "medium": "(none)",
+          "sessions": 12,
+          "pct": 44.4
+        },
+        {
+          "source": "duckduckgo",
+          "medium": "organic",
+          "sessions": 4,
+          "pct": 14.8
+        },
+        {
+          "source": "google",
+          "medium": "organic",
+          "sessions": 4,
+          "pct": 14.8
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 2,
+          "pct": 7.4
+        },
+        {
+          "source": "yahoo",
+          "medium": "organic",
+          "sessions": 2,
+          "pct": 7.4
+        },
+        {
+          "source": "chatgpt.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 3.7
+        },
+        {
+          "source": "copilot.com",
+          "medium": "(not set)",
+          "sessions": 1,
+          "pct": 3.7
+        },
+        {
+          "source": "us.search.yahoo.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 3.7
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "United States",
+          "sessions": 20
+        },
+        {
+          "country": "(not set)",
+          "sessions": 3
+        },
+        {
+          "country": "United Kingdom",
+          "sessions": 2
+        },
+        {
+          "country": "Germany",
+          "sessions": 1
+        },
+        {
+          "country": "T\u00fcrkiye",
+          "sessions": 1
+        }
+      ],
+      "topCities": [
+        {
+          "city": "(not set)",
+          "sessions": 7
+        },
+        {
+          "city": "Los Angeles",
+          "sessions": 2
+        },
+        {
+          "city": "Aylsham",
+          "sessions": 1
+        },
+        {
+          "city": "Boardman",
+          "sessions": 1
+        },
+        {
+          "city": "Boston",
+          "sessions": 1
+        },
+        {
+          "city": "Bursa",
+          "sessions": 1
+        },
+        {
+          "city": "Cambridge",
+          "sessions": 1
+        },
+        {
+          "city": "Chicago",
+          "sessions": 1
+        },
+        {
+          "city": "Dallas",
+          "sessions": 1
+        },
+        {
+          "city": "Denver",
+          "sessions": 1
+        }
+      ],
+      "devices": [
+        {
+          "device": "desktop",
+          "sessions": 16
+        },
+        {
+          "device": "mobile",
+          "sessions": 11
+        }
+      ],
+      "browsers": [
+        {
+          "browser": "Chrome",
+          "sessions": 16
+        },
+        {
+          "browser": "Safari",
+          "sessions": 8
+        },
+        {
+          "browser": "Edge",
+          "sessions": 2
+        },
+        {
+          "browser": "Android Webview",
+          "sessions": 1
+        }
+      ],
+      "os": [
+        {
+          "os": "Windows",
+          "sessions": 10
+        },
+        {
+          "os": "iOS",
+          "sessions": 6
+        },
+        {
+          "os": "Android",
+          "sessions": 5
+        },
+        {
+          "os": "Macintosh",
+          "sessions": 4
+        },
+        {
+          "os": "Linux",
+          "sessions": 2
+        }
+      ]
+    },
+    "365d": {
+      "pageviews": 33,
+      "sessions": 27,
+      "avgSessionDur": 32,
+      "bounceRate": 0.5555555555555556,
+      "newUsers": 27,
+      "returningUsers": 0,
+      "daily": [
+        {
+          "date": "20260416",
+          "pageviews": 3
+        },
+        {
+          "date": "20260423",
+          "pageviews": 1
+        },
+        {
+          "date": "20260514",
+          "pageviews": 1
+        },
+        {
+          "date": "20260526",
+          "pageviews": 7
+        },
+        {
+          "date": "20260527",
+          "pageviews": 1
+        },
+        {
+          "date": "20260529",
+          "pageviews": 1
+        },
+        {
+          "date": "20260530",
+          "pageviews": 1
+        },
+        {
+          "date": "20260602",
+          "pageviews": 1
+        },
+        {
+          "date": "20260604",
+          "pageviews": 1
+        },
+        {
+          "date": "20260606",
+          "pageviews": 1
+        },
+        {
+          "date": "20260607",
+          "pageviews": 3
+        },
+        {
+          "date": "20260608",
+          "pageviews": 1
+        },
+        {
+          "date": "20260609",
+          "pageviews": 2
+        },
+        {
+          "date": "20260612",
+          "pageviews": 2
+        },
+        {
+          "date": "20260614",
+          "pageviews": 5
+        },
+        {
+          "date": "20260615",
+          "pageviews": 2
+        }
+      ],
+      "topPages": [
+        {
+          "rank": 1,
+          "page": "/",
+          "title": "Tow With The Flow | Real help when your car breaks down.",
+          "pageviews": 13,
+          "avgDur": 3,
+          "bounceRate": 91.7,
+          "sessions": 12
+        },
+        {
+          "rank": 2,
+          "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
+          "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 57,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 3,
+          "page": "/about/",
+          "title": "About Tow With The Flow | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 17,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 4,
+          "page": "/towing-cost-boston-massachusetts/",
+          "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 38,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 5,
+          "page": "/towing-cost-dallas-texas/",
+          "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 84,
+          "bounceRate": 50.0,
+          "sessions": 2
+        },
+        {
+          "rank": 6,
+          "page": "/allstate-roadside-assistance-towing-distance-covered/",
+          "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 84,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 7,
+          "page": "/contact/",
+          "title": "Contact | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 3,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 8,
+          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
+        },
+        {
+          "rank": 9,
+          "page": "/farmers-insurance-towing-benefit-how-much-pays/",
+          "title": "How Much Does Farmers Insurance Pay for Towing? Coverage Limits Explained | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 61,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 10,
+          "page": "/how-much-does-a-tow-cost-in-colorado/",
+          "title": "How Much Does a Tow Cost in Colorado? | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 19,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 11,
+          "page": "/liberty-mutual-towing-coverage-dollar-amount-limit/",
+          "title": "Liberty Mutual Towing Coverage Dollar Amount Limits Explained | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 42,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 12,
+          "page": "/posts/",
+          "title": "All Guides | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 4,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 13,
+          "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
+          "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 138,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 14,
+          "page": "/state-farm-towing-coverage-maximum-distance-miles/",
+          "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 36,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 15,
+          "page": "/towing-cost-columbus-ohio/",
+          "title": "Towing Cost in Columbus Ohio: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 65,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 16,
+          "page": "/towing-cost-detroit-michigan/",
+          "title": "Towing Cost in Detroit Michigan: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 7,
+          "bounceRate": 100.0,
+          "sessions": 1
+        },
+        {
+          "rank": 17,
+          "page": "/towing-cost-memphis-tennessee/",
+          "title": "Towing Cost in Memphis Tennessee: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
+        }
+      ],
+      "trafficSources": [
+        {
+          "channel": "Organic Search",
+          "sessions": 13,
+          "pct": 48.1
+        },
+        {
+          "channel": "Direct",
+          "sessions": 12,
+          "pct": 44.4
+        },
+        {
+          "channel": "Referral",
+          "sessions": 1,
+          "pct": 3.7
+        },
+        {
+          "channel": "Unassigned",
+          "sessions": 1,
+          "pct": 3.7
+        }
+      ],
+      "sourcesDetail": [
+        {
+          "source": "(direct)",
+          "medium": "(none)",
+          "sessions": 12,
+          "pct": 44.4
+        },
+        {
+          "source": "duckduckgo",
+          "medium": "organic",
+          "sessions": 4,
+          "pct": 14.8
+        },
+        {
+          "source": "google",
+          "medium": "organic",
+          "sessions": 4,
+          "pct": 14.8
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 2,
+          "pct": 7.4
+        },
+        {
+          "source": "yahoo",
+          "medium": "organic",
+          "sessions": 2,
+          "pct": 7.4
+        },
+        {
+          "source": "chatgpt.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 3.7
+        },
+        {
+          "source": "copilot.com",
+          "medium": "(not set)",
+          "sessions": 1,
+          "pct": 3.7
+        },
+        {
+          "source": "us.search.yahoo.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 3.7
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "United States",
+          "sessions": 20
+        },
+        {
+          "country": "(not set)",
+          "sessions": 3
+        },
+        {
+          "country": "United Kingdom",
+          "sessions": 2
+        },
+        {
+          "country": "Germany",
+          "sessions": 1
+        },
+        {
+          "country": "T\u00fcrkiye",
+          "sessions": 1
+        }
+      ],
+      "topCities": [
+        {
+          "city": "(not set)",
+          "sessions": 7
+        },
+        {
+          "city": "Los Angeles",
+          "sessions": 2
+        },
+        {
+          "city": "Aylsham",
+          "sessions": 1
+        },
+        {
+          "city": "Boardman",
+          "sessions": 1
+        },
+        {
+          "city": "Boston",
+          "sessions": 1
+        },
+        {
+          "city": "Bursa",
+          "sessions": 1
+        },
+        {
+          "city": "Cambridge",
+          "sessions": 1
+        },
+        {
+          "city": "Chicago",
+          "sessions": 1
+        },
+        {
+          "city": "Dallas",
+          "sessions": 1
+        },
+        {
+          "city": "Denver",
+          "sessions": 1
+        }
+      ],
+      "devices": [
+        {
+          "device": "desktop",
+          "sessions": 16
+        },
+        {
+          "device": "mobile",
+          "sessions": 11
+        }
+      ],
+      "browsers": [
+        {
+          "browser": "Chrome",
+          "sessions": 16
+        },
+        {
+          "browser": "Safari",
+          "sessions": 8
+        },
+        {
+          "browser": "Edge",
+          "sessions": 2
+        },
+        {
+          "browser": "Android Webview",
+          "sessions": 1
+        }
+      ],
+      "os": [
+        {
+          "os": "Windows",
+          "sessions": 10
+        },
+        {
+          "os": "iOS",
+          "sessions": 6
+        },
+        {
+          "os": "Android",
+          "sessions": 5
+        },
+        {
+          "os": "Macintosh",
+          "sessions": 4
+        },
+        {
+          "os": "Linux",
+          "sessions": 2
+        }
+      ]
+    }
+  },
+  "lastUpdated": "2026-06-17T11:17:16.665687+00:00"
 }
