@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T18:42:05.616031+00:00",
+  "generated_at": "2026-06-18T22:29:38.178201+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -4968,6 +4968,33 @@
         "verified": true
       }
     },
+    "towing-cost-seattle-washington-bridge-tolls": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-seattle-washington-bridge.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-seattle-washington-bridge-tolls-what-youll-pay-right-now-roadside-tips-m0n",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-seattle-washington-bridge-tolls-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819785290649583616/towing-cost-seattle-washington-bridge-tolls",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/18/towing-cost-seattle-washington-bridge-tolls/",
+        "verified": true
+      }
+    },
     "towing-cost-toll-road-breakdown-emergency-lane": {
       "blog": {
         "reason": "ok",
@@ -5352,24 +5379,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 202,
-      "verified": 200
+      "checked": 203,
+      "verified": 201
     },
     "dev": {
-      "checked": 141,
-      "verified": 141
+      "checked": 142,
+      "verified": 142
     },
     "feeder": {
+      "checked": 210,
+      "verified": 210
+    },
+    "tumblr": {
       "checked": 209,
       "verified": 209
     },
-    "tumblr": {
-      "checked": 208,
-      "verified": 208
-    },
     "wordpress": {
-      "checked": 211,
-      "verified": 211
+      "checked": 212,
+      "verified": 212
     }
   }
 }
