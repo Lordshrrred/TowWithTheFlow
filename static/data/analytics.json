@@ -1,9 +1,9 @@
 {
-  "pageviews": 28,
-  "sessions": 22,
-  "avgSessionDur": 39,
-  "bounceRate": 0.45454545454545453,
-  "newUsers": 22,
+  "pageviews": 29,
+  "sessions": 23,
+  "avgSessionDur": 38,
+  "bounceRate": 0.4782608695652174,
+  "newUsers": 23,
   "returningUsers": 0,
   "daily": [
     {
@@ -57,6 +57,10 @@
     {
       "date": "20260615",
       "pageviews": 2
+    },
+    {
+      "date": "20260617",
+      "pageviews": 1
     }
   ],
   "topPages": [
@@ -212,28 +216,37 @@
       "avgDur": 0,
       "bounceRate": 100.0,
       "sessions": 1
+    },
+    {
+      "rank": 18,
+      "page": "/towing-cost-miami-florida/",
+      "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
+      "pageviews": 1,
+      "avgDur": 0,
+      "bounceRate": 100.0,
+      "sessions": 1
     }
   ],
   "trafficSources": [
     {
       "channel": "Organic Search",
-      "sessions": 13,
-      "pct": 59.1
+      "sessions": 14,
+      "pct": 60.9
     },
     {
       "channel": "Direct",
       "sessions": 7,
-      "pct": 31.8
+      "pct": 30.4
     },
     {
       "channel": "Referral",
       "sessions": 1,
-      "pct": 4.5
+      "pct": 4.3
     },
     {
       "channel": "Unassigned",
       "sessions": 1,
-      "pct": 4.5
+      "pct": 4.3
     }
   ],
   "sourcesDetail": [
@@ -241,55 +254,55 @@
       "source": "(direct)",
       "medium": "(none)",
       "sessions": 7,
-      "pct": 31.8
+      "pct": 30.4
+    },
+    {
+      "source": "google",
+      "medium": "organic",
+      "sessions": 5,
+      "pct": 21.7
     },
     {
       "source": "duckduckgo",
       "medium": "organic",
       "sessions": 4,
-      "pct": 18.2
-    },
-    {
-      "source": "google",
-      "medium": "organic",
-      "sessions": 4,
-      "pct": 18.2
+      "pct": 17.4
     },
     {
       "source": "bing",
       "medium": "organic",
       "sessions": 2,
-      "pct": 9.1
+      "pct": 8.7
     },
     {
       "source": "yahoo",
       "medium": "organic",
       "sessions": 2,
-      "pct": 9.1
+      "pct": 8.7
     },
     {
       "source": "chatgpt.com",
       "medium": "referral",
       "sessions": 1,
-      "pct": 4.5
+      "pct": 4.3
     },
     {
       "source": "copilot.com",
       "medium": "(not set)",
       "sessions": 1,
-      "pct": 4.5
+      "pct": 4.3
     },
     {
       "source": "us.search.yahoo.com",
       "medium": "referral",
       "sessions": 1,
-      "pct": 4.5
+      "pct": 4.3
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 19
+      "sessions": 20
     },
     {
       "country": "United Kingdom",
@@ -349,13 +362,13 @@
     },
     {
       "device": "mobile",
-      "sessions": 8
+      "sessions": 9
     }
   ],
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 11
+      "sessions": 12
     },
     {
       "browser": "Safari",
@@ -380,12 +393,12 @@
       "sessions": 6
     },
     {
-      "os": "Macintosh",
+      "os": "Android",
       "sessions": 3
     },
     {
-      "os": "Android",
-      "sessions": 2
+      "os": "Macintosh",
+      "sessions": 3
     },
     {
       "os": "Linux",
@@ -394,11 +407,11 @@
   ],
   "ranges": {
     "30d": {
-      "pageviews": 28,
-      "sessions": 22,
-      "avgSessionDur": 39,
-      "bounceRate": 0.45454545454545453,
-      "newUsers": 22,
+      "pageviews": 29,
+      "sessions": 23,
+      "avgSessionDur": 38,
+      "bounceRate": 0.4782608695652174,
+      "newUsers": 23,
       "returningUsers": 0,
       "daily": [
         {
@@ -452,6 +465,10 @@
         {
           "date": "20260615",
           "pageviews": 2
+        },
+        {
+          "date": "20260617",
+          "pageviews": 1
         }
       ],
       "topPages": [
@@ -607,28 +624,37 @@
           "avgDur": 0,
           "bounceRate": 100.0,
           "sessions": 1
+        },
+        {
+          "rank": 18,
+          "page": "/towing-cost-miami-florida/",
+          "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
         }
       ],
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 13,
-          "pct": 59.1
+          "sessions": 14,
+          "pct": 60.9
         },
         {
           "channel": "Direct",
           "sessions": 7,
-          "pct": 31.8
+          "pct": 30.4
         },
         {
           "channel": "Referral",
           "sessions": 1,
-          "pct": 4.5
+          "pct": 4.3
         },
         {
           "channel": "Unassigned",
           "sessions": 1,
-          "pct": 4.5
+          "pct": 4.3
         }
       ],
       "sourcesDetail": [
@@ -636,55 +662,55 @@
           "source": "(direct)",
           "medium": "(none)",
           "sessions": 7,
-          "pct": 31.8
+          "pct": 30.4
+        },
+        {
+          "source": "google",
+          "medium": "organic",
+          "sessions": 5,
+          "pct": 21.7
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 4,
-          "pct": 18.2
-        },
-        {
-          "source": "google",
-          "medium": "organic",
-          "sessions": 4,
-          "pct": 18.2
+          "pct": 17.4
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 2,
-          "pct": 9.1
+          "pct": 8.7
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 2,
-          "pct": 9.1
+          "pct": 8.7
         },
         {
           "source": "chatgpt.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 4.5
+          "pct": 4.3
         },
         {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 1,
-          "pct": 4.5
+          "pct": 4.3
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 4.5
+          "pct": 4.3
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 19
+          "sessions": 20
         },
         {
           "country": "United Kingdom",
@@ -744,13 +770,13 @@
         },
         {
           "device": "mobile",
-          "sessions": 8
+          "sessions": 9
         }
       ],
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 11
+          "sessions": 12
         },
         {
           "browser": "Safari",
@@ -775,12 +801,12 @@
           "sessions": 6
         },
         {
-          "os": "Macintosh",
+          "os": "Android",
           "sessions": 3
         },
         {
-          "os": "Android",
-          "sessions": 2
+          "os": "Macintosh",
+          "sessions": 3
         },
         {
           "os": "Linux",
@@ -789,11 +815,11 @@
       ]
     },
     "90d": {
-      "pageviews": 33,
-      "sessions": 27,
-      "avgSessionDur": 32,
-      "bounceRate": 0.5555555555555556,
-      "newUsers": 27,
+      "pageviews": 34,
+      "sessions": 28,
+      "avgSessionDur": 31,
+      "bounceRate": 0.5714285714285714,
+      "newUsers": 28,
       "returningUsers": 0,
       "daily": [
         {
@@ -859,6 +885,10 @@
         {
           "date": "20260615",
           "pageviews": 2
+        },
+        {
+          "date": "20260617",
+          "pageviews": 1
         }
       ],
       "topPages": [
@@ -1014,28 +1044,37 @@
           "avgDur": 0,
           "bounceRate": 100.0,
           "sessions": 1
+        },
+        {
+          "rank": 18,
+          "page": "/towing-cost-miami-florida/",
+          "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
         }
       ],
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 13,
-          "pct": 48.1
+          "sessions": 14,
+          "pct": 50.0
         },
         {
           "channel": "Direct",
           "sessions": 12,
-          "pct": 44.4
+          "pct": 42.9
         },
         {
           "channel": "Referral",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         },
         {
           "channel": "Unassigned",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         }
       ],
       "sourcesDetail": [
@@ -1043,55 +1082,55 @@
           "source": "(direct)",
           "medium": "(none)",
           "sessions": 12,
-          "pct": 44.4
+          "pct": 42.9
+        },
+        {
+          "source": "google",
+          "medium": "organic",
+          "sessions": 5,
+          "pct": 17.9
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 4,
-          "pct": 14.8
-        },
-        {
-          "source": "google",
-          "medium": "organic",
-          "sessions": 4,
-          "pct": 14.8
+          "pct": 14.3
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 2,
-          "pct": 7.4
+          "pct": 7.1
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 2,
-          "pct": 7.4
+          "pct": 7.1
         },
         {
           "source": "chatgpt.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         },
         {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 20
+          "sessions": 21
         },
         {
           "country": "(not set)",
@@ -1159,13 +1198,13 @@
         },
         {
           "device": "mobile",
-          "sessions": 11
+          "sessions": 12
         }
       ],
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 16
+          "sessions": 17
         },
         {
           "browser": "Safari",
@@ -1186,12 +1225,12 @@
           "sessions": 10
         },
         {
-          "os": "iOS",
+          "os": "Android",
           "sessions": 6
         },
         {
-          "os": "Android",
-          "sessions": 5
+          "os": "iOS",
+          "sessions": 6
         },
         {
           "os": "Macintosh",
@@ -1204,11 +1243,11 @@
       ]
     },
     "180d": {
-      "pageviews": 33,
-      "sessions": 27,
-      "avgSessionDur": 32,
-      "bounceRate": 0.5555555555555556,
-      "newUsers": 27,
+      "pageviews": 34,
+      "sessions": 28,
+      "avgSessionDur": 31,
+      "bounceRate": 0.5714285714285714,
+      "newUsers": 28,
       "returningUsers": 0,
       "daily": [
         {
@@ -1274,6 +1313,10 @@
         {
           "date": "20260615",
           "pageviews": 2
+        },
+        {
+          "date": "20260617",
+          "pageviews": 1
         }
       ],
       "topPages": [
@@ -1429,28 +1472,37 @@
           "avgDur": 0,
           "bounceRate": 100.0,
           "sessions": 1
+        },
+        {
+          "rank": 18,
+          "page": "/towing-cost-miami-florida/",
+          "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
         }
       ],
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 13,
-          "pct": 48.1
+          "sessions": 14,
+          "pct": 50.0
         },
         {
           "channel": "Direct",
           "sessions": 12,
-          "pct": 44.4
+          "pct": 42.9
         },
         {
           "channel": "Referral",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         },
         {
           "channel": "Unassigned",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         }
       ],
       "sourcesDetail": [
@@ -1458,55 +1510,55 @@
           "source": "(direct)",
           "medium": "(none)",
           "sessions": 12,
-          "pct": 44.4
+          "pct": 42.9
+        },
+        {
+          "source": "google",
+          "medium": "organic",
+          "sessions": 5,
+          "pct": 17.9
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 4,
-          "pct": 14.8
-        },
-        {
-          "source": "google",
-          "medium": "organic",
-          "sessions": 4,
-          "pct": 14.8
+          "pct": 14.3
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 2,
-          "pct": 7.4
+          "pct": 7.1
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 2,
-          "pct": 7.4
+          "pct": 7.1
         },
         {
           "source": "chatgpt.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         },
         {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 20
+          "sessions": 21
         },
         {
           "country": "(not set)",
@@ -1574,13 +1626,13 @@
         },
         {
           "device": "mobile",
-          "sessions": 11
+          "sessions": 12
         }
       ],
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 16
+          "sessions": 17
         },
         {
           "browser": "Safari",
@@ -1601,12 +1653,12 @@
           "sessions": 10
         },
         {
-          "os": "iOS",
+          "os": "Android",
           "sessions": 6
         },
         {
-          "os": "Android",
-          "sessions": 5
+          "os": "iOS",
+          "sessions": 6
         },
         {
           "os": "Macintosh",
@@ -1619,11 +1671,11 @@
       ]
     },
     "365d": {
-      "pageviews": 33,
-      "sessions": 27,
-      "avgSessionDur": 32,
-      "bounceRate": 0.5555555555555556,
-      "newUsers": 27,
+      "pageviews": 34,
+      "sessions": 28,
+      "avgSessionDur": 31,
+      "bounceRate": 0.5714285714285714,
+      "newUsers": 28,
       "returningUsers": 0,
       "daily": [
         {
@@ -1689,6 +1741,10 @@
         {
           "date": "20260615",
           "pageviews": 2
+        },
+        {
+          "date": "20260617",
+          "pageviews": 1
         }
       ],
       "topPages": [
@@ -1844,28 +1900,37 @@
           "avgDur": 0,
           "bounceRate": 100.0,
           "sessions": 1
+        },
+        {
+          "rank": 18,
+          "page": "/towing-cost-miami-florida/",
+          "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 1
         }
       ],
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 13,
-          "pct": 48.1
+          "sessions": 14,
+          "pct": 50.0
         },
         {
           "channel": "Direct",
           "sessions": 12,
-          "pct": 44.4
+          "pct": 42.9
         },
         {
           "channel": "Referral",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         },
         {
           "channel": "Unassigned",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         }
       ],
       "sourcesDetail": [
@@ -1873,55 +1938,55 @@
           "source": "(direct)",
           "medium": "(none)",
           "sessions": 12,
-          "pct": 44.4
+          "pct": 42.9
+        },
+        {
+          "source": "google",
+          "medium": "organic",
+          "sessions": 5,
+          "pct": 17.9
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 4,
-          "pct": 14.8
-        },
-        {
-          "source": "google",
-          "medium": "organic",
-          "sessions": 4,
-          "pct": 14.8
+          "pct": 14.3
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 2,
-          "pct": 7.4
+          "pct": 7.1
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 2,
-          "pct": 7.4
+          "pct": 7.1
         },
         {
           "source": "chatgpt.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         },
         {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 3.7
+          "pct": 3.6
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 20
+          "sessions": 21
         },
         {
           "country": "(not set)",
@@ -1989,13 +2054,13 @@
         },
         {
           "device": "mobile",
-          "sessions": 11
+          "sessions": 12
         }
       ],
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 16
+          "sessions": 17
         },
         {
           "browser": "Safari",
@@ -2016,12 +2081,12 @@
           "sessions": 10
         },
         {
-          "os": "iOS",
+          "os": "Android",
           "sessions": 6
         },
         {
-          "os": "Android",
-          "sessions": 5
+          "os": "iOS",
+          "sessions": 6
         },
         {
           "os": "Macintosh",
@@ -2034,5 +2099,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-06-17T11:17:16.665687+00:00"
+  "lastUpdated": "2026-06-18T10:48:11.403329+00:00"
 }
