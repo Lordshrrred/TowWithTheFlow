@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T15:56:35.936049+00:00",
+  "generated_at": "2026-06-18T18:42:05.616031+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1297,9 +1297,9 @@
     },
     "car-wont-shift-into-drive-need-tow-truck": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/04/car-wont-shift-into-drive-need-tow-truck.html",
-        "verified": false
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-shift-into-drive-need-tow.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1318,8 +1318,7 @@
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-wont-shift-into-drive-need-tow-truck/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/18/car-wont-shift-into-drive-need-tow-truck-2/",
         "verified": true
       }
     },
@@ -4689,6 +4688,12 @@
       }
     },
     "towing-cost-phoenix-arizona-summer-heat": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-phoenix-arizona-summer-heat.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-summer-heat-what-to-expect-what-drivers-should-know-36f5",
@@ -4707,7 +4712,34 @@
       "wordpress": {
         "reason": "ok",
         "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/towing-cost-phoenix-arizona-summer-heat/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/18/towing-cost-phoenix-arizona-summer-heat-2/",
+        "verified": true
+      }
+    },
+    "towing-cost-phoenix-arizona-summer-heat-2": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-phoenix-arizona-summer-heat.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-phoenix-arizona-summer-heat-what-youll-pay-right-now-quick-guide-3ng7",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-phoenix-arizona-summer-heat-2-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819775050673684480/towing-cost-phoenix-arizona-summer-heat-2",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/18/towing-cost-phoenix-arizona-summer-heat-2/",
         "verified": true
       }
     },
@@ -5034,6 +5066,33 @@
         "verified": true
       }
     },
+    "transmission-slipping-on-highway-emergency-steps": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/transmission-slipping-on-highway.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/transmission-slipping-on-highway-emergency-steps-to-take-right-now-explained-1gg1",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-on-highway-emergency-steps-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819781286113820672/transmission-slipping-on-highway-emergency-steps",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/18/transmission-slipping-on-highway-emergency-steps/",
+        "verified": true
+      }
+    },
     "transmission-slipping-symptoms": {
       "blog": {
         "reason": "ok",
@@ -5293,24 +5352,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 199,
-      "verified": 196
+      "checked": 202,
+      "verified": 200
     },
     "dev": {
-      "checked": 139,
-      "verified": 139
+      "checked": 141,
+      "verified": 141
     },
     "feeder": {
-      "checked": 207,
-      "verified": 207
-    },
-    "tumblr": {
-      "checked": 206,
-      "verified": 206
-    },
-    "wordpress": {
       "checked": 209,
       "verified": 209
+    },
+    "tumblr": {
+      "checked": 208,
+      "verified": 208
+    },
+    "wordpress": {
+      "checked": 211,
+      "verified": 211
     }
   }
 }
