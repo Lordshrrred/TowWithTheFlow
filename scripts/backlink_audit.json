@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T18:11:36.669200+00:00",
+  "generated_at": "2026-06-19T21:40:35.951582+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2283,6 +2283,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/29/how-much-does-a-tow-cost-in-colorado/",
+        "verified": true
+      }
+    },
+    "how-much-does-a-tow-truck-cost-in-denver-colorado": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/how-much-does-tow-truck-cost-in-denver.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/how-much-does-a-tow-truck-cost-in-denver-colorado-roadside-tips-2cbj",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-much-does-a-tow-truck-cost-in-denver-colorado-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819874266907574272/how-much-does-a-tow-truck-cost-in-denver-colorado",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/19/how-much-does-a-tow-truck-cost-in-denver-colorado/",
         "verified": true
       }
     },
@@ -5459,24 +5486,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 206,
-      "verified": 205
+      "checked": 207,
+      "verified": 206
     },
     "dev": {
-      "checked": 145,
-      "verified": 145
+      "checked": 146,
+      "verified": 146
     },
     "feeder": {
+      "checked": 214,
+      "verified": 214
+    },
+    "tumblr": {
       "checked": 213,
       "verified": 213
     },
-    "tumblr": {
-      "checked": 212,
-      "verified": 212
-    },
     "wordpress": {
-      "checked": 215,
-      "verified": 215
+      "checked": 216,
+      "verified": 216
     }
   }
 }
