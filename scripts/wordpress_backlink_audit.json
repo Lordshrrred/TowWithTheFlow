@@ -1,6 +1,10 @@
 {
-  "generated_at": "2026-06-19T12:20:45.995534+00:00",
+  "generated_at": "2026-06-19T18:11:39.653940+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/06/19/towing-cost-houston-texas-sunday-emergency-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/19/car-died-on-highway-shoulder-safe-to-wait-for-tow/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/19/emergency-tow-truck-response-time-denver-colorado/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/19/car-caught-fire-on-highway-what-to-do/",
     "https://towwiththeflowyo.wordpress.com/2026/06/18/towing-cost-seattle-washington-bridge-tolls/",
     "https://towwiththeflowyo.wordpress.com/2026/06/18/car-wont-shift-into-drive-need-tow-truck-2/",
     "https://towwiththeflowyo.wordpress.com/2026/06/18/transmission-slipping-on-highway-emergency-steps/",
@@ -528,6 +532,24 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/01/car-broke-down-toll-road-towing-cost-responsibility/",
+        "verified": true
+      }
+    },
+    "car-caught-fire-on-highway-what-to-do": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-caught-fire-on-highway-what-to-do/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/19/car-caught-fire-on-highway-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-died-on-highway-shoulder-safe-to-wait-for-tow": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-died-on-highway-shoulder-safe-to-wait-for-tow/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/19/car-died-on-highway-shoulder-safe-to-wait-for-tow/",
         "verified": true
       }
     },
@@ -1095,6 +1117,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/26/driving-in-snow-emergency-kit-checklist/",
+        "verified": true
+      }
+    },
+    "emergency-tow-truck-response-time-denver-colorado": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/emergency-tow-truck-response-time-denver-colorado/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/19/emergency-tow-truck-response-time-denver-colorado/",
         "verified": true
       }
     },
@@ -2052,6 +2083,15 @@
         "verified": true
       }
     },
+    "towing-cost-houston-texas-sunday-emergency-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/19/towing-cost-houston-texas-sunday-emergency-2/",
+        "verified": false
+      }
+    },
     "towing-cost-in-atlanta-georgia-highway": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-in-atlanta-georgia-highway/",
@@ -2758,8 +2798,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 275,
-      "verified": 212
+      "checked": 279,
+      "verified": 215
     }
   }
 }
