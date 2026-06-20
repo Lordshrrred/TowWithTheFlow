@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-06-20T14:37:30.745832+00:00",
+  "generated_at": "2026-06-20T17:51:38.017601+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/06/20/car-leaking-fluid-underneath-emergency-tow-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/20/smoke-coming-from-under-car-not-hood-what-does-it-mean/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/20/towing-cost-per-mile-los-angeles/",
     "https://towwiththeflowyo.wordpress.com/2026/06/20/brake-failure-while-driving-what-to-do-immediately/",
     "https://towwiththeflowyo.wordpress.com/2026/06/19/how-much-does-a-tow-truck-cost-in-denver-colorado/",
     "https://towwiththeflowyo.wordpress.com/2026/06/19/towing-cost-houston-texas-sunday-emergency-2/",
@@ -607,6 +610,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-leaking-fluid-underneath-emergency-tow/",
         "verified": true
+      }
+    },
+    "car-leaking-fluid-underneath-emergency-tow-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/car-leaking-fluid-underneath-emergency-tow-2/",
+        "verified": false
       }
     },
     "car-makes-grinding-noise-when-driving": {
@@ -1518,6 +1530,15 @@
         "verified": true
       }
     },
+    "smoke-coming-from-under-car-not-hood-what-does-it-mean": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/smoke-coming-from-under-car-not-hood-what-does-it-mean/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/smoke-coming-from-under-car-not-hood-what-does-it-mean/",
+        "verified": true
+      }
+    },
     "state-farm-covers-towing-how-much-per-year": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/state-farm-covers-towing-how-much-per-year/",
@@ -2418,6 +2439,15 @@
         "verified": true
       }
     },
+    "towing-cost-per-mile-los-angeles": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-per-mile-los-angeles/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/towing-cost-per-mile-los-angeles/",
+        "verified": true
+      }
+    },
     "towing-cost-phoenix-arizona": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-phoenix-arizona/",
@@ -2818,8 +2848,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 281,
-      "verified": 217
+      "checked": 284,
+      "verified": 219
     }
   }
 }

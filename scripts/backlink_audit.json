@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T14:37:25.941304+00:00",
+  "generated_at": "2026-06-20T17:51:32.982819+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -735,8 +735,7 @@
     "car-leaking-fluid-underneath-emergency-tow": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-leaking-fluid-underneath-when-you.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-leaking-fluid-underneath-when-you.html",
         "verified": true
       },
       "dev": {
@@ -756,8 +755,7 @@
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-leaking-fluid-underneath-emergency-tow/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/car-leaking-fluid-underneath-emergency-tow-2/",
         "verified": true
       }
     },
@@ -2846,6 +2844,33 @@
         "verified": true
       }
     },
+    "smoke-coming-from-under-car-not-hood-what-does-it-mean": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/smoke-coming-from-under-car-not-hood.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/smoke-coming-from-under-car-not-hood-what-it-means-explained-1fdc",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/smoke-coming-from-under-car-not-hood-what-does-it-mean-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819956112803708928/smoke-coming-from-under-car-not-hood-what-does-it-mean",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/smoke-coming-from-under-car-not-hood-what-does-it-mean/",
+        "verified": true
+      }
+    },
     "state-farm-covers-towing-how-much-per-year": {
       "blog": {
         "reason": "ok",
@@ -4701,6 +4726,33 @@
         "verified": true
       }
     },
+    "towing-cost-per-mile-los-angeles": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-per-mile-los-angeles-what.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-per-mile-los-angeles-what-youll-pay-right-now-roadside-tips-4o69",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-per-mile-los-angeles-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819951267538419712/towing-cost-per-mile-los-angeles",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/towing-cost-per-mile-los-angeles/",
+        "verified": true
+      }
+    },
     "towing-cost-phoenix-arizona": {
       "blog": {
         "reason": "ok",
@@ -5513,24 +5565,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 208,
-      "verified": 207
+      "checked": 210,
+      "verified": 209
     },
     "dev": {
-      "checked": 147,
-      "verified": 147
+      "checked": 149,
+      "verified": 149
     },
     "feeder": {
-      "checked": 215,
-      "verified": 215
-    },
-    "tumblr": {
-      "checked": 214,
-      "verified": 214
-    },
-    "wordpress": {
       "checked": 217,
       "verified": 217
+    },
+    "tumblr": {
+      "checked": 216,
+      "verified": 216
+    },
+    "wordpress": {
+      "checked": 219,
+      "verified": 219
     }
   }
 }
