@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T17:51:32.982819+00:00",
+  "generated_at": "2026-06-20T21:45:10.059270+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -3844,6 +3844,33 @@
         "verified": true
       }
     },
+    "towing-cost-denver-colorado-flatbed": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-denver-colorado-flatbed.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-denver-colorado-flatbed-what-youll-pay-right-now-what-to-do-next-cll",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-denver-colorado-flatbed-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819963509774352384/towing-cost-denver-colorado-flatbed",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/towing-cost-denver-colorado-flatbed/",
+        "verified": true
+      }
+    },
     "towing-cost-denver-colorado-mountains": {
       "blog": {
         "reason": "ok",
@@ -5565,24 +5592,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 210,
-      "verified": 209
+      "checked": 211,
+      "verified": 210
     },
     "dev": {
-      "checked": 149,
-      "verified": 149
+      "checked": 150,
+      "verified": 150
     },
     "feeder": {
+      "checked": 218,
+      "verified": 218
+    },
+    "tumblr": {
       "checked": 217,
       "verified": 217
     },
-    "tumblr": {
-      "checked": 216,
-      "verified": 216
-    },
     "wordpress": {
-      "checked": 219,
-      "verified": 219
+      "checked": 220,
+      "verified": 220
     }
   }
 }
