@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T10:44:33.328410+00:00",
+  "generated_at": "2026-06-20T14:37:25.941304+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -271,6 +271,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/battery-dead-but-lights-turn-on/",
+        "verified": true
+      }
+    },
+    "brake-failure-while-driving-what-to-do-immediately": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/brake-failure-while-driving-what-to-do.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/brake-failure-while-driving-what-to-do-immediately-explained-293h",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/brake-failure-while-driving-what-to-do-immediately-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/819942117217648640/brake-failure-while-driving-what-to-do-immediately",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/brake-failure-while-driving-what-to-do-immediately/",
         "verified": true
       }
     },
@@ -5486,24 +5513,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 207,
-      "verified": 206
+      "checked": 208,
+      "verified": 207
     },
     "dev": {
-      "checked": 146,
-      "verified": 146
+      "checked": 147,
+      "verified": 147
     },
     "feeder": {
+      "checked": 215,
+      "verified": 215
+    },
+    "tumblr": {
       "checked": 214,
       "verified": 214
     },
-    "tumblr": {
-      "checked": 213,
-      "verified": 213
-    },
     "wordpress": {
-      "checked": 216,
-      "verified": 216
+      "checked": 217,
+      "verified": 217
     }
   }
 }
