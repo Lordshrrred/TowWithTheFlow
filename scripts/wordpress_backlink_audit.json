@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T14:37:48.125821+00:00",
+  "generated_at": "2026-06-21T17:58:06.515696+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/06/21/car-doors-wont-unlock-battery-dead-stranded-inside/",
     "https://towwiththeflowyo.wordpress.com/2026/06/20/towing-cost-denver-colorado-flatbed/",
@@ -286,7 +286,10 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/21/car-stuck-mud-towing-cost-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/21/car-broke-down-bad-neighborhood-night-what-to-do/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/21/towing-cost-atlanta-georgia-miles-based/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -530,6 +533,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/car-breaks-down-on-bridge-who-to-call/",
+        "verified": true
+      }
+    },
+    "car-broke-down-bad-neighborhood-night-what-to-do": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-broke-down-bad-neighborhood-night-what-to-do/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/21/car-broke-down-bad-neighborhood-night-what-to-do/",
         "verified": true
       }
     },
@@ -873,6 +885,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-stuck-mud-towing-cost/",
         "verified": true
+      }
+    },
+    "car-stuck-mud-towing-cost-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/21/car-stuck-mud-towing-cost-2/",
+        "verified": false
       }
     },
     "car-stuck-snow-ditch-towing-cost-who-pays": {
@@ -1826,6 +1847,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-atlanta-georgia-holiday-weekend/",
+        "verified": true
+      }
+    },
+    "towing-cost-atlanta-georgia-miles-based": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-atlanta-georgia-miles-based/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/21/towing-cost-atlanta-georgia-miles-based/",
         "verified": true
       }
     },
@@ -2868,8 +2898,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 286,
-      "verified": 221
+      "checked": 289,
+      "verified": 223
     }
   }
 }

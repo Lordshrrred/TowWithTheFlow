@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T14:37:43.370154+00:00",
+  "generated_at": "2026-06-21T17:58:01.122951+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -522,6 +522,33 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/car-breaks-down-on-bridge-who-to-call/",
+        "verified": true
+      }
+    },
+    "car-broke-down-bad-neighborhood-night-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-broke-down-in-bad-neighborhood-at.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-broke-down-in-bad-neighborhood-at-night-what-to-do-explained-3iig",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-bad-neighborhood-night-what-to-do-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820047755059822592/car-broke-down-bad-neighborhood-night-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/21/car-broke-down-bad-neighborhood-night-what-to-do/",
         "verified": true
       }
     },
@@ -3503,9 +3530,9 @@
     },
     "towing-cost-atlanta-georgia-holiday-weekend": {
       "blog": {
-        "reason": "http_404",
-        "url": "https://denverroadsideguide.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-holiday.html",
-        "verified": false
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-atlanta-georgia-holiday.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -3525,6 +3552,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-atlanta-georgia-holiday-weekend/",
+        "verified": true
+      }
+    },
+    "towing-cost-atlanta-georgia-miles-based": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-atlanta-georgia-miles.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-in-atlanta-georgia-miles-based-what-youll-pay-right-now-what-drivers-should-know-4co8",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-atlanta-georgia-miles-based-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820041844307165184/towing-cost-atlanta-georgia-miles-based",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/21/towing-cost-atlanta-georgia-miles-based/",
         "verified": true
       }
     },
@@ -5619,24 +5673,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 212,
-      "verified": 211
+      "checked": 214,
+      "verified": 214
     },
     "dev": {
-      "checked": 151,
-      "verified": 151
+      "checked": 153,
+      "verified": 153
     },
     "feeder": {
-      "checked": 219,
-      "verified": 219
-    },
-    "tumblr": {
-      "checked": 218,
-      "verified": 218
-    },
-    "wordpress": {
       "checked": 221,
       "verified": 221
+    },
+    "tumblr": {
+      "checked": 220,
+      "verified": 220
+    },
+    "wordpress": {
+      "checked": 223,
+      "verified": 223
     }
   }
 }
