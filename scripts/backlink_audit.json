@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T17:58:01.122951+00:00",
+  "generated_at": "2026-06-21T21:45:23.800323+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1353,7 +1353,7 @@
       "wordpress": {
         "reason": "ok",
         "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-stuck-mud-towing-cost/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/21/car-stuck-mud-towing-cost-2/",
         "verified": true
       }
     },
@@ -4322,6 +4322,33 @@
         "verified": true
       }
     },
+    "towing-cost-in-phoenix-arizona-summer-heat-breakdown": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-phoenix-arizona-summer.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-phoenix-arizona-summer-heat-breakdown-what-youll-pay-right-now-what-to-do-next-454n",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-phoenix-arizona-summer-heat-breakdown-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820054783607095296/towing-cost-in-phoenix-arizona-summer-heat-breakdown",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/21/towing-cost-in-phoenix-arizona-summer-heat-breakdown/",
+        "verified": true
+      }
+    },
     "towing-cost-indianapolis-indiana": {
       "blog": {
         "reason": "ok",
@@ -5673,24 +5700,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 214,
-      "verified": 214
+      "checked": 215,
+      "verified": 215
     },
     "dev": {
-      "checked": 153,
-      "verified": 153
+      "checked": 154,
+      "verified": 154
     },
     "feeder": {
+      "checked": 222,
+      "verified": 222
+    },
+    "tumblr": {
       "checked": 221,
       "verified": 221
     },
-    "tumblr": {
-      "checked": 220,
-      "verified": 220
-    },
     "wordpress": {
-      "checked": 223,
-      "verified": 223
+      "checked": 224,
+      "verified": 224
     }
   }
 }
