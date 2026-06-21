@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T11:28:36.079299+00:00",
+  "generated_at": "2026-06-21T14:37:43.370154+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -653,6 +653,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+        "verified": true
+      }
+    },
+    "car-doors-wont-unlock-battery-dead-stranded-inside": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-doors-wont-unlock-battery-dead.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-doors-wont-unlock-battery-dead-stranded-inside-what-to-do-right-now-what-drivers-should-know-1hml",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-doors-wont-unlock-battery-dead-stranded-inside-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820033375432818688/car-doors-wont-unlock-battery-dead-stranded-inside",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/21/car-doors-wont-unlock-battery-dead-stranded-inside/",
         "verified": true
       }
     },
@@ -5592,24 +5619,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 211,
-      "verified": 210
+      "checked": 212,
+      "verified": 211
     },
     "dev": {
-      "checked": 150,
-      "verified": 150
+      "checked": 151,
+      "verified": 151
     },
     "feeder": {
+      "checked": 219,
+      "verified": 219
+    },
+    "tumblr": {
       "checked": 218,
       "verified": 218
     },
-    "tumblr": {
-      "checked": 217,
-      "verified": 217
-    },
     "wordpress": {
-      "checked": 220,
-      "verified": 220
+      "checked": 221,
+      "verified": 221
     }
   }
 }
