@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T19:52:20.519277+00:00",
+  "generated_at": "2026-06-22T22:21:14.550216+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1430,9 +1430,9 @@
     },
     "car-transmission-slipping-need-tow-truck-now": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-transmission-slipping-need-tow.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -2829,9 +2829,9 @@
     },
     "progressive-insurance-towing-reimbursement-amount": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/progressive-insurance-towing.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -4807,6 +4807,33 @@
         "verified": true
       }
     },
+    "towing-cost-nashville-tennessee-per-mile-rate": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-nashville-tennessee-per.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-nashville-tennessee-per-mile-rate-what-youll-pay-right-now-quick-guide-1g02",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-nashville-tennessee-per-mile-rate-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820152221257891840/towing-cost-nashville-tennessee-per-mile-rate",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/22/towing-cost-nashville-tennessee-per-mile-rate/",
+        "verified": true
+      }
+    },
     "towing-cost-new-york-city": {
       "blog": {
         "reason": "ok",
@@ -5170,8 +5197,7 @@
     "towing-cost-phoenix-desert-breakdown-summer-heat": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-phoenix-desert-breakdown.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-phoenix-desert-breakdown.html",
         "verified": true
       },
       "feeder": {
@@ -5782,24 +5808,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 218,
-      "verified": 216
+      "checked": 219,
+      "verified": 219
     },
     "dev": {
-      "checked": 157,
-      "verified": 157
+      "checked": 158,
+      "verified": 158
     },
     "feeder": {
+      "checked": 226,
+      "verified": 226
+    },
+    "tumblr": {
       "checked": 225,
       "verified": 225
     },
-    "tumblr": {
-      "checked": 224,
-      "verified": 224
-    },
     "wordpress": {
-      "checked": 227,
-      "verified": 227
+      "checked": 228,
+      "verified": 228
     }
   }
 }
