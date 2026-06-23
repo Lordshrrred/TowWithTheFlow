@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-06-23T15:29:05.061675+00:00",
+  "generated_at": "2026-06-23T18:20:21.039522+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/06/23/car-stuck-mud-towing-cost-4/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/23/brake-failure-while-driving-emergency-towing/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/23/towing-cost-in-denver-to-repair-shop-distance-fees/",
     "https://towwiththeflowyo.wordpress.com/2026/06/23/engine-seized-while-driving-towing-cost/",
     "https://towwiththeflowyo.wordpress.com/2026/06/22/towing-cost-nashville-tennessee-per-mile-rate/",
     "https://towwiththeflowyo.wordpress.com/2026/06/22/car-stuck-mud-towing-cost-3/",
@@ -423,6 +426,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/22/blown-tire-highway-speed-what-to-do/",
+        "verified": true
+      }
+    },
+    "brake-failure-while-driving-emergency-towing": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/brake-failure-while-driving-emergency-towing/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/23/brake-failure-while-driving-emergency-towing/",
         "verified": true
       }
     },
@@ -918,6 +930,15 @@
         "reason": "slug_mismatch",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/22/car-stuck-mud-towing-cost-3/",
+        "verified": false
+      }
+    },
+    "car-stuck-mud-towing-cost-4": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/23/car-stuck-mud-towing-cost-4/",
         "verified": false
       }
     },
@@ -2253,6 +2274,15 @@
         "verified": true
       }
     },
+    "towing-cost-in-denver-to-repair-shop-distance-fees": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-in-denver-to-repair-shop-distance-fees/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/23/towing-cost-in-denver-to-repair-shop-distance-fees/",
+        "verified": true
+      }
+    },
     "towing-cost-in-los-angeles-california-freeway": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-in-los-angeles-california-freeway/",
@@ -2968,8 +2998,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 296,
-      "verified": 229
+      "checked": 299,
+      "verified": 231
     }
   }
 }
