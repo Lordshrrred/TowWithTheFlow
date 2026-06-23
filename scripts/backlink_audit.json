@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T11:34:18.747332+00:00",
+  "generated_at": "2026-06-23T15:29:01.971085+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -381,9 +381,9 @@
     },
     "can-you-jump-start-a-completely-dead-battery": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/can-you-jump-start-completely-dead_02043383696.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -1746,9 +1746,9 @@
     },
     "cheapest-tow-truck-service-near-me-sunday-night": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/cheapest-tow-truck-service-near-me.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -1768,9 +1768,9 @@
     },
     "cheapest-tow-truck-service-near-me-sunday-winter": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/find-cheapest-tow-truck-service-near_0193239315.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -2057,6 +2057,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/25/engine-seized-up-while-driving-towing-cost-seattle/",
+        "verified": true
+      }
+    },
+    "engine-seized-while-driving-towing-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/engine-seized-while-driving-towing-cost.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/engine-seized-while-driving-towing-cost-and-what-to-do-right-now-what-drivers-should-know-1l2h",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/engine-seized-while-driving-towing-cost-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820218086780289025/engine-seized-while-driving-towing-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/23/engine-seized-while-driving-towing-cost/",
         "verified": true
       }
     },
@@ -2551,9 +2578,9 @@
     },
     "insurance-deductible-applies-to-towing-costs-when": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/when-your-insurance-deductible-applies.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -2905,9 +2932,9 @@
     },
     "rental-car-broke-down-who-pays-towing-enterprise-hertz": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/rental-car-broke-down-who-pays-for_01444161645.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -4062,9 +4089,9 @@
     },
     "towing-cost-detroit-michigan": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-detroit-michigan-what_01778387310.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -4765,9 +4792,9 @@
     },
     "towing-cost-minneapolis-minnesota": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-minneapolis-minnesota_0665100419.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -5808,24 +5835,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 219,
-      "verified": 219
+      "checked": 220,
+      "verified": 213
     },
     "dev": {
-      "checked": 158,
-      "verified": 158
+      "checked": 159,
+      "verified": 159
     },
     "feeder": {
+      "checked": 227,
+      "verified": 227
+    },
+    "tumblr": {
       "checked": 226,
       "verified": 226
     },
-    "tumblr": {
-      "checked": 225,
-      "verified": 225
-    },
     "wordpress": {
-      "checked": 228,
-      "verified": 228
+      "checked": 229,
+      "verified": 229
     }
   }
 }
