@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T15:12:41.817256+00:00",
+  "generated_at": "2026-06-24T18:14:26.336349+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -867,6 +867,33 @@
         "verified": true
       }
     },
+    "car-leaking-oil-on-highway-stop-driving-or-keep-going": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-leaking-oil-on-highway-stop-driving.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-leaking-oil-on-highway-stop-driving-or-keep-going-what-drivers-should-know-3eb3",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-leaking-oil-on-highway-stop-driving-or-keep-going-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820320948309868544/car-leaking-oil-on-highway-stop-driving-or-keep-going",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/24/car-leaking-oil-on-highway-stop-driving-or-keep-going/",
+        "verified": true
+      }
+    },
     "car-makes-grinding-noise-when-driving": {
       "blog": {
         "reason": "ok",
@@ -1388,6 +1415,11 @@
       }
     },
     "car-stuck-mud-towing-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-stuck-in-mud-who-pays-towing-cost.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-stuck-in-mud-who-pays-the-towing-cost-what-drivers-should-know-89g",
@@ -3438,6 +3470,33 @@
         "verified": true
       }
     },
+    "tow-truck-cost-in-atlanta-georgia": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/tow-truck-cost-in-atlanta-georgia-what.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/tow-truck-cost-in-atlanta-georgia-what-youll-pay-right-now-roadside-tips-5c36",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-in-atlanta-georgia-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820315992293097472/tow-truck-cost-in-atlanta-georgia",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/24/tow-truck-cost-in-atlanta-georgia/",
+        "verified": true
+      }
+    },
     "tow-truck-cost-los-angeles-no-insurance": {
       "blog": {
         "reason": "ok",
@@ -4653,7 +4712,7 @@
       "wordpress": {
         "reason": "ok",
         "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/towing-cost-las-vegas-nevada-strip-area/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/24/towing-cost-las-vegas-nevada-strip-area-2/",
         "verified": true
       }
     },
@@ -5941,24 +6000,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 224,
-      "verified": 224
+      "checked": 227,
+      "verified": 227
     },
     "dev": {
-      "checked": 163,
-      "verified": 163
+      "checked": 165,
+      "verified": 165
     },
     "feeder": {
-      "checked": 231,
-      "verified": 231
-    },
-    "tumblr": {
-      "checked": 230,
-      "verified": 230
-    },
-    "wordpress": {
       "checked": 233,
       "verified": 233
+    },
+    "tumblr": {
+      "checked": 232,
+      "verified": 232
+    },
+    "wordpress": {
+      "checked": 235,
+      "verified": 235
     }
   }
 }
