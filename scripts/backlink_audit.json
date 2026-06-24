@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-24T11:22:28.977196+00:00",
+  "generated_at": "2026-06-24T15:12:41.817256+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/24-hour-towing-extra-costs-in-houston.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -3293,9 +3293,9 @@
     },
     "tow-truck-cost-accident-scene-police-report-required": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-at-accident-scene-police.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -5478,9 +5478,9 @@
     },
     "towing-cost-seattle-washington": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-seattle-washington-what.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -5652,6 +5652,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/18/transmission-slipping-on-highway-emergency-steps/",
+        "verified": true
+      }
+    },
+    "transmission-slipping-on-highway-safe-to-drive-or-tow": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/transmission-slipping-on-highway-safe.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/transmission-slipping-on-highway-safe-to-drive-or-tow-roadside-tips-47je",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-on-highway-safe-to-drive-or-tow-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820305704255668224/transmission-slipping-on-highway-safe-to-drive-or-tow",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/24/transmission-slipping-on-highway-safe-to-drive-or-tow/",
         "verified": true
       }
     },
@@ -5863,9 +5890,9 @@
     },
     "what-to-keep-in-your-car-for-emergencies": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/what-to-keep-in-your-car-for_01223642262.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -5914,24 +5941,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 223,
-      "verified": 219
+      "checked": 224,
+      "verified": 224
     },
     "dev": {
-      "checked": 162,
-      "verified": 162
+      "checked": 163,
+      "verified": 163
     },
     "feeder": {
+      "checked": 231,
+      "verified": 231
+    },
+    "tumblr": {
       "checked": 230,
       "verified": 230
     },
-    "tumblr": {
-      "checked": 229,
-      "verified": 229
-    },
     "wordpress": {
-      "checked": 232,
-      "verified": 232
+      "checked": 233,
+      "verified": 233
     }
   }
 }
