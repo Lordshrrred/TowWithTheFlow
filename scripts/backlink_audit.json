@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T18:14:26.336349+00:00",
+  "generated_at": "2026-06-24T21:53:10.879923+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -474,9 +474,9 @@
     },
     "car-battery-dies-in-parking-lot": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-dies-in-parking-lot-exactly_01178594773.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -815,9 +815,9 @@
     },
     "car-key-locked-inside-engine-running-towing-cost": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-key-locked-inside-engine-running.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3904,6 +3904,33 @@
         "verified": true
       }
     },
+    "towing-cost-boston-massachusetts-urban-rate": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-boston-massachusetts.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-boston-massachusetts-urban-rate-what-youll-pay-right-now-quick-guide-574c",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-boston-massachusetts-urban-rate-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820327292107702272/towing-cost-boston-massachusetts-urban-rate",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/24/towing-cost-boston-massachusetts-urban-rate/",
+        "verified": true
+      }
+    },
     "towing-cost-charlotte-north-carolina": {
       "blog": {
         "reason": "ok",
@@ -4026,9 +4053,9 @@
     },
     "towing-cost-construction-zone-police-required": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-construction-zone-police.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6000,24 +6027,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 227,
-      "verified": 227
+      "checked": 228,
+      "verified": 225
     },
     "dev": {
-      "checked": 165,
-      "verified": 165
+      "checked": 166,
+      "verified": 166
     },
     "feeder": {
+      "checked": 234,
+      "verified": 234
+    },
+    "tumblr": {
       "checked": 233,
       "verified": 233
     },
-    "tumblr": {
-      "checked": 232,
-      "verified": 232
-    },
     "wordpress": {
-      "checked": 235,
-      "verified": 235
+      "checked": 236,
+      "verified": 236
     }
   }
 }
