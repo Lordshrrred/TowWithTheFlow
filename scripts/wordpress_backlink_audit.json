@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-06-25T15:22:58.395438+00:00",
+  "generated_at": "2026-06-25T18:29:53.713512+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/06/25/towing-cost-las-vegas-nevada-strip-area-3/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/25/alternator-failed-while-driving-what-happens-next/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/25/towing-cost-san-diego-california-local-vs-long-distance/",
     "https://towwiththeflowyo.wordpress.com/2026/06/25/car-wont-start-after-sitting-month-tow-or-fix/",
     "https://towwiththeflowyo.wordpress.com/2026/06/24/towing-cost-boston-massachusetts-urban-rate/",
     "https://towwiththeflowyo.wordpress.com/2026/06/24/towing-cost-las-vegas-nevada-strip-area-2/",
@@ -388,6 +391,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/09/allstate-roadside-assistance-vs-calling-tow-truck/",
+        "verified": true
+      }
+    },
+    "alternator-failed-while-driving-what-happens-next": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/alternator-failed-while-driving-what-happens-next/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/25/alternator-failed-while-driving-what-happens-next/",
         "verified": true
       }
     },
@@ -2461,6 +2473,15 @@
         "verified": false
       }
     },
+    "towing-cost-las-vegas-nevada-strip-area-3": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/25/towing-cost-las-vegas-nevada-strip-area-3/",
+        "verified": false
+      }
+    },
     "towing-cost-las-vegas-strip-breakdown-night": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-las-vegas-strip-breakdown-night/",
@@ -2812,6 +2833,15 @@
         "verified": false
       }
     },
+    "towing-cost-san-diego-california-local-vs-long-distance": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-san-diego-california-local-vs-long-distance/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/25/towing-cost-san-diego-california-local-vs-long-distance/",
+        "verified": true
+      }
+    },
     "towing-cost-seattle-mountain-pass-breakdown": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-seattle-mountain-pass-breakdown/",
@@ -3068,8 +3098,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 306,
-      "verified": 237
+      "checked": 309,
+      "verified": 239
     }
   }
 }
