@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T11:12:06.442234+00:00",
+  "generated_at": "2026-06-25T15:22:53.206451+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -474,9 +474,9 @@
     },
     "car-battery-dies-in-parking-lot": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-dies-in-parking-lot-exactly_01178594773.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1023,7 +1023,8 @@
     "car-making-noise-when-turning-steering-wheel": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-making-noise-when-turning-steering_01685181255.html",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-making-noise-when-turning-steering_0383102311.html",
         "verified": true
       },
       "dev": {
@@ -1588,6 +1589,33 @@
         "verified": true
       }
     },
+    "car-wont-start-after-sitting-month-tow-or-fix": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-start-after-sitting-for-month.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-wont-start-after-sitting-for-a-month-tow-or-fix-it-yourself-what-drivers-should-know-2chn",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-after-sitting-month-tow-or-fix-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820396521708208128/car-wont-start-after-sitting-month-tow-or-fix",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/25/car-wont-start-after-sitting-month-tow-or-fix/",
+        "verified": true
+      }
+    },
     "car-wont-start-but-battery-is-good": {
       "blog": {
         "reason": "ok",
@@ -1644,9 +1672,9 @@
     },
     "car-wont-start-clicking-noise-need-tow-truck-cost": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-wont-start-clicking-noise-need-tow_0120658429.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4053,9 +4081,9 @@
     },
     "towing-cost-construction-zone-police-required": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-construction-zone-police.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5618,9 +5646,9 @@
     },
     "towing-cost-toll-road-breakdown-emergency-lane": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-toll-road-breakdown.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6027,24 +6055,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 228,
-      "verified": 228
+      "checked": 229,
+      "verified": 225
     },
     "dev": {
-      "checked": 166,
-      "verified": 166
+      "checked": 167,
+      "verified": 167
     },
     "feeder": {
+      "checked": 235,
+      "verified": 235
+    },
+    "tumblr": {
       "checked": 234,
       "verified": 234
     },
-    "tumblr": {
-      "checked": 233,
-      "verified": 233
-    },
     "wordpress": {
-      "checked": 236,
-      "verified": 236
+      "checked": 237,
+      "verified": 237
     }
   }
 }
