@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T14:51:39.534503+00:00",
+  "generated_at": "2026-06-26T18:07:59.435204+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -231,9 +231,9 @@
     },
     "alternator-vs-battery-symptoms-difference": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/alternator-vs-battery-how-to-tell_01782942570.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -479,9 +479,9 @@
     },
     "car-battery-died-parking-garage-tow-truck-can-reach": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-died-in-parking-garage-can.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -2472,7 +2472,7 @@
       "wordpress": {
         "reason": "ok",
         "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/geico-roadside-assistance-vs-tow-truck-cost/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/26/geico-roadside-assistance-vs-tow-truck-cost-2/",
         "verified": true
       }
     },
@@ -3271,6 +3271,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/30/steering-wheel-locked-car-wont-start-tow-cost/",
+        "verified": true
+      }
+    },
+    "tire-blew-out-spare-is-also-flat-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/tire-blew-out-and-spare-is-also-flat.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/tire-blew-out-and-spare-is-also-flat-what-to-do-right-now-what-drivers-should-know-2078",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tire-blew-out-spare-is-also-flat-what-to-do-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820501786383302656/tire-blew-out-spare-is-also-flat-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/26/tire-blew-out-spare-is-also-flat-what-to-do/",
         "verified": true
       }
     },
@@ -4538,6 +4565,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/03/towing-cost-in-chicago-illinois-winter-emergency/",
+        "verified": true
+      }
+    },
+    "towing-cost-in-denver-colorado-flatbed-vs-wheel-lift": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-denver-colorado-flatbed_0501685652.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-in-denver-colorado-flatbed-vs-wheel-lift-what-youll-pay-right-now-explained-1maf",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-denver-colorado-flatbed-vs-wheel-lift-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820496670811963392/towing-cost-in-denver-colorado-flatbed-vs-wheel-lift",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/26/towing-cost-in-denver-colorado-flatbed-vs-wheel-lift/",
         "verified": true
       }
     },
@@ -6137,9 +6191,9 @@
     },
     "why-does-my-car-click-but-not-start": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/why-does-my-car-click-but-not-start_01894956123.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -6166,24 +6220,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 234,
-      "verified": 231
+      "checked": 236,
+      "verified": 236
     },
     "dev": {
-      "checked": 171,
-      "verified": 171
+      "checked": 173,
+      "verified": 173
     },
     "feeder": {
-      "checked": 239,
-      "verified": 239
-    },
-    "tumblr": {
-      "checked": 238,
-      "verified": 238
-    },
-    "wordpress": {
       "checked": 241,
       "verified": 241
+    },
+    "tumblr": {
+      "checked": 240,
+      "verified": 240
+    },
+    "wordpress": {
+      "checked": 243,
+      "verified": 243
     }
   }
 }
