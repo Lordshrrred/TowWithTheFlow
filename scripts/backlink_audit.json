@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T11:17:40.089658+00:00",
+  "generated_at": "2026-06-26T14:51:39.534503+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -231,9 +231,9 @@
     },
     "alternator-vs-battery-symptoms-difference": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/alternator-vs-battery-how-to-tell_01782942570.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -479,9 +479,9 @@
     },
     "car-battery-died-parking-garage-tow-truck-can-reach": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-died-in-parking-garage-can.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -3087,6 +3087,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/roadside-assistance-vs-calling-tow-truck-direct/",
+        "verified": true
+      }
+    },
+    "run-flat-tire-completely-flat-can-i-still-drive": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/run-flat-tire-completely-flat-can-i.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/run-flat-tire-completely-flat-can-i-still-drive-explained-13le",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/run-flat-tire-completely-flat-can-i-still-drive-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820486767918579712/run-flat-tire-completely-flat-can-i-still-drive",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/26/run-flat-tire-completely-flat-can-i-still-drive/",
         "verified": true
       }
     },
@@ -6110,9 +6137,9 @@
     },
     "why-does-my-car-click-but-not-start": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/why-does-my-car-click-but-not-start_01894956123.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6139,24 +6166,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 233,
-      "verified": 233
+      "checked": 234,
+      "verified": 231
     },
     "dev": {
-      "checked": 170,
-      "verified": 170
+      "checked": 171,
+      "verified": 171
     },
     "feeder": {
+      "checked": 239,
+      "verified": 239
+    },
+    "tumblr": {
       "checked": 238,
       "verified": 238
     },
-    "tumblr": {
-      "checked": 237,
-      "verified": 237
-    },
     "wordpress": {
-      "checked": 240,
-      "verified": 240
+      "checked": 241,
+      "verified": 241
     }
   }
 }
