@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T18:07:59.435204+00:00",
+  "generated_at": "2026-06-26T21:45:29.645671+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -231,9 +231,9 @@
     },
     "alternator-vs-battery-symptoms-difference": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/alternator-vs-battery-how-to-tell_01782942570.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -479,9 +479,9 @@
     },
     "car-battery-died-parking-garage-tow-truck-can-reach": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-died-in-parking-garage-can.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -3482,9 +3482,9 @@
     },
     "tow-truck-cost-flat-tire-cant-change-myself": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/tow-truck-cost-for-flat-tire-when-you.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -4058,6 +4058,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/13/towing-cost-charlotte-north-carolina-5/",
+        "verified": true
+      }
+    },
+    "towing-cost-charlotte-north-carolina-per-mile": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-charlotte-north-carolina.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-charlotte-north-carolina-per-mile-what-youll-pay-right-now-roadside-tips-1jdf",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-charlotte-north-carolina-per-mile-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820508024253857792/towing-cost-charlotte-north-carolina-per-mile",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/26/towing-cost-charlotte-north-carolina-per-mile/",
         "verified": true
       }
     },
@@ -5410,9 +5437,9 @@
     },
     "towing-cost-phoenix-arizona-after-hours-chicago": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-phoenix-arizona-after_01342144152.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -6191,9 +6218,9 @@
     },
     "why-does-my-car-click-but-not-start": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/why-does-my-car-click-but-not-start_01894956123.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6220,24 +6247,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 236,
-      "verified": 236
+      "checked": 237,
+      "verified": 232
     },
     "dev": {
-      "checked": 173,
-      "verified": 173
+      "checked": 174,
+      "verified": 174
     },
     "feeder": {
+      "checked": 242,
+      "verified": 242
+    },
+    "tumblr": {
       "checked": 241,
       "verified": 241
     },
-    "tumblr": {
-      "checked": 240,
-      "verified": 240
-    },
     "wordpress": {
-      "checked": 243,
-      "verified": 243
+      "checked": 244,
+      "verified": 244
     }
   }
 }
