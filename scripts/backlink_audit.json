@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T10:26:56.362783+00:00",
+  "generated_at": "2026-06-27T14:10:32.236688+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2891,6 +2891,33 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/locked-keys-in-car-with-engine-running-cost/",
+        "verified": true
+      }
+    },
+    "locked-keys-in-car-with-engine-running-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/locked-keys-in-car-with-engine-running.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/locked-keys-in-car-with-engine-running-what-to-do-right-now-what-to-do-next-243h",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/locked-keys-in-car-with-engine-running-what-to-do-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820575040799129600/locked-keys-in-car-with-engine-running-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/27/locked-keys-in-car-with-engine-running-what-to-do/",
         "verified": true
       }
     },
@@ -6247,24 +6274,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 237,
-      "verified": 237
+      "checked": 238,
+      "verified": 238
     },
     "dev": {
-      "checked": 174,
-      "verified": 174
+      "checked": 175,
+      "verified": 175
     },
     "feeder": {
+      "checked": 243,
+      "verified": 243
+    },
+    "tumblr": {
       "checked": 242,
       "verified": 242
     },
-    "tumblr": {
-      "checked": 241,
-      "verified": 241
-    },
     "wordpress": {
-      "checked": 244,
-      "verified": 244
+      "checked": 245,
+      "verified": 245
     }
   }
 }
