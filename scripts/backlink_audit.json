@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T17:37:00.090316+00:00",
+  "generated_at": "2026-06-27T21:34:43.048935+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -4707,6 +4707,33 @@
         "verified": true
       }
     },
+    "towing-cost-in-denver-colorado-long-distance": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-denver-colorado-long.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-denver-colorado-long-distance-what-youll-pay-right-now-roadside-tips-ph3",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-denver-colorado-long-distance-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820596577265762304/towing-cost-in-denver-colorado-long-distance",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/27/towing-cost-in-denver-colorado-long-distance/",
+        "verified": true
+      }
+    },
     "towing-cost-in-denver-to-repair-shop-distance-fees": {
       "blog": {
         "reason": "ok",
@@ -6332,24 +6359,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 241,
-      "verified": 241
+      "checked": 242,
+      "verified": 242
     },
     "dev": {
-      "checked": 177,
-      "verified": 177
+      "checked": 178,
+      "verified": 178
     },
     "feeder": {
+      "checked": 246,
+      "verified": 246
+    },
+    "tumblr": {
       "checked": 245,
       "verified": 245
     },
-    "tumblr": {
-      "checked": 244,
-      "verified": 244
-    },
     "wordpress": {
-      "checked": 247,
-      "verified": 247
+      "checked": 248,
+      "verified": 248
     }
   }
 }
