@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T10:40:03.608221+00:00",
+  "generated_at": "2026-06-28T14:20:41.914695+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -3172,6 +3172,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/19/roadside-assistance-vs-calling-tow-truck-direct/",
+        "verified": true
+      }
+    },
+    "roadside-assistance-without-insurance-membership-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/roadside-assistance-without-insurance.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/roadside-assistance-without-insurance-membership-cost-what-youll-actually-pay-explained-3dad",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/roadside-assistance-without-insurance-membership-cost-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820666117926338560/roadside-assistance-without-insurance-membership-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/28/roadside-assistance-without-insurance-membership-cost/",
         "verified": true
       }
     },
@@ -6359,24 +6386,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 242,
-      "verified": 242
+      "checked": 243,
+      "verified": 243
     },
     "dev": {
-      "checked": 178,
-      "verified": 178
+      "checked": 179,
+      "verified": 179
     },
     "feeder": {
+      "checked": 247,
+      "verified": 247
+    },
+    "tumblr": {
       "checked": 246,
       "verified": 246
     },
-    "tumblr": {
-      "checked": 245,
-      "verified": 245
-    },
     "wordpress": {
-      "checked": 248,
-      "verified": 248
+      "checked": 249,
+      "verified": 249
     }
   }
 }
