@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T18:31:15.402405+00:00",
+  "generated_at": "2026-06-29T21:48:00.853833+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1720,6 +1720,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/25/car-wont-start-after-getting-gas-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-wont-start-after-sitting-in-heat-phoenix-arizona": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-start-after-sitting-in-heat-in.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-wont-start-after-sitting-in-heat-in-phoenix-arizona-what-to-do-right-now-explained-4dh3",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-after-sitting-in-heat-phoenix-arizona-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820781065938534400/car-wont-start-after-sitting-in-heat-phoenix-arizona",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/29/car-wont-start-after-sitting-in-heat-phoenix-arizona/",
         "verified": true
       }
     },
@@ -6552,24 +6579,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 250,
-      "verified": 250
+      "checked": 251,
+      "verified": 251
     },
     "dev": {
-      "checked": 185,
-      "verified": 185
+      "checked": 186,
+      "verified": 186
     },
     "feeder": {
+      "checked": 254,
+      "verified": 254
+    },
+    "tumblr": {
       "checked": 253,
       "verified": 253
     },
-    "tumblr": {
-      "checked": 252,
-      "verified": 252
-    },
     "wordpress": {
-      "checked": 255,
-      "verified": 255
+      "checked": 256,
+      "verified": 256
     }
   }
 }
