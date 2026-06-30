@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-06-30T14:49:12.774127+00:00",
+  "generated_at": "2026-06-30T18:19:18.963763+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/06/30/change-tire-highway-safely-houston-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/30/brake-failure-while-driving-emergency-steps/",
+    "https://towwiththeflowyo.wordpress.com/2026/06/30/towing-cost-in-nashville-tennessee-average-rate/",
     "https://towwiththeflowyo.wordpress.com/2026/06/30/airbag-deployed-car-still-drivable-or-need-tow/",
     "https://towwiththeflowyo.wordpress.com/2026/06/29/car-wont-start-after-sitting-in-heat-phoenix-arizona/",
     "https://towwiththeflowyo.wordpress.com/2026/06/29/car-broke-down-on-bridge-what-to-do/",
@@ -475,6 +478,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/22/blown-tire-highway-speed-what-to-do/",
+        "verified": true
+      }
+    },
+    "brake-failure-while-driving-emergency-steps": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/brake-failure-while-driving-emergency-steps/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/30/brake-failure-while-driving-emergency-steps/",
         "verified": true
       }
     },
@@ -1214,6 +1226,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/change-tire-highway-safely-houston/",
         "verified": true
+      }
+    },
+    "change-tire-highway-safely-houston-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/30/change-tire-highway-safely-houston-2/",
+        "verified": false
       }
     },
     "cheapest-tow-truck-service-near-me-sunday": {
@@ -2548,6 +2569,15 @@
         "verified": true
       }
     },
+    "towing-cost-in-nashville-tennessee-average-rate": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-in-nashville-tennessee-average-rate/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/30/towing-cost-in-nashville-tennessee-average-rate/",
+        "verified": true
+      }
+    },
     "towing-cost-in-phoenix-arizona-24-hour-service": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-in-phoenix-arizona-24-hour-service/",
@@ -3308,8 +3338,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 330,
-      "verified": 257
+      "checked": 333,
+      "verified": 259
     }
   }
 }
