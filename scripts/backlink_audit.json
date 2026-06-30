@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T18:19:15.794799+00:00",
+  "generated_at": "2026-06-30T21:53:46.941917+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -253,9 +253,9 @@
     },
     "alternator-vs-battery-symptoms-difference": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/alternator-vs-battery-how-to-tell_01782942570.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -555,9 +555,9 @@
     },
     "car-battery-died-parking-garage-tow-truck-can-reach": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-died-in-parking-garage-can.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -4391,9 +4391,9 @@
     },
     "towing-cost-chicago-illinois": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-chicago-illinois-what.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -5028,6 +5028,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/23/towing-cost-in-las-vegas-nevada-after-breakdown/",
+        "verified": true
+      }
+    },
+    "towing-cost-in-las-vegas-nevada-flatbed-rate": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-las-vegas-nevada-flatbed.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-las-vegas-nevada-flatbed-rate-what-youll-pay-right-now-what-to-do-next-1adl",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-las-vegas-nevada-flatbed-rate-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/820871238214959104/towing-cost-in-las-vegas-nevada-flatbed-rate",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/06/30/towing-cost-in-las-vegas-nevada-flatbed-rate/",
         "verified": true
       }
     },
@@ -5846,9 +5873,9 @@
     },
     "towing-cost-phoenix-arizona-after-hours-chicago": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-phoenix-arizona-after_01342144152.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -6031,6 +6058,12 @@
       }
     },
     "towing-cost-portland-oregon-rainy-weather": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-portland-oregon-rainy.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-portland-oregon-rainy-weather-what-to-expect-quick-guide-442k",
@@ -6648,24 +6681,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 252,
-      "verified": 248
+      "checked": 254,
+      "verified": 254
     },
     "dev": {
-      "checked": 189,
-      "verified": 189
+      "checked": 190,
+      "verified": 190
     },
     "feeder": {
+      "checked": 258,
+      "verified": 258
+    },
+    "tumblr": {
       "checked": 257,
       "verified": 257
     },
-    "tumblr": {
-      "checked": 256,
-      "verified": 256
-    },
     "wordpress": {
-      "checked": 259,
-      "verified": 259
+      "checked": 260,
+      "verified": 260
     }
   }
 }
