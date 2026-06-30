@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T04:37:40.019081+00:00",
+  "generated_at": "2026-06-30T11:25:33.409242+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -506,9 +506,9 @@
     },
     "car-battery-died-parking-garage-tow-truck-can-reach": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-died-in-parking-garage-can.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -636,6 +636,7 @@
     "car-broke-down-bad-neighborhood-night-what-to-do": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-broke-down-in-bad-neighborhood-at.html",
         "verified": true
       },
@@ -3345,9 +3346,9 @@
     },
     "smoke-coming-from-under-car-not-hood-what-does-it-mean": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/smoke-coming-from-under-car-not-hood.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4110,9 +4111,9 @@
     },
     "towing-cost-atlanta-georgia-miles-based": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-atlanta-georgia-miles.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5690,9 +5691,9 @@
     },
     "towing-cost-per-mile-los-angeles": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-per-mile-los-angeles-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5771,9 +5772,9 @@
     },
     "towing-cost-phoenix-arizona-after-hours-chicago": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-phoenix-arizona-after_01342144152.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -5793,9 +5794,9 @@
     },
     "towing-cost-phoenix-arizona-after-hours-night": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-phoenix-arizona-after_0737704292.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -6550,9 +6551,9 @@
     },
     "why-does-my-car-click-but-not-start": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/why-does-my-car-click-but-not-start_01894956123.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6580,7 +6581,7 @@
   "summary": {
     "blog": {
       "checked": 251,
-      "verified": 251
+      "verified": 244
     },
     "dev": {
       "checked": 186,
