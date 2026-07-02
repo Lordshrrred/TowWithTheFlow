@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-07-02T14:35:27.006095+00:00",
+  "generated_at": "2026-07-02T18:05:43.904091+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/07/02/towing-cost-luxury-car-mercedes-bmw-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/02/blown-tire-highway-too-dangerous-to-drive/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/02/tow-truck-cost-dallas-texas-no-insurance/",
     "https://towwiththeflowyo.wordpress.com/2026/07/02/ran-out-of-gas-on-highway-what-to-do/",
     "https://towwiththeflowyo.wordpress.com/2026/07/01/ran-out-of-gas-in-denver-who-to-call/",
     "https://towwiththeflowyo.wordpress.com/2026/07/01/change-tire-highway-safely-houston-3/",
@@ -485,6 +488,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/22/blown-tire-highway-speed-what-to-do/",
+        "verified": true
+      }
+    },
+    "blown-tire-highway-too-dangerous-to-drive": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/blown-tire-highway-too-dangerous-to-drive/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/02/blown-tire-highway-too-dangerous-to-drive/",
         "verified": true
       }
     },
@@ -2009,6 +2021,15 @@
         "verified": true
       }
     },
+    "tow-truck-cost-dallas-texas-no-insurance": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/tow-truck-cost-dallas-texas-no-insurance/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/02/tow-truck-cost-dallas-texas-no-insurance/",
+        "verified": true
+      }
+    },
     "tow-truck-cost-denver-snow-emergency": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/tow-truck-cost-denver-snow-emergency/",
@@ -2837,6 +2858,15 @@
         "verified": true
       }
     },
+    "towing-cost-luxury-car-mercedes-bmw-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/02/towing-cost-luxury-car-mercedes-bmw-2/",
+        "verified": false
+      }
+    },
     "towing-cost-memphis-tennessee": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-memphis-tennessee/",
@@ -3408,8 +3438,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 340,
-      "verified": 265
+      "checked": 343,
+      "verified": 267
     }
   }
 }
