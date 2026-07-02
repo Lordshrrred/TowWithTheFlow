@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T11:06:24.820141+00:00",
+  "generated_at": "2026-07-02T14:35:13.422290+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1909,9 +1909,9 @@
     },
     "car-wont-start-but-has-power-dashboard-lights-on": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-start-but-has-power-dashboard.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2241,9 +2241,9 @@
     },
     "costco-auto-insurance-covers-towing-how-much": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/costco-auto-insurance-covers-towing-how.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3245,9 +3245,9 @@
     },
     "nationwide-roadside-assistance-towing-distance-limits": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/nationwide-roadside-assistance-towing_01441829856.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3392,6 +3392,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/01/ran-out-of-gas-in-denver-who-to-call/",
+        "verified": true
+      }
+    },
+    "ran-out-of-gas-on-highway-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/ran-out-of-gas-on-highway-what-to-do.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/ran-out-of-gas-on-highway-what-to-do-right-now-what-drivers-should-know-3m33",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/ran-out-of-gas-on-highway-what-to-do-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821030121575268352/ran-out-of-gas-on-highway-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/02/ran-out-of-gas-on-highway-what-to-do/",
         "verified": true
       }
     },
@@ -6586,9 +6613,9 @@
     },
     "usaa-roadside-assistance-towing-coverage-limits": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/usaa-roadside-assistance-towing.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6794,24 +6821,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 259,
-      "verified": 259
+      "checked": 260,
+      "verified": 256
     },
     "dev": {
-      "checked": 194,
-      "verified": 194
+      "checked": 195,
+      "verified": 195
     },
     "feeder": {
+      "checked": 263,
+      "verified": 263
+    },
+    "tumblr": {
       "checked": 262,
       "verified": 262
     },
-    "tumblr": {
-      "checked": 261,
-      "verified": 261
-    },
     "wordpress": {
-      "checked": 264,
-      "verified": 264
+      "checked": 265,
+      "verified": 265
     }
   }
 }
