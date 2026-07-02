@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T21:54:40.854775+00:00",
+  "generated_at": "2026-07-02T04:35:26.599552+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -433,9 +433,9 @@
     },
     "can-i-drive-with-a-broken-axle": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/can-i-drive-with-broken-axle-explained.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -949,9 +949,9 @@
     },
     "car-died-while-driving-what-now": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-died-while-driving-what-now.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -1316,9 +1316,9 @@
     },
     "car-overheated-can-i-drive-it": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-overheated-can-i-drive-it-roadside.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -1990,9 +1990,9 @@
     },
     "car-wont-start-clicking-noise-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-wont-start-clicking-noise-what-to.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -3012,6 +3012,7 @@
     "is-it-illegal-to-leave-your-car-on-the-side-of-the-road": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/is-it-illegal-to-leave-your-car-on-side.html",
         "verified": true
       },
@@ -6795,7 +6796,7 @@
   "summary": {
     "blog": {
       "checked": 259,
-      "verified": 259
+      "verified": 255
     },
     "dev": {
       "checked": 194,
