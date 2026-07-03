@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T17:56:49.064872+00:00",
+  "generated_at": "2026-07-03T21:36:06.245470+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -868,6 +868,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/17/car-broke-down-on-freeway-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-broke-down-on-highway-in-denver-who-to-call": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-broke-down-on-highway-in-denver-who.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-broke-down-on-highway-in-denver-who-to-call-right-now-quick-guide-4am2",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-on-highway-in-denver-who-to-call-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821141394101075968/car-broke-down-on-highway-in-denver-who-to-call",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/03/car-broke-down-on-highway-in-denver-who-to-call/",
         "verified": true
       }
     },
@@ -6979,24 +7006,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 266,
-      "verified": 266
+      "checked": 267,
+      "verified": 267
     },
     "dev": {
-      "checked": 201,
-      "verified": 201
+      "checked": 202,
+      "verified": 202
     },
     "feeder": {
+      "checked": 270,
+      "verified": 270
+    },
+    "tumblr": {
       "checked": 269,
       "verified": 269
     },
-    "tumblr": {
-      "checked": 268,
-      "verified": 268
-    },
     "wordpress": {
-      "checked": 271,
-      "verified": 271
+      "checked": 272,
+      "verified": 272
     }
   }
 }
