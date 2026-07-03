@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-07-03T19:50:28.147242+00:00",
+  "checked_at": "2026-07-03T19:51:35.711711+00:00",
   "checks": {
     "blogger": {
       "detail": "TowingandFlowingRoadsideDenver",
       "status": "healthy"
     },
     "devto": {
-      "detail": "TWTF2: HTTPSConnectionPool(host='dev.to', port=443): Read timed out. (read timeout=20)",
-      "status": "unhealthy"
+      "detail": "TWTF1, TWTF2",
+      "status": "healthy"
     },
     "feeder": {
       "status": "healthy"
@@ -21,5 +21,5 @@
     }
   },
   "last_alert_at": "",
-  "unhealthy_count": 1
+  "unhealthy_count": 0
 }
