@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-07-04T14:05:28.024866+00:00",
+  "generated_at": "2026-07-04T17:32:23.788753+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/07/04/locked-keys-in-car-with-engine-running-cost-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/04/car-died-at-red-light-wont-restart-what-to-do/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/04/tow-truck-response-time-denver-colorado/",
     "https://towwiththeflowyo.wordpress.com/2026/07/04/locked-out-of-car-in-bad-neighborhood-what-to-do/",
     "https://towwiththeflowyo.wordpress.com/2026/07/03/car-broke-down-on-highway-in-denver-who-to-call/",
     "https://towwiththeflowyo.wordpress.com/2026/07/03/car-making-noise-when-turning-steering-wheel-houston-2/",
@@ -747,6 +750,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/19/car-caught-fire-on-highway-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-died-at-red-light-wont-restart-what-to-do": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-died-at-red-light-wont-restart-what-to-do/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/04/car-died-at-red-light-wont-restart-what-to-do/",
         "verified": true
       }
     },
@@ -1785,6 +1797,15 @@
         "verified": true
       }
     },
+    "locked-keys-in-car-with-engine-running-cost-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/04/locked-keys-in-car-with-engine-running-cost-2/",
+        "verified": false
+      }
+    },
     "locked-keys-in-car-with-engine-running-what-to-do": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/locked-keys-in-car-with-engine-running-what-to-do/",
@@ -2241,6 +2262,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/26/tow-truck-price-50-miles-miami/",
+        "verified": true
+      }
+    },
+    "tow-truck-response-time-denver-colorado": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/tow-truck-response-time-denver-colorado/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/04/tow-truck-response-time-denver-colorado/",
         "verified": true
       }
     },
@@ -3508,8 +3538,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 350,
-      "verified": 273
+      "checked": 353,
+      "verified": 275
     }
   }
 }

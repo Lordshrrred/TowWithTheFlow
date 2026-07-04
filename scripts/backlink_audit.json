@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T14:05:22.254510+00:00",
+  "generated_at": "2026-07-04T17:32:11.304221+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -971,6 +971,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/19/car-caught-fire-on-highway-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-died-at-red-light-wont-restart-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-died-at-red-light-and-wont-restart.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-died-at-red-light-and-wont-restart-what-to-do-right-now-quick-guide-38db",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-died-at-red-light-wont-restart-what-to-do-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821223215404826624/car-died-at-red-light-wont-restart-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/04/car-died-at-red-light-wont-restart-what-to-do/",
         "verified": true
       }
     },
@@ -3305,6 +3332,11 @@
       }
     },
     "locked-keys-in-car-with-engine-running-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/locked-keys-in-car-with-engine-running.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/locked-keys-in-car-with-engine-running-what-it-costs-to-fix-quick-guide-dn0",
@@ -3322,8 +3354,7 @@
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/locked-keys-in-car-with-engine-running-cost/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/04/locked-keys-in-car-with-engine-running-cost-2/",
         "verified": true
       }
     },
@@ -4393,6 +4424,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/26/tow-truck-price-50-miles-miami/",
+        "verified": true
+      }
+    },
+    "tow-truck-response-time-denver-colorado": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/tow-truck-response-time-denver-colorado.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/tow-truck-response-time-denver-colorado-what-to-expect-right-now-explained-4ch4",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-response-time-denver-colorado-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821217633222443008/tow-truck-response-time-denver-colorado",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/04/tow-truck-response-time-denver-colorado/",
         "verified": true
       }
     },
@@ -7033,24 +7091,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 268,
-      "verified": 268
-    },
-    "dev": {
-      "checked": 203,
-      "verified": 203
-    },
-    "feeder": {
       "checked": 271,
       "verified": 271
     },
-    "tumblr": {
-      "checked": 270,
-      "verified": 270
+    "dev": {
+      "checked": 205,
+      "verified": 205
     },
-    "wordpress": {
+    "feeder": {
       "checked": 273,
       "verified": 273
+    },
+    "tumblr": {
+      "checked": 272,
+      "verified": 272
+    },
+    "wordpress": {
+      "checked": 275,
+      "verified": 275
     }
   }
 }
