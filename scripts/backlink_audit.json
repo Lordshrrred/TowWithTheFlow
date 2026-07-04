@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T17:32:11.304221+00:00",
+  "generated_at": "2026-07-04T21:19:31.146066+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -4079,6 +4079,33 @@
         "verified": true
       }
     },
+    "tow-truck-cost-atlanta-georgia-no-insurance": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/tow-truck-cost-in-atlanta-georgia-with.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/tow-truck-cost-in-atlanta-georgia-with-no-insurance-what-youll-pay-right-now-what-to-do-next-3m48",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-atlanta-georgia-no-insurance-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821230548449116160/tow-truck-cost-atlanta-georgia-no-insurance",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/04/tow-truck-cost-atlanta-georgia-no-insurance/",
+        "verified": true
+      }
+    },
     "tow-truck-cost-dallas-texas-no-insurance": {
       "blog": {
         "reason": "ok",
@@ -7091,24 +7118,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 271,
-      "verified": 271
-    },
-    "dev": {
-      "checked": 205,
-      "verified": 205
-    },
-    "feeder": {
-      "checked": 273,
-      "verified": 273
-    },
-    "tumblr": {
       "checked": 272,
       "verified": 272
     },
+    "dev": {
+      "checked": 206,
+      "verified": 206
+    },
+    "feeder": {
+      "checked": 274,
+      "verified": 274
+    },
+    "tumblr": {
+      "checked": 273,
+      "verified": 273
+    },
     "wordpress": {
-      "checked": 275,
-      "verified": 275
+      "checked": 276,
+      "verified": 276
     }
   }
 }
