@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T10:28:29.398143+00:00",
+  "generated_at": "2026-07-04T14:05:22.254510+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -3351,6 +3351,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/27/locked-keys-in-car-with-engine-running-what-to-do/",
+        "verified": true
+      }
+    },
+    "locked-out-of-car-in-bad-neighborhood-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/locked-out-of-car-in-bad-neighborhood.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/locked-out-of-car-in-bad-neighborhood-what-to-do-right-now-what-drivers-should-know-1200",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/locked-out-of-car-in-bad-neighborhood-what-to-do-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821208997084397568/locked-out-of-car-in-bad-neighborhood-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/04/locked-out-of-car-in-bad-neighborhood-what-to-do/",
         "verified": true
       }
     },
@@ -7006,24 +7033,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 267,
-      "verified": 267
+      "checked": 268,
+      "verified": 268
     },
     "dev": {
-      "checked": 202,
-      "verified": 202
+      "checked": 203,
+      "verified": 203
     },
     "feeder": {
+      "checked": 271,
+      "verified": 271
+    },
+    "tumblr": {
       "checked": 270,
       "verified": 270
     },
-    "tumblr": {
-      "checked": 269,
-      "verified": 269
-    },
     "wordpress": {
-      "checked": 272,
-      "verified": 272
+      "checked": 273,
+      "verified": 273
     }
   }
 }
