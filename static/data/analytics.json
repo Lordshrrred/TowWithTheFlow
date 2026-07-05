@@ -1,15 +1,11 @@
 {
-  "pageviews": 55,
-  "sessions": 53,
-  "avgSessionDur": 53,
-  "bounceRate": 0.49056603773584906,
-  "newUsers": 50,
+  "pageviews": 57,
+  "sessions": 55,
+  "avgSessionDur": 73,
+  "bounceRate": 0.4909090909090909,
+  "newUsers": 52,
   "returningUsers": 0,
   "daily": [
-    {
-      "date": "20260604",
-      "pageviews": 1
-    },
     {
       "date": "20260606",
       "pageviews": 1
@@ -93,6 +89,10 @@
     {
       "date": "20260702",
       "pageviews": 2
+    },
+    {
+      "date": "20260704",
+      "pageviews": 3
     }
   ],
   "topPages": [
@@ -134,6 +134,24 @@
     },
     {
       "rank": 5,
+      "page": "/towing-cost-seattle-washington/",
+      "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+      "pageviews": 3,
+      "avgDur": 187,
+      "bounceRate": 50.0,
+      "sessions": 4
+    },
+    {
+      "rank": 6,
+      "page": "/usaa-roadside-assistance-towing-coverage-limits/",
+      "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
+      "pageviews": 3,
+      "avgDur": 177,
+      "bounceRate": 66.7,
+      "sessions": 3
+    },
+    {
+      "rank": 7,
       "page": "/allstate-roadside-assistance-towing-distance-covered/",
       "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
       "pageviews": 2,
@@ -142,7 +160,7 @@
       "sessions": 2
     },
     {
-      "rank": 6,
+      "rank": 8,
       "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
       "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
       "pageviews": 2,
@@ -151,7 +169,7 @@
       "sessions": 2
     },
     {
-      "rank": 7,
+      "rank": 9,
       "page": "/towing-cost-los-angeles-california/",
       "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 2,
@@ -160,30 +178,12 @@
       "sessions": 1
     },
     {
-      "rank": 8,
+      "rank": 10,
       "page": "/towing-cost-miami-florida/",
       "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 2,
       "avgDur": 0,
       "bounceRate": 100.0,
-      "sessions": 2
-    },
-    {
-      "rank": 9,
-      "page": "/towing-cost-seattle-washington/",
-      "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-      "pageviews": 2,
-      "avgDur": 20,
-      "bounceRate": 66.7,
-      "sessions": 3
-    },
-    {
-      "rank": 10,
-      "page": "/usaa-roadside-assistance-towing-coverage-limits/",
-      "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-      "pageviews": 2,
-      "avgDur": 7,
-      "bounceRate": 50.0,
       "sessions": 2
     },
     {
@@ -361,18 +361,18 @@
   "trafficSources": [
     {
       "channel": "Organic Search",
-      "sessions": 35,
-      "pct": 66.0
+      "sessions": 37,
+      "pct": 67.3
     },
     {
       "channel": "Direct",
       "sessions": 16,
-      "pct": 30.2
+      "pct": 29.1
     },
     {
       "channel": "AI Assistant",
       "sessions": 2,
-      "pct": 3.8
+      "pct": 3.6
     }
   ],
   "sourcesDetail": [
@@ -380,53 +380,53 @@
       "source": "(direct)",
       "medium": "(none)",
       "sessions": 16,
-      "pct": 30.2
+      "pct": 29.1
+    },
+    {
+      "source": "bing",
+      "medium": "organic",
+      "sessions": 12,
+      "pct": 21.8
     },
     {
       "source": "google",
       "medium": "organic",
       "sessions": 12,
-      "pct": 22.6
-    },
-    {
-      "source": "bing",
-      "medium": "organic",
-      "sessions": 11,
-      "pct": 20.8
+      "pct": 21.8
     },
     {
       "source": "duckduckgo",
       "medium": "organic",
-      "sessions": 6,
-      "pct": 11.3
+      "sessions": 7,
+      "pct": 12.7
     },
     {
       "source": "yahoo",
       "medium": "organic",
       "sessions": 5,
-      "pct": 9.4
+      "pct": 9.1
     },
     {
       "source": "copilot.com",
       "medium": "ai-assistant",
       "sessions": 2,
-      "pct": 3.8
+      "pct": 3.6
     },
     {
       "source": "us.search.yahoo.com",
       "medium": "referral",
       "sessions": 1,
-      "pct": 1.9
+      "pct": 1.8
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 48
+      "sessions": 49
     },
     {
       "country": "Germany",
-      "sessions": 1
+      "sessions": 2
     },
     {
       "country": "Taiwan",
@@ -448,7 +448,11 @@
   "topCities": [
     {
       "city": "(not set)",
-      "sessions": 6
+      "sessions": 5
+    },
+    {
+      "city": "Seattle",
+      "sessions": 3
     },
     {
       "city": "Dallas",
@@ -464,10 +468,6 @@
     },
     {
       "city": "Minneapolis",
-      "sessions": 2
-    },
-    {
-      "city": "Seattle",
       "sessions": 2
     },
     {
@@ -490,11 +490,11 @@
   "devices": [
     {
       "device": "desktop",
-      "sessions": 29
+      "sessions": 30
     },
     {
       "device": "mobile",
-      "sessions": 24
+      "sessions": 25
     }
   ],
   "browsers": [
@@ -504,11 +504,11 @@
     },
     {
       "browser": "Edge",
-      "sessions": 13
+      "sessions": 14
     },
     {
       "browser": "Safari",
-      "sessions": 13
+      "sessions": 14
     },
     {
       "browser": "Android Webview",
@@ -522,11 +522,11 @@
   "os": [
     {
       "os": "Windows",
-      "sessions": 20
+      "sessions": 21
     },
     {
       "os": "iOS",
-      "sessions": 17
+      "sessions": 18
     },
     {
       "os": "Android",
@@ -543,17 +543,13 @@
   ],
   "ranges": {
     "30d": {
-      "pageviews": 55,
-      "sessions": 53,
-      "avgSessionDur": 53,
-      "bounceRate": 0.49056603773584906,
-      "newUsers": 50,
+      "pageviews": 57,
+      "sessions": 55,
+      "avgSessionDur": 73,
+      "bounceRate": 0.4909090909090909,
+      "newUsers": 52,
       "returningUsers": 0,
       "daily": [
-        {
-          "date": "20260604",
-          "pageviews": 1
-        },
         {
           "date": "20260606",
           "pageviews": 1
@@ -637,6 +633,10 @@
         {
           "date": "20260702",
           "pageviews": 2
+        },
+        {
+          "date": "20260704",
+          "pageviews": 3
         }
       ],
       "topPages": [
@@ -678,6 +678,24 @@
         },
         {
           "rank": 5,
+          "page": "/towing-cost-seattle-washington/",
+          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 187,
+          "bounceRate": 50.0,
+          "sessions": 4
+        },
+        {
+          "rank": 6,
+          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
+          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 177,
+          "bounceRate": 66.7,
+          "sessions": 3
+        },
+        {
+          "rank": 7,
           "page": "/allstate-roadside-assistance-towing-distance-covered/",
           "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
           "pageviews": 2,
@@ -686,7 +704,7 @@
           "sessions": 2
         },
         {
-          "rank": 6,
+          "rank": 8,
           "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
           "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
           "pageviews": 2,
@@ -695,7 +713,7 @@
           "sessions": 2
         },
         {
-          "rank": 7,
+          "rank": 9,
           "page": "/towing-cost-los-angeles-california/",
           "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 2,
@@ -704,30 +722,12 @@
           "sessions": 1
         },
         {
-          "rank": 8,
+          "rank": 10,
           "page": "/towing-cost-miami-florida/",
           "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 0,
           "bounceRate": 100.0,
-          "sessions": 2
-        },
-        {
-          "rank": 9,
-          "page": "/towing-cost-seattle-washington/",
-          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 20,
-          "bounceRate": 66.7,
-          "sessions": 3
-        },
-        {
-          "rank": 10,
-          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
-          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 7,
-          "bounceRate": 50.0,
           "sessions": 2
         },
         {
@@ -905,18 +905,18 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 35,
-          "pct": 66.0
+          "sessions": 37,
+          "pct": 67.3
         },
         {
           "channel": "Direct",
           "sessions": 16,
-          "pct": 30.2
+          "pct": 29.1
         },
         {
           "channel": "AI Assistant",
           "sessions": 2,
-          "pct": 3.8
+          "pct": 3.6
         }
       ],
       "sourcesDetail": [
@@ -924,53 +924,53 @@
           "source": "(direct)",
           "medium": "(none)",
           "sessions": 16,
-          "pct": 30.2
+          "pct": 29.1
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 12,
+          "pct": 21.8
         },
         {
           "source": "google",
           "medium": "organic",
           "sessions": 12,
-          "pct": 22.6
-        },
-        {
-          "source": "bing",
-          "medium": "organic",
-          "sessions": 11,
-          "pct": 20.8
+          "pct": 21.8
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 6,
-          "pct": 11.3
+          "sessions": 7,
+          "pct": 12.7
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 5,
-          "pct": 9.4
+          "pct": 9.1
         },
         {
           "source": "copilot.com",
           "medium": "ai-assistant",
           "sessions": 2,
-          "pct": 3.8
+          "pct": 3.6
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 1.9
+          "pct": 1.8
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 48
+          "sessions": 49
         },
         {
           "country": "Germany",
-          "sessions": 1
+          "sessions": 2
         },
         {
           "country": "Taiwan",
@@ -992,7 +992,11 @@
       "topCities": [
         {
           "city": "(not set)",
-          "sessions": 6
+          "sessions": 5
+        },
+        {
+          "city": "Seattle",
+          "sessions": 3
         },
         {
           "city": "Dallas",
@@ -1008,10 +1012,6 @@
         },
         {
           "city": "Minneapolis",
-          "sessions": 2
-        },
-        {
-          "city": "Seattle",
           "sessions": 2
         },
         {
@@ -1034,11 +1034,11 @@
       "devices": [
         {
           "device": "desktop",
-          "sessions": 29
+          "sessions": 30
         },
         {
           "device": "mobile",
-          "sessions": 24
+          "sessions": 25
         }
       ],
       "browsers": [
@@ -1048,11 +1048,11 @@
         },
         {
           "browser": "Edge",
-          "sessions": 13
+          "sessions": 14
         },
         {
           "browser": "Safari",
-          "sessions": 13
+          "sessions": 14
         },
         {
           "browser": "Android Webview",
@@ -1066,11 +1066,11 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 20
+          "sessions": 21
         },
         {
           "os": "iOS",
-          "sessions": 17
+          "sessions": 18
         },
         {
           "os": "Android",
@@ -1087,11 +1087,11 @@
       ]
     },
     "90d": {
-      "pageviews": 71,
-      "sessions": 63,
-      "avgSessionDur": 47,
-      "bounceRate": 0.5396825396825397,
-      "newUsers": 60,
+      "pageviews": 74,
+      "sessions": 66,
+      "avgSessionDur": 63,
+      "bounceRate": 0.5454545454545454,
+      "newUsers": 63,
       "returningUsers": 0,
       "daily": [
         {
@@ -1213,6 +1213,10 @@
         {
           "date": "20260702",
           "pageviews": 2
+        },
+        {
+          "date": "20260704",
+          "pageviews": 3
         }
       ],
       "topPages": [
@@ -1220,10 +1224,10 @@
           "rank": 1,
           "page": "/",
           "title": "Tow With The Flow | Real help when your car breaks down.",
-          "pageviews": 23,
+          "pageviews": 24,
           "avgDur": 3,
-          "bounceRate": 90.9,
-          "sessions": 22
+          "bounceRate": 91.3,
+          "sessions": 23
         },
         {
           "rank": 2,
@@ -1254,6 +1258,24 @@
         },
         {
           "rank": 5,
+          "page": "/towing-cost-seattle-washington/",
+          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 187,
+          "bounceRate": 50.0,
+          "sessions": 4
+        },
+        {
+          "rank": 6,
+          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
+          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 177,
+          "bounceRate": 66.7,
+          "sessions": 3
+        },
+        {
+          "rank": 7,
           "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
           "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
           "pageviews": 2,
@@ -1262,7 +1284,7 @@
           "sessions": 2
         },
         {
-          "rank": 6,
+          "rank": 8,
           "page": "/about/",
           "title": "About Tow With The Flow | Tow With The Flow",
           "pageviews": 2,
@@ -1271,7 +1293,7 @@
           "sessions": 1
         },
         {
-          "rank": 7,
+          "rank": 9,
           "page": "/allstate-roadside-assistance-towing-distance-covered/",
           "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
           "pageviews": 2,
@@ -1280,7 +1302,7 @@
           "sessions": 2
         },
         {
-          "rank": 8,
+          "rank": 10,
           "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
           "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
           "pageviews": 2,
@@ -1289,7 +1311,7 @@
           "sessions": 2
         },
         {
-          "rank": 9,
+          "rank": 11,
           "page": "/towing-cost-boston-massachusetts/",
           "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
           "pageviews": 2,
@@ -1298,7 +1320,7 @@
           "sessions": 2
         },
         {
-          "rank": 10,
+          "rank": 12,
           "page": "/towing-cost-los-angeles-california/",
           "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 2,
@@ -1307,30 +1329,12 @@
           "sessions": 1
         },
         {
-          "rank": 11,
+          "rank": 13,
           "page": "/towing-cost-miami-florida/",
           "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 0,
           "bounceRate": 100.0,
-          "sessions": 2
-        },
-        {
-          "rank": 12,
-          "page": "/towing-cost-seattle-washington/",
-          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 20,
-          "bounceRate": 66.7,
-          "sessions": 3
-        },
-        {
-          "rank": 13,
-          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
-          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 7,
-          "bounceRate": 50.0,
           "sessions": 2
         },
         {
@@ -1490,90 +1494,90 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 36,
-          "pct": 57.1
+          "sessions": 38,
+          "pct": 57.6
         },
         {
           "channel": "Direct",
-          "sessions": 23,
-          "pct": 36.5
+          "sessions": 24,
+          "pct": 36.4
         },
         {
           "channel": "AI Assistant",
           "sessions": 2,
-          "pct": 3.2
+          "pct": 3.0
         },
         {
           "channel": "Referral",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "channel": "Unassigned",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         }
       ],
       "sourcesDetail": [
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 23,
-          "pct": 36.5
+          "sessions": 24,
+          "pct": 36.4
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 12,
+          "pct": 18.2
         },
         {
           "source": "google",
           "medium": "organic",
           "sessions": 12,
-          "pct": 19.0
-        },
-        {
-          "source": "bing",
-          "medium": "organic",
-          "sessions": 11,
-          "pct": 17.5
+          "pct": 18.2
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 7,
-          "pct": 11.1
+          "sessions": 8,
+          "pct": 12.1
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 5,
-          "pct": 7.9
+          "pct": 7.6
         },
         {
           "source": "copilot.com",
           "medium": "ai-assistant",
           "sessions": 2,
-          "pct": 3.2
+          "pct": 3.0
         },
         {
           "source": "chatgpt.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 53
+          "sessions": 55
         },
         {
           "country": "(not set)",
@@ -1581,7 +1585,7 @@
         },
         {
           "country": "Germany",
-          "sessions": 2
+          "sessions": 3
         },
         {
           "country": "United Kingdom",
@@ -1606,6 +1610,10 @@
           "sessions": 11
         },
         {
+          "city": "Seattle",
+          "sessions": 3
+        },
+        {
           "city": "Dallas",
           "sessions": 2
         },
@@ -1626,10 +1634,6 @@
           "sessions": 2
         },
         {
-          "city": "Seattle",
-          "sessions": 2
-        },
-        {
           "city": "Apex",
           "sessions": 1
         },
@@ -1645,25 +1649,25 @@
       "devices": [
         {
           "device": "desktop",
-          "sessions": 34
+          "sessions": 36
         },
         {
           "device": "mobile",
-          "sessions": 29
+          "sessions": 30
         }
       ],
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 32
+          "sessions": 33
         },
         {
           "browser": "Safari",
-          "sessions": 15
+          "sessions": 16
         },
         {
           "browser": "Edge",
-          "sessions": 13
+          "sessions": 14
         },
         {
           "browser": "Android Webview",
@@ -1677,11 +1681,11 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 22
+          "sessions": 24
         },
         {
           "os": "iOS",
-          "sessions": 19
+          "sessions": 20
         },
         {
           "os": "Android",
@@ -1698,11 +1702,11 @@
       ]
     },
     "180d": {
-      "pageviews": 71,
-      "sessions": 63,
-      "avgSessionDur": 47,
-      "bounceRate": 0.5396825396825397,
-      "newUsers": 60,
+      "pageviews": 74,
+      "sessions": 66,
+      "avgSessionDur": 63,
+      "bounceRate": 0.5454545454545454,
+      "newUsers": 63,
       "returningUsers": 0,
       "daily": [
         {
@@ -1824,6 +1828,10 @@
         {
           "date": "20260702",
           "pageviews": 2
+        },
+        {
+          "date": "20260704",
+          "pageviews": 3
         }
       ],
       "topPages": [
@@ -1831,10 +1839,10 @@
           "rank": 1,
           "page": "/",
           "title": "Tow With The Flow | Real help when your car breaks down.",
-          "pageviews": 23,
+          "pageviews": 24,
           "avgDur": 3,
-          "bounceRate": 90.9,
-          "sessions": 22
+          "bounceRate": 91.3,
+          "sessions": 23
         },
         {
           "rank": 2,
@@ -1865,6 +1873,24 @@
         },
         {
           "rank": 5,
+          "page": "/towing-cost-seattle-washington/",
+          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 187,
+          "bounceRate": 50.0,
+          "sessions": 4
+        },
+        {
+          "rank": 6,
+          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
+          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 177,
+          "bounceRate": 66.7,
+          "sessions": 3
+        },
+        {
+          "rank": 7,
           "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
           "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
           "pageviews": 2,
@@ -1873,7 +1899,7 @@
           "sessions": 2
         },
         {
-          "rank": 6,
+          "rank": 8,
           "page": "/about/",
           "title": "About Tow With The Flow | Tow With The Flow",
           "pageviews": 2,
@@ -1882,7 +1908,7 @@
           "sessions": 1
         },
         {
-          "rank": 7,
+          "rank": 9,
           "page": "/allstate-roadside-assistance-towing-distance-covered/",
           "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
           "pageviews": 2,
@@ -1891,7 +1917,7 @@
           "sessions": 2
         },
         {
-          "rank": 8,
+          "rank": 10,
           "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
           "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
           "pageviews": 2,
@@ -1900,7 +1926,7 @@
           "sessions": 2
         },
         {
-          "rank": 9,
+          "rank": 11,
           "page": "/towing-cost-boston-massachusetts/",
           "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
           "pageviews": 2,
@@ -1909,7 +1935,7 @@
           "sessions": 2
         },
         {
-          "rank": 10,
+          "rank": 12,
           "page": "/towing-cost-los-angeles-california/",
           "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 2,
@@ -1918,30 +1944,12 @@
           "sessions": 1
         },
         {
-          "rank": 11,
+          "rank": 13,
           "page": "/towing-cost-miami-florida/",
           "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 0,
           "bounceRate": 100.0,
-          "sessions": 2
-        },
-        {
-          "rank": 12,
-          "page": "/towing-cost-seattle-washington/",
-          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 20,
-          "bounceRate": 66.7,
-          "sessions": 3
-        },
-        {
-          "rank": 13,
-          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
-          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 7,
-          "bounceRate": 50.0,
           "sessions": 2
         },
         {
@@ -2101,90 +2109,90 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 36,
-          "pct": 57.1
+          "sessions": 38,
+          "pct": 57.6
         },
         {
           "channel": "Direct",
-          "sessions": 23,
-          "pct": 36.5
+          "sessions": 24,
+          "pct": 36.4
         },
         {
           "channel": "AI Assistant",
           "sessions": 2,
-          "pct": 3.2
+          "pct": 3.0
         },
         {
           "channel": "Referral",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "channel": "Unassigned",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         }
       ],
       "sourcesDetail": [
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 23,
-          "pct": 36.5
+          "sessions": 24,
+          "pct": 36.4
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 12,
+          "pct": 18.2
         },
         {
           "source": "google",
           "medium": "organic",
           "sessions": 12,
-          "pct": 19.0
-        },
-        {
-          "source": "bing",
-          "medium": "organic",
-          "sessions": 11,
-          "pct": 17.5
+          "pct": 18.2
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 7,
-          "pct": 11.1
+          "sessions": 8,
+          "pct": 12.1
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 5,
-          "pct": 7.9
+          "pct": 7.6
         },
         {
           "source": "copilot.com",
           "medium": "ai-assistant",
           "sessions": 2,
-          "pct": 3.2
+          "pct": 3.0
         },
         {
           "source": "chatgpt.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 53
+          "sessions": 55
         },
         {
           "country": "(not set)",
@@ -2192,7 +2200,7 @@
         },
         {
           "country": "Germany",
-          "sessions": 2
+          "sessions": 3
         },
         {
           "country": "United Kingdom",
@@ -2217,6 +2225,10 @@
           "sessions": 11
         },
         {
+          "city": "Seattle",
+          "sessions": 3
+        },
+        {
           "city": "Dallas",
           "sessions": 2
         },
@@ -2237,10 +2249,6 @@
           "sessions": 2
         },
         {
-          "city": "Seattle",
-          "sessions": 2
-        },
-        {
           "city": "Apex",
           "sessions": 1
         },
@@ -2256,25 +2264,25 @@
       "devices": [
         {
           "device": "desktop",
-          "sessions": 34
+          "sessions": 36
         },
         {
           "device": "mobile",
-          "sessions": 29
+          "sessions": 30
         }
       ],
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 32
+          "sessions": 33
         },
         {
           "browser": "Safari",
-          "sessions": 15
+          "sessions": 16
         },
         {
           "browser": "Edge",
-          "sessions": 13
+          "sessions": 14
         },
         {
           "browser": "Android Webview",
@@ -2288,11 +2296,11 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 22
+          "sessions": 24
         },
         {
           "os": "iOS",
-          "sessions": 19
+          "sessions": 20
         },
         {
           "os": "Android",
@@ -2309,11 +2317,11 @@
       ]
     },
     "365d": {
-      "pageviews": 71,
-      "sessions": 63,
-      "avgSessionDur": 47,
-      "bounceRate": 0.5396825396825397,
-      "newUsers": 60,
+      "pageviews": 74,
+      "sessions": 66,
+      "avgSessionDur": 63,
+      "bounceRate": 0.5454545454545454,
+      "newUsers": 63,
       "returningUsers": 0,
       "daily": [
         {
@@ -2435,6 +2443,10 @@
         {
           "date": "20260702",
           "pageviews": 2
+        },
+        {
+          "date": "20260704",
+          "pageviews": 3
         }
       ],
       "topPages": [
@@ -2442,10 +2454,10 @@
           "rank": 1,
           "page": "/",
           "title": "Tow With The Flow | Real help when your car breaks down.",
-          "pageviews": 23,
+          "pageviews": 24,
           "avgDur": 3,
-          "bounceRate": 90.9,
-          "sessions": 22
+          "bounceRate": 91.3,
+          "sessions": 23
         },
         {
           "rank": 2,
@@ -2476,6 +2488,24 @@
         },
         {
           "rank": 5,
+          "page": "/towing-cost-seattle-washington/",
+          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 187,
+          "bounceRate": 50.0,
+          "sessions": 4
+        },
+        {
+          "rank": 6,
+          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
+          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 177,
+          "bounceRate": 66.7,
+          "sessions": 3
+        },
+        {
+          "rank": 7,
           "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
           "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
           "pageviews": 2,
@@ -2484,7 +2514,7 @@
           "sessions": 2
         },
         {
-          "rank": 6,
+          "rank": 8,
           "page": "/about/",
           "title": "About Tow With The Flow | Tow With The Flow",
           "pageviews": 2,
@@ -2493,7 +2523,7 @@
           "sessions": 1
         },
         {
-          "rank": 7,
+          "rank": 9,
           "page": "/allstate-roadside-assistance-towing-distance-covered/",
           "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
           "pageviews": 2,
@@ -2502,7 +2532,7 @@
           "sessions": 2
         },
         {
-          "rank": 8,
+          "rank": 10,
           "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
           "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
           "pageviews": 2,
@@ -2511,7 +2541,7 @@
           "sessions": 2
         },
         {
-          "rank": 9,
+          "rank": 11,
           "page": "/towing-cost-boston-massachusetts/",
           "title": "Towing Cost in Boston Massachusetts: Complete Breakdown Guide | Tow With The Flow",
           "pageviews": 2,
@@ -2520,7 +2550,7 @@
           "sessions": 2
         },
         {
-          "rank": 10,
+          "rank": 12,
           "page": "/towing-cost-los-angeles-california/",
           "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 2,
@@ -2529,30 +2559,12 @@
           "sessions": 1
         },
         {
-          "rank": 11,
+          "rank": 13,
           "page": "/towing-cost-miami-florida/",
           "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 0,
           "bounceRate": 100.0,
-          "sessions": 2
-        },
-        {
-          "rank": 12,
-          "page": "/towing-cost-seattle-washington/",
-          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 20,
-          "bounceRate": 66.7,
-          "sessions": 3
-        },
-        {
-          "rank": 13,
-          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
-          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 7,
-          "bounceRate": 50.0,
           "sessions": 2
         },
         {
@@ -2712,90 +2724,90 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 36,
-          "pct": 57.1
+          "sessions": 38,
+          "pct": 57.6
         },
         {
           "channel": "Direct",
-          "sessions": 23,
-          "pct": 36.5
+          "sessions": 24,
+          "pct": 36.4
         },
         {
           "channel": "AI Assistant",
           "sessions": 2,
-          "pct": 3.2
+          "pct": 3.0
         },
         {
           "channel": "Referral",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "channel": "Unassigned",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         }
       ],
       "sourcesDetail": [
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 23,
-          "pct": 36.5
+          "sessions": 24,
+          "pct": 36.4
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 12,
+          "pct": 18.2
         },
         {
           "source": "google",
           "medium": "organic",
           "sessions": 12,
-          "pct": 19.0
-        },
-        {
-          "source": "bing",
-          "medium": "organic",
-          "sessions": 11,
-          "pct": 17.5
+          "pct": 18.2
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 7,
-          "pct": 11.1
+          "sessions": 8,
+          "pct": 12.1
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 5,
-          "pct": 7.9
+          "pct": 7.6
         },
         {
           "source": "copilot.com",
           "medium": "ai-assistant",
           "sessions": 2,
-          "pct": 3.2
+          "pct": 3.0
         },
         {
           "source": "chatgpt.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 1.6
+          "pct": 1.5
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 53
+          "sessions": 55
         },
         {
           "country": "(not set)",
@@ -2803,7 +2815,7 @@
         },
         {
           "country": "Germany",
-          "sessions": 2
+          "sessions": 3
         },
         {
           "country": "United Kingdom",
@@ -2828,6 +2840,10 @@
           "sessions": 11
         },
         {
+          "city": "Seattle",
+          "sessions": 3
+        },
+        {
           "city": "Dallas",
           "sessions": 2
         },
@@ -2848,10 +2864,6 @@
           "sessions": 2
         },
         {
-          "city": "Seattle",
-          "sessions": 2
-        },
-        {
           "city": "Apex",
           "sessions": 1
         },
@@ -2867,25 +2879,25 @@
       "devices": [
         {
           "device": "desktop",
-          "sessions": 34
+          "sessions": 36
         },
         {
           "device": "mobile",
-          "sessions": 29
+          "sessions": 30
         }
       ],
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 32
+          "sessions": 33
         },
         {
           "browser": "Safari",
-          "sessions": 15
+          "sessions": 16
         },
         {
           "browser": "Edge",
-          "sessions": 13
+          "sessions": 14
         },
         {
           "browser": "Android Webview",
@@ -2899,11 +2911,11 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 22
+          "sessions": 24
         },
         {
           "os": "iOS",
-          "sessions": 19
+          "sessions": 20
         },
         {
           "os": "Android",
@@ -2920,5 +2932,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-07-04T09:01:01.267997+00:00"
+  "lastUpdated": "2026-07-05T09:22:34.089689+00:00"
 }
