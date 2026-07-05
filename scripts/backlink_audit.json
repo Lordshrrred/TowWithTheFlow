@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T10:32:00.378659+00:00",
+  "generated_at": "2026-07-05T14:13:43.448178+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -3927,6 +3927,33 @@
         "verified": true
       }
     },
+    "tire-blowout-at-highway-speed-what-to-do-step-by-step": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/tire-blowout-at-highway-speed-what-to.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/tire-blowout-at-highway-speed-what-to-do-step-by-step-what-drivers-should-know-4pe4",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tire-blowout-at-highway-speed-what-to-do-step-by-step-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821299769586630657/tire-blowout-at-highway-speed-what-to-do-step-by-step",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/05/tire-blowout-at-highway-speed-what-to-do-step-by-step/",
+        "verified": true
+      }
+    },
     "tire-blowout-highway-emergency-tow-cost": {
       "blog": {
         "reason": "ok",
@@ -7118,24 +7145,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 272,
-      "verified": 272
-    },
-    "dev": {
-      "checked": 206,
-      "verified": 206
-    },
-    "feeder": {
-      "checked": 274,
-      "verified": 274
-    },
-    "tumblr": {
       "checked": 273,
       "verified": 273
     },
+    "dev": {
+      "checked": 207,
+      "verified": 207
+    },
+    "feeder": {
+      "checked": 275,
+      "verified": 275
+    },
+    "tumblr": {
+      "checked": 274,
+      "verified": 274
+    },
     "wordpress": {
-      "checked": 276,
-      "verified": 276
+      "checked": 277,
+      "verified": 277
     }
   }
 }
