@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T16:03:01.977067+00:00",
+  "generated_at": "2026-07-06T18:27:45.163551+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1423,7 +1423,8 @@
     "car-making-noise-when-turning-steering-wheel-houston": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-making-noise-when-turning-steering.html",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-making-noise-when-turning-steering.html",
         "verified": true
       },
       "dev": {
@@ -1706,6 +1707,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/02/car-smoking-hood-tow-truck-miami/",
+        "verified": true
+      }
+    },
+    "car-smoking-under-hood-on-highway-pull-over-or-keep-driving": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-smoking-under-hood-on-highway-pull.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-smoking-under-hood-on-highway-pull-over-or-keep-driving-explained-4c6n",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-smoking-under-hood-on-highway-pull-over-or-keep-driving-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821410769264672768/car-smoking-under-hood-on-highway-pull-over-or-keep-driving",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/06/car-smoking-under-hood-on-highway-pull-over-or-keep-driving/",
         "verified": true
       }
     },
@@ -3153,6 +3181,11 @@
       }
     },
     "insurance-covers-towing-but-not-after-midnight": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/insurance-covers-towing-but-not-after.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/insurance-covers-towing-but-not-after-midnight-what-you-need-to-know-what-to-do-next-44lh",
@@ -3360,9 +3393,9 @@
     },
     "locked-keys-in-car-with-engine-running-cost": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/locked-keys-in-car-with-engine-running.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5106,9 +5139,9 @@
     },
     "towing-cost-dallas-texas": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-dallas-texas-what-youll.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5488,6 +5521,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/03/towing-cost-in-chicago-illinois-winter-emergency/",
+        "verified": true
+      }
+    },
+    "towing-cost-in-denver-colorado-after-accident-no-insurance": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-denver-colorado-after.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-in-denver-colorado-after-accident-no-insurance-what-youll-pay-right-now-explained-169d",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-denver-colorado-after-accident-no-insurance-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821405782686023680/towing-cost-in-denver-colorado-after-accident-no-insurance",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/06/towing-cost-in-denver-colorado-after-accident-no-insurance/",
         "verified": true
       }
     },
@@ -7258,24 +7318,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 278,
-      "verified": 278
-    },
-    "dev": {
-      "checked": 211,
-      "verified": 211
-    },
-    "feeder": {
-      "checked": 279,
+      "checked": 281,
       "verified": 279
     },
-    "tumblr": {
-      "checked": 278,
-      "verified": 278
+    "dev": {
+      "checked": 213,
+      "verified": 213
     },
-    "wordpress": {
+    "feeder": {
       "checked": 281,
       "verified": 281
+    },
+    "tumblr": {
+      "checked": 280,
+      "verified": 280
+    },
+    "wordpress": {
+      "checked": 283,
+      "verified": 283
     }
   }
 }
