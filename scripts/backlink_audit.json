@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T12:24:06.401206+00:00",
+  "generated_at": "2026-07-06T16:03:01.977067+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -286,7 +286,7 @@
       },
       "feeder": {
         "reason": "ok",
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/average-towing-cost-per-mile-usa-help/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/average-towing-cost-per-mile-usa-advice/",
         "verified": true
       },
       "tumblr": {
@@ -898,6 +898,33 @@
         "verified": true
       }
     },
+    "car-broke-down-on-interstate-middle-of-nowhere-towing-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-broke-down-on-interstate-in-middle.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-broke-down-on-interstate-in-the-middle-of-nowhere-towing-cost-and-what-to-do-roadside-tips-2187",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-on-interstate-middle-of-nowhere-towing-cost-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821398731073142784/car-broke-down-on-interstate-middle-of-nowhere-towing-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/06/car-broke-down-on-interstate-middle-of-nowhere-towing-cost/",
+        "verified": true
+      }
+    },
     "car-broke-down-toll-road-towing-cost-responsibility": {
       "blog": {
         "reason": "ok",
@@ -1431,6 +1458,12 @@
         "url": "",
         "verified": null
       },
+      "feeder": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-overheated-can-i-drive-it-guide/",
+        "verified": true
+      },
       "tumblr": {
         "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/812691518291918848/car-overheated-can-i-drive-it",
@@ -1640,7 +1673,7 @@
       },
       "feeder": {
         "reason": "ok",
-        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-smoking-from-hood-need-tow-truck-now-guide/",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-smoking-from-hood-need-tow-truck-now-tips/",
         "verified": true
       },
       "tumblr": {
@@ -5686,9 +5719,9 @@
         "verified": true
       },
       "feeder": {
-        "reason": "slug_mismatch",
+        "reason": "ok",
         "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-phoenix-arizona-24-hour-service-help/",
-        "verified": false
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -6919,9 +6952,9 @@
         "verified": true
       },
       "feeder": {
-        "reason": "slug_mismatch",
+        "reason": "ok",
         "url": "https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-on-highway-emergency-steps-help/",
-        "verified": false
+        "verified": true
       },
       "tumblr": {
         "reason": "ok",
@@ -7225,24 +7258,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 277,
-      "verified": 277
+      "checked": 278,
+      "verified": 278
     },
     "dev": {
-      "checked": 210,
-      "verified": 210
+      "checked": 211,
+      "verified": 211
     },
     "feeder": {
-      "checked": 277,
-      "verified": 275
+      "checked": 279,
+      "verified": 279
     },
     "tumblr": {
-      "checked": 277,
-      "verified": 277
+      "checked": 278,
+      "verified": 278
     },
     "wordpress": {
-      "checked": 280,
-      "verified": 280
+      "checked": 281,
+      "verified": 281
     }
   }
 }
