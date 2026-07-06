@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T18:27:45.163551+00:00",
+  "generated_at": "2026-07-06T21:55:09.629879+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1423,8 +1423,7 @@
     "car-making-noise-when-turning-steering-wheel-houston": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-making-noise-when-turning-steering.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-making-noise-when-turning-steering.html",
         "verified": true
       },
       "dev": {
@@ -3393,9 +3392,9 @@
     },
     "locked-keys-in-car-with-engine-running-cost": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/locked-keys-in-car-with-engine-running.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -4426,6 +4425,33 @@
         "verified": true
       }
     },
+    "tow-truck-cost-las-vegas-nevada-no-insurance": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/tow-truck-cost-las-vegas-nevada-no.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/tow-truck-cost-las-vegas-nevada-no-insurance-what-youll-pay-right-now-quick-guide-4k9i",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-las-vegas-nevada-no-insurance-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821415038505091072/tow-truck-cost-las-vegas-nevada-no-insurance",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/06/tow-truck-cost-las-vegas-nevada-no-insurance/",
+        "verified": true
+      }
+    },
     "tow-truck-cost-los-angeles-no-insurance": {
       "blog": {
         "reason": "ok",
@@ -5139,9 +5165,9 @@
     },
     "towing-cost-dallas-texas": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-dallas-texas-what-youll.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -7318,24 +7344,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 281,
-      "verified": 279
+      "checked": 282,
+      "verified": 282
     },
     "dev": {
-      "checked": 213,
-      "verified": 213
+      "checked": 214,
+      "verified": 214
     },
     "feeder": {
+      "checked": 282,
+      "verified": 282
+    },
+    "tumblr": {
       "checked": 281,
       "verified": 281
     },
-    "tumblr": {
-      "checked": 280,
-      "verified": 280
-    },
     "wordpress": {
-      "checked": 283,
-      "verified": 283
+      "checked": 284,
+      "verified": 284
     }
   }
 }
