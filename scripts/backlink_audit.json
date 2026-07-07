@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T18:25:39.655755+00:00",
+  "generated_at": "2026-07-07T21:48:50.489033+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -4555,6 +4555,33 @@
         "verified": true
       }
     },
+    "tow-truck-cost-phoenix-no-insurance-after-hours": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/tow-truck-cost-phoenix-no-insurance.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/tow-truck-cost-phoenix-no-insurance-after-hours-what-youll-pay-right-now-explained-204j",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-phoenix-no-insurance-after-hours-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821505836880986112/tow-truck-cost-phoenix-no-insurance-after-hours",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/07/tow-truck-cost-phoenix-no-insurance-after-hours/",
+        "verified": true
+      }
+    },
     "tow-truck-cost-portland-oregon": {
       "blog": {
         "reason": "ok",
@@ -7425,24 +7452,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 285,
-      "verified": 285
+      "checked": 286,
+      "verified": 286
     },
     "dev": {
-      "checked": 217,
-      "verified": 217
+      "checked": 218,
+      "verified": 218
     },
     "feeder": {
+      "checked": 286,
+      "verified": 286
+    },
+    "tumblr": {
       "checked": 285,
       "verified": 285
     },
-    "tumblr": {
-      "checked": 284,
-      "verified": 284
-    },
     "wordpress": {
-      "checked": 287,
-      "verified": 287
+      "checked": 288,
+      "verified": 288
     }
   }
 }
