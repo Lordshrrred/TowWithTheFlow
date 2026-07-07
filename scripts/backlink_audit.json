@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T15:21:06.637590+00:00",
+  "generated_at": "2026-07-07T18:25:39.655755+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2801,6 +2801,33 @@
         "verified": true
       }
     },
+    "fuel-pump-failed-on-highway-tow-truck-or-mobile-mechanic": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/fuel-pump-failed-on-highway-tow-truck.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/fuel-pump-failed-on-highway-tow-truck-or-mobile-mechanic-roadside-tips-52lm",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/fuel-pump-failed-on-highway-tow-truck-or-mobile-mechanic-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821499162943258624/fuel-pump-failed-on-highway-tow-truck-or-mobile-mechanic",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/07/fuel-pump-failed-on-highway-tow-truck-or-mobile-mechanic/",
+        "verified": true
+      }
+    },
     "gas-pedal-stuck-can-i-drive-safely-home": {
       "blog": {
         "reason": "ok",
@@ -4525,6 +4552,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/05/tow-truck-cost-nashville-tennessee/",
+        "verified": true
+      }
+    },
+    "tow-truck-cost-portland-oregon": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/tow-truck-cost-portland-oregon-what.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/tow-truck-cost-portland-oregon-what-youll-pay-right-now-explained-212l",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-portland-oregon-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821494213470552064/tow-truck-cost-portland-oregon",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/07/tow-truck-cost-portland-oregon/",
         "verified": true
       }
     },
@@ -7027,6 +7081,11 @@
       }
     },
     "transmission-fluid-leaking-can-i-drive-to-mechanic": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/transmission-fluid-leaking-can-i-drive.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/denverroadsideelitetowing/transmission-fluid-leaking-can-i-drive-to-mechanic-safely-explained-4nbp",
@@ -7366,24 +7425,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 282,
-      "verified": 282
-    },
-    "dev": {
-      "checked": 215,
-      "verified": 215
-    },
-    "feeder": {
-      "checked": 283,
-      "verified": 283
-    },
-    "tumblr": {
-      "checked": 282,
-      "verified": 282
-    },
-    "wordpress": {
       "checked": 285,
       "verified": 285
+    },
+    "dev": {
+      "checked": 217,
+      "verified": 217
+    },
+    "feeder": {
+      "checked": 285,
+      "verified": 285
+    },
+    "tumblr": {
+      "checked": 284,
+      "verified": 284
+    },
+    "wordpress": {
+      "checked": 287,
+      "verified": 287
     }
   }
 }
