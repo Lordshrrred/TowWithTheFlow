@@ -44,6 +44,7 @@ jobs:
 
       - name: Commit health state
         if: always()
+        continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -53,8 +54,9 @@ jobs:
             exit 0
           fi
           git commit -m "Auto: refresh blogger health $(date +%Y-%m-%d)"
-          git pull --rebase --autostash origin main
-          git push
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main && git push && break || sleep 5
+          done
 
       - name: Fail workflow when unhealthy
         if: steps.health.outcome == 'failure'
