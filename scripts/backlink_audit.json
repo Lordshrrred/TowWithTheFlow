@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T10:33:20.527541+00:00",
+  "generated_at": "2026-07-08T14:47:42.238125+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -3797,6 +3797,33 @@
         "verified": true
       }
     },
+    "run-flat-tire-blowout-can-i-drive-to-shop": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/run-flat-tire-blowout-can-i-drive-to.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/run-flat-tire-blowout-can-i-drive-to-the-shop-quick-guide-5fn9",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/run-flat-tire-blowout-can-i-drive-to-shop-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821572238875721728/run-flat-tire-blowout-can-i-drive-to-shop",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/08/run-flat-tire-blowout-can-i-drive-to-shop/",
+        "verified": true
+      }
+    },
     "run-flat-tire-completely-flat-can-i-still-drive": {
       "blog": {
         "reason": "ok",
@@ -5527,12 +5554,6 @@
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html",
         "verified": true
       },
-      "dev": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-houston-texas-what-youll-pay-and-what-to-do-586n",
-        "verified": true
-      },
       "feeder": {
         "reason": "ok",
         "recovered_live": true,
@@ -5903,9 +5924,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-24-hour-service-what-youll-pay-quick-guide-l0a",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -6109,9 +6130,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-las-vegas-nevada-strip-area-what-youll-pay-roadside-tips-57cl",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -7452,24 +7473,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 286,
-      "verified": 286
+      "checked": 287,
+      "verified": 287
     },
     "dev": {
-      "checked": 218,
-      "verified": 218
+      "checked": 216,
+      "verified": 216
     },
     "feeder": {
+      "checked": 287,
+      "verified": 287
+    },
+    "tumblr": {
       "checked": 286,
       "verified": 286
     },
-    "tumblr": {
-      "checked": 285,
-      "verified": 285
-    },
     "wordpress": {
-      "checked": 288,
-      "verified": 288
+      "checked": 289,
+      "verified": 289
     }
   }
 }
