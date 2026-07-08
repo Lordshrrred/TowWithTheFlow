@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T14:47:42.238125+00:00",
+  "generated_at": "2026-07-08T17:58:14.430055+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -73,6 +73,11 @@
       }
     },
     "airbag-deployed-car-still-drivable-or-need-tow": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/airbag-deployed-car-still-drivable-or.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/denverroadsideelitetowing/airbag-deployed-car-still-drivable-or-need-tow-what-to-do-right-now-quick-guide-8gp",
@@ -428,6 +433,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/23/brake-failure-while-driving-emergency-towing/",
+        "verified": true
+      }
+    },
+    "brake-failure-while-driving-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/brake-failure-while-driving-what-to-do.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/brake-failure-while-driving-what-to-do-explained-59dg",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/brake-failure-while-driving-what-to-do-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821587855222734848/brake-failure-while-driving-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/08/brake-failure-while-driving-what-to-do/",
         "verified": true
       }
     },
@@ -1548,6 +1580,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/18/car-overheating-in-traffic-what-to-do-in-phoenix/",
+        "verified": true
+      }
+    },
+    "car-overheating-on-freeway-no-exit-nearby-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-overheating-on-freeway-no-exit.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-overheating-on-freeway-no-exit-nearby-what-to-do-right-now-what-to-do-next-2pam",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-overheating-on-freeway-no-exit-nearby-what-to-do-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821582961665277952/car-overheating-on-freeway-no-exit-nearby-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/08/car-overheating-on-freeway-no-exit-nearby-what-to-do/",
         "verified": true
       }
     },
@@ -5554,6 +5613,12 @@
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-houston-texas-what-youll.html",
         "verified": true
       },
+      "dev": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-houston-texas-what-youll-pay-and-what-to-do-586n",
+        "verified": true
+      },
       "feeder": {
         "reason": "ok",
         "recovered_live": true,
@@ -5924,9 +5989,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "error:ReadTimeout",
+        "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-phoenix-arizona-24-hour-service-what-youll-pay-quick-guide-l0a",
-        "verified": null
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -6130,9 +6195,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "error:ReadTimeout",
+        "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-las-vegas-nevada-strip-area-what-youll-pay-roadside-tips-57cl",
-        "verified": null
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -7473,24 +7538,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 287,
-      "verified": 287
+      "checked": 290,
+      "verified": 290
     },
     "dev": {
-      "checked": 216,
-      "verified": 216
+      "checked": 221,
+      "verified": 221
     },
     "feeder": {
-      "checked": 287,
-      "verified": 287
-    },
-    "tumblr": {
-      "checked": 286,
-      "verified": 286
-    },
-    "wordpress": {
       "checked": 289,
       "verified": 289
+    },
+    "tumblr": {
+      "checked": 288,
+      "verified": 288
+    },
+    "wordpress": {
+      "checked": 291,
+      "verified": 291
     }
   }
 }
