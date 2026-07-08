@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-07-08T14:41:19.684284+00:00",
+  "checked_at": "2026-07-08T14:42:44.490231+00:00",
   "checks": {
     "blogger": {
       "detail": "TowingandFlowingRoadsideDenver",
       "status": "healthy"
     },
     "devto": {
-      "detail": "TWTF1: HTTPSConnectionPool(host='dev.to', port=443): Read timed out. (read timeout=20)",
+      "detail": "TWTF1: HTTPSConnectionPool(host='dev.to', port=443): Read timed out. (read timeout=20); TWTF2: HTTPSConnectionPool(host='dev.to', port=443): Read timed out. (read timeout=20)",
       "status": "unhealthy"
     },
     "feeder": {
