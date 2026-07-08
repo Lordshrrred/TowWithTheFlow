@@ -15,8 +15,6 @@ ROOT = Path(__file__).parent.parent
 LOG_FILE = ROOT / "scripts" / "syndication_log.txt"
 STATE_FILE = ROOT / "scripts" / "blogger_health.json"
 ALERT_TO = "earthlingoflight@gmail.com"
-WRITE_PROBE_TITLE = "TWTF Blogger Health Check Draft"
-WRITE_PROBE_CONTENT = "<p>Temporary unpublished draft created by health check.</p>"
 
 
 def env_clean(key: str, default: str = "") -> str:
@@ -105,32 +103,17 @@ def should_send_alert(state: dict, now: datetime, status: str) -> bool:
     return now - last >= timedelta(hours=24)
 
 
-def blogger_write_probe(access_token: str, blog_id: str) -> tuple[bool, str]:
-    """Verify Blogger write access with a disposable draft post."""
-    headers = {"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"}
-    create = requests.post(
-        f"https://www.googleapis.com/blogger/v3/blogs/{blog_id}/posts/",
-        params={"isDraft": "true"},
-        headers=headers,
-        json={"title": WRITE_PROBE_TITLE, "content": WRITE_PROBE_CONTENT, "labels": ["health-check"]},
-        timeout=20,
-    )
-    if not create.ok:
-        return False, f"draft create HTTP {create.status_code}: {(create.text or '')[:240]}"
-
-    post_id = str(create.json().get("id", "")).strip()
-    if not post_id:
-        return False, "draft create succeeded but response had no post id"
-
-    delete = requests.delete(
-        f"https://www.googleapis.com/blogger/v3/blogs/{blog_id}/posts/{post_id}",
+def blogger_read_probe(access_token: str, blog_id: str) -> tuple[bool, str]:
+    """Verify Blogger access by fetching blog metadata (read-only, no OAuth scope issues)."""
+    r = requests.get(
+        f"https://www.googleapis.com/blogger/v3/blogs/{blog_id}",
         headers={"Authorization": f"Bearer {access_token}"},
         timeout=20,
     )
-    if not delete.ok:
-        return False, f"draft delete HTTP {delete.status_code}: {(delete.text or '')[:240]}"
-
-    return True, ""
+    if r.ok:
+        name = r.json().get("name", "")
+        return True, name
+    return False, f"blog fetch HTTP {r.status_code}: {(r.text or '')[:240]}"
 
 
 def main() -> int:
@@ -144,7 +127,7 @@ def main() -> int:
     cid = env_clean("BLOGGER_CLIENT_ID")
     csec = env_clean("BLOGGER_CLIENT_SECRET")
     rtok = env_clean("BLOGGER_REFRESH_TOKEN")
-    blog_id = env_clean_digits("BLOGGER_BLOG_ID")
+    blog_id = env_clean("BLOGGER_BLOG_ID").strip()
     gmail_address = env_clean("GMAIL_ADDRESS")
     gmail_app_password = env_clean("GMAIL_APP_PASSWORD")
 
@@ -189,18 +172,17 @@ def main() -> int:
                 reason = str(tdata.get("error", "token_refresh_failed"))
                 detail = str(tdata.get("error_description", "no description"))
             else:
-                ok, detail = blogger_write_probe(access, blog_id)
+                ok, detail = blogger_read_probe(access, blog_id)
                 if not ok:
                     status = "unhealthy"
-                    reason = "write_probe_failed"
-                    detail = detail
+                    reason = "read_probe_failed"
         except Exception as e:
             status = "unhealthy"
             reason = "network_error"
             detail = f"{type(e).__name__}: {e}"
 
     if status == "healthy":
-        log("STATUS | healthy | token refresh + Blogger write probe passed")
+        log(f"STATUS | healthy | token refresh + blog read probe passed | {detail}")
     else:
         log(f"STATUS | unhealthy | {reason} | {detail}")
 

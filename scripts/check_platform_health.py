@@ -107,12 +107,22 @@ def check_devto() -> dict:
 
     failures = []
     for label, key in configured:
-        try:
-            r = requests.get("https://dev.to/api/articles/me/published", headers={"api-key": key}, timeout=20)
-            if not r.ok:
-                failures.append(f"{label}: HTTP {r.status_code}: {r.text[:120]}")
-        except Exception as e:
-            failures.append(f"{label}: {e}")
+        last_exc = None
+        for attempt in range(2):
+            try:
+                r = requests.get("https://dev.to/api/articles/me/published", headers={"api-key": key}, timeout=30)
+                if r.ok:
+                    last_exc = None
+                    break
+                last_exc = f"{label}: HTTP {r.status_code}: {r.text[:120]}"
+                break  # non-timeout HTTP errors don't benefit from retry
+            except requests.exceptions.Timeout:
+                last_exc = f"{label}: Read timed out (attempt {attempt + 1})"
+            except Exception as e:
+                last_exc = f"{label}: {e}"
+                break
+        if last_exc:
+            failures.append(last_exc)
 
     if failures:
         return {"status": "unhealthy", "detail": "; ".join(failures)}
