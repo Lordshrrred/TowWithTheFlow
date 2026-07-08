@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T17:58:14.430055+00:00",
+  "generated_at": "2026-07-08T21:39:04.991111+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -3203,6 +3203,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/01/how-much-does-aaa-towing-cost-without-membership/",
+        "verified": true
+      }
+    },
+    "how-much-does-roadside-assistance-cost-denver-colorado": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-much-does-roadside-assistance-cost.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/how-much-does-roadside-assistance-cost-in-denver-colorado-roadside-tips-240o",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-much-does-roadside-assistance-cost-denver-colorado-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821594555995521024/how-much-does-roadside-assistance-cost-denver-colorado",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/08/how-much-does-roadside-assistance-cost-denver-colorado/",
         "verified": true
       }
     },
@@ -7538,24 +7565,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
+      "checked": 291,
+      "verified": 291
+    },
+    "dev": {
+      "checked": 222,
+      "verified": 222
+    },
+    "feeder": {
       "checked": 290,
       "verified": 290
     },
-    "dev": {
-      "checked": 221,
-      "verified": 221
-    },
-    "feeder": {
+    "tumblr": {
       "checked": 289,
       "verified": 289
     },
-    "tumblr": {
-      "checked": 288,
-      "verified": 288
-    },
     "wordpress": {
-      "checked": 291,
-      "verified": 291
+      "checked": 292,
+      "verified": 292
     }
   }
 }
