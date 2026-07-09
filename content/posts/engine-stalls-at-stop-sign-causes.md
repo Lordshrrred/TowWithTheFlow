@@ -5,6 +5,14 @@ date: 2026-02-26
 description: "If your engine stalls every time you slow down or stop, it's telling you something specific. Here are the most common causes and what to do."
 tags: ["engine stalls", "stall at stop sign", "idle problems", "car breakdown", "fuel system"]
 slug: "engine-stalls-at-stop-sign-causes"
+clusters: ["engine-mechanical"]
+faq:
+  - q: "Can I still drive my car to the shop if it keeps stalling at red lights?"
+    a: "Yes, in most cases you can drive it as long as it restarts quickly and consistently. Avoid high-traffic intersections and left turns across moving traffic until it is repaired, and take a route with light stops if possible."
+  - q: "Will cleaning the throttle body myself actually fix the stalling, or do I need a mechanic?"
+    a: "It genuinely fixes the problem in many cases, especially on vehicles with 60,000 or more miles that have never had it done. A can of throttle body cleaner costs around $8 and the job takes about 20 minutes, so it is worth trying before spending money on diagnosis."
+  - q: "How do I know if a vacuum leak is causing my car to stall?"
+    a: "Listen for a hissing or sucking sound near the intake area with the engine running. You may also notice an idle that bounces up and down or sits unusually high or low. A mechanic can use a smoke machine to find leaks quickly if you cannot locate one by ear."
 ---
 
 > **Quick Answer:** An engine that stalls at idle, stop signs, red lights, slow traffic, is usually suffering from a dirty throttle body, bad idle air control valve, failing mass airflow sensor, or a vacuum leak. It can also be a fuel delivery problem. This is annoying and can become dangerous in traffic. It needs to be diagnosed, but you can often still drive to a shop if it restarts quickly.
@@ -49,3 +57,18 @@ Getting codes read first is free and can cut diagnosis time significantly.
 - **If the car stalls and won't restart** and you're blocking traffic, put it in neutral and push it to the curb before calling for help.
 - **Don't ignore an intermittent stall** thinking it will go away. Intermittent problems almost always get worse before they disappear on their own, they won't disappear.
 - **Automatic transmission vehicles** should not be put in park on a busy road to restart. Put it in neutral, set the parking brake, restart, and then shift into drive when traffic is clear.
+
+## Common Questions
+
+**Q: Can I still drive my car to the shop if it keeps stalling at red lights?**
+A: Yes, in most cases you can drive it as long as it restarts quickly and consistently. Avoid high-traffic intersections and left turns across moving traffic until it is repaired, and take a route with light stops if possible.
+
+**Q: Will cleaning the throttle body myself actually fix the stalling, or do I need a mechanic?**
+A: It genuinely fixes the problem in many cases, especially on vehicles with 60,000 or more miles that have never had it done. A can of throttle body cleaner costs around $8 and the job takes about 20 minutes, so it is worth trying before spending money on diagnosis.
+
+**Q: How do I know if a vacuum leak is causing my car to stall?**
+A: Listen for a hissing or sucking sound near the intake area with the engine running. You may also notice an idle that bounces up and down or sits unusually high or low. A mechanic can use a smoke machine to find leaks quickly if you cannot locate one by ear.
+
+---
+
+*Need roadside help? Visit [Tow With The Flow](https://towwiththeflow.com/engine-stalls-at-stop-sign-causes/) for real answers when your car breaks down.*

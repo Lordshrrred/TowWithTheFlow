@@ -210,13 +210,19 @@
     <!-- Clusters + Backlinks -->
     <div class="two-col split-5050">
       <div class="chart-card">
-        <h3>Keyword Clusters <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— live vs. pending</span></h3>
+        <h3>Keyword Mix <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— local vs. pain-point, live vs. pending</span></h3>
         <div id="clusters-list"><div class="skeleton" style="height:160px;"></div></div>
       </div>
       <div class="chart-card">
         <h3>Backlink Health <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— per platform</span></h3>
         <div id="backlinks-list"><div class="skeleton" style="height:160px;"></div></div>
       </div>
+    </div>
+
+    <!-- Content clusters (topic hub pages) -->
+    <div class="chart-card" style="margin-bottom:1.5rem;">
+      <h3>Content Clusters <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— every post grouped into a topic hub, linked from every post in it</span></h3>
+      <div id="content-clusters-list"><div class="skeleton" style="height:220px;"></div></div>
     </div>
 
     <!-- What we're ranking for -->
@@ -363,6 +369,27 @@ function renderClusters(d) {
   }</div>`;
 }
 
+// ── Render: content clusters (topic hub pages) ──
+function renderContentClusters(d) {
+  const clusters = d.content_clusters || [];
+  const wrap = document.getElementById("content-clusters-list");
+  if (!clusters.length) {
+    wrap.innerHTML = '<div class="empty-msg">No content clusters yet — run scripts/assign_clusters.py.</div>';
+    return;
+  }
+  const max = Math.max(1, ...clusters.map(c => c.count));
+  wrap.innerHTML = `<div class="bar-list">${
+    clusters.map(c => `
+      <div class="bar-row">
+        <div class="bar-name" style="min-width:220px;">
+          <a class="kw-post-link" href="https://towwiththeflow.com/clusters/${esc(c.slug)}/" target="_blank" rel="noopener">${esc(c.label)}</a>
+        </div>
+        <div class="bar-bg"><div class="bar-fill" style="width:${(c.count / max * 100).toFixed(1)}%;"></div></div>
+        <div class="bar-val">${c.count} posts</div>
+      </div>`).join("")
+  }</div>`;
+}
+
 // ── Render: backlink health ──
 function renderBacklinks(d) {
   const platforms = (d.backlinks && d.backlinks.platforms) || {};
@@ -459,6 +486,7 @@ async function loadAll() {
     const d = await fetchData();
     renderStats(d);
     renderClusters(d);
+    renderContentClusters(d);
     renderBacklinks(d);
     renderSerp(d);
     renderNextTargets(d);

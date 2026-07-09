@@ -5,6 +5,14 @@ date: 2026-06-21
 description: "Broke down in a dangerous area after dark? Follow these steps to stay safe, get help fast, and get out without making the situation worse."
 tags: ["roadside emergency", "car broke down", "safety", "night breakdown", "towing"]
 slug: "car-broke-down-bad-neighborhood-night-what-to-do"
+clusters: ["highway-safety"]
+faq:
+  - q: "Is it okay to unlock my car for a stranger who says they want to help?"
+    a: "No. Keep your doors locked even if someone seems friendly or insistent. A legitimate good samaritan will understand; someone with bad intentions is counting on you to open up. Help is already on the way once you have called a tow truck or 911."
+  - q: "What if my phone dies while I am waiting for the tow truck?"
+    a: "Before it goes dead, text your exact location to someone you trust and confirm the tow truck's estimated arrival. If you have a car charger or portable battery pack, use it immediately. A dead phone is one of the most dangerous parts of this situation, which is why keeping a charged backup in the glovebox is worth doing before you ever need it."
+  - q: "Can I just wait until morning instead of paying for an after-hours tow?"
+    a: "Staying in a dark or unfamiliar area for several hours is a much bigger risk than the extra cost of a night tow. An after-hours surcharge is typically $25 to $50 on top of a normal rate, which is a reasonable price to get out of a vulnerable spot quickly. If you have roadside assistance through your insurance, it may cover the cost entirely regardless of the hour."
 ---
 ```
 
@@ -53,6 +61,17 @@ A tow at night, especially after hours, will typically run $75 to $200 for a loc
 - A portable phone charger kept in the glovebox is cheap and could be critical. A dead phone in this situation is a serious problem. For similar reasons, [car doors won't unlock with a dead battery](/car-doors-wont-unlock-battery-dead-stranded-inside/) is worth reading before it happens to you.
 - If you travel frequently after dark, consider adding roadside assistance to your insurance policy. The cost is minimal compared to an out-of-pocket night tow.
 - Trust your gut. If something about the situation feels wrong, act on that. Call 911 before you are certain you need to.
+
+## Common Questions
+
+**Q: Is it okay to unlock my car for a stranger who says they want to help?**
+A: No. Keep your doors locked even if someone seems friendly or insistent. A legitimate good samaritan will understand; someone with bad intentions is counting on you to open up. Help is already on the way once you have called a tow truck or 911.
+
+**Q: What if my phone dies while I am waiting for the tow truck?**
+A: Before it goes dead, text your exact location to someone you trust and confirm the tow truck's estimated arrival. If you have a car charger or portable battery pack, use it immediately. A dead phone is one of the most dangerous parts of this situation, which is why keeping a charged backup in the glovebox is worth doing before you ever need it.
+
+**Q: Can I just wait until morning instead of paying for an after-hours tow?**
+A: Staying in a dark or unfamiliar area for several hours is a much bigger risk than the extra cost of a night tow. An after-hours surcharge is typically $25 to $50 on top of a normal rate, which is a reasonable price to get out of a vulnerable spot quickly. If you have roadside assistance through your insurance, it may cover the cost entirely regardless of the hour.
 
 ---
 

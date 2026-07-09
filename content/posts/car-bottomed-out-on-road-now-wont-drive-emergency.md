@@ -5,6 +5,14 @@ date: 2026-07-09
 description: "Hit a bad dip and now your car won't move? Here's what to do right now, what's likely broken, and when to call a tow."
 tags: ["car bottomed out", "car won't drive", "roadside emergency", "towing", "suspension damage"]
 slug: "car-bottomed-out-on-road-now-wont-drive-emergency"
+clusters: ["roadside-help"]
+faq:
+  - q: "Can I drive even a short distance to get off the highway after bottoming out hard?"
+    a: "Only if the wheels roll freely, nothing is scraping the ground, and you see no fluid pooling under the car. Even then, keep it to the absolute minimum distance needed to reach the shoulder. If a control arm is bent or a CV axle is compromised, driving even a few hundred feet can cause you to lose steering entirely."
+  - q: "Will my insurance cover damage from hitting a pothole or road dip?"
+    a: "Comprehensive and collision coverage typically applies to sudden road hazard damage, but the specifics depend on your policy and deductible. Take photos of the pothole or hazard before leaving the scene, since some cities and counties also accept claims for road hazard damage caused by poorly maintained roads."
+  - q: "How do I know if I need a flatbed tow truck versus a regular one?"
+    a: "If any wheel is sitting at an angle, the car will not roll at all, or you suspect a bent control arm or broken CV axle, you need a flatbed. A standard wheel-lift tow drags the drive or steer wheels along the road, which can cause additional damage when the suspension geometry is already compromised."
 ---
 ```
 
@@ -70,6 +78,17 @@ If you have no roadside coverage, [roadside assistance without insurance or memb
 - Use flares or reflective triangles if you have them, placed 100-300 feet behind the car.
 - Do not accept a ride from strangers. Wait for the tow truck in a safe position with doors locked.
 - If you have kids in the car, [car broke down with kids in the car](/car-broke-down-with-kids-in-car-safety-steps/) covers specific steps for that situation.
+
+## Common Questions
+
+**Q: Can I drive even a short distance to get off the highway after bottoming out hard?**
+A: Only if the wheels roll freely, nothing is scraping the ground, and you see no fluid pooling under the car. Even then, keep it to the absolute minimum distance needed to reach the shoulder. If a control arm is bent or a CV axle is compromised, driving even a few hundred feet can cause you to lose steering entirely.
+
+**Q: Will my insurance cover damage from hitting a pothole or road dip?**
+A: Comprehensive and collision coverage typically applies to sudden road hazard damage, but the specifics depend on your policy and deductible. Take photos of the pothole or hazard before leaving the scene, since some cities and counties also accept claims for road hazard damage caused by poorly maintained roads.
+
+**Q: How do I know if I need a flatbed tow truck versus a regular one?**
+A: If any wheel is sitting at an angle, the car will not roll at all, or you suspect a bent control arm or broken CV axle, you need a flatbed. A standard wheel-lift tow drags the drive or steer wheels along the road, which can cause additional damage when the suspension geometry is already compromised.
 
 ---
 

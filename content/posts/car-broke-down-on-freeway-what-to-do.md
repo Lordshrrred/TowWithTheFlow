@@ -5,6 +5,14 @@ date: 2026-06-17
 description: "Car broke down on a freeway? Here's exactly what to do to stay safe, get help fast, and avoid making a bad situation worse."
 tags: ["freeway breakdown", "roadside emergency", "tow truck", "highway breakdown", "car broke down"]
 slug: "car-broke-down-on-freeway-what-to-do"
+clusters: ["highway-safety"]
+faq:
+  - q: "Should I get out and push my car off the freeway if it breaks down?"
+    a: "No. Pushing a vehicle on a freeway shoulder puts you directly in the path of oncoming traffic, which is one of the most dangerous positions possible. Stay inside with your seatbelt on and wait for a tow truck or emergency services to assist you."
+  - q: "What if I break down in a tunnel or on a bridge with no shoulder?"
+    a: "Turn on your hazard lights immediately and try to coast to the nearest exit or open area. If you must stop, call 911 right away since tunnels and bridges have no safe place to wait, and dispatchers can help manage traffic or send assistance faster."
+  - q: "How do I tell the tow truck driver exactly where I am on the freeway?"
+    a: "Give the dispatcher your highway number, the direction you are traveling, and the nearest mile marker or exit number, all of which are posted on small green signs along the shoulder. If you cannot find a mile marker, share your phone's GPS coordinates, which most smartphone map apps display when you tap your current location."
 ---
 ```
 
@@ -49,6 +57,17 @@ Check your insurance before you pay out of pocket. Many policies include roadsid
 - If someone stops who is not a marked emergency vehicle, crack the window and ask them to call 911 rather than accepting a ride from a stranger.
 - Keep children and pets inside the vehicle until help arrives.
 - If the car catches fire, get everyone out immediately, move at least 100 feet away, and do not go back for belongings.
+
+## Common Questions
+
+**Q: Should I get out and push my car off the freeway if it breaks down?**
+A: No. Pushing a vehicle on a freeway shoulder puts you directly in the path of oncoming traffic, which is one of the most dangerous positions possible. Stay inside with your seatbelt on and wait for a tow truck or emergency services to assist you.
+
+**Q: What if I break down in a tunnel or on a bridge with no shoulder?**
+A: Turn on your hazard lights immediately and try to coast to the nearest exit or open area. If you must stop, call 911 right away since tunnels and bridges have no safe place to wait, and dispatchers can help manage traffic or send assistance faster.
+
+**Q: How do I tell the tow truck driver exactly where I am on the freeway?**
+A: Give the dispatcher your highway number, the direction you are traveling, and the nearest mile marker or exit number, all of which are posted on small green signs along the shoulder. If you cannot find a mile marker, share your phone's GPS coordinates, which most smartphone map apps display when you tap your current location.
 
 ---
 

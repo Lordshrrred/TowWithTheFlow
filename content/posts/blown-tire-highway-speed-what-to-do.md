@@ -5,6 +5,14 @@ date: 2026-06-22
 description: "A tire blowout at 70 mph can flip your car if you react wrong. Here's exactly what to do in the next 10 seconds and after you stop."
 tags: ["tire blowout", "highway emergency", "roadside safety", "car breakdown", "what to do"]
 slug: "blown-tire-highway-speed-what-to-do"
+clusters: ["tire-wheel"]
+faq:
+  - q: "Should I steer into the blowout or away from it?"
+    a: "Neither aggressively. Hold your lane with steady counter-pressure against the pull. Jerking the wheel in either direction at highway speed is what triggers a rollover, so the goal is to resist the pull gradually while slowing down naturally."
+  - q: "Can I just put on my spare and drive away instead of calling a tow?"
+    a: "Sometimes, but only if you are parked on a wide, stable shoulder well away from traffic. A blowout often damages the wheel rim itself, so check before assuming the spare will fix the problem. If there is any rim damage, or if conditions feel unsafe, call for a tow rather than risk it."
+  - q: "How far can I drive on a flat before I have to stop?"
+    a: "You should not drive on a flat at all. Even a short distance at low speed can destroy the rim, the brake rotor, and suspension components, turning a single tire replacement into a repair bill of several thousand dollars. Pull over as soon as it is safe to do so."
 ---
 ```
 
@@ -59,6 +67,17 @@ If you carry roadside assistance through your insurer, most policies cover the t
 - Never stand between your car and oncoming traffic while changing a tire.
 - At night, wear anything reflective you have in the car. A phone flashlight pointed toward oncoming traffic is better than nothing.
 - If you feel unsafe on the shoulder, [a dangerous stop location changes your priorities](/car-broke-down-bad-neighborhood-night-what-to-do/). Call 911 and tell dispatch your exact location.
+
+## Common Questions
+
+**Q: Should I steer into the blowout or away from it?**
+A: Neither aggressively. Hold your lane with steady counter-pressure against the pull. Jerking the wheel in either direction at highway speed is what triggers a rollover, so the goal is to resist the pull gradually while slowing down naturally.
+
+**Q: Can I just put on my spare and drive away instead of calling a tow?**
+A: Sometimes, but only if you are parked on a wide, stable shoulder well away from traffic. A blowout often damages the wheel rim itself, so check before assuming the spare will fix the problem. If there is any rim damage, or if conditions feel unsafe, call for a tow rather than risk it.
+
+**Q: How far can I drive on a flat before I have to stop?**
+A: You should not drive on a flat at all. Even a short distance at low speed can destroy the rim, the brake rotor, and suspension components, turning a single tire replacement into a repair bill of several thousand dollars. Pull over as soon as it is safe to do so.
 
 ---
 

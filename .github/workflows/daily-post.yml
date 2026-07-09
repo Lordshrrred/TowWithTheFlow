@@ -65,7 +65,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Generate general post
         env:
@@ -163,7 +163,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Generate local post
         env:
@@ -208,7 +208,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Syndicate general post
         env:
@@ -273,7 +273,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Syndicate local post
         env:
@@ -338,7 +338,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Syndicate post 3 (TWTF1)
         env:
@@ -397,7 +397,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Syndicate WordPress backlog post (oldest missing WordPress)
         env:
@@ -456,7 +456,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Syndicate Blogger backlog post (1/day)
         env:
@@ -497,7 +497,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Generate general post 3
         env:
@@ -573,7 +573,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Generate local post 4
         env:
@@ -620,7 +620,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install anthropic python-dotenv requests requests-oauthlib
+      - run: pip install anthropic python-dotenv requests requests-oauthlib Pillow
 
       - name: Syndicate post 4 (TWTF1)
         env:

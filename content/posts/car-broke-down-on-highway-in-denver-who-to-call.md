@@ -5,6 +5,14 @@ date: 2026-07-03
 description: "Car broke down on a Denver highway? Here's exactly who to call, what to do first, and what a tow will cost you in Colorado."
 tags: ["denver", "highway breakdown", "tow truck", "roadside assistance", "colorado"]
 slug: "car-broke-down-on-highway-in-denver-who-to-call"
+clusters: ["highway-safety"]
+faq:
+  - q: "How long will I actually wait for a tow truck on a Denver highway?"
+    a: "Within the metro area on I-25 or I-70, most tows arrive in 30 to 60 minutes during normal conditions. At night or during heavy traffic, and especially on outer corridors like I-270 or E-470, wait times can stretch longer, so always ask for a confirmed ETA when you call."
+  - q: "Can CDOT Courtesy Patrol help me for free, or do I have to pay?"
+    a: "CDOT Courtesy Patrol trucks operate at no charge and can assist with common issues like running out of gas, dead batteries, and flat tires. They also help make your location safer by setting up traffic control, but if your car needs to be towed to a shop, that tow will still cost you unless you have roadside coverage."
+  - q: "What if an unmarked tow truck pulls up and offers to help before I called anyone?"
+    a: "Do not use them. Unlicensed towers on Denver highways sometimes charge far above normal rates and may not take your car where you want it to go. Wait for a truck dispatched by Colorado State Patrol or a company you contacted yourself."
 ---
 ```
 
@@ -59,6 +67,17 @@ If you are unsure whether to wait on the shoulder, read this: [is it safe to wai
 - At night, use your phone flashlight or a flare if you have one
 - If you have kids in the car, [there are specific steps to follow](/car-broke-down-with-kids-in-car-safety-steps/) to keep everyone safe and calm
 - Do not run the engine in a tunnel or enclosed area if you smell something burning
+
+## Common Questions
+
+**Q: How long will I actually wait for a tow truck on a Denver highway?**
+A: Within the metro area on I-25 or I-70, most tows arrive in 30 to 60 minutes during normal conditions. At night or during heavy traffic, and especially on outer corridors like I-270 or E-470, wait times can stretch longer, so always ask for a confirmed ETA when you call.
+
+**Q: Can CDOT Courtesy Patrol help me for free, or do I have to pay?**
+A: CDOT Courtesy Patrol trucks operate at no charge and can assist with common issues like running out of gas, dead batteries, and flat tires. They also help make your location safer by setting up traffic control, but if your car needs to be towed to a shop, that tow will still cost you unless you have roadside coverage.
+
+**Q: What if an unmarked tow truck pulls up and offers to help before I called anyone?**
+A: Do not use them. Unlicensed towers on Denver highways sometimes charge far above normal rates and may not take your car where you want it to go. Wait for a truck dispatched by Colorado State Patrol or a company you contacted yourself.
 
 ---
 

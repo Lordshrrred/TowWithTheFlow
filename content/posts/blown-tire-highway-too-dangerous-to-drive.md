@@ -5,6 +5,14 @@ date: 2026-07-02
 description: "Blown a tire at highway speed and it's too dangerous to drive? Here's exactly what to do, step by step, to stay safe and get moving again."
 tags: ["blown tire", "highway breakdown", "tire blowout", "roadside emergency", "tow truck"]
 slug: "blown-tire-highway-too-dangerous-to-drive"
+clusters: ["tire-wheel"]
+faq:
+  - q: "Can I drive slowly on a blown tire to get off the highway?"
+    a: "At very low speeds on a short stretch, some drivers limp to an exit, but this risks losing control again and destroying the rim, which can add hundreds of dollars to your repair bill. If there is any doubt about the distance or road conditions, call a tow instead."
+  - q: "How do I tell if the rim is damaged after a blowout?"
+    a: "Look at the edge of the wheel where it meets the pavement. If the rim is visibly bent, cracked, or has been grinding on the road surface, it is damaged and the car needs a flatbed tow rather than a spare tire swap."
+  - q: "What if my car has no spare tire at all?"
+    a: "Many newer vehicles come with only a tire inflation kit and no physical spare. If that kit cannot seal a blowout, your only safe option is to call a tow truck and have the car transported to a shop for a full tire replacement."
 ---
 ```
 
@@ -61,6 +69,17 @@ If you have kids in the car when this happens, the priority order does not chang
 - If you are on a bridge or in a tunnel when the tire blows, [car broke down on a bridge](/car-broke-down-on-bridge-what-to-do/) covers the specific risks and steps for that situation.
 - At night, stay in the car with doors locked if you cannot get behind a barrier. Hazards on, interior light off.
 - If the spare is also flat, you have no good options for self-rescue. [Tire blew out and spare is also flat](/tire-blew-out-spare-is-also-flat-what-to-do/) walks through exactly what to do in that case.
+
+## Common Questions
+
+**Q: Can I drive slowly on a blown tire to get off the highway?**
+A: At very low speeds on a short stretch, some drivers limp to an exit, but this risks losing control again and destroying the rim, which can add hundreds of dollars to your repair bill. If there is any doubt about the distance or road conditions, call a tow instead.
+
+**Q: How do I tell if the rim is damaged after a blowout?**
+A: Look at the edge of the wheel where it meets the pavement. If the rim is visibly bent, cracked, or has been grinding on the road surface, it is damaged and the car needs a flatbed tow rather than a spare tire swap.
+
+**Q: What if my car has no spare tire at all?**
+A: Many newer vehicles come with only a tire inflation kit and no physical spare. If that kit cannot seal a blowout, your only safe option is to call a tow truck and have the car transported to a shop for a full tire replacement.
 
 ---
 

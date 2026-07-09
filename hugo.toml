@@ -21,6 +21,10 @@ enableRobotsTXT = true
 [permalinks]
   posts = "/:slug/"
 
+[taxonomies]
+  tag = "tags"
+  cluster = "clusters"
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 

@@ -5,6 +5,14 @@ date: 2026-07-06
 description: "Smoke coming from under your hood on the highway is a serious warning. Here is exactly what to do, what causes it, and when to stop immediately."
 tags: ["car smoking under hood", "highway breakdown", "engine overheating", "roadside emergency", "when to pull over"]
 slug: "car-smoking-under-hood-on-highway-pull-over-or-keep-driving"
+clusters: ["engine-mechanical"]
+faq:
+  - q: "Can I drive a short distance to the next exit if my car is smoking?"
+    a: "It is not worth the risk. Even a mile of driving with an active coolant or oil leak can seize the engine or start a fire, turning a few hundred dollars in repairs into thousands. Pull over on the shoulder immediately and call for a tow."
+  - q: "How do I know if the smoke is serious or just steam from a one-time spill?"
+    a: "Smell is your best clue without opening the hood. A sweet smell points to coolant, a burnt oily smell suggests an oil leak, and a sharp chemical or acrid smell can mean electrical burning or transmission fluid. Steam from a harmless one-time coolant spill usually stops within a few minutes once the engine is off, while a true leak keeps producing smoke."
+  - q: "What if I cannot safely reach the right shoulder and have to stop in a travel lane?"
+    a: "Turn on your hazards immediately, call 911 first so they can alert traffic control, and stay in your car with your seatbelt on until help arrives. Getting out into a live travel lane is usually more dangerous than remaining inside the vehicle."
 ---
 ```
 
@@ -67,6 +75,17 @@ Repairs depend entirely on the cause:
 - If someone stops and offers help you did not call for, you are not required to accept it; stay on your phone with the tow company
 - Do not attempt to add water to a hot radiator while it is still steaming
 - If the smoke turns to visible flame at any point, move far away and call 911 before you call a tow
+
+## Common Questions
+
+**Q: Can I drive a short distance to the next exit if my car is smoking?**
+A: It is not worth the risk. Even a mile of driving with an active coolant or oil leak can seize the engine or start a fire, turning a few hundred dollars in repairs into thousands. Pull over on the shoulder immediately and call for a tow.
+
+**Q: How do I know if the smoke is serious or just steam from a one-time spill?**
+A: Smell is your best clue without opening the hood. A sweet smell points to coolant, a burnt oily smell suggests an oil leak, and a sharp chemical or acrid smell can mean electrical burning or transmission fluid. Steam from a harmless one-time coolant spill usually stops within a few minutes once the engine is off, while a true leak keeps producing smoke.
+
+**Q: What if I cannot safely reach the right shoulder and have to stop in a travel lane?**
+A: Turn on your hazards immediately, call 911 first so they can alert traffic control, and stay in your car with your seatbelt on until help arrives. Getting out into a live travel lane is usually more dangerous than remaining inside the vehicle.
 
 ---
 

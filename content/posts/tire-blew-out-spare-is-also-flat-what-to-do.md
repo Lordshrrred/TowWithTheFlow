@@ -5,6 +5,14 @@ date: 2026-06-26
 description: "Blown tire and your spare is flat too? Here's exactly what to do, who to call, and what it'll cost to get moving again."
 tags: ["blown tire", "flat tire", "roadside emergency", "tow truck", "spare tire"]
 slug: "tire-blew-out-spare-is-also-flat-what-to-do"
+clusters: ["tire-wheel"]
+faq:
+  - q: "Can I just put air in my flat spare on the side of the road and drive on it?"
+    a: "Only if the spare went flat from a slow leak and holds air once inflated. If the sidewall is damaged or the tire won't hold pressure, adding air will not fix it and driving on it risks a blowout. Call for a tow instead of guessing."
+  - q: "What if my roadside assistance only covers a tire change and not a tow?"
+    a: "Tell the dispatcher upfront that both your main tire and your spare are flat, so a tire change service alone cannot help you. Most programs will upgrade the dispatch to a tow in that situation, though you may owe the difference in cost depending on your plan."
+  - q: "How do I find a tire shop that is open late or right now?"
+    a: "Search Google Maps for \"tire shop open now\" with your current location enabled, or ask your tow truck driver directly. Tow operators work with local shops daily and often know which ones have extended hours or a 24-hour bay."
 ---
 ```
 
@@ -57,6 +65,17 @@ If your spare is a full-size spare that simply needs air, a roadside tire inflat
 - If you are in an unsafe area after dark, [read this before deciding whether to stay with the car](/car-broke-down-bad-neighborhood-night-what-to-do/).
 - Keep your registration and insurance card accessible so you can hand them to the tow driver without digging through the glove box in traffic.
 - Never stand behind your vehicle while waiting for a tow.
+
+## Common Questions
+
+**Q: Can I just put air in my flat spare on the side of the road and drive on it?**
+A: Only if the spare went flat from a slow leak and holds air once inflated. If the sidewall is damaged or the tire won't hold pressure, adding air will not fix it and driving on it risks a blowout. Call for a tow instead of guessing.
+
+**Q: What if my roadside assistance only covers a tire change and not a tow?**
+A: Tell the dispatcher upfront that both your main tire and your spare are flat, so a tire change service alone cannot help you. Most programs will upgrade the dispatch to a tow in that situation, though you may owe the difference in cost depending on your plan.
+
+**Q: How do I find a tire shop that is open late or right now?**
+A: Search Google Maps for "tire shop open now" with your current location enabled, or ask your tow truck driver directly. Tow operators work with local shops daily and often know which ones have extended hours or a 24-hour bay.
 
 ---
 

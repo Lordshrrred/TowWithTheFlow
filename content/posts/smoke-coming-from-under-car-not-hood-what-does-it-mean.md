@@ -5,6 +5,14 @@ date: 2026-06-20
 description: "Smoke from under your car but not the hood usually means burning fluid, exhaust, or brakes. Here is what to look for and what to do right now."
 tags: ["car smoking", "roadside emergency", "car breakdown", "smoke under car", "car safety"]
 slug: "smoke-coming-from-under-car-not-hood-what-does-it-mean"
+clusters: ["engine-mechanical"]
+faq:
+  - q: "Is it safe to keep driving if the smoke under my car stops after a minute or two?"
+    a: "No, you should not keep driving even if the smoke clears. The underlying cause, whether a fluid leak, a seized caliper, or debris on the exhaust, is still there and can quickly get worse or become a fire hazard."
+  - q: "How do I tell if the smoke under my car is from the brakes or from a fluid leak?"
+    a: "Check which area the smoke is coming from. If it is concentrated around one wheel, a seized caliper is the likely culprit and you may also feel the car pulling to that side. If the smoke is coming from the center or rear underside of the car and smells sharp or sweet, a fluid dripping onto the exhaust is more likely."
+  - q: "What does it mean if the smoke under my car smells like rotten eggs?"
+    a: "A sulfur or rotten egg smell usually points to the catalytic converter. It may be clogged, overheating, or partially melted, and it can ignite nearby grease or debris. Have it inspected before driving further."
 ---
 ```
 
@@ -69,6 +77,17 @@ Towing to the shop typically runs $75 to $175 for local hauls, more if you are i
 - Keep a fire extinguisher rated for Class B fires in your trunk.
 - Do not restart the engine to move the car a short distance. You may turn a manageable problem into a fire.
 - If one wheel well is the smoke source, do not touch that wheel or brake components. Calipers can reach temperatures above 400 degrees Fahrenheit.
+
+## Common Questions
+
+**Q: Is it safe to keep driving if the smoke under my car stops after a minute or two?**
+A: No, you should not keep driving even if the smoke clears. The underlying cause, whether a fluid leak, a seized caliper, or debris on the exhaust, is still there and can quickly get worse or become a fire hazard.
+
+**Q: How do I tell if the smoke under my car is from the brakes or from a fluid leak?**
+A: Check which area the smoke is coming from. If it is concentrated around one wheel, a seized caliper is the likely culprit and you may also feel the car pulling to that side. If the smoke is coming from the center or rear underside of the car and smells sharp or sweet, a fluid dripping onto the exhaust is more likely.
+
+**Q: What does it mean if the smoke under my car smells like rotten eggs?**
+A: A sulfur or rotten egg smell usually points to the catalytic converter. It may be clogged, overheating, or partially melted, and it can ignite nearby grease or debris. Have it inspected before driving further.
 
 ---
 

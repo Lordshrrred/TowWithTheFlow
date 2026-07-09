@@ -1,24 +1,19 @@
 {
-  "generated_at": "2026-07-09T04:33:14.625601+00:00",
+  "generated_at": "2026-07-09T20:42:44.267573+00:00",
   "keywords": {
     "total": 769,
-    "live": 315,
-    "pending": 454,
+    "live": 318,
+    "pending": 451,
     "local": {
-      "live": 127,
-      "pending": 62
+      "live": 129,
+      "pending": 60
     },
     "pain_point": {
-      "live": 188,
-      "pending": 392
+      "live": 189,
+      "pending": 391
     }
   },
   "next_targets": [
-    {
-      "keyword": "car bottomed out on road now wont drive emergency",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "car spun out on highway what to do after",
       "score": 9,
@@ -63,6 +58,63 @@
       "keyword": "state farm roadside assistance dollar limit towing",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "ran out of gas on highway at night what to do",
+      "score": 8,
+      "type": "pain_point"
+    }
+  ],
+  "content_clusters": [
+    {
+      "slug": "towing-cost",
+      "label": "Towing Cost & Pricing",
+      "count": 145
+    },
+    {
+      "slug": "insurance-coverage",
+      "label": "Insurance & Roadside Coverage",
+      "count": 39
+    },
+    {
+      "slug": "engine-mechanical",
+      "label": "Engine & Mechanical Breakdown",
+      "count": 39
+    },
+    {
+      "slug": "battery-starting",
+      "label": "Battery & Starting Problems",
+      "count": 25
+    },
+    {
+      "slug": "highway-safety",
+      "label": "Highway & Freeway Safety",
+      "count": 15
+    },
+    {
+      "slug": "tire-wheel",
+      "label": "Tire & Wheel Issues",
+      "count": 11
+    },
+    {
+      "slug": "towing-logistics",
+      "label": "Towing Logistics & Process",
+      "count": 8
+    },
+    {
+      "slug": "accident-liability",
+      "label": "Accidents & Towing Liability",
+      "count": 6
+    },
+    {
+      "slug": "winter-weather",
+      "label": "Winter & Weather Breakdowns",
+      "count": 5
+    },
+    {
+      "slug": "roadside-help",
+      "label": "General Roadside Help",
+      "count": 2
     }
   ],
   "serp": {
@@ -315,27 +367,27 @@
     ]
   },
   "backlinks": {
-    "generated_at": "2026-07-08T21:39:04.991111+00:00",
+    "generated_at": "2026-07-09T18:14:32.212716+00:00",
     "platforms": {
       "blog": {
+        "checked": 294,
+        "verified": 294
+      },
+      "dev": {
+        "checked": 224,
+        "verified": 224
+      },
+      "feeder": {
+        "checked": 292,
+        "verified": 292
+      },
+      "tumblr": {
         "checked": 291,
         "verified": 291
       },
-      "dev": {
-        "checked": 222,
-        "verified": 222
-      },
-      "feeder": {
-        "checked": 290,
-        "verified": 290
-      },
-      "tumblr": {
-        "checked": 289,
-        "verified": 289
-      },
       "wordpress": {
-        "checked": 292,
-        "verified": 292
+        "checked": 294,
+        "verified": 294
       }
     }
   }

@@ -5,6 +5,14 @@ date: 2026-07-01
 description: "Fuel pump died on the highway? Here's exactly what to do to stay safe, call the right help, and get towed without getting ripped off."
 tags: ["fuel pump failure", "highway breakdown", "tow truck", "roadside emergency", "car broke down"]
 slug: "fuel-pump-died-on-highway-need-tow-truck-now"
+clusters: ["engine-mechanical"]
+faq:
+  - q: "Can I drive even a short distance with a dead fuel pump to get to an exit?"
+    a: "No. A completely failed fuel pump means the engine will not run, so the car cannot be driven at all. Once the engine stalls, it stays stalled, and you will need a tow from wherever you stop."
+  - q: "How long will it take for a tow truck to reach me on the highway?"
+    a: "Response times vary by location and time of day, but most tow companies arrive within 30 to 60 minutes in suburban and urban areas. Rural stretches of highway can mean longer waits, so call as soon as you are safely stopped and give the dispatcher your exact mile marker or nearest exit sign."
+  - q: "Will my car insurance cover the tow if my fuel pump dies?"
+    a: "Standard liability insurance does not cover towing, but many comprehensive policies and add-on roadside assistance plans do. Check your policy documents or call your insurer from the shoulder to confirm coverage before you commit to a tow company, since reimbursement rules vary by provider."
 ---
 ```
 
@@ -48,6 +56,17 @@ Fuel pump replacement itself is a separate cost: $400 to $900 for most cars once
 - If it is dark, keep the interior dome light off so your eyes adjust to oncoming traffic and drivers can see your hazards more clearly.
 - If someone stops and offers to help, you can ask them to call a tow truck on your behalf, but do not let strangers attempt to push or move your vehicle.
 - On a busy freeway after dark, consider calling 911 even if you are safely on the shoulder. Dispatched highway patrol will position their cruiser behind your car with lights running, which significantly reduces the chance of a distracted driver hitting you. For high-traffic freeway situations, [Car Broke Down on Freeway in Los Angeles: What to Do Right Now](/car-broke-down-on-freeway-in-los-angeles-what-to-do/) covers how police-assisted waits typically work.
+
+## Common Questions
+
+**Q: Can I drive even a short distance with a dead fuel pump to get to an exit?**
+A: No. A completely failed fuel pump means the engine will not run, so the car cannot be driven at all. Once the engine stalls, it stays stalled, and you will need a tow from wherever you stop.
+
+**Q: How long will it take for a tow truck to reach me on the highway?**
+A: Response times vary by location and time of day, but most tow companies arrive within 30 to 60 minutes in suburban and urban areas. Rural stretches of highway can mean longer waits, so call as soon as you are safely stopped and give the dispatcher your exact mile marker or nearest exit sign.
+
+**Q: Will my car insurance cover the tow if my fuel pump dies?**
+A: Standard liability insurance does not cover towing, but many comprehensive policies and add-on roadside assistance plans do. Check your policy documents or call your insurer from the shoulder to confirm coverage before you commit to a tow company, since reimbursement rules vary by provider.
 
 ---
 

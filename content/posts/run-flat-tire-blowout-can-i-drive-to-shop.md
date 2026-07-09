@@ -5,6 +5,14 @@ date: 2026-07-08
 description: "Run flat tire had a blowout? Here's exactly how far you can drive, when you must stop, and what it costs if you need a tow."
 tags: ["run flat tire", "tire blowout", "roadside emergency", "towing", "tire safety"]
 slug: "run-flat-tire-blowout-can-i-drive-to-shop"
+clusters: ["tire-wheel"]
+faq:
+  - q: "Can I repair a run flat tire instead of replacing it?"
+    a: "No. Run flat tires are not designed to be patched or plugged. Once driven on without pressure, the internal reinforced sidewall is compromised in ways that cannot be safely inspected or repaired, so a full replacement is the only safe option."
+  - q: "What happens if I drive more than 50 miles on a deflated run flat?"
+    a: "The reinforced sidewall breaks down from heat and stress, and the tire can fail suddenly. You also risk damaging the wheel rim itself, which can add several hundred dollars to your repair bill on top of the tire cost."
+  - q: "How do I know if my car has run flat tires or just a missing spare?"
+    a: "Check the sidewall of each tire for markings like \"RFT,\" \"SSR,\" \"ROF,\" or \"EMT,\" which are manufacturer codes for run flat construction. You can also check your door jamb sticker or owner's manual, and if there is no spare tire or compressor kit in the trunk, run flats are very likely standard on your vehicle."
 ---
 ```
 
@@ -56,6 +64,17 @@ If the shop is farther than your run flat range allows, a tow is the smarter cal
 - If you are on a highway shoulder deciding what to do, stay in your car with your seatbelt on until you have a plan. A parked car on a shoulder is a real danger. See [Car Died on Highway Shoulder: Is It Safe to Wait for a Tow?](/car-died-on-highway-shoulder-safe-to-wait-for-tow/) for guidance.
 - The 50-mile limit assumes normal load. If you have four passengers and a full trunk, cut that estimate to 30 miles to be safe.
 - If the blowout happened and you also do not have a spare as backup, see [Tire Blew Out and Spare Is Also Flat: What to Do Right Now](/tire-blew-out-spare-is-also-flat-what-to-do/) for overlapping situations.
+
+## Common Questions
+
+**Q: Can I repair a run flat tire instead of replacing it?**
+A: No. Run flat tires are not designed to be patched or plugged. Once driven on without pressure, the internal reinforced sidewall is compromised in ways that cannot be safely inspected or repaired, so a full replacement is the only safe option.
+
+**Q: What happens if I drive more than 50 miles on a deflated run flat?**
+A: The reinforced sidewall breaks down from heat and stress, and the tire can fail suddenly. You also risk damaging the wheel rim itself, which can add several hundred dollars to your repair bill on top of the tire cost.
+
+**Q: How do I know if my car has run flat tires or just a missing spare?**
+A: Check the sidewall of each tire for markings like "RFT," "SSR," "ROF," or "EMT," which are manufacturer codes for run flat construction. You can also check your door jamb sticker or owner's manual, and if there is no spare tire or compressor kit in the trunk, run flats are very likely standard on your vehicle.
 
 ---
 

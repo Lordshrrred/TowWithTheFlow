@@ -103,6 +103,26 @@
   ]
 }
 </script>
+{{ with .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $i, $item := . }}{{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $item.q | jsonify | safeJS }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $item.a | jsonify | safeJS }}
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
 {{ else }}
 <script type="application/ld+json">
 {
@@ -245,6 +265,9 @@ blockquote p:first-child>strong:first-child{display:none}
 .related-guides li{border-bottom:1px solid var(--border);padding:.55rem 0;margin:0}
 .related-guides li:last-child{border:none}
 .related-guides a{color:var(--text);font-weight:700;font-size:.95rem;transition:color .15s}
+.related-guides__more{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--border)}
+.related-guides__more a{color:var(--accent);font-weight:700;font-size:.85rem}
+.term-intro{color:var(--text-soft);font-size:1rem;max-width:70ch;margin-bottom:1rem}
 .related-guides a:hover{color:var(--accent);text-decoration:none}
 .rating-widget{background:linear-gradient(180deg,rgba(16,28,49,.9),rgba(11,20,34,.84));border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem 1.5rem;margin:2.8rem 0;text-align:center;box-shadow:var(--shadow)}
 .rating-widget__question{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.3rem;margin-bottom:1.25rem;color:var(--text);letter-spacing:-.02em}

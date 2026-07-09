@@ -5,6 +5,14 @@ date: 2026-06-27
 description: "Your car just died on an LA freeway. Here's exactly what to do to stay safe, get help, and avoid a costly mistake in traffic."
 tags: ["los angeles", "freeway breakdown", "car broke down", "roadside emergency", "towing"]
 slug: "car-died-on-freeway-in-los-angeles-what-to-do"
+clusters: ["highway-safety"]
+faq:
+  - q: "Does Freeway Service Patrol cover the whole LA freeway system, or just certain roads?"
+    a: "FSP covers most major LA-area freeways including the 405, 10, 101, 5, and 110, but not every stretch of every highway. Coverage also depends on the time of day, since service runs primarily on weekdays during peak commute hours. If you are outside those hours or on a less-traveled corridor, you will need to call a private tow."
+  - q: "What if I break down in a lane and cannot get to the shoulder at all?"
+    a: "Turn on your hazard lights immediately and stay in your vehicle with your seatbelt on. Call 911 rather than 511 in this situation, since a car stopped in a live lane is a life-safety emergency that requires CHP response. Do not exit the vehicle until law enforcement or emergency personnel arrive and tell you it is safe."
+  - q: "How do I know if my insurance already covers a freeway tow in LA?"
+    a: "Check your policy's declarations page or call your insurer directly and ask specifically whether roadside assistance or towing is included and if there is a mileage or dollar cap. Some policies bundle roadside assistance automatically, while others require you to add it as a separate rider, so the answer is not always obvious from the card in your wallet."
 ---
 ```
 
@@ -61,6 +69,17 @@ Private tow from an LA freeway to a nearby shop: **$150 to $350**. Add another $
 - At night, stay as visible as possible. Phone flashlight, hazards, anything.
 - If CHP stops behind you, follow their instructions. They may be able to arrange a faster tow or a push to safety.
 - Do not accept a tow from an unmarked truck that pulls up without being called. Predatory towing in LA is real.
+
+## Common Questions
+
+**Q: Does Freeway Service Patrol cover the whole LA freeway system, or just certain roads?**
+A: FSP covers most major LA-area freeways including the 405, 10, 101, 5, and 110, but not every stretch of every highway. Coverage also depends on the time of day, since service runs primarily on weekdays during peak commute hours. If you are outside those hours or on a less-traveled corridor, you will need to call a private tow.
+
+**Q: What if I break down in a lane and cannot get to the shoulder at all?**
+A: Turn on your hazard lights immediately and stay in your vehicle with your seatbelt on. Call 911 rather than 511 in this situation, since a car stopped in a live lane is a life-safety emergency that requires CHP response. Do not exit the vehicle until law enforcement or emergency personnel arrive and tell you it is safe.
+
+**Q: How do I know if my insurance already covers a freeway tow in LA?**
+A: Check your policy's declarations page or call your insurer directly and ask specifically whether roadside assistance or towing is included and if there is a mileage or dollar cap. Some policies bundle roadside assistance automatically, while others require you to add it as a separate rider, so the answer is not always obvious from the card in your wallet.
 
 ---
 

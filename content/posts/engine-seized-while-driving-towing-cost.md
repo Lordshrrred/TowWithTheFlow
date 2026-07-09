@@ -5,6 +5,14 @@ date: 2026-06-23
 description: "Engine seized while driving? Here's exactly what to do, what a tow will cost, and why you must not try to drive it another inch."
 tags: ["engine seized", "towing cost", "breakdown", "roadside emergency", "tow truck"]
 slug: "engine-seized-while-driving-towing-cost"
+clusters: ["towing-cost"]
+faq:
+  - q: "Can I drive my car at all if the engine seized while I was moving?"
+    a: "No. A seized engine means the internal parts have physically locked up, so the car cannot move under its own power. Attempting to drive or restart it risks cracking the engine block or bending connecting rods, which makes repairs far more expensive or impossible."
+  - q: "Will my car insurance or roadside assistance pay for the flatbed tow?"
+    a: "Many policies with a roadside assistance add-on will cover at least a portion of the tow, but coverage limits vary widely, often capping at $50 to $100. Check your policy app or call your insurer before authorizing a private tow so you know exactly how much you will need to pay out of pocket."
+  - q: "Is a seized engine always a total loss, or can it be repaired?"
+    a: "It depends on the cause and extent of the damage. A spun bearing on an otherwise intact engine can sometimes be rebuilt for $1,500 to $3,000, while a cracked block or destroyed pistons may push repair costs past the vehicle's value. Always get a written diagnosis from a mechanic before agreeing to a full engine replacement."
 ---
 ```
 
@@ -67,6 +75,17 @@ If your roadside assistance caps at $50 or $100 in reimbursement, you will pay t
 - If other warning lights were flashing before the seizure (oil pressure, temperature), tell the tow driver and the mechanic. That history matters for diagnosis.
 - Do not let a tow company pressure you into a shop you did not choose. You have the right to name your destination.
 - A seized engine is not always a total loss. A spun bearing on an otherwise solid engine can sometimes be rebuilt. Get a written diagnosis before anyone quotes you a replacement engine.
+
+## Common Questions
+
+**Q: Can I drive my car at all if the engine seized while I was moving?**
+A: No. A seized engine means the internal parts have physically locked up, so the car cannot move under its own power. Attempting to drive or restart it risks cracking the engine block or bending connecting rods, which makes repairs far more expensive or impossible.
+
+**Q: Will my car insurance or roadside assistance pay for the flatbed tow?**
+A: Many policies with a roadside assistance add-on will cover at least a portion of the tow, but coverage limits vary widely, often capping at $50 to $100. Check your policy app or call your insurer before authorizing a private tow so you know exactly how much you will need to pay out of pocket.
+
+**Q: Is a seized engine always a total loss, or can it be repaired?**
+A: It depends on the cause and extent of the damage. A spun bearing on an otherwise intact engine can sometimes be rebuilt for $1,500 to $3,000, while a cracked block or destroyed pistons may push repair costs past the vehicle's value. Always get a written diagnosis from a mechanic before agreeing to a full engine replacement.
 
 ---
 

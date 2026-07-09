@@ -10,17 +10,39 @@ Output: static/data/seo.json
 
 from __future__ import annotations
 
+import glob
 import json
+import re
 from pathlib import Path
 
 from generate_post import load_keywords, is_local
+from clusters import cluster_label
 
 ROOT = Path(__file__).parent.parent
 SCRIPTS_DIR = Path(__file__).parent
+POSTS_DIR = ROOT / "content" / "posts"
 REPORTS_DIR = ROOT / "reports"
 OUTPUT_FILE = ROOT / "static" / "data" / "seo.json"
 
 NEXT_TARGETS_LIMIT = 10
+
+
+def content_clusters() -> list[dict]:
+    """How many live posts fall into each content cluster (see clusters.py),
+    for the SEO dashboard's cluster breakdown and hub-page links."""
+    files = [p for p in glob.glob(str(POSTS_DIR / "*.md")) if Path(p).name not in {"_index.md", "tow-content-log.md"}]
+    counts: dict[str, int] = {}
+    for path_str in files:
+        text = Path(path_str).read_text(encoding="utf-8")
+        m = re.search(r'^clusters:\s*\[["\']?([\w-]+)', text, re.MULTILINE)
+        slug = m.group(1) if m else "roadside-help"
+        counts[slug] = counts.get(slug, 0) + 1
+
+    return sorted(
+        [{"slug": slug, "label": cluster_label(slug), "count": count} for slug, count in counts.items()],
+        key=lambda c: c["count"],
+        reverse=True,
+    )
 
 
 def keyword_clusters() -> tuple[dict, list[dict]]:
@@ -116,6 +138,7 @@ def main():
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "keywords": keywords_summary,
         "next_targets": next_targets,
+        "content_clusters": content_clusters(),
         "serp": latest_serp_data(),
         "backlinks": backlink_health(),
     }
@@ -128,6 +151,7 @@ def main():
         f"({keywords_summary['local']['live']} local live, {keywords_summary['pain_point']['live']} pain-point live)"
     )
     print(f"  next targets: {len(next_targets)}")
+    print(f"  content clusters: {len(payload['content_clusters'])}")
     print(f"  serp check: {payload['serp']['checked']} keywords, report_date={payload['serp']['report_date']}")
 
 

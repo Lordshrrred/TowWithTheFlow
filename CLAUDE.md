@@ -37,6 +37,20 @@ The user is authenticated via keyring (account: Lordshrrred). This works from th
 | `scripts/keyword_research.py` | Discover + score new keyword opportunities (weekly) |
 | `scripts/serp_intelligence.py` | Weekly SERP + AI Overview visibility check via Claude web search |
 | `scripts/build_seo_data.py` | Aggregate keywords/SERP/backlink data into `static/data/seo.json` for the SEO dashboard tab |
+| `scripts/clusters.py` | Content-cluster taxonomy definitions (keyword/title -> cluster slug) |
+| `scripts/assign_clusters.py` | Backfills the `clusters:` frontmatter field on existing posts from clusters.py |
+| `scripts/optimize_images.py` | One-time (re-runnable) pass to resize/recompress everything under static/images/ |
+| `scripts/backfill_legacy_posts.py` | One-time pass to expand thin legacy posts and add a Common Questions/FAQ section site-wide |
+
+### Content Clusters
+
+Every post is assigned a cluster (see `scripts/clusters.py`) via the `clusters:` frontmatter field. Hugo turns this into taxonomy hub pages at `/clusters/<slug>/` (content in `content/clusters/<slug>/_index.md`), and `layouts/posts/single.html`'s "Related Guides" box links every post to its cluster-mates plus the hub page — this is the site's main internal-linking mechanism and needs no API calls to maintain. When adding a new cluster, update `clusters.py` and re-run `assign_clusters.py`.
+
+**Hugo layout gotcha:** this project has its own root-level `layouts/` directory that overrides the theme (`themes/twtf/layouts/`) for taxonomy pages and the posts section. `layouts/_default/taxonomy.html` handles *both* the taxonomy list page (`/clusters/`) and individual term pages (`/clusters/<slug>/`) — `layouts/_default/term.html` is not used by this Hugo setup and should not be re-added without re-verifying. `layouts/posts/single.html` (not the theme's `_default/single.html`) is what actually renders every post.
+
+### FAQ Schema
+
+Posts can carry a `faq:` frontmatter field (list of `{q, a}`) sourced from a "## Common Questions" section in the body (see `generate_post.py`'s `extract_faq_pairs`/`build_faq_yaml`). The theme (`themes/twtf/layouts/partials/head.html`) emits `FAQPage` JSON-LD from it automatically when present. Not every post has one — it's optional structured data, not a hard requirement.
 
 ### Platforms Syndicated To
 1. Dev.to (split across two accounts — see below)

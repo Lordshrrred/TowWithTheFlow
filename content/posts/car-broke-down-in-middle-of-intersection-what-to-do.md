@@ -5,6 +5,14 @@ date: 2026-07-03
 description: "Your car stalled in an intersection. Here's exactly what to do in the next 60 seconds to stay safe and get out of traffic fast."
 tags: ["car broke down", "roadside emergency", "intersection breakdown", "what to do", "tow truck"]
 slug: "car-broke-down-in-middle-of-intersection-what-to-do"
+clusters: ["roadside-help"]
+faq:
+  - q: "Can I just leave my car in the intersection and wait inside for the tow truck?"
+    a: "No, staying inside a stalled car in a live intersection puts you at serious risk of being hit by a distracted driver. Get out, move to a safe distance behind a barrier or on the sidewalk, and wait there."
+  - q: "What if I can't get my car into neutral to push it?"
+    a: "If the ignition is fully off, you may need to turn the key to the accessory position to unlock the steering column and allow the shifter to move. If the car still won't go into neutral, call 911 and stay out of the traffic lane entirely until help arrives."
+  - q: "Will my insurance cover a tow if my car breaks down in an intersection?"
+    a: "It depends on your policy. Many standard auto insurance plans include roadside assistance as an add-on, but not by default. Check your coverage before an emergency happens, and look into standalone roadside assistance plans if you are not already covered."
 ---
 ```
 
@@ -51,6 +59,17 @@ If your car gets towed by a city-contracted wrecker before you can arrange your 
 - If it's dark, move away from the vehicle and use your phone flashlight to make yourself visible to approaching drivers.
 - A car that stalls due to engine failure, fuel issues, or electrical problems can also have unpredictable behavior. If you smell fuel or see smoke, put distance between yourself and the car fast. [Smoke coming from under the car](/smoke-coming-from-under-car-not-hood-what-does-it-mean/) is not something to investigate on a busy street.
 - If your brakes also felt wrong before the stall, do not attempt to drive even a short distance. Read up on [brake failure while driving](/brake-failure-while-driving-emergency-steps/) before you move the vehicle at all.
+
+## Common Questions
+
+**Q: Can I just leave my car in the intersection and wait inside for the tow truck?**
+A: No, staying inside a stalled car in a live intersection puts you at serious risk of being hit by a distracted driver. Get out, move to a safe distance behind a barrier or on the sidewalk, and wait there.
+
+**Q: What if I can't get my car into neutral to push it?**
+A: If the ignition is fully off, you may need to turn the key to the accessory position to unlock the steering column and allow the shifter to move. If the car still won't go into neutral, call 911 and stay out of the traffic lane entirely until help arrives.
+
+**Q: Will my insurance cover a tow if my car breaks down in an intersection?**
+A: It depends on your policy. Many standard auto insurance plans include roadside assistance as an add-on, but not by default. Check your coverage before an emergency happens, and look into standalone roadside assistance plans if you are not already covered.
 
 ---
 

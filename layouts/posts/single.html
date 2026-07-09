@@ -23,9 +23,28 @@
     <div class="post-body">
       {{ .Content }}
 
-      <!-- Related Guides -->
+      <!-- Related Guides — prefer same-cluster posts (curated topic grouping)
+           over Hugo's generic tag-based .Related, which is noisy given ~500
+           freeform tags. Falls back to .Related only to fill remaining slots
+           for posts in a thin cluster. -->
       {{ $currentPage := . }}
-      {{ $related := .Site.RegularPages.Related . | first 5 }}
+      {{ $clusterTerm := "" }}
+      {{ with .Params.clusters }}{{ $clusterTerm = index . 0 }}{{ end }}
+      {{ $clusterMates := slice }}
+      {{ if $clusterTerm }}
+        {{ with .Site.Taxonomies.cluster }}
+          {{ with index . $clusterTerm }}
+            {{ range .Pages }}
+              {{ if ne . $currentPage }}{{ $clusterMates = $clusterMates | append . }}{{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ $related := $clusterMates | first 5 }}
+      {{ if lt (len $related) 5 }}
+        {{ $more := .Site.RegularPages.Related . | first (sub 5 (len $related)) }}
+        {{ range $more }}{{ if not (in $related .) }}{{ $related = $related | append . }}{{ end }}{{ end }}
+      {{ end }}
       {{ with $related }}
       <div class="related-guides">
         <h2>&#128279; Related Guides</h2>
@@ -34,6 +53,13 @@
           <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
           {{ end }}
         </ul>
+        {{ with $clusterTerm }}
+          {{ with $.Site.GetPage (printf "/clusters/%s" .) }}
+          <p class="related-guides__more">
+            <a href="{{ .Permalink }}">Browse all {{ .Title }} guides &rsaquo;</a>
+          </p>
+          {{ end }}
+        {{ end }}
       </div>
       {{ end }}
 

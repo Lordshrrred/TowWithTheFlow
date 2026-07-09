@@ -5,6 +5,14 @@ date: 2026-05-22
 description: "State Farm roadside assistance towing distance limits explained. Find out how far they'll tow your car and what happens if you need to go further."
 tags: ["state farm", "towing coverage", "roadside assistance", "insurance towing", "towing distance limits"]
 slug: "state-farm-towing-coverage-maximum-distance-miles"
+clusters: ["insurance-coverage"]
+faq:
+  - q: "Can I request a specific repair shop even if it's more than 15 miles away?"
+    a: "Yes, you can request a specific shop beyond the 15-mile limit, but you will pay the per-mile cost for any distance over 15 miles. Ask for a written estimate from the tow truck driver before agreeing so you know your exact out-of-pocket amount."
+  - q: "What happens if there's no repair shop within 15 miles of where I broke down?"
+    a: "State Farm can waive the 15-mile limit when no qualified repair facility exists within that range. Document your location and let the State Farm representative know so they can authorize the extended tow at no extra cost to you."
+  - q: "Does the 15-mile towing benefit reset after each breakdown, or is there a yearly cap?"
+    a: "The 15-mile benefit resets with each individual breakdown event, and there is no annual limit on how many times you can use roadside assistance. Each time you call, you get a fresh 15-mile allotment regardless of how many times you have used the service that year."
 ---
 
 > **Quick Answer:** State Farm roadside assistance covers towing up to 15 miles from your breakdown location. If you need to go further, you pay the difference between what State Farm covers and the actual towing cost. No annual limit on how many times you can use it.
@@ -64,6 +72,17 @@ State Farm's 15-mile limit is standard for basic roadside coverage. [GEICO offer
 - Turn on hazard lights and exit from the side away from traffic
 - Stay with your vehicle if you're in a safe location
 - Move to a safe distance if you're on a busy highway
+
+## Common Questions
+
+**Q: Can I request a specific repair shop even if it's more than 15 miles away?**
+A: Yes, you can request a specific shop beyond the 15-mile limit, but you will pay the per-mile cost for any distance over 15 miles. Ask for a written estimate from the tow truck driver before agreeing so you know your exact out-of-pocket amount.
+
+**Q: What happens if there's no repair shop within 15 miles of where I broke down?**
+A: State Farm can waive the 15-mile limit when no qualified repair facility exists within that range. Document your location and let the State Farm representative know so they can authorize the extended tow at no extra cost to you.
+
+**Q: Does the 15-mile towing benefit reset after each breakdown, or is there a yearly cap?**
+A: The 15-mile benefit resets with each individual breakdown event, and there is no annual limit on how many times you can use roadside assistance. Each time you call, you get a fresh 15-mile allotment regardless of how many times you have used the service that year.
 
 ---
 

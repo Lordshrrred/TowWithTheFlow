@@ -23,6 +23,8 @@ import anthropic
 import requests
 
 from claude_utils import make_client, create_message
+from clusters import assign_cluster
+from assign_clusters import set_cluster_field
 
 # Load .env from repo root
 ROOT = Path(__file__).parent.parent
@@ -53,13 +55,24 @@ POSTS_DIR.mkdir(parents=True, exist_ok=True)
 
 SYSTEM_PROMPT = """You are writing a page for towwiththeflow.com, a car breakdown and roadside emergency help site. Write in the voice of a knowledgeable mechanic who is direct and wastes no words.
 
-TARGET LENGTH: 500-900 words total (body only, not counting frontmatter). Be thorough but tight. Every sentence must earn its place. No filler, no padding, no AI-sounding transitions, no conclusions that just restate what you said.
+TARGET LENGTH: 550-950 words total (body only, not counting frontmatter). Be thorough but tight. Every sentence must earn its place. No filler, no padding, no AI-sounding transitions, no conclusions that just restate what you said.
 
 STRUCTURE:
 1. Quick Answer block: 50-80 words inside a markdown blockquote starting with **Quick Answer:**
 2. What To Do: numbered steps, direct and actionable
 3. What It Might Cost: if relevant, keep it short
 4. Stay Safe: if relevant, bullet points only
+5. Common Questions: exactly 2-3 short Q&A pairs, formatted EXACTLY like this (this exact format is required, it gets parsed programmatically):
+
+## Common Questions
+
+**Q: [question in the reader's own words]?**
+A: [direct answer, 1-3 sentences, no filler]
+
+**Q: [second question]?**
+A: [answer]
+
+Pick questions a reader would actually type into Google right after this one, not generic filler questions. Answers must be genuinely useful on their own, not just a teaser pointing back into the article.
 
 INTERNAL LINKING (REQUIRED):
 The user message will include a list of existing articles on towwiththeflow.com. Include 2-4 internal links using markdown [anchor text](/{slug}/) where the link is genuinely useful to the reader mid-sentence or at the end of a relevant paragraph. Only link to articles that are semantically related to the topic being written. Never dump a link list. Never force a link that does not fit.
@@ -202,6 +215,31 @@ def fetch_pexels_photo(search_term: str, slug: str, slot: str, used_ids: set[int
         return None
 
 
+MAX_IMAGE_WIDTH = 1200
+JPEG_QUALITY = 80
+
+
+def resize_and_compress_image(path: Path, max_width: int = MAX_IMAGE_WIDTH, quality: int = JPEG_QUALITY) -> None:
+    """Downscale + re-compress an image in place. Pexels 'large2x' downloads
+    can be 3-4MB at full resolution — far larger than this site ever displays
+    them (hero images cap at 460px tall in a 760px container). Silently
+    no-ops if Pillow isn't installed or the file can't be processed, so a
+    slow image pipeline never blocks a post from publishing."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return
+    try:
+        with Image.open(path) as img:
+            img = img.convert("RGB")
+            if img.width > max_width:
+                new_height = round(img.height * (max_width / img.width))
+                img = img.resize((max_width, new_height), Image.LANCZOS)
+            img.save(path, "JPEG", quality=quality, optimize=True, progressive=True)
+    except Exception as e:
+        print(f"Image optimize error ({path.name}): {e}")
+
+
 def download_pexels_image(photo: dict, save_path: Path) -> bool:
     url = photo.get("src", {}).get("large2x") or photo.get("src", {}).get("large")
     if not url:
@@ -214,6 +252,7 @@ def download_pexels_image(photo: dict, save_path: Path) -> bool:
         with open(save_path, 'wb') as f:
             for chunk in resp.iter_content(chunk_size=8192):
                 f.write(chunk)
+        resize_and_compress_image(save_path)
         return True
     except Exception as e:
         print(f"Image download error: {e}")
@@ -516,17 +555,71 @@ def pick_keyword(post_type: str) -> tuple[str, int | None]:
 
 def ensure_backlink(content: str, slug: str) -> str:
     """Ensure the post body contains a backlink to towwiththeflow.com/{slug}/.
-    Appends the standard block if missing."""
+    Appends the standard block if missing. Only the exact self-referential
+    link counts — an internal link to some *other* post's slug also contains
+    "towwiththeflow.com" and must not be mistaken for the canonical backlink."""
     if f"towwiththeflow.com/{slug}/" in content:
         return content
-    if "towwiththeflow.com" in content:
-        return content  # has some backlink, leave it
     backlink = (
         "\n\n---\n\n"
         f"*Need roadside help? Visit [Tow With The Flow](https://towwiththeflow.com/{slug}/) "
         "for real answers when your car breaks down.*"
     )
     return content.rstrip() + backlink + "\n"
+
+
+FAQ_PATTERN = re.compile(
+    r'\*\*Q:\s*(.+?)\*\*\s*\nA:\s*(.+?)(?=\n\s*\n\*\*Q:|\n\s*\n##|\n\s*\n---|\Z)',
+    re.DOTALL,
+)
+
+
+def extract_faq_pairs(content: str) -> list[tuple[str, str]]:
+    """Pull (question, answer) pairs out of a '**Q: ...**\\nA: ...' formatted
+    Common Questions section. Returns [] if the post has none — FAQ schema
+    is optional, not every post needs it."""
+    pairs = []
+    for q, a in FAQ_PATTERN.findall(content):
+        q = " ".join(q.split()).strip()
+        a = " ".join(a.split()).strip()
+        if q and a:
+            pairs.append((q, a))
+    return pairs
+
+
+def build_faq_yaml(pairs: list[tuple[str, str]]) -> str:
+    """YAML frontmatter block for a list of (question, answer) pairs,
+    consumed by the theme to emit FAQPage JSON-LD."""
+    if not pairs:
+        return ""
+    lines = ["faq:"]
+    for q, a in pairs:
+        q_esc = q.replace('"', '\\"')
+        a_esc = a.replace('"', '\\"')
+        lines.append(f'  - q: "{q_esc}"')
+        lines.append(f'    a: "{a_esc}"')
+    return "\n".join(lines)
+
+
+def insert_faq_frontmatter(content: str, faq_yaml: str) -> str:
+    if not faq_yaml:
+        return content
+    if re.search(r'^faq:\s*$', content, re.MULTILINE):
+        # Already has a faq: block from a previous run — replace it wholesale.
+        content = re.sub(
+            r'^faq:\s*\n(?:^  -.*\n?)+',
+            '',
+            content,
+            count=1,
+            flags=re.MULTILINE,
+        )
+    return re.sub(
+        r'(^clusters:\s*.+$)',
+        f'\\1\n{faq_yaml}',
+        content,
+        count=1,
+        flags=re.MULTILINE,
+    )
 
 
 def main():
@@ -554,10 +647,32 @@ def main():
     slug = extract_slug(content, keyword)
     filename = POSTS_DIR / f"{slug}.md"
 
-    # Avoid overwriting existing posts
+    # Avoid overwriting existing posts. Hugo builds the live URL from the
+    # frontmatter `slug:` field, not the filename — so the disambiguated
+    # slug must be written back into the frontmatter too, or this post
+    # silently collides with the original at the same URL (one clobbers
+    # the other in the build with no warning).
     if filename.exists():
         slug = slug + "-2"
         filename = POSTS_DIR / f"{slug}.md"
+        content = re.sub(
+            r'^slug:\s*.+$',
+            f'slug: "{slug}"',
+            content,
+            count=1,
+            flags=re.MULTILINE,
+        )
+
+    # Assign a content cluster (see clusters.py) — drives the /clusters/*/
+    # hub pages and the automatic "Related Guides" internal linking.
+    title_m = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
+    cluster_slug, _cluster_label = assign_cluster(title_m.group(1) if title_m else keyword)
+    content = set_cluster_field(content, cluster_slug)
+
+    # Pull the Common Questions section (if present) into faq: frontmatter
+    # so the theme can emit FAQPage JSON-LD from real, visible content.
+    faq_pairs = extract_faq_pairs(content)
+    content = insert_faq_frontmatter(content, build_faq_yaml(faq_pairs))
 
     # Add images from Pexels
     content = add_images_to_post(content, slug)

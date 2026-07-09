@@ -5,6 +5,14 @@ date: 2026-07-05
 description: "A tire blowout at highway speed is terrifying but survivable. Follow these steps exactly and get off the road safely."
 tags: ["tire blowout", "highway emergency", "roadside safety", "blown tire", "what to do"]
 slug: "tire-blowout-at-highway-speed-what-to-do-step-by-step"
+clusters: ["tire-wheel"]
+faq:
+  - q: "Should I pump the brakes or brake gently after a blowout?"
+    a: "Neither. You should avoid braking entirely for the first few seconds after a blowout. Let the engine slow the car naturally by lifting off the gas, and only begin steering toward the shoulder once the car feels stable and your speed has dropped significantly."
+  - q: "Is it safe to drive on a donut spare after a highway blowout?"
+    a: "A donut spare is a temporary fix only. Keep your speed under 50 mph and drive directly to the nearest tire shop. Donuts are not built for highway speeds or long distances, so replace it with a full-size tire as soon as possible."
+  - q: "How do I know if I need a flatbed tow truck instead of a regular tow?"
+    a: "If your rim is damaged, the tire is completely shredded, or the wheel cannot roll freely, request a flatbed. A standard wheel-lift truck will drag the damaged rim along the ground and can cause additional costly damage to your vehicle."
 ---
 ```
 
@@ -63,6 +71,17 @@ Many roadside assistance programs cover blowouts. Check your insurance app befor
 - If it is dark, put on a jacket or anything light-colored so drivers can see you.
 - A front tire blowout is harder to control than a rear. If you felt the steering wheel yank hard, that was a front. Stay calm. The technique is the same.
 - If your tire blew and the car feels unsafe to move even to the shoulder, stay inside, call 911, and stay buckled.
+
+## Common Questions
+
+**Q: Should I pump the brakes or brake gently after a blowout?**
+A: Neither. You should avoid braking entirely for the first few seconds after a blowout. Let the engine slow the car naturally by lifting off the gas, and only begin steering toward the shoulder once the car feels stable and your speed has dropped significantly.
+
+**Q: Is it safe to drive on a donut spare after a highway blowout?**
+A: A donut spare is a temporary fix only. Keep your speed under 50 mph and drive directly to the nearest tire shop. Donuts are not built for highway speeds or long distances, so replace it with a full-size tire as soon as possible.
+
+**Q: How do I know if I need a flatbed tow truck instead of a regular tow?**
+A: If your rim is damaged, the tire is completely shredded, or the wheel cannot roll freely, request a flatbed. A standard wheel-lift truck will drag the damaged rim along the ground and can cause additional costly damage to your vehicle.
 
 ---
 

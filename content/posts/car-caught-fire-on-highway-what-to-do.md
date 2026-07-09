@@ -5,6 +5,14 @@ date: 2026-06-19
 description: "Car fire on the highway is a life-threatening emergency. Here's exactly what to do in the first 60 seconds and after you're safe."
 tags: ["car fire", "highway emergency", "roadside safety", "breakdown", "what to do"]
 slug: "car-caught-fire-on-highway-what-to-do"
+clusters: ["highway-safety"]
+faq:
+  - q: "Can a car explode like in the movies if I stay near it during a fire?"
+    a: "A full Hollywood-style explosion is rare, but a burning fuel tank can rupture and send burning fuel and debris several feet in every direction. Getting at least 100 feet away removes you from that risk, which is why distance matters even after you think the fire looks small."
+  - q: "Will my insurance cover the tow after a car fire?"
+    a: "Most comprehensive auto insurance policies cover towing after a fire, but limits vary by plan. Get a police report at the scene before the car is moved, since many insurers require it to process a fire or total loss claim."
+  - q: "What if I smell something burning but do not see any smoke or flames?"
+    a: "Treat it as a warning and pull over right away. Burning odors often come from electrical shorts, overheating brakes, or fluid leaking onto hot engine parts, any of which can turn into an open fire within minutes."
 ---
 ```
 
@@ -56,6 +64,17 @@ If you have roadside assistance through your insurance, call them after 911. Mos
 - After the incident, contact your insurance company before moving the vehicle from wherever it was towed. Moving it without documentation can complicate your claim.
 
 For general guidance on highway breakdowns that do not involve fire, [car broke down on freeway: what to do](/car-broke-down-on-freeway-what-to-do/) covers the full process of getting safely off the road and getting help.
+
+## Common Questions
+
+**Q: Can a car explode like in the movies if I stay near it during a fire?**
+A: A full Hollywood-style explosion is rare, but a burning fuel tank can rupture and send burning fuel and debris several feet in every direction. Getting at least 100 feet away removes you from that risk, which is why distance matters even after you think the fire looks small.
+
+**Q: Will my insurance cover the tow after a car fire?**
+A: Most comprehensive auto insurance policies cover towing after a fire, but limits vary by plan. Get a police report at the scene before the car is moved, since many insurers require it to process a fire or total loss claim.
+
+**Q: What if I smell something burning but do not see any smoke or flames?**
+A: Treat it as a warning and pull over right away. Burning odors often come from electrical shorts, overheating brakes, or fluid leaking onto hot engine parts, any of which can turn into an open fire within minutes.
 
 ---
 

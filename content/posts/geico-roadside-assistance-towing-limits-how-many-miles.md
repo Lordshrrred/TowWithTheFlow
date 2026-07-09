@@ -5,6 +5,14 @@ date: 2026-06-06
 description: "GEICO roadside assistance covers towing up to 15 miles per incident. Learn coverage limits, costs beyond that distance, and what to expect when you need help."
 tags: ["geico roadside assistance", "towing limits", "insurance coverage", "roadside help", "towing distance"]
 slug: "geico-roadside-assistance-towing-limits-how-many-miles"
+clusters: ["insurance-coverage"]
+faq:
+  - q: "Does the 15-mile towing limit apply per breakdown or per year?"
+    a: "The 15-mile limit applies per individual breakdown incident, not per year. Each time your car breaks down, you get a fresh 15 miles of towing coverage, up to 5 total service calls per policy period."
+  - q: "What happens if the tow truck takes a longer route than the straight-line distance to my mechanic?"
+    a: "GEICO covers the actual miles driven by the tow truck, not the straight-line distance between two points. If a longer route pushes the trip past 15 miles, you pay the tow company's per-mile rate, typically $3 to $7 per mile, for every mile over the limit."
+  - q: "Can I ask to be towed to my home driveway instead of a repair shop?"
+    a: "Yes, GEICO allows you to choose your tow destination, including your home garage, as long as it falls within the 15-mile coverage limit. If your home is farther than 15 miles from the breakdown location, you will pay out of pocket for the extra distance."
 ---
 
 > **Quick Answer:** GEICO roadside assistance covers towing up to 15 miles per incident with most policies. You pay the full cost for any distance beyond 15 miles. This limit resets with each new breakdown, and coverage typically includes up to 5 service calls per policy period.
@@ -61,6 +69,17 @@ Keep your preferred mechanic's address handy and measure the distance from commo
 Consider the total cost when your car breaks down far from home. [Towing from an interstate to a dealership](/towing-cost-from-interstate-to-dealership/) can be expensive, but using your GEICO coverage for the first 15 miles still saves you $45 to $105 compared to paying the full distance yourself.
 
 Call GEICO's roadside assistance at 1-800-424-3426 when you need towing. Have your policy number, exact location, and preferred destination ready to speed up the process.
+
+## Common Questions
+
+**Q: Does the 15-mile towing limit apply per breakdown or per year?**
+A: The 15-mile limit applies per individual breakdown incident, not per year. Each time your car breaks down, you get a fresh 15 miles of towing coverage, up to 5 total service calls per policy period.
+
+**Q: What happens if the tow truck takes a longer route than the straight-line distance to my mechanic?**
+A: GEICO covers the actual miles driven by the tow truck, not the straight-line distance between two points. If a longer route pushes the trip past 15 miles, you pay the tow company's per-mile rate, typically $3 to $7 per mile, for every mile over the limit.
+
+**Q: Can I ask to be towed to my home driveway instead of a repair shop?**
+A: Yes, GEICO allows you to choose your tow destination, including your home garage, as long as it falls within the 15-mile coverage limit. If your home is farther than 15 miles from the breakdown location, you will pay out of pocket for the extra distance.
 
 ---
 

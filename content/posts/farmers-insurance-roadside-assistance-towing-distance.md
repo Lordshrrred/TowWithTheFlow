@@ -5,6 +5,14 @@ date: 2026-06-16
 description: "Farmers Insurance roadside assistance towing distance limits explained. Know exactly how far they'll tow your car before you're stuck with the bill."
 tags: ["farmers insurance", "roadside assistance", "towing distance", "towing coverage", "car breakdown"]
 slug: "farmers-insurance-roadside-assistance-towing-distance"
+clusters: ["insurance-coverage"]
+faq:
+  - q: "Does Farmers roadside assistance cover the full tow or just part of it?"
+    a: "Farmers covers towing up to your policy's dollar limit, typically $75 to $100 per incident. Anything beyond that amount is your responsibility, paid directly to the driver when the job is complete."
+  - q: "What happens if the tow costs more than my Farmers coverage limit?"
+    a: "You pay the difference out of pocket to the tow truck driver at the time of service. Rates generally run $4 to $7 per mile plus a hook-up fee, so a longer tow to a dealership can easily exceed your limit by $75 to $125 or more."
+  - q: "Can I choose which shop my car gets towed to with Farmers roadside?"
+    a: "Yes, you can direct the tow to a shop of your choosing, but the farther the destination, the more likely you will exceed your dollar limit. Choosing a closer shop reduces or eliminates any out-of-pocket overage."
 ---
 ```
 
@@ -52,6 +60,17 @@ These numbers assume a standard flatbed rate. Specialty vehicles, off-road recov
 - If it is dark or visibility is poor, use a reflective triangle or flares if you have them.
 - In extreme heat or cold, stay in the vehicle with doors locked unless there is a specific safety reason to get out.
 - Do not accept a ride from an unknown driver who stops. Wait for the dispatched tow truck.
+
+## Common Questions
+
+**Q: Does Farmers roadside assistance cover the full tow or just part of it?**
+A: Farmers covers towing up to your policy's dollar limit, typically $75 to $100 per incident. Anything beyond that amount is your responsibility, paid directly to the driver when the job is complete.
+
+**Q: What happens if the tow costs more than my Farmers coverage limit?**
+A: You pay the difference out of pocket to the tow truck driver at the time of service. Rates generally run $4 to $7 per mile plus a hook-up fee, so a longer tow to a dealership can easily exceed your limit by $75 to $125 or more.
+
+**Q: Can I choose which shop my car gets towed to with Farmers roadside?**
+A: Yes, you can direct the tow to a shop of your choosing, but the farther the destination, the more likely you will exceed your dollar limit. Choosing a closer shop reduces or eliminates any out-of-pocket overage.
 
 ---
 

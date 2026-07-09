@@ -5,6 +5,16 @@ date: 2026-06-29
 description: "Car broke down on a LA freeway? Here's exactly what to do to stay safe, get towed, and avoid expensive mistakes on one of the busiest highway systems in the US."
 tags: ["los angeles", "freeway breakdown", "roadside emergency", "towing", "car broke down"]
 slug: "car-broke-down-on-freeway-in-los-angeles-what-to-do"
+clusters: ["highway-safety"]
+faq:
+  - q: "Is the Freeway Service Patrol available at night or on weekends?"
+    a: "FSP patrols are generally limited to weekday peak hours, roughly 6-9 AM and 3-7 PM, on major LA freeways. Outside those windows you will need to call a private tow truck directly."
+  - q: "Where exactly should I stand after pulling over on an LA freeway?"
+    a: "If the shoulder is wide enough, stay inside your car with your seatbelt on since the vehicle is more visible than you are. If the shoulder feels narrow or exposed, exit from the passenger side and move behind the guardrail, well away from traffic."
+  - q: "What information should I give the 911 dispatcher if my car is stuck in a live lane?"
+    a: "Tell them the freeway name, the direction you were traveling, and the nearest mile marker or cross street. CHP can use that to locate you quickly and close a lane to protect you until help arrives."
+aliases:
+  - "/car-broke-down-on-freeway-los-angeles-what-to-do/"
 ---
 ```
 
@@ -54,6 +64,17 @@ If you're not sure whether your policy pays, check [whether your insurance deduc
 - If someone stops and it feels wrong, stay in the car with doors locked and call 911
 - If your breakdown involved a tire failure at speed, [blown tire situations at highway speeds](/blown-tire-highway-speed-what-to-do/) require a slightly different sequence of steps
 - If smoke is coming from under the hood, get out and move away from the car immediately. Do not open the hood.
+
+## Common Questions
+
+**Q: Is the Freeway Service Patrol available at night or on weekends?**
+A: FSP patrols are generally limited to weekday peak hours, roughly 6-9 AM and 3-7 PM, on major LA freeways. Outside those windows you will need to call a private tow truck directly.
+
+**Q: Where exactly should I stand after pulling over on an LA freeway?**
+A: If the shoulder is wide enough, stay inside your car with your seatbelt on since the vehicle is more visible than you are. If the shoulder feels narrow or exposed, exit from the passenger side and move behind the guardrail, well away from traffic.
+
+**Q: What information should I give the 911 dispatcher if my car is stuck in a live lane?**
+A: Tell them the freeway name, the direction you were traveling, and the nearest mile marker or cross street. CHP can use that to locate you quickly and close a lane to protect you until help arrives.
 
 ---
 
