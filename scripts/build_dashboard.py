@@ -36,6 +36,11 @@ BUILDS = [
         "output":   ROOT / "static"  / "dashboard" / "analytics.html",
         "label":    "Analytics dashboard",
     },
+    {
+        "template": ROOT / "scripts" / "seo_template.html",
+        "output":   ROOT / "static"  / "dashboard" / "seo.html",
+        "label":    "SEO dashboard",
+    },
 ]
 
 

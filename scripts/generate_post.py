@@ -22,6 +22,8 @@ from dotenv import load_dotenv
 import anthropic
 import requests
 
+from claude_utils import make_client, create_message
+
 # Load .env from repo root
 ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
@@ -372,7 +374,7 @@ def generate_post(keyword: str, post_index: list[tuple[str, str]] | None = None)
     if not ANTHROPIC_API_KEY:
         print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
         sys.exit(1)
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    client = make_client(ANTHROPIC_API_KEY)
     today = date.today().isoformat()
 
     index_section = ""
@@ -391,10 +393,15 @@ def generate_post(keyword: str, post_index: list[tuple[str, str]] | None = None)
         f"{index_section}"
     )
 
-    message = client.messages.create(
+    message = create_message(
+        client,
         model="claude-sonnet-4-6",
         max_tokens=2200,
-        system=SYSTEM_PROMPT,
+        system=[{
+            "type": "text",
+            "text": SYSTEM_PROMPT,
+            "cache_control": {"type": "ephemeral"},
+        }],
         messages=[{"role": "user", "content": user_message}]
     )
 

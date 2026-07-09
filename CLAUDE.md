@@ -32,8 +32,11 @@ The user is authenticated via keyring (account: Lordshrrred). This works from th
 | `scripts/syndicate_backlog.py` | Syndicate 1 oldest unsynced post/day |
 | `scripts/syndicate_blogger_backlog.py` | Blogger-specific backlog |
 | `scripts/syndicate_wordpress_backlog.py` | WordPress-specific backlog |
-| `scripts/build_dashboard.py` | Rebuild the syndication dashboard |
-| `scripts/dashboard_template.html` | Dashboard frontend template |
+| `scripts/build_dashboard.py` | Rebuild the syndication/analytics/SEO dashboards |
+| `scripts/dashboard_template.html` | Syndication dashboard frontend template |
+| `scripts/keyword_research.py` | Discover + score new keyword opportunities (weekly) |
+| `scripts/serp_intelligence.py` | Weekly SERP + AI Overview visibility check via Claude web search |
+| `scripts/build_seo_data.py` | Aggregate keywords/SERP/backlink data into `static/data/seo.json` for the SEO dashboard tab |
 
 ### Platforms Syndicated To
 1. Dev.to (split across two accounts — see below)

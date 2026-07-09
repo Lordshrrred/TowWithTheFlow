@@ -30,6 +30,8 @@ from urllib.parse import urlparse
 from dotenv import load_dotenv
 import requests
 
+from claude_utils import make_client, create_message
+
 ROOT = Path(__file__).parent.parent
 
 def load_env_stack():
@@ -114,7 +116,7 @@ else:
     FEEDER_TRIGGER_TOKEN = ""
 
 ANTHROPIC_API_KEY     = env_clean("ANTHROPIC_API_KEY")
-ANTHROPIC_VARIATION_MODEL = env_clean("ANTHROPIC_VARIATION_MODEL") or "claude-sonnet-4-6"
+ANTHROPIC_VARIATION_MODEL = env_clean("ANTHROPIC_VARIATION_MODEL") or "claude-haiku-4-5"
 
 # Set DEVTO_ENABLED=false in GitHub secrets or .env to cleanly disable Dev.to
 # without touching any other platform. Useful when an API key is revoked or
@@ -235,8 +237,10 @@ def variation_length_profile(slug: str, platform: str) -> tuple[str, int]:
     return rng, max_tokens
 
 
-def build_variation_system(length_range: str) -> str:
-    return f"""You are rewriting a car breakdown/roadside help article for syndication.
+# Static across every platform/length variant so it can be served from the
+# prompt cache instead of rewritten (and invalidated) per call — the target
+# length now travels in the per-call user message instead.
+VARIATION_SYSTEM_PROMPT = """You are rewriting a car breakdown/roadside help article for syndication.
 Keep all core facts accurate, but make this a genuinely distinct version.
 
 SEO + uniqueness requirements:
@@ -246,7 +250,7 @@ SEO + uniqueness requirements:
 - Keep the same intent, safety guidance, and canonical destination.
 
 Hard constraints:
-- Keep total body length between {length_range} words.
+- Match the target length given in the user message.
 - Do NOT change the canonical URL or final backlink block; preserve it exactly.
 - Do NOT use em dashes (—).
 - Return ONLY rewritten markdown body (no frontmatter)."""
@@ -276,12 +280,18 @@ def get_variation(body: str, platform: str, slug: str) -> str:
         return body
     try:
         length_range, max_tokens = variation_length_profile(slug, platform)
-        import anthropic
-        client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-        msg = client.messages.create(
+        log(f"VARIATION | {platform} | requesting model={ANTHROPIC_VARIATION_MODEL}")
+        client = make_client(ANTHROPIC_API_KEY)
+        msg = create_message(
+            client,
+            log=log,
             model=ANTHROPIC_VARIATION_MODEL,
             max_tokens=max_tokens,
-            system=build_variation_system(length_range),
+            system=[{
+                "type": "text",
+                "text": VARIATION_SYSTEM_PROMPT,
+                "cache_control": {"type": "ephemeral"},
+            }],
             messages=[{
                 "role": "user",
                 "content": (
@@ -292,6 +302,9 @@ def get_variation(body: str, platform: str, slug: str) -> str:
                 )
             }]
         )
+        log(f"VARIATION | {platform} | served by model={msg.model} "
+            f"cache_read={getattr(msg.usage, 'cache_read_input_tokens', 0)} "
+            f"cache_write={getattr(msg.usage, 'cache_creation_input_tokens', 0)}")
         result = msg.content[0].text.strip()
         # Ensure backlink survived
         if BASE_URL not in result:

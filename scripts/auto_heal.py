@@ -16,6 +16,7 @@ import re
 import smtplib
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 from email.mime.text import MIMEText
 from pathlib import Path
@@ -250,31 +251,53 @@ Rules:
 4. When in doubt, use human_required with detailed instructions.
 """
 
+    max_retries = 3
+    r = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            r = requests.post(
+                "https://api.anthropic.com/v1/messages",
+                headers={
+                    "x-api-key": api_key,
+                    "anthropic-version": "2023-06-01",
+                    "content-type": "application/json",
+                },
+                json={
+                    "model": CLAUDE_MODEL,
+                    "max_tokens": 1500,
+                    "messages": [{"role": "user", "content": prompt}],
+                },
+                timeout=90,
+            )
+        except Exception as e:
+            print(f"[Claude] call failed (attempt {attempt}/{max_retries}): {e}")
+            r = None
+        else:
+            if r.ok:
+                break
+            if r.status_code == 429 or r.status_code >= 500:
+                print(f"[Claude] API error {r.status_code} (attempt {attempt}/{max_retries}): {r.text[:200]}")
+            else:
+                print(f"[Claude] API error {r.status_code}: {r.text[:200]}")
+                return None
+
+        if attempt < max_retries:
+            delay = 2 ** attempt
+            print(f"[Claude] retrying in {delay}s")
+            time.sleep(delay)
+
+    if r is None or not r.ok:
+        print(f"[Claude] giving up after {max_retries} attempts")
+        return None
+
     try:
-        r = requests.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={
-                "x-api-key": api_key,
-                "anthropic-version": "2023-06-01",
-                "content-type": "application/json",
-            },
-            json={
-                "model": CLAUDE_MODEL,
-                "max_tokens": 1500,
-                "messages": [{"role": "user", "content": prompt}],
-            },
-            timeout=90,
-        )
-        if not r.ok:
-            print(f"[Claude] API error {r.status_code}: {r.text[:200]}")
-            return None
         text = r.json()["content"][0]["text"].strip()
         # Strip markdown fences if present
         text = re.sub(r"^```[a-zA-Z]*\n?", "", text)
         text = re.sub(r"\n?```$", "", text.strip())
         return json.loads(text)
     except Exception as e:
-        print(f"[Claude] call failed: {e}")
+        print(f"[Claude] response parse failed: {e}")
         return None
 
 

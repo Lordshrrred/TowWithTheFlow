@@ -15,6 +15,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import anthropic
 
+from claude_utils import make_client, create_message
+
 ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
@@ -95,11 +97,17 @@ def main():
         f"Now generate 40 new keyword opportunities with scores."
     )
 
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-    message = client.messages.create(
+    client = make_client(ANTHROPIC_API_KEY)
+    message = create_message(
+        client,
+        log=log,
         model="claude-sonnet-4-6",
         max_tokens=1500,
-        system=SYSTEM_PROMPT,
+        system=[{
+            "type": "text",
+            "text": SYSTEM_PROMPT,
+            "cache_control": {"type": "ephemeral"},
+        }],
         messages=[{"role": "user", "content": user_message}]
     )
 
