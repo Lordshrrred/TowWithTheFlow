@@ -42,6 +42,10 @@ PATCHABLE_FILES = {
 
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
 
+# Cooldown: at most 3 auto-heal runs per calendar day, minimum 1 hour apart.
+MAX_HEALS_PER_DAY = 3
+MIN_HEAL_INTERVAL_SECONDS = 3600
+
 
 # ---------------------------------------------------------------------------
 # Env helpers
@@ -504,6 +508,33 @@ def send_summary(results: dict[str, dict]) -> None:
 # Entry point
 # ---------------------------------------------------------------------------
 
+def check_cooldown() -> tuple[bool, str]:
+    """Return (allowed, reason). Blocks if >MAX_HEALS_PER_DAY today or last heal < 1h ago."""
+    heal_log = load_heal_log()
+    now = datetime.now(timezone.utc)
+    today_str = now.strftime("%Y-%m-%d")
+
+    heals_today = [
+        e for e in heal_log
+        if e.get("healed_at", "").startswith(today_str)
+    ]
+    if len(heals_today) >= MAX_HEALS_PER_DAY:
+        return False, f"daily cap reached ({len(heals_today)}/{MAX_HEALS_PER_DAY} heals today)"
+
+    if heal_log:
+        last_heal_str = heal_log[-1].get("healed_at", "")
+        try:
+            last_heal = datetime.fromisoformat(last_heal_str)
+            elapsed = (now - last_heal).total_seconds()
+            if elapsed < MIN_HEAL_INTERVAL_SECONDS:
+                remaining = int(MIN_HEAL_INTERVAL_SECONDS - elapsed)
+                return False, f"cooldown active ({remaining}s remaining since last heal)"
+        except Exception:
+            pass
+
+    return True, "ok"
+
+
 def main() -> int:
     state = load_health()
     checks = state.get("checks", {})
@@ -511,6 +542,11 @@ def main() -> int:
 
     if not unhealthy:
         print("[HEAL] No unhealthy platforms in state — nothing to do.")
+        return 0
+
+    allowed, reason = check_cooldown()
+    if not allowed:
+        print(f"[HEAL] Skipping — {reason}. Human attention may be required.")
         return 0
 
     print(f"[HEAL] Unhealthy: {list(unhealthy.keys())}")

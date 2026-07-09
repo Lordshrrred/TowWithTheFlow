@@ -118,5 +118,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          sleep 10
-          gh workflow run platform-health.yml --repo ${{ github.repository }} || true
+          TODAY=$(date -u +%Y-%m-%d)
+          HEALS_TODAY=$(grep -c "\"healed_at\": \"${TODAY}" scripts/heal_log.json 2>/dev/null || echo 0)
+          echo "Heals today: $HEALS_TODAY / 3 max"
+          if [ "$HEALS_TODAY" -lt 3 ]; then
+            echo "Re-triggering health check to verify fix..."
+            gh workflow run platform-health.yml --repo ${{ github.repository }} || true
+          else
+            echo "Daily heal cap reached — skipping re-trigger. Manual check required."
+          fi

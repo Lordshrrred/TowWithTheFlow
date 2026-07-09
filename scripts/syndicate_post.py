@@ -116,7 +116,7 @@ else:
     FEEDER_TRIGGER_TOKEN = ""
 
 ANTHROPIC_API_KEY     = env_clean("ANTHROPIC_API_KEY")
-ANTHROPIC_VARIATION_MODEL = env_clean("ANTHROPIC_VARIATION_MODEL") or "claude-haiku-4-5"
+ANTHROPIC_VARIATION_MODEL = env_clean("ANTHROPIC_VARIATION_MODEL") or "claude-haiku-4-5-20251001"
 
 # Set DEVTO_ENABLED=false in GitHub secrets or .env to cleanly disable Dev.to
 # without touching any other platform. Useful when an API key is revoked or
