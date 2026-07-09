@@ -11388,3 +11388,11 @@
 [2026-07-09 11:02:31] SYNCED | car-bottomed-out-on-road-now-wont-drive-emergency marked in synced-posts.txt
 [2026-07-09 11:03:01] WORDPRESS_BACKLOG | total=296 wordpress_synced=295 backlog=0
 [2026-07-09 11:03:01] WORDPRESS_BACKLOG | no pending WordPress backlog posts
+[2026-07-09 11:04:25] BLOGGER_BACKLOG | total=296 blogger_synced=294 backlog=1 limit=1 order=oldest
+[2026-07-09 11:04:25] BLOGGER_BACKLOG | car-broke-down-on-bridge-what-to-do-towing | START
+[2026-07-09 11:04:25] BLOGGER | car-broke-down-on-bridge-what-to-do-towing | step 1/3: refreshing access token
+[2026-07-09 11:04:25] BLOGGER | car-broke-down-on-bridge-what-to-do-towing | step 2/3: converting markdown to HTML
+[2026-07-09 11:04:26] VARIATION | Blogger | requesting model=claude-haiku-4-5
+[2026-07-09 11:04:39] VARIATION | Blogger | served by model=claude-haiku-4-5-20251001 cache_read=0 cache_write=0
+[2026-07-09 11:04:39] BLOGGER | car-broke-down-on-bridge-what-to-do-towing | step 3/3: posting to blog 1959471973457654666
+[2026-07-09 11:04:40] BLOGGER | car-broke-down-on-bridge-what-to-do-towing | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-broke-down-on-bridge-what-to-do-and.html
