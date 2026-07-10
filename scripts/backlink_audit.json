@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T18:05:52.138095+00:00",
+  "generated_at": "2026-07-10T21:32:08.184655+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -900,6 +900,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/29/car-broke-down-on-freeway-in-los-angeles-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-broke-down-on-freeway-in-los-angeles-who-to-call": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-broke-down-on-freeway-in-los_01592688921.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-broke-down-on-freeway-in-los-angeles-who-to-call-right-now-what-to-do-next-23ik",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-on-freeway-in-los-angeles-who-to-call-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821776279142531072/car-broke-down-on-freeway-in-los-angeles-who-to-call",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/10/car-broke-down-on-freeway-in-los-angeles-who-to-call/",
         "verified": true
       }
     },
@@ -7745,24 +7772,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 299,
-      "verified": 299
+      "checked": 300,
+      "verified": 300
     },
     "dev": {
-      "checked": 228,
-      "verified": 228
+      "checked": 229,
+      "verified": 229
     },
     "feeder": {
+      "checked": 297,
+      "verified": 297
+    },
+    "tumblr": {
       "checked": 296,
       "verified": 296
     },
-    "tumblr": {
-      "checked": 295,
-      "verified": 295
-    },
     "wordpress": {
-      "checked": 299,
-      "verified": 299
+      "checked": 300,
+      "verified": 300
     }
   }
 }
