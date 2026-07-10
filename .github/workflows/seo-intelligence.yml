@@ -1,0 +1,66 @@
+name: SEO Intelligence
+
+on:
+  schedule:
+    - cron: '45 6 * * *'   # daily after analytics fetch window
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  TZ: America/Denver
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Restore private SEO API cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/seo-intelligence
+          key: seo-intelligence-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            seo-intelligence-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pip install google-auth python-dotenv requests
+
+      - name: Build SEO intelligence report
+        env:
+          SEARCH_CONSOLE_CREDENTIALS_JSON: ${{ secrets.SEARCH_CONSOLE_CREDENTIALS_JSON }}
+          SEARCH_CONSOLE_SITE_URL: ${{ secrets.SEARCH_CONSOLE_SITE_URL }}
+          GA_CREDENTIALS_JSON: ${{ secrets.GA_CREDENTIALS_JSON }}
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+        run: python scripts/seo_intelligence.py
+
+      - name: Rebuild compact SEO dashboard data
+        run: python scripts/build_seo_data.py
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit report and dashboard summary
+        run: |
+          git add reports/seo-intelligence-latest.md reports/seo-intelligence-latest.json reports/seo-intelligence-*.md reports/seo-intelligence-*.json static/data/seo.json
+          if git diff --staged --quiet; then
+            echo "No SEO intelligence changes"
+          else
+            git commit -m "Auto: SEO intelligence report $(date +%Y-%m-%d)"
+            git pull --rebase --autostash origin main
+            git push
+          fi

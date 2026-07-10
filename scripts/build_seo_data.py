@@ -2,8 +2,9 @@
 """
 Tow With The Flow — SEO Dashboard Data Builder
 Aggregates data that's already being collected by other scripts (keywords.txt,
-the weekly SERP intelligence report, the backlink audit) into a single JSON
-file the SEO dashboard tab reads. Makes no API calls of its own.
+the optional manual SERP intelligence report, the backlink audit, and the
+Search Console/GA4 intelligence summary) into a single JSON file the SEO
+dashboard tab reads. Makes no API calls of its own.
 
 Output: static/data/seo.json
 """
@@ -130,6 +131,48 @@ def backlink_health() -> dict:
     }
 
 
+def seo_intelligence_summary() -> dict:
+    """Compact public-safe summary written by seo_intelligence.py.
+    Raw GSC/GA4 cache stays under .cache/ and is never copied to static/."""
+    path = REPORTS_DIR / "seo-intelligence-latest.json"
+    if not path.exists():
+        return {
+            "generated_at": None,
+            "statuses": [],
+            "request_counts": {"gsc": 0, "ga4": 0},
+            "top_actions": [],
+            "near_page_one_count": 0,
+            "ctr_opportunity_count": 0,
+            "cannibalization_count": 0,
+            "report_path": "reports/seo-intelligence-latest.md",
+        }
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {
+            "generated_at": None,
+            "statuses": [{"source": "seo_intelligence", "status": "error", "message": "Could not parse latest SEO intelligence report."}],
+            "request_counts": {"gsc": 0, "ga4": 0},
+            "top_actions": [],
+            "near_page_one_count": 0,
+            "ctr_opportunity_count": 0,
+            "cannibalization_count": 0,
+            "report_path": "reports/seo-intelligence-latest.md",
+        }
+
+    return data.get("summary") or {
+        "generated_at": data.get("generated_at"),
+        "statuses": data.get("statuses", []),
+        "request_counts": data.get("request_counts", {"gsc": 0, "ga4": 0}),
+        "top_actions": data.get("top_actions", [])[:3],
+        "near_page_one_count": len((data.get("classifications") or {}).get("near_page_one", [])),
+        "ctr_opportunity_count": len((data.get("classifications") or {}).get("ctr_opportunities", [])),
+        "cannibalization_count": len(data.get("cannibalization", [])),
+        "report_path": "reports/seo-intelligence-latest.md",
+    }
+
+
 def main():
     from datetime import datetime, timezone
 
@@ -141,6 +184,7 @@ def main():
         "content_clusters": content_clusters(),
         "serp": latest_serp_data(),
         "backlinks": backlink_health(),
+        "intelligence": seo_intelligence_summary(),
     }
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -153,6 +197,7 @@ def main():
     print(f"  next targets: {len(next_targets)}")
     print(f"  content clusters: {len(payload['content_clusters'])}")
     print(f"  serp check: {payload['serp']['checked']} keywords, report_date={payload['serp']['report_date']}")
+    print(f"  seo intelligence: {len(payload['intelligence']['top_actions'])} top actions")
 
 
 if __name__ == "__main__":

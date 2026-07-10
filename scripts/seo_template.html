@@ -152,6 +152,14 @@
     .target-badge { font-size: 0.62rem; padding: 0.1rem 0.4rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; margin-left: 0.5rem; }
     .target-badge.local { background: rgba(74,158,255,0.14); color: var(--blue); }
     .target-badge.pain_point { background: var(--amber-dim); color: var(--amber); }
+    .intel-list { display: grid; gap: 0.7rem; }
+    .intel-item { border: 1px solid rgba(245,166,35,0.12); border-radius: 8px; padding: 0.85rem 1rem; background: rgba(255,255,255,0.02); }
+    .intel-title { font-size: 0.86rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
+    .intel-meta { font-size: 0.75rem; color: var(--text-muted); }
+    .status-dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:0.35rem; background:var(--text-muted); }
+    .status-dot.ok { background:var(--green); }
+    .status-dot.warn { background:var(--amber); }
+    .status-dot.error { background:var(--red); }
 
     .error-msg { color: var(--text-muted); font-style: italic; font-size: 0.82rem; text-align: center; padding: 1.5rem; }
     .empty-msg { color: var(--text-muted); font-size: 0.82rem; text-align: center; padding: 2rem; opacity: 0.7; }
@@ -217,6 +225,12 @@
         <h3>Backlink Health <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— per platform</span></h3>
         <div id="backlinks-list"><div class="skeleton" style="height:160px;"></div></div>
       </div>
+    </div>
+
+    <!-- Evidence loop -->
+    <div class="chart-card" style="margin-bottom:1.5rem;">
+      <h3>SEO Intelligence <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— Search Console + GA4 + existing TWTF evidence</span></h3>
+      <div id="intelligence-wrap"><div class="skeleton" style="height:170px;"></div></div>
     </div>
 
     <!-- Content clusters (topic hub pages) -->
@@ -412,6 +426,50 @@ function renderBacklinks(d) {
   }</div>`;
 }
 
+// ── Render: SEO intelligence summary ──
+function renderIntelligence(d) {
+  const intel = d.intelligence || {};
+  const wrap = document.getElementById("intelligence-wrap");
+  const statuses = intel.statuses || [];
+  const actions = intel.top_actions || [];
+  const statusHtml = statuses.length
+    ? statuses.map(s => {
+        const cls = s.status === "ok" ? "ok" : (String(s.status || "").includes("error") ? "error" : "warn");
+        return `<span style="margin-right:1rem;"><span class="status-dot ${cls}"></span>${esc(s.source)}: ${esc(s.status)}</span>`;
+      }).join("")
+    : '<span style="color:var(--text-muted);">No SEO intelligence report yet.</span>';
+  const counts = `${intel.near_page_one_count ?? 0} near-page-one · ${intel.ctr_opportunity_count ?? 0} CTR · ${intel.cannibalization_count ?? 0} cannibalization`;
+  const reportLink = intel.report_path
+    ? `<a class="kw-post-link" href="https://github.com/Lordshrrred/TowWithTheFlow/blob/main/${esc(intel.report_path)}" target="_blank" rel="noopener">open latest report</a>`
+    : "";
+
+  if (!actions.length) {
+    wrap.innerHTML = `
+      <div class="intel-list">
+        <div class="intel-item">
+          <div class="intel-title">Waiting for Search Console / GA4 evidence</div>
+          <div class="intel-meta">${statusHtml}</div>
+          <div class="intel-meta" style="margin-top:0.4rem;">${esc(counts)} ${reportLink}</div>
+        </div>
+      </div>`;
+    return;
+  }
+
+  wrap.innerHTML = `
+    <div class="intel-list">
+      <div class="intel-item">
+        <div class="intel-title">Evidence status</div>
+        <div class="intel-meta">${statusHtml}</div>
+        <div class="intel-meta" style="margin-top:0.4rem;">${esc(counts)} · ${reportLink}</div>
+      </div>
+      ${actions.map(a => `
+        <div class="intel-item">
+          <div class="intel-title">${esc(a.title)}</div>
+          <div class="intel-meta">${esc(a.reason)} Next: ${esc(a.next_action)}</div>
+        </div>`).join("")}
+    </div>`;
+}
+
 // ── Render: SERP results ──
 function renderSerp(d) {
   const serp = d.serp || {};
@@ -488,6 +546,7 @@ async function loadAll() {
     renderClusters(d);
     renderContentClusters(d);
     renderBacklinks(d);
+    renderIntelligence(d);
     renderSerp(d);
     renderNextTargets(d);
     updateTimestamp(d);

@@ -1,9 +1,17 @@
 name: SERP Intelligence Check
 
 on:
-  schedule:
-    - cron: '0 9 * * 3'  # Wednesday 9am UTC
   workflow_dispatch:
+    inputs:
+      query:
+        description: 'Exact query to research with Claude web search'
+        required: true
+        type: string
+      max_cost_usd:
+        description: 'Manual cost cap acknowledgement'
+        required: false
+        default: '1.00'
+        type: string
 
 permissions:
   contents: write
@@ -30,10 +38,10 @@ jobs:
       - name: Install Python dependencies
         run: pip install anthropic python-dotenv requests
 
-      - name: Run SERP intelligence check
+      - name: Run explicit SERP intelligence check
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/serp_intelligence.py
+        run: python scripts/serp_intelligence.py --query "${{ github.event.inputs.query }}" --max-cost-usd "${{ github.event.inputs.max_cost_usd }}"
 
       - name: Rebuild SEO dashboard data
         run: python scripts/build_seo_data.py

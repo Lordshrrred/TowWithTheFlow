@@ -1,0 +1,117 @@
+{
+  "authority_asset_opportunities": [
+    {
+      "asset": "Tow Cost Estimator",
+      "backlog_status": "planned",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0,
+      "priority": 1,
+      "url": "tow-cost-estimator"
+    },
+    {
+      "asset": "Tow or Drive Decision Tree",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "Roadside Checklists",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "Insurance Comparison",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "State Law Resources",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    }
+  ],
+  "backlink_supported": [],
+  "cannibalization": [],
+  "city_opportunities": [],
+  "classifications": {
+    "ctr_opportunities": [],
+    "engagement_winners": [],
+    "near_page_one": [],
+    "weak_engagement": []
+  },
+  "comparison": {
+    "current_gsc_rows": 0,
+    "previous_gsc_rows": 0
+  },
+  "generated_at": "2026-07-10T18:10:06.460879+00:00",
+  "intent_map": {
+    "generatedAt": "2026-07-10T18:10:06.440079+00:00",
+    "metadataFlagCount": 118,
+    "overlapGroupCount": 10
+  },
+  "periods": {
+    "current": [
+      "2026-06-12",
+      "2026-07-09"
+    ],
+    "previous": [
+      "2026-05-15",
+      "2026-06-11"
+    ]
+  },
+  "request_counts": {
+    "ga4": 0,
+    "gsc": 0
+  },
+  "statuses": [
+    {
+      "cached": false,
+      "message": "No Search Console service-account JSON env var found.",
+      "rows": 0,
+      "source": "search_console",
+      "status": "missing_credentials"
+    },
+    {
+      "cached": false,
+      "message": "GA4 service-account JSON env var not found.",
+      "rows": 0,
+      "source": "ga4",
+      "status": "missing_credentials"
+    }
+  ],
+  "summary": {
+    "cannibalization_count": 0,
+    "ctr_opportunity_count": 0,
+    "generated_at": "2026-07-10T18:10:06.460879+00:00",
+    "near_page_one_count": 0,
+    "report_path": "reports/seo-intelligence-latest.md",
+    "request_counts": {
+      "ga4": 0,
+      "gsc": 0
+    },
+    "statuses": [
+      {
+        "cached": false,
+        "message": "No Search Console service-account JSON env var found.",
+        "rows": 0,
+        "source": "search_console",
+        "status": "missing_credentials"
+      },
+      {
+        "cached": false,
+        "message": "GA4 service-account JSON env var not found.",
+        "rows": 0,
+        "source": "ga4",
+        "status": "missing_credentials"
+      }
+    ],
+    "top_actions": []
+  },
+  "top_actions": [],
+  "top_landing_pages": [],
+  "top_queries": []
+}

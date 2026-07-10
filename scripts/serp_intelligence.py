@@ -14,6 +14,8 @@ import os
 import sys
 import json
 import re
+import argparse
+import hashlib
 from datetime import date, datetime
 from pathlib import Path
 from dotenv import load_dotenv
@@ -26,13 +28,12 @@ ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-if not ANTHROPIC_API_KEY:
-    print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
-    sys.exit(1)
 
 LOG_FILE = Path(__file__).parent / "syndication_log.txt"
 REPORTS_DIR = ROOT / "reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+CACHE_DIR = ROOT / ".cache" / "serp-intelligence"
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 BASE_URL = "https://towwiththeflow.com"
 KEYWORD_LIMIT = 10
@@ -59,6 +60,29 @@ def log(message: str):
     print(entry, end='')
     with LOG_FILE.open('a', encoding='utf-8') as f:
         f.write(entry)
+
+
+def cache_path(keyword: str) -> Path:
+    safe = re.sub(r"[^a-z0-9]+", "-", keyword.lower()).strip("-")[:80] or "query"
+    digest = hashlib.sha256(keyword.encode()).hexdigest()[:12]
+    return CACHE_DIR / f"{safe}-{digest}.json"
+
+
+def load_cached_keyword(keyword: str, cache_hours: int) -> dict | None:
+    path = cache_path(keyword)
+    if not path.exists():
+        return None
+    age = datetime.now() - datetime.fromtimestamp(path.stat().st_mtime)
+    if age.total_seconds() > cache_hours * 3600:
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def save_cached_keyword(keyword: str, result: dict) -> None:
+    cache_path(keyword).write_text(json.dumps(result, indent=2), encoding="utf-8")
 
 
 def _rank(done: list[tuple[str, int | None]]) -> list[tuple[str, int | None]]:
@@ -258,13 +282,46 @@ def build_report(report_date: str, results: list[dict], skipped: list[str]) -> s
 
 
 def main():
-    top_keywords = load_top_keywords()
+    parser = argparse.ArgumentParser(
+        description=(
+            "Explicit opt-in SERP/AI visibility research. This uses Claude web search "
+            "and should be run only for bounded manual research, not scheduled tracking."
+        )
+    )
+    parser.add_argument("--query", action="append", help="Exact query to research. Can be passed multiple times.")
+    parser.add_argument("--top-keywords", action="store_true", help="Research the highest-priority live keywords from keywords.txt.")
+    parser.add_argument("--limit", type=int, default=KEYWORD_LIMIT, help="Maximum top keywords when --top-keywords is used.")
+    parser.add_argument("--max-cost-usd", type=float, default=1.00, help="Operator-declared cost cap for the manual run.")
+    parser.add_argument("--cache-hours", type=int, default=168, help="Reuse private cached SERP research for this many hours.")
+    parser.add_argument("--force-refresh", action="store_true", help="Ignore private SERP cache.")
+    args = parser.parse_args()
+
+    if not args.query and not args.top_keywords:
+        print(
+            "No SERP research run. Pass --query 'exact keyword' or --top-keywords for an explicit, bounded manual check.",
+            file=sys.stderr,
+        )
+        return
+
+    if not ANTHROPIC_API_KEY:
+        print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
+        sys.exit(1)
+
+    if args.query:
+        top_keywords = [(q, None) for q in args.query[: max(1, args.limit)]]
+    else:
+        top_keywords = load_top_keywords(max(1, min(args.limit, KEYWORD_LIMIT)))
+
     if not top_keywords:
-        log("No keywords with live posts found in keywords.txt — nothing to check")
+        log("No keywords selected — nothing to check")
         return
 
     local_count = sum(1 for kw, _ in top_keywords if is_local(kw))
-    log(f"Checking {len(top_keywords)} keywords ({local_count} local, {len(top_keywords) - local_count} pain-point)")
+    log(
+        f"Manual opt-in research: checking {len(top_keywords)} keyword(s) "
+        f"({local_count} local, {len(top_keywords) - local_count} pain-point); "
+        f"operator cost cap=${args.max_cost_usd:.2f}"
+    )
 
     post_index = load_post_index()
     client = make_client(ANTHROPIC_API_KEY)
@@ -275,7 +332,13 @@ def main():
         label = f"[{score}] {keyword}" if score is not None else keyword
         log(f"Checking: {label}")
         try:
-            raw = check_keyword(client, keyword)
+            raw = None if args.force_refresh else load_cached_keyword(keyword, args.cache_hours)
+            if raw is not None:
+                log(f"{keyword} | using private cache")
+            else:
+                raw = check_keyword(client, keyword)
+                if raw is not None:
+                    save_cached_keyword(keyword, raw)
         except Exception as e:
             log(f"{keyword} | SKIPPED — API error: {e}")
             skipped.append(keyword)

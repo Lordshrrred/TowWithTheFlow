@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-09T20:42:44.267573+00:00",
+  "generated_at": "2026-07-10T18:15:13.215179+00:00",
   "keywords": {
-    "total": 769,
-    "live": 318,
-    "pending": 451,
+    "total": 802,
+    "live": 323,
+    "pending": 479,
     "local": {
-      "live": 129,
-      "pending": 60
+      "live": 132,
+      "pending": 70
     },
     "pain_point": {
-      "live": 189,
-      "pending": 391
+      "live": 191,
+      "pending": 409
     }
   },
   "next_targets": [
-    {
-      "keyword": "car spun out on highway what to do after",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car door wont open from inside emergency",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "fuel pump failed car wont start is it a tow",
       "score": 9,
@@ -36,6 +26,11 @@
     },
     {
       "keyword": "check engine light flashing car shaking emergency",
+      "score": 9,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "ran out of gas on highway what do i do",
       "score": 9,
       "type": "pain_point"
     },
@@ -63,6 +58,11 @@
       "keyword": "ran out of gas on highway at night what to do",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "allstate roadside assistance how many times per year",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -72,13 +72,13 @@
       "count": 145
     },
     {
-      "slug": "insurance-coverage",
-      "label": "Insurance & Roadside Coverage",
-      "count": 39
-    },
-    {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
+      "count": 40
+    },
+    {
+      "slug": "insurance-coverage",
+      "label": "Insurance & Roadside Coverage",
       "count": 39
     },
     {
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 15
+      "count": 17
     },
     {
       "slug": "tire-wheel",
@@ -114,281 +114,68 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 2
+      "count": 4
     }
   ],
   "serp": {
-    "report_date": "2026-07-08",
-    "checked": 10,
+    "report_date": null,
+    "checked": 0,
     "skipped": 0,
     "present_count": 0,
     "ai_overview_count": 0,
-    "results": [
-      {
-        "keyword": "towing cost in Denver Colorado",
-        "top3": [
-          {
-            "url": "https://kdvr.com/news/local/how-much-can-towing-companies-charge-in-colorado/",
-            "angle": "News article from local TV station FOX31 Denver focused exclusively on nonconsensual/involuntary towing rates regulated by the Colorado Public Utilities Commission. Covers hook fees, per-mile charges, storage fees, after-hours release fees, and mailed notice fees. No pricing for consensual/breakdown tows. Approximately 400\u2013600 words. Purely informational, no actionable advice for someone who needs a breakdown tow.",
-            "gaps": "Covers only nonconsensual tows \u2014 entirely missing consensual breakdown tow pricing. No cost ranges for flatbed, long-distance, or heavy-duty towing. No average price summary table. No comparison of Denver-specific providers. No tips on how to save money or avoid overcharges. No mention of insurance coverage. No local neighborhood or highway-specific context (e.g., I-70 mountain corridors). No structured headings or FAQ schema. Thin content that reads as a news brief, not a comprehensive guide."
-          },
-          {
-            "url": "https://tritontow.com/services/denver-tow-truck-rates/",
-            "angle": "Commercial service page for Triton Towing Company in Denver. Promotes their affordability and trustworthiness, lists factors that affect towing cost (vehicle type, distance, time of day, etc.), and includes a call-to-action phone number. Approximately 300\u2013500 words. Heavy on brand promotion with very little actual published pricing data.",
-            "gaps": "No actual price figures published \u2014 just a promise to quote over the phone. No price table or cost range breakdowns. No mention of Colorado PUC regulations or consumer rights. No comparison of tow types (flatbed vs. wheel-lift vs. heavy-duty). No FAQ section. No content covering what to do after a breakdown beyond calling them. No local specificity beyond 'Denver.' Thin, self-promotional content with weak SEO structure and no schema markup evident. No insurance guidance."
-          },
-          {
-            "url": "https://towingservicehub.com/colorado/denver",
-            "angle": "Aggregator/directory page listing 12 Denver towing companies with ratings and service categories. Provides average cost ranges ($75\u2013$175 local, $95\u2013$250 flatbed) and a per-mile rate range ($3\u2013$7). Structured with service-type filters and a map. Approximately 400\u2013700 words of original text alongside listings. Broadest pricing overview of the three results.",
-            "gaps": "Content is thin and generic \u2014 no in-depth explanation of what drives cost differences. No breakdown of costs by Denver neighborhood or corridor (e.g., I-25, I-70, mountain foothills). No guidance on Colorado PUC regulations or consumer rights. No heavy-duty or long-distance tow pricing detail. No tips for choosing a tow company or avoiding scams. No insurance or roadside assistance plan angle. No FAQ or structured Q&A. Directory format means low topical authority; no editorial depth. No mention of after-hours surcharges or storage fees."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/towing-cost-in-denver-colorado-after-accident-no-insurance/"
-      },
-      {
-        "keyword": "towing cost in Houston Texas",
-        "top3": [
-          {
-            "url": "https://texanscrowntowing.com/blog/houston-towing-cost/",
-            "angle": "Comprehensive 2026 pricing guide (~900 words) covering consent vs. non-consent tow types, a quick-reference cost table, heavy-duty rates, winching fees, roadside alternatives (jumpstarts, lockouts), the city's 'Tow and Go' freeway program, and Texas legal rights (drop fee, payment methods). Structured as a transparent explainer by a local Houston towing company.",
-            "gaps": "No per-mile cost breakdown; no neighbourhood/zip-code-level specificity beyond a few suburb name-drops; no comparison of insurance/roadside-club coverage vs. out-of-pocket costs; no advice on vetting or avoiding scam towers; no FAQ schema or clear H2/H3 hierarchy visible; no user-generated reviews or trust signals embedded in the article."
-          },
-          {
-            "url": "https://houston-towing.com/prices/",
-            "angle": "Thin pricing page (~80 words) for Delta Towing Houston. Mentions a service call fee range ($50\u2013$65) and acknowledges variable labour costs, but offers almost no structured content \u2014 essentially a CTA page with a phone number.",
-            "gaps": "Extremely thin content with no actual price table, no breakdown of tow types, no per-mile rates, no vehicle-type distinctions, no legal rights info, no local specificity, no FAQs, no imagery or trust signals. Highly vulnerable to displacement by any well-structured competitor page."
-          },
-          {
-            "url": "https://txbesttowing.com/towing-rates-near-you",
-            "angle": "Mid-length page (~350 words) for Texas Best Towing that frames the brand around trust and affordability vs. bait-and-switch competitors. Lists sample FAQ questions (cost per mile, 5-mile tow cost) but answers none of them in text \u2014 all answers are deferred to a phone call. Includes embedded customer reviews.",
-            "gaps": "No actual prices published anywhere on the page; no price table or rate ranges; FAQ questions raised but unanswered; no per-mile pricing; no vehicle-type breakdown; no explanation of consent vs. non-consent tows; no info on Houston city-regulated caps or legal driver rights; no neighbourhood or zip-code targeting."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/towing-cost-houston-texas-flatbed-vs-hook/"
-      },
-      {
-        "keyword": "towing cost in Phoenix Arizona",
-        "top3": [
-          {
-            "url": "https://phoenixtowtruck.com/2025/06/how-much-does-towing-cost-in-phoenix-az-updated-2025-guide/",
-            "angle": "Comprehensive, locally-branded pricing guide from Freeway Towing & Storage (a Phoenix operator), structured around their proprietary TowExact\u2122 real-time price calculator. Covers hook fees ($85\u2013$95), per-mile rates ($5\u2013$6), fuel surcharges, no after-hours premiums, vehicle type variations, and city-to-city price tables across the Phoenix metro. Estimated ~1,500\u20132,500 words. Strong CTA to book or call.",
-            "gaps": "Entirely self-promotional for one company; lacks neutral third-party cost comparison. No coverage of insurance reimbursement, roadside assistance memberships (AAA, etc.), or what to do if overcharged. No tips on avoiding scams beyond their own transparency pitch. No content on wait times, average ETAs, or seasonal demand pricing. No FAQ schema visible. No coverage of emergency vs. non-emergency scenarios or breakdown safety tips."
-          },
-          {
-            "url": "https://phoenixtowtruck.com/tow-price-calculator/",
-            "angle": "Tool/landing page for the same Freeway Towing & Storage TowExact\u2122 calculator. Explains the pricing formula ($95 hook + $6/mile + 15% fuel surcharge) and instructs users to enter pickup/drop-off for an instant quote with SMS confirmation. Very thin editorial content \u2014 primarily a functional calculator page, estimated ~400\u2013600 words of text.",
-            "gaps": "Extremely thin on informational content; almost no educational value beyond the calculator itself. No comparison to competitor rates, no breakdown by vehicle type in prose form, no guidance on what factors might cause the price to change, no coverage of roadside assistance add-ons, no local neighborhood-specific pricing context, and no trust signals like licensing or insurance info."
-          },
-          {
-            "url": "https://prioritytow.com/phoenix-towing-rates.php",
-            "angle": "Rates page for Priority Towing, a local Phoenix operator. Leads with an anti-bait-and-switch trust message and emphasizes upfront quoting. Encourages users to call for a specific quote. Includes customer testimonials. Estimated ~600\u20131,000 words. Heavy on brand promises but thin on actual published rate data.",
-            "gaps": "Frustratingly vague on actual numbers \u2014 directs users to call rather than publishing clear rate tables. No structured pricing breakdown (hook fee, per-mile rate, fuel surcharge). No coverage of vehicle types, distance tiers, or after-hours fees. No FAQ section, no schema markup likely. No comparison content or independent cost guidance. No mention of insurance claims, membership programs, or what to do while waiting for a tow."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/towing-cost-in-phoenix-arizona-after-accident/"
-      },
-      {
-        "keyword": "towing cost in Atlanta Georgia",
-        "top3": [
-          {
-            "url": "https://leekautotransportllc.com/how-much-does-towing-cost-in-atlanta/",
-            "angle": "Comprehensive consumer cost guide titled 'How Much Does Towing Cost in Atlanta? Real Prices & Tips'. Covers price ranges ($75\u2013$125 local, $3\u2013$7/mile), hidden fees, and tips to save money. Written in a conversational tone with a strong local Atlanta focus. Appears to be a mid-length informational article (~1,000\u20131,500 words). Published by a licensed GA tow operator (USDOT certified), so it blends authority signals with commercial intent.",
-            "gaps": "Content previewed is relatively thin in unique data \u2014 relies on broad ranges rather than specific neighborhood or route breakdowns (e.g., Buckhead vs. Decatur vs. Airport corridor). No mention of Georgia-specific towing regulations or consumer protections. No cost calculator or interactive element. No comparisons between providers. Lacks EV towing cost info or heavy-duty pricing tiers. No user-generated content or real customer price examples."
-          },
-          {
-            "url": "https://www.c3mtowing.com/how-much-does-it-cost-to-tow-a-car-in-atlanta",
-            "angle": "Service page doubling as an informational cost guide for C3M Towing. Covers average cost ($75\u2013$150 for up to 5 miles), key pricing factors (distance, vehicle type, time of day), and promotes the company's transparent pricing. Moderate length (~800\u20131,200 words). Strong commercial intent with a 'call to action' focus. Uses a clear factor-by-factor structure.",
-            "gaps": "Heavily self-promotional \u2014 written to convert, not purely to inform. Doesn't include per-mile rate specifics or a pricing table. No mention of Georgia non-consensual towing price caps or consumer rights. No EV towing, motorcycle towing, or heavy-duty pricing addressed. No comparison with competitors or insurance/roadside coverage guidance. No neighborhood-level pricing context for the wider Atlanta metro area."
-          },
-          {
-            "url": "https://www.garciastowingllc.com/how-much-does-a-towing-company-charge-in-georgia",
-            "angle": "Transparent flat-rate pricing page from Garcia's Towing (Forest Park, GA). Clearly publishes specific prices: $100 hook fee + $3/mile (Atlanta metro) and $80 hook fee + $3/mile (in-town Forest Park). Highlights no-hidden-fees promise, 24/7 availability, ~45-min ETA, and EV towing capability at no surcharge. Short to medium length (~600\u2013900 words). Very direct and price-transparent \u2014 strong trust signal.",
-            "gaps": "Geographically narrow \u2014 focused on Forest Park and immediate Atlanta surroundings, not the broader metro. Doesn't address other vehicle types (motorcycles, RVs, heavy-duty). No discussion of insurance claims, roadside assistance plan coverage, or when to use AAA vs. private towing. No information on Georgia towing law/consumer protections (e.g., non-consensual tow caps). Content is thin beyond pricing \u2014 no educational depth on what affects costs broadly."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/towing-cost-in-atlanta-georgia-highway/"
-      },
-      {
-        "keyword": "towing cost in Chicago Illinois",
-        "top3": [
-          {
-            "url": "https://www.insureonthespot.com/towing-cost-chicago/",
-            "angle": "Insurance-focused cost guide (~600\u2013900 words). Covers city tow fees (~$150 for passenger cars), storage fees ($25/day), larger vehicle rates ($250 tow/$50 storage/day), special scenario surcharges, and how Illinois auto insurance/roadside assistance coverage can offset towing costs. Targets drivers seeking cost clarity alongside insurance advice.",
-            "gaps": "No price comparison table across private towing companies vs. city towing; no per-mile rate breakdowns for private tows; no mention of flatbed vs. hook-and-chain pricing; no neighborhood or expressway-specific tips (e.g., Kennedy, Lake Shore Drive); no information on how to dispute or recover from impound; no FAQ section; thin on actionable steps when stranded."
-          },
-          {
-            "url": "https://stuck.solutions/50-dollar-towing-in-chicago",
-            "angle": "Very thin service-promotion page (~100\u2013150 words). Primarily advertises STUCK's $50 towing offer with a phone number. Minimal editorial content; functions as a lead-gen landing page rather than an informational guide.",
-            "gaps": "Virtually no informational content about actual towing costs in Chicago; no price breakdowns, no cost factors, no comparison of providers; no local specificity (neighborhoods, expressways); no explanation of what $50 covers vs. what might cost extra; no storage fee info; no regulatory or city towing context; essentially a thin ad page with no SEO content depth."
-          },
-          {
-            "url": "https://www.chicago.gov/city/en/depts/streets/supp_info/common_towing_questions.html",
-            "angle": "Official City of Chicago FAQ page on city-mandated towing (~400\u2013600 words). Covers municipal tow fees ($250 for vehicles under 8,000 lbs; $350 for heavier), snow route rules, impound procedures, what to do if towed, and how to retrieve your vehicle. Authoritative and government-sourced.",
-            "gaps": "Covers ONLY city/municipal towing \u2014 no information on private towing company pricing; no per-mile rates; no breakdown cost tips for roadside breakdowns; no insurance guidance; no neighborhood-level context; no emergency breakdown scenarios; no comparison of city vs. private tow costs; Q&A format is functional but lacks structured headers, tables, or visual aids; not optimized for 'cost' queries from drivers seeking private tow prices."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/towing-cost-in-chicago-illinois-winter-emergency/"
-      },
-      {
-        "keyword": "engine seized up while driving towing cost",
-        "top3": [
-          {
-            "url": "https://carbrain.com/blog/is-your-engine-locked-up-heres-what-you-do",
-            "angle": "Car-buying lead-gen article (~800\u20131,200 words estimated) angled around selling a seized-engine car to CarBrain for cash + free tow. Covers what a seized engine means, what to do immediately (coast to the shoulder, don't restart), and light DIY tips (e.g., remove spark plug, add oil, let sit 24 hrs). Primary CTA is to get an instant quote rather than repair guidance.",
-            "gaps": "No actual towing cost figures anywhere in the article \u2014 despite 'towing cost' being a core search intent. No breakdown of roadside-call-out fees, flatbed vs wheel-lift pricing, or mileage rates. No step-by-step emergency roadside protocol. No coverage of insurance or roadside-assistance coverage for seized engines. Thin on causes and diagnosis. No local or regional specificity. Heavily promotional rather than informational."
-          },
-          {
-            "url": "https://junkcarsus.com/blog/locked-up-engine-how-to-unseize-and-whats-the-cost",
-            "angle": "Junk-car-buyer lead-gen guide (~1,000\u20131,500 words estimated) covering locked-engine causes, symptoms, repair vs. replace cost overview, and a pitch to sell the car to JunkCarsUs for free pickup. Includes some cost ranges and a step-by-step quote/pickup process for their own service.",
-            "gaps": "Towing cost as a standalone topic is absent \u2014 the only 'free towing' mentioned is their own pickup service. No discussion of emergency towing costs a driver faces the moment the engine seizes on the road, no per-mile rates, no flatbed necessity explanation for seized engines. No guidance on what to do in the first 30 minutes roadside. No insurance/breakdown-cover angle. No local specificity."
-          },
-          {
-            "url": "https://www.cashautosalvage.com/what-to-do-if-your-cars-engine-locked-up/",
-            "angle": "Salvage-yard lead-gen article (~800\u20131,200 words estimated) explaining what a seized/locked/frozen engine is, common causes (oil starvation, coolant issues, overheating), symptoms, and options (repair, rebuild, replace, or sell as-is). FAQ format used at the end. Angle is heavily 'sell your car to us' with a note that selling avoids towing and repair costs.",
-            "gaps": "Zero actual towing cost data \u2014 no average flatbed tow price, no mileage-rate breakdown, no mention of what emergency roadside towing for a seized engine typically costs. No immediate roadside action plan. No discussion of whether standard breakdown cover or AAA covers seized-engine tows. No geographic/local pricing context. Content is thin on mechanical detail and entirely skips the 'while driving' emergency scenario that the keyword implies."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/engine-seized-up-while-driving-towing-cost-seattle/"
-      },
-      {
-        "keyword": "tow truck price 50 miles away from city",
-        "top3": [
-          {
-            "url": "https://homeguide.com/costs/towing-service-cost",
-            "angle": "Comprehensive towing cost guide covering price ranges by distance, vehicle type, time of day, storage fees, boat/RV towing, and roadside assistance memberships. Structured as a pricing breakdown table with lead-gen CTA. Estimated ~1,800\u20132,500 words.",
-            "gaps": "No specific 50-mile cost example or calculation provided. No guidance for rural or suburban-to-city towing scenarios. No mention of what 'away from city' means for pricing (dead mileage/return trip charges). Lacks a cost estimator tool or interactive element. No local provider directory or city-specific pricing examples."
-          },
-          {
-            "url": "https://www.thezebra.com/resources/driving/how-much-does-towing-a-car-cost/",
-            "angle": "Insurance-focused towing cost guide covering per-mile rates, factors affecting cost, insurance reimbursement limits, and at-fault liability. Targets drivers comparing coverage options. Estimated ~1,200\u20131,800 words.",
-            "gaps": "Mentions 50-mile threshold only in passing (a chart). No specific cost breakdown for a 50-mile rural-to-city tow. No dead mileage explanation (cost to driver when truck travels from city to rural breakdown location). Thin on what to expect operationally (wait times, dispatch from city). No actionable tips for reducing cost when far from city."
-          },
-          {
-            "url": "https://www.sherpaautotransport.com/guides/how-much-does-it-cost-to-tow-a-car/",
-            "angle": "Cost-focused towing guide with a self-promotional angle toward auto transport for long-distance scenarios. Covers hookup fees, per-mile rates, distance tiers, EV tewing, after-hours surcharges, and insurance. Estimated ~2,000\u20132,800 words.",
-            "gaps": "Heavily biased toward promoting auto transport over towing, skewing objectivity. No specific 50-mile city-outskirts or rural pricing. No coverage of dead mileage charges (truck driving out to you from city). No local/regional price variation examples. No tips for finding a tow truck when 50 miles from the nearest city. No mention of wait times or limited rural service availability."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/tow-truck-price-50-miles-from-city/"
-      },
-      {
-        "keyword": "how much does 24 hour towing cost extra",
-        "top3": [
-          {
-            "url": "https://homeguide.com/costs/towing-service-cost",
-            "angle": "Broad towing cost guide (~1,500\u20132,000 words estimated) covering average prices ($75\u2013$125), per-mile rates, vehicle type surcharges, after-hours fees ($5\u2013$150 range), storage fees, boat/RV towing, and roadside assistance. Structured with price tables and multiple cost factors. Targets a general 'towing cost' head term rather than the '24-hour extra cost' angle specifically.",
-            "gaps": "Only briefly mentions after-hours surcharges ($10\u2013$35 extra) without a dedicated section on 24-hour/overnight towing cost premiums. No explanation of WHY after-hours costs more (labor, staffing). No specific dollar examples for night vs. day comparisons. No holiday/weekend surcharge breakdown. No local or regional pricing variance. No tips on how to avoid or reduce the 24-hour surcharge. No FAQ targeting the exact query."
-          },
-          {
-            "url": "https://www.thezebra.com/resources/driving/how-much-does-towing-a-car-cost/",
-            "angle": "Insurance-focused towing cost guide (~1,200\u20131,800 words estimated) covering average US tow cost ($109), tow truck types (flatbed, hook & chain, wheel lift), breakdown scenarios, and insurance coverage options. Angle leans heavily toward whether insurance pays, not the after-hours cost differential specifically.",
-            "gaps": "After-hours/24-hour pricing is only mentioned in passing as a cost factor with no specific surcharge figures cited. No dedicated section on nighttime or emergency tow premiums. No breakdown of peak vs. off-peak pricing windows. Thin on actionable numbers for overnight towing. No mention of holiday surcharges. No comparison of 24/7 tow companies vs. standard hours companies. No local data or real-world call-out examples."
-          },
-          {
-            "url": "https://www.carparts.com/blog/whats-the-average-cost-of-calling-for-a-tow/",
-            "angle": "General towing cost explainer (~800\u20131,200 words estimated) covering time-of-day pricing, location difficulty surcharges, vehicle type, winch fees, and insurance/roadside assistance coverage. Acknowledges after-hours pricing 'might add several dollars to more than $100' but remains vague. Structured as a blog post with paragraph sections rather than tables or skimmable data.",
-            "gaps": "After-hours surcharge range ($0\u2013$100+) is far too wide to be actionable. No specific night-rate figures or percentage surcharges. No definition of what hours qualify as 'after hours' for 24-hour towing. No comparison of providers (AAA, insurance, independent towers). No tips for finding affordable 24-hour towing. No FAQ, no schema markup potential. No regional pricing. Thin content overall with weak structure and no data tables."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/how-much-does-24-hour-towing-cost-extra/"
-      },
-      {
-        "keyword": "tow truck damaged my car who pays",
-        "top3": [
-          {
-            "url": "https://citizenshipper.com/blog/towing-damage-liability/",
-            "angle": "Comprehensive liability guide (~1,200 est. words) explaining the 'due care' legal standard, when tow companies are liable (connecting, transporting, disconnecting), step-by-step claims process (get repair estimate, bring to tow company, escalate to insurer or small claims), and what to do when the tow company disputes the claim. Written from a neutral consumer-advice angle.",
-            "gaps": "No local/regional specificity; no mention of damage waiver implications in depth; lacks guidance on EV or specialty vehicle towing damage; no information on typical compensation timelines or amounts; no FAQ schema content visible; no discussion of police-dispatched vs. private tows as distinct scenarios."
-          },
-          {
-            "url": "https://wewin.com/tow-truck-damaged-my-car/",
-            "angle": "Legal-firm lead-gen page (~900 est. words) targeting distressed vehicle owners, covering documentation, communicating with the tow company, understanding insurance coverage, damage waivers, and when to hire an attorney. Emotionally-framed intro ('anger and helplessness') designed to convert readers to clients.",
-            "gaps": "Content is gated/paywalled behind a 'Read more' truncation in search snippet, suggesting thin accessible content; heavily attorney-focused with limited actionable DIY steps; no specific state laws cited; no real-world case examples; no coverage of roadside assistance programmes (AA/RAC equivalents) vs. private tow companies."
-          },
-          {
-            "url": "https://www.vylawfirm.com/what-happens-if-a-towing-company-damaged-my-car/",
-            "angle": "Law firm explainer (~800 est. words) covering liability basics, insurance claim filing, negotiation tips (demand fair compensation, communicate in writing), and when to consult an attorney. Structured around a clear question-and-answer flow aimed at worried car owners.",
-            "gaps": "No jurisdiction-specific detail; negotiation tips are generic and lack real-world scripts or letter templates; no coverage of EV-specific towing damage (e.g., undercarriage damage on Teslas); no mention of what happens if the tow was police-ordered; no discussion of how pre-existing damage affects claims; thin on small-claims court process detail."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/tow-truck-damaged-my-car-who-pays-chicago/"
-      },
-      {
-        "keyword": "car smoking from hood need tow truck now",
-        "top3": [
-          {
-            "url": "https://www.greatwater360autocare.com/news/why-is-there-smoke-coming-from-underneath-my-cars-hood",
-            "angle": "Auto repair shop blog post explaining smoke colors/smells (white = coolant, black = electrical) and advising to pull over and call a tow. Informational and calm in tone, ~400\u2013600 words. No structured step-by-step format; mostly descriptive paragraphs. Ends with a soft CTA to visit their shop.",
-            "gaps": "No urgency-first structure for someone panicking roadside. No step-by-step immediate action checklist. No guidance on how to find or call a tow truck quickly. No mention of what to do while waiting for the tow. No cost/time estimates. No local relevance. Thin on actionable next steps beyond 'call a tow truck.' No FAQ section. No safety hazard warnings (e.g., fire risk, when to move away from the vehicle)."
-          },
-          {
-            "url": "https://autoaidrescue.com/blog/my-car-is-smoking-under-the-hood--what-should-i-do-now-/",
-            "angle": "Narrative-style blog post from an auto rescue service written as a first-person mechanic anecdote \u2014 recounting a phone call with a distressed driver. Covers dashboard warning lights, smoke density, smell diagnosis, and towing options. ~600\u2013900 words. Conversational but disorganised.",
-            "gaps": "No clear numbered action steps \u2014 purely narrative, hard to scan in an emergency. No smoke-color guide in a visual or table format. No tow truck booking CTA or link. No discussion of fire risk or when to fully exit and stand away from the vehicle. No mention of insurance or roadside assistance membership options. No local or regional tow service context. Content is duplicated within the page (text repeated verbatim). Weak E-E-A-T signals beyond the anecdote framing."
-          },
-          {
-            "url": "https://us.ok.com/ask/what-to-do-if-your-car-is-smoking-from-the-hood/",
-            "angle": "AI-generated Q&A/answer-engine style page (ok.com) with a very direct, urgent opening ('Pull over right now. Seriously, don't even think about driving another block.'). Covers diagnosing smoke source by smell/color, drivability decision, and tow truck advice. ~500\u2013700 words. Structured with headers but feels auto-generated.",
-            "gaps": "No human author or expertise signals \u2014 clearly AI-generated with low E-E-A-T. No step-by-step numbered emergency protocol. No guidance on what to do once stopped (hazard lights, moving to safety barrier, alerting other drivers). No tow truck contact mechanism or CTA. No cost implications of continuing to drive. No information on fire risk escalation. No local tow truck availability context. Generic and lacks depth on individual causes."
-          }
-        ],
-        "twtf_present": false,
-        "twtf_position": null,
-        "ai_overview_mentions_twtf": false,
-        "our_post_url": "https://towwiththeflow.com/car-smoking-from-hood-need-tow-truck-now/"
-      }
-    ]
+    "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-09T18:14:32.212716+00:00",
+    "generated_at": "2026-07-10T15:07:19.770900+00:00",
     "platforms": {
       "blog": {
-        "checked": 294,
-        "verified": 294
+        "checked": 296,
+        "verified": 296
       },
       "dev": {
-        "checked": 224,
-        "verified": 224
+        "checked": 226,
+        "verified": 226
       },
       "feeder": {
-        "checked": 292,
-        "verified": 292
-      },
-      "tumblr": {
-        "checked": 291,
-        "verified": 291
-      },
-      "wordpress": {
         "checked": 294,
         "verified": 294
+      },
+      "tumblr": {
+        "checked": 293,
+        "verified": 293
+      },
+      "wordpress": {
+        "checked": 296,
+        "verified": 296
       }
     }
+  },
+  "intelligence": {
+    "cannibalization_count": 0,
+    "ctr_opportunity_count": 0,
+    "generated_at": "2026-07-10T18:10:06.460879+00:00",
+    "near_page_one_count": 0,
+    "report_path": "reports/seo-intelligence-latest.md",
+    "request_counts": {
+      "ga4": 0,
+      "gsc": 0
+    },
+    "statuses": [
+      {
+        "cached": false,
+        "message": "No Search Console service-account JSON env var found.",
+        "rows": 0,
+        "source": "search_console",
+        "status": "missing_credentials"
+      },
+      {
+        "cached": false,
+        "message": "GA4 service-account JSON env var not found.",
+        "rows": 0,
+        "source": "ga4",
+        "status": "missing_credentials"
+      }
+    ],
+    "top_actions": []
   }
 }
