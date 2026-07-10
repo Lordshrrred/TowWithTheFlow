@@ -57,7 +57,7 @@ If the timing belt snapped, do not try to start the engine again. On interferenc
 - **If smoke or burning smell**, get everyone out immediately and move away from the vehicle. Do not try to pop the hood on a smoking car.
 - **At night**, keep your interior light on after hazards are set so you're visible to approaching traffic.
 
-A car that dies while driving is almost never a quick roadside fix. Call for a tow, tell the shop what happened, and let them run the diagnosis.
+A car that dies while driving is almost never a quick roadside fix. Call for a tow, tell the shop what happened, and let them run the diagnosis. Still not sure whether this counts as a tow situation? [Should I Call a Tow Truck?](/tools/should-i-call-a-tow-truck/) walks through it in about a minute.
 
 ## Common Questions
 

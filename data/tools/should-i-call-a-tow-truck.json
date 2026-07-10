@@ -1,0 +1,501 @@
+{
+  "id": "should-i-call-a-tow-truck",
+  "kind": "decision-tool",
+  "panel_heading": "Answer a few quick questions",
+  "panel_intro": "One question at a time. Nothing here is submitted anywhere — nothing you enter leaves your browser.",
+  "action_plan_heading": "Your Roadside Action Plan",
+  "start": "danger",
+  "questions": {
+    "danger": {
+      "text": "Right now, are you in immediate danger — in an active travel lane, or is there fire, smoke, or an injury?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:emergency" },
+        { "value": "no", "label": "No", "next": "unsafe_spot" }
+      ]
+    },
+    "unsafe_spot": {
+      "text": "Is the vehicle stopped somewhere unsafe — a travel lane, a highway shoulder, or a blind curve?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "can_move_short" },
+        { "value": "no", "label": "No, it's safely off the road", "next": "crash" }
+      ]
+    },
+    "can_move_short": {
+      "text": "Can you move it a short, safe distance right now — for example, onto the shoulder?",
+      "options": [
+        { "value": "yes", "label": "Yes, I can move it safely", "next": "result:move_to_safety" },
+        { "value": "no", "label": "No, it can't be moved safely", "next": "result:emergency_unsafe_spot" }
+      ]
+    },
+    "crash": {
+      "text": "Was there a crash or collision?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:tow_after_crash" },
+        { "value": "no", "label": "No", "next": "hazard" }
+      ]
+    },
+    "hazard": {
+      "text": "Do you see smoke, fire, a strong fuel smell, or fluid leaking from the vehicle?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:tow_hazard" },
+        { "value": "no", "label": "No", "next": "overheating" }
+      ]
+    },
+    "overheating": {
+      "text": "Is the engine overheating — temperature gauge in the red, or steam from the hood?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:tow_overheat" },
+        { "value": "no", "label": "No", "next": "controls" }
+      ]
+    },
+    "controls": {
+      "text": "Are the brakes or steering affected — soft or unresponsive brakes, or hard-to-control steering?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:tow_controls" },
+        { "value": "no", "label": "No", "next": "can_move" }
+      ]
+    },
+    "can_move": {
+      "text": "Can the vehicle move under its own power right now?",
+      "options": [
+        { "value": "no", "label": "No, it won't move", "next": "result:tow_immobile" },
+        { "value": "yes", "label": "Yes, it can move", "next": "symptom" }
+      ]
+    },
+    "symptom": {
+      "text": "What are you noticing?",
+      "options": [
+        { "value": "dead_battery", "label": "Dead battery / won't start", "next": "result:roadside_battery" },
+        { "value": "flat_tire", "label": "Flat tire", "next": "result:roadside_tire" },
+        { "value": "lockout", "label": "Locked out", "next": "result:roadside_lockout" },
+        { "value": "out_of_fuel", "label": "Out of fuel", "next": "result:roadside_fuel" },
+        { "value": "other", "label": "Something else / not sure", "next": "coverage" }
+      ]
+    },
+    "coverage": {
+      "text": "Do you have roadside assistance coverage — insurance, an auto club, or a manufacturer plan?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:roadside_general" },
+        { "value": "no", "label": "No", "next": "distance" }
+      ]
+    },
+    "distance": {
+      "text": "Are you within a short, safe distance of home or a repair shop?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:reassess" },
+        { "value": "no", "label": "No", "next": "result:tow_general" }
+      ]
+    }
+  },
+  "results": {
+    "emergency": {
+      "result_type": "emergency_services",
+      "title": "Call Emergency Services Now",
+      "summary": "Call 911. Your safety comes first — this isn't a situation for an app or a calculator.",
+      "confidence": "high",
+      "confidence_text": "This is a clear, urgent situation. Don't wait for a tow truck first.",
+      "not_to_do": [
+        "Don't stand near active traffic to inspect the vehicle.",
+        "Don't try to move the vehicle yourself if there's fire, smoke, or injury.",
+        "Don't wait to see if it \"gets better\" before calling."
+      ],
+      "before_help_checklist": [
+        "Move away from traffic if you can do so safely.",
+        "Turn on hazard lights.",
+        "Call 911 and describe your exact location.",
+        "Stay on the line until you're told it's safe to hang up."
+      ],
+      "phone_script": {
+        "intro": "If you're able to speak, this covers what dispatchers need first.",
+        "lines": [
+          "I need help — my vehicle is at [location description].",
+          "There is [fire / smoke / injury / a vehicle stopped in traffic].",
+          "I am [safe / not safe] right now."
+        ]
+      },
+      "next_action": "Stay on the line with emergency services and follow their instructions."
+    },
+    "emergency_unsafe_spot": {
+      "result_type": "emergency_services",
+      "title": "Call Emergency Services Now",
+      "summary": "Your vehicle is stuck somewhere dangerous and can't be moved safely. Call 911 to get traffic controlled around you, even without a crash or fire.",
+      "confidence": "high",
+      "confidence_text": "An unmovable vehicle in an active lane is a real hazard — this needs an immediate response, not a wait.",
+      "not_to_do": [
+        "Don't stand behind or beside the vehicle in the travel lane.",
+        "Don't try to push or force it to move on your own.",
+        "Don't rely on hazard lights alone in low-visibility conditions."
+      ],
+      "before_help_checklist": [
+        "Move yourself and any passengers away from traffic if possible.",
+        "Turn on hazard lights.",
+        "Call 911 and describe your exact location and lane.",
+        "Wave help toward you safely once it arrives."
+      ],
+      "phone_script": {
+        "intro": "Read this to the dispatcher.",
+        "lines": [
+          "My vehicle is stopped in a travel lane at [location description] and can't be moved.",
+          "No one is injured, but this is a traffic hazard.",
+          "Can you send help to control traffic and arrange a tow?"
+        ]
+      },
+      "next_action": "Stay somewhere safe, away from traffic, until help arrives."
+    },
+    "move_to_safety": {
+      "result_type": "move_to_safety",
+      "title": "Move Only to Immediate Safety",
+      "summary": "If you can move the vehicle a short, safe distance — like onto the shoulder — do that now, then stop and reassess.",
+      "confidence": "moderate",
+      "confidence_text": "Moving a short distance can reduce real danger, but only if it's clearly safe to do so — if you have any doubt, treat this as an emergency instead.",
+      "not_to_do": [
+        "Don't drive any further than the nearest safe spot.",
+        "Don't move it if doing so means crossing active traffic.",
+        "Don't assume the shoulder is safe on a blind curve or narrow road — use hazard lights either way."
+      ],
+      "before_help_checklist": [
+        "Turn on hazard lights before and after moving.",
+        "Check mirrors and traffic before moving at all.",
+        "Once stopped safely, exit on the side away from traffic if possible.",
+        "Call for a tow or roadside help once you're safely stopped."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with help.",
+        "lines": [
+          "Hi, I moved my vehicle to [location description] after it stalled in an unsafe spot.",
+          "It's safe to approach now.",
+          "Can you confirm ETA and whether I need a tow or roadside service?"
+        ]
+      },
+      "next_action": "Once you're safely stopped, use this tool again from the top if anything about the situation has changed."
+    },
+    "tow_after_crash": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "After any crash, get the vehicle towed rather than driving it — even if it looks driveable, there can be hidden damage.",
+      "confidence": "high",
+      "confidence_text": "Crash damage is often worse than it looks. This is a clear case for a tow, not a drive.",
+      "not_to_do": [
+        "Don't drive away before exchanging information or documenting the scene.",
+        "Don't assume no visible damage means it's safe to drive.",
+        "Don't skip calling police if there's injury, disagreement, or significant damage."
+      ],
+      "before_help_checklist": [
+        "Take photos of all vehicles and the scene.",
+        "Exchange insurance and contact information.",
+        "Call police if required in your area or if anyone disagrees about what happened.",
+        "Note the other driver's plate and insurance details."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, I've been in an accident and need a tow from [location description].",
+          "The vehicle is [safe / not safe] to approach and cannot be driven.",
+          "Can you confirm total price, ETA, and where the vehicle will be taken?",
+          "Will there be storage charges, and when do they start?"
+        ]
+      },
+      "next_action": "Once the vehicle is towed, contact your insurer to start the claim."
+    },
+    "tow_hazard": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "Smoke, fire, a fuel smell, or a fluid leak all mean the vehicle isn't safe to drive further.",
+      "confidence": "high",
+      "confidence_text": "These are textbook do-not-drive signs — there's no ambiguity here.",
+      "not_to_do": [
+        "Don't keep driving to \"just get it home.\"",
+        "Don't open the hood if you see active smoke or fire — call 911 instead.",
+        "Don't ignore a fuel smell, even a faint one."
+      ],
+      "before_help_checklist": [
+        "Move away from the vehicle if you smell fuel or see smoke.",
+        "Turn off the engine if it's safe to do so.",
+        "Note what you saw or smelled to describe to the tow operator.",
+        "Keep bystanders and any flame source away from the vehicle."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, I have a vehicle at [location description] with smoke, a fuel smell, or a fluid leak.",
+          "It is not safe to drive.",
+          "Can you confirm total price, ETA, and where it will be taken?",
+          "Are there any after-hours fees right now?"
+        ]
+      },
+      "next_action": "Once towed, ask a mechanic to diagnose it before driving it again."
+    },
+    "tow_overheat": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "Driving on an overheated engine risks turning a repair into a much more expensive one.",
+      "confidence": "high",
+      "confidence_text": "Overheating is a clear signal to stop driving, not a symptom to push through.",
+      "not_to_do": [
+        "Don't keep driving \"just a little further.\"",
+        "Don't open a hot radiator cap.",
+        "Don't pour cold water on a hot engine."
+      ],
+      "before_help_checklist": [
+        "Turn off the engine once safely stopped.",
+        "Leave the hood closed until it's cooled — don't inspect it hot.",
+        "Note when the temperature gauge started climbing.",
+        "Avoid restarting the engine to \"check\" if it's fine."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my vehicle overheated and is at [location description].",
+          "It is safe to approach but should not be driven.",
+          "Can you confirm total price, ETA, and where it will be taken?",
+          "Will there be storage charges?"
+        ]
+      },
+      "next_action": "Have a mechanic check the cooling system before driving it again."
+    },
+    "tow_controls": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "Brakes or steering that feel off are safety-critical — this is never worth risking a drive.",
+      "confidence": "high",
+      "confidence_text": "Brake and steering issues are unambiguous do-not-drive signs.",
+      "not_to_do": [
+        "Don't test the brakes or steering by driving further to \"see how bad it is.\"",
+        "Don't rely on the parking brake as a substitute for working brakes.",
+        "Don't assume it's minor just because the car still moves."
+      ],
+      "before_help_checklist": [
+        "Keep the vehicle stopped and stable if possible.",
+        "Use hazard lights and, if available, warning triangles.",
+        "Note exactly what felt wrong to describe to the tow operator.",
+        "Avoid restarting or moving the vehicle further."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my vehicle's brakes or steering feel unsafe. It's at [location description].",
+          "It should not be driven.",
+          "Can you confirm total price, ETA, and where it will be taken?",
+          "Are there any after-hours fees right now?"
+        ]
+      },
+      "next_action": "Have a mechanic inspect the brakes or steering before driving it again."
+    },
+    "tow_immobile": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "If the vehicle can't move under its own power, a tow is the straightforward next step.",
+      "confidence": "high",
+      "confidence_text": "A vehicle that won't move has one clear next step — no ambiguity here.",
+      "not_to_do": [
+        "Don't attempt to force-start or push it into traffic.",
+        "Don't assume a jump start alone will fix an unrelated mechanical issue.",
+        "Don't authorize a tow destination you haven't confirmed."
+      ],
+      "before_help_checklist": [
+        "Turn on hazard lights.",
+        "Note any warning lights or unusual sounds beforehand.",
+        "Confirm exactly where you want the vehicle taken.",
+        "Keep your keys and paperwork accessible for the driver."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my vehicle won't move and needs a tow from [location description].",
+          "Can you confirm total price, ETA, mileage charges, and where it will be taken?",
+          "Will there be storage charges, and when do they start?"
+        ]
+      },
+      "next_action": "Use the Tow Cost Estimator to sanity-check the price before you agree."
+    },
+    "roadside_battery": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "A dead battery is one of the most common roadside calls — most plans handle a jump start quickly.",
+      "confidence": "high",
+      "confidence_text": "This is a textbook roadside-assistance case.",
+      "not_to_do": [
+        "Don't assume it's the battery without at least trying a jump start.",
+        "Don't keep trying to start it repeatedly — that can damage the starter.",
+        "Don't ignore repeat dead-battery issues — that can mean a bad alternator, not just the battery."
+      ],
+      "before_help_checklist": [
+        "Turn off accessories (lights, AC, radio) while you wait.",
+        "Have your keys and vehicle location ready.",
+        "Note if this has happened before — it may not be just the battery.",
+        "Stay with the vehicle if it's safe to do so."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, my vehicle won't start — I think it's the battery. I'm at [location description].",
+          "It's safe to approach and I'm waiting nearby.",
+          "Can you confirm ETA and whether a jump start is included?"
+        ]
+      },
+      "next_action": "If the battery dies again soon after, get it tested rather than just jumped again."
+    },
+    "roadside_tire": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "A flat tire is usually a quick roadside fix — a spare swap, or a tow only if there's no usable spare.",
+      "confidence": "high",
+      "confidence_text": "This is a textbook roadside-assistance case.",
+      "not_to_do": [
+        "Don't drive on a flat, even slowly — it can destroy the wheel.",
+        "Don't change a tire yourself on the traffic side of the vehicle.",
+        "Don't assume your spare is ready — check it's inflated before relying on it."
+      ],
+      "before_help_checklist": [
+        "Pull as far off the road as safely possible.",
+        "Turn on hazard lights.",
+        "Check whether you have a usable spare and the tools for it.",
+        "Stay on the side away from traffic while you wait."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, I have a flat tire at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA, and whether you can swap in my spare or if I'll need a tow?"
+        ]
+      },
+      "next_action": "Get the flat repaired or replaced properly before driving on the spare long-term."
+    },
+    "roadside_lockout": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "Most roadside and insurance plans include lockout service — rarely worth a locksmith call-out fee on your own.",
+      "confidence": "high",
+      "confidence_text": "This is a textbook roadside-assistance case.",
+      "not_to_do": [
+        "Don't try to force a door or window open yourself — that can cause real damage.",
+        "Don't leave the area if a child or pet is locked inside — call 911 first in that case.",
+        "Don't pay a locksmith before checking if your plan already covers it."
+      ],
+      "before_help_checklist": [
+        "Check all doors and the trunk, just in case.",
+        "Have ID or proof of ownership ready if asked.",
+        "Note your exact location for dispatch.",
+        "Stay near the vehicle if it's safe to do so."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, I'm locked out of my vehicle at [location description].",
+          "No one and nothing unsafe is inside.",
+          "Can you confirm ETA for lockout service?"
+        ]
+      },
+      "next_action": "Consider a spare key or key fob backup so this is a one-time issue."
+    },
+    "roadside_fuel": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "Running out of fuel is a simple roadside delivery in most cases.",
+      "confidence": "high",
+      "confidence_text": "This is a textbook roadside-assistance case.",
+      "not_to_do": [
+        "Don't walk along a highway shoulder to find fuel yourself if it's unsafe.",
+        "Don't run the engine repeatedly trying to coax out the last fumes.",
+        "Don't forget some plans limit free fuel delivery to a small amount."
+      ],
+      "before_help_checklist": [
+        "Pull as far off the road as safely possible.",
+        "Turn on hazard lights.",
+        "Confirm your plan covers fuel delivery, not just towing.",
+        "Stay with the vehicle if it's safe to do so."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, I've run out of fuel at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA and whether fuel delivery is included in my plan?"
+        ]
+      },
+      "next_action": "Keep an eye on your gauge going forward — running dry can also damage a fuel pump over time."
+    },
+    "roadside_general": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "Your situation isn't clear-cut, but you have coverage and no safety-critical signs — roadside assistance is the right first call.",
+      "confidence": "moderate",
+      "confidence_text": "The symptom is ambiguous, so treat this as a starting point, not a diagnosis.",
+      "not_to_do": [
+        "Don't keep driving if anything changes or gets worse.",
+        "Don't assume it's minor just because it's not obvious.",
+        "Don't skip mentioning any warning lights when you call."
+      ],
+      "before_help_checklist": [
+        "Note any warning lights, sounds, or smells.",
+        "Have your policy or membership number ready.",
+        "Stay somewhere safe while you wait.",
+        "Ask the dispatcher what to expect if they can't fix it roadside."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, I'm having car trouble at [location description] and I'm not sure exactly what's wrong.",
+          "It's safe to approach and the vehicle can move.",
+          "Can you confirm ETA, and what happens if it needs a tow instead?"
+        ]
+      },
+      "next_action": "If roadside assistance can't resolve it, use the Tow Cost Estimator next."
+    },
+    "reassess": {
+      "result_type": "reassess",
+      "title": "Safe to Reassess",
+      "summary": "Nothing here points to a safety-critical issue. If you're close to home or a shop, driving cautiously may be reasonable — but stay alert.",
+      "confidence": "low",
+      "confidence_text": "This is the least certain outcome — it depends on details this tool can't see or measure. When in doubt, treat it more cautiously than this.",
+      "not_to_do": [
+        "Don't continue if anything changes — new noise, smell, warning light, or handling issue.",
+        "Don't drive further than necessary \"just to see.\"",
+        "Don't ignore a gut feeling that something's wrong."
+      ],
+      "before_help_checklist": [
+        "Plan the most direct, low-speed route to safety.",
+        "Keep your phone charged and accessible.",
+        "Pull over immediately if anything changes.",
+        "Have a roadside or tow number ready just in case."
+      ],
+      "phone_script": {
+        "intro": "Keep this ready in case things change on the way.",
+        "lines": [
+          "Hi, I'm currently driving cautiously from [location description] toward [destination] and noticed [symptom].",
+          "I may need a tow or roadside help if anything changes.",
+          "Can you confirm ETA and pricing in case I call back?"
+        ]
+      },
+      "next_action": "If you're not confident, treat this as a tow situation instead — it's the safer default."
+    },
+    "tow_general": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "With an unclear symptom, no roadside coverage, and no safe destination nearby, a tow is the safer default.",
+      "confidence": "moderate",
+      "confidence_text": "This isn't a clear emergency, but without coverage or a short safe drive, towing is the more reliable choice than guessing.",
+      "not_to_do": [
+        "Don't drive further to \"test it out\" on an unclear symptom.",
+        "Don't skip asking for a total price before the truck is dispatched.",
+        "Don't agree to storage before asking if it can be avoided."
+      ],
+      "before_help_checklist": [
+        "Note any warning lights, sounds, or smells to describe.",
+        "Confirm exactly where you want the vehicle taken.",
+        "Keep your keys and paperwork accessible.",
+        "Ask about total price before the truck arrives."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, I'm having car trouble at [location description] and I'm not sure exactly what's wrong.",
+          "I don't have roadside coverage and I'm not near a safe destination.",
+          "Can you confirm total price, ETA, mileage charges, and where it will be taken?"
+        ]
+      },
+      "next_action": "Use the Tow Cost Estimator to sanity-check the price before you agree."
+    }
+  }
+}

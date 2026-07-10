@@ -66,6 +66,8 @@ If you have roadside assistance through your insurance, check your coverage befo
 - Never leave a child or pet in the vehicle while you wait roadside, especially in summer heat.
 - Keep emergency contacts in your phone, not just in your head. A breakdown is the wrong time to recall a number from memory.
 
+If you're weighing whether this needs a tow versus roadside help, [this quick decision tool](/tools/should-i-call-a-tow-truck/) walks through it question by question.
+
 ## Common Questions
 
 **Q: Can I drive my car to the mechanic after the brakes failed but seem to be working again?**

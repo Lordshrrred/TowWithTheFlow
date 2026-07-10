@@ -47,7 +47,7 @@ faq:
 | Radiator replacement | $400 – $900 |
 | Head gasket repair | $1,500 – $3,000+ |
 
-The head gasket number is why you stop the car immediately. A $150 thermostat fix ignored becomes a $2,000 head gasket job fast.
+The head gasket number is why you stop the car immediately. A $150 thermostat fix ignored becomes a $2,000 head gasket job fast. If you're not sure whether this is bad enough to stop for, [our decision tool](/tools/should-i-call-a-tow-truck/) can help you decide in under a minute.
 
 ## Stay Safe
 

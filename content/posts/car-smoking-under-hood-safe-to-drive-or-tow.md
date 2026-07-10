@@ -68,7 +68,7 @@ The cooling system operates under pressure and reaches temperatures over 200°F.
 
 Even if smoke stops after you park, internal damage continues. Metal components expand and warp from excessive heat. Seals fail permanently once overheated. What starts as a $300 repair becomes a $3,000 engine rebuild if you keep driving.
 
-Professional tow trucks carry proper equipment to handle disabled vehicles safely. They secure your car correctly and transport it without additional damage to the transmission or drivetrain.
+Professional tow trucks carry proper equipment to handle disabled vehicles safely. They secure your car correctly and transport it without additional damage to the transmission or drivetrain. Not sure if your situation calls for a tow or just roadside assistance? [Should I Call a Tow Truck?](/tools/should-i-call-a-tow-truck/) can tell you which.
 
 ## Common Questions
 

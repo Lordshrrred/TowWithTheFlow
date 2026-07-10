@@ -53,7 +53,7 @@ A battery test at AutoZone, O'Reilly, or Advance Auto is free and takes five min
 - **When jump starting**, connect positive to positive, negative to a metal ground, not directly to the dead battery's negative terminal. This reduces the small risk of a spark near battery gases.
 - **If the car has started and then dies again the same day**, do not assume you fixed it. A battery that fails once will fail again. Get it tested.
 
-A clicking car in a parking lot is annoying but manageable. A clicking car on the highway is a different story, know when to call for help instead of trying to fix it roadside.
+A clicking car in a parking lot is annoying but manageable. A clicking car on the highway is a different story, know when to call for help instead of trying to fix it roadside. If you're still unsure whether to call roadside assistance or a tow, [Should I Call a Tow Truck?](/tools/should-i-call-a-tow-truck/) will tell you in a few quick questions.
 
 ## Common Questions
 
