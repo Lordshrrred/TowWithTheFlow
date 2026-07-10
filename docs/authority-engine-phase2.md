@@ -36,6 +36,25 @@ The selector intentionally does not publish anything. It only identifies the
 highest-priority unfinished asset so the authority workflow can build correctly
 instead of forcing incomplete work into a daily deadline.
 
+## Foundation Reconciliation
+
+The authority foundation was committed as `5e4addf` locally and rebased to
+`b64a358` on the current `origin/main` history. That commit replaces the earlier
+fragile uncommitted inline calculator experiment. Missing prior UX work was
+never committed and should not be treated as recoverable production state.
+
+The next authority asset, the Tow Cost Estimator, should be built as a fresh,
+separate scoped work item after the foundation is reviewed. Do not carry forward
+raw HTML mixed into Markdown for calculator implementation. Use reusable Hugo
+layouts, partials, data files, and component patterns so future tools can share
+validation, metadata, related-resource links, and schema behavior.
+
+The current favicon assets are an interim site icon derived from the existing
+Tow With The Flow name and towing/road visual language. They are not a final
+brand identity. A permanent logo/favicon pass should use approved source
+artwork, preferably a simple tow hook, road, or flow mark that remains legible
+at 16px.
+
 ## Cannibalization Review
 
 Use:

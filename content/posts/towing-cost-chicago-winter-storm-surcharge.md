@@ -20,7 +20,7 @@ faq:
 
 ## What To Do
 
-1. **Call your insurance roadside assistance first**. Most major insurers cover up to $100-150 in towing costs, which helps offset storm surcharges. Check if [GEICO roadside assistance covers enough](../geico-roadside-assistance-towing-coverage-how-much-pays/) for your situation.
+1. **Call your insurance roadside assistance first**. Most major insurers cover up to $100-150 in towing costs, which helps offset storm surcharges. Check if [GEICO roadside assistance covers enough](/geico-roadside-assistance-towing-coverage-how-much-pays/) for your situation.
 
 2. **Get quotes from 3-5 towing companies**. Storm pricing varies wildly between operators. Some charge flat storm fees ($75-150), others use percentage multipliers (1.5x to 3x normal rates).
 
@@ -55,7 +55,7 @@ faq:
 - Suburb to suburb (8 miles): $275 (normally $150)
 - Lake Shore Drive rescue: $550 (normally $225)
 
-Similar to [tow truck costs in Denver snow emergencies](../tow-truck-cost-denver-snow-emergency/), Chicago operators justify high storm rates due to driver safety risks, equipment wear, and limited availability.
+Similar to [tow truck costs in Denver snow emergencies](/tow-truck-cost-denver-snow-emergency/), Chicago operators justify high storm rates due to driver safety risks, equipment wear, and limited availability.
 
 
 ![roadside assistance highway](/images/towing-cost-chicago-winter-storm-surcharge/bottom.jpg)
@@ -68,7 +68,7 @@ Similar to [tow truck costs in Denver snow emergencies](../tow-truck-cost-denver
 - Share your location with family before calling for tow
 - Stay with your vehicle unless emergency responders tell you otherwise
 - Take photos of your car's location for the tow truck dispatcher
-- If [your insurance covers towing but has limits](../aaa-towing-coverage-runs-out-what-happens-cost/), know your annual usage before the storm hits
+- If [your insurance covers towing but has limits](/aaa-towing-coverage-runs-out-what-happens-cost/), know your annual usage before the storm hits
 
 Chicago's winter storm towing market operates on supply and demand. During major storms like the 2022 blizzard, some companies temporarily stopped accepting new calls. The smart move is calling early when storm warnings hit, before conditions deteriorate and prices spike.
 
