@@ -47,7 +47,7 @@
     "current_gsc_rows": 0,
     "previous_gsc_rows": 0
   },
-  "generated_at": "2026-07-10T20:15:06.800975+00:00",
+  "generated_at": "2026-07-10T20:17:05.267105+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -64,7 +64,7 @@
     ]
   },
   "request_counts": {
-    "ga4": 1,
+    "ga4": 0,
     "gsc": 0
   },
   "statuses": [
@@ -76,8 +76,8 @@
       "status": "ok"
     },
     {
-      "cached": false,
-      "message": "Fetched GA4 organic landing-page behavior.",
+      "cached": true,
+      "message": "Loaded GA4 organic landing-page data from private cache.",
       "rows": 56,
       "source": "ga4",
       "status": "ok"
@@ -86,11 +86,11 @@
   "summary": {
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
-    "generated_at": "2026-07-10T20:15:06.800975+00:00",
+    "generated_at": "2026-07-10T20:17:05.267105+00:00",
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
     "request_counts": {
-      "ga4": 1,
+      "ga4": 0,
       "gsc": 0
     },
     "statuses": [
@@ -102,8 +102,8 @@
         "status": "ok"
       },
       {
-        "cached": false,
-        "message": "Fetched GA4 organic landing-page behavior.",
+        "cached": true,
+        "message": "Loaded GA4 organic landing-page data from private cache.",
         "rows": 56,
         "source": "ga4",
         "status": "ok"

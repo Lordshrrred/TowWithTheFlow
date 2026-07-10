@@ -1,12 +1,12 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-07-10T20:15:06.800975+00:00
+Generated: 2026-07-10T20:17:05.267105+00:00
 
 ## 1. Data Connection/Freshness
 
 - **search_console**: ok from private cache. Loaded Search Console data from private cache. Rows: 0.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 56.
-- **Normal-run API requests**: Search Console 0; GA4 1; paid SERP/LLM/web-search 0.
+- **ga4**: ok from private cache. Loaded GA4 organic landing-page data from private cache. Rows: 56.
+- **Normal-run API requests**: Search Console 0; GA4 0; paid SERP/LLM/web-search 0.
 
 ## 2. Top Organic Landing Pages
 No Search Console landing-page data available.
@@ -39,7 +39,7 @@ No backlink-supported organic winners found yet.
 No Search Console asset-pattern evidence yet. Backlog order remains the fallback.
 
 ## 12. Top Five Actions
-No evidence-ranked actions yet. Configure Search Console and GA4 credentials, then rerun.
+No evidence-ranked actions yet — Search Console and GA4 are connected, but current traffic/impressions haven't crossed the action thresholds. Expected for a newly verified property or low current volume; rerun as more data accumulates.
 
 ## 13. Data Limitations
 
