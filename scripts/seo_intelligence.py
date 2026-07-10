@@ -199,7 +199,13 @@ def fetch_search_console(force_refresh: bool, max_age_hours: int) -> tuple[dict[
 
     payload = {"site_url": site_url, "ranges": ranges, "current": current, "previous": previous}
     write_json(cache_path, payload)
-    return payload, ApiStatus("search_console", "ok", "Fetched Search Console query/page data.", False, len(current) + len(previous))
+    row_count = len(current) + len(previous)
+    message = (
+        "Fetched Search Console query/page data."
+        if row_count
+        else "Connected — awaiting data. Search Console can take 24-48 hours to populate a newly verified property."
+    )
+    return payload, ApiStatus("search_console", "ok", message, False, row_count)
 
 
 def run_ga4_report(property_id: str, token: str, metrics: list[str]) -> dict[str, Any]:
