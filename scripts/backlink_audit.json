@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T11:23:38.893918+00:00",
+  "generated_at": "2026-07-10T15:07:19.770900+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1873,6 +1873,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/11/car-smoking-under-hood-safe-to-drive-or-tow/",
+        "verified": true
+      }
+    },
+    "car-spun-out-on-highway-what-to-do-after": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-spun-out-on-highway-what-to-do.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-spun-out-on-highway-what-to-do-after-it-happens-explained-44l1",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-spun-out-on-highway-what-to-do-after-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821755692032671744/car-spun-out-on-highway-what-to-do-after",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/10/car-spun-out-on-highway-what-to-do-after/",
         "verified": true
       }
     },
@@ -7651,24 +7678,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 295,
-      "verified": 295
+      "checked": 296,
+      "verified": 296
     },
     "dev": {
-      "checked": 225,
-      "verified": 225
+      "checked": 226,
+      "verified": 226
     },
     "feeder": {
+      "checked": 294,
+      "verified": 294
+    },
+    "tumblr": {
       "checked": 293,
       "verified": 293
     },
-    "tumblr": {
-      "checked": 292,
-      "verified": 292
-    },
     "wordpress": {
-      "checked": 295,
-      "verified": 295
+      "checked": 296,
+      "verified": 296
     }
   }
 }
