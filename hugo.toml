@@ -17,6 +17,13 @@ enableRobotsTXT = true
   siteName = "Tow With The Flow"
   siteUrl = "https://towwiththeflow.com"
   googleAnalytics = "G-WLVMQG7X44"
+  # LocalBusiness/AutomotiveBusiness schema on local posts (see serviceArea
+  # frontmatter). Left blank deliberately — do not fill in a fake phone
+  # number or address. Only set businessPhone/businessAddress once there's
+  # a real one; the schema block simply omits whatever's blank.
+  businessName = "Tow With The Flow"
+  businessPhone = ""
+  businessAddress = ""
 
 [permalinks]
   posts = "/:slug/"

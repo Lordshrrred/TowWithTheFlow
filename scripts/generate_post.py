@@ -55,14 +55,18 @@ POSTS_DIR.mkdir(parents=True, exist_ok=True)
 
 SYSTEM_PROMPT = """You are writing a page for towwiththeflow.com, a car breakdown and roadside emergency help site. Write in the voice of a knowledgeable mechanic who is direct and wastes no words.
 
-TARGET LENGTH: 550-950 words total (body only, not counting frontmatter). Be thorough but tight. Every sentence must earn its place. No filler, no padding, no AI-sounding transitions, no conclusions that just restate what you said.
+TARGET LENGTH: 700-1100 words total (body only, not counting frontmatter). Be thorough but tight. Every sentence must earn its place. No filler, no padding, no AI-sounding transitions, no conclusions that just restate what you said.
 
 STRUCTURE:
 1. Quick Answer block: 50-80 words inside a markdown blockquote starting with **Quick Answer:**
-2. What To Do: numbered steps, direct and actionable
-3. What It Might Cost: if relevant, keep it short
-4. Stay Safe: if relevant, bullet points only
-5. Common Questions: exactly 2-3 short Q&A pairs, formatted EXACTLY like this (this exact format is required, it gets parsed programmatically):
+2. 3-5 body sections. EVERY section heading (H2, "## ...") MUST be phrased as a real question, the way someone would actually type it or ask a mechanic out loud. Not a label, a question.
+   - Bad: "## What To Do"
+   - Good: "## What Do I Do If My Car Won't Start on I-25?" (local) or "## What Do I Do If My Brakes Fail While Driving?" (general)
+   - Cover the same ground the old fixed sections did (immediate steps, cost, safety) but let the specific keyword drive the actual questions. Not every post needs a cost question or a safety question. Use judgment: ask what this reader would actually ask next.
+3. DIRECT-ANSWER-FIRST (REQUIRED, every section): The first 1-2 sentences under EVERY H2 must directly answer that section's question in plain language, before any steps, list, or table. A reader skimming just the first sentence of each section should get the real answer, not a setup sentence.
+   - Bad: "There are several factors that affect towing cost in Denver. Let's look at them:" (this is a setup sentence, not an answer)
+   - Good: "A local tow in Denver runs $75 to $150 for the first few miles. Here's the full breakdown:"
+4. Common Questions: exactly 5 Q&A pairs, formatted EXACTLY like this (this exact format is required, it gets parsed programmatically):
 
 ## Common Questions
 
@@ -72,10 +76,18 @@ A: [direct answer, 1-3 sentences, no filler]
 **Q: [second question]?**
 A: [answer]
 
+(continue for a total of 5 pairs)
+
 Pick questions a reader would actually type into Google right after this one, not generic filler questions. Answers must be genuinely useful on their own, not just a teaser pointing back into the article.
+
+SPECIFIC DETAIL (REQUIRED):
+Every post must include at least one concrete, real, verifiable detail, not generic filler. For local posts: a real highway name/number, a real neighborhood, a real interchange, or similarly specific local detail (e.g. "I-25 near the Colorado Boulevard exit," "the foothills west of C-470"). For general posts: a real part name, a real symptom, a real brand/model detail, or a similarly specific mechanical detail. Never fabricate a statistic, survey result, or percentage that you cannot ground in something real, if you're not sure a number is true, describe the situation instead of inventing a number.
+
+NEVER invent a phone number, direct dial extension, street address, or named contact for any third party (tow company, government agency, dispatch line, hospital, etc.), even if it sounds plausible. You cannot verify these are current or correct, and a wrong number in roadside-emergency content is actively dangerous. It is fine to reference well-known, genuinely universal services by name only (911, 511 for state road conditions, AAA, a state DOT's traffic app by name) without a specific phone number attached. Do not state or imply a specific agency's dispatch number.
 
 INTERNAL LINKING (REQUIRED):
 The user message will include a list of existing articles on towwiththeflow.com. Include 2-4 internal links using markdown [anchor text](/{slug}/) where the link is genuinely useful to the reader mid-sentence or at the end of a relevant paragraph. Only link to articles that are semantically related to the topic being written. Never dump a link list. Never force a link that does not fit.
+- If this is a LOCAL post and the article list includes other posts about the SAME city, prefer linking to those same-city posts over generic ones when they're genuinely relevant (e.g. a Denver towing-cost post linking to another Denver post about response times or insurance, rather than a Phoenix post about the same topic). Don't force a same-city link that isn't actually relevant.
 
 BACKLINK REQUIREMENT — NON-NEGOTIABLE:
 Every post MUST end with EXACTLY this block (substituting the actual slug):
@@ -408,7 +420,7 @@ def mark_done(keyword: str):
     KEYWORDS_FILE.write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
-def generate_post(keyword: str, post_index: list[tuple[str, str]] | None = None) -> str:
+def generate_post(keyword: str, post_index: list[tuple[str, str]] | None = None, city: str | None = None) -> str:
     """Call Claude API and return Hugo markdown content"""
     if not ANTHROPIC_API_KEY:
         print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
@@ -418,24 +430,40 @@ def generate_post(keyword: str, post_index: list[tuple[str, str]] | None = None)
 
     index_section = ""
     if post_index:
-        lines = [f"/{slug}/ | {title}" for slug, title in post_index[:80]]
+        entries = post_index[:80]
+        note = ""
+        if city:
+            # Surface same-city posts first so Claude actually sees them
+            # within the 80-entry window, and can prefer linking to them.
+            same_city = [(s, t) for s, t in post_index if city.split(",")[0].lower() in t.lower()]
+            other = [(s, t) for s, t in post_index if (s, t) not in same_city]
+            entries = (same_city + other)[:80]
+            note = f"\n\nEntries marked [SAME CITY] are other {city} posts — prefer linking to these when relevant."
+        lines = [
+            f"/{slug}/ | {title}" + (" [SAME CITY]" if city and city.split(",")[0].lower() in title.lower() else "")
+            for slug, title in entries
+        ]
         index_section = (
             "\n\nEXISTING ARTICLES ON towwiththeflow.com (for internal linking):\n"
             + "\n".join(lines)
             + "\n\nInclude 2-4 internal links to semantically related articles from this list."
+            + note
         )
+
+    city_note = f"\nThis is a LOCAL post for {city}. Use real {city.split(',')[0]} details (highways, neighborhoods, interchanges)." if city else ""
 
     user_message = (
         f"Write a complete Hugo markdown post for the keyword: \"{keyword}\"\n"
         f"Today's date: {today}\n"
         f"Make it genuinely useful for someone searching this exact phrase in a stressful moment."
+        f"{city_note}"
         f"{index_section}"
     )
 
     message = create_message(
         client,
         model="claude-sonnet-4-6",
-        max_tokens=2200,
+        max_tokens=3200,
         system=[{
             "type": "text",
             "text": SYSTEM_PROMPT,
@@ -502,6 +530,37 @@ LOCAL_INDICATORS = [
 def is_local(keyword: str) -> bool:
     kw = keyword.lower()
     return any(loc in kw for loc in LOCAL_INDICATORS)
+
+
+# Real city name -> "City, ST" display string, for LocalBusiness/areaServed
+# schema and for grouping local posts by city. Only actual place names —
+# not the generic "near me" / "local" / "nearby" indicators above.
+CITY_STATE = {
+    "denver": "Denver, CO", "houston": "Houston, TX", "phoenix": "Phoenix, AZ",
+    "atlanta": "Atlanta, GA", "chicago": "Chicago, IL", "seattle": "Seattle, WA",
+    "dallas": "Dallas, TX", "miami": "Miami, FL", "los angeles": "Los Angeles, CA",
+    "new york": "New York, NY", "las vegas": "Las Vegas, NV",
+    "san antonio": "San Antonio, TX", "austin": "Austin, TX",
+    "nashville": "Nashville, TN", "portland": "Portland, OR",
+    "minneapolis": "Minneapolis, MN", "detroit": "Detroit, MI",
+    "charlotte": "Charlotte, NC", "indianapolis": "Indianapolis, IN",
+    "columbus": "Columbus, OH", "san diego": "San Diego, CA",
+    "jacksonville": "Jacksonville, FL", "memphis": "Memphis, TN",
+    "baltimore": "Baltimore, MD", "boston": "Boston, MA",
+    "fort worth": "Fort Worth, TX", "el paso": "El Paso, TX",
+    "oklahoma city": "Oklahoma City, OK", "tucson": "Tucson, AZ",
+    "albuquerque": "Albuquerque, NM",
+}
+
+
+def extract_city(text: str) -> str | None:
+    """Return the "City, ST" display string for the first recognized real
+    city name in the text, or None (e.g. for "near me" / general keywords)."""
+    t = text.lower()
+    for city, display in CITY_STATE.items():
+        if city in t:
+            return display
+    return None
 
 
 def pick_keyword(post_type: str) -> tuple[str, int | None]:
@@ -639,11 +698,14 @@ def main():
     post_type = args.type
 
     keyword, score = pick_keyword(post_type)
+    city = extract_city(keyword)
+    if city:
+        print(f"Detected city: {city}")
 
     post_index = load_post_index()
     print(f"Loaded {len(post_index)} existing posts for internal linking")
 
-    content = generate_post(keyword, post_index)
+    content = generate_post(keyword, post_index, city=city)
     slug = extract_slug(content, keyword)
     filename = POSTS_DIR / f"{slug}.md"
 
@@ -673,6 +735,17 @@ def main():
     # so the theme can emit FAQPage JSON-LD from real, visible content.
     faq_pairs = extract_faq_pairs(content)
     content = insert_faq_frontmatter(content, build_faq_yaml(faq_pairs))
+
+    # Local posts get a serviceArea field — drives AutomotiveBusiness schema
+    # and the "Nearby <City> Guides" cross-linking in the theme.
+    if city and not re.search(r'^serviceArea:\s*.+$', content, re.MULTILINE):
+        content = re.sub(
+            r'(^clusters:\s*.+$)',
+            f'\\1\nserviceArea: "{city}"',
+            content,
+            count=1,
+            flags=re.MULTILINE,
+        )
 
     # Add images from Pexels
     content = add_images_to_post(content, slug)

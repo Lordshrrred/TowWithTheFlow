@@ -63,6 +63,26 @@
       </div>
       {{ end }}
 
+      <!-- Nearby City Guides — other posts serving the same city, so local
+           posts cross-link to each other (e.g. Denver towing-cost post ->
+           other Denver posts) even when they land in different topic
+           clusters. Zero API cost, automatic, same-city match only. -->
+      {{ with .Params.serviceArea }}
+        {{ $city := . }}
+        {{ $cityMates := where $.Site.RegularPages "Params.serviceArea" $city }}
+        {{ $cityMates = $cityMates | complement (slice $currentPage) | first 5 }}
+        {{ with $cityMates }}
+        <div class="related-guides">
+          <h2>&#128205; More {{ $city }} Guides</h2>
+          <ul>
+            {{ range . }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      {{ end }}
+
       <!-- Helpful Rating Widget -->
       <div class="rating-widget" id="rating-widget">
         <p class="rating-widget__question">Was this guide helpful?</p>

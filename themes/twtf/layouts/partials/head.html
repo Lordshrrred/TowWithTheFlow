@@ -123,6 +123,22 @@
 }
 </script>
 {{ end }}
+{{ with .Params.serviceArea }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": {{ $.Site.Params.businessName | default $.Site.Title | jsonify | safeJS }},
+  "url": {{ $.Site.Params.siteUrl | jsonify | safeJS }}{{ with $.Site.Params.businessPhone }},
+  "telephone": {{ . | jsonify | safeJS }}{{ end }}{{ with $.Site.Params.businessAddress }},
+  "address": {{ . | jsonify | safeJS }}{{ end }},
+  "areaServed": {
+    "@type": "City",
+    "name": {{ . | jsonify | safeJS }}
+  }
+}
+</script>
+{{ end }}
 {{ else }}
 <script type="application/ld+json">
 {
