@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T20:12:24.577058+00:00",
+  "generated_at": "2026-07-10T20:13:58.164929+00:00",
   "keywords": {
     "total": 802,
     "live": 323,
@@ -153,24 +153,24 @@
   "intelligence": {
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
-    "generated_at": "2026-07-10T20:12:23.838084+00:00",
+    "generated_at": "2026-07-10T20:13:57.433005+00:00",
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
     "request_counts": {
       "ga4": 2,
-      "gsc": 2
+      "gsc": 0
     },
     "statuses": [
       {
-        "cached": false,
-        "message": "Connected \u2014 awaiting data. Search Console can take 24-48 hours to populate a newly verified property.",
+        "cached": true,
+        "message": "Loaded Search Console data from private cache.",
         "rows": 0,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
-        "message": "HTTP Error 400: Bad Request",
+        "message": "GA4 runReport failed (400): {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Field dateRange is not a dimension. This field can be used in a Pivot or OrderBy like a dimension, but does not need to be listed in the Dimensions.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
         "rows": 0,
         "source": "ga4",
         "status": "error"

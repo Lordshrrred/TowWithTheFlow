@@ -1,12 +1,19 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-07-10T20:12:23.838084+00:00
+Generated: 2026-07-10T20:13:57.433005+00:00
 
 ## 1. Data Connection/Freshness
 
-- **search_console**: ok. Connected — awaiting data. Search Console can take 24-48 hours to populate a newly verified property. Rows: 0.
-- **ga4**: error. HTTP Error 400: Bad Request Rows: 0.
-- **Normal-run API requests**: Search Console 2; GA4 2; paid SERP/LLM/web-search 0.
+- **search_console**: ok from private cache. Loaded Search Console data from private cache. Rows: 0.
+- **ga4**: error. GA4 runReport failed (400): {
+  "error": {
+    "code": 400,
+    "message": "Field dateRange is not a dimension. This field can be used in a Pivot or OrderBy like a dimension, but does not need to be listed in the Dimensions.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ Rows: 0.
+- **Normal-run API requests**: Search Console 0; GA4 2; paid SERP/LLM/web-search 0.
 
 ## 2. Top Organic Landing Pages
 No Search Console landing-page data available.
