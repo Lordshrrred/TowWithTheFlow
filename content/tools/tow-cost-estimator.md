@@ -7,6 +7,12 @@ assetType: "calculator"
 toolConfig: "tow-cost-estimator"
 clusters: ["towing-cost"]
 syndicationMode: "teaser"
+whenToUse: "Before you agree to a price over the phone"
+problemSolved: "Know whether the quote you're hearing is reasonable"
+timeEstimate: "About 1 minute"
+relatedTopics:
+  - { label: "Towing Cost", url: "/clusters/towing-cost/" }
+  - { label: "Insurance & Coverage", url: "/clusters/insurance-coverage/" }
 relatedPosts:
   - "average-towing-cost-per-mile-usa"
   - "battery-dead-but-lights-turn-on"

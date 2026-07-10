@@ -24,6 +24,17 @@ enableRobotsTXT = true
   businessName = "Tow With The Flow"
   businessPhone = ""
   businessAddress = ""
+  logo = "/apple-touch-icon.png"
+  # Live syndication blog URLs, for Organization schema `sameAs`. Dev.to is
+  # deliberately excluded — it rotates across 3 different account handles,
+  # which doesn't fit sameAs's "this is the same entity" purpose. Replace/
+  # extend with real social profile URLs (Twitter/X, Facebook, etc.) if any
+  # exist later.
+  sameAs = [
+    "https://towwiththeflow.tumblr.com",
+    "https://towingandflowingroadsidedenver.blogspot.com",
+    "https://towwiththeflowyo.wordpress.com",
+  ]
 
 [permalinks]
   posts = "/:slug/"

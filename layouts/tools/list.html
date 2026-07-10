@@ -18,14 +18,25 @@
     </div>
     <p class="term-intro">Car already stopped and you're not sure what to do? Start with <a href="{{ "/tools/should-i-call-a-tow-truck/" | relURL }}">Should I Call a Tow Truck?</a> Just want to know what it'll cost before you call? Use the <a href="{{ "/tools/tow-cost-estimator/" | relURL }}">Tow Cost Estimator</a>.</p>
     {{ with .Pages }}
-    <div class="card-grid">
+    <div class="tool-card-grid">
       {{ range . }}
-      <a href="{{ .Permalink }}" class="card">
-        <div class="card__icon">{{ partial "tools/asset-icon.html" . }}</div>
-        <h2 class="card__title">{{ .Title }}</h2>
-        <p class="card__desc">{{ .Params.description | default .Summary }}</p>
-        <span class="card__link">Open tool</span>
-      </a>
+      <div class="tool-card">
+        <div class="tool-card__top">
+          <span class="tool-card__icon">{{ partial "tools/asset-icon.html" . }}</span>
+          <span class="tool-card__type">{{ partial "tools/asset-label.html" . }}</span>
+        </div>
+        <h2 class="tool-card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p class="tool-card__desc">{{ .Params.description | default .Summary }}</p>
+        {{ with .Params.whenToUse }}<p class="tool-card__row"><strong>When to use it:</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.problemSolved }}<p class="tool-card__row"><strong>What it solves:</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.timeEstimate }}<p class="tool-card__time">&#9201;&#65039; {{ . }}</p>{{ end }}
+        {{ with .Params.relatedTopics }}
+        <div class="post-tags">
+          {{ range . }}<a href="{{ .url | relURL }}" class="tag">{{ .label }}</a>{{ end }}
+        </div>
+        {{ end }}
+        <a href="{{ .Permalink }}" class="tool-card__link">Open tool &#8250;</a>
+      </div>
       {{ end }}
     </div>
     {{ end }}

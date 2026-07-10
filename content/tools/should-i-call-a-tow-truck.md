@@ -7,6 +7,12 @@ assetType: "decision-tool"
 toolConfig: "should-i-call-a-tow-truck"
 clusters: ["vehicle-safety"]
 syndicationMode: "teaser"
+whenToUse: "The moment your car stops working and you're not sure what to do"
+problemSolved: "Decide between a tow, roadside assistance, or calling 911"
+timeEstimate: "About 1 minute"
+relatedTopics:
+  - { label: "Vehicle Safety", url: "/clusters/vehicle-safety/" }
+  - { label: "Roadside Help", url: "/clusters/roadside-help/" }
 relatedPosts:
   - "car-died-while-driving-what-now"
   - "car-overheated-can-i-drive-it"

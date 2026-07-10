@@ -76,6 +76,34 @@
   </div>
 </section>
 
+<!-- Roadside Tools -->
+{{ $tools := where .Site.RegularPages "Section" "tools" }}
+{{ if $tools }}
+<section class="section--alt">
+  <div class="container">
+    <h2 class="section-title">Roadside Tools</h2>
+    <p class="term-intro">Skip the guesswork. Answer a few questions and get a real answer in about a minute — no signup, no app, no AI guessing.</p>
+    <div class="tool-showcase">
+      {{ range first 2 $tools }}
+      <a href="{{ .Permalink }}" class="tool-showcase__card">
+        <div class="tool-showcase__top">
+          <span class="tool-showcase__icon">{{ partial "tools/asset-icon.html" . }}</span>
+          <span class="tool-showcase__type">{{ partial "tools/asset-label.html" . }}</span>
+        </div>
+        <h3 class="tool-showcase__title">{{ .Title }}</h3>
+        <p class="tool-showcase__desc">{{ .Params.whenToUse | default .Params.description }}</p>
+        {{ with .Params.timeEstimate }}<span class="tool-showcase__time">&#9201;&#65039; {{ . }}</span>{{ end }}
+        <span class="tool-showcase__link">Open tool &#8250;</span>
+      </a>
+      {{ end }}
+    </div>
+    <p style="text-align:center; margin-top: 0;">
+      <a href="{{ "/tools/" | relURL }}" class="btn">See All Roadside Tools</a>
+    </p>
+  </div>
+</section>
+{{ end }}
+
 <!-- AD SLOT: sidebar -->
 
 <!-- Latest Guides -->
@@ -83,7 +111,7 @@
   <div class="container">
     <h2 class="section-title">Latest Guides</h2>
     <div class="card-grid">
-      {{ range first 6 .Site.RegularPages }}
+      {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
       <div class="card">
         <h3 class="card__title">{{ .Title }}</h3>
         <p class="card__desc">{{ .Params.description | default .Summary }}</p>

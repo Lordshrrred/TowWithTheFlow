@@ -37,7 +37,9 @@
   "@type": "Organization",
   "name": {{ .Site.Params.siteName | jsonify | safeJS }},
   "url": {{ .Site.Params.siteUrl | jsonify | safeJS }},
-  "description": {{ .Site.Params.description | jsonify | safeJS }}
+  "description": {{ .Site.Params.description | jsonify | safeJS }}{{ with .Site.Params.logo }},
+  "logo": {{ . | absURL | jsonify | safeJS }}{{ end }}{{ with .Site.Params.sameAs }},
+  "sameAs": {{ . | jsonify | safeJS }}{{ end }}
 }
 </script>
 {{ if .IsHome }}
@@ -325,6 +327,40 @@ padding:5.4rem 0 4.2rem;text-align:center;position:relative;overflow:hidden}
 .card__desc{font-size:.95rem;color:var(--text-soft);flex:1;margin-bottom:1.1rem;line-height:1.6}
 .card__link{color:var(--text);font-weight:700;font-size:.92rem;align-self:flex-start;transition:color .15s}
 .card__link:hover{color:var(--accent);text-decoration:none}
+
+/* Tool Hub — signature roadside experiences, not an app-store grid */
+.tool-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-bottom:2rem}
+.tool-card{background:linear-gradient(180deg,rgba(15,26,45,.92),rgba(11,20,34,.88));border:1px solid var(--border);border-radius:calc(var(--radius) + 4px);padding:1.75rem;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .18s}
+.tool-card::before{content:'';position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--accent),transparent);opacity:.85}
+.tool-card:hover{border-color:var(--border-strong);box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.tool-card__top{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+.tool-card__icon{font-size:1.6rem;line-height:1;width:2.6rem;height:2.6rem;display:inline-flex;align-items:center;justify-content:center;border-radius:.85rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.05);flex:none}
+.tool-card__type{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border:1px solid rgba(90,162,255,.2);border-radius:999px;padding:.3rem .7rem}
+.tool-card__title{margin:0 0 .6rem;font-size:1.35rem}
+.tool-card__title a{color:var(--text);transition:color .15s}
+.tool-card__title a:hover{color:var(--accent);text-decoration:none}
+.tool-card__desc{color:var(--text-soft);font-size:.95rem;line-height:1.6;margin-bottom:.9rem}
+.tool-card__row{font-size:.88rem;color:var(--text-soft);line-height:1.55;margin-bottom:.5rem}
+.tool-card__row strong{color:var(--text)}
+.tool-card__time{font-size:.82rem;color:var(--text-dim);margin-bottom:1rem}
+.tool-card .post-tags{margin-top:0;margin-bottom:1.2rem}
+.tool-card__link{display:inline-block;color:var(--text);font-weight:700;font-size:.92rem;transition:color .15s}
+.tool-card__link:hover{color:var(--accent);text-decoration:none}
+
+/* Homepage "Roadside Tools" showcase — same signature-card language, condensed */
+.tool-showcase{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.35rem;margin-bottom:1.75rem}
+.tool-showcase__card{display:block;background:linear-gradient(180deg,rgba(15,26,45,.92),rgba(11,20,34,.88));border:1px solid var(--border);border-radius:calc(var(--radius) + 4px);padding:1.6rem;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .18s;text-decoration:none}
+.tool-showcase__card::before{content:'';position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--accent),transparent);opacity:.85}
+.tool-showcase__card:hover{border-color:var(--border-strong);box-shadow:var(--shadow-hover);transform:translateY(-3px);text-decoration:none}
+.tool-showcase__top{display:flex;align-items:center;gap:.65rem;margin-bottom:.9rem}
+.tool-showcase__icon{font-size:1.5rem;line-height:1;width:2.4rem;height:2.4rem;display:inline-flex;align-items:center;justify-content:center;border-radius:.8rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.05);flex:none}
+.tool-showcase__type{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.tool-showcase__title{margin:0 0 .5rem;font-size:1.25rem;color:var(--text)}
+.tool-showcase__desc{color:var(--text-soft);font-size:.92rem;line-height:1.55;margin-bottom:.8rem}
+.tool-showcase__time{display:block;font-size:.8rem;color:var(--text-dim);margin-bottom:.9rem}
+.tool-showcase__link{color:var(--text);font-weight:700;font-size:.9rem}
+.tool-showcase__card:hover .tool-showcase__link{color:var(--accent)}
+
 .section{padding:3.5rem 0}
 .section--alt{background:rgba(8,14,26,.62);border-top:1px solid rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.03);padding:3.5rem 0}
 .post-hero-image{margin:0 0 2.2rem}
