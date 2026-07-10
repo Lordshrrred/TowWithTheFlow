@@ -6,6 +6,7 @@ description: "Grinding brakes need immediate attention. Learn what causes the no
 tags: ["grinding brakes", "brake problems", "Phoenix towing", "brake repair", "emergency towing"]
 slug: "car-making-grinding-noise-when-braking-tow-cost-phoenix"
 clusters: ["towing-cost"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "Can I drive just a mile or two to get off the highway before calling a tow?"
     a: "Moving the car a very short distance to a safe shoulder or exit is reasonable, but keep your speed under 20 mph, leave a large gap in front of you, and stop the moment you reach a safe spot. Driving further than that risks scoring the rotors beyond repair or losing brake function entirely."

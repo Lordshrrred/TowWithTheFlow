@@ -6,6 +6,7 @@ description: "Nashville towing costs range $75-150 base fee plus $3-6 per mile. 
 tags: ["Nashville", "Tennessee", "towing cost", "roadside emergency"]
 slug: "towing-cost-nashville-tennessee"
 clusters: ["towing-cost"]
+serviceArea: "Nashville, TN"
 faq:
   - q: "How much will a tow truck cost me if I break down on I-40 in Nashville?"
     a: "Expect to pay $100-175 for the base hookup fee alone on an interstate like I-40, plus $3-6 per mile to your destination. If it is after 6 PM or on a weekend, add another $25-50 on top of that, putting most highway tows in the $200-400 range total."

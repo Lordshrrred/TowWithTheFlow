@@ -6,6 +6,7 @@ description: "Chicago night towing costs: AAA members pay $0-200, non-members fa
 tags: ["tow truck cost", "AAA towing", "Chicago towing", "night towing", "roadside assistance"]
 slug: "tow-truck-cost-aaa-vs-non-aaa-chicago-night"
 clusters: ["towing-cost"]
+serviceArea: "Chicago, IL"
 faq:
   - q: "Can I join AAA on the spot and get my car towed that same night?"
     a: "No. AAA requires a 72-hour waiting period after enrollment before towing benefits activate. You will need to arrange and pay for a private tow that night and can use AAA starting three days later."

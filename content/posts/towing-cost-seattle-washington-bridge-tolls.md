@@ -6,6 +6,7 @@ description: "Broken down in Seattle? Here's exactly what towing costs, how brid
 tags: ["towing cost", "Seattle", "Washington", "bridge tolls", "roadside emergency"]
 slug: "towing-cost-seattle-washington-bridge-tolls"
 clusters: ["towing-cost"]
+serviceArea: "Seattle, WA"
 faq:
   - q: "Can I refuse the tow truck that Washington State Patrol calls and use my own company instead?"
     a: "Yes, you have the right to decline the WSP-contracted tow and call your own company. Have your preferred tow company already on the line before WSP arrives so you can move quickly and avoid delays on the bridge."

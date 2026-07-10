@@ -6,6 +6,7 @@ description: "San Diego towing costs broken down by local and long distance. Kno
 tags: ["towing cost", "San Diego", "California", "roadside assistance", "long distance towing"]
 slug: "towing-cost-san-diego-california-local-vs-long-distance"
 clusters: ["towing-cost"]
+serviceArea: "San Diego, CA"
 faq:
   - q: "Will my insurance cover the tow so I don't have to pay out of pocket?"
     a: "Many major insurers like AAA, GEICO, and State Farm include roadside assistance that covers at least the first 5 to 10 miles of a tow. Check your mileage cap before calling a private company, because anything beyond your covered distance comes out of your pocket at the towing company's full per-mile rate."

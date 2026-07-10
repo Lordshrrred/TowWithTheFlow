@@ -6,6 +6,7 @@ description: "Got into an accident in Denver with no insurance? Here's exactly w
 tags: ["towing cost denver", "no insurance towing", "accident towing colorado", "denver towing", "roadside help"]
 slug: "towing-cost-in-denver-colorado-after-accident-no-insurance"
 clusters: ["towing-cost"]
+serviceArea: "Denver, CO"
 faq:
   - q: "Can I refuse the tow truck the police called and hire my own instead?"
     a: "Yes, as long as your vehicle is not actively blocking a lane of traffic, you have the right to call your own tow company in Denver. The police-dispatched truck from the rotation list may charge more, so getting an independent quote first can save you money."

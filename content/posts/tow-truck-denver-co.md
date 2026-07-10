@@ -6,6 +6,7 @@ description: "Need a tow truck in Denver, CO? Average costs, response times, bes
 tags: ["towing", "Colorado", "Denver", "roadside assistance Colorado", "tow truck Denver"]
 slug: "tow-truck-denver-co"
 clusters: ["towing-cost"]
+serviceArea: "Denver, CO"
 faq:
   - q: "Will my car insurance cover a tow in Denver, or do I have to pay out of pocket?"
     a: "Many auto insurance policies include an optional roadside assistance add-on for around $10-$15 per year, which typically covers a standard tow. Check your policy before calling a tow company, since paying out of pocket in Denver can easily run $100-$200 or more for a short haul."

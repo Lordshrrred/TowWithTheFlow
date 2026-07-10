@@ -6,6 +6,7 @@ description: "Broke down in Las Vegas? Here's exactly what towing costs in Nevad
 tags: ["towing cost", "Las Vegas", "Nevada", "roadside emergency", "breakdown"]
 slug: "towing-cost-in-las-vegas-nevada-after-breakdown"
 clusters: ["towing-cost"]
+serviceArea: "Las Vegas, NV"
 faq:
   - q: "Can I refuse a tow truck that shows up without me calling them?"
     a: "Yes, you can and should refuse any tow truck you did not call. In Las Vegas, unsolicited drivers near the Strip and freeway exits sometimes operate predatorily, and you have no obligation to use them. Wait for the company you contacted or the one sent by your insurance."

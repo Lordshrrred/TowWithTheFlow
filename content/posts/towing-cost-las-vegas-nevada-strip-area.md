@@ -6,6 +6,7 @@ description: "Towing costs on the Las Vegas Strip range from $125-300+ depending
 tags: ["towing cost", "las vegas strip", "nevada towing", "roadside assistance", "breakdown costs"]
 slug: "towing-cost-las-vegas-nevada-strip-area"
 clusters: ["towing-cost"]
+serviceArea: "Las Vegas, NV"
 faq:
   - q: "Can I refuse the tow truck the police called and wait for my own?"
     a: "Yes, in most cases you can. As long as your vehicle is not blocking traffic or creating a safety hazard, you have the right to decline the rotation tow and call a company of your choosing. Be polite but firm, and call your preferred company immediately so wait times are short."

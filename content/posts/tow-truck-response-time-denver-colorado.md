@@ -6,6 +6,7 @@ description: "How long does a tow truck take in Denver? Real response times by l
 tags: ["tow truck denver", "roadside assistance denver", "denver towing", "response time", "colorado breakdown"]
 slug: "tow-truck-response-time-denver-colorado"
 clusters: ["towing-logistics"]
+serviceArea: "Denver, CO"
 faq:
   - q: "How long does a tow truck take in Denver during a snowstorm?"
     a: "During a significant snow or ice event, expect wait times of two to four hours, sometimes longer. Every tow company in the metro gets slammed at once, so call immediately and stay in your vehicle with hazards on."

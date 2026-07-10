@@ -6,6 +6,7 @@ description: "Albuquerque towing costs $75-125 hookup plus $3-5/mile. Get specif
 tags: ["Albuquerque", "New Mexico", "towing cost", "roadside emergency"]
 slug: "towing-cost-albuquerque-new-mexico"
 clusters: ["towing-cost"]
+serviceArea: "Albuquerque, NM"
 faq:
   - q: "Does AAA actually cover towing in Albuquerque, or will I still owe money?"
     a: "AAA covers towing up to a set mileage limit depending on your membership tier, with Classic members getting up to 5 miles free and Premier members up to 200 miles. If your tow exceeds your limit, you pay the per-mile rate only for the extra distance, which can still save you a significant portion of the bill."

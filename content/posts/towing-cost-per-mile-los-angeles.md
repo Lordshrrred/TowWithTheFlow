@@ -6,6 +6,7 @@ description: "LA towing runs $3-$7 per mile plus a hookup fee. Here's exactly wh
 tags: ["towing cost", "Los Angeles", "per mile towing", "roadside help", "California towing"]
 slug: "towing-cost-per-mile-los-angeles"
 clusters: ["towing-cost"]
+serviceArea: "Los Angeles, CA"
 faq:
   - q: "Do I have to pay the tow truck driver before they unhook my car?"
     a: "Yes, most private tow companies in Los Angeles require payment on the spot before releasing your vehicle. Have a credit card ready, and make sure the final amount matches the quote you received before they hooked up."

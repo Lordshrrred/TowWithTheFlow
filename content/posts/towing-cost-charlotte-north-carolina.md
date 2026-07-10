@@ -6,6 +6,7 @@ description: "Charlotte towing costs range $85-150 base plus $3-5/mile. Get help
 tags: ["charlotte", "north carolina", "towing cost", "roadside emergency"]
 slug: "towing-cost-charlotte-north-carolina"
 clusters: ["towing-cost"]
+serviceArea: "Charlotte, NC"
 faq:
   - q: "How much does a tow truck cost in Charlotte if I need to go more than 20 miles?"
     a: "Start with a base hookup fee of $85-150, then add $3-5 per mile for the full distance. A 20-mile tow during business hours would typically run $145-250 depending on the company and your vehicle type."

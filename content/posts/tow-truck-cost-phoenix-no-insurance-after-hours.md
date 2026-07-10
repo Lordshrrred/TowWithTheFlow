@@ -6,6 +6,7 @@ description: "Stranded in Phoenix at night with no insurance? Here's exactly wha
 tags: ["tow truck cost", "Phoenix Arizona", "no insurance", "after hours towing", "roadside emergency"]
 slug: "tow-truck-cost-phoenix-no-insurance-after-hours"
 clusters: ["towing-cost"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "Can I negotiate the tow price with the driver who shows up?"
     a: "You can try, but it is more effective to negotiate before you commit by calling multiple companies and getting competing quotes over the phone. Once a driver has already hooked up your vehicle, your leverage drops significantly."

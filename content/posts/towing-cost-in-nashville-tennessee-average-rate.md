@@ -6,6 +6,7 @@ description: "Broken down in Nashville? Here's what towing actually costs in Mus
 tags: ["towing cost", "Nashville Tennessee", "roadside assistance", "breakdown", "tow truck"]
 slug: "towing-cost-in-nashville-tennessee-average-rate"
 clusters: ["towing-cost"]
+serviceArea: "Nashville, TN"
 faq:
   - q: "Can I negotiate the tow price before the truck shows up?"
     a: "Yes, and you should. Ask the dispatcher for the exact hookup fee, the per-mile rate, and any surcharges before you give authorization. Once the truck is hooked up, you have much less leverage."

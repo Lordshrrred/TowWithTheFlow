@@ -6,6 +6,7 @@ description: "Stuck in Charlotte and need a tow? Here's exactly what tow trucks 
 tags: ["tow truck cost", "Charlotte North Carolina", "roadside assistance", "towing", "breakdown"]
 slug: "tow-truck-cost-charlotte-north-carolina"
 clusters: ["towing-cost"]
+serviceArea: "Charlotte, NC"
 faq:
   - q: "Can a tow truck in Charlotte charge me more after they already hooked up my car?"
     a: "Once your vehicle is on the truck, you are in a much weaker negotiating position, but you should have confirmed a total price before they moved it. If a driver quoted you a price verbally and then tries to charge significantly more at drop-off, you can dispute it with their dispatch and file a complaint with the North Carolina Attorney General's consumer protection office."

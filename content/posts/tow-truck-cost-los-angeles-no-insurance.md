@@ -6,6 +6,7 @@ description: "Stranded in LA with no insurance? Here's exactly what a tow truck 
 tags: ["tow truck cost", "Los Angeles", "no insurance", "roadside emergency", "out of pocket towing"]
 slug: "tow-truck-cost-los-angeles-no-insurance"
 clusters: ["towing-cost"]
+serviceArea: "Los Angeles, CA"
 faq:
   - q: "Can I negotiate the tow truck price if I don't have insurance?"
     a: "Yes, and it is worth trying. Ask if they will match a competitor's quote or waive the flatbed surcharge if your car qualifies for a wheel-lift. Some independent operators in LA have flexibility, especially during slower hours, but you need to ask before they hook up your car."

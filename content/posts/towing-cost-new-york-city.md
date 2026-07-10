@@ -6,6 +6,7 @@ description: "NYC towing costs $150-400+ with $4-6 per mile. Learn breakdown pro
 tags: ["New York City", "New York", "towing cost", "roadside emergency"]
 slug: "towing-cost-new-york-city"
 clusters: ["towing-cost"]
+serviceArea: "New York, NY"
 faq:
   - q: "How long will I wait for a tow truck in New York City?"
     a: "During business hours, expect 45-90 minutes with AAA or a major tow service. During rush hour, bad weather, or late at night, waits can stretch to 2-4 hours. Highway breakdowns may take longer due to NYPD coordination requirements before tow trucks can legally access the scene."

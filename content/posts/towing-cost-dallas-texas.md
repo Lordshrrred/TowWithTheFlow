@@ -6,6 +6,7 @@ description: "Dallas towing costs range $75-150 base plus $3-5 per mile. Get ste
 tags: ["Dallas", "Texas", "towing cost", "roadside emergency"]
 slug: "towing-cost-dallas-texas"
 clusters: ["towing-cost"]
+serviceArea: "Dallas, TX"
 faq:
   - q: "How much will a tow truck cost me in Dallas for a short local trip?"
     a: "For a short local tow within Dallas, budget around $95-140 total. That covers the base hookup fee of $85-125 plus a few miles at $3-5 per mile, assuming normal business hours and a standard passenger vehicle."

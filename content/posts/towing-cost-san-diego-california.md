@@ -6,6 +6,7 @@ description: "San Diego towing costs $125-175 base plus $4-6/mile. Get breakdown
 tags: ["san diego", "california", "towing cost", "roadside emergency"]
 slug: "towing-cost-san-diego-california"
 clusters: ["towing-cost"]
+serviceArea: "San Diego, CA"
 faq:
   - q: "Does AAA cover towing in San Diego, and how much will I save compared to paying out of pocket?"
     a: "AAA members typically get free towing up to 5-7 miles depending on their membership tier, with reduced rates beyond that distance. Compared to the $125-175 base hookup fee plus per-mile charges non-members pay, AAA membership can save you $150 or more on a single tow."

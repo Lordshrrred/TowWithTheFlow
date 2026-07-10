@@ -6,6 +6,7 @@ description: "No insurance and need a tow in Atlanta? Here are the real out-of-p
 tags: ["tow truck cost", "Atlanta Georgia", "no insurance", "roadside assistance", "towing"]
 slug: "tow-truck-cost-atlanta-georgia-no-insurance"
 clusters: ["towing-cost"]
+serviceArea: "Atlanta, GA"
 faq:
   - q: "Can I call HERO for free help if I break down on I-285 or I-75 in Atlanta?"
     a: "Yes, HERO trucks patrol Atlanta interstates at no charge and can push your vehicle to a safe exit, which may eliminate or shorten a paid tow. You can also reach Georgia DOT by calling 511."

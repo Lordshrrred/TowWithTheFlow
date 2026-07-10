@@ -6,6 +6,7 @@ description: "Car won't start after sitting in Phoenix heat? Here's what's killi
 tags: ["phoenix arizona", "car wont start", "heat breakdown", "dead battery", "roadside emergency"]
 slug: "car-wont-start-after-sitting-in-heat-phoenix-arizona"
 clusters: ["battery-starting"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "How do I know if my car won't start because of the heat or because the battery is just old and dead?"
     a: "In Phoenix, the two causes are often the same thing. Heat kills batteries faster than cold climates do, typically in 2 to 3 years instead of 4 to 5. If the battery is over two years old and you get rapid clicking or no response at all, assume the battery failed from heat stress."

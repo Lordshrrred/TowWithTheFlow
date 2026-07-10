@@ -6,6 +6,7 @@ description: "Rear-ended or hit in Phoenix? Here's what accident towing actually
 tags: ["towing cost", "Phoenix Arizona", "accident towing", "car accident", "roadside emergency"]
 slug: "towing-cost-in-phoenix-arizona-after-accident"
 clusters: ["towing-cost"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "Can I choose my own tow truck company after an accident in Phoenix, or does the police pick for me?"
     a: "If police respond and call a tow, you cannot choose the company, but you do have the right to direct where the vehicle is taken. If no officer is dispatching the truck, you can call any company you want, and calling your insurer first is the best way to make sure you get a vetted provider."

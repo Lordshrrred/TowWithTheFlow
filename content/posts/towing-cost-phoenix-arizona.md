@@ -6,6 +6,7 @@ description: "Phoenix towing costs $95-150 base fee plus $3-5 per mile. Get brea
 tags: ["Phoenix", "Arizona", "towing cost", "roadside emergency"]
 slug: "towing-cost-phoenix-arizona"
 clusters: ["towing-cost"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "How much does a tow truck cost in Phoenix if I break down on the freeway?"
     a: "Freeway tows on I-10, I-17, or the Loop 101 typically run $140-220 total due to safety equipment surcharges of $20-40 on top of the standard $95-150 hookup fee and $3-5 per mile. If you call during rush hour or after 6 PM, expect another $25-50 in surcharges."

@@ -6,6 +6,7 @@ description: "Indianapolis towing costs $85-120 base fee plus $3-5 per mile. Get
 tags: ["indianapolis", "indiana", "towing cost", "roadside emergency"]
 slug: "towing-cost-indianapolis-indiana"
 clusters: ["towing-cost"]
+serviceArea: "Indianapolis, IN"
 faq:
   - q: "How much will a tow cost me if I break down on I-465 at night?"
     a: "Expect to pay $150-185 or more. You are looking at the base hookup fee of $85-120, the after-hours surcharge of $25-40, and a highway premium of $10-20, plus per-mile charges on top of that."

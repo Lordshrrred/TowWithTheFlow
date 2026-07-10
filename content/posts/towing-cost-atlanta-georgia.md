@@ -6,6 +6,7 @@ description: "Atlanta towing costs $125-180 base plus $4-7/mile. Complete breakd
 tags: ["atlanta", "georgia", "towing cost", "roadside emergency"]
 slug: "towing-cost-atlanta-georgia"
 clusters: ["towing-cost"]
+serviceArea: "Atlanta, GA"
 faq:
   - q: "How long will I wait for a tow truck on Atlanta's interstates during rush hour?"
     a: "Expect 45-90 minutes on major interstates like I-75, I-85, and I-285 during peak hours (7-9 AM and 4-7 PM). AAA and private services both face these delays due to high call volume and Atlanta's traffic congestion."

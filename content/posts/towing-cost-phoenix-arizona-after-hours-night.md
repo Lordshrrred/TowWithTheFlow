@@ -6,6 +6,7 @@ description: "Phoenix after-hours towing costs $150-300+ at night. Know what you
 tags: ["phoenix towing", "after hours towing", "night towing cost", "arizona roadside assistance", "emergency towing"]
 slug: "towing-cost-phoenix-arizona-after-hours-night"
 clusters: ["towing-cost"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "Do Phoenix towing companies charge more on weekends versus weekday nights?"
     a: "Yes, most add a weekend or holiday surcharge of $25-100 on top of the standard after-hours rate. Friday and Saturday nights are the most expensive windows, and major holidays like New Year's Eve can push surcharges to the top of that range. Always ask specifically about the day-of-week rate when you call."

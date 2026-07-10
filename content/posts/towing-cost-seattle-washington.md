@@ -6,6 +6,7 @@ description: "Seattle towing costs $125-175 base plus $4-6/mile. Learn what to d
 tags: ["Seattle", "Washington", "towing cost", "roadside emergency"]
 slug: "towing-cost-seattle-washington"
 clusters: ["towing-cost"]
+serviceArea: "Seattle, WA"
 faq:
   - q: "How much will a tow truck cost me if I break down on I-5 in Seattle?"
     a: "Expect to pay $175-250 or more for a highway tow on I-5. That includes the base hookup fee of $125-175, a highway surcharge of $50-75, plus per-mile charges of $4-6 for however far your vehicle needs to travel."

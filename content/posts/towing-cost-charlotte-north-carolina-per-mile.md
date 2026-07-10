@@ -6,6 +6,7 @@ description: "Exact per-mile towing rates in Charlotte NC, what drives the final
 tags: ["towing cost", "Charlotte North Carolina", "per mile towing", "roadside emergency", "tow truck"]
 slug: "towing-cost-charlotte-north-carolina-per-mile"
 clusters: ["towing-cost"]
+serviceArea: "Charlotte, NC"
 faq:
   - q: "Can I negotiate the tow price with a Charlotte company after they arrive?"
     a: "You can try, but your leverage drops once the truck is on scene. Negotiate before dispatch by calling multiple companies, getting a firm rate, and asking if they will match a competitor's quote."

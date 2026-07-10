@@ -6,6 +6,7 @@ description: "Flatbed or wheel lift tow in Denver? Here's what each costs, when 
 tags: ["towing cost denver", "flatbed tow truck", "wheel lift tow truck", "denver colorado", "roadside emergency"]
 slug: "towing-cost-in-denver-colorado-flatbed-vs-wheel-lift"
 clusters: ["towing-cost"]
+serviceArea: "Denver, CO"
 faq:
   - q: "Can a wheel lift tow truck handle my Subaru Outback?"
     a: "No, the Outback uses full-time all-wheel drive, so lifting only two wheels will spin the drivetrain on the wheels still touching the road and can damage the transfer case or transmission. Always request a flatbed for any AWD or 4WD vehicle."

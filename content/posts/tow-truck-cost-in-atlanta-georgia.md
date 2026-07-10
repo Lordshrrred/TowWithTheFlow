@@ -6,6 +6,7 @@ description: "Stuck in Atlanta and need a tow? Here's exactly what tow trucks co
 tags: ["tow truck cost", "Atlanta Georgia", "roadside assistance", "towing rates", "breakdown"]
 slug: "tow-truck-cost-in-atlanta-georgia"
 clusters: ["towing-cost"]
+serviceArea: "Atlanta, GA"
 faq:
   - q: "Can I negotiate the towing price with an Atlanta company before they hook up my car?"
     a: "Yes, and you should always ask for the full breakdown before they touch your vehicle, including the hookup fee, per-mile rate, and any surcharges. Once the car is on the truck, your leverage is essentially gone."

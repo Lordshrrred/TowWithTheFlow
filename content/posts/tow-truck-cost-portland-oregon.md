@@ -6,6 +6,7 @@ description: "Tow truck cost in Portland Oregon explained. Local rates, hookup f
 tags: ["tow truck cost", "Portland Oregon", "roadside assistance", "towing rates", "breakdown"]
 slug: "tow-truck-cost-portland-oregon"
 clusters: ["towing-cost"]
+serviceArea: "Portland, OR"
 faq:
   - q: "How much does a tow truck cost for a short trip within Portland city limits?"
     a: "A local tow of 5 to 10 miles in Portland typically costs $100 to $195, depending on the base fee, per-mile rate, and whether you need a flatbed. After-hours or weekend calls can add another $25 to $50 on top of that."

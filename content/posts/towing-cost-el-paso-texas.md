@@ -6,6 +6,7 @@ description: "Complete breakdown of El Paso towing costs, from base hookup fees 
 tags: ["El Paso", "Texas", "towing cost", "roadside emergency"]
 slug: "towing-cost-el-paso-texas"
 clusters: ["towing-cost"]
+serviceArea: "El Paso, TX"
 faq:
   - q: "How much will a tow truck cost me for a short trip within El Paso city limits?"
     a: "Most in-city tows run $100-150 for a standard passenger vehicle, combining the $75-120 hookup fee with a few miles at $3-5 per mile. If your breakdown happens after 6 PM or on a weekend, expect to add $25-50 on top of that."

@@ -6,6 +6,7 @@ description: "Stuck in Phoenix heat? Here's exactly what towing costs in the Val
 tags: ["towing cost", "Phoenix Arizona", "summer breakdown", "roadside assistance", "towing rates"]
 slug: "towing-cost-in-phoenix-arizona-summer-heat-breakdown"
 clusters: ["towing-cost"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "Does the ADOT Freeway Service Patrol operate on weekends or just weekdays?"
     a: "The Freeway Service Patrol in Maricopa County runs on weekdays during peak commute hours, with limited or no coverage on weekends and holidays. If you break down on a weekend, do not count on them and have a private tow company number ready."

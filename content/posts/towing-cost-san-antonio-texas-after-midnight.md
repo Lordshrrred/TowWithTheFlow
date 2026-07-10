@@ -6,6 +6,7 @@ description: "Late-night towing costs $150-300+ in San Antonio. Hook-up fees, mi
 tags: ["towing costs", "san antonio towing", "after hours towing", "emergency roadside", "texas towing"]
 slug: "towing-cost-san-antonio-texas-after-midnight"
 clusters: ["towing-cost"]
+serviceArea: "San Antonio, TX"
 faq:
   - q: "Does AAA actually cover late-night towing in San Antonio, or will I still owe money?"
     a: "AAA Basic covers towing up to 5 miles at no charge; Plus membership extends that to 100 miles. If your destination is within those limits, you pay nothing beyond your membership fee, regardless of the hour. Go over the mileage cap and you pay the per-mile rate for the excess distance only."

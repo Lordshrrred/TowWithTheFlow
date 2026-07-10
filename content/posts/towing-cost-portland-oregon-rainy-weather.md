@@ -6,6 +6,7 @@ description: "Portland towing costs increase in rain. Local rates, weather surch
 tags: ["towing costs", "portland oregon", "rainy weather", "emergency towing", "roadside assistance"]
 slug: "towing-cost-portland-oregon-rainy-weather"
 clusters: ["towing-cost"]
+serviceArea: "Portland, OR"
 faq:
   - q: "Will my car insurance cover a tow during a Portland rainstorm?"
     a: "It depends on your policy. Comprehensive coverage does not typically include towing, but if you added roadside assistance as a rider, it usually covers weather-related tows up to a stated dollar amount, often $50-100. Call your insurer before you call a tow company so you know exactly what you are entitled to."

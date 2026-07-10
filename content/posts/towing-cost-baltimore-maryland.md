@@ -6,6 +6,7 @@ description: "Baltimore towing costs $75-120 base fee plus $3-5 per mile. Get br
 tags: ["Baltimore", "Maryland", "towing cost", "roadside emergency"]
 slug: "towing-cost-baltimore-maryland"
 clusters: ["towing-cost"]
+serviceArea: "Baltimore, MD"
 faq:
   - q: "Does AAA cover towing on I-95 through Baltimore?"
     a: "Yes, AAA Mid-Atlantic covers towing on I-95 and other Baltimore interstates. Most memberships include free towing up to 5-7 miles depending on your plan tier, with per-mile charges applied after that limit."

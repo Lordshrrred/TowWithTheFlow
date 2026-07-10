@@ -6,6 +6,7 @@ description: "Dead battery in a Phoenix parking lot? Step-by-step guide to jump 
 tags: ["dead battery", "Phoenix", "parking lot breakdown", "jump start", "roadside assistance"]
 slug: "car-battery-dies-parking-lot-phoenix"
 clusters: ["battery-starting"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "How long do I need to drive after a jump start to recharge the battery?"
     a: "Drive at highway speeds for at least 30 minutes without shutting the engine off. Short trips around a parking lot or a quick drive home won't give the alternator enough time to put a meaningful charge back into a deeply drained battery."

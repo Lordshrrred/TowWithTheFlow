@@ -6,6 +6,7 @@ description: "Step-by-step guide to safely changing a flat tire on Houston highw
 tags: ["tire change", "highway safety", "Houston driving", "roadside emergency", "flat tire"]
 slug: "change-tire-highway-safely-houston"
 clusters: ["tire-wheel"]
+serviceArea: "Houston, TX"
 faq:
   - q: "Is it safe to change a tire on the Houston highway shoulder at night?"
     a: "It is significantly more dangerous at night than during the day. If you must do it, place all your reflective triangles, turn on every light the car has, and use a headlamp so your hands are free. If you have any doubt, stay inside with your seatbelt on and call for roadside assistance."

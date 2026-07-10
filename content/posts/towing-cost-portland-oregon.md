@@ -6,6 +6,7 @@ description: "Portland towing costs $95-150 hookup plus $3-5/mile. Get help fast
 tags: ["Portland", "Oregon", "towing cost", "roadside emergency"]
 slug: "towing-cost-portland-oregon"
 clusters: ["towing-cost"]
+serviceArea: "Portland, OR"
 faq:
   - q: "How long will I wait for a tow truck in Portland during bad weather?"
     a: "In heavy rain or storms, expect wait times of 90 minutes or more since wet weather increases breakdown calls by around 40%. During dry conditions and off-peak hours, most services arrive within 30 to 45 minutes."

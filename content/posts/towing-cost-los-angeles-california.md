@@ -6,6 +6,7 @@ description: "Los Angeles towing costs $125-200 base fee plus $4-7 per mile. Lea
 tags: ["Los Angeles", "California", "towing cost", "roadside emergency"]
 slug: "towing-cost-los-angeles-california"
 clusters: ["towing-cost"]
+serviceArea: "Los Angeles, CA"
 faq:
   - q: "How much does it cost to get my car out of the impound lot in Los Angeles?"
     a: "City impound fees in Los Angeles typically start at $300 or more to release your vehicle, plus daily storage fees of $50-70 for each day it sits in the lot. Fees can add up quickly, so retrieving your car as soon as possible saves money."

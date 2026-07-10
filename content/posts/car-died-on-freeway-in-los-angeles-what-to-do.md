@@ -6,6 +6,7 @@ description: "Your car just died on an LA freeway. Here's exactly what to do to 
 tags: ["los angeles", "freeway breakdown", "car broke down", "roadside emergency", "towing"]
 slug: "car-died-on-freeway-in-los-angeles-what-to-do"
 clusters: ["highway-safety"]
+serviceArea: "Los Angeles, CA"
 faq:
   - q: "Does Freeway Service Patrol cover the whole LA freeway system, or just certain roads?"
     a: "FSP covers most major LA-area freeways including the 405, 10, 101, 5, and 110, but not every stretch of every highway. Coverage also depends on the time of day, since service runs primarily on weekdays during peak commute hours. If you are outside those hours or on a less-traveled corridor, you will need to call a private tow."

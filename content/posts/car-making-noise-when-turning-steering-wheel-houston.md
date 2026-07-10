@@ -6,6 +6,7 @@ description: "Houston car making steering noise? Power steering fluid, worn join
 tags: ["steering problems", "car noise", "power steering", "Houston auto repair", "steering wheel"]
 slug: "car-making-noise-when-turning-steering-wheel-houston"
 clusters: ["tire-wheel"]
+serviceArea: "Houston, TX"
 faq:
   - q: "Can I just top off the power steering fluid and keep driving?"
     a: "Topping off buys you a short window to get to a shop, but it does not fix the underlying problem. If the fluid was low, it leaked out somewhere, and that leak will drain the reservoir again within days or weeks. Drive to a shop, not around it."

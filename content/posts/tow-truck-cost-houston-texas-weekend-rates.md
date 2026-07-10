@@ -6,6 +6,7 @@ description: "Stuck in Houston on a Saturday or Sunday? Here's exactly what tow 
 tags: ["tow truck cost", "Houston Texas", "weekend towing rates", "roadside assistance", "towing cost"]
 slug: "tow-truck-cost-houston-texas-weekend-rates"
 clusters: ["towing-cost"]
+serviceArea: "Houston, TX"
 faq:
   - q: "Can I negotiate the price with a Houston tow truck driver before they hook up my car?"
     a: "Yes, and you should ask for the full itemized quote before authorizing anything. Some companies will waive or reduce the weekend surcharge if you ask directly, especially for a longer haul that earns them more per-mile revenue."

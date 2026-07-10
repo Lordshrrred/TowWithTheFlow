@@ -6,6 +6,7 @@ description: "Ran out of gas in Denver? Here's exactly who to call, what it cost
 tags: ["ran out of gas", "roadside assistance denver", "denver emergency help", "out of gas denver", "fuel delivery"]
 slug: "ran-out-of-gas-in-denver-who-to-call"
 clusters: ["engine-mechanical"]
+serviceArea: "Denver, CO"
 faq:
   - q: "Can I walk to a nearby gas station and bring back a gas can instead of waiting for delivery?"
     a: "You can if the station is genuinely close and you are not on a highway. On I-25, I-70, or C-470, walking along the roadway is dangerous and illegal in most stretches, so wait for a delivery driver instead. If you do walk, bring an approved portable fuel container since most gas stations will not fill a random container."

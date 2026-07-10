@@ -6,6 +6,7 @@ description: "Car broke down on a LA freeway? Here's exactly what to do to stay 
 tags: ["los angeles", "freeway breakdown", "roadside emergency", "towing", "car broke down"]
 slug: "car-broke-down-on-freeway-in-los-angeles-what-to-do"
 clusters: ["highway-safety"]
+serviceArea: "Los Angeles, CA"
 faq:
   - q: "Is the Freeway Service Patrol available at night or on weekends?"
     a: "FSP patrols are generally limited to weekday peak hours, roughly 6-9 AM and 3-7 PM, on major LA freeways. Outside those windows you will need to call a private tow truck directly."

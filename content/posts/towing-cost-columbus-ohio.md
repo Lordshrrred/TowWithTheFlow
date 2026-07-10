@@ -6,6 +6,7 @@ description: "Columbus Ohio towing costs $85-120 base fee plus $3-5 per mile. Kn
 tags: ["Columbus", "Ohio", "towing cost", "roadside emergency"]
 slug: "towing-cost-columbus-ohio"
 clusters: ["towing-cost"]
+serviceArea: "Columbus, OH"
 faq:
   - q: "How much will a tow truck cost me if I break down on I-270 in Columbus?"
     a: "For a typical breakdown on the I-270 outerbelt, expect to pay $110-145 for the hookup fee plus $3-5 per mile to your destination. Interstate tows run 20-30% higher than local street tows due to safety requirements, so budget around $175-250 for most situations."

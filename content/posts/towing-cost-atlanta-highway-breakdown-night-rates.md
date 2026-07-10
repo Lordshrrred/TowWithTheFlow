@@ -6,6 +6,7 @@ description: "Atlanta highway breakdown at night? Expect $125-350 for towing. Ni
 tags: ["towing cost", "atlanta towing", "highway breakdown", "night rates", "emergency towing"]
 slug: "towing-cost-atlanta-highway-breakdown-night-rates"
 clusters: ["towing-cost"]
+serviceArea: "Atlanta, GA"
 faq:
   - q: "Can I choose which shop my car gets towed to, or does the tow company decide?"
     a: "You always have the right to specify your destination. Tell the dispatcher and the driver before hookup. Some tow companies have preferred shop relationships and will push back, but legally the choice is yours. If a driver refuses, call a different company."

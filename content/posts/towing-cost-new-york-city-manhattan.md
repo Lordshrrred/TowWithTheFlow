@@ -6,6 +6,7 @@ description: "Towing in Manhattan is expensive and complicated. Here's exactly w
 tags: ["towing cost", "New York City", "Manhattan", "roadside assistance", "car breakdown"]
 slug: "towing-cost-new-york-city-manhattan"
 clusters: ["towing-cost"]
+serviceArea: "New York, NY"
 faq:
   - q: "Can I negotiate the towing price with a private company in Manhattan?"
     a: "You can ask, but most Manhattan tow operators use fixed rate sheets and rarely budge on the hook-up fee. Your best leverage is getting quotes from two or three companies before authorizing anyone to load your car."

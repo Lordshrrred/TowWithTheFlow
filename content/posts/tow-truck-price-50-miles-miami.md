@@ -6,6 +6,7 @@ description: "Need a tow truck 50 miles from Miami? Expect $200-400 total cost. 
 tags: ["tow truck pricing", "Miami towing", "long distance towing", "roadside assistance", "emergency towing"]
 slug: "tow-truck-price-50-miles-miami"
 clusters: ["towing-cost"]
+serviceArea: "Miami, FL"
 faq:
   - q: "Can I ride in the tow truck with my car for the full 50 miles?"
     a: "Most tow companies allow one passenger in the cab at no extra charge, but confirm this when you call because policies vary. In Florida there is no state law prohibiting it, but individual companies set their own rules for liability reasons."

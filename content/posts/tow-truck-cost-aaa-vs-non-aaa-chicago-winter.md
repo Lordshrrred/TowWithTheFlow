@@ -6,6 +6,7 @@ description: "Chicago winter towing costs: AAA members pay $0-200, non-members f
 tags: ["tow truck cost", "AAA towing", "Chicago winter", "roadside assistance", "emergency towing"]
 slug: "tow-truck-cost-aaa-vs-non-aaa-chicago-winter"
 clusters: ["towing-cost"]
+serviceArea: "Chicago, IL"
 faq:
   - q: "Can I use my AAA membership to tow someone else's car, not mine?"
     a: "Yes, AAA membership covers the member, not the vehicle, so you can use your benefits on any car you are with when the breakdown happens. The member needs to be present at the scene when the truck arrives."

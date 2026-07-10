@@ -6,6 +6,7 @@ description: "After hours towing in Phoenix costs $150-300+ base rate plus $3-7 
 tags: ["towing cost", "phoenix towing", "after hours towing", "emergency roadside", "arizona towing"]
 slug: "towing-cost-phoenix-arizona-after-hours"
 clusters: ["towing-cost"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "Can I negotiate the price with a tow company after hours in Phoenix?"
     a: "Yes, and it works more often than people think. If you have a competing quote in hand, say so. Some companies will match or come close to keep the job. Dispatchers have more flexibility on mileage rates than on base rates, so that is usually the better place to push back."

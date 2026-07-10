@@ -6,6 +6,7 @@ description: "Engine seized up while driving in Seattle? Get immediate towing co
 tags: ["engine seizure", "Seattle towing", "roadside emergency", "engine problems", "towing costs"]
 slug: "engine-seized-up-while-driving-towing-cost-seattle"
 clusters: ["towing-cost"]
+serviceArea: "Seattle, WA"
 faq:
   - q: "Can a seized engine be fixed, or do I need a whole new one?"
     a: "It depends on how far the damage went. Caught early, a seized engine from oil starvation sometimes only needs new bearings and a crank grind, which is cheaper than a full replacement. A fully locked engine with scored cylinder walls and a bent rod usually means replacement is the smarter financial call."

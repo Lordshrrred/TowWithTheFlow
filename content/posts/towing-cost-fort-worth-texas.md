@@ -6,6 +6,7 @@ description: "Fort Worth towing costs $85-120 base fee plus $3-5 per mile. Learn
 tags: ["Fort Worth", "Texas", "towing cost", "roadside emergency"]
 slug: "towing-cost-fort-worth-texas"
 clusters: ["towing-cost"]
+serviceArea: "Fort Worth, TX"
 faq:
   - q: "How much will a tow truck cost me if I break down on I-35W in Fort Worth at night?"
     a: "Expect to pay $140-220 for a typical 10-mile tow on a Fort Worth highway after hours. That includes the $85-120 base hookup, $3-5 per mile, a $25-50 after-hours surcharge, and the $10-20 highway premium."

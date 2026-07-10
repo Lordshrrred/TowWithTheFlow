@@ -6,6 +6,7 @@ description: "NYC Manhattan towing costs $150-400+ for basic service. Peak hours
 tags: ["towing cost", "nyc towing", "manhattan towing", "new york towing rates", "emergency towing"]
 slug: "towing-cost-new-york-city-manhattan-rates"
 clusters: ["towing-cost"]
+serviceArea: "New York, NY"
 faq:
   - q: "Will my car insurance cover the towing cost in Manhattan?"
     a: "Many auto insurance policies include roadside assistance that covers $75-$100 toward towing, which can offset a significant portion of a local tow. Call your insurer before booking a private company to confirm your coverage limit and whether they have preferred providers in the area."

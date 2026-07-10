@@ -6,6 +6,7 @@ description: "Immediate steps when your car overheats in Phoenix traffic. Turn o
 tags: ["car overheating", "Phoenix driving", "engine problems", "roadside emergency", "summer heat"]
 slug: "car-overheating-in-traffic-what-to-do-in-phoenix"
 clusters: ["engine-mechanical"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "Can I drive a few miles to a shop if my car is overheating?"
     a: "Only if the temperature gauge drops back to normal after you pull over and add coolant. If it climbs again within the first mile, stop immediately. Driving even two or three miles on an overheating engine in Phoenix summer conditions can warp a cylinder head or blow a head gasket, turning a $150 tow into a $2,000 repair."

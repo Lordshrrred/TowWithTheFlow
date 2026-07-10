@@ -6,6 +6,7 @@ description: "Houston towing costs $75-125 hookup plus $3-5/mile. Get help on I-
 tags: ["Houston", "Texas", "towing cost", "roadside emergency"]
 slug: "towing-cost-houston-texas"
 clusters: ["towing-cost"]
+serviceArea: "Houston, TX"
 faq:
   - q: "Does the Harris County HERO program operate 24/7?"
     a: "No, HERO patrols run during peak hours on participating freeways, typically weekday mornings and afternoons. If you break down late at night or on a weekend, you will need to call a private towing company or your roadside assistance provider instead."

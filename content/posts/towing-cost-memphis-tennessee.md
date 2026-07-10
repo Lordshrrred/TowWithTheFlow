@@ -6,6 +6,7 @@ description: "Memphis towing costs $75-120 hookup plus $3-5/mile. Complete break
 tags: ["Memphis", "Tennessee", "towing cost", "roadside emergency"]
 slug: "towing-cost-memphis-tennessee"
 clusters: ["towing-cost"]
+serviceArea: "Memphis, TN"
 faq:
   - q: "How much does a typical tow cost in Memphis if I break down on the interstate?"
     a: "Expect to pay $95-160 for a standard interstate tow in Memphis. That includes the $75-120 hookup fee plus mileage at $3-5 per mile, with an added $20-40 highway surcharge for calls on I-40, I-240, or I-269."

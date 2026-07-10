@@ -6,6 +6,7 @@ description: "Jacksonville towing costs $85-125 hookup plus $3-5/mile. Complete 
 tags: ["Jacksonville", "Florida", "towing cost", "roadside emergency"]
 slug: "towing-cost-jacksonville-florida"
 clusters: ["towing-cost"]
+serviceArea: "Jacksonville, FL"
 faq:
   - q: "How much will it cost to tow my car about 10 miles in Jacksonville?"
     a: "Expect to pay roughly $125-165 for a 10-mile tow during business hours, based on an $85-125 hookup fee plus $3-5 per mile. If it is after 6 PM or on a weekend, add another $25-50 on top of that."

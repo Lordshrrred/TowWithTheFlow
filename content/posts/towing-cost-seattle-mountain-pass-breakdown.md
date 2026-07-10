@@ -6,6 +6,7 @@ description: "Broke down on a Seattle mountain pass? Get real towing costs, what
 tags: ["towing cost", "seattle towing", "mountain pass breakdown", "washington state", "emergency towing"]
 slug: "towing-cost-seattle-mountain-pass-breakdown"
 clusters: ["towing-cost"]
+serviceArea: "Seattle, WA"
 faq:
   - q: "Can I just get towed to the nearest exit instead of all the way back to Seattle?"
     a: "Yes, and it is almost always cheaper. North Bend (west of Snoqualmie) and Cle Elum (east) both have repair shops that can handle most common breakdowns. A short tow to either town runs roughly $100-$175 versus $250-$400 to Seattle, and a shop there can tell you whether the car is drivable before you commit to a longer haul."

@@ -6,6 +6,7 @@ description: "Los Angeles freeway towing costs $150-350 base plus distance fees.
 tags: ["towing cost", "los angeles", "freeway breakdown", "california towing", "highway assistance"]
 slug: "towing-cost-in-los-angeles-freeway"
 clusters: ["towing-cost"]
+serviceArea: "Los Angeles, CA"
 faq:
   - q: "Can I choose my own tow truck on a California freeway, or do I have to use whoever CHP sends?"
     a: "You have the right to request a specific tow company, but they must be CHP-authorized to operate on state freeways. If your preferred company is not authorized, you will need to choose from the approved list for that freeway corridor."

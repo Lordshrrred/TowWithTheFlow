@@ -6,6 +6,7 @@ description: "Compare AAA membership towing costs versus independent tow truck p
 tags: ["AAA towing", "Chicago tow truck", "towing costs", "roadside assistance", "car breakdown"]
 slug: "tow-truck-cost-aaa-vs-non-aaa-chicago"
 clusters: ["towing-cost"]
+serviceArea: "Chicago, IL"
 faq:
   - q: "Can I use AAA if my car is registered in someone else's name?"
     a: "AAA membership covers the member, not the vehicle. If you are a AAA member and you break down in a borrowed or rented car, you are still covered. If the car owner is the member but you are driving, you are not covered unless you are also a member."

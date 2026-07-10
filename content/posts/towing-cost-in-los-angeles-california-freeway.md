@@ -6,6 +6,7 @@ description: "Stranded on LA freeway? Towing costs $150-400+ depending on distan
 tags: ["towing cost", "los angeles towing", "freeway breakdown", "california towing", "emergency roadside"]
 slug: "towing-cost-in-los-angeles-california-freeway"
 clusters: ["towing-cost"]
+serviceArea: "Los Angeles, CA"
 faq:
   - q: "Can I refuse a tow truck that shows up without me calling one?"
     a: "Yes. In California, you are not obligated to accept a tow from a truck that arrives unsolicited unless CHP has ordered your vehicle removed as a traffic hazard. If the scene is safe and you have called your own provider, you can legally wave off an uninvited tow operator."

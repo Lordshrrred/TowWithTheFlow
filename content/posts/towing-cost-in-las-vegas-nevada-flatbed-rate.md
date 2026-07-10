@@ -6,6 +6,7 @@ description: "Flatbed towing in Las Vegas runs $95-$175 for local tows. Here's w
 tags: ["towing cost", "las vegas", "nevada", "flatbed towing", "roadside emergency"]
 slug: "towing-cost-in-las-vegas-nevada-flatbed-rate"
 clusters: ["towing-cost"]
+serviceArea: "Las Vegas, NV"
 faq:
   - q: "Can I negotiate the tow price before they hook up my car in Las Vegas?"
     a: "Yes, and you should. Ask for the hookup fee and per-mile rate before they touch your vehicle, and get it in writing or confirmed by text. Once the car is on the truck, your negotiating position is essentially gone."

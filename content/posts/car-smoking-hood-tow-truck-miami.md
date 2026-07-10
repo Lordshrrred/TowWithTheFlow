@@ -6,6 +6,7 @@ description: "Car smoking from hood in Miami? Get immediate help. Safe steps to 
 tags: ["car smoking", "hood smoke", "Miami towing", "engine overheating", "roadside emergency"]
 slug: "car-smoking-hood-tow-truck-miami"
 clusters: ["engine-mechanical"]
+serviceArea: "Miami, FL"
 faq:
   - q: "Can I drive a short distance to a shop if my car was smoking but seems fine now?"
     a: "Only if the temp gauge is reading normal, there are no visible leaks, and oil and coolant levels are both full. Even then, keep the trip under two miles and watch the gauge the whole way. If it climbs toward the red, pull over again immediately."

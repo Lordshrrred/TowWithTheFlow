@@ -6,6 +6,7 @@ description: "Car broke down on a Denver highway? Here's exactly who to call, wh
 tags: ["denver", "highway breakdown", "tow truck", "roadside assistance", "colorado"]
 slug: "car-broke-down-on-highway-in-denver-who-to-call"
 clusters: ["highway-safety"]
+serviceArea: "Denver, CO"
 faq:
   - q: "How long will I actually wait for a tow truck on a Denver highway?"
     a: "Within the metro area on I-25 or I-70, most tows arrive in 30 to 60 minutes during normal conditions. At night or during heavy traffic, and especially on outer corridors like I-270 or E-470, wait times can stretch longer, so always ask for a confirmed ETA when you call."

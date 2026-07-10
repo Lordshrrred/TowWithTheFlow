@@ -6,6 +6,7 @@ description: "Stuck in Indianapolis after midnight? Here's what towing actually 
 tags: ["towing cost", "Indianapolis", "Indiana", "after hours towing", "roadside emergency"]
 slug: "towing-cost-indianapolis-indiana-after-hours-fee"
 clusters: ["towing-cost"]
+serviceArea: "Indianapolis, IN"
 faq:
   - q: "Do Indianapolis tow companies charge more on Sundays even during the day?"
     a: "Yes, most Indianapolis tow operators treat all day Sunday as an after-hours period, so you will typically pay the same surcharge on a Sunday afternoon as you would at midnight on a weekday. Always confirm this when you call for a quote."

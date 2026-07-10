@@ -6,6 +6,7 @@ description: "Tow truck cost in Nashville Tennessee explained. Get real price ra
 tags: ["tow truck cost", "Nashville Tennessee", "roadside assistance", "towing rates", "breakdown"]
 slug: "tow-truck-cost-nashville-tennessee"
 clusters: ["towing-cost"]
+serviceArea: "Nashville, TN"
 faq:
   - q: "Does AAA cover towing in Nashville, and how far will they tow my car for free?"
     a: "Yes, AAA covers towing in Nashville. Basic membership typically includes free towing up to 5 miles, while Plus and Premier tiers extend that to 100 and 200 miles respectively. If your destination is farther than your tier allows, you pay the per-mile rate only on the overage."

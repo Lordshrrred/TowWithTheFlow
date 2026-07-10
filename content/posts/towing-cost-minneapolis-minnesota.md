@@ -6,6 +6,7 @@ description: "Minneapolis towing costs $85-120 hookup plus $3-5/mile. Complete b
 tags: ["Minneapolis", "Minnesota", "towing cost", "roadside emergency"]
 slug: "towing-cost-minneapolis-minnesota"
 clusters: ["towing-cost"]
+serviceArea: "Minneapolis, MN"
 faq:
   - q: "How much will a tow truck cost me if I break down on I-35W in Minneapolis?"
     a: "Expect to pay $105-150 or more for a highway tow on I-35W. That includes the base hookup fee ($85-120), highway surcharge ($20-30), and per-mile charges at roughly $4 per mile to your destination."

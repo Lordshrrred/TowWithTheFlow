@@ -6,6 +6,7 @@ description: "Recognize transmission slipping symptoms fast. From RPM surges to 
 tags: ["transmission problems", "car symptoms", "Houston driving", "automotive repair", "transmission slipping"]
 slug: "transmission-slipping-symptoms-houston"
 clusters: ["engine-mechanical"]
+serviceArea: "Houston, TX"
 faq:
   - q: "Can I drive my car at all if the transmission is slipping?"
     a: "Short distances at low speed to reach a safe parking area or service station are acceptable if there is no burning smell and the transmission still engages gears. Anything beyond that risks turning a minor repair into a full rebuild, so arrange a tow if the symptoms are severe or worsening."

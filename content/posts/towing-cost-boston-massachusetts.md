@@ -6,6 +6,7 @@ description: "Boston towing costs $125-200 base plus $4-6/mile. Get exact prices
 tags: ["Boston", "Massachusetts", "towing cost", "roadside emergency"]
 slug: "towing-cost-boston-massachusetts"
 clusters: ["towing-cost"]
+serviceArea: "Boston, MA"
 faq:
   - q: "How much does a tow truck cost in Boston for a typical breakdown on the highway?"
     a: "Expect to pay $150-250 for the base hookup fee on I-93, I-95, or the Mass Pike, plus $4-6 per mile to your destination. If the breakdown happens after 6 PM or on a weekend, add another $50-75 to that total."

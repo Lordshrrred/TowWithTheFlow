@@ -6,6 +6,7 @@ description: "Broke down in Houston summer heat? Here's exactly what a tow truck
 tags: ["tow truck cost", "Houston Texas", "heat breakdown", "roadside assistance", "towing cost"]
 slug: "tow-truck-cost-houston-texas-heat-breakdown"
 clusters: ["towing-cost"]
+serviceArea: "Houston, TX"
 faq:
   - q: "How much does a tow truck cost in Houston for a short local tow?"
     a: "Most local tows in Houston run between $100 and $175 for a 5 to 10 mile trip. That includes a hookup fee of $75 to $125 plus $3 to $5 per mile after the first few miles."

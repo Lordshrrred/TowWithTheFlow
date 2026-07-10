@@ -6,6 +6,7 @@ description: "Stuck on Atlanta highways? Get exact towing costs for I-75, I-85, 
 tags: ["towing cost", "atlanta highway", "georgia interstate", "roadside assistance", "emergency towing"]
 slug: "towing-cost-in-atlanta-georgia-highway"
 clusters: ["towing-cost"]
+serviceArea: "Atlanta, GA"
 faq:
   - q: "Will my car insurance cover the towing cost if I break down on the interstate in Atlanta?"
     a: "Most auto insurance policies with roadside assistance cover 5 to 15 miles of towing at no out-of-pocket cost, which is enough for many Atlanta metro destinations. Check your policy before calling a private tow company, since coverage limits and reimbursement rules vary by provider."

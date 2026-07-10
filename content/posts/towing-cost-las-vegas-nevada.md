@@ -6,6 +6,7 @@ description: "Las Vegas towing costs $125-175 base fee plus $4-6/mile. Get emerg
 tags: ["las vegas", "nevada", "towing cost", "roadside emergency", "vegas strip", "i-15"]
 slug: "towing-cost-las-vegas-nevada"
 clusters: ["towing-cost"]
+serviceArea: "Las Vegas, NV"
 faq:
   - q: "Does AAA actually cover towing on the Las Vegas Strip, or do I need a special service?"
     a: "AAA Nevada does cover Strip towing, but response times run longer than elsewhere in the city because only permitted operators can work Las Vegas Boulevard. Your AAA membership still applies, though you may wait 60 to 90 minutes or more during busy periods."

@@ -6,6 +6,7 @@ description: "Downtown Chicago towing costs $150-300 for local service, $4-7 per
 tags: ["chicago towing cost", "downtown towing rates", "illinois roadside assistance", "urban towing prices", "chicago breakdown"]
 slug: "towing-cost-chicago-illinois-downtown"
 clusters: ["towing-cost"]
+serviceArea: "Chicago, IL"
 faq:
   - q: "Does Chicago have a price limit on what tow companies can charge downtown?"
     a: "Chicago does not cap private towing rates for breakdowns you initiate yourself. City-contracted tows after accidents or illegal parking follow a regulated fee schedule, but if you call a tow truck on your own, the company sets its own prices. This is exactly why getting multiple quotes matters."

@@ -6,6 +6,7 @@ description: "Stuck in LA rush hour traffic and need a tow? Expect $150-$300 bas
 tags: ["towing cost", "los angeles", "rush hour traffic", "emergency towing", "traffic delays"]
 slug: "towing-cost-los-angeles-rush-hour-traffic"
 clusters: ["towing-cost"]
+serviceArea: "Los Angeles, CA"
 faq:
   - q: "Can I refuse a tow company the CHP calls and wait for my own?"
     a: "Yes. If CHP calls a tow from their rotation, you are not required to use it. Politely tell the officer you want to call your own provider or insurance roadside assistance. You may have to wait longer, but CHP rotation tows in LA often charge $300-$500 for a basic freeway tow."

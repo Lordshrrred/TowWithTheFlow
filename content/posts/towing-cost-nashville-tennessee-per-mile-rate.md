@@ -6,6 +6,7 @@ description: "Exact towing costs in Nashville, TN including per mile rates, hook
 tags: ["towing cost Nashville", "Nashville tow truck rates", "per mile towing Tennessee", "roadside help Nashville", "towing prices Nashville"]
 slug: "towing-cost-nashville-tennessee-per-mile-rate"
 clusters: ["towing-cost"]
+serviceArea: "Nashville, TN"
 faq:
   - q: "Can I negotiate the towing price before the truck arrives in Nashville?"
     a: "Yes, and you should. Ask each dispatcher for the exact hookup fee and per mile rate before they dispatch a truck, and request a written or texted confirmation of the total estimate. Once the truck is hooked up and rolling, your leverage disappears."

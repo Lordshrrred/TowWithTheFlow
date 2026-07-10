@@ -6,6 +6,7 @@ description: "San Antonio towing costs $95-140 base fee plus $3-5 per mile. Comp
 tags: ["san antonio", "texas", "towing cost", "roadside emergency"]
 slug: "towing-cost-san-antonio-texas"
 clusters: ["towing-cost"]
+serviceArea: "San Antonio, TX"
 faq:
   - q: "Does insurance usually cover towing in San Antonio?"
     a: "Many auto insurance policies include roadside assistance as an optional add-on, but standard liability or collision coverage does not cover towing. Check your policy's declarations page or call your insurer before you need a tow to find out what is included."

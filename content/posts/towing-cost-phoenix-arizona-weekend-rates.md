@@ -6,6 +6,7 @@ description: "Phoenix towing costs jump on weekends. Expect $125-200 base rates 
 tags: ["phoenix towing", "weekend towing rates", "arizona towing cost", "emergency towing", "phoenix roadside"]
 slug: "towing-cost-phoenix-arizona-weekend-rates"
 clusters: ["towing-cost"]
+serviceArea: "Phoenix, AZ"
 faq:
   - q: "Can I negotiate the price with a tow company on a weekend?"
     a: "Yes, and it works more often than people expect. If you have a competing quote in hand, mention it directly. Companies would rather take a slightly lower fare than lose the job entirely. This works better for local private operators than for large dispatch networks."

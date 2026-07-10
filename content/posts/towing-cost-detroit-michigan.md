@@ -6,6 +6,7 @@ description: "Detroit towing costs $95-150 base fee plus $4-7/mile. Get roadside
 tags: ["detroit", "michigan", "towing cost", "roadside emergency"]
 slug: "towing-cost-detroit-michigan"
 clusters: ["towing-cost"]
+serviceArea: "Detroit, MI"
 faq:
   - q: "Can I pick my own tow truck company if I break down on a Detroit freeway?"
     a: "For most Detroit freeway breakdowns, you can call the tow company of your choice. The exception is the Ambassador Bridge and Detroit-Windsor Tunnel, where designated contractors handle all tows and you cannot select your own service."

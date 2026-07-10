@@ -6,6 +6,7 @@ description: "Broke down on LA freeway? Get exact towing costs for Los Angeles f
 tags: ["towing cost", "los angeles freeway", "freeway breakdown", "california towing", "emergency tow"]
 slug: "towing-cost-los-angeles-freeway-breakdown"
 clusters: ["towing-cost"]
+serviceArea: "Los Angeles, CA"
 faq:
   - q: "Can I choose my own tow truck on an LA freeway, or does CHP pick the company?"
     a: "CHP uses a rotation list of approved tow operators for each freeway zone, and you cannot choose your own company when they dispatch. However, you can decline CHP's tow after the immediate safety situation is handled and call your own provider, as long as your car is off the active lanes and not creating a hazard."

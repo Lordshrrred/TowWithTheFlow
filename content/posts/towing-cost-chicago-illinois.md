@@ -6,6 +6,7 @@ description: "Chicago towing costs $125-200 base plus $4-7 per mile. Get steps f
 tags: ["chicago", "illinois", "towing cost", "roadside emergency"]
 slug: "towing-cost-chicago-illinois"
 clusters: ["towing-cost"]
+serviceArea: "Chicago, IL"
 faq:
   - q: "Does AAA actually cover towing in Chicago, or will I still owe money?"
     a: "AAA covers towing within a set mileage limit (typically 3-7 miles for basic membership, up to 100 miles for Plus or Premier tiers). If your destination is farther, you pay the per-mile overage yourself, which in Chicago runs $4-7 per mile beyond your covered distance."

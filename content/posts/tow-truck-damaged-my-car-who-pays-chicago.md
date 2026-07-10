@@ -6,6 +6,7 @@ description: "Tow truck damaged your car in Chicago? Learn who pays, what to do 
 tags: ["tow truck damage", "Chicago towing", "insurance claims", "vehicle damage", "towing liability"]
 slug: "tow-truck-damaged-my-car-who-pays-chicago"
 clusters: ["accident-liability"]
+serviceArea: "Chicago, IL"
 faq:
   - q: "What if the tow company says the damage was already there before they touched my car?"
     a: "This is the most common defense tow companies use. Your timestamped photos taken before and during the tow are your best counter. If you have recent repair records or a pre-tow inspection showing the vehicle was undamaged, bring those to the adjuster. Witness statements from anyone who saw the condition of the car before the tow also carry real weight."
