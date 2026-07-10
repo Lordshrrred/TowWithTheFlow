@@ -149,7 +149,7 @@
   "description": {{ if .Params.description }}{{ .Params.description | jsonify | safeJS }}{{ else }}{{ .Site.Params.description | jsonify | safeJS }}{{ end }}
 }
 </script>
-{{ if eq .Params.assetType "calculator" }}
+{{ if in (slice "calculator" "decision-tool") .Params.assetType }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -218,7 +218,7 @@
 {{ end }}
 {{ end }}
 
-{{ if eq .Params.assetType "calculator" }}
+{{ if in (slice "calculator" "decision-tool") .Params.assetType }}
 <link rel="stylesheet" href="{{ "css/tools.css" | absURL }}">
 {{ end }}
 
@@ -233,7 +233,7 @@
 </script>
 {{ end }}
 
-{{ if eq .Params.assetType "calculator" }}
+{{ if in (slice "calculator" "decision-tool") .Params.assetType }}
 <script src="{{ "js/tool-engine.js" | absURL }}" defer></script>
 {{ end }}
 

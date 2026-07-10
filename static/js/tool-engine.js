@@ -1,13 +1,19 @@
 /*
- * TWTF Tool Engine — shared calculator runtime.
+ * TWTF Tool Engine — shared runtime for every roadside tool.
  *
- * Reads a JSON config embedded per-tool (see layouts/partials/tools/calculator.html),
- * computes a cost estimate generically, renders the "roadside coach" result
- * sections (confidence, factor explanations, phone script), and reports GA4
- * events. A future tool plugs in with a new data/tools/<id>.json config —
- * this file does not change.
+ * Two tool "kinds" share this one file:
+ *   - "calculator"     (config.kind absent or "calculator") — live cost math
+ *                        from simultaneous fields. See computeEstimate().
+ *   - "decision-tool"  (config.kind === "decision-tool") — one branching
+ *                        question at a time, ending at a fixed recommendation.
+ *                        See initDecisionTool().
  *
- * Config contract (all optional except id):
+ * Both kinds render into the SAME shared "Roadside Action Plan" DOM hooks
+ * (confidence, factors, phone script, mistakes, checklist, next action) via
+ * the generic render* functions below — a new tool of either kind plugs in
+ * with a new data/tools/<id>.json config; this file does not change.
+ *
+ * Calculator config contract (all optional except id):
  *   id, currency, base_fee, per_mile_rate
  *   distance_field   { id, label, min, max, default, help }
  *   select_fields[]  { id, label, help, options: [{ value, label, fee?, multiplier?, variability? }] }
@@ -18,6 +24,15 @@
  *   factor_explanations   { <field_id>: "why this factor moves the price" }
  *   savings_tips[], common_mistakes[], before_tow_checklist[]  — static, rendered server-side
  *   phone_script     { intro, lines[] }  — lines may include {field_id_label} tokens
+ *
+ * Decision-tool config contract:
+ *   id, kind: "decision-tool", start (question id)
+ *   questions: { <id>: { text, options: [{ value, label, next }] } }
+ *     — next is either another question id, or "result:<result id>"
+ *   results: { <id>: {
+ *     result_type, title, summary, confidence ("high"|"moderate"|"low"), confidence_text,
+ *     not_to_do[], before_help_checklist[], phone_script { intro, lines[] }, next_action
+ *   } }
  */
 (function () {
   "use strict";
@@ -51,7 +66,126 @@
     return isAcronym ? label : label.charAt(0).toLowerCase() + label.slice(1);
   }
 
-  // ---- Estimate math -------------------------------------------------------
+  // ============================================================================
+  // Shared "Roadside Action Plan" renderers — used by both calculator and
+  // decision-tool. Each takes plain data (never reads config/state itself),
+  // so either tool kind can build that data its own way and share the render.
+  // ============================================================================
+
+  var CONFIDENCE_COPY = {
+    high: { emoji: "🟢", label: "High confidence", text: "This estimate is based on common pricing and should be fairly accurate." },
+    moderate: { emoji: "🟡", label: "Moderate confidence", text: "Pricing varies depending on a few conditions here — ask the questions below before agreeing to anything." },
+    low: { emoji: "🔴", label: "Lower confidence", text: "Your situation has several variables that affect price. Expect a wider range, and read the checklist before agreeing to anything." }
+  };
+
+  function renderConfidence(root, confidence) {
+    var el = root.querySelector("[data-result-confidence]");
+    if (!el) return;
+    el.className = "calc-confidence calc-confidence--" + confidence.level;
+    el.setAttribute("role", "status");
+    el.innerHTML = "";
+
+    var emoji = document.createElement("span");
+    emoji.className = "calc-confidence__emoji";
+    emoji.setAttribute("aria-hidden", "true");
+    emoji.textContent = confidence.emoji;
+
+    var text = document.createElement("span");
+    var strong = document.createElement("strong");
+    strong.textContent = confidence.label;
+    text.appendChild(strong);
+    text.appendChild(document.createTextNode(" — " + confidence.text));
+
+    el.appendChild(emoji);
+    el.appendChild(text);
+  }
+
+  function toggleSection(container, hasContent) {
+    if (!container) return;
+    var section = container.closest("[data-plan-section]");
+    if (section) section.hidden = !hasContent;
+  }
+
+  // items: [{ label, text }] — rendered as "<strong>label:</strong> text"
+  function renderFactors(root, items) {
+    var container = root.querySelector("[data-result-factors]");
+    if (!container) return;
+    container.innerHTML = "";
+    (items || []).forEach(function (item) {
+      var li = document.createElement("li");
+      var strong = document.createElement("strong");
+      strong.textContent = item.label + ": ";
+      li.appendChild(strong);
+      li.appendChild(document.createTextNode(item.text));
+      container.appendChild(li);
+    });
+    toggleSection(container, (items || []).length > 0);
+  }
+
+  // Plain string list — reused for tips, mistakes/not-to-do, and checklists.
+  function renderList(container, items) {
+    if (!container) return;
+    container.innerHTML = "";
+    var list = items || [];
+    list.forEach(function (text) {
+      var li = document.createElement("li");
+      li.textContent = text;
+      container.appendChild(li);
+    });
+    toggleSection(container, list.length > 0);
+  }
+
+  function renderPhoneScript(root, intro, lines) {
+    var introEl = root.querySelector("[data-script-intro]");
+    var container = root.querySelector("[data-phone-script]");
+    if (introEl) introEl.textContent = intro || "";
+    if (!container) return;
+    container.innerHTML = "";
+    (lines || []).forEach(function (text) {
+      var li = document.createElement("li");
+      li.textContent = text;
+      container.appendChild(li);
+    });
+    toggleSection(container, (lines || []).length > 0);
+  }
+
+  // mainText/secondaryText: the big headline + supporting line. breakdown is
+  // calculator-only (itemized $ lines); pass null to leave it untouched/hidden.
+  function renderResultSummary(root, currency, opts) {
+    var mainEl = root.querySelector("[data-result-range]");
+    var secondaryEl = root.querySelector("[data-result-likely]");
+    var breakdownEl = root.querySelector("[data-result-breakdown]");
+
+    if (mainEl) mainEl.textContent = opts.mainText;
+    if (secondaryEl) secondaryEl.textContent = opts.secondaryText || "";
+
+    if (breakdownEl) {
+      breakdownEl.innerHTML = "";
+      (opts.breakdown || []).forEach(function (line) {
+        var li = document.createElement("li");
+        if (typeof line.amount === "number") {
+          li.textContent = line.label + ": +" + fmtMoney(line.amount, currency);
+        } else if (line.multiplier) {
+          li.textContent = line.label + " (×" + line.multiplier + ")";
+        } else {
+          li.textContent = line.label;
+        }
+        breakdownEl.appendChild(li);
+      });
+      toggleSection(breakdownEl, (opts.breakdown || []).length > 0);
+    }
+  }
+
+  function pulse(el) {
+    if (!el) return;
+    el.classList.remove("is-updating");
+    void el.offsetWidth; // force reflow so the animation restarts on repeat updates
+    el.classList.add("is-updating");
+  }
+
+  // ============================================================================
+  // Calculator: live estimate math from simultaneous fields
+  // ============================================================================
 
   function computeEstimate(config, values) {
     var total = 0;
@@ -110,14 +244,6 @@
     return { total: total, low: low, high: high, breakdown: breakdown };
   }
 
-  // ---- Confidence: how many "variability" points are active -----------------
-
-  var CONFIDENCE_COPY = {
-    high: { emoji: "🟢", label: "High confidence", text: "This estimate is based on common pricing and should be fairly accurate." },
-    moderate: { emoji: "🟡", label: "Moderate confidence", text: "Pricing varies depending on a few conditions here — ask the questions below before agreeing to anything." },
-    low: { emoji: "🔴", label: "Lower confidence", text: "Your situation has several variables that affect price. Expect a wider range, and read the checklist before agreeing to anything." }
-  };
-
   function computeConfidence(config, values) {
     var score = 0;
     (config.select_fields || []).forEach(function (field) {
@@ -136,69 +262,9 @@
     return Object.assign({ level: level, score: score }, CONFIDENCE_COPY[level]);
   }
 
-  // ---- Field-value reading + DOM rendering -----------------------------------
-
-  function readValues(root) {
-    var values = {};
-    root.querySelectorAll("[data-field]").forEach(function (el) {
-      var id = el.getAttribute("data-field");
-      values[id] = el.type === "checkbox" ? el.checked : el.value;
-    });
-    return values;
-  }
-
-  function renderResult(root, config, result) {
-    var rangeEl = root.querySelector("[data-result-range]");
-    var likelyEl = root.querySelector("[data-result-likely]");
-    var breakdownEl = root.querySelector("[data-result-breakdown]");
-
-    if (rangeEl) rangeEl.textContent = fmtMoney(result.low, config.currency) + " – " + fmtMoney(result.high, config.currency);
-    if (likelyEl) likelyEl.textContent = "Likely around " + fmtMoney(result.total, config.currency);
-
-    if (breakdownEl) {
-      breakdownEl.innerHTML = "";
-      result.breakdown.forEach(function (line) {
-        var li = document.createElement("li");
-        if (typeof line.amount === "number") {
-          li.textContent = line.label + ": +" + fmtMoney(line.amount, config.currency);
-        } else if (line.multiplier) {
-          li.textContent = line.label + " (×" + line.multiplier + ")";
-        } else {
-          li.textContent = line.label;
-        }
-        breakdownEl.appendChild(li);
-      });
-    }
-  }
-
-  function renderConfidence(root, confidence) {
-    var el = root.querySelector("[data-result-confidence]");
-    if (!el) return;
-    el.className = "calc-confidence calc-confidence--" + confidence.level;
-    el.setAttribute("role", "status");
-    el.innerHTML = "";
-
-    var emoji = document.createElement("span");
-    emoji.className = "calc-confidence__emoji";
-    emoji.setAttribute("aria-hidden", "true");
-    emoji.textContent = confidence.emoji;
-
-    var text = document.createElement("span");
-    var strong = document.createElement("strong");
-    strong.textContent = confidence.label;
-    text.appendChild(strong);
-    text.appendChild(document.createTextNode(" — " + confidence.text));
-
-    el.appendChild(emoji);
-    el.appendChild(text);
-  }
-
-  function renderFactors(root, config, values) {
-    var container = root.querySelector("[data-result-factors]");
-    if (!container) return;
+  function calculatorFactorItems(config, values) {
     var explanations = config.factor_explanations || {};
     var items = [];
-
     if (config.distance_field && explanations[config.distance_field.id]) {
       items.push({ label: config.distance_field.label, text: explanations[config.distance_field.id] });
     }
@@ -212,54 +278,27 @@
       var days = Number(values[config.storage_field.id]) || 0;
       if (days > 0) items.push({ label: config.storage_field.label, text: explanations[config.storage_field.id] });
     }
+    return items;
+  }
 
-    container.innerHTML = "";
-    items.forEach(function (item) {
-      var li = document.createElement("li");
-      var strong = document.createElement("strong");
-      strong.textContent = item.label + ": ";
-      li.appendChild(strong);
-      li.appendChild(document.createTextNode(item.text));
-      container.appendChild(li);
+  function resolveCalculatorTokens(line, config, values) {
+    return line.replace(/\{(\w+)_label\}/g, function (match, fieldId) {
+      var field = (config.select_fields || []).filter(function (f) { return f.id === fieldId; })[0];
+      var option = field && selectedOption(field, values);
+      return option ? toMidSentence(option.label) : match;
     });
   }
 
-  function renderPhoneScript(root, config, values) {
-    var container = root.querySelector("[data-phone-script]");
-    if (!container || !config.phone_script) return;
-    container.innerHTML = "";
-    (config.phone_script.lines || []).forEach(function (line) {
-      var text = line.replace(/\{(\w+)_label\}/g, function (match, fieldId) {
-        var field = (config.select_fields || []).filter(function (f) { return f.id === fieldId; })[0];
-        var option = field && selectedOption(field, values);
-        if (!option) return match;
-        return toMidSentence(option.label);
-      });
-      var li = document.createElement("li");
-      li.textContent = text;
-      container.appendChild(li);
+  function readValues(root) {
+    var values = {};
+    root.querySelectorAll("[data-field]").forEach(function (el) {
+      var id = el.getAttribute("data-field");
+      values[id] = el.type === "checkbox" ? el.checked : el.value;
     });
+    return values;
   }
 
-  function pulse(el) {
-    if (!el) return;
-    el.classList.remove("is-updating");
-    void el.offsetWidth; // force reflow so the animation restarts on repeat updates
-    el.classList.add("is-updating");
-  }
-
-  // ---- Wiring ----------------------------------------------------------------
-
-  function initCalculator(root) {
-    var configEl = root.querySelector("[data-tool-config]");
-    if (!configEl) return;
-    var config;
-    try {
-      config = JSON.parse(configEl.textContent);
-    } catch (e) {
-      return;
-    }
-
+  function initCalculator(root, config) {
     var toolId = config.id || root.getAttribute("data-tool-engine") || "tool";
     var openFired = false;
     var completeFired = false;
@@ -268,10 +307,19 @@
     function computeAndRender() {
       var values = readValues(root);
       var result = computeEstimate(config, values);
-      renderResult(root, config, result);
+      renderResultSummary(root, config.currency, {
+        mainText: fmtMoney(result.low, config.currency) + " – " + fmtMoney(result.high, config.currency),
+        secondaryText: "Likely around " + fmtMoney(result.total, config.currency),
+        breakdown: result.breakdown
+      });
       renderConfidence(root, computeConfidence(config, values));
-      renderFactors(root, config, values);
-      renderPhoneScript(root, config, values);
+      renderFactors(root, calculatorFactorItems(config, values));
+      if (config.phone_script) {
+        var lines = (config.phone_script.lines || []).map(function (line) {
+          return resolveCalculatorTokens(line, config, values);
+        });
+        renderPhoneScript(root, config.phone_script.intro, lines);
+      }
       return result;
     }
 
@@ -307,16 +355,162 @@
     computeAndRender();
   }
 
+  // ============================================================================
+  // Decision tool: one branching question at a time, ending at a fixed result
+  // ============================================================================
+
+  function confidenceFromResult(result) {
+    var level = result.confidence || "moderate";
+    var copy = CONFIDENCE_COPY[level] || CONFIDENCE_COPY.moderate;
+    return { level: level, emoji: copy.emoji, label: copy.label, text: result.confidence_text || copy.text };
+  }
+
+  function initDecisionTool(root, config) {
+    var toolId = config.id || root.getAttribute("data-tool-engine") || "tool";
+    var flowEl = root.querySelector("[data-question-container]");
+    var flowWrap = root.querySelector("[data-decision-flow]");
+    var planEl = root.querySelector("[data-roadside-plan]");
+    var backBtn = root.querySelector("[data-decision-back]");
+    var restartBtn = root.querySelector("[data-decision-restart]");
+    if (!flowEl || !config.questions || !config.results) return;
+
+    var path = []; // answers so far: { questionText, label }, for the "why" trail
+    var questionStack = []; // question ids visited, for Back
+    var openFired = false;
+
+    function fireOpen() {
+      if (openFired) return;
+      openFired = true;
+      gaEvent("tool_open", { tool_id: toolId });
+      gaEvent("decision_started", { tool_id: toolId });
+    }
+
+    function renderQuestion(questionId) {
+      var q = config.questions[questionId];
+      if (!q) return;
+      flowEl.innerHTML = "";
+
+      var heading = document.createElement("h3");
+      heading.className = "decision-step__question";
+      heading.textContent = q.text;
+      heading.setAttribute("tabindex", "-1");
+      flowEl.appendChild(heading);
+
+      var optionsWrap = document.createElement("div");
+      optionsWrap.className = "decision-step__options";
+      (q.options || []).forEach(function (opt) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "decision-option";
+        btn.textContent = opt.label;
+        btn.addEventListener("click", function () {
+          fireOpen();
+          questionStack.push(questionId);
+          path.push({ questionText: q.text, label: opt.label });
+          advance(opt.next);
+        });
+        optionsWrap.appendChild(btn);
+      });
+      flowEl.appendChild(optionsWrap);
+
+      if (backBtn) backBtn.hidden = questionStack.length === 0;
+      heading.focus();
+    }
+
+    function advance(next) {
+      if (next.indexOf("result:") === 0) {
+        showResult(next.slice("result:".length));
+      } else {
+        renderQuestion(next);
+      }
+    }
+
+    function showResult(resultId) {
+      var result = config.results[resultId];
+      if (!result) return;
+
+      if (flowWrap) flowWrap.hidden = true;
+      if (planEl) planEl.hidden = false;
+
+      renderConfidence(root, confidenceFromResult(result));
+      renderResultSummary(root, config.currency, {
+        mainText: result.title,
+        secondaryText: result.summary,
+        breakdown: null
+      });
+      renderFactors(root, path.map(function (step) {
+        return { label: step.questionText, text: step.label };
+      }));
+      if (result.phone_script) {
+        renderPhoneScript(root, result.phone_script.intro, result.phone_script.lines || []);
+      }
+      renderList(root.querySelector("[data-result-mistakes]"), result.not_to_do);
+      renderList(root.querySelector("[data-result-checklist]"), result.before_help_checklist);
+      var nextEl = root.querySelector("[data-result-next]");
+      if (nextEl) nextEl.textContent = result.next_action || "";
+
+      var planTitle = root.querySelector(".roadside-plan__title");
+      if (planTitle) planTitle.focus();
+
+      gaEvent("decision_completed", { tool_id: toolId, result_type: result.result_type });
+    }
+
+    function goBack() {
+      if (!questionStack.length) return;
+      path.pop();
+      var prevId = questionStack.pop();
+      renderQuestion(prevId);
+    }
+
+    function restart() {
+      path = [];
+      questionStack = [];
+      if (planEl) planEl.hidden = true;
+      if (flowWrap) flowWrap.hidden = false;
+      renderQuestion(config.start);
+    }
+
+    if (backBtn) backBtn.addEventListener("click", goBack);
+    if (restartBtn) restartBtn.addEventListener("click", restart);
+
+    renderQuestion(config.start);
+  }
+
+  // ============================================================================
+  // Wiring
+  // ============================================================================
+
+  function readToolConfig(root) {
+    var configEl = root.querySelector("[data-tool-config]");
+    if (!configEl) return null;
+    try {
+      return JSON.parse(configEl.textContent);
+    } catch (e) {
+      return null;
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var roots = document.querySelectorAll("[data-tool-engine]");
     if (!roots.length) return;
 
-    roots.forEach(initCalculator);
+    roots.forEach(function (root) {
+      var config = readToolConfig(root);
+      if (!config) return;
+      if (config.kind === "decision-tool") {
+        initDecisionTool(root, config);
+      } else {
+        initCalculator(root, config);
+      }
+    });
 
-    var primaryToolId = roots[0].getAttribute("data-tool-engine") || "tool";
+    var primaryRoot = roots[0];
+    var primaryToolId = primaryRoot.getAttribute("data-tool-engine") || "tool";
+    var isDecisionTool = primaryRoot.getAttribute("data-tool-kind") === "decision-tool";
+    var clickEventName = isDecisionTool ? "related_resource_click" : "related_article_click";
     document.querySelectorAll(".related-guides a").forEach(function (a) {
       a.addEventListener("click", function () {
-        gaEvent("related_article_click", { tool_id: primaryToolId, href: a.getAttribute("href") });
+        gaEvent(clickEventName, { tool_id: primaryToolId, href: a.getAttribute("href") });
       });
     });
   });

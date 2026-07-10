@@ -10,6 +10,8 @@
     <div class="post-body">
       {{ if eq .Params.assetType "calculator" }}
       {{ partial "tools/calculator.html" . }}
+      {{ else if eq .Params.assetType "decision-tool" }}
+      {{ partial "tools/decision-tool.html" . }}
       {{ end }}
       {{ .Content }}
       {{ partial "authority-related.html" . }}

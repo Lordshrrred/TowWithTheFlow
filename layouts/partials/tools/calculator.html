@@ -16,7 +16,7 @@
 {{ with $key }}
 {{ $cfg := index hugo.Data.tools . }}
 {{ if $cfg }}
-<div class="tool-panel" data-tool-engine="{{ $cfg.id }}">
+<div class="tool-panel" data-tool-engine="{{ $cfg.id }}" data-tool-kind="calculator">
   <div class="tool-panel__header">
     <h2>{{ $cfg.panel_heading | default "Get your answer" }}</h2>
     <p>{{ $cfg.panel_intro | default "Answer a few quick questions — nothing here is submitted anywhere." }}</p>
@@ -72,9 +72,9 @@
   </div>
 
   <div class="roadside-plan">
-    <h2 class="roadside-plan__title">{{ $cfg.action_plan_heading | default "Your Roadside Action Plan" }}</h2>
+    <h2 class="roadside-plan__title" tabindex="-1">{{ $cfg.action_plan_heading | default "Your Roadside Action Plan" }}</h2>
 
-    <div class="calc-result">
+    <div class="calc-result" data-plan-section>
       <div class="calc-confidence" data-result-confidence></div>
       <div class="calc-result__label">Expected range</div>
       <div class="calc-result__range" data-result-range aria-live="polite">—</div>
@@ -83,36 +83,36 @@
     </div>
 
     {{ with $cfg.factor_explanations }}
-    <div class="calc-factors">
+    <div class="calc-factors" data-plan-section>
       <h3>Why your estimate looks like this</h3>
       <ul data-result-factors></ul>
     </div>
     {{ end }}
 
     {{ with $cfg.phone_script }}
-    <div class="calc-script">
+    <div class="calc-script" data-plan-section>
       <h3>Questions to ask before saying yes</h3>
-      {{ with .intro }}<p class="calc-script__intro">{{ . }}</p>{{ end }}
+      <p class="calc-script__intro" data-script-intro></p>
       <ol class="calc-script__lines" data-phone-script></ol>
     </div>
     {{ end }}
 
     {{ with $cfg.savings_tips }}
-    <div class="calc-tips">
+    <div class="calc-tips" data-plan-section>
       <h3>Ways you might save money</h3>
       <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
     </div>
     {{ end }}
 
     {{ with $cfg.common_mistakes }}
-    <div class="calc-mistakes">
+    <div class="calc-mistakes" data-plan-section>
       <h3>Common mistakes to avoid</h3>
       <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
     </div>
     {{ end }}
 
     {{ with $cfg.before_tow_checklist }}
-    <div class="calc-checklist">
+    <div class="calc-checklist" data-plan-section>
       <h3>Before the tow arrives</h3>
       <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
     </div>

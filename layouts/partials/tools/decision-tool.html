@@ -1,0 +1,66 @@
+{{/*
+  Reusable decision-tree renderer, shared by every roadside "what should I do"
+  tool. Reads data/tools/<.Params.toolConfig>.json — a start question id, a
+  map of branching questions, and a map of terminal results — and reveals one
+  question at a time. Branching + GA4 events live in static/js/tool-engine.js
+  (initDecisionTool), which renders into the exact same Roadside Action Plan
+  DOM hooks the calculator uses, so the two tool kinds share one renderer.
+
+  A future decision tool needs only a new data file, not new template code.
+*/}}
+{{ $key := .Params.toolConfig }}
+{{ with $key }}
+{{ $cfg := index hugo.Data.tools . }}
+{{ if $cfg }}
+<div class="tool-panel" data-tool-engine="{{ $cfg.id }}" data-tool-kind="decision-tool">
+  <div class="tool-panel__header">
+    <h2>{{ $cfg.panel_heading | default "Answer a few quick questions" }}</h2>
+    <p>{{ $cfg.panel_intro | default "One question at a time — nothing here is submitted anywhere." }}</p>
+  </div>
+
+  <div class="decision-flow" data-decision-flow>
+    <div class="decision-step" data-question-container></div>
+    <div class="decision-flow__controls">
+      <button type="button" class="decision-back" data-decision-back hidden>&larr; Back</button>
+    </div>
+  </div>
+
+  <div class="roadside-plan" data-roadside-plan hidden>
+    <h2 class="roadside-plan__title" tabindex="-1">{{ $cfg.action_plan_heading | default "Your Roadside Action Plan" }}</h2>
+
+    <div class="calc-result" data-plan-section>
+      <div class="calc-confidence" data-result-confidence></div>
+      <div class="calc-result__label">What to do next</div>
+      <div class="calc-result__range" data-result-range aria-live="polite">—</div>
+      <p class="calc-result__likely" data-result-likely></p>
+    </div>
+
+    <div class="calc-factors" data-plan-section>
+      <h3>Why we recommended this</h3>
+      <ul data-result-factors></ul>
+    </div>
+
+    <div class="calc-script" data-plan-section>
+      <h3>Questions to ask before saying yes</h3>
+      <p class="calc-script__intro" data-script-intro></p>
+      <ol class="calc-script__lines" data-phone-script></ol>
+    </div>
+
+    <div class="calc-mistakes" data-plan-section>
+      <h3>What Not To Do</h3>
+      <ul data-result-mistakes></ul>
+    </div>
+
+    <div class="calc-checklist" data-plan-section>
+      <h3>Before Help Arrives</h3>
+      <ul data-result-checklist></ul>
+    </div>
+
+    <p class="roadside-plan__next" data-result-next></p>
+    <button type="button" class="decision-restart" data-decision-restart>Start over</button>
+  </div>
+
+  <script type="application/json" data-tool-config>{{ $cfg | jsonify | safeJS }}</script>
+</div>
+{{ end }}
+{{ end }}
