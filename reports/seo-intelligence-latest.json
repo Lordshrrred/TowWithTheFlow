@@ -47,9 +47,9 @@
     "current_gsc_rows": 0,
     "previous_gsc_rows": 0
   },
-  "generated_at": "2026-07-10T18:10:06.460879+00:00",
+  "generated_at": "2026-07-10T20:12:23.838084+00:00",
   "intent_map": {
-    "generatedAt": "2026-07-10T18:10:06.440079+00:00",
+    "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
     "overlapGroupCount": 10
   },
@@ -64,49 +64,49 @@
     ]
   },
   "request_counts": {
-    "ga4": 0,
-    "gsc": 0
+    "ga4": 2,
+    "gsc": 2
   },
   "statuses": [
     {
       "cached": false,
-      "message": "No Search Console service-account JSON env var found.",
+      "message": "Connected \u2014 awaiting data. Search Console can take 24-48 hours to populate a newly verified property.",
       "rows": 0,
       "source": "search_console",
-      "status": "missing_credentials"
+      "status": "ok"
     },
     {
       "cached": false,
-      "message": "GA4 service-account JSON env var not found.",
+      "message": "HTTP Error 400: Bad Request",
       "rows": 0,
       "source": "ga4",
-      "status": "missing_credentials"
+      "status": "error"
     }
   ],
   "summary": {
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
-    "generated_at": "2026-07-10T18:10:06.460879+00:00",
+    "generated_at": "2026-07-10T20:12:23.838084+00:00",
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
     "request_counts": {
-      "ga4": 0,
-      "gsc": 0
+      "ga4": 2,
+      "gsc": 2
     },
     "statuses": [
       {
         "cached": false,
-        "message": "No Search Console service-account JSON env var found.",
+        "message": "Connected \u2014 awaiting data. Search Console can take 24-48 hours to populate a newly verified property.",
         "rows": 0,
         "source": "search_console",
-        "status": "missing_credentials"
+        "status": "ok"
       },
       {
         "cached": false,
-        "message": "GA4 service-account JSON env var not found.",
+        "message": "HTTP Error 400: Bad Request",
         "rows": 0,
         "source": "ga4",
-        "status": "missing_credentials"
+        "status": "error"
       }
     ],
     "top_actions": []

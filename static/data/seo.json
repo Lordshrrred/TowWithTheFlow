@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T18:15:13.215179+00:00",
+  "generated_at": "2026-07-10T20:12:24.577058+00:00",
   "keywords": {
     "total": 802,
     "live": 323,
@@ -126,54 +126,54 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-10T15:07:19.770900+00:00",
+    "generated_at": "2026-07-10T18:05:52.138095+00:00",
     "platforms": {
       "blog": {
-        "checked": 296,
-        "verified": 296
+        "checked": 299,
+        "verified": 299
       },
       "dev": {
-        "checked": 226,
-        "verified": 226
+        "checked": 228,
+        "verified": 228
       },
       "feeder": {
-        "checked": 294,
-        "verified": 294
-      },
-      "tumblr": {
-        "checked": 293,
-        "verified": 293
-      },
-      "wordpress": {
         "checked": 296,
         "verified": 296
+      },
+      "tumblr": {
+        "checked": 295,
+        "verified": 295
+      },
+      "wordpress": {
+        "checked": 299,
+        "verified": 299
       }
     }
   },
   "intelligence": {
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
-    "generated_at": "2026-07-10T18:10:06.460879+00:00",
+    "generated_at": "2026-07-10T20:12:23.838084+00:00",
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
     "request_counts": {
-      "ga4": 0,
-      "gsc": 0
+      "ga4": 2,
+      "gsc": 2
     },
     "statuses": [
       {
         "cached": false,
-        "message": "No Search Console service-account JSON env var found.",
+        "message": "Connected \u2014 awaiting data. Search Console can take 24-48 hours to populate a newly verified property.",
         "rows": 0,
         "source": "search_console",
-        "status": "missing_credentials"
+        "status": "ok"
       },
       {
         "cached": false,
-        "message": "GA4 service-account JSON env var not found.",
+        "message": "HTTP Error 400: Bad Request",
         "rows": 0,
         "source": "ga4",
-        "status": "missing_credentials"
+        "status": "error"
       }
     ],
     "top_actions": []

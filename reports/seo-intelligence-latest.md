@@ -1,12 +1,12 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-07-10T18:10:06.460879+00:00
+Generated: 2026-07-10T20:12:23.838084+00:00
 
 ## 1. Data Connection/Freshness
 
-- **search_console**: missing_credentials. No Search Console service-account JSON env var found. Rows: 0.
-- **ga4**: missing_credentials. GA4 service-account JSON env var not found. Rows: 0.
-- **Normal-run API requests**: Search Console 0; GA4 0; paid SERP/LLM/web-search 0.
+- **search_console**: ok. Connected — awaiting data. Search Console can take 24-48 hours to populate a newly verified property. Rows: 0.
+- **ga4**: error. HTTP Error 400: Bad Request Rows: 0.
+- **Normal-run API requests**: Search Console 2; GA4 2; paid SERP/LLM/web-search 0.
 
 ## 2. Top Organic Landing Pages
 No Search Console landing-page data available.
