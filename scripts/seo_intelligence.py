@@ -690,7 +690,11 @@ def build_markdown(payload: dict[str, Any]) -> str:
         for i, action in enumerate(payload["top_actions"], 1):
             lines.append(f"{i}. **{action['title']}** — {action['reason']} Next: {action['next_action']}")
     else:
-        lines.append("No evidence-ranked actions yet. Configure Search Console and GA4 credentials, then rerun.")
+        not_connected = {"missing_credentials", "missing_property", "error"}
+        if any(s.get("status") in not_connected for s in payload["statuses"]):
+            lines.append("No evidence-ranked actions yet. Configure Search Console and GA4 credentials, then rerun.")
+        else:
+            lines.append("No evidence-ranked actions yet — Search Console and GA4 are connected, but current traffic/impressions haven't crossed the action thresholds. Expected for a newly verified property or low current volume; rerun as more data accumulates.")
     lines.append("")
 
     lines.append("## 13. Data Limitations")
