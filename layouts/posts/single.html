@@ -32,7 +32,7 @@
       {{ with .Params.clusters }}{{ $clusterTerm = index . 0 }}{{ end }}
       {{ $clusterMates := slice }}
       {{ if $clusterTerm }}
-        {{ with .Site.Taxonomies.cluster }}
+        {{ with .Site.Taxonomies.clusters }}
           {{ with index . $clusterTerm }}
             {{ range .Pages }}
               {{ if ne . $currentPage }}{{ $clusterMates = $clusterMates | append . }}{{ end }}
