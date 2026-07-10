@@ -11,15 +11,17 @@
   <div class="container">
     <div class="feature-row">
       <div class="feature-resource feature-resource--quiet">
-        <span class="feature-resource__label">Built, not scraped</span>
+        <span class="feature-resource__label">No login. No upsell. No AI guessing.</span>
         <h2>Real tools, not another article</h2>
-        <p>Figure out what to do, or what it'll cost, in under a minute. Every tool below shares the same guidance, confidence meter, and phone script.</p>
+        <p>Figure out what to do, or what it'll cost, in under a minute — no account, no app download, no membership required. Every tool below shares the same honest confidence meter, phone script, and step-by-step guidance, computed right in your browser.</p>
       </div>
     </div>
+    <p class="term-intro">Car already stopped and you're not sure what to do? Start with <a href="{{ "/tools/should-i-call-a-tow-truck/" | relURL }}">Should I Call a Tow Truck?</a> Just want to know what it'll cost before you call? Use the <a href="{{ "/tools/tow-cost-estimator/" | relURL }}">Tow Cost Estimator</a>.</p>
     {{ with .Pages }}
     <div class="card-grid">
       {{ range . }}
       <a href="{{ .Permalink }}" class="card">
+        <div class="card__icon">{{ partial "tools/asset-icon.html" . }}</div>
         <h2 class="card__title">{{ .Title }}</h2>
         <p class="card__desc">{{ .Params.description | default .Summary }}</p>
         <span class="card__link">Open tool</span>

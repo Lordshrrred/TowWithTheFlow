@@ -1,0 +1,17 @@
+{{/*
+  Shared icon for an authority asset's Params.assetType, for card grids and
+  hub listings. Companion to tools/asset-label.html — add new tool types to
+  both maps together. Falls back to a plain wrench for anything unmapped.
+
+  Plain Unicode glyphs (not HTML entities) — printed straight through
+  Hugo's auto-escaping without needing safeHTML, since there's nothing
+  HTML-special in them to escape.
+*/}}
+{{ $icons := dict
+  "calculator" "💰"
+  "decision-tool" "🧭"
+  "checklist" "✅"
+  "reference" "📖"
+  "data" "📊"
+}}
+{{ with .Params.assetType }}{{ index $icons . | default "🔧" }}{{ else }}🔧{{ end }}

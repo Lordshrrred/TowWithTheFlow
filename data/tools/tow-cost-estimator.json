@@ -17,8 +17,10 @@
     "id": "state",
     "label": "State (optional)",
     "help": "Doesn't change the estimate below — used to point you to the right local rules and guides.",
+    "law_link": "/clusters/state-towing-laws/",
+    "law_link_text": "See towing law basics for",
     "options": [
-      { "value": "not_sure", "label": "Not sure / prefer not to say" },
+      { "value": "not_sure", "label": "Not sure / prefer not to say", "generic": true },
       { "value": "AZ", "label": "Arizona" },
       { "value": "CA", "label": "California" },
       { "value": "CO", "label": "Colorado" },
@@ -28,7 +30,7 @@
       { "value": "NV", "label": "Nevada" },
       { "value": "NY", "label": "New York" },
       { "value": "TX", "label": "Texas" },
-      { "value": "other", "label": "Other state" }
+      { "value": "other", "label": "Other state", "generic": true }
     ]
   },
   "select_fields": [

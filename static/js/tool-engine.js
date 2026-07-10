@@ -183,6 +183,25 @@
     el.classList.add("is-updating");
   }
 
+  // Shared by both tool kinds: lets someone paste the current phone script
+  // into a text message or Notes app instead of re-typing it by hand.
+  function initCopyScriptButton(root) {
+    var btn = root.querySelector("[data-copy-script]");
+    var container = root.querySelector("[data-phone-script]");
+    if (!btn || !container) return;
+    var originalLabel = btn.textContent;
+    btn.addEventListener("click", function () {
+      var lines = Array.prototype.map.call(container.querySelectorAll("li"), function (li) {
+        return li.textContent;
+      });
+      if (!lines.length || !navigator.clipboard || !navigator.clipboard.writeText) return;
+      navigator.clipboard.writeText(lines.join("\n")).then(function () {
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = originalLabel; }, 1800);
+      }).catch(function () {});
+    });
+  }
+
   // ============================================================================
   // Calculator: live estimate math from simultaneous fields
   // ============================================================================
@@ -298,6 +317,26 @@
     return values;
   }
 
+  // The state field's help text promises it "points you to the right local
+  // rules and guides" — this is what actually delivers on that, instead of
+  // the field silently doing nothing once picked.
+  function renderStateNote(root, config, values) {
+    var field = config.state_field;
+    var note = root.querySelector("[data-state-note]");
+    if (!field || !note || !field.law_link) return;
+    var option = selectedOption(field, values);
+    if (!option || option.generic) {
+      note.hidden = true;
+      return;
+    }
+    note.innerHTML = "";
+    var link = document.createElement("a");
+    link.href = field.law_link;
+    link.textContent = (field.law_link_text || "See towing law basics for") + " " + option.label;
+    note.appendChild(link);
+    note.hidden = false;
+  }
+
   function initCalculator(root, config) {
     var toolId = config.id || root.getAttribute("data-tool-engine") || "tool";
     var openFired = false;
@@ -314,6 +353,7 @@
       });
       renderConfidence(root, computeConfidence(config, values));
       renderFactors(root, calculatorFactorItems(config, values));
+      renderStateNote(root, config, values);
       if (config.phone_script) {
         var lines = (config.phone_script.lines || []).map(function (line) {
           return resolveCalculatorTokens(line, config, values);
@@ -502,6 +542,7 @@
       } else {
         initCalculator(root, config);
       }
+      initCopyScriptButton(root);
     });
 
     var primaryRoot = roots[0];
