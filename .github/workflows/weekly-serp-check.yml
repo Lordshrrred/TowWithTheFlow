@@ -12,6 +12,10 @@ on:
         required: false
         default: '1.00'
         type: string
+      confirm_paid_research:
+        description: 'Type RUN_PAID_SERP to confirm this uses paid Claude web search'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -41,6 +45,7 @@ jobs:
       - name: Run explicit SERP intelligence check
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ENABLE_PAID_SERP_RESEARCH: ${{ github.event.inputs.confirm_paid_research == 'RUN_PAID_SERP' && 'true' || 'false' }}
         run: python scripts/serp_intelligence.py --query "${{ github.event.inputs.query }}" --max-cost-usd "${{ github.event.inputs.max_cost_usd }}"
 
       - name: Rebuild SEO dashboard data

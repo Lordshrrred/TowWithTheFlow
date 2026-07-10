@@ -28,6 +28,7 @@ ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+ENABLE_PAID_SERP_RESEARCH = os.getenv("ENABLE_PAID_SERP_RESEARCH", "").strip().lower() == "true"
 
 LOG_FILE = Path(__file__).parent / "syndication_log.txt"
 REPORTS_DIR = ROOT / "reports"
@@ -299,6 +300,15 @@ def main():
     if not args.query and not args.top_keywords:
         print(
             "No SERP research run. Pass --query 'exact keyword' or --top-keywords for an explicit, bounded manual check.",
+            file=sys.stderr,
+        )
+        return
+
+    if not ENABLE_PAID_SERP_RESEARCH:
+        print(
+            "Paid SERP research is disabled. Set ENABLE_PAID_SERP_RESEARCH=true "
+            "for a bounded manual run; recurring SEO intelligence should use "
+            "Search Console/GA4 instead.",
             file=sys.stderr,
         )
         return
