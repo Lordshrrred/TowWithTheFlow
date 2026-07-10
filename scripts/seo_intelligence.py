@@ -215,7 +215,10 @@ def run_ga4_report(property_id: str, token: str, metrics: list[str]) -> dict[str
             {"name": "current", "startDate": ranges["current"][0], "endDate": ranges["current"][1]},
             {"name": "previous", "startDate": ranges["previous"][0], "endDate": ranges["previous"][1]},
         ],
-        "dimensions": [{"name": "dateRange"}, {"name": "landingPagePlusQueryString"}],
+        # "dateRange" is implicit whenever multiple named dateRanges are requested —
+        # the API auto-populates it as the first dimensionValue in each row and
+        # rejects the request if it's also listed here explicitly.
+        "dimensions": [{"name": "landingPagePlusQueryString"}],
         "metrics": [{"name": name} for name in metrics],
         "dimensionFilter": {
             "filter": {
