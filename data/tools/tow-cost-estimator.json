@@ -1,6 +1,8 @@
 {
   "id": "tow-cost-estimator",
   "currency": "USD",
+  "panel_heading": "Estimate your cost",
+  "panel_intro": "Answer a few quick questions. The range updates as you go — nothing here is submitted anywhere.",
   "base_fee": 75,
   "per_mile_rate": 4.5,
   "distance_field": {

@@ -1,0 +1,15 @@
+{{/*
+  Friendly public label for an authority asset's Params.assetType.
+  Never let a raw engineering type-string (e.g. "decision-tool",
+  "storage-fee-calculator") leak as visible page copy — map it to
+  something a visitor would actually say. Add new tool types here as
+  they're built; unknown types fall back to a plain, still-friendly label.
+*/}}
+{{ $labels := dict
+  "calculator" "Roadside Calculator"
+  "decision-tool" "Decision Tool"
+  "checklist" "Checklist"
+  "reference" "Reference Guide"
+  "data" "Data Resource"
+}}
+{{ with .Params.assetType }}{{ index $labels . | default "Roadside Tool" }}{{ else }}Roadside Tool{{ end }}

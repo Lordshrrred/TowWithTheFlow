@@ -18,6 +18,13 @@
 .calc-field--toggle{flex-direction:row;align-items:center;gap:.7rem;padding:.4rem 0}
 .calc-field--toggle input[type="checkbox"]{width:1.25rem;height:1.25rem;accent-color:var(--accent,#5aa2ff);flex:none;cursor:pointer}
 
+/* Roadside Action Plan — the shared, brandable result experience every
+   tool ends with. Recognizable on sight: same title, same section order,
+   same visual language, regardless of which tool the visitor is using. */
+.roadside-plan{border-top:2px solid var(--accent-soft,rgba(90,162,255,.14));padding-top:1.6rem;margin-top:1.8rem}
+.roadside-plan__title{margin-top:0;margin-bottom:1.1rem;font-size:1.35rem}
+.roadside-plan__next{margin:1.3rem 0 0;padding-top:1.1rem;border-top:1px solid var(--border,#2a3b52);color:var(--text-soft,#bfd0e6);font-size:.92rem;font-style:italic}
+
 /* Result card — the centerpiece. Updates in place, never reloads. */
 .calc-result{border:1px solid var(--border-strong,#3f5978);border-radius:var(--radius,14px);background:rgba(90,162,255,.08);padding:1.3rem 1.4rem;margin-bottom:1.6rem;transition:box-shadow .2s ease}
 .calc-result.is-updating{animation:calc-pulse .5s ease-out}

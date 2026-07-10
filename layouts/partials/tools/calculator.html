@@ -1,8 +1,16 @@
 {{/*
-  Reusable calculator renderer for the Tool Engine.
+  Reusable calculator renderer, shared by every roadside cost tool.
   Reads data/tools/<.Params.toolConfig>.json and renders fields generically —
   a future tool needs only a new data file, not new template code.
   Actual math + GA4 events live in static/js/tool-engine.js.
+
+  Every tool ends with the same branded "Roadside Action Plan" — confidence,
+  why-this-estimate factors, phone script, savings tips, common mistakes,
+  and a before-the-tow checklist — so visitors recognize a TWTF tool on
+  sight no matter which one they land on. Override panel_heading,
+  panel_intro, action_plan_heading, or next_action per tool if the
+  defaults don't fit; everything else is optional and only renders a
+  section when the config provides it.
 */}}
 {{ $key := .Params.toolConfig }}
 {{ with $key }}
@@ -10,8 +18,8 @@
 {{ if $cfg }}
 <div class="tool-panel" data-tool-engine="{{ $cfg.id }}">
   <div class="tool-panel__header">
-    <h2>Estimate your cost</h2>
-    <p>Answer a few quick questions. The range updates as you go — nothing here is submitted anywhere.</p>
+    <h2>{{ $cfg.panel_heading | default "Get your answer" }}</h2>
+    <p>{{ $cfg.panel_intro | default "Answer a few quick questions — nothing here is submitted anywhere." }}</p>
   </div>
 
   <div class="calc-grid">
@@ -63,49 +71,55 @@
     {{ end }}
   </div>
 
-  <div class="calc-result">
-    <div class="calc-confidence" data-result-confidence></div>
-    <div class="calc-result__label">Expected range</div>
-    <div class="calc-result__range" data-result-range aria-live="polite">—</div>
-    <div class="calc-result__likely" data-result-likely></div>
-    <ul class="calc-result__breakdown" data-result-breakdown></ul>
-  </div>
+  <div class="roadside-plan">
+    <h2 class="roadside-plan__title">{{ $cfg.action_plan_heading | default "Your Roadside Action Plan" }}</h2>
 
-  {{ with $cfg.factor_explanations }}
-  <div class="calc-factors">
-    <h3>Why your estimate looks like this</h3>
-    <ul data-result-factors></ul>
-  </div>
-  {{ end }}
+    <div class="calc-result">
+      <div class="calc-confidence" data-result-confidence></div>
+      <div class="calc-result__label">Expected range</div>
+      <div class="calc-result__range" data-result-range aria-live="polite">—</div>
+      <div class="calc-result__likely" data-result-likely></div>
+      <ul class="calc-result__breakdown" data-result-breakdown></ul>
+    </div>
 
-  {{ with $cfg.phone_script }}
-  <div class="calc-script">
-    <h3>Questions to ask before saying yes</h3>
-    {{ with .intro }}<p class="calc-script__intro">{{ . }}</p>{{ end }}
-    <ol class="calc-script__lines" data-phone-script></ol>
-  </div>
-  {{ end }}
+    {{ with $cfg.factor_explanations }}
+    <div class="calc-factors">
+      <h3>Why your estimate looks like this</h3>
+      <ul data-result-factors></ul>
+    </div>
+    {{ end }}
 
-  {{ with $cfg.savings_tips }}
-  <div class="calc-tips">
-    <h3>Ways you might save money</h3>
-    <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
-  </div>
-  {{ end }}
+    {{ with $cfg.phone_script }}
+    <div class="calc-script">
+      <h3>Questions to ask before saying yes</h3>
+      {{ with .intro }}<p class="calc-script__intro">{{ . }}</p>{{ end }}
+      <ol class="calc-script__lines" data-phone-script></ol>
+    </div>
+    {{ end }}
 
-  {{ with $cfg.common_mistakes }}
-  <div class="calc-mistakes">
-    <h3>Common mistakes to avoid</h3>
-    <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
-  </div>
-  {{ end }}
+    {{ with $cfg.savings_tips }}
+    <div class="calc-tips">
+      <h3>Ways you might save money</h3>
+      <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    </div>
+    {{ end }}
 
-  {{ with $cfg.before_tow_checklist }}
-  <div class="calc-checklist">
-    <h3>Before the tow arrives</h3>
-    <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    {{ with $cfg.common_mistakes }}
+    <div class="calc-mistakes">
+      <h3>Common mistakes to avoid</h3>
+      <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    </div>
+    {{ end }}
+
+    {{ with $cfg.before_tow_checklist }}
+    <div class="calc-checklist">
+      <h3>Before the tow arrives</h3>
+      <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    </div>
+    {{ end }}
+
+    <p class="roadside-plan__next">{{ $cfg.next_action | default "Next: check the related guides below for your exact situation, then make the call with confidence." }}</p>
   </div>
-  {{ end }}
 
   <script type="application/json" data-tool-config>{{ $cfg | jsonify | safeJS }}</script>
 </div>
