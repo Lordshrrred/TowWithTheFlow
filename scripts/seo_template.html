@@ -443,6 +443,17 @@ function renderIntelligence(d) {
     ? `<a class="kw-post-link" href="https://github.com/Lordshrrred/TowWithTheFlow/blob/main/${esc(intel.report_path)}" target="_blank" rel="noopener">open latest report</a>`
     : "";
 
+  const tool = intel.tool_engine || {};
+  const topEvents = tool.top_events || [];
+  const toolHtml = topEvents.length
+    ? `
+      <div class="intel-item">
+        <div class="intel-title">Tool Engine usage — Tow Cost Estimator</div>
+        <div class="intel-meta">${tool.opens ?? 0} opens · ${tool.completes ?? 0} completions · completion rate ${tool.completion_rate != null ? (tool.completion_rate * 100).toFixed(1) + "%" : "n/a"}</div>
+        <div class="intel-meta" style="margin-top:0.3rem;">Top events: ${topEvents.map(e => `${esc(e.event)} (${e.count})`).join(" · ")}</div>
+      </div>`
+    : "";
+
   if (!actions.length) {
     wrap.innerHTML = `
       <div class="intel-list">
@@ -451,6 +462,7 @@ function renderIntelligence(d) {
           <div class="intel-meta">${statusHtml}</div>
           <div class="intel-meta" style="margin-top:0.4rem;">${esc(counts)} ${reportLink}</div>
         </div>
+        ${toolHtml}
       </div>`;
     return;
   }
@@ -462,6 +474,7 @@ function renderIntelligence(d) {
         <div class="intel-meta">${statusHtml}</div>
         <div class="intel-meta" style="margin-top:0.4rem;">${esc(counts)} · ${reportLink}</div>
       </div>
+      ${toolHtml}
       ${actions.map(a => `
         <div class="intel-item">
           <div class="intel-title">${esc(a.title)}</div>

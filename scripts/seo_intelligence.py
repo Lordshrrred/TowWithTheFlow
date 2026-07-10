@@ -208,6 +208,35 @@ def fetch_search_console(force_refresh: bool, max_age_hours: int) -> tuple[dict[
     return payload, ApiStatus("search_console", "ok", message, False, row_count)
 
 
+TOOL_ENGINE_EVENTS = ["calculator_open", "field_change", "estimate_generated", "calculator_complete", "related_article_click"]
+
+
+def fetch_calculator_events(property_id: str, token: str) -> dict[str, int]:
+    """Best-effort Tool Engine usage counts (see docs/seo-intelligence.md).
+    Never raises — a failure here should not affect the main GA4 status."""
+    ranges = seo_date_ranges()
+    body = {
+        "dateRanges": [{"startDate": ranges["current"][0], "endDate": ranges["current"][1]}],
+        "dimensions": [{"name": "eventName"}],
+        "metrics": [{"name": "eventCount"}],
+        "dimensionFilter": {"filter": {"fieldName": "eventName", "inListFilter": {"values": TOOL_ENGINE_EVENTS}}},
+        "limit": 50,
+    }
+    try:
+        REQUEST_COUNT["ga4"] += 1
+        data = post_json(f"{GA4_BASE}/properties/{property_id}:runReport", token, body)
+    except Exception:
+        return {}
+    counts: dict[str, int] = {}
+    for row in data.get("rows") or []:
+        name = row["dimensionValues"][0]["value"]
+        try:
+            counts[name] = int(float(row["metricValues"][0]["value"]))
+        except (KeyError, IndexError, ValueError):
+            continue
+    return counts
+
+
 def run_ga4_report(property_id: str, token: str, metrics: list[str]) -> dict[str, Any]:
     ranges = seo_date_ranges()
     body = {
@@ -275,7 +304,14 @@ def fetch_ga4(force_refresh: bool, max_age_hours: int) -> tuple[dict[str, Any], 
             return cached, ApiStatus("ga4", "cached_after_error", f"API failed; using private cache. Error: {exc}", True, len(cached.get("rows", [])))
         return {"rows": [], "property_id": property_id}, ApiStatus("ga4", "error", str(exc))
 
-    payload = {"property_id": property_id, "metrics": metrics, "ranges": seo_date_ranges(), "rows": data.get("rows") or []}
+    calculator_events = fetch_calculator_events(property_id, token)
+    payload = {
+        "property_id": property_id,
+        "metrics": metrics,
+        "ranges": seo_date_ranges(),
+        "rows": data.get("rows") or [],
+        "calculator_events": calculator_events,
+    }
     write_json(cache_path, payload)
     return payload, ApiStatus("ga4", "ok", "Fetched GA4 organic landing-page behavior.", False, len(payload["rows"]))
 
@@ -697,7 +733,18 @@ def build_markdown(payload: dict[str, Any]) -> str:
             lines.append("No evidence-ranked actions yet — Search Console and GA4 are connected, but current traffic/impressions haven't crossed the action thresholds. Expected for a newly verified property or low current volume; rerun as more data accumulates.")
     lines.append("")
 
-    lines.append("## 13. Data Limitations")
+    lines.append("## 13. Tool Engine Usage")
+    tool_engine = payload.get("tool_engine") or {}
+    if tool_engine.get("top_events"):
+        rate = tool_engine.get("completion_rate")
+        rate_str = pct(rate) if rate is not None else "n/a (no opens yet)"
+        lines.append(f"- Calculator opens: {tool_engine.get('opens', 0)} · Completions: {tool_engine.get('completes', 0)} · Completion rate: {rate_str}")
+        lines += render_table(tool_engine["top_events"], [("Event", "event"), ("Count", "count")], "No calculator events yet.")
+    else:
+        lines.append("No Tool Engine events yet — expected until the Tow Cost Estimator gets real visits.")
+        lines.append("")
+
+    lines.append("## 14. Data Limitations")
     lines.append("")
     lines.append("- Search Console data is delayed and aggregated; use it for direction, not exact real-time rank tracking.")
     lines.append("- GA4 organic behavior is grouped by landing page and avoids user-level data.")
@@ -709,6 +756,20 @@ def build_markdown(payload: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def tool_engine_summary(calculator_events: dict[str, int]) -> dict[str, Any]:
+    """Compact Tool Engine usage for the dashboard: opens, completion rate, top events.
+    Not tool-specific — every future calculator reports through the same event names."""
+    opens = calculator_events.get("calculator_open", 0)
+    completes = calculator_events.get("calculator_complete", 0)
+    top_events = sorted(calculator_events.items(), key=lambda kv: kv[1], reverse=True)
+    return {
+        "opens": opens,
+        "completes": completes,
+        "completion_rate": (completes / opens) if opens else None,
+        "top_events": [{"event": name, "count": count} for name, count in top_events],
+    }
+
+
 def compact_summary(payload: dict[str, Any]) -> dict[str, Any]:
     return {
         "generated_at": payload["generated_at"],
@@ -718,6 +779,7 @@ def compact_summary(payload: dict[str, Any]) -> dict[str, Any]:
         "near_page_one_count": len(payload["classifications"]["near_page_one"]),
         "ctr_opportunity_count": len(payload["classifications"]["ctr_opportunities"]),
         "cannibalization_count": len(payload["cannibalization"]),
+        "tool_engine": payload["tool_engine"],
         "report_path": "reports/seo-intelligence-latest.md",
     }
 
@@ -755,6 +817,7 @@ def build_payload(gsc_payload: dict[str, Any], gsc_status: ApiStatus, ga_payload
             "overlapGroupCount": intent_map.get("overlapGroupCount", 0),
             "metadataFlagCount": intent_map.get("metadataFlagCount", 0),
         },
+        "tool_engine": tool_engine_summary(ga_payload.get("calculator_events") or {}),
     }
     payload["top_actions"] = top_actions(classified, authority, cannibal, city)
     payload["summary"] = compact_summary(payload)

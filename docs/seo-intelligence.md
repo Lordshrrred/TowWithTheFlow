@@ -81,28 +81,21 @@ python3 scripts/serp_intelligence.py --query "tow truck cost denver" --max-cost-
 The GitHub workflow requires an explicit query. There is no scheduled automatic
 SERP check.
 
-## Tow Cost Estimator Event Plan
+## Tool Engine Event Plan
 
-When the Tow Cost Estimator is built, use these minimal GA4 events:
+The Tow Cost Estimator (`content/tools/tow-cost-estimator.md`) is the first tool
+built on the shared Tool Engine (`static/js/tool-engine.js` + `layouts/partials/tools/calculator.html`
++ `data/tools/*.json`). Every future calculator reuses the same engine and the
+same event names — only a new `data/tools/<id>.json` config is needed, not new
+tracking code. Events carry a `tool_id` parameter so the dashboard and GA4 can
+tell tools apart:
 
-- `tow_cost_estimator_start`
-- `tow_cost_estimate_generated`
-- `tow_cost_estimator_complete`
-- `calculator_related_resource_click`
+- `calculator_open` — first interaction with any field
+- `field_change` — fires per field on `change` (not every keystroke)
+- `estimate_generated` — fires whenever the computed range updates
+- `calculator_complete` — fires once, the first time an estimate is shown
+- `related_article_click` — click on a related-guide link from a tool page
 
-Allowed coarse parameters:
-
-- `distance_band`
-- `service_type`
-- `timing_category`
-- `vehicle_category`
-
-Do not collect:
-
-- exact user location
-- vehicle identifiers
-- free-text personal details
-- full input payloads
-
-Build calculator analytics as a tiny shared helper only if it is independently
-testable and useful beyond the first estimator.
+Allowed parameters: `tool_id`, `field_id`, `href`. Do not collect exact user
+location, vehicle identifiers, free-text personal details, or full input
+payloads — the engine only ever reports which field changed, not its value.
