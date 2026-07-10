@@ -258,10 +258,14 @@ def fetch_ga4(force_refresh: bool, max_age_hours: int) -> tuple[dict[str, Any], 
         token = service_account_token(creds_json, ["https://www.googleapis.com/auth/analytics.readonly"])
         try:
             data = run_ga4_report(property_id, token, metrics)
-        except urllib.error.HTTPError:
+        except urllib.error.HTTPError as http_exc:
             # Some properties may not have key events configured or exposed.
             metrics = [m for m in metrics if m != "keyEvents"]
-            data = run_ga4_report(property_id, token, metrics)
+            try:
+                data = run_ga4_report(property_id, token, metrics)
+            except urllib.error.HTTPError as http_exc2:
+                detail = http_exc2.read().decode("utf-8", errors="replace")[:500]
+                raise RuntimeError(f"GA4 runReport failed ({http_exc2.code}): {detail}") from http_exc2
     except Exception as exc:
         cached = read_json(cache_path, None)
         if cached:
