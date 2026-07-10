@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T15:07:19.770900+00:00",
+  "generated_at": "2026-07-10T18:05:52.138095+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1196,6 +1196,33 @@
         "verified": true
       }
     },
+    "car-door-wont-open-from-inside-emergency": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-door-wont-open-from-inside.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-door-wont-open-from-inside-emergency-what-to-do-right-now-explained-4ljh",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-door-wont-open-from-inside-emergency-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821770479698411520/car-door-wont-open-from-inside-emergency",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/10/car-door-wont-open-from-inside-emergency/",
+        "verified": true
+      }
+    },
     "car-doors-wont-unlock-battery-dead-stranded-inside": {
       "blog": {
         "reason": "ok",
@@ -1558,6 +1585,19 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/20/car-overheated-can-i-drive-it/",
+        "verified": true
+      }
+    },
+    "car-overheating-in-denver-summer-do-i-need-a-tow": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-overheating-in-denver-summer-do-i.html",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/10/car-overheating-in-denver-summer-do-i-need-a-tow/",
         "verified": true
       }
     },
@@ -3262,6 +3302,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/01/how-much-does-aaa-towing-cost-without-membership/",
+        "verified": true
+      }
+    },
+    "how-much-does-it-cost-to-tow-a-car-in-denver-colorado": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-much-does-it-cost-to-tow-car-in.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/how-much-does-it-cost-to-tow-a-car-in-denver-colorado-what-drivers-should-know-35gk",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-much-does-it-cost-to-tow-a-car-in-denver-colorado-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821765110068592640/how-much-does-it-cost-to-tow-a-car-in-denver-colorado",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/10/how-much-does-it-cost-to-tow-a-car-in-denver-colorado/",
         "verified": true
       }
     },
@@ -7678,24 +7745,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 296,
-      "verified": 296
+      "checked": 299,
+      "verified": 299
     },
     "dev": {
-      "checked": 226,
-      "verified": 226
+      "checked": 228,
+      "verified": 228
     },
     "feeder": {
-      "checked": 294,
-      "verified": 294
-    },
-    "tumblr": {
-      "checked": 293,
-      "verified": 293
-    },
-    "wordpress": {
       "checked": 296,
       "verified": 296
+    },
+    "tumblr": {
+      "checked": 295,
+      "verified": 295
+    },
+    "wordpress": {
+      "checked": 299,
+      "verified": 299
     }
   }
 }
