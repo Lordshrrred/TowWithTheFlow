@@ -35,10 +35,10 @@
       "label": "Vehicle type",
       "help": "Bigger or heavier vehicles need bigger equipment.",
       "options": [
-        { "value": "car", "label": "Car or small sedan", "fee": 0 },
-        { "value": "suv_truck", "label": "SUV or pickup truck", "fee": 20 },
-        { "value": "motorcycle", "label": "Motorcycle", "fee": 10 },
-        { "value": "rv_trailer", "label": "RV, motorhome, or trailer", "fee": 95 }
+        { "value": "car", "label": "Car or small sedan", "fee": 0, "variability": 0 },
+        { "value": "suv_truck", "label": "SUV or pickup truck", "fee": 20, "variability": 0 },
+        { "value": "motorcycle", "label": "Motorcycle", "fee": 10, "variability": 1 },
+        { "value": "rv_trailer", "label": "RV, motorhome, or trailer", "fee": 95, "variability": 1 }
       ]
     },
     {
@@ -46,9 +46,9 @@
       "label": "When do you need the tow?",
       "help": "Nights, weekends, and holidays usually cost more.",
       "options": [
-        { "value": "business_hours", "label": "Normal business hours", "multiplier": 1.0 },
-        { "value": "after_hours_weekend", "label": "Night or weekend", "multiplier": 1.22 },
-        { "value": "holiday", "label": "Holiday", "multiplier": 1.4 }
+        { "value": "business_hours", "label": "Normal business hours", "multiplier": 1.0, "variability": 0 },
+        { "value": "after_hours_weekend", "label": "Night or weekend", "multiplier": 1.22, "variability": 1 },
+        { "value": "holiday", "label": "Holiday", "multiplier": 1.4, "variability": 1 }
       ]
     },
     {
@@ -56,15 +56,15 @@
       "label": "What's the situation?",
       "help": "Winching and accident recovery take more time and equipment.",
       "options": [
-        { "value": "standard", "label": "Standard hookup — drivable and accessible", "fee": 0 },
-        { "value": "flatbed", "label": "Flatbed needed — AWD, low clearance, etc.", "fee": 35 },
-        { "value": "winch", "label": "Stuck or needs winching", "fee": 125 },
-        { "value": "accident", "label": "Accident recovery", "fee": 85 }
+        { "value": "standard", "label": "Standard hookup — drivable and accessible", "fee": 0, "variability": 0 },
+        { "value": "flatbed", "label": "Flatbed needed — AWD, low clearance, etc.", "fee": 35, "variability": 1 },
+        { "value": "winch", "label": "Stuck or needs winching", "fee": 125, "variability": 2 },
+        { "value": "accident", "label": "Accident recovery", "fee": 85, "variability": 2 }
       ]
     }
   ],
   "toggle_fields": [
-    { "id": "heavy_duty", "label": "Heavy-duty vehicle (box truck, bus, large RV, dually)", "fee": 150 }
+    { "id": "heavy_duty", "label": "Heavy-duty vehicle (box truck, bus, large RV, dually)", "fee": 150, "variability": 1 }
   ],
   "storage_field": {
     "id": "storage_days",
@@ -73,13 +73,50 @@
     "max": 30,
     "default": 0,
     "per_day": 45,
-    "help": "Storage lots typically start billing the same day or the next."
+    "help": "Storage lots typically start billing the same day or the next.",
+    "variability": 1
   },
   "range": { "low_multiplier": 0.85, "high_multiplier": 1.25, "min_spread": 35 },
-  "tips": [
-    "Ask for a total price before the truck is dispatched, not just the per-mile rate.",
-    "Confirm whether the hook-up fee already includes the first few miles.",
+  "confidence_thresholds": { "high_max": 0, "moderate_max": 2 },
+  "factor_explanations": {
+    "distance": "Distance is usually the single biggest factor after the base fee — most companies charge a flat hook-up fee plus a per-mile rate.",
+    "vehicle": "Bigger or heavier vehicles need bigger tow trucks and more time to secure safely.",
+    "timing": "Night, weekend, and holiday calls usually cost more since fewer drivers are on shift.",
+    "situation": "A car that rolls onto a flatbed in minutes costs less than one that's stuck and needs winching, or one involved in an accident.",
+    "heavy_duty": "Heavy-duty vehicles need specialized equipment most companies bill extra for.",
+    "storage_days": "Storage is billed separately from the tow itself, usually starting the same day or the next."
+  },
+  "savings_tips": [
     "Check your auto insurance policy or roadside plan first — you may already have towing coverage.",
-    "If it's safe to choose, ask to go to a shop or address of your choice instead of a private impound lot."
-  ]
+    "If it's safe, wait for normal business hours instead of paying an after-hours surcharge.",
+    "If it's safe to choose, ask to go to a shop or address of your choice instead of a private impound lot — this can avoid storage fees entirely.",
+    "Compare two local companies if you have a minute — rates for the same job can vary more than people expect.",
+    "Ask if your membership (auto club, some credit cards, some insurers) already covers part of the cost."
+  ],
+  "common_mistakes": [
+    "Authorizing storage without asking whether it can be avoided.",
+    "Accepting the first quoted price without asking for an itemized breakdown.",
+    "Not photographing the vehicle's condition before it's loaded.",
+    "Leaving valuables or personal items in the vehicle.",
+    "Not confirming exactly where the vehicle is being taken before the truck leaves.",
+    "Not asking whether mileage and after-hours fees are already included in the quote."
+  ],
+  "before_tow_checklist": [
+    "Take photos of the vehicle from all sides before it's hooked up.",
+    "Remove valuables and anything you can safely grab.",
+    "Confirm exactly where the vehicle is going before the truck leaves.",
+    "Confirm the total price and payment method before the driver arrives.",
+    "Note the company name and driver name or ID, just in case."
+  ],
+  "phone_script": {
+    "intro": "Read this out loud while you're on the phone — it covers what actually matters.",
+    "lines": [
+      "Hi, I have a {vehicle_label} that needs a tow.",
+      "I'm located at [your location].",
+      "Can you give me the total estimated price, including hookup, mileage, and any after-hours fees?",
+      "Will there be storage charges, and when do they start?",
+      "Where will my vehicle be taken?",
+      "About how long until the truck arrives?"
+    ]
+  }
 }

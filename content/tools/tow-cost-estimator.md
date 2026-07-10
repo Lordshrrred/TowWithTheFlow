@@ -9,9 +9,10 @@ clusters: ["towing-cost"]
 syndicationMode: "teaser"
 relatedPosts:
   - "average-towing-cost-per-mile-usa"
-  - "car-insurance-deductible-applies-to-towing-cost"
-  - "24-hour-towing-cost-extra-houston"
-  - "car-stuck-in-snow-how-much-tow-truck-cost"
+  - "battery-dead-but-lights-turn-on"
+  - "run-flat-tire-completely-flat-can-i-still-drive"
+  - "does-insurance-cover-towing-after-accident"
+  - "what-to-do-if-your-car-breaks-down-at-night"
 faq:
   - q: "How accurate is this tow cost estimate?"
     a: "It's a planning estimate, not a quote. Real prices vary by company, region, and exact conditions. Use the range to know roughly what to expect and to spot a price that seems unusually high before you agree to it."
@@ -25,7 +26,7 @@ faq:
     a: "Ask for an itemized breakdown before you pay. Compare each line item — hook-up, mileage, after-hours fee, winching, storage — against what you were told when the truck was dispatched. A tow company should be able to explain every charge."
 ---
 
-Use the calculator above to get a realistic range before you agree to a tow. It's built from typical national pricing patterns — not a quote from any specific company — so treat the range as a sanity check, not a guarantee.
+Use the calculator above to get a realistic range before you agree to a tow. It's built from typical national pricing patterns — not a quote from any specific company — so treat the range as a sanity check, not a guarantee. Below the estimate you'll also find a confidence indicator, the questions worth asking before you say yes, and a few ways to keep the bill smaller.
 
 ## How this estimate works
 
