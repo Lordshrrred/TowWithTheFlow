@@ -3,6 +3,8 @@ title: "Search Guides"
 type: "page"
 description: "Search all car breakdown and roadside emergency guides on Tow With The Flow."
 robots: "noindex,follow"
+sitemap:
+  disable: true
 ---
 
 <div class="search-results">

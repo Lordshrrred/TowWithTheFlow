@@ -23,7 +23,7 @@ faq:
 
 2. **Call 911 first on busy freeways.** California Highway Patrol will dispatch help on I-405, I-5, I-10, I-110, and US-101. They'll set up traffic control and call an authorized tow truck. On the I-405 through the Sepulveda Pass or the downtown I-10/I-110 interchange, CHP treats breakdowns as active traffic hazards and typically arrives within 15-20 minutes during off-peak hours. Do not wait to see if the car starts again before calling.
 
-3. **Check your insurance coverage.** Most policies include roadside assistance that covers $100-150 of towing costs. [Call your insurance company before calling a private tow truck]((/geico-roadside-assistance-towing-coverage-how-much-pays/)) to see what they'll pay. If you call a private company first and your insurer has a preferred vendor network, they may deny reimbursement entirely.
+3. **Check your insurance coverage.** Most policies include roadside assistance that covers $100-150 of towing costs. [Call your insurance company before calling a private tow truck](/geico-roadside-assistance-towing-coverage-how-much-pays/) to see what they'll pay. If you call a private company first and your insurer has a preferred vendor network, they may deny reimbursement entirely.
 
 4. **Get the exact pickup and destination addresses.** LA freeway mile markers help tow trucks find you faster. Note the freeway name, direction, and nearest exit or landmark. For example: "Northbound I-405, just past the Sunset Boulevard offramp, mile marker 53" is far more useful than "the 405 near Westwood." Screenshots of your GPS location work well if you cannot read a marker.
 

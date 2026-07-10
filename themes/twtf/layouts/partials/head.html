@@ -149,6 +149,54 @@
   "description": {{ if .Params.description }}{{ .Params.description | jsonify | safeJS }}{{ else }}{{ .Site.Params.description | jsonify | safeJS }}{{ end }}
 }
 </script>
+{{ if in (slice "tools" "calculators" "reference" "checklists" "data" "clusters") .Section }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ .Site.Home.Permalink | jsonify | safeJS }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Section | humanize | title | jsonify | safeJS }},
+      "item": {{ (printf "%s/%s/" .Site.Params.siteUrl .Section) | jsonify | safeJS }}
+    }{{ if not .IsSection }},
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify | safeJS }},
+      "item": {{ .Permalink | jsonify | safeJS }}
+    }{{ end }}
+  ]
+}
+</script>
+{{ end }}
+{{ with .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $i, $item := . }}{{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $item.q | jsonify | safeJS }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $item.a | jsonify | safeJS }}
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
 {{ end }}
 {{ end }}
 
@@ -329,6 +377,9 @@ blockquote p:first-child>strong:first-child{display:none}
 .guide-count{display:inline-block;background:var(--accent-soft);border:1px solid rgba(90,162,255,.25);color:var(--text-soft);font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.06em;padding:.28rem .72rem;border-radius:999px;margin-left:.75rem;vertical-align:middle}
 .back-to-top{display:inline-block;font-size:.82rem;color:var(--text-dim);opacity:.5;text-align:center;width:100%;padding:1rem 0 .5rem;transition:opacity .15s}
 .back-to-top:hover{opacity:1;text-decoration:none;color:var(--accent)}
+
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid rgba(90,162,255,.46);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media(max-width:640px){
   .card-grid{grid-template-columns:1fr}
   .hero{padding:2.75rem 0 2.25rem}

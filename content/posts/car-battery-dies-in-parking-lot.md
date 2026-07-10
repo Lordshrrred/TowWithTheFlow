@@ -149,7 +149,7 @@ Expect these typical costs if you need a tow:
 
 If you have roadside assistance coverage, the jump start is usually free. A new battery is the most common and often cheapest resolution: in-store installation at AutoZone or O'Reilly typically runs $15-$30 labor on top of the battery cost.
 
-See our full breakdown of [towing costs per mile](/posts/average-towing-cost-per-mile-usa/) for more detail on what to expect.
+See our full breakdown of [towing costs per mile](/average-towing-cost-per-mile-usa/) for more detail on what to expect.
 
 ---
 
@@ -176,7 +176,7 @@ Usually yes. If you're in a public lot, let management know. Most shopping cente
 
 If you're stuck right now and need help, [contact us here](/contact/). We can point you toward the right next step and help you think through your options without guessing.
 
-Also see: [Does Insurance Cover Towing After an Accident?](/posts/does-insurance-cover-towing-after-accident/) and [Can You Call a Tow Truck Without Insurance?](/posts/can-you-call-a-tow-truck-without-insurance/)
+Also see: [Does Insurance Cover Towing After an Accident?](/does-insurance-cover-towing-after-accident/) and [Can You Call a Tow Truck Without Insurance?](/can-you-call-a-tow-truck-without-insurance/)
 
 ## Common Questions
 

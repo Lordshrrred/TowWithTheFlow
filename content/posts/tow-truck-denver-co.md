@@ -44,7 +44,7 @@ Private towing companies may charge below PUC maximums. Police-dispatched tows (
 
 If you have roadside assistance through AAA, your auto insurance, or your credit card, a simple tow is often fully covered. Always check before you pay out of pocket.
 
-For a detailed look at Colorado towing rates, see our guide on [how much a tow costs in Colorado](/posts/how-much-does-a-tow-cost-in-colorado/).
+For a detailed look at Colorado towing rates, see our guide on [how much a tow costs in Colorado](/how-much-does-a-tow-cost-in-colorado/).
 
 ---
 
@@ -138,7 +138,7 @@ If this is your first breakdown and you don't have a roadside assistance plan, y
 
 For anyone who drives regularly in Denver, roadside assistance is worth it. Denver weather, aging vehicles, and high-altitude temperature swings mean breakdowns happen. A yearly membership costs less than one out-of-pocket tow.
 
-See: [Is Roadside Assistance Cheaper Than Towing?](/posts/is-roadside-assistance-cheaper-than-towing/)
+See: [Is Roadside Assistance Cheaper Than Towing?](/is-roadside-assistance-cheaper-than-towing/)
 
 ---
 
@@ -165,7 +165,7 @@ Most established towing companies in Denver operate 24/7. Response times at 3am 
 
 Don't sit on the side of I-25 longer than you have to. [Contact us](/contact/) if you found an issue in this guide or want us to cover a Denver towing scenario in more detail.
 
-And if you're not sure whether your situation needs a tow or just a jump start, check out our guide: [Roadside Assistance vs. Towing: Which Do You Actually Need?](/posts/towing-cost-vs-roadside-assistance-comparison/)
+And if you're not sure whether your situation needs a tow or just a jump start, check out our guide: [Roadside Assistance vs. Towing: Which Do You Actually Need?](/towing-cost-vs-roadside-assistance-comparison/)
 
 ## Common Questions
 

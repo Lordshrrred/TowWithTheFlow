@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section class="page-hero page-hero--product">
+  <div class="container">
+    <p class="section-kicker">Tools</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.description }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-resource feature-resource--quiet">
+        <span class="feature-resource__label">Foundation ready</span>
+        <h2>Tools are being built carefully</h2>
+        <p>This section is prepared for calculators and decision tools, but it is intentionally hidden from search until the first production-ready tool is complete.</p>
+      </div>
+    </div>
+    {{ with .Pages }}
+    <div class="card-grid">
+      {{ range . }}
+      <a href="{{ .Permalink }}" class="card">
+        <h2 class="card__title">{{ .Title }}</h2>
+        <p class="card__desc">{{ .Params.description | default .Summary }}</p>
+        <span class="card__link">Open tool</span>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

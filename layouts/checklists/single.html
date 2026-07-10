@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article>
+  <div class="container--narrow">
+    <div class="post-header">
+      <p class="post-kicker">{{ .Params.assetType | default "Checklist" }}</p>
+      <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="post-dek">{{ . }}</p>{{ end }}
+    </div>
+    <div class="post-body">
+      {{ .Content }}
+      {{ partial "authority-related.html" . }}
+    </div>
+  </div>
+</article>
+{{ end }}

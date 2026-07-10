@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="page-hero page-hero--product">
+  <div class="container">
+    <p class="section-kicker">Reference</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.description }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="resource-bands">
+      <a href="{{ "/clusters/insurance-coverage/" | relURL }}">
+        <span>Insurance</span>
+        <strong>Coverage limits, reimbursements, membership plans, and what to ask before paying out of pocket.</strong>
+      </a>
+      <a href="{{ "/clusters/state-towing-laws/" | relURL }}">
+        <span>Towing Laws</span>
+        <strong>State laws, private property towing, impound rules, and legal resources as they are researched.</strong>
+      </a>
+      <a href="{{ "/clusters/consumer-rights/" | relURL }}">
+        <span>Consumer Rights</span>
+        <strong>Disputed bills, vehicle damage, overcharges, and the paper trail to keep.</strong>
+      </a>
+      <a href="{{ "/clusters/trailer-rv-towing/" | relURL }}">
+        <span>Trailer &amp; RV</span>
+        <strong>Weights, ratings, payload, tow capacity, and trip planning basics.</strong>
+      </a>
+    </div>
+    {{ with .Pages }}
+    <div class="card-grid">
+      {{ range . }}
+      <a href="{{ .Permalink }}" class="card">
+        <h2 class="card__title">{{ .Title }}</h2>
+        <p class="card__desc">{{ .Params.description | default .Summary }}</p>
+        <span class="card__link">Open reference</span>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

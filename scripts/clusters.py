@@ -18,11 +18,25 @@ CLUSTERS: list[tuple[str, str, list[str]]] = [
         "towing rate", "tow cost", "cost per mile", "per mile", "price to tow",
         "how much does a tow", "how much is a tow", "how much does towing",
         "extra cost", "what it costs", "what you'll pay", "what you'll actually pay",
+        "hookup fee", "long distance tow", "winch-out cost", "winch out cost",
+    ]),
+    ("towing-calculators", "Towing Calculators", [
+        "calculator", "estimator", "planner", "payload", "tongue weight",
+        "tow capacity", "trailer weight", "gross combined weight", "gcwr",
+        "stopping distance", "fuel cost",
     ]),
     ("insurance-coverage", "Insurance & Roadside Coverage", [
         "insurance", "aaa", "state farm", "allstate", "geico", "progressive",
         "farmers", "liberty mutual", "deductible", "reimbursement",
         "membership", "roadside assistance", "roadside coverage",
+    ]),
+    ("consumer-rights", "Consumer Rights", [
+        "consumer rights", "rights", "overcharged", "predatory", "dispute",
+        "complaint", "tow truck damaged", "damaged my car", "who pays",
+    ]),
+    ("state-towing-laws", "State Towing Laws", [
+        "towing law", "towing laws", "private property towing", "impound law",
+        "abandoned vehicle", "illegal tow", "tow notice", "state law",
     ]),
     ("battery-starting", "Battery & Starting Problems", [
         "battery", "wont start", "won't start", "will not start", "jump start",
@@ -46,12 +60,36 @@ CLUSTERS: list[tuple[str, str, list[str]]] = [
         "accident", "who pays", "damage", "liability", "police", "totaled",
         "crash", "airbag",
     ]),
+    ("vehicle-recovery", "Vehicle Recovery", [
+        "recovery", "winch", "winch-out", "winch out", "ditch", "stuck in mud",
+        "stuck snow", "off-road", "off road", "slide off road",
+    ]),
+    ("heavy-duty-recovery", "Heavy-Duty Recovery", [
+        "heavy duty", "heavy-duty", "semi truck", "box truck", "bus", "rv tow",
+        "commercial vehicle", "equipment",
+    ]),
+    ("commercial-towing", "Commercial Towing", [
+        "commercial towing", "fleet", "dispatcher", "tow truck roi",
+        "commercial cost", "fleet maintenance", "revenue estimator",
+    ]),
+    ("trailer-rv-towing", "Trailer & RV Towing", [
+        "trailer", "rv", "camper", "boat towing", "tow this", "tow capacity",
+        "payload", "tongue weight", "weight distribution",
+    ]),
     ("highway-safety", "Highway & Freeway Safety", [
         "highway", "freeway", "interstate", "shoulder", "hazard", "bridge",
         "night", "safety",
     ]),
+    ("vehicle-safety", "Vehicle Safety", [
+        "safe to drive", "can i drive", "drive home", "tow or drive",
+        "should i drive", "warning light", "emergency steps",
+    ]),
     ("winter-weather", "Winter & Weather Breakdowns", [
         "snow", "winter", "cold weather", "frozen", "ice", "blizzard",
+    ]),
+    ("emergency-checklists", "Emergency Checklists", [
+        "checklist", "emergency kit", "road trip", "winter driving",
+        "departure checklist", "inspection checklist",
     ]),
     ("towing-logistics", "Towing Logistics & Process", [
         "long distance", "flatbed", "wheel-lift", "wheel lift", "impound",

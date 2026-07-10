@@ -1,0 +1,48 @@
+{{ $currentPage := . }}
+{{ $relatedPosts := slice }}
+{{ with .Params.relatedPosts }}
+  {{ range . }}
+    {{ with $.Site.GetPage (printf "/posts/%s" .) }}
+      {{ $relatedPosts = $relatedPosts | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if lt (len $relatedPosts) 5 }}
+  {{ $more := .Site.RegularPages.Related . | first (sub 5 (len $relatedPosts)) }}
+  {{ range $more }}
+    {{ if and (eq .Section "posts") (ne . $currentPage) (not (in $relatedPosts .)) }}
+      {{ $relatedPosts = $relatedPosts | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $relatedAssets := slice }}
+{{ with .Params.relatedAssets }}
+  {{ range . }}
+    {{ with $.Site.GetPage . }}
+      {{ $relatedAssets = $relatedAssets | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if or $relatedPosts $relatedAssets }}
+<div class="related-guides">
+  <h2>Related Resources</h2>
+  {{ with $relatedAssets }}
+  <h3>Tools and reference</h3>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  {{ with $relatedPosts }}
+  <h3>Helpful guides</h3>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+{{ end }}

@@ -22,7 +22,7 @@ faq:
 
 2. **Call a locksmith, not a tow truck**. Locksmiths cost $50-150 and arrive faster than tow trucks. They can unlock your car without moving it. A skilled locksmith can open most standard door locks in under 10 minutes using a slim jim or air wedge kit, with zero damage to your vehicle.
 
-3. **If you have roadside assistance, call them first**. [GEICO roadside assistance covers lockout service](geico-roadside-assistance-how-many-calls-per-year/) up to your plan limits, usually $50-100 per incident. Have your policy number ready and ask specifically whether the lockout service includes a running-engine situation, since some plans treat it as a higher-priority call.
+3. **If you have roadside assistance, call them first**. [GEICO roadside assistance covers lockout service](/geico-roadside-assistance-how-many-calls-per-year/) up to your plan limits, usually $50-100 per incident. Have your policy number ready and ask specifically whether the lockout service includes a running-engine situation, since some plans treat it as a higher-priority call.
 
 4. **Look for unlocked windows or doors**. Check every window and door, including the trunk release if accessible from outside. Hatchbacks sometimes have a rear latch that can be triggered without a key. A cracked window of even 2-3 inches may allow a locksmith to insert a reach tool and pull the interior handle directly.
 
@@ -39,7 +39,7 @@ Some situations require towing over locksmith service:
 
 - **Luxury cars with advanced security**. BMW, Mercedes, and Audi often need dealer reprogramming after lockout attempts. Forcing these locks can trigger a full security lockdown that disables the ignition entirely.
 - **Push-button start vehicles**. These systems sometimes require computer reset at the dealership. The key fob communicates with the car via encrypted signal, and some models will not release the transmission lock or allow manual override without a dealer scan tool.
-- **Locksmith damage concerns**. If you're worried about window or door frame damage, [towing to the dealership costs $75-200](towing-cost-from-interstate-to-dealership/) but protects your car. This matters most on leased vehicles where body damage comes out of your deposit.
+- **Locksmith damage concerns**. If you're worried about window or door frame damage, [towing to the dealership costs $75-200](/towing-cost-from-interstate-to-dealership/) but protects your car. This matters most on leased vehicles where body damage comes out of your deposit.
 - **Failed locksmith attempts**. After 2-3 attempts, the car's security system may lock down completely. At that point, towing is the only option that does not risk deeper electrical problems.
 - **Engine running over 30 minutes in heat**. If the temperature outside is above 90 degrees and the car has been idling without airflow for an extended period, overheating becomes a real risk. A running engine in a closed garage is an immediate emergency requiring the fire department, not a locksmith.
 
@@ -51,7 +51,7 @@ Some situations require towing over locksmith service:
 
 **Dealership lockout service**: $150-300 including reprogramming if needed. Some dealers charge a flat diagnostic fee of $100-150 just to connect a scan tool, separate from any actual repair cost.
 
-**Insurance coverage**: Most roadside assistance covers lockout service. [Progressive insurance towing coverage](progressive-insurance-towing-coverage-how-many-times/) includes lockout help, but check your specific limits. Coverage that caps at $50 will not fully offset a luxury-car locksmith bill.
+**Insurance coverage**: Most roadside assistance covers lockout service. [Progressive insurance towing coverage](/progressive-insurance-towing-coverage-how-many-times/) includes lockout help, but check your specific limits. Coverage that caps at $50 will not fully offset a luxury-car locksmith bill.
 
 ![roadside assistance highway](/images/car-key-locked-inside-engine-running-towing-cost/bottom.jpg)
 *Photo: Pexels*

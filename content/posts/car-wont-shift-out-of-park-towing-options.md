@@ -36,7 +36,7 @@ A few other scenarios cause this same symptom. If your battery is very low but n
 
 Also check the brake light fuse. If your brake lights aren't working at all, pull the fuse box cover (usually inside the driver's door jamb or under the hood) and look for a blown fuse labeled "stop lamp" or "brake." Replacing a $2 fuse has solved this problem more times than you'd think.
 
-If you're dealing with [transmission fluid leaking](transmission-fluid-leaking-can-i-drive-to-mechanic/), that could also cause shifting problems and requires immediate attention from a mechanic.
+If you're dealing with [transmission fluid leaking](/transmission-fluid-leaking-can-i-drive-to-mechanic/), that could also cause shifting problems and requires immediate attention from a mechanic.
 
 ![tow truck loading car](/images/car-wont-shift-out-of-park-towing-options/mid.jpg)
 *Photo: Pexels*
@@ -50,7 +50,7 @@ If you're dealing with [transmission fluid leaking](transmission-fluid-leaking-c
 
 Once you get to a shop, expect to pay $20-40 for a brake light switch replacement if that turns out to be the cause. It's a quick job, usually under an hour of labor. If the shift lock solenoid itself has failed, parts and labor typically run $100-250 depending on the make and model. Neither repair is an emergency expense, but both need to be fixed before you drive again, since a stuck shift lock often means your brake lights aren't working either, which is a real safety hazard.
 
-Your insurance roadside assistance might cover this. Check if you have coverage through [State Farm](state-farm-roadside-assistance-towing-limit-miles/), [GEICO](geico-roadside-assistance-towing-limits-how-many-miles/), or other providers before paying out of pocket.
+Your insurance roadside assistance might cover this. Check if you have coverage through [State Farm](/state-farm-roadside-assistance-towing-limit-miles/), [GEICO](/geico-roadside-assistance-towing-limits-how-many-miles/), or other providers before paying out of pocket.
 
 ![roadside assistance highway](/images/car-wont-shift-out-of-park-towing-options/bottom.jpg)
 *Photo: Pexels*
@@ -77,7 +77,7 @@ A: Standard flatbeds often can't get into low-clearance structures. Call the tow
 
 When your car won't shift out of park, the transmission parking pawl is mechanically locked. This safety feature prevents your car from rolling, but it also means the wheels won't turn freely. Only a flatbed tow truck can safely move your vehicle without causing damage.
 
-If your [car won't start but has power](car-wont-start-but-has-power-dashboard-lights-on/), you might face similar transmission lock issues that require professional help.
+If your [car won't start but has power](/car-wont-start-but-has-power-dashboard-lights-on/), you might face similar transmission lock issues that require professional help.
 
 ---
 

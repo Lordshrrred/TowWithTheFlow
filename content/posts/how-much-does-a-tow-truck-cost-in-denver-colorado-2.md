@@ -1,6 +1,6 @@
 ---
 image: "/images/how-much-does-a-tow-truck-cost-in-denver-colorado-2/hero.jpg"
-title: "How Much Does a Tow Truck Cost in Denver Colorado"
+title: "Denver Tow Truck Cost by Truck Type, Distance, and Timing"
 date: 2026-07-02
 description: "Tow truck costs in Denver run $75–$250 for local tows. Here's the full breakdown by truck type, distance, and time of day so you're not caught off guard."
 tags: ["tow truck cost", "denver towing", "roadside assistance denver", "towing prices colorado", "breakdown denver"]
