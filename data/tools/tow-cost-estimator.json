@@ -1,0 +1,85 @@
+{
+  "id": "tow-cost-estimator",
+  "currency": "USD",
+  "base_fee": 75,
+  "per_mile_rate": 4.5,
+  "distance_field": {
+    "id": "distance",
+    "label": "Distance to tow (miles)",
+    "min": 1,
+    "max": 300,
+    "default": 8,
+    "help": "From the pickup spot to the shop, home, or safe drop-off."
+  },
+  "state_field": {
+    "id": "state",
+    "label": "State (optional)",
+    "help": "Doesn't change the estimate below — used to point you to the right local rules and guides.",
+    "options": [
+      { "value": "not_sure", "label": "Not sure / prefer not to say" },
+      { "value": "AZ", "label": "Arizona" },
+      { "value": "CA", "label": "California" },
+      { "value": "CO", "label": "Colorado" },
+      { "value": "FL", "label": "Florida" },
+      { "value": "GA", "label": "Georgia" },
+      { "value": "IL", "label": "Illinois" },
+      { "value": "NV", "label": "Nevada" },
+      { "value": "NY", "label": "New York" },
+      { "value": "TX", "label": "Texas" },
+      { "value": "other", "label": "Other state" }
+    ]
+  },
+  "select_fields": [
+    {
+      "id": "vehicle",
+      "label": "Vehicle type",
+      "help": "Bigger or heavier vehicles need bigger equipment.",
+      "options": [
+        { "value": "car", "label": "Car or small sedan", "fee": 0 },
+        { "value": "suv_truck", "label": "SUV or pickup truck", "fee": 20 },
+        { "value": "motorcycle", "label": "Motorcycle", "fee": 10 },
+        { "value": "rv_trailer", "label": "RV, motorhome, or trailer", "fee": 95 }
+      ]
+    },
+    {
+      "id": "timing",
+      "label": "When do you need the tow?",
+      "help": "Nights, weekends, and holidays usually cost more.",
+      "options": [
+        { "value": "business_hours", "label": "Normal business hours", "multiplier": 1.0 },
+        { "value": "after_hours_weekend", "label": "Night or weekend", "multiplier": 1.22 },
+        { "value": "holiday", "label": "Holiday", "multiplier": 1.4 }
+      ]
+    },
+    {
+      "id": "situation",
+      "label": "What's the situation?",
+      "help": "Winching and accident recovery take more time and equipment.",
+      "options": [
+        { "value": "standard", "label": "Standard hookup — drivable and accessible", "fee": 0 },
+        { "value": "flatbed", "label": "Flatbed needed — AWD, low clearance, etc.", "fee": 35 },
+        { "value": "winch", "label": "Stuck or needs winching", "fee": 125 },
+        { "value": "accident", "label": "Accident recovery", "fee": 85 }
+      ]
+    }
+  ],
+  "toggle_fields": [
+    { "id": "heavy_duty", "label": "Heavy-duty vehicle (box truck, bus, large RV, dually)", "fee": 150 }
+  ],
+  "storage_field": {
+    "id": "storage_days",
+    "label": "Storage days (if the vehicle is held or impounded)",
+    "min": 0,
+    "max": 30,
+    "default": 0,
+    "per_day": 45,
+    "help": "Storage lots typically start billing the same day or the next."
+  },
+  "range": { "low_multiplier": 0.85, "high_multiplier": 1.25, "min_spread": 35 },
+  "tips": [
+    "Ask for a total price before the truck is dispatched, not just the per-mile rate.",
+    "Confirm whether the hook-up fee already includes the first few miles.",
+    "Check your auto insurance policy or roadside plan first — you may already have towing coverage.",
+    "If it's safe to choose, ask to go to a shop or address of your choice instead of a private impound lot."
+  ]
+}

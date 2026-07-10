@@ -8,6 +8,9 @@
       {{ with .Params.description }}<p class="post-dek">{{ . }}</p>{{ end }}
     </div>
     <div class="post-body">
+      {{ if eq .Params.assetType "calculator" }}
+      {{ partial "tools/calculator.html" . }}
+      {{ end }}
       {{ .Content }}
       {{ partial "authority-related.html" . }}
     </div>

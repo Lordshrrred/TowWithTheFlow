@@ -149,6 +149,24 @@
   "description": {{ if .Params.description }}{{ .Params.description | jsonify | safeJS }}{{ else }}{{ .Site.Params.description | jsonify | safeJS }}{{ end }}
 }
 </script>
+{{ if eq .Params.assetType "calculator" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": {{ .Title | jsonify | safeJS }},
+  "url": {{ .Permalink | jsonify | safeJS }},
+  "description": {{ if .Params.description }}{{ .Params.description | jsonify | safeJS }}{{ else }}{{ .Site.Params.description | jsonify | safeJS }}{{ end }},
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any (web-based)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+{{ end }}
 {{ if in (slice "tools" "calculators" "reference" "checklists" "data" "clusters") .Section }}
 <script type="application/ld+json">
 {
@@ -200,6 +218,10 @@
 {{ end }}
 {{ end }}
 
+{{ if eq .Params.assetType "calculator" }}
+<link rel="stylesheet" href="{{ "css/tools.css" | absURL }}">
+{{ end }}
+
 {{ if .Site.Params.googleAnalytics }}
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
@@ -209,6 +231,10 @@
   gtag('js', new Date());
   gtag('config', '{{ .Site.Params.googleAnalytics }}');
 </script>
+{{ end }}
+
+{{ if eq .Params.assetType "calculator" }}
+<script src="{{ "js/tool-engine.js" | absURL }}" defer></script>
 {{ end }}
 
 <!-- Fonts -->

@@ -1,0 +1,84 @@
+{{/*
+  Reusable calculator renderer for the Tool Engine.
+  Reads data/tools/<.Params.toolConfig>.json and renders fields generically —
+  a future tool needs only a new data file, not new template code.
+  Actual math + GA4 events live in static/js/tool-engine.js.
+*/}}
+{{ $key := .Params.toolConfig }}
+{{ with $key }}
+{{ $cfg := index hugo.Data.tools . }}
+{{ if $cfg }}
+<div class="tool-panel" data-tool-engine="{{ $cfg.id }}">
+  <div class="tool-panel__header">
+    <h2>Estimate your cost</h2>
+    <p>Answer a few quick questions. The range updates as you go — nothing here is submitted anywhere.</p>
+  </div>
+
+  <div class="calc-grid">
+    {{ with $cfg.distance_field }}
+    <label class="calc-field">
+      <span class="calc-field__label">{{ .label }}</span>
+      <input type="number" data-field="{{ .id }}" id="tool-{{ .id }}" min="{{ .min }}" max="{{ .max }}" value="{{ .default }}" inputmode="decimal">
+      {{ with .help }}<small class="calc-field__help">{{ . }}</small>{{ end }}
+    </label>
+    {{ end }}
+
+    {{ range $cfg.select_fields }}
+    <label class="calc-field">
+      <span class="calc-field__label">{{ .label }}</span>
+      <select data-field="{{ .id }}" id="tool-{{ .id }}">
+        {{ range .options }}
+        <option value="{{ .value }}">{{ .label }}</option>
+        {{ end }}
+      </select>
+      {{ with .help }}<small class="calc-field__help">{{ . }}</small>{{ end }}
+    </label>
+    {{ end }}
+
+    {{ range $cfg.toggle_fields }}
+    <label class="calc-field calc-field--toggle">
+      <input type="checkbox" data-field="{{ .id }}" id="tool-{{ .id }}">
+      <span class="calc-field__label">{{ .label }}</span>
+    </label>
+    {{ end }}
+
+    {{ with $cfg.storage_field }}
+    <label class="calc-field">
+      <span class="calc-field__label">{{ .label }}</span>
+      <input type="number" data-field="{{ .id }}" id="tool-{{ .id }}" min="{{ .min }}" max="{{ .max }}" value="{{ .default }}" inputmode="numeric">
+      {{ with .help }}<small class="calc-field__help">{{ . }}</small>{{ end }}
+    </label>
+    {{ end }}
+
+    {{ with $cfg.state_field }}
+    <label class="calc-field">
+      <span class="calc-field__label">{{ .label }}</span>
+      <select data-field="{{ .id }}" id="tool-{{ .id }}">
+        {{ range .options }}
+        <option value="{{ .value }}">{{ .label }}</option>
+        {{ end }}
+      </select>
+      {{ with .help }}<small class="calc-field__help">{{ . }}</small>{{ end }}
+    </label>
+    {{ end }}
+  </div>
+
+  <div class="calc-result">
+    <div class="calc-result__label">Estimated cost</div>
+    <div class="calc-result__range" data-result-range>—</div>
+    <ul class="calc-result__breakdown" data-result-breakdown></ul>
+  </div>
+
+  {{ with $cfg.tips }}
+  <div class="calc-tips">
+    <h3>Before you call</h3>
+    <ul>
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  <script type="application/json" data-tool-config>{{ $cfg | jsonify | safeJS }}</script>
+</div>
+{{ end }}
+{{ end }}

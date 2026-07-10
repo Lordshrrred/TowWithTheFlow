@@ -1,0 +1,32 @@
+/* TWTF Tool Engine — shared calculator styling. Reused by every future tool. */
+.tool-panel{border:1px solid var(--border,#2a3b52);border-radius:var(--radius-lg,22px);background:linear-gradient(180deg,rgba(15,26,45,.9),rgba(11,20,34,.84));padding:1.4rem 1.4rem 1.6rem;margin:1.6rem 0 2.2rem;box-shadow:var(--shadow,0 14px 40px rgba(0,0,0,.28))}
+.tool-panel__header h2{margin-top:0;margin-bottom:.35rem}
+.tool-panel__header p{color:var(--text-soft,#bfd0e6);margin-bottom:1.3rem}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem 1.2rem;margin-bottom:1.4rem}
+.calc-field{display:flex;flex-direction:column;gap:.4rem}
+.calc-field__label{font-weight:700;font-size:.92rem;color:var(--text,#e7eef8)}
+.calc-field__help{font-size:.78rem;color:var(--text-dim,#9fb0c7);line-height:1.4}
+.calc-field input[type="number"],
+.calc-field select{padding:.75rem .85rem;background:rgba(9,17,31,.92);border:1px solid var(--border,#2a3b52);border-radius:var(--radius,14px);color:var(--text,#e7eef8);font-family:'Source Sans 3',sans-serif;font-size:1rem;outline:none;transition:border-color .15s,box-shadow .15s}
+.calc-field input[type="number"]:focus,
+.calc-field select:focus{border-color:var(--border-strong,#3f5978);box-shadow:0 0 0 4px rgba(90,162,255,.12)}
+.calc-field--toggle{flex-direction:row;align-items:center;gap:.65rem}
+.calc-field--toggle input[type="checkbox"]{width:1.2rem;height:1.2rem;accent-color:var(--accent,#5aa2ff);flex:none}
+
+.calc-result{border:1px solid var(--border-strong,#3f5978);border-radius:var(--radius,14px);background:rgba(90,162,255,.08);padding:1.1rem 1.25rem;margin-bottom:1.2rem}
+.calc-result__label{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-dim,#9fb0c7);margin-bottom:.35rem}
+.calc-result__range{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(1.8rem,5vw,2.4rem);color:var(--text,#e7eef8);margin-bottom:.6rem}
+.calc-result__breakdown{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.3rem}
+.calc-result__breakdown li{font-size:.85rem;color:var(--text-soft,#bfd0e6)}
+
+.calc-tips{border-top:1px solid var(--border,#2a3b52);padding-top:1rem;margin-top:.4rem}
+.calc-tips h3{margin-top:0;font-size:1.02rem}
+.calc-tips ul{margin-bottom:0}
+.calc-tips li{color:var(--text-soft,#bfd0e6);font-size:.92rem}
+
+@media(max-width:640px){
+  .calc-grid{grid-template-columns:1fr}
+  .tool-panel{padding:1.1rem 1rem 1.3rem;margin:1.2rem 0 1.8rem}
+  .calc-result__range{font-size:1.9rem}
+}
