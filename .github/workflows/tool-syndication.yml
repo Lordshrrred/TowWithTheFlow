@@ -1,0 +1,98 @@
+name: Roadside Tool Syndication
+
+on:
+  schedule:
+    # Bounded, cadence-respecting — one small batch per day, well clear of the
+    # existing post-syndication jobs (10:30/12:30/14:30-14:40 UTC).
+    - cron: '50 14 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'dry-run (preview only), live (post), or verify-only (backlink check)'
+        required: false
+        default: 'live'
+        type: choice
+        options: [live, dry-run, verify-only]
+      max_posts:
+        description: 'Bounded number of (tool, platform) posts this run'
+        required: false
+        default: '2'
+        type: string
+      platforms:
+        description: 'Comma-separated platform allowlist'
+        required: false
+        default: 'blogger,wordpress,tumblr,devto,feeder'
+        type: string
+
+permissions:
+  contents: write
+
+env:
+  TZ: America/Denver
+
+jobs:
+  syndicate-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic python-dotenv requests requests-oauthlib pyyaml
+
+      - name: Run tool syndication
+        env:
+          TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
+          TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
+          TUMBLR_TOKEN: ${{ secrets.TUMBLR_TOKEN }}
+          TUMBLR_TOKEN_SECRET: ${{ secrets.TUMBLR_TOKEN_SECRET }}
+          TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          BLOGGER_BASE_URL: ${{ secrets.BLOGGER_BASE_URL }}
+          WORDPRESS_CLIENT_ID: ${{ secrets.WORDPRESS_CLIENT_ID }}
+          WORDPRESS_CLIENT_SECRET: ${{ secrets.WORDPRESS_CLIENT_SECRET }}
+          WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
+          WORDPRESS_OAUTH2_TOKEN: ${{ secrets.WORDPRESS_OAUTH2_TOKEN }}
+          WORDPRESS_BLOG: ${{ secrets.WORDPRESS_BLOG }}
+          DevTO_TWTF1_API_Key: ${{ secrets.DEVTO_TWTF1_API_KEY }}
+          DevTO_TWTF2_API_Key: ${{ secrets.DEVTO_TWTF2_API_KEY }}
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          FEEDER_TRIGGER_TOKEN: ${{ secrets.FEEDER_TRIGGER_TOKEN }}
+        run: |
+          MODE="${{ github.event.inputs.mode || 'live' }}"
+          MAX_POSTS="${{ github.event.inputs.max_posts || '2' }}"
+          PLATFORMS="${{ github.event.inputs.platforms || 'blogger,wordpress,tumblr,devto,feeder' }}"
+          if [ "$MODE" = "dry-run" ]; then
+            python scripts/syndicate_tools.py --dry-run --max-posts "$MAX_POSTS" --platforms "$PLATFORMS"
+          elif [ "$MODE" = "verify-only" ]; then
+            python scripts/syndicate_tools.py --verify-only
+          else
+            python scripts/syndicate_tools.py --live --max-posts "$MAX_POSTS" --platforms "$PLATFORMS"
+          fi
+
+      - name: Rebuild dashboard
+        run: python scripts/build_dashboard.py
+
+      - name: Commit state and log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/tool_syndication_state.json scripts/tool_syndication_log.txt
+          if git diff --staged --quiet; then
+            echo "No tool syndication changes"
+            exit 0
+          fi
+          git commit -m "Auto: tool syndication $(date +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push
