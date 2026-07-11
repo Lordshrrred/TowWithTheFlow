@@ -1,6 +1,11 @@
 {
-  "generated_at": "2026-07-11T14:01:40.759241+00:00",
+  "generated_at": "2026-07-11T17:20:35.394802+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/07/11/flat-tire-decision-assistant/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/11/car-overheating-in-denver-summer-do-i-need-a-tow-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/11/oil-pressure-light-came-on-while-driving-pull-over-or-keep-going/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/11/towing-cost-miami-florida-after-accident/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/11/fuel-pump-failed-car-wont-start-is-it-a-tow/",
     "https://towwiththeflowyo.wordpress.com/2026/07/10/should-i-call-a-tow-truck/",
     "https://towwiththeflowyo.wordpress.com/2026/07/10/tow-cost-estimator/",
     "https://towwiththeflowyo.wordpress.com/2026/07/10/car-broke-down-on-freeway-in-los-angeles-who-to-call/",
@@ -382,8 +387,7 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
-    "https://towwiththeflowyo.wordpress.com/2026/07/11/fuel-pump-failed-car-wont-start-is-it-a-tow/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -1044,6 +1048,15 @@
         "verified": true
       }
     },
+    "car-overheating-in-denver-summer-do-i-need-a-tow-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/11/car-overheating-in-denver-summer-do-i-need-a-tow-2/",
+        "verified": false
+      }
+    },
     "car-overheating-in-traffic-what-to-do": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/car-overheating-in-traffic-what-to-do/",
@@ -1674,6 +1687,15 @@
         "verified": true
       }
     },
+    "flat-tire-decision-assistant": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/11/flat-tire-decision-assistant/",
+        "verified": false
+      }
+    },
     "fuel-pump-died-on-highway-need-tow-truck-now": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/fuel-pump-died-on-highway-need-tow-truck-now/",
@@ -2023,6 +2045,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/09/nationwide-roadside-assistance-towing-distance-limits-3/",
         "verified": false
+      }
+    },
+    "oil-pressure-light-came-on-while-driving-pull-over-or-keep-going": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/oil-pressure-light-came-on-while-driving-pull-over-or-keep-going/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/11/oil-pressure-light-came-on-while-driving-pull-over-or-keep-going/",
+        "verified": true
       }
     },
     "progressive-insurance-towing-coverage-how-many-times": {
@@ -3294,6 +3325,15 @@
         "verified": true
       }
     },
+    "towing-cost-miami-florida-after-accident": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-miami-florida-after-accident/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/11/towing-cost-miami-florida-after-accident/",
+        "verified": true
+      }
+    },
     "towing-cost-miami-florida-hurricane-season": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-miami-florida-hurricane-season/",
@@ -3838,8 +3878,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 383,
-      "verified": 302
+      "checked": 387,
+      "verified": 304
     }
   }
 }
