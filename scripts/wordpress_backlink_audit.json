@@ -1,6 +1,8 @@
 {
-  "generated_at": "2026-07-10T21:32:13.554990+00:00",
+  "generated_at": "2026-07-11T03:47:28.130624+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/07/10/should-i-call-a-tow-truck/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/10/tow-cost-estimator/",
     "https://towwiththeflowyo.wordpress.com/2026/07/10/car-broke-down-on-freeway-in-los-angeles-who-to-call/",
     "https://towwiththeflowyo.wordpress.com/2026/07/10/car-overheating-in-denver-summer-do-i-need-a-tow/",
     "https://towwiththeflowyo.wordpress.com/2026/07/10/car-door-wont-open-from-inside-emergency/",
@@ -2139,6 +2141,15 @@
         "verified": true
       }
     },
+    "should-i-call-a-tow-truck": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/10/should-i-call-a-tow-truck/",
+        "verified": false
+      }
+    },
     "smoke-coming-from-under-car-not-hood-what-does-it-mean": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/smoke-coming-from-under-car-not-hood-what-does-it-mean/",
@@ -2236,6 +2247,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/12/tire-blowout-highway-emergency-tow-cost/",
         "verified": true
+      }
+    },
+    "tow-cost-estimator": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/10/tow-cost-estimator/",
+        "verified": false
       }
     },
     "tow-truck-cost-aaa-vs-non-aaa-chicago": {
@@ -3808,7 +3828,7 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 380,
+      "checked": 382,
       "verified": 301
     }
   }
