@@ -5,15 +5,13 @@ on:
     - cron: '0 9 * * *'    # 09:00 UTC — generate post 1 (general, TWTF2)
     - cron: '30 9 * * *'   # 09:30 UTC — generate post 2 (local, TWTF2)
     - cron: '30 10 * * *'  # 10:30 UTC — syndicate post 1 (TWTF2)
+    - cron: '0 11 * * *'   # 11:00 UTC — generate post 3 (general, TWTF1)
+    - cron: '30 11 * * *'  # 11:30 UTC — generate post 4 (local, TWTF1)
     - cron: '30 12 * * *'  # 12:30 UTC — syndicate post 2 (TWTF2)
-    # Cost-control mode, July 10 2026:
-    # second account generation/syndication and backlog syndication are manual only.
-    # - 11:00 UTC generate post 3 (general, TWTF1)
-    # - 11:30 UTC generate post 4 (local, TWTF1)
-    # - 14:30 UTC syndicate post 3 (TWTF1)
-    # - 14:35 UTC syndicate WordPress backlog
-    # - 14:40 UTC syndicate Blogger backlog
-    # - 16:30 UTC syndicate post 4 (TWTF1)
+    - cron: '30 14 * * *'  # 14:30 UTC — syndicate post 3 (TWTF1)
+    - cron: '35 14 * * *'  # 14:35 UTC — syndicate WordPress backlog (until exhausted)
+    - cron: '40 14 * * *'  # 14:40 UTC — syndicate Blogger backlog (until exhausted)
+    - cron: '30 16 * * *'  # 16:30 UTC — syndicate post 4 (TWTF1)
   workflow_dispatch:
     inputs:
       job:

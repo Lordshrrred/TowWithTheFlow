@@ -1,8 +1,8 @@
 name: Keyword Research
 
 on:
-  # Manual only while API spend is under audit. Google Search Console based SEO
-  # intelligence is the default recurring source for opportunities.
+  schedule:
+    - cron: '0 8 * * 1,3,5'  # Mon/Wed/Fri at 8am UTC — 40 keywords/run
   workflow_dispatch:
 
 permissions:

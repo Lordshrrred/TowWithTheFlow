@@ -36,7 +36,7 @@ jobs:
             seo-intelligence-${{ runner.os }}-
 
       - name: Install dependencies
-        run: pip install google-auth python-dotenv requests anthropic
+        run: pip install google-auth python-dotenv requests
 
       - name: Build SEO intelligence report
         env:
