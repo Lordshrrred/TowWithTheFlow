@@ -1,0 +1,77 @@
+{
+  "id": "storage-fee-calculator",
+  "currency": "USD",
+  "panel_heading": "Estimate your storage fees",
+  "panel_intro": "Answer a few quick questions. The range updates as you go — nothing here is submitted anywhere.",
+  "base_fee": 50,
+  "storage_field": {
+    "id": "days",
+    "label": "Days in storage",
+    "min": 0,
+    "max": 60,
+    "default": 3,
+    "per_day": 45,
+    "variability": 1,
+    "help": "Most lots start charging the same day or the next — even a partial day often counts as a full one."
+  },
+  "select_fields": [
+    {
+      "id": "lot_type",
+      "label": "Where is it being stored?",
+      "help": "Private lots set their own rates; police/city impound rates are usually regulated.",
+      "options": [
+        { "value": "police", "label": "Police or city impound lot", "fee": 0, "variability": 0 },
+        { "value": "private", "label": "Private tow company's lot", "fee": 20, "variability": 2 },
+        { "value": "dealer", "label": "Dealer or repair shop lot", "fee": 0, "variability": 1 }
+      ]
+    },
+    {
+      "id": "vehicle_size",
+      "label": "Vehicle type",
+      "help": "Bigger vehicles take up more space and often cost more to store.",
+      "options": [
+        { "value": "car", "label": "Car or small sedan", "fee": 0, "variability": 0 },
+        { "value": "suv_truck", "label": "SUV or pickup truck", "fee": 10, "variability": 0 },
+        { "value": "rv_trailer", "label": "RV, motorhome, or trailer", "fee": 35, "variability": 1 }
+      ]
+    }
+  ],
+  "toggle_fields": [
+    { "id": "after_hours_release", "label": "Releasing the vehicle outside normal business hours", "fee": 40, "variability": 1 }
+  ],
+  "range": { "low_multiplier": 0.85, "high_multiplier": 1.3, "min_spread": 40 },
+  "confidence_thresholds": { "high_max": 0, "moderate_max": 2 },
+  "factor_explanations": {
+    "days": "Storage is almost always billed per day, and most lots count any part of a day as a full day.",
+    "lot_type": "Private lots set their own daily rates, which can vary widely; police and city impound rates are usually set by local regulation.",
+    "vehicle_size": "Larger vehicles take up more space and are sometimes billed at a higher daily rate.",
+    "after_hours_release": "Many lots charge extra to release a vehicle outside normal business hours."
+  },
+  "savings_tips": [
+    "Retrieve the vehicle as soon as possible — every extra day adds to the bill.",
+    "Ask about the exact daily rate and any release or admin fee before you go, so there are no surprises.",
+    "If it's a private lot, ask whether the rate is capped by local law — some cities regulate maximum storage fees.",
+    "Bring exact payment methods accepted — some lots are cash-only or card-only, which can cost you another day if you show up unprepared."
+  ],
+  "common_mistakes": [
+    "Assuming you can negotiate a lower daily rate at a regulated impound lot.",
+    "Waiting to retrieve the vehicle while fees keep accruing.",
+    "Not bringing proper ID or proof of ownership, causing a delay (and another day's fee).",
+    "Not asking about after-hours release fees before arriving outside business hours."
+  ],
+  "before_tow_checklist": [
+    "Bring your ID and proof of ownership or registration.",
+    "Confirm accepted payment methods before you go.",
+    "Ask for an itemized bill covering the tow and every storage day.",
+    "Check the vehicle's condition before you leave the lot."
+  ],
+  "phone_script": {
+    "intro": "Read this while you're on the phone with the storage lot.",
+    "lines": [
+      "Hi, I need to retrieve my vehicle that's been in storage.",
+      "Can you confirm the daily rate, total days, and any release or admin fee?",
+      "What forms of payment do you accept, and what are your release hours?"
+    ]
+  },
+  "next_action": "Check the related guides below for how storage fees interact with towing costs and insurance."
+}

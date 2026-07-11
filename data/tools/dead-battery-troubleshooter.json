@@ -1,0 +1,177 @@
+{
+  "id": "dead-battery-troubleshooter",
+  "kind": "decision-tool",
+  "panel_heading": "Answer a few quick questions",
+  "panel_intro": "One question at a time — nothing here is submitted anywhere.",
+  "action_plan_heading": "Your Roadside Action Plan",
+  "start": "location",
+  "questions": {
+    "location": {
+      "text": "Is the vehicle stopped somewhere unsafe — a travel lane or similar?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:unsafe_location" },
+        { "value": "no", "label": "No, it's safely parked", "next": "symptom" }
+      ]
+    },
+    "symptom": {
+      "text": "When you turn the key or press start, what happens?",
+      "options": [
+        { "value": "nothing", "label": "Nothing at all — no sound, no lights", "next": "jump_available" },
+        { "value": "clicking", "label": "A clicking sound, but it doesn't start", "next": "jump_available" },
+        { "value": "slow_crank", "label": "It cranks slowly, then stops", "next": "jump_available" },
+        { "value": "lights_no_start", "label": "Lights and radio work, but it won't start", "next": "result:possible_starter" }
+      ]
+    },
+    "jump_available": {
+      "text": "Do you have jumper cables or a jump box, and another vehicle or way to jump it?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "recurring" },
+        { "value": "no", "label": "No", "next": "result:roadside_battery" }
+      ]
+    },
+    "recurring": {
+      "text": "Has this happened before recently, even after a jump or charge?",
+      "options": [
+        { "value": "yes", "label": "Yes, more than once", "next": "result:possible_alternator" },
+        { "value": "no", "label": "No, this is the first time", "next": "result:jump_start" }
+      ]
+    }
+  },
+  "results": {
+    "unsafe_location": {
+      "result_type": "move_to_safety",
+      "title": "Move Only to Immediate Safety",
+      "summary": "A dead battery isn't urgent by itself, but an unsafe location is. If you can safely move a short distance, do that first.",
+      "confidence": "high",
+      "confidence_text": "Location safety always outranks the battery question itself.",
+      "not_to_do": [
+        "Don't attempt a jump start while in or near a travel lane.",
+        "Don't stand behind the vehicle in traffic to work on it.",
+        "Don't wait where you are hoping it resolves itself."
+      ],
+      "before_help_checklist": [
+        "Turn on hazard lights before and after moving.",
+        "Check mirrors and traffic before moving at all.",
+        "Once safely stopped, exit on the side away from traffic.",
+        "Call roadside assistance once you're safely off the road."
+      ],
+      "phone_script": {
+        "intro": "Read this once you're safely stopped and calling for help.",
+        "lines": [
+          "Hi, my battery seems dead and I'm now safely stopped at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA for a jump start?"
+        ]
+      },
+      "next_action": "Once you're safely off the road, use this tool again if anything about the situation has changed."
+    },
+    "possible_starter": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "Lights and radio working but no start usually points away from a simple dead battery — a starter or ignition issue is more likely. A technician can confirm on the spot.",
+      "confidence": "moderate",
+      "confidence_text": "This pattern is a common starter/ignition signal, but only a technician with the right tools can confirm it.",
+      "not_to_do": [
+        "Don't keep cranking the key repeatedly — that can drain the battery further and heat up the starter.",
+        "Don't assume a jump will fix it if the battery isn't actually the issue.",
+        "Don't ignore a repeat of this pattern — get it diagnosed properly."
+      ],
+      "before_help_checklist": [
+        "Note any clicking, grinding, or silence when you try to start it.",
+        "Turn off accessories while you wait.",
+        "Have your keys and vehicle location ready.",
+        "Stay with the vehicle if it's safe to do so."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, my lights and radio work but the car won't start. I'm at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA and whether this sounds like a starter issue to you?"
+        ]
+      },
+      "next_action": "Ask the shop to test the starter and ignition switch, not just the battery."
+    },
+    "roadside_battery": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "No way to jump it yourself means a roadside jump-start call is the practical next step.",
+      "confidence": "high",
+      "confidence_text": "This is a textbook roadside-assistance case.",
+      "not_to_do": [
+        "Don't keep cranking the key — it heats up the starter and drains what's left of the battery.",
+        "Don't accept a ride from a stranger instead of a real roadside service.",
+        "Don't assume it's definitely the battery until it's tested."
+      ],
+      "before_help_checklist": [
+        "Turn off accessories (lights, AC, radio) while you wait.",
+        "Have your keys and vehicle location ready.",
+        "Note if this has happened before.",
+        "Stay with the vehicle if it's safe to do so."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, my vehicle won't start — I think it's the battery. I'm at [location description].",
+          "It's safe to approach and I'm waiting nearby.",
+          "Can you confirm ETA and whether a jump start is included?"
+        ]
+      },
+      "next_action": "If it dies again soon after, get the battery and alternator tested rather than just jumping it again."
+    },
+    "possible_alternator": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "A battery that keeps dying even after being jumped or charged usually means the alternator isn't recharging it while you drive. Driving off on a fresh jump can leave you stranded again, potentially somewhere worse.",
+      "confidence": "moderate",
+      "confidence_text": "This pattern strongly suggests an alternator or charging-system issue, but only a shop can confirm it with a load test.",
+      "not_to_do": [
+        "Don't assume another jump start solves the underlying problem.",
+        "Don't drive further than necessary on a battery that keeps dying.",
+        "Don't ignore dimming lights or electrical issues while driving — that's often an early warning."
+      ],
+      "before_help_checklist": [
+        "Note how many times this has happened and over what timeframe.",
+        "Mention any dimming headlights or electrical flickering.",
+        "Confirm exactly where you want the vehicle taken.",
+        "Keep your keys and paperwork accessible for the driver."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my battery keeps dying even after a jump. I'm at [location description].",
+          "Can you confirm total price, ETA, and where it will be taken?",
+          "I suspect it's the alternator, not just the battery."
+        ]
+      },
+      "next_action": "Ask the shop to test the alternator's charging output, not just replace the battery."
+    },
+    "jump_start": {
+      "result_type": "guide",
+      "title": "Safe to Reassess — Try a Jump Start"
+      ,
+      "summary": "A one-time dead battery with cables and a donor vehicle on hand is a reasonable case to try jumping it yourself.",
+      "confidence": "moderate",
+      "confidence_text": "This assumes a standard 12V system and no other visible damage. If it doesn't start after a proper attempt, stop and call for help instead.",
+      "not_to_do": [
+        "Don't connect the negative cable directly to the dead battery's negative terminal — use a metal ground point instead.",
+        "Don't let the cable clamps touch each other while connected.",
+        "Don't crank the starter for more than about 10 seconds at a time."
+      ],
+      "before_help_checklist": [
+        "Connect positive to positive first, then negative to a metal ground on the dead vehicle.",
+        "Let the donor vehicle run for a couple of minutes before attempting to start.",
+        "Start the dead vehicle, then remove cables in reverse order.",
+        "Let it run for a while afterward to recharge before shutting it off again."
+      ],
+      "phone_script": {
+        "intro": "Keep this ready in case the jump doesn't work.",
+        "lines": [
+          "Hi, my battery died and a jump start didn't work. I'm at [location description].",
+          "Can you confirm ETA for roadside assistance?"
+        ]
+      },
+      "next_action": "If it starts, get the battery tested soon — a jump gets you moving, it doesn't diagnose the cause."
+    }
+  }
+}

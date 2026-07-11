@@ -1,0 +1,140 @@
+{
+  "id": "fuel-decision-assistant",
+  "kind": "decision-tool",
+  "panel_heading": "Answer a few quick questions",
+  "panel_intro": "One question at a time — nothing here is submitted anywhere.",
+  "action_plan_heading": "Your Roadside Action Plan",
+  "start": "location",
+  "questions": {
+    "location": {
+      "text": "Is the vehicle currently stopped in a travel lane or another unsafe spot?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:unsafe_location" },
+        { "value": "no", "label": "No, it's safely off the road", "next": "restart" }
+      ]
+    },
+    "restart": {
+      "text": "Does the engine still start and run, even briefly?",
+      "options": [
+        { "value": "no", "label": "No, it won't start at all", "next": "result:possible_fuel_system" },
+        { "value": "yes", "label": "Yes, but it's clearly out of fuel", "next": "distance" }
+      ]
+    },
+    "distance": {
+      "text": "Is a gas station within easy, safe walking distance?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:walk_to_station" },
+        { "value": "no", "label": "No", "next": "result:fuel_delivery" }
+      ]
+    }
+  },
+  "results": {
+    "unsafe_location": {
+      "result_type": "move_to_safety",
+      "title": "Move Only to Immediate Safety",
+      "summary": "Running low on fuel isn't urgent by itself, but an unsafe location is. If you can safely move a short distance — like onto the shoulder — do that first.",
+      "confidence": "high",
+      "confidence_text": "Location safety always outranks the fuel question itself.",
+      "not_to_do": [
+        "Don't attempt to walk for fuel from an unsafe travel lane.",
+        "Don't stand behind or beside the vehicle in traffic.",
+        "Don't try to restart the engine repeatedly while stopped in a live lane."
+      ],
+      "before_help_checklist": [
+        "Turn on hazard lights before and after moving.",
+        "Check mirrors and traffic before moving at all.",
+        "Once safely stopped, exit on the side away from traffic.",
+        "Call roadside assistance once you're safely off the road."
+      ],
+      "phone_script": {
+        "intro": "Read this once you're safely stopped and calling for help.",
+        "lines": [
+          "Hi, I'm out of fuel and now safely stopped at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA for fuel delivery?"
+        ]
+      },
+      "next_action": "Once you're safely off the road, use this tool again if anything about the situation has changed."
+    },
+    "possible_fuel_system": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "If the engine won't start at all, this may not be simple fuel exhaustion — a fuel pump or fuel system issue is possible. A technician can confirm on the spot rather than guessing.",
+      "confidence": "moderate",
+      "confidence_text": "A total failure to start points away from ordinary fuel exhaustion, but only a technician can confirm the actual cause.",
+      "not_to_do": [
+        "Don't assume adding fuel will fix it if the tank isn't actually empty.",
+        "Don't keep cranking the engine repeatedly.",
+        "Don't ignore any unusual sounds (whining, clicking) when you try to start it."
+      ],
+      "before_help_checklist": [
+        "Note your fuel gauge reading before assuming it's empty.",
+        "Note any sounds when you try to start it.",
+        "Have your keys and vehicle location ready.",
+        "Stay with the vehicle if it's safe to do so."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, my vehicle won't start and I'm not sure if it's out of fuel or something else. I'm at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA, and whether this sounds like a fuel system issue to you?"
+        ]
+      },
+      "next_action": "If fuel wasn't the issue, ask the shop to check the fuel pump and fuel delivery system."
+    },
+    "walk_to_station": {
+      "result_type": "guide",
+      "title": "Safe to Reassess — Walking Is Reasonable",
+      "summary": "If a station is genuinely close and the walk is safe (sidewalk or shoulder, good visibility, no highway crossing), getting a small amount of fuel yourself is often the fastest fix.",
+      "confidence": "moderate",
+      "confidence_text": "This depends entirely on how safe the actual walk is — if it means crossing a highway or walking with no shoulder, call for fuel delivery instead.",
+      "not_to_do": [
+        "Don't walk along a highway shoulder or cross active traffic to reach a station.",
+        "Don't carry fuel in anything other than an approved container.",
+        "Don't leave the vehicle in an unsafe spot while you're gone."
+      ],
+      "before_help_checklist": [
+        "Turn on hazard lights before you leave.",
+        "Bring an approved fuel container if the station has one to lend or sell.",
+        "Lock the vehicle if you're stepping away.",
+        "Have a phone and a way to call for help if the walk turns out to be unsafe."
+      ],
+      "phone_script": {
+        "intro": "Keep this ready in case the walk doesn't work out.",
+        "lines": [
+          "Hi, I'm out of fuel at [location description] and about to walk to a nearby station.",
+          "Can you confirm ETA for fuel delivery in case I need to call back?"
+        ]
+      },
+      "next_action": "Keep an eye on your gauge going forward — running dry repeatedly can also damage a fuel pump over time."
+    },
+    "fuel_delivery": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "No station within safe walking distance means roadside fuel delivery is the practical next step.",
+      "confidence": "high",
+      "confidence_text": "This is a textbook roadside-assistance case.",
+      "not_to_do": [
+        "Don't attempt a long or unsafe walk to find fuel yourself.",
+        "Don't keep cranking the engine trying to coax out the last fumes.",
+        "Don't forget some plans limit free fuel delivery to a small amount."
+      ],
+      "before_help_checklist": [
+        "Pull as far off the road as safely possible.",
+        "Turn on hazard lights.",
+        "Confirm your plan covers fuel delivery, not just towing.",
+        "Stay with the vehicle if it's safe to do so."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, I've run out of fuel at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA and whether fuel delivery is included in my plan?"
+        ]
+      },
+      "next_action": "Keep an eye on your gauge going forward — running dry can also damage a fuel pump over time."
+    }
+  }
+}

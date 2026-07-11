@@ -1,0 +1,107 @@
+{
+  "id": "engine-overheating-assistant",
+  "kind": "decision-tool",
+  "panel_heading": "Answer a few quick questions",
+  "panel_intro": "One question at a time — nothing here is submitted anywhere.",
+  "action_plan_heading": "Your Roadside Action Plan",
+  "start": "severity",
+  "questions": {
+    "severity": {
+      "text": "Is there steam, smoke, or a burning smell coming from the engine right now?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:hazard" },
+        { "value": "no", "label": "No, just the temperature gauge", "next": "gauge" }
+      ]
+    },
+    "gauge": {
+      "text": "Where is the temperature gauge right now?",
+      "options": [
+        { "value": "red", "label": "In the red / maxed out", "next": "result:already_overheated" },
+        { "value": "rising", "label": "Climbing, but not maxed yet", "next": "result:rising_temp" }
+      ]
+    }
+  },
+  "results": {
+    "hazard": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "Steam, smoke, or a burning smell means stop the vehicle now. Continuing to drive risks a fire or serious engine damage.",
+      "confidence": "high",
+      "confidence_text": "Visible steam, smoke, or burning smell are unambiguous do-not-drive signs.",
+      "not_to_do": [
+        "Don't open the hood if you see active steam or smoke — let it cool first, away from the vehicle.",
+        "Don't pour water on a hot engine or radiator.",
+        "Don't keep driving to \"just get it home.\""
+      ],
+      "before_help_checklist": [
+        "Turn off the engine once safely stopped.",
+        "Move away from the vehicle if you see active smoke or smell burning.",
+        "Call 911 if you see actual flames.",
+        "Keep bystanders away from the vehicle."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my engine has steam, smoke, or a burning smell. It's at [location description].",
+          "It is not safe to drive.",
+          "Can you confirm total price, ETA, and where it will be taken?"
+        ]
+      },
+      "next_action": "Have a mechanic diagnose the cause before driving it again — don't just refill coolant and hope."
+    },
+    "already_overheated": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "Once the gauge is maxed out, the engine is already overheated. Driving any further risks warping the cylinder head or blowing the head gasket — a $150 problem can become a $2,000 one in minutes.",
+      "confidence": "high",
+      "confidence_text": "A gauge already in the red is a clear stop-now signal, not a symptom to monitor.",
+      "not_to_do": [
+        "Don't keep driving \"just a little further\" once the gauge is maxed.",
+        "Don't open a hot radiator cap — wait at least 30 minutes after the engine is off.",
+        "Don't add cold water to a hot engine — thermal shock can crack the block."
+      ],
+      "before_help_checklist": [
+        "Turn off the engine once safely stopped.",
+        "Leave the hood closed until the engine has cooled.",
+        "Note how long the gauge was in the red before you stopped.",
+        "Avoid restarting the engine to \"check\" if it's fine."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my engine overheated and the gauge is maxed out. It's at [location description].",
+          "It is safe to approach but should not be driven.",
+          "Can you confirm total price, ETA, and where it will be taken?"
+        ]
+      },
+      "next_action": "Have a mechanic check the cooling system before driving it again."
+    },
+    "rising_temp": {
+      "result_type": "move_to_safety",
+      "title": "Move Only to Immediate Safety",
+      "summary": "If the gauge is climbing but not maxed, pull over and stop now — before it reaches the red. Turning off the AC and turning the heater on full can pull some heat away from the engine while you find a safe spot.",
+      "confidence": "moderate",
+      "confidence_text": "Catching it before the gauge maxes out gives you more options, but exactly how much time you have depends on your specific vehicle and what's causing the rise.",
+      "not_to_do": [
+        "Don't keep driving hoping it levels off on its own.",
+        "Don't run the AC while the gauge is climbing — it adds load to the engine.",
+        "Don't ignore a climbing gauge because it hasn't reached the red yet."
+      ],
+      "before_help_checklist": [
+        "Turn off the AC; turn the heater on full to help pull heat from the engine.",
+        "Find the nearest safe place to pull over, not necessarily home.",
+        "Turn off the engine once stopped.",
+        "Wait for it to cool before deciding on next steps."
+      ],
+      "phone_script": {
+        "intro": "Read this once you're safely stopped.",
+        "lines": [
+          "Hi, my temperature gauge was climbing and I've pulled over at [location description].",
+          "The engine is now off and cooling.",
+          "Can you confirm ETA, and whether this sounds like something I can drive on carefully once cool, or if I need a tow?"
+        ]
+      },
+      "next_action": "Once cooled, use this tool again if the gauge climbs again — repeated overheating usually means a tow, not another attempt to drive."
+    }
+  }
+}

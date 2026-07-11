@@ -1,0 +1,170 @@
+{
+  "id": "flat-tire-decision-assistant",
+  "kind": "decision-tool",
+  "panel_heading": "Answer a few quick questions",
+  "panel_intro": "One question at a time — nothing here is submitted anywhere.",
+  "action_plan_heading": "Your Roadside Action Plan",
+  "start": "location",
+  "questions": {
+    "location": {
+      "text": "Is the vehicle currently stopped in a travel lane or another unsafe spot?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:unsafe_location" },
+        { "value": "no", "label": "No, it's safely off the road", "next": "tire_type" }
+      ]
+    },
+    "tire_type": {
+      "text": "Is this a run-flat tire, or do you have a spare?",
+      "options": [
+        { "value": "runflat", "label": "It's a run-flat tire", "next": "result:runflat_ok" },
+        { "value": "has_spare", "label": "I have a spare", "next": "confidence" },
+        { "value": "no_spare", "label": "No spare available", "next": "result:no_spare" }
+      ]
+    },
+    "confidence": {
+      "text": "Are you comfortable changing it yourself, safely off the road?",
+      "options": [
+        { "value": "yes", "label": "Yes, I can do it safely", "next": "result:diy_change" },
+        { "value": "no", "label": "No, I'd rather not", "next": "result:roadside_spare" }
+      ]
+    }
+  },
+  "results": {
+    "unsafe_location": {
+      "result_type": "move_to_safety",
+      "title": "Move Only to Immediate Safety",
+      "summary": "Don't change a tire in a travel lane. If you can safely move a short distance — like onto the shoulder — do that first, then deal with the tire.",
+      "confidence": "high",
+      "confidence_text": "A flat tire in an active lane is a real hazard regardless of how minor the tire damage looks.",
+      "not_to_do": [
+        "Don't attempt to change the tire while in or near a travel lane.",
+        "Don't stand behind the vehicle in traffic to inspect it.",
+        "Don't drive further than the nearest safe shoulder."
+      ],
+      "before_help_checklist": [
+        "Turn on hazard lights before and after moving.",
+        "Check mirrors and traffic before moving at all.",
+        "Once safely stopped, exit on the side away from traffic.",
+        "Call roadside assistance or a tow once you're safely off the road."
+      ],
+      "phone_script": {
+        "intro": "Read this once you're safely stopped and calling for help.",
+        "lines": [
+          "Hi, I have a flat tire and I'm now safely stopped at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA, and whether you can swap in my spare or if I'll need a tow?"
+        ]
+      },
+      "next_action": "Once you're safely off the road, use this tool again if anything about the situation has changed."
+    },
+    "runflat_ok": {
+      "result_type": "drive_to_shop",
+      "title": "Safe to Reassess",
+      "summary": "Run-flat tires are built to be driven a short distance at reduced speed (typically under 50 mph, up to about 50 miles) to reach a shop — but treat that as a limit, not a target.",
+      "confidence": "moderate",
+      "confidence_text": "This depends on your specific tire's rated run-flat distance and speed, which this tool can't see.",
+      "not_to_do": [
+        "Don't exceed the speed your tire and vehicle manual specify for run-flat driving.",
+        "Don't assume you can keep driving indefinitely — get it repaired or replaced promptly.",
+        "Don't ignore any handling changes; stop if the ride feels increasingly unstable."
+      ],
+      "before_help_checklist": [
+        "Check your owner's manual for your specific run-flat speed and distance limit.",
+        "Turn on hazard lights if driving well below normal traffic speed.",
+        "Head directly to the nearest shop, not on a longer errand.",
+        "Have the tire inspected even if it seems to be holding up."
+      ],
+      "phone_script": {
+        "intro": "Worth calling ahead so the shop is ready for you.",
+        "lines": [
+          "Hi, I have a run-flat tire that's damaged and I'm driving in carefully.",
+          "Can you take a look at it today?",
+          "Do you have this tire in stock, or will it need to be ordered?"
+        ]
+      },
+      "next_action": "If the ride starts feeling unstable before you reach the shop, stop and call roadside assistance instead."
+    },
+    "no_spare": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "No usable spare means a roadside tire service or tow is the practical next step.",
+      "confidence": "high",
+      "confidence_text": "Without a spare, there's no safe DIY option — this is a straightforward roadside call.",
+      "not_to_do": [
+        "Don't drive on the flat, even slowly — it can destroy the wheel.",
+        "Don't rely on a fix-a-flat can as anything more than a very short-term measure.",
+        "Don't assume every roadside plan carries your tire size — ask first."
+      ],
+      "before_help_checklist": [
+        "Pull as far off the road as safely possible.",
+        "Turn on hazard lights.",
+        "Note your tire size if you can see it on the sidewall.",
+        "Stay on the side away from traffic while you wait."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, I have a flat tire and no usable spare, at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA, and whether you carry tires or if I'll need a tow to a shop?"
+        ]
+      },
+      "next_action": "Ask the shop to check why the spare wasn't usable, so you're covered next time."
+    },
+    "diy_change": {
+      "result_type": "guide",
+      "title": "Safe to Reassess — You've Got This"
+      ,
+      "summary": "Changing it yourself is reasonable if you're safely off the road with a proper spare and tools. Take your time and follow the order below.",
+      "confidence": "moderate",
+      "confidence_text": "This assumes standard conditions — a firm, level surface and a spare in good condition. If anything feels off partway through, stop and call for help instead.",
+      "not_to_do": [
+        "Don't work between the vehicle and moving traffic.",
+        "Don't rely on the jack alone — never put any body part under the vehicle.",
+        "Don't skip hand-tightening lug nuts in a star pattern before lowering the vehicle.",
+        "Don't drive far or fast on a compact spare — most are limited to around 50 mph."
+      ],
+      "before_help_checklist": [
+        "Park on level, firm ground and set the parking brake.",
+        "Loosen (don't remove) the lug nuts before jacking up the vehicle.",
+        "Use the vehicle's jack points, not the plastic trim.",
+        "Tighten lug nuts fully once the vehicle is back on the ground, in a star pattern."
+      ],
+      "phone_script": {
+        "intro": "Keep this ready in case you need backup partway through.",
+        "lines": [
+          "Hi, I'm changing a flat tire myself at [location description] but may need help.",
+          "Can you confirm ETA in case I call back?"
+        ]
+      },
+      "next_action": "Get the flat repaired or replaced properly soon — don't treat the spare as permanent."
+    },
+    "roadside_spare": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "You have a spare, but there's no shame in having a professional swap it in — especially if you're not confident doing it yourself.",
+      "confidence": "high",
+      "confidence_text": "This is a textbook roadside-assistance case.",
+      "not_to_do": [
+        "Don't attempt it if you're not confident, especially near traffic.",
+        "Don't drive on the flat while waiting — it can destroy the wheel.",
+        "Don't forget to mention you have a spare so they bring the right tools."
+      ],
+      "before_help_checklist": [
+        "Pull as far off the road as safely possible.",
+        "Turn on hazard lights.",
+        "Have your spare and jack accessible for the technician.",
+        "Stay on the side away from traffic while you wait."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, I have a flat tire and a spare, at [location description].",
+          "It's safe to approach.",
+          "Can you confirm ETA for a tire swap?"
+        ]
+      },
+      "next_action": "Get the flat repaired or replaced properly before driving on the spare long-term."
+    }
+  }
+}

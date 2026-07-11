@@ -1,0 +1,115 @@
+{
+  "id": "winch-recovery-guide",
+  "kind": "decision-tool",
+  "panel_heading": "Answer a few quick questions",
+  "panel_intro": "One question at a time — nothing here is submitted anywhere.",
+  "action_plan_heading": "Your Roadside Action Plan",
+  "start": "danger",
+  "questions": {
+    "danger": {
+      "text": "Is the vehicle at risk of tipping, sinking further, or is anyone in immediate danger (water, unstable ground)?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:emergency" },
+        { "value": "no", "label": "No", "next": "stuck_type" }
+      ]
+    },
+    "stuck_type": {
+      "text": "What's the vehicle stuck in?",
+      "options": [
+        { "value": "mud_snow", "label": "Mud or snow", "next": "own_equipment" },
+        { "value": "ditch", "label": "A ditch or embankment", "next": "result:professional_winch" },
+        { "value": "sand", "label": "Sand", "next": "own_equipment" }
+      ]
+    },
+    "own_equipment": {
+      "text": "Do you have your own winch or tow strap and another vehicle to help, safely?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:self_recovery"},
+        { "value": "no", "label": "No", "next": "result:professional_winch" }
+      ]
+    }
+  },
+  "results": {
+    "emergency": {
+      "result_type": "emergency_services",
+      "title": "Call Emergency Services Now",
+      "summary": "If the vehicle could tip, sink further, or anyone is in danger from water or unstable ground, call 911 before attempting any recovery yourself.",
+      "confidence": "high",
+      "confidence_text": "Situations involving water, unstable ground, or tipping risk are always treated as urgent.",
+      "not_to_do": [
+        "Don't attempt a DIY recovery in a situation that could worsen or become dangerous.",
+        "Don't stay in or near a vehicle at risk of sinking or tipping.",
+        "Don't wait to see if the situation stabilizes on its own."
+      ],
+      "before_help_checklist": [
+        "Move away from the vehicle if there's any risk to you.",
+        "Call 911 and describe the exact situation and location.",
+        "Keep others away from the immediate area.",
+        "Follow the dispatcher's instructions exactly."
+      ],
+      "phone_script": {
+        "intro": "Read this to the dispatcher.",
+        "lines": [
+          "My vehicle is stuck and at risk of [tipping / sinking / another hazard] at [location description].",
+          "No one is currently injured, but this is dangerous.",
+          "Please send help right away."
+        ]
+      },
+      "next_action": "Stay somewhere safe until help arrives."
+    },
+    "self_recovery": {
+      "result_type": "guide",
+      "title": "Safe to Reassess — Careful Self-Recovery"
+      ,
+      "summary": "With a proper strap or winch and another vehicle, a careful self-recovery from mud, snow, or sand can be reasonable — but only using rated recovery points, never a bumper or random tow hook.",
+      "confidence": "moderate",
+      "confidence_text": "This assumes both vehicles and equipment are actually rated for this — if you're unsure, treat it as a professional-winch situation instead.",
+      "not_to_do": [
+        "Don't attach a strap to a bumper, tie rod, or anything not a rated recovery point.",
+        "Don't stand near a strap or chain under tension — a snapped strap can whip back with serious force.",
+        "Don't use a nylon strap that's frayed, cut, or visibly worn."
+      ],
+      "before_help_checklist": [
+        "Confirm both vehicles have rated recovery points.",
+        "Keep bystanders well clear of the strap's path.",
+        "Pull slowly and steadily — don't jerk the vehicle free suddenly.",
+        "Check the strap and attachment points before and during the pull."
+      ],
+      "phone_script": {
+        "intro": "Keep this ready in case the recovery doesn't work.",
+        "lines": [
+          "Hi, I'm stuck at [location description] and attempting a self-recovery.",
+          "Can you confirm ETA for a professional winch-out in case I need to call back?"
+        ]
+      },
+      "next_action": "If it doesn't come free within a couple of careful attempts, stop and call a professional winch-out instead of forcing it."
+    },
+    "professional_winch": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "A ditch, embankment, or a stuck vehicle without the right equipment on hand calls for a professional winch-out — attempting it yourself risks further damage or a worse situation.",
+      "confidence": "high",
+      "confidence_text": "Without rated equipment and a safe setup, this isn't a reasonable DIY situation.",
+      "not_to_do": [
+        "Don't attempt to rock or force the vehicle free repeatedly — it can dig you in deeper or cause damage.",
+        "Don't accept help from an underequipped bystander's vehicle for anything beyond light mud or snow.",
+        "Don't stand near any strap or cable under tension."
+      ],
+      "before_help_checklist": [
+        "Note exactly how the vehicle is stuck (angle, depth, obstacle) to describe to the operator.",
+        "Confirm exactly where you want the vehicle taken if it needs more than a simple winch-out.",
+        "Keep bystanders clear of the recovery area.",
+        "Ask about total price before work begins — winch-outs often have a separate fee from a standard tow."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my vehicle is stuck in [mud / snow / a ditch] at [location description] and needs a winch-out.",
+          "Can you confirm total price for the winch-out, ETA, and whether that includes towing afterward if needed?",
+          "Will there be storage charges?"
+        ]
+      },
+      "next_action": "Use the Tow Cost Estimator's winching option to sanity-check the price before you agree."
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "id": "brake-warning-decision-guide",
+  "kind": "decision-tool",
+  "panel_heading": "Answer a few quick questions",
+  "panel_intro": "One question at a time — nothing here is submitted anywhere.",
+  "action_plan_heading": "Your Roadside Action Plan",
+  "start": "pedal",
+  "questions": {
+    "pedal": {
+      "text": "Does the brake pedal feel soft, go to the floor, or fail to slow the vehicle?",
+      "options": [
+        { "value": "yes", "label": "Yes, the pedal itself feels wrong", "next": "result:pedal_failure" },
+        { "value": "no", "label": "No, the pedal feels normal", "next": "noise" }
+      ]
+    },
+    "noise": {
+      "text": "Do you hear grinding, or a metal-on-metal sound when braking?",
+      "options": [
+        { "value": "yes", "label": "Yes, grinding or metal sound", "next": "result:grinding" },
+        { "value": "no", "label": "No unusual sound", "next": "light_type" }
+      ]
+    },
+    "light_type": {
+      "text": "Which warning light is on?",
+      "options": [
+        { "value": "brake", "label": "Brake warning light (often red)", "next": "result:brake_light" },
+        { "value": "abs", "label": "ABS light only (usually amber)", "next": "result:abs_light" },
+        { "value": "unsure", "label": "Not sure which one", "next": "result:brake_light" }
+      ]
+    }
+  },
+  "results": {
+    "pedal_failure": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "A pedal that feels soft, sinks to the floor, or doesn't slow the car is a safety-critical failure. This is never worth risking a drive, even a short one.",
+      "confidence": "high",
+      "confidence_text": "Pedal-feel problems are one of the clearest do-not-drive signs there is.",
+      "not_to_do": [
+        "Don't test the brakes further by driving to \"see how bad it is.\"",
+        "Don't rely on the parking brake as a substitute for working brakes.",
+        "Don't assume it's minor just because the car still moves and stops eventually."
+      ],
+      "before_help_checklist": [
+        "Keep the vehicle stopped and stable if possible.",
+        "Use hazard lights and warning triangles if available.",
+        "Note exactly what felt wrong — soft, sinking, or no response.",
+        "Avoid restarting or moving the vehicle further."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my brake pedal feels unsafe — soft, sinking, or not slowing the car. It's at [location description].",
+          "It should not be driven.",
+          "Can you confirm total price, ETA, and where it will be taken?"
+        ]
+      },
+      "next_action": "Have a mechanic inspect the brake lines and master cylinder before driving it again."
+    },
+    "grinding": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "Grinding or metal-on-metal sound usually means the brake pads are worn through and metal is contacting the rotor. Continuing to drive risks losing braking entirely and damaging the rotors further.",
+      "confidence": "high",
+      "confidence_text": "Grinding is a clear, well-understood warning sign, not something to wait out.",
+      "not_to_do": [
+        "Don't keep driving \"just a little further\" once you hear grinding.",
+        "Don't ignore it because the brakes still technically work for now.",
+        "Don't assume it's a quick, cheap fix without having it inspected."
+      ],
+      "before_help_checklist": [
+        "Note when the grinding started and whether it's constant or only sometimes.",
+        "Avoid hard braking if you must move the vehicle at all.",
+        "Keep the vehicle stopped and stable if possible.",
+        "Use hazard lights if you're not in a safe parking spot."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my brakes are grinding — metal on metal. The vehicle is at [location description].",
+          "Can you confirm total price, ETA, and where it will be taken?",
+          "Will there be storage charges?"
+        ]
+      },
+      "next_action": "Have a mechanic check the pads and rotors — grinding this far along often means both need replacing."
+    },
+    "brake_light": {
+      "result_type": "tow",
+      "title": "Do Not Drive — Call a Tow",
+      "summary": "A dedicated brake warning light usually indicates low brake fluid, a hydraulic problem, or the parking brake being engaged. Treat it as safety-critical until it's checked.",
+      "confidence": "moderate",
+      "confidence_text": "This light can mean several different things, from a simple parking-brake issue to a real hydraulic problem — a technician needs to check it either way.",
+      "not_to_do": [
+        "Don't assume it's just the parking brake without confirming.",
+        "Don't top off brake fluid yourself and keep driving without knowing why it's low.",
+        "Don't ignore the light because the pedal still feels normal for now."
+      ],
+      "before_help_checklist": [
+        "Confirm the parking brake is fully released.",
+        "Note whether the pedal feel has changed at all.",
+        "Avoid unnecessary driving until it's checked.",
+        "Keep the vehicle stopped and stable if possible."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with the tow company.",
+        "lines": [
+          "Hi, my brake warning light is on and I'd rather not drive it. It's at [location description].",
+          "Can you confirm total price, ETA, and where it will be taken?"
+        ]
+      },
+      "next_action": "Have a mechanic check the brake fluid level and hydraulic system before driving it again."
+    },
+    "abs_light": {
+      "result_type": "reassess",
+      "title": "Safe to Reassess",
+      "summary": "An ABS light alone (with a normal-feeling pedal and no grinding) usually means the anti-lock system has an issue, while regular braking often still works. It's not usually an emergency, but it should be checked soon.",
+      "confidence": "moderate",
+      "confidence_text": "ABS issues alone are typically less urgent than a full brake warning light, but this tool can't rule out something more serious — if the pedal feel changes at all, treat it as a tow situation instead.",
+      "not_to_do": [
+        "Don't ignore it indefinitely — ABS helps you keep control while braking hard, especially on wet or icy roads.",
+        "Don't assume normal braking is unaffected without paying attention.",
+        "Don't drive aggressively in poor conditions until it's checked."
+      ],
+      "before_help_checklist": [
+        "Note when the light came on and whether anything changed beforehand.",
+        "Pay attention to how the brakes feel during normal, gentle stops.",
+        "Avoid hard braking or poor-weather driving until it's checked.",
+        "Get it inspected within the next day or two, not indefinitely."
+      ],
+      "phone_script": {
+        "intro": "Worth calling ahead so the shop is ready for you.",
+        "lines": [
+          "Hi, my ABS light is on but the brakes feel normal otherwise.",
+          "Can you take a look at it soon?",
+          "Is this something I can drive in to have checked, or should I get a tow?"
+        ]
+      },
+      "next_action": "If the pedal feel changes or you hear any noise at all, stop and treat it as a tow situation instead."
+    }
+  }
+}

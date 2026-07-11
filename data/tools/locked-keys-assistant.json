@@ -1,0 +1,140 @@
+{
+  "id": "locked-keys-assistant",
+  "kind": "decision-tool",
+  "panel_heading": "Answer a few quick questions",
+  "panel_intro": "One question at a time — nothing here is submitted anywhere.",
+  "action_plan_heading": "Your Roadside Action Plan",
+  "start": "inside",
+  "questions": {
+    "inside": {
+      "text": "Is a child or pet locked inside the vehicle?",
+      "options": [
+        { "value": "yes", "label": "Yes", "next": "result:emergency" },
+        { "value": "no", "label": "No", "next": "engine_running" }
+      ]
+    },
+    "engine_running": {
+      "text": "Is the engine running with the vehicle locked?",
+      "options": [
+        { "value": "yes", "label": "Yes, it's running and locked", "next": "result:running_locked" },
+        { "value": "no", "label": "No, it's just locked", "next": "spare_key" }
+      ]
+    },
+    "spare_key": {
+      "text": "Do you have access to a spare key nearby?",
+      "options": [
+        { "value": "yes", "label": "Yes, I can get to a spare", "next": "result:get_spare" },
+        { "value": "no", "label": "No spare available", "next": "result:roadside_lockout" }
+      ]
+    }
+  },
+  "results": {
+    "emergency": {
+      "result_type": "emergency_services",
+      "title": "Call Emergency Services Now",
+      "summary": "Call 911 immediately. Many fire departments and police can unlock a vehicle quickly, and heat inside a car rises dangerously fast — this isn't a situation to wait on a locksmith for.",
+      "confidence": "high",
+      "confidence_text": "A child or pet locked inside is always treated as urgent, regardless of the weather.",
+      "not_to_do": [
+        "Don't wait to see if the situation resolves on its own.",
+        "Don't leave the area looking for a locksmith instead of calling 911 first.",
+        "Don't assume mild weather makes it safe to wait — interior temperatures rise fast even on cool days."
+      ],
+      "before_help_checklist": [
+        "Call 911 and describe the situation clearly.",
+        "Stay near the vehicle so you can direct responders.",
+        "If you can safely see the child or pet, keep monitoring them.",
+        "Follow the dispatcher's instructions exactly."
+      ],
+      "phone_script": {
+        "intro": "Read this to the 911 dispatcher.",
+        "lines": [
+          "I have a child (or pet) locked inside my vehicle at [location description].",
+          "The vehicle is locked and I can't get in.",
+          "Please send help right away."
+        ]
+      },
+      "next_action": "Stay on the line with emergency services and follow their instructions until help arrives."
+    },
+    "running_locked": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "An engine running with the vehicle locked isn't a 911 emergency by itself, but it should be handled promptly — roadside lockout service or a locksmith can get you back in without damaging the vehicle.",
+      "confidence": "high",
+      "confidence_text": "This is a common, well-understood roadside call.",
+      "not_to_do": [
+        "Don't attempt to force a door or window open yourself — that risks real damage.",
+        "Don't leave the vehicle running and unattended for a long period while you wait.",
+        "Don't pay a locksmith before checking if your insurance or roadside plan already covers it."
+      ],
+      "before_help_checklist": [
+        "Check all doors and the trunk, just in case one is open.",
+        "Have ID or proof of ownership ready if asked.",
+        "Note your exact location for dispatch.",
+        "Stay near the vehicle if it's safe to do so."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, I'm locked out with the engine running, at [location description].",
+          "Nothing unsafe is inside.",
+          "Can you confirm ETA for lockout service?"
+        ]
+      },
+      "next_action": "Consider a spare key or key fob backup so this doesn't happen again."
+    },
+    "get_spare": {
+      "result_type": "guide",
+      "title": "Safe to Reassess — Get Your Spare",
+      "summary": "If a spare key is genuinely nearby and reachable, that's usually the fastest and cheapest way to get back in.",
+      "confidence": "moderate",
+      "confidence_text": "This depends on how quickly and safely you can actually get to the spare — if it takes a long time or requires leaving an unsafe area, roadside service is the better call instead.",
+      "not_to_do": [
+        "Don't leave the vehicle unattended somewhere unsafe just to fetch a spare.",
+        "Don't assume the spare works without testing the battery in the fob if it's electronic.",
+        "Don't forget the vehicle itself if you need someone else to bring the spare to you."
+      ],
+      "before_help_checklist": [
+        "Confirm exactly where the spare is and how to get it.",
+        "Arrange safe transportation there and back if needed.",
+        "Bring ID in case you need to prove ownership somewhere.",
+        "Have a backup plan (roadside assistance) ready if the spare doesn't work."
+      ],
+      "phone_script": {
+        "intro": "Keep this ready in case the spare doesn't work.",
+        "lines": [
+          "Hi, I'm locked out at [location description] and going to get a spare key.",
+          "Can you confirm ETA for lockout service in case I need to call back?"
+        ]
+      },
+      "next_action": "If the spare doesn't work when you get back, call roadside assistance instead of trying to force entry."
+    },
+    "roadside_lockout": {
+      "result_type": "roadside",
+      "title": "Call Roadside Assistance First",
+      "summary": "No spare available means roadside lockout service or a locksmith is the practical next step.",
+      "confidence": "high",
+      "confidence_text": "This is a textbook roadside-assistance case.",
+      "not_to_do": [
+        "Don't try to force a door or window open yourself — that can cause real damage.",
+        "Don't pay for a locksmith before checking if your insurance, roadside plan, or credit card already covers it.",
+        "Don't leave valuables visible while you wait."
+      ],
+      "before_help_checklist": [
+        "Check all doors and the trunk, just in case.",
+        "Have ID or proof of ownership ready if asked.",
+        "Note your exact location for dispatch.",
+        "Stay near the vehicle if it's safe to do so."
+      ],
+      "phone_script": {
+        "intro": "Read this while you're on the phone with roadside assistance.",
+        "lines": [
+          "Hi, I'm locked out of my vehicle at [location description].",
+          "No one and nothing unsafe is inside.",
+          "Can you confirm ETA for lockout service?"
+        ]
+      },
+      "next_action": "Consider a spare key or key fob backup so this is a one-time issue."
+    }
+  }
+}
