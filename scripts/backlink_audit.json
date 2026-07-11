@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T09:55:49.843683+00:00",
+  "generated_at": "2026-07-11T14:01:34.437712+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2983,6 +2983,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/01/fuel-pump-died-on-highway-need-tow-truck-now/",
+        "verified": true
+      }
+    },
+    "fuel-pump-failed-car-wont-start-is-it-a-tow": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/fuel-pump-failed-and-car-wont-start-is.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/fuel-pump-failed-and-car-wont-start-is-it-a-tow-what-drivers-should-know-500",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/fuel-pump-failed-car-wont-start-is-it-a-tow-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821841840474062848/fuel-pump-failed-car-wont-start-is-it-a-tow",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/11/fuel-pump-failed-car-wont-start-is-it-a-tow/",
         "verified": true
       }
     },
@@ -7772,24 +7799,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 300,
-      "verified": 300
+      "checked": 301,
+      "verified": 301
     },
     "dev": {
-      "checked": 229,
-      "verified": 229
+      "checked": 230,
+      "verified": 230
     },
     "feeder": {
+      "checked": 298,
+      "verified": 298
+    },
+    "tumblr": {
       "checked": 297,
       "verified": 297
     },
-    "tumblr": {
-      "checked": 296,
-      "verified": 296
-    },
     "wordpress": {
-      "checked": 300,
-      "verified": 300
+      "checked": 301,
+      "verified": 301
     }
   }
 }
