@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T17:20:29.254909+00:00",
+  "generated_at": "2026-07-11T21:11:53.762237+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -5919,6 +5919,33 @@
         "verified": true
       }
     },
+    "towing-cost-houston-texas-flatbed-no-insurance": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-houston-texas-flatbed-no.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-houston-texas-flatbed-no-insurance-what-youll-pay-right-now-roadside-tips-2faj",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-houston-texas-flatbed-no-insurance-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821864373093056512/towing-cost-houston-texas-flatbed-no-insurance",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/11/towing-cost-houston-texas-flatbed-no-insurance/",
+        "verified": true
+      }
+    },
     "towing-cost-houston-texas-flatbed-vs-hook": {
       "blog": {
         "reason": "ok",
@@ -7853,24 +7880,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 303,
-      "verified": 303
+      "checked": 304,
+      "verified": 304
     },
     "dev": {
-      "checked": 232,
-      "verified": 232
+      "checked": 233,
+      "verified": 233
     },
     "feeder": {
+      "checked": 301,
+      "verified": 301
+    },
+    "tumblr": {
       "checked": 300,
       "verified": 300
     },
-    "tumblr": {
-      "checked": 299,
-      "verified": 299
-    },
     "wordpress": {
-      "checked": 303,
-      "verified": 303
+      "checked": 304,
+      "verified": 304
     }
   }
 }
