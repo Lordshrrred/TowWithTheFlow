@@ -409,6 +409,7 @@
     var toolId = config.id || root.getAttribute("data-tool-engine") || "tool";
     var flowEl = root.querySelector("[data-question-container]");
     var flowWrap = root.querySelector("[data-decision-flow]");
+    var progressEl = root.querySelector("[data-decision-progress]");
     var planEl = root.querySelector("[data-roadside-plan]");
     var backBtn = root.querySelector("[data-decision-back]");
     var restartBtn = root.querySelector("[data-decision-restart]");
@@ -429,6 +430,10 @@
       var q = config.questions[questionId];
       if (!q) return;
       flowEl.innerHTML = "";
+
+      if (progressEl) {
+        progressEl.textContent = "Question " + (questionStack.length + 1);
+      }
 
       var heading = document.createElement("h3");
       heading.className = "decision-step__question";

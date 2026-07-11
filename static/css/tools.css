@@ -1,6 +1,9 @@
 /* TWTF Tool Engine — shared calculator styling. Reused by every future tool. */
 
-.tool-panel{border:1px solid var(--border,#2a3b52);border-radius:var(--radius-lg,22px);background:linear-gradient(180deg,rgba(15,26,45,.9),rgba(11,20,34,.84));padding:1.6rem 1.6rem 1.8rem;margin:1.6rem 0 2.2rem;box-shadow:var(--shadow,0 14px 40px rgba(0,0,0,.28))}
+.tool-panel{border:1px solid var(--border,#2a3b52);border-radius:var(--radius-lg,22px);background:linear-gradient(180deg,rgba(15,26,45,.94),rgba(11,20,34,.86));padding:1.6rem 1.6rem 1.8rem;margin:1.6rem 0 2.2rem;box-shadow:var(--shadow,0 14px 40px rgba(0,0,0,.28));position:relative;overflow:hidden}
+.tool-panel::before{content:'';position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--accent,#5aa2ff),transparent);opacity:.9}
+.tool-trust-strip{display:flex;flex-wrap:wrap;gap:.45rem .55rem;margin:0 0 1rem}
+.tool-trust-strip span{display:inline-flex;align-items:center;min-height:28px;padding:.28rem .62rem;border-radius:999px;background:rgba(90,162,255,.09);border:1px solid rgba(90,162,255,.16);color:var(--text-soft,#bfd0e6);font-size:.74rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
 .tool-panel__header h2{margin-top:0;margin-bottom:.35rem}
 .tool-panel__header p{color:var(--text-soft,#bfd0e6);margin-bottom:1.5rem}
 
@@ -10,9 +13,9 @@
 .calc-field__label{font-weight:700;font-size:.92rem;color:var(--text,#e7eef8)}
 .calc-field__help{font-size:.78rem;color:var(--text-dim,#9fb0c7);line-height:1.4}
 .calc-field input[type="number"],
-.calc-field select{padding:.8rem .9rem;background:rgba(9,17,31,.92);border:1px solid var(--border,#2a3b52);border-radius:var(--radius,14px);color:var(--text,#e7eef8);font-family:'Source Sans 3',sans-serif;font-size:1rem;outline:none;transition:border-color .15s ease,box-shadow .15s ease,transform .1s ease}
-.calc-field input[type="number"]:focus,
-.calc-field select:focus{border-color:var(--accent,#5aa2ff);box-shadow:0 0 0 4px rgba(90,162,255,.16)}
+.calc-field select{min-height:48px;padding:.8rem .9rem;background:rgba(9,17,31,.92);border:1px solid var(--border,#2a3b52);border-radius:var(--radius,14px);color:var(--text,#e7eef8);font-family:'Source Sans 3',sans-serif;font-size:1rem;outline:none;transition:border-color .15s ease,box-shadow .15s ease,transform .1s ease}
+.calc-field input[type="number"]:focus-visible,
+.calc-field select:focus-visible{border-color:var(--accent,#5aa2ff);box-shadow:0 0 0 4px rgba(90,162,255,.16)}
 .calc-field input[type="number"]:hover,
 .calc-field select:hover{border-color:var(--border-strong,#3f5978)}
 .calc-field--toggle{flex-direction:row;align-items:center;gap:.7rem;padding:.4rem 0}
@@ -22,14 +25,17 @@
 
 /* Decision flow — one question at a time. Large, calm, one-handed on mobile. */
 .decision-flow{margin-bottom:.5rem}
+.decision-progress{margin:0 0 .75rem;color:var(--text-dim,#9fb0c7);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .decision-step__question{font-size:1.15rem;margin:0 0 1.1rem;outline:none}
 .decision-step__options{display:flex;flex-direction:column;gap:.7rem}
-.decision-option{width:100%;text-align:left;padding:1rem 1.2rem;background:rgba(9,17,31,.78);border:1px solid var(--border,#2a3b52);border-radius:var(--radius,14px);color:var(--text,#e7eef8);font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:border-color .15s ease,background .15s ease,transform .1s ease}
+.decision-option{width:100%;min-height:52px;text-align:left;padding:1rem 1.2rem;background:rgba(9,17,31,.78);border:1px solid var(--border,#2a3b52);border-radius:var(--radius,14px);color:var(--text,#e7eef8);font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:border-color .15s ease,background .15s ease,transform .1s ease,box-shadow .15s ease}
 .decision-option:hover{border-color:var(--accent,#5aa2ff);background:rgba(90,162,255,.1)}
+.decision-option:focus-visible{border-color:var(--accent,#5aa2ff);box-shadow:0 0 0 4px rgba(90,162,255,.16);outline:none}
 .decision-option:active{transform:translateY(1px)}
 .decision-flow__controls{margin-top:1.1rem}
-.decision-back{background:none;border:none;color:var(--text-dim,#9fb0c7);font-size:.9rem;font-weight:600;cursor:pointer;padding:.5rem 0}
+.decision-back{background:none;border:none;color:var(--text-dim,#9fb0c7);font-size:.9rem;font-weight:700;cursor:pointer;min-height:44px;padding:.5rem 0}
 .decision-back:hover{color:var(--accent,#5aa2ff)}
+.decision-back:focus-visible,.decision-restart:focus-visible,.calc-script__copy:focus-visible{outline:none;box-shadow:0 0 0 4px rgba(90,162,255,.16)}
 .decision-restart{display:inline-block;margin-top:1.3rem;padding:.82rem 1.6rem;background:linear-gradient(180deg,var(--accent,#5aa2ff),var(--accent-d,#2e7fe5));color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.96rem;border:none;border-radius:999px;cursor:pointer;transition:filter .15s,transform .1s}
 .decision-restart:hover{filter:brightness(1.04);transform:translateY(-1px)}
 
@@ -37,7 +43,8 @@
    tool ends with. Recognizable on sight: same title, same section order,
    same visual language, regardless of which tool the visitor is using. */
 .roadside-plan{border-top:2px solid var(--accent-soft,rgba(90,162,255,.14));padding-top:1.6rem;margin-top:1.8rem}
-.roadside-plan__title{margin-top:0;margin-bottom:1.1rem;font-size:1.35rem}
+.roadside-plan__title{margin-top:0;margin-bottom:.3rem;font-size:1.35rem}
+.roadside-plan__status{margin:0 0 1.15rem;color:var(--text-dim,#9fb0c7);font-size:.84rem;font-weight:700}
 .roadside-plan__next{margin:1.3rem 0 0;padding-top:1.1rem;border-top:1px solid var(--border,#2a3b52);color:var(--text-soft,#bfd0e6);font-size:.92rem;font-style:italic}
 
 /* Result card — the centerpiece. Updates in place, never reloads. */
@@ -96,6 +103,10 @@
 
 @media(max-width:640px){
   .calc-grid{grid-template-columns:1fr}
-  .tool-panel{padding:1.2rem 1.1rem 1.4rem;margin:1.2rem 0 1.8rem}
+  .tool-panel{padding:1.2rem 1rem 1.4rem;margin:1.2rem 0 1.8rem;border-radius:18px}
+  .tool-trust-strip{gap:.38rem}
+  .tool-trust-strip span{font-size:.68rem;min-height:26px;padding:.24rem .5rem}
   .calc-result__range{font-size:2rem}
+  .calc-script__header{align-items:flex-start;flex-direction:column}
+  .calc-script__copy{width:100%}
 }

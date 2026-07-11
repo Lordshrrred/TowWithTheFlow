@@ -329,7 +329,7 @@ padding:5.4rem 0 4.2rem;text-align:center;position:relative;overflow:hidden}
 .card__link:hover{color:var(--accent);text-decoration:none}
 
 /* Tool Hub — signature roadside experiences, not an app-store grid */
-.tool-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-bottom:2rem}
+.tool-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.5rem;margin-bottom:2rem}
 .tool-card{background:linear-gradient(180deg,rgba(15,26,45,.92),rgba(11,20,34,.88));border:1px solid var(--border);border-radius:calc(var(--radius) + 4px);padding:1.75rem;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .18s}
 .tool-card::before{content:'';position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--accent),transparent);opacity:.85}
 .tool-card:hover{border-color:var(--border-strong);box-shadow:var(--shadow-hover);transform:translateY(-3px)}

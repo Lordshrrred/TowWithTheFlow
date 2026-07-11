@@ -13,12 +13,20 @@
 {{ $cfg := index hugo.Data.tools . }}
 {{ if $cfg }}
 <div class="tool-panel" data-tool-engine="{{ $cfg.id }}" data-tool-kind="decision-tool">
+  <div class="tool-trust-strip" aria-label="Tool privacy and trust details">
+    <span>Private on this device</span>
+    <span>No login</span>
+    <span>No AI guessing</span>
+    <span>Action Plan included</span>
+  </div>
+
   <div class="tool-panel__header">
     <h2>{{ $cfg.panel_heading | default "Answer a few quick questions" }}</h2>
     <p>{{ $cfg.panel_intro | default "One question at a time — nothing here is submitted anywhere." }}</p>
   </div>
 
   <div class="decision-flow" data-decision-flow>
+    <p class="decision-progress" data-decision-progress aria-live="polite"></p>
     <div class="decision-step" data-question-container></div>
     <div class="decision-flow__controls">
       <button type="button" class="decision-back" data-decision-back hidden>&larr; Back</button>
@@ -27,10 +35,11 @@
 
   <div class="roadside-plan" data-roadside-plan hidden>
     <h2 class="roadside-plan__title" tabindex="-1">{{ $cfg.action_plan_heading | default "Your Roadside Action Plan" }}</h2>
+    <p class="roadside-plan__status">Based on your answers. You can start over anytime.</p>
 
     <div class="calc-result" data-plan-section>
       <div class="calc-confidence" data-result-confidence></div>
-      <div class="calc-result__label">What to do next</div>
+      <div class="calc-result__label">Recommended next step</div>
       <div class="calc-result__range" data-result-range aria-live="polite">—</div>
       <p class="calc-result__likely" data-result-likely></p>
     </div>

@@ -17,6 +17,13 @@
 {{ $cfg := index hugo.Data.tools . }}
 {{ if $cfg }}
 <div class="tool-panel" data-tool-engine="{{ $cfg.id }}" data-tool-kind="calculator">
+  <div class="tool-trust-strip" aria-label="Tool privacy and trust details">
+    <span>Private on this device</span>
+    <span>No login</span>
+    <span>No AI guessing</span>
+    <span>Action Plan included</span>
+  </div>
+
   <div class="tool-panel__header">
     <h2>{{ $cfg.panel_heading | default "Get your answer" }}</h2>
     <p>{{ $cfg.panel_intro | default "Answer a few quick questions — nothing here is submitted anywhere." }}</p>
@@ -74,6 +81,7 @@
 
   <div class="roadside-plan">
     <h2 class="roadside-plan__title" tabindex="-1">{{ $cfg.action_plan_heading | default "Your Roadside Action Plan" }}</h2>
+    <p class="roadside-plan__status">Updated instantly as you change answers.</p>
 
     <div class="calc-result" data-plan-section>
       <div class="calc-confidence" data-result-confidence></div>
