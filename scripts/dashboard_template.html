@@ -451,6 +451,17 @@
         <div class="bstat-row"><span class="bstat-label">Feeder Site</span><span class="bstat-value"><a class="bstat-link" href="https://lordshrrred.github.io/TWTF_Feeder/" target="_blank" rel="noopener">lordshrrred.github.io/TWTF_Feeder ↗</a></span></div>
         <div class="bstat-row"><span class="bstat-label">Last Checked</span><span class="bstat-value" id="bs-feeder-checked">—</span></div>
       </div>
+      <div class="card">
+        <h3>Roadside Tool Syndication</h3>
+        <div class="bstat-row"><span class="bstat-label">Tools Complete</span><span class="bstat-value" id="ts-tools-complete">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Destinations Complete</span><span class="bstat-value" id="ts-dest-complete">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Destinations Pending</span><span class="bstat-value" id="ts-dest-pending">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Backlink-Capable Links Verified</span><span class="bstat-value" id="ts-backlinks-verified">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Social/Distribution Complete</span><span class="bstat-value" id="ts-distribution">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Failed Destinations</span><span class="bstat-value" id="ts-failed">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Latest Tool Syndicated</span><span class="bstat-value" id="ts-latest" style="font-size:0.75rem;">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Next In Queue</span><span class="bstat-value" id="ts-next" style="font-size:0.75rem;">—</span></div>
+      </div>
     </div>
 
   </main>
@@ -620,9 +631,54 @@ async function buildPostDateMap(slugs){
   return out;
 }
 
+// ── Roadside Tool Syndication (compact view of scripts/tool_syndication_state.json) ──
+const TOOL_SYND_ALL_TOOLS = [
+  "tow-cost-estimator","should-i-call-a-tow-truck","dead-battery-troubleshooter",
+  "flat-tire-decision-assistant","locked-keys-assistant","brake-warning-decision-guide",
+  "engine-overheating-assistant","fuel-decision-assistant","winch-recovery-guide",
+  "storage-fee-calculator",
+];
+const TOOL_SYND_PLATFORMS = ["blogger","wordpress","tumblr","devto","feeder"];
+
+function renderToolSyndication(state){
+  const pairs = state?.pairs || {};
+  const entries = Object.entries(pairs);
+  const successes = entries.filter(([,v])=>v.status==="success");
+  const failures  = entries.filter(([,v])=>v.status==="failed");
+
+  const toolsComplete = TOOL_SYND_ALL_TOOLS.filter(slug =>
+    TOOL_SYND_PLATFORMS.every(p => pairs[`${slug}::${p}`]?.status==="success")
+  ).length;
+
+  const backlinksVerified = successes.filter(([,v])=>v.link_type==="followed_backlink").length;
+  const distributionComplete = successes.filter(([,v])=>v.link_type==="nofollow_distribution"||v.link_type==="canonical_source_copy").length;
+  const destPending = (TOOL_SYND_ALL_TOOLS.length*TOOL_SYND_PLATFORMS.length) - entries.length;
+
+  let latest = "—", latestTime = "";
+  for (const [key,v] of successes){
+    if (v.checked_at && (!latestTime || v.checked_at > latestTime)){
+      latestTime = v.checked_at; latest = key.replace("::"," → ");
+    }
+  }
+
+  const nextTool = TOOL_SYND_ALL_TOOLS.find(slug =>
+    TOOL_SYND_PLATFORMS.some(p => !pairs[`${slug}::${p}`] || pairs[`${slug}::${p}`].status!=="success")
+  );
+
+  const set=(id,val)=>{ const el=document.getElementById(id); if(el) el.textContent=val; };
+  set("ts-tools-complete", `${toolsComplete} / ${TOOL_SYND_ALL_TOOLS.length}`);
+  set("ts-dest-complete", String(successes.length));
+  set("ts-dest-pending", String(Math.max(destPending,0)));
+  set("ts-backlinks-verified", String(backlinksVerified));
+  set("ts-distribution", String(distributionComplete));
+  set("ts-failed", String(failures.length));
+  set("ts-latest", latest);
+  set("ts-next", nextTool ? nextTool.replace(/-/g," ") : "All caught up");
+}
+
 // ── Load all ──────────────────────────────────────────────────────────────────
 async function loadDashboard(){
-  const [logTxt,syncedTxt,wpSyncedTxt,bloggerSyncedTxt,kwTxt,ghTree,feederTree,deployInfo,auditJson,wpAuditJson] = await Promise.all([
+  const [logTxt,syncedTxt,wpSyncedTxt,bloggerSyncedTxt,kwTxt,ghTree,feederTree,deployInfo,auditJson,wpAuditJson,toolSyndState] = await Promise.all([
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/syndication_log.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/synced-posts.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/wordpress-synced-posts.txt`),
@@ -633,6 +689,7 @@ async function loadDashboard(){
     fjson(`${GITHUB_API}/repos/${GITHUB_OWNER}/${TWTF_REPO}/commits/main`,{headers:ghHdrs()}),
     fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/backlink_audit.json`),
     fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/wordpress_backlink_audit.json`),
+    fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/tool_syndication_state.json`),
   ]);
 
   const logMap     = parseLog(logTxt);
@@ -658,6 +715,7 @@ async function loadDashboard(){
   renderMatrix({sortedSlugs,logMap,feederSet,postDateMap});
   renderPostQueue({allSlugs,syncedSet,wpSyncedSet,logMap,kwLines});
   renderBottom({allSlugs,syncedSet,wpSyncedSet,bloggerSyncedSet,kwLines,feederFiles,deployInfo,logMap});
+  renderToolSyndication(toolSyndState);
 
   document.getElementById("last-refreshed").textContent="Refreshed: "+new Date().toLocaleTimeString();
 
