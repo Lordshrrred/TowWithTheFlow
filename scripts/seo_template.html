@@ -215,6 +215,18 @@
       <div class="skeleton stat-skel"></div>
     </div>
 
+    <!-- Decision guidance -->
+    <div class="two-col split-5050">
+      <div class="chart-card">
+        <h3>Keyword Generation <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— adaptive runway gate</span></h3>
+        <div id="keyword-decision"><div class="skeleton" style="height:120px;"></div></div>
+      </div>
+      <div class="chart-card">
+        <h3>Backlink Throughput <span style="font-size:0.72rem;color:var(--text-muted);font-weight:400;">— catch-up vs. growth</span></h3>
+        <div id="backlink-decision"><div class="skeleton" style="height:120px;"></div></div>
+      </div>
+    </div>
+
     <!-- Clusters + Backlinks -->
     <div class="two-col split-5050">
       <div class="chart-card">
@@ -337,6 +349,8 @@ function timeAgo(iso) {
 function renderStats(d) {
   const kw = d.keywords || {};
   const intel = d.intelligence || {};
+  const strategy = d.strategy || {};
+  const keyword = strategy.keywordGeneration || {};
   const gscRows = intel.request_counts?.gsc ?? 0;
   const gaRows = intel.request_counts?.ga4 ?? 0;
   const ctrCount = intel.ctr_opportunity_count ?? 0;
@@ -350,7 +364,7 @@ function renderStats(d) {
     <div class="stat-card">
       <div class="stat-label">Pending Keywords</div>
       <div class="stat-value">${kw.pending ?? 0}</div>
-      <div class="stat-sub">not yet turned into a post</div>
+      <div class="stat-sub">≈${keyword.estimatedDaysRemaining ?? "?"} publishing days</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Search Console</div>
@@ -363,6 +377,42 @@ function renderStats(d) {
       <div class="stat-sub">${ctrCount} CTR opportunities · ${topActions} top actions</div>
     </div>
   `;
+}
+
+function renderDecisionCards(d) {
+  const strategy = d.strategy || {};
+  const keyword = strategy.keywordGeneration || {};
+  const backlinks = strategy.backlinks || {};
+  const kwPaused = keyword.status === "paused";
+  const kwMark = kwPaused ? "✓" : "!";
+  const kwTitle = kwPaused ? "Keyword generation paused" : "Keyword generation running";
+  document.getElementById("keyword-decision").innerHTML = `
+    <div class="intel-list">
+      <div class="intel-item">
+        <div class="intel-title">${kwMark} ${kwTitle}</div>
+        <div class="intel-meta">${keyword.currentInventory ?? "?"} pending keywords · ≈${keyword.estimatedDaysRemaining ?? "?"} publishing days remaining</div>
+        <div class="intel-meta" style="margin-top:0.35rem;">Reason: ${esc(keyword.reason || "No adaptive keyword status yet.")}</div>
+        <div class="intel-meta" style="margin-top:0.35rem;">Curated expansion: ${esc((strategy.curatedExpansion || {}).script || "supported")}</div>
+      </div>
+    </div>`;
+
+  let title = "Backlinks need data";
+  if (backlinks.backlogUnits === 0) title = "✓ Backlinks in maintenance mode";
+  else if ((backlinks.netBacklinkUnitsPerDay ?? 0) < 0) title = "✓ Backlinks catching up";
+  else if ((backlinks.netBacklinkUnitsPerDay ?? 0) === 0) title = "Backlinks keeping pace";
+  else title = "! Backlog growing";
+  const catchup = backlinks.estimatedCatchUpDays === "maintenance"
+    ? "maintenance"
+    : backlinks.estimatedCatchUpDays == null ? "not catching up yet" : `≈${backlinks.estimatedCatchUpDays} days`;
+  document.getElementById("backlink-decision").innerHTML = `
+    <div class="intel-list">
+      <div class="intel-item">
+        <div class="intel-title">${title}</div>
+        <div class="intel-meta">Backlog: ${backlinks.backlogPosts ?? "?"} posts / ${backlinks.backlogUnits ?? "?"} platform links</div>
+        <div class="intel-meta" style="margin-top:0.35rem;">Completed/day: ${backlinks.completedPerDay ?? "?"} · New/day: ${backlinks.newBacklinkUnitsPerDay ?? "?"} platform links · Net: ${backlinks.netBacklinkUnitsPerDay ?? "?"}/day</div>
+        <div class="intel-meta" style="margin-top:0.35rem;">Catch-up: ${catchup}. ${esc(backlinks.reason || "")}</div>
+      </div>
+    </div>`;
 }
 
 // ── Render: keyword clusters ──
@@ -566,6 +616,7 @@ async function loadAll() {
   try {
     const d = await fetchData();
     renderStats(d);
+    renderDecisionCards(d);
     renderClusters(d);
     renderContentClusters(d);
     renderBacklinks(d);

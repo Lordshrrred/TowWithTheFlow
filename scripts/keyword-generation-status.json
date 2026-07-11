@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-07-11T00:40:19.756908+00:00",
+  "keywordGeneration": {
+    "currentInventory": 479,
+    "liveKeywords": 323,
+    "estimatedDaysRemaining": 119.8,
+    "publishingCadencePerDay": 4.0,
+    "pauseThresholdDays": 90.0,
+    "resumeThresholdDays": 45.0,
+    "status": "paused",
+    "reason": "119.8 publishing days of inventory remain, above the 90 day pause threshold."
+  },
+  "backlinks": {
+    "backlogPosts": 74,
+    "backlogUnits": 78,
+    "requiredPlatformsPerPost": 5,
+    "generatedAt": "2026-07-10T21:32:08.184655+00:00",
+    "source": "backlink_audit.json",
+    "completedPerDay": 20.8,
+    "newPostsPerDay": 4.0,
+    "newBacklinkUnitsPerDay": 20.0,
+    "netBacklinkUnitsPerDay": -0.8,
+    "estimatedCatchUpDays": 97.5,
+    "reason": "Backlinks are catching up by 0.8 platform links/day."
+  },
+  "curatedExpansion": {
+    "supported": true,
+    "script": "scripts/import_curated_keywords.py",
+    "reason": "Use curated lists for new clusters, tools, products, competitor reviews, and intentional trend discoveries instead of endless generic expansion."
+  }
+}

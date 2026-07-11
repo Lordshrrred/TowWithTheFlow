@@ -18,6 +18,7 @@ from pathlib import Path
 
 from generate_post import load_keywords, is_local
 from clusters import cluster_label
+from seo_strategy_status import build_status
 
 ROOT = Path(__file__).parent.parent
 SCRIPTS_DIR = Path(__file__).parent
@@ -185,6 +186,7 @@ def main():
         "competitive_research": latest_competitive_research_data(),
         "backlinks": backlink_health(),
         "intelligence": seo_intelligence_summary(),
+        "strategy": build_status(),
     }
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -198,6 +200,10 @@ def main():
     print(f"  content clusters: {len(payload['content_clusters'])}")
     print(f"  manual competitive research: {payload['competitive_research']['checked']} keywords, report_date={payload['competitive_research']['report_date']}")
     print(f"  seo intelligence: {len(payload['intelligence']['top_actions'])} top actions")
+    print(
+        f"  strategy: keyword generation {payload['strategy']['keywordGeneration']['status']}, "
+        f"{payload['strategy']['keywordGeneration']['estimatedDaysRemaining']} days runway"
+    )
 
 
 if __name__ == "__main__":

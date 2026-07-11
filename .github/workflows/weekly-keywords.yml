@@ -35,6 +35,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/keyword_research.py
 
+      - name: Rebuild SEO dashboard data
+        run: python scripts/build_seo_data.py
+
       - name: Configure git
         run: |
           git config user.name "github-actions[bot]"
@@ -42,6 +45,6 @@ jobs:
 
       - name: Commit and push
         run: |
-          git add scripts/keywords.txt scripts/syndication_log.txt || true
+          git add scripts/keywords.txt scripts/syndication_log.txt scripts/keyword-generation-status.json static/data/seo.json || true
           git diff --staged --quiet || git commit -m "Auto: keyword research $(date +%Y-%m-%d)"
           git push

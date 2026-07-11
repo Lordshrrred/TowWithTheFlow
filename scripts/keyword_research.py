@@ -16,14 +16,12 @@ from dotenv import load_dotenv
 import anthropic
 
 from claude_utils import make_client, create_message
+from seo_strategy_status import write_status
 
 ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-if not ANTHROPIC_API_KEY:
-    print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
-    sys.exit(1)
 
 KEYWORDS_FILE = Path(__file__).parent / "keywords.txt"
 LOG_FILE = Path(__file__).parent / "syndication_log.txt"
@@ -87,6 +85,21 @@ def log(message: str):
 
 
 def main():
+    status = write_status()
+    keyword_status = status["keywordGeneration"]
+    if keyword_status["status"] == "paused":
+        log(
+            "Adaptive keyword generation skipped: "
+            f"{keyword_status['currentInventory']} pending keywords, "
+            f"{keyword_status['estimatedDaysRemaining']} publishing days remaining. "
+            f"{keyword_status['reason']}"
+        )
+        return
+
+    if not ANTHROPIC_API_KEY:
+        print("ERROR: ANTHROPIC_API_KEY not set", file=sys.stderr)
+        sys.exit(1)
+
     existing = load_existing_keywords()
     log(f"Loaded {len(existing)} existing keywords")
 

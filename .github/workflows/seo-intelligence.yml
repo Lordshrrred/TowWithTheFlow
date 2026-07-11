@@ -56,7 +56,7 @@ jobs:
 
       - name: Commit report and dashboard summary
         run: |
-          git add reports/seo-intelligence-latest.md reports/seo-intelligence-latest.json reports/seo-intelligence-*.md reports/seo-intelligence-*.json static/data/seo.json
+          git add reports/seo-intelligence-latest.md reports/seo-intelligence-latest.json reports/seo-intelligence-*.md reports/seo-intelligence-*.json static/data/seo.json scripts/keyword-generation-status.json
           if git diff --staged --quiet; then
             echo "No SEO intelligence changes"
           else
