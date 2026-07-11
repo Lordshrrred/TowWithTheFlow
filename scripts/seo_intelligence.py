@@ -4,7 +4,7 @@ Tow With The Flow — low-cost SEO intelligence report.
 
 Uses Google Search Console and GA4 Data API data when credentials are available,
 then blends in existing TWTF intent-map, backlink, syndication, and authority
-backlog evidence. Normal runs make no paid SERP or LLM calls.
+backlog evidence. Normal runs make no paid LLM, web-search, or rank-check calls.
 
 Outputs:
   reports/seo-intelligence-latest.md
@@ -612,7 +612,7 @@ def top_actions(classified: dict[str, Any], authority: list[dict[str, Any]], can
             {
                 "title": f"Rewrite title/meta for CTR: {r['path']}",
                 "reason": f"Position {r['position']:.1f}, {r['impressions']} impressions, CTR {pct(r['ctr'])}.",
-                "next_action": "Improve SERP promise without changing the URL.",
+                "next_action": "Improve the Search Console title/meta promise without changing the URL.",
             }
         )
     if cannibal:
@@ -672,7 +672,7 @@ def build_markdown(payload: dict[str, Any]) -> str:
     for status in payload["statuses"]:
         cache_note = " from private cache" if status.get("cached") else ""
         lines.append(f"- **{status['source']}**: {status['status']}{cache_note}. {status['message']} Rows: {status.get('rows', 0)}.")
-    lines.append(f"- **Normal-run API requests**: Search Console {payload['request_counts']['gsc']}; GA4 {payload['request_counts']['ga4']}; paid SERP/LLM/web-search 0.")
+    lines.append(f"- **Normal-run API requests**: Search Console {payload['request_counts']['gsc']}; GA4 {payload['request_counts']['ga4']}; paid LLM/web-search/rank-check 0.")
     lines.append("")
 
     lines.append("## 2. Top Organic Landing Pages")
@@ -750,7 +750,7 @@ def build_markdown(payload: dict[str, Any]) -> str:
     lines.append("- GA4 organic behavior is grouped by landing page and avoids user-level data.")
     lines.append("- Backlink and syndication data show operational distribution, not organic search value by themselves.")
     lines.append("- Intent-map overlap groups remain recommendations until Search Console confirms split query ownership.")
-    lines.append("- No paid SERP, Claude web-search, or rank-check calls are made by this report.")
+    lines.append("- No paid Claude web-search, LLM reasoning, or rank-check calls are made by this report.")
     lines.append("")
 
     return "\n".join(lines)
@@ -776,8 +776,13 @@ def compact_summary(payload: dict[str, Any]) -> dict[str, Any]:
         "statuses": payload["statuses"],
         "request_counts": payload["request_counts"],
         "top_actions": payload["top_actions"][:3],
+        "top_query_count": len(payload["top_queries"]),
+        "top_landing_page_count": len(payload["top_landing_pages"]),
         "near_page_one_count": len(payload["classifications"]["near_page_one"]),
         "ctr_opportunity_count": len(payload["classifications"]["ctr_opportunities"]),
+        "winning_page_count": len(payload["classifications"]["engagement_winners"]),
+        "declining_page_count": len(payload["classifications"]["weak_engagement"]),
+        "impression_growth_count": len(payload["city_opportunities"]) + len(payload["authority_asset_opportunities"]),
         "cannibalization_count": len(payload["cannibalization"]),
         "tool_engine": payload["tool_engine"],
         "report_path": "reports/seo-intelligence-latest.md",
@@ -855,7 +860,7 @@ def main() -> int:
 
     print(f"Wrote {latest_md.relative_to(ROOT)}")
     print(f"Wrote {latest_json.relative_to(ROOT)}")
-    print(f"API requests: Search Console {REQUEST_COUNT['gsc']}, GA4 {REQUEST_COUNT['ga4']}, paid SERP/LLM/web-search 0")
+    print(f"API requests: Search Console {REQUEST_COUNT['gsc']}, GA4 {REQUEST_COUNT['ga4']}, paid LLM/web-search/rank-check 0")
     for status in payload["statuses"]:
         print(f"{status['source']}: {status['status']} ({status.get('rows', 0)} rows)")
     return 0

@@ -2,7 +2,7 @@
 """
 Tow With The Flow — SEO Dashboard Data Builder
 Aggregates data that's already being collected by other scripts (keywords.txt,
-the optional manual SERP intelligence report, the backlink audit, and the
+optional manual competitive research, the backlink audit, and the
 Search Console/GA4 intelligence summary) into a single JSON file the SEO
 dashboard tab reads. Makes no API calls of its own.
 
@@ -80,9 +80,9 @@ def keyword_clusters() -> tuple[dict, list[dict]]:
     return summary, next_targets
 
 
-def latest_serp_data() -> dict:
-    """Structured sidecar written by serp_intelligence.py, if a check has run yet."""
-    path = REPORTS_DIR / "serp-intelligence-latest.json"
+def latest_competitive_research_data() -> dict:
+    """Structured manual competitive-research sidecar, if one has run yet."""
+    path = REPORTS_DIR / "competitive-research-latest.json"
     if not path.exists():
         return {
             "report_date": None,
@@ -182,7 +182,7 @@ def main():
         "keywords": keywords_summary,
         "next_targets": next_targets,
         "content_clusters": content_clusters(),
-        "serp": latest_serp_data(),
+        "competitive_research": latest_competitive_research_data(),
         "backlinks": backlink_health(),
         "intelligence": seo_intelligence_summary(),
     }
@@ -196,7 +196,7 @@ def main():
     )
     print(f"  next targets: {len(next_targets)}")
     print(f"  content clusters: {len(payload['content_clusters'])}")
-    print(f"  serp check: {payload['serp']['checked']} keywords, report_date={payload['serp']['report_date']}")
+    print(f"  manual competitive research: {payload['competitive_research']['checked']} keywords, report_date={payload['competitive_research']['report_date']}")
     print(f"  seo intelligence: {len(payload['intelligence']['top_actions'])} top actions")
 
 

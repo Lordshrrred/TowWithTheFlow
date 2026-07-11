@@ -35,8 +35,8 @@ The user is authenticated via keyring (account: Lordshrrred). This works from th
 | `scripts/build_dashboard.py` | Rebuild the syndication/analytics/SEO dashboards |
 | `scripts/dashboard_template.html` | Syndication dashboard frontend template |
 | `scripts/keyword_research.py` | Discover + score new keyword opportunities (weekly) |
-| `scripts/serp_intelligence.py` | Weekly SERP + AI Overview visibility check via Claude web search |
-| `scripts/build_seo_data.py` | Aggregate keywords/SERP/backlink data into `static/data/seo.json` for the SEO dashboard tab |
+| `scripts/competitive_research.py` | Manual competitive research via Claude web search; never scheduled |
+| `scripts/build_seo_data.py` | Aggregate keywords/Search Console/GA4/backlink/manual research data into `static/data/seo.json` for the SEO dashboard tab |
 | `scripts/clusters.py` | Content-cluster taxonomy definitions (keyword/title -> cluster slug) |
 | `scripts/assign_clusters.py` | Backfills the `clusters:` frontmatter field on existing posts from clusters.py |
 | `scripts/optimize_images.py` | One-time (re-runnable) pass to resize/recompress everything under static/images/ |

@@ -6,7 +6,7 @@ Generated: 2026-07-10T20:17:05.267105+00:00
 
 - **search_console**: ok from private cache. Loaded Search Console data from private cache. Rows: 0.
 - **ga4**: ok from private cache. Loaded GA4 organic landing-page data from private cache. Rows: 56.
-- **Normal-run API requests**: Search Console 0; GA4 0; paid SERP/LLM/web-search 0.
+- **Normal-run API requests**: Search Console 0; GA4 0; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
 No Search Console landing-page data available.
@@ -47,4 +47,4 @@ No evidence-ranked actions yet — Search Console and GA4 are connected, but cur
 - GA4 organic behavior is grouped by landing page and avoids user-level data.
 - Backlink and syndication data show operational distribution, not organic search value by themselves.
 - Intent-map overlap groups remain recommendations until Search Console confirms split query ownership.
-- No paid SERP, Claude web-search, or rank-check calls are made by this report.
+- No paid Claude web-search, LLM reasoning, or rank-check calls are made by this report.

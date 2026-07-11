@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """
-Tow With The Flow — Weekly SERP Intelligence + AI Search Visibility Checker
-For the 10 highest-priority local SEO / pain-point keywords that already have
-a live post, uses Claude with web search to see who's ranking, what their
-angle and content gaps are, and whether towwiththeflow.com shows up in
-organic results or an AI Overview. Compiles the findings into a markdown
-report under /reports.
+Tow With The Flow — Competitive Research (Manual)
+For an explicit, bounded query list, uses Claude with web search to inspect
+competitor pages, their angles and content gaps, and whether towwiththeflow.com
+appears in organic results or an AI Overview. This is not routine SEO
+Intelligence; routine SEO Intelligence uses Search Console and GA4.
 """
 
 from __future__ import annotations
@@ -28,12 +27,12 @@ ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-ENABLE_PAID_SERP_RESEARCH = os.getenv("ENABLE_PAID_SERP_RESEARCH", "").strip().lower() == "true"
+ENABLE_PAID_COMPETITIVE_RESEARCH = os.getenv("ENABLE_PAID_COMPETITIVE_RESEARCH", "").strip().lower() == "true"
 
 LOG_FILE = Path(__file__).parent / "syndication_log.txt"
 REPORTS_DIR = ROOT / "reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-CACHE_DIR = ROOT / ".cache" / "serp-intelligence"
+CACHE_DIR = ROOT / ".cache" / "competitive-research"
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 BASE_URL = "https://towwiththeflow.com"
@@ -57,7 +56,7 @@ If fewer than 3 organic results exist, return as many as you found. If no AI Ove
 
 def log(message: str):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    entry = f"[{timestamp}] SERP_INTELLIGENCE: {message}\n"
+    entry = f"[{timestamp}] COMPETITIVE_RESEARCH: {message}\n"
     print(entry, end='')
     with LOG_FILE.open('a', encoding='utf-8') as f:
         f.write(entry)
@@ -148,7 +147,7 @@ def extract_json(content_blocks) -> dict | None:
 
 
 def check_keyword(client: anthropic.Anthropic, keyword: str) -> dict | None:
-    """Run one web-search-grounded SERP check for a keyword. Returns the
+    """Run one web-search-grounded competitive check for a keyword. Returns the
     parsed result dict, or None if the call or the response was unusable."""
     messages = [{"role": "user", "content": f"Search for: \"{keyword}\""}]
     tools = [{"type": "web_search_20260209", "name": "web_search"}]
@@ -232,7 +231,7 @@ def format_gaps(gaps) -> str:
 
 
 def build_report(report_date: str, results: list[dict], skipped: list[str]) -> str:
-    lines = [f"# SERP Intelligence + AI Search Visibility Report — {report_date}", ""]
+    lines = [f"# Competitive Research (Manual) — {report_date}", ""]
 
     present_count = sum(1 for r in results if r["twtf_present"])
     ai_mention_count = sum(1 for r in results if r["ai_overview_mentions_twtf"])
@@ -285,28 +284,28 @@ def build_report(report_date: str, results: list[dict], skipped: list[str]) -> s
 def main():
     parser = argparse.ArgumentParser(
         description=(
-            "Explicit opt-in SERP/AI visibility research. This uses Claude web search "
-            "and should be run only for bounded manual research, not scheduled tracking."
+            "Explicit opt-in competitive research. This uses Claude web search "
+            "and should be run only for bounded manual research, not SEO Intelligence or scheduled tracking."
         )
     )
     parser.add_argument("--query", action="append", help="Exact query to research. Can be passed multiple times.")
     parser.add_argument("--top-keywords", action="store_true", help="Research the highest-priority live keywords from keywords.txt.")
     parser.add_argument("--limit", type=int, default=KEYWORD_LIMIT, help="Maximum top keywords when --top-keywords is used.")
     parser.add_argument("--max-cost-usd", type=float, default=1.00, help="Operator-declared cost cap for the manual run.")
-    parser.add_argument("--cache-hours", type=int, default=168, help="Reuse private cached SERP research for this many hours.")
-    parser.add_argument("--force-refresh", action="store_true", help="Ignore private SERP cache.")
+    parser.add_argument("--cache-hours", type=int, default=168, help="Reuse private cached competitive research for this many hours.")
+    parser.add_argument("--force-refresh", action="store_true", help="Ignore private competitive research cache.")
     args = parser.parse_args()
 
     if not args.query and not args.top_keywords:
         print(
-            "No SERP research run. Pass --query 'exact keyword' or --top-keywords for an explicit, bounded manual check.",
+            "No competitive research run. Pass --query 'exact keyword' or --top-keywords for an explicit, bounded manual check.",
             file=sys.stderr,
         )
         return
 
-    if not ENABLE_PAID_SERP_RESEARCH:
+    if not ENABLE_PAID_COMPETITIVE_RESEARCH:
         print(
-            "Paid SERP research is disabled. Set ENABLE_PAID_SERP_RESEARCH=true "
+            "Paid competitive research is disabled. Set ENABLE_PAID_COMPETITIVE_RESEARCH=true "
             "for a bounded manual run; recurring SEO intelligence should use "
             "Search Console/GA4 instead.",
             file=sys.stderr,
@@ -366,7 +365,7 @@ def main():
 
     report_date = date.today().isoformat()
     report_md = build_report(report_date, results, skipped)
-    report_path = REPORTS_DIR / f"serp-intelligence-{report_date}.md"
+    report_path = REPORTS_DIR / f"competitive-research-{report_date}.md"
     report_path.write_text(report_md, encoding="utf-8")
 
     # Structured sidecar for the SEO dashboard (avoids re-parsing markdown).
@@ -378,8 +377,8 @@ def main():
         "skipped": skipped,
     }
     payload_json = json.dumps(payload, indent=2)
-    (REPORTS_DIR / f"serp-intelligence-{report_date}.json").write_text(payload_json, encoding="utf-8")
-    (REPORTS_DIR / "serp-intelligence-latest.json").write_text(payload_json, encoding="utf-8")
+    (REPORTS_DIR / f"competitive-research-{report_date}.json").write_text(payload_json, encoding="utf-8")
+    (REPORTS_DIR / "competitive-research-latest.json").write_text(payload_json, encoding="utf-8")
 
     log(
         f"Report saved: reports/{report_path.name} | "

@@ -7,7 +7,7 @@ Ranking method:
 - Favor scenarios where a stressed driver needs an answer fast.
 - De-prioritize weak modifier clones that only add a season, time of day, or random city unless the modifier changes the answer meaningfully.
 
-These rankings are inferred from the current backlog, live SERP makeup, Google suggestion depth, and competition patterns. They are not exact Google Ads search-volume numbers.
+These rankings are inferred from the current backlog, manual competitive research, Google suggestion depth, and competition patterns. They are not exact Google Ads search-volume numbers.
 
 ## Main Site First
 

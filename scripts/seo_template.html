@@ -136,11 +136,11 @@
     .bar-fill.muted { background: var(--surface3); }
     .bar-val { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); min-width: 90px; text-align: right; white-space: nowrap; }
 
-    /* ── SERP results table ── */
-    .serp-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
-    .serp-table th { text-align: left; padding: 0.5rem 0.6rem; color: var(--text-muted); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid var(--border); }
-    .serp-table td { padding: 0.55rem 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--text); vertical-align: top; }
-    .serp-table tr:hover td { background: var(--amber-glow); }
+    /* ── Competitive research table ── */
+    .research-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .research-table th { text-align: left; padding: 0.5rem 0.6rem; color: var(--text-muted); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid var(--border); }
+    .research-table td { padding: 0.55rem 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--text); vertical-align: top; }
+    .research-table tr:hover td { background: var(--amber-glow); }
     .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; }
     .badge.yes { background: rgba(57,255,20,0.12); color: var(--green); }
     .badge.no { background: rgba(255,68,68,0.1); color: var(--red); }
@@ -239,10 +239,10 @@
       <div id="content-clusters-list"><div class="skeleton" style="height:220px;"></div></div>
     </div>
 
-    <!-- What we're ranking for -->
+    <!-- Manual competitive research -->
     <div class="chart-card" style="margin-bottom:1.5rem;">
-      <h3>What We're Ranking For <span id="serp-date-label" style="font-size:0.72rem;color:var(--text-muted);font-weight:400;"></span></h3>
-      <div id="serp-results-wrap"><div class="skeleton" style="height:200px;"></div></div>
+      <h3>Competitive Research (Manual) <span id="research-date-label" style="font-size:0.72rem;color:var(--text-muted);font-weight:400;"></span></h3>
+      <div id="research-results-wrap"><div class="skeleton" style="height:200px;"></div></div>
     </div>
 
     <!-- What we're trying to rank for next -->
@@ -336,9 +336,11 @@ function timeAgo(iso) {
 // ── Render: stat cards ──
 function renderStats(d) {
   const kw = d.keywords || {};
-  const serp = d.serp || {};
-  const visLabel = serp.checked ? `${serp.present_count}/${serp.checked}` : "—";
-  const aiLabel = serp.checked ? `${serp.ai_overview_count}/${serp.checked}` : "—";
+  const intel = d.intelligence || {};
+  const gscRows = intel.request_counts?.gsc ?? 0;
+  const gaRows = intel.request_counts?.ga4 ?? 0;
+  const ctrCount = intel.ctr_opportunity_count ?? 0;
+  const topActions = intel.top_actions_count ?? 0;
   document.getElementById("stat-row").innerHTML = `
     <div class="stat-card">
       <div class="stat-label">Live Posts</div>
@@ -351,14 +353,14 @@ function renderStats(d) {
       <div class="stat-sub">not yet turned into a post</div>
     </div>
     <div class="stat-card">
-      <div class="stat-label">Ranking Visibility</div>
-      <div class="stat-value">${visLabel}</div>
-      <div class="stat-sub">checked keywords where we show up in organic results</div>
+      <div class="stat-label">Search Console</div>
+      <div class="stat-value">${gscRows}</div>
+      <div class="stat-sub">rows in latest intelligence run</div>
     </div>
     <div class="stat-card">
-      <div class="stat-label">AI Overview Mentions</div>
-      <div class="stat-value">${aiLabel}</div>
-      <div class="stat-sub">checked keywords cited in an AI Overview</div>
+      <div class="stat-label">GA4</div>
+      <div class="stat-value">${gaRows}</div>
+      <div class="stat-sub">${ctrCount} CTR opportunities · ${topActions} top actions</div>
     </div>
   `;
 }
@@ -438,7 +440,15 @@ function renderIntelligence(d) {
         return `<span style="margin-right:1rem;"><span class="status-dot ${cls}"></span>${esc(s.source)}: ${esc(s.status)}</span>`;
       }).join("")
     : '<span style="color:var(--text-muted);">No SEO intelligence report yet.</span>';
-  const counts = `${intel.near_page_one_count ?? 0} near-page-one · ${intel.ctr_opportunity_count ?? 0} CTR · ${intel.cannibalization_count ?? 0} cannibalization`;
+  const counts = [
+    `Top queries ${intel.top_query_count ?? 0}`,
+    `Top opportunities ${actions.length}`,
+    `CTR opportunities ${intel.ctr_opportunity_count ?? 0}`,
+    `Impression growth ${intel.impression_growth_count ?? 0}`,
+    `Winning pages ${intel.winning_page_count ?? 0}`,
+    `Declining pages ${intel.declining_page_count ?? 0}`,
+    `Cannibalization ${intel.cannibalization_count ?? 0}`
+  ].join(" · ");
   const reportLink = intel.report_path
     ? `<a class="kw-post-link" href="https://github.com/Lordshrrred/TowWithTheFlow/blob/main/${esc(intel.report_path)}" target="_blank" rel="noopener">open latest report</a>`
     : "";
@@ -483,20 +493,20 @@ function renderIntelligence(d) {
     </div>`;
 }
 
-// ── Render: SERP results ──
-function renderSerp(d) {
-  const serp = d.serp || {};
-  const label = document.getElementById("serp-date-label");
-  const wrap = document.getElementById("serp-results-wrap");
+// ── Render: manual competitive research ──
+function renderCompetitiveResearch(d) {
+  const research = d.competitive_research || {};
+  const label = document.getElementById("research-date-label");
+  const wrap = document.getElementById("research-results-wrap");
 
-  if (!serp.checked) {
+  if (!research.checked) {
     label.textContent = "";
-    wrap.innerHTML = '<div class="empty-msg">No SERP check has run yet. Paid Claude web-search checks are manual-only; recurring SEO intelligence now uses Search Console and GA4.</div>';
+    wrap.innerHTML = '<div class="empty-msg">No manual competitive research has run. Primary SEO Intelligence uses Search Console and GA4; paid Claude web-search is not part of routine SEO reporting.</div>';
     return;
   }
 
-  label.textContent = `— checked ${serp.report_date} · ${serp.skipped} skipped`;
-  const rows = serp.results.map(r => {
+  label.textContent = `— manual research ${research.report_date} · ${research.skipped} skipped`;
+  const rows = research.results.map(r => {
     const top = (r.top3 && r.top3[0]) || null;
     const gaps = top ? (Array.isArray(top.gaps) ? top.gaps.join("; ") : top.gaps) : "";
     const postLink = r.our_post_url
@@ -514,12 +524,12 @@ function renderSerp(d) {
 
   wrap.innerHTML = `
     <div style="overflow-x:auto;">
-      <table class="serp-table">
-        <thead><tr><th>Keyword</th><th>We rank?</th><th>AI Overview</th><th>Top competitor angle</th><th>Their gaps</th></tr></thead>
+      <table class="research-table">
+        <thead><tr><th>Keyword</th><th>TWTF visible?</th><th>AI Overview</th><th>Top competitor angle</th><th>Their gaps</th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
     </div>
-    <div class="footnote">Full per-keyword breakdown (all 3 competitors, not just the top one) is in <code>reports/serp-intelligence-${esc(serp.report_date)}.md</code> in the repo.</div>
+    <div class="footnote">Manual competitive research artifact. Routine SEO Intelligence comes from Search Console and GA4, not paid web-search.</div>
   `;
 }
 
@@ -560,7 +570,7 @@ async function loadAll() {
     renderContentClusters(d);
     renderBacklinks(d);
     renderIntelligence(d);
-    renderSerp(d);
+    renderCompetitiveResearch(d);
     renderNextTargets(d);
     updateTimestamp(d);
   } catch (err) {

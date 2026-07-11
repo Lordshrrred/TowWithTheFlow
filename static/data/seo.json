@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T20:17:06.018864+00:00",
+  "generated_at": "2026-07-11T00:17:12.082406+00:00",
   "keywords": {
     "total": 802,
     "live": 323,
@@ -117,7 +117,7 @@
       "count": 4
     }
   ],
-  "serp": {
+  "competitive_research": {
     "report_date": null,
     "checked": 0,
     "skipped": 0,
@@ -126,34 +126,36 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-10T18:05:52.138095+00:00",
+    "generated_at": "2026-07-10T21:32:08.184655+00:00",
     "platforms": {
       "blog": {
-        "checked": 299,
-        "verified": 299
+        "checked": 300,
+        "verified": 300
       },
       "dev": {
-        "checked": 228,
-        "verified": 228
+        "checked": 229,
+        "verified": 229
       },
       "feeder": {
+        "checked": 297,
+        "verified": 297
+      },
+      "tumblr": {
         "checked": 296,
         "verified": 296
       },
-      "tumblr": {
-        "checked": 295,
-        "verified": 295
-      },
       "wordpress": {
-        "checked": 299,
-        "verified": 299
+        "checked": 300,
+        "verified": 300
       }
     }
   },
   "intelligence": {
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
-    "generated_at": "2026-07-10T20:17:05.267105+00:00",
+    "declining_page_count": 0,
+    "generated_at": "2026-07-11T00:17:11.653227+00:00",
+    "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
     "request_counts": {
@@ -162,20 +164,29 @@
     },
     "statuses": [
       {
-        "cached": true,
-        "message": "Loaded Search Console data from private cache.",
+        "cached": false,
+        "message": "No Search Console service-account JSON env var found.",
         "rows": 0,
         "source": "search_console",
-        "status": "ok"
+        "status": "missing_credentials"
       },
       {
-        "cached": true,
-        "message": "Loaded GA4 organic landing-page data from private cache.",
-        "rows": 56,
+        "cached": false,
+        "message": "GA4 service-account JSON env var not found.",
+        "rows": 0,
         "source": "ga4",
-        "status": "ok"
+        "status": "missing_credentials"
       }
     ],
-    "top_actions": []
+    "tool_engine": {
+      "completes": 0,
+      "completion_rate": null,
+      "opens": 0,
+      "top_events": []
+    },
+    "top_actions": [],
+    "top_landing_page_count": 0,
+    "top_query_count": 0,
+    "winning_page_count": 0
   }
 }

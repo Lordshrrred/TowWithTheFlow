@@ -12,7 +12,7 @@ Normal runs use:
 - `reports/intent-map.json`
 - `data/authority_backlog.json`
 
-Normal runs do not call Claude, web search, paid SERP APIs, or rank-checking
+Normal runs do not call Claude, web search, paid competitive-research APIs, or rank-checking
 vendors.
 
 ## Command
@@ -69,17 +69,18 @@ classes, and top recommended actions. It does not contain user-level data,
 precise location, vehicle identifiers, free-text personal details, or full
 calculator input payloads.
 
-## Optional SERP Research
+## Competitive Research (Manual)
 
-`scripts/serp_intelligence.py` is manual-only. It uses Claude web search and is
-for bounded competitor/SERP research, not scheduled rank tracking.
+`scripts/competitive_research.py` is manual-only. It uses Claude web search and is
+for bounded competitor research, not SEO Intelligence and not scheduled rank
+tracking.
 
 ```bash
-python3 scripts/serp_intelligence.py --query "tow truck cost denver" --max-cost-usd 1.00
+python3 scripts/competitive_research.py --query "tow truck cost denver" --max-cost-usd 1.00
 ```
 
-The GitHub workflow requires an explicit query. There is no scheduled automatic
-SERP check.
+The GitHub workflow requires an explicit query and confirmation. There is no
+scheduled automatic competitive-research check.
 
 ## Tool Engine Event Plan
 
