@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T10:07:30.141255+00:00",
+  "generated_at": "2026-07-12T14:00:50.920360+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2608,6 +2608,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/30/check-engine-light-flashing-can-i-drive-home/",
+        "verified": true
+      }
+    },
+    "check-engine-light-flashing-car-shaking-emergency": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/check-engine-light-flashing-and-car.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/check-engine-light-flashing-and-car-shaking-what-to-do-right-now-quick-guide-1fel",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/check-engine-light-flashing-car-shaking-emergency-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/821932909653000192/check-engine-light-flashing-car-shaking-emergency",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/12/check-engine-light-flashing-car-shaking-emergency/",
         "verified": true
       }
     },
@@ -7880,24 +7907,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 304,
-      "verified": 304
+      "checked": 305,
+      "verified": 305
     },
     "dev": {
-      "checked": 233,
-      "verified": 233
+      "checked": 234,
+      "verified": 234
     },
     "feeder": {
+      "checked": 302,
+      "verified": 302
+    },
+    "tumblr": {
       "checked": 301,
       "verified": 301
     },
-    "tumblr": {
-      "checked": 300,
-      "verified": 300
-    },
     "wordpress": {
-      "checked": 304,
-      "verified": 304
+      "checked": 305,
+      "verified": 305
     }
   }
 }
