@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-07-13T15:18:30.246745+00:00",
+  "generated_at": "2026-07-13T18:17:22.316825+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/07/13/towing-cost-denver-colorado-after-accident/",
     "https://towwiththeflowyo.wordpress.com/2026/07/13/car-broke-down-on-highway-at-night-safety-tips/",
     "https://towwiththeflowyo.wordpress.com/2026/07/12/towing-cost-atlanta-georgia-no-insurance/",
     "https://towwiththeflowyo.wordpress.com/2026/07/12/locked-keys-assistant/",
@@ -395,7 +396,9 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/13/brake-warning-decision-guide/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/13/car-wont-start-in-parking-garage-who-to-call/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -586,6 +589,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/brake-failure-while-driving-what-to-do-immediately/",
         "verified": true
+      }
+    },
+    "brake-warning-decision-guide": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/13/brake-warning-decision-guide/",
+        "verified": false
       }
     },
     "can-i-drive-with-a-broken-axle": {
@@ -1467,6 +1479,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/24/car-wont-start-in-cold-weather-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-wont-start-in-parking-garage-who-to-call": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-wont-start-in-parking-garage-who-to-call/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/13/car-wont-start-in-parking-garage-who-to-call/",
         "verified": true
       }
     },
@@ -2928,6 +2949,15 @@
         "verified": true
       }
     },
+    "towing-cost-denver-colorado-after-accident": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-denver-colorado-after-accident/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/13/towing-cost-denver-colorado-after-accident/",
+        "verified": true
+      }
+    },
     "towing-cost-denver-colorado-flatbed": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-denver-colorado-flatbed/",
@@ -3958,8 +3988,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 395,
-      "verified": 310
+      "checked": 398,
+      "verified": 312
     }
   }
 }
