@@ -435,8 +435,12 @@ jobs:
 
       - name: Commit WordPress backlog results
         run: |
+          if git diff --quiet -- scripts/wordpress-synced-posts.txt; then
+            echo "No WordPress backlog state changes; leaving log-only output uncommitted"
+            exit 0
+          fi
           git add scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
-          git diff --staged --quiet || git commit -m "Auto: WordPress backlog syndication $(date +%Y-%m-%d)"
+          git commit -m "Auto: WordPress backlog syndication $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
 
@@ -475,8 +479,12 @@ jobs:
 
       - name: Commit Blogger backlog results
         run: |
+          if git diff --quiet -- scripts/blogger-synced-posts.txt; then
+            echo "No Blogger backlog state changes; leaving log-only output uncommitted"
+            exit 0
+          fi
           git add scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
-          git diff --staged --quiet || git commit -m "Auto: Blogger backlog syndication $(date +%Y-%m-%d)"
+          git commit -m "Auto: Blogger backlog syndication $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
 
