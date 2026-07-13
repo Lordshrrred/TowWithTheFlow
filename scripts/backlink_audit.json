@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T11:35:45.585650+00:00",
+  "generated_at": "2026-07-13T15:18:24.595502+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -981,6 +981,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/17/car-broke-down-on-freeway-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-broke-down-on-highway-at-night-safety-tips": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-broke-down-on-highway-at-night.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-broke-down-on-highway-at-night-safety-tips-that-could-save-your-life-explained-3d6a",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-on-highway-at-night-safety-tips-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822028697001443328/car-broke-down-on-highway-at-night-safety-tips",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/13/car-broke-down-on-highway-at-night-safety-tips/",
         "verified": true
       }
     },
@@ -3473,9 +3500,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/how-to-start-a-frozen-car-battery-explained-2eae",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -7987,24 +8014,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 308,
-      "verified": 308
+      "checked": 309,
+      "verified": 309
     },
     "dev": {
       "checked": 237,
       "verified": 237
     },
     "feeder": {
+      "checked": 306,
+      "verified": 306
+    },
+    "tumblr": {
       "checked": 305,
       "verified": 305
     },
-    "tumblr": {
-      "checked": 304,
-      "verified": 304
-    },
     "wordpress": {
-      "checked": 308,
-      "verified": 308
+      "checked": 309,
+      "verified": 309
     }
   }
 }
