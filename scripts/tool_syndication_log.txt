@@ -74,3 +74,10 @@
 [2026-07-13 19:03:44] VERIFY | flat-tire-decision-assistant | wordpress | {'exists': True, 'contextual_link_found': True, 'nofollow_attr': False}
 [2026-07-13 19:03:44] VERIFY | locked-keys-assistant | blogger | {'exists': True, 'contextual_link_found': True, 'nofollow_attr': False}
 [2026-07-13 19:03:44] VERIFY | locked-keys-assistant | wordpress | {'exists': True, 'contextual_link_found': True, 'nofollow_attr': False}
+[2026-07-13 22:17:19] COMPANION | engine-overheating-assistant | blogger | generating model=claude-haiku-4-5-20251001
+[2026-07-13 22:17:30] COMPANION | engine-overheating-assistant | blogger | cached key=9f4fd7934890e5e85008c66b title='How to Safely Pull Over When Your Engine is Overheating'
+[2026-07-13 22:18:24] Eligible tools: 10
+[2026-07-13 22:18:25] OK | engine-overheating-assistant | blogger | https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-to-safely-pull-over-when-your.html
+[2026-07-13 22:18:25] RUN SUMMARY | generated=0 reused=1 deterministic=0 generation_failed=0 generation_skipped=0
+[2026-07-13 22:18:37] Eligible tools: 10
+[2026-07-13 22:18:37] VERIFY | engine-overheating-assistant | blogger | {'exists': True, 'contextual_link_found': True, 'nofollow_attr': False}

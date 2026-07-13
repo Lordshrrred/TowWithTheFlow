@@ -458,6 +458,11 @@
         <div class="bstat-row"><span class="bstat-label">Destinations Pending</span><span class="bstat-value" id="ts-dest-pending">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Backlink-Capable Links Verified</span><span class="bstat-value" id="ts-backlinks-verified">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Social/Distribution Complete</span><span class="bstat-value" id="ts-distribution">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Companion Articles Cached</span><span class="bstat-value" id="ts-companion-cached">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Companion Articles Published</span><span class="bstat-value" id="ts-companion-published">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Claude Generations This Run</span><span class="bstat-value" id="ts-companion-generated">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Cached Articles Reused</span><span class="bstat-value" id="ts-companion-reused">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Estimated Companion Spend</span><span class="bstat-value" id="ts-companion-spend">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Failed Destinations</span><span class="bstat-value" id="ts-failed">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Latest Tool Syndicated</span><span class="bstat-value" id="ts-latest" style="font-size:0.75rem;">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Next In Queue</span><span class="bstat-value" id="ts-next" style="font-size:0.75rem;">—</span></div>
@@ -642,6 +647,8 @@ const TOOL_SYND_PLATFORMS = ["blogger","wordpress","tumblr","devto","feeder"];
 
 function renderToolSyndication(state){
   const pairs = state?.pairs || {};
+  const summary = state?.summary || {};
+  const runStats = summary.run_stats || {};
   const entries = Object.entries(pairs);
   const successes = entries.filter(([,v])=>v.status==="success");
   const failures  = entries.filter(([,v])=>v.status==="failed");
@@ -653,6 +660,13 @@ function renderToolSyndication(state){
   const backlinksVerified = successes.filter(([,v])=>v.link_type==="followed_backlink").length;
   const distributionComplete = successes.filter(([,v])=>v.link_type==="nofollow_distribution"||v.link_type==="canonical_source_copy").length;
   const destPending = (TOOL_SYND_ALL_TOOLS.length*TOOL_SYND_PLATFORMS.length) - entries.length;
+  const companionCached = summary.companion_articles_cached ?? successes.filter(([,v])=>v.companion_cache_key).length;
+  const companionPublished = summary.companion_articles_published ?? successes.filter(([,v])=>v.format==="companion_article").length;
+  const generated = runStats.companion_generated ?? 0;
+  const reused = runStats.companion_reused ?? 0;
+  const inputTokens = runStats.estimated_companion_input_tokens ?? 0;
+  const outputTokens = runStats.estimated_companion_output_tokens ?? 0;
+  const estimatedSpend = ((inputTokens/1000000)*0.80)+((outputTokens/1000000)*4.00);
 
   let latest = "—", latestTime = "";
   for (const [key,v] of successes){
@@ -671,6 +685,11 @@ function renderToolSyndication(state){
   set("ts-dest-pending", String(Math.max(destPending,0)));
   set("ts-backlinks-verified", String(backlinksVerified));
   set("ts-distribution", String(distributionComplete));
+  set("ts-companion-cached", String(companionCached));
+  set("ts-companion-published", String(companionPublished));
+  set("ts-companion-generated", String(generated));
+  set("ts-companion-reused", String(reused));
+  set("ts-companion-spend", estimatedSpend ? `$${estimatedSpend.toFixed(4)}` : "$0.0000");
   set("ts-failed", String(failures.length));
   set("ts-latest", latest);
   set("ts-next", nextTool ? nextTool.replace(/-/g," ") : "All caught up");

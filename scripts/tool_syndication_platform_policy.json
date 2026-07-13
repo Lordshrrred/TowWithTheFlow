@@ -1,0 +1,32 @@
+{
+  "blogger": {
+    "format": "companion_article",
+    "backlink_type": "followed_backlink",
+    "long_form_appropriate": true,
+    "notes": "Public long-form destination with contextual followed links. Use one cached companion article per tool/platform/source version."
+  },
+  "wordpress": {
+    "format": "companion_article",
+    "backlink_type": "followed_backlink",
+    "long_form_appropriate": true,
+    "notes": "Public long-form destination with contextual followed links. Use one cached companion article per tool/platform/source version."
+  },
+  "devto": {
+    "format": "deterministic_teaser",
+    "backlink_type": "nofollow_distribution",
+    "long_form_appropriate": false,
+    "notes": "Supports article bodies and canonical_url, but current tool campaign treats it as distribution. Keep deterministic to avoid low-fit long-form content."
+  },
+  "tumblr": {
+    "format": "deterministic_teaser",
+    "backlink_type": "nofollow_distribution",
+    "long_form_appropriate": false,
+    "notes": "Current Tumblr NPF output is short native copy. Keep lightweight."
+  },
+  "feeder": {
+    "format": "canonical_source_copy",
+    "backlink_type": "canonical_source_copy",
+    "long_form_appropriate": false,
+    "notes": "Preserve source-supporting teaser with canonical pointing to the TWTF tool."
+  }
+}
