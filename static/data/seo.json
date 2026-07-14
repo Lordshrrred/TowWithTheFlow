@@ -1,49 +1,19 @@
 {
-  "generated_at": "2026-07-11T00:40:02.991551+00:00",
+  "generated_at": "2026-07-14T19:17:19.764129+00:00",
   "keywords": {
     "total": 802,
-    "live": 323,
-    "pending": 479,
+    "live": 335,
+    "pending": 467,
     "local": {
-      "live": 132,
-      "pending": 70
+      "live": 124,
+      "pending": 64
     },
     "pain_point": {
-      "live": 191,
-      "pending": 409
+      "live": 211,
+      "pending": 403
     }
   },
   "next_targets": [
-    {
-      "keyword": "fuel pump failed car wont start is it a tow",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "oil pressure light came on while driving pull over or keep going",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "check engine light flashing car shaking emergency",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "ran out of gas on highway what do i do",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down on highway at night safety tips",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont start in parking garage who to call",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "battery dead on highway how to get help fast",
       "score": 8,
@@ -63,18 +33,48 @@
       "keyword": "allstate roadside assistance how many times per year",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "tire blowout on highway steps to take",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does insurance cover towing if car is not driveable",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car overheating on highway should i pull over immediately",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does aaa cover towing after accident or only breakdowns",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont start cold morning dead battery or something else",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down on road trip middle of nowhere what to do",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 145
+      "count": 151
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 40
+      "count": 43
     },
     {
       "slug": "insurance-coverage",
@@ -84,12 +84,12 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 25
+      "count": 27
     },
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 17
+      "count": 18
     },
     {
       "slug": "tire-wheel",
@@ -126,27 +126,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-10T21:32:08.184655+00:00",
+    "generated_at": "2026-07-13T21:18:05.042027+00:00",
     "platforms": {
       "blog": {
-        "checked": 300,
-        "verified": 300
+        "checked": 312,
+        "verified": 312
       },
       "dev": {
-        "checked": 229,
-        "verified": 229
+        "checked": 241,
+        "verified": 241
       },
       "feeder": {
-        "checked": 297,
-        "verified": 297
+        "checked": 309,
+        "verified": 309
       },
       "tumblr": {
-        "checked": 296,
-        "verified": 296
+        "checked": 308,
+        "verified": 308
       },
       "wordpress": {
-        "checked": 300,
-        "verified": 300
+        "checked": 312,
+        "verified": 312
       }
     }
   },
@@ -190,29 +190,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-11T00:40:03.051399+00:00",
+    "generatedAt": "2026-07-14T19:17:19.855372+00:00",
     "keywordGeneration": {
-      "currentInventory": 479,
-      "liveKeywords": 323,
-      "estimatedDaysRemaining": 119.8,
+      "currentInventory": 467,
+      "liveKeywords": 335,
+      "estimatedDaysRemaining": 116.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "119.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "116.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
       "backlogPosts": 74,
       "backlogUnits": 78,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-10T21:32:08.184655+00:00",
+      "generatedAt": "2026-07-13T21:18:05.042027+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.8,
+      "completedPerDay": 19.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": -0.8,
-      "estimatedCatchUpDays": 97.5,
-      "reason": "Backlinks are catching up by 0.8 platform links/day."
+      "netBacklinkUnitsPerDay": 0.9,
+      "estimatedCatchUpDays": null,
+      "reason": "Backlog is growing by 0.9 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,

@@ -9,8 +9,6 @@ import re
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-from generate_post import load_keywords
-
 ROOT = Path(__file__).parent.parent
 SCRIPTS_DIR = Path(__file__).parent
 STATUS_FILE = SCRIPTS_DIR / "keyword-generation-status.json"
@@ -18,6 +16,37 @@ BACKLINK_AUDIT_FILE = SCRIPTS_DIR / "backlink_audit.json"
 LOG_FILE = SCRIPTS_DIR / "syndication_log.txt"
 
 REQUIRED_BACKLINK_PLATFORMS = ["dev", "tumblr", "blog", "wordpress", "feeder"]
+
+
+def parse_keyword_line(line: str) -> tuple[str, int | None, bool] | None:
+    clean = line.strip()
+    if not clean:
+        return None
+    done = False
+    if clean.startswith("# DONE"):
+        done = True
+        clean = clean.replace("# DONE", "", 1).strip()
+    score = None
+    m = re.match(r"^\[(\d+)\]\s*(.+)$", clean)
+    if m:
+        score = int(m.group(1))
+        clean = m.group(2).strip()
+    if not clean:
+        return None
+    return clean, score, done
+
+
+def load_keywords() -> list[tuple[int, str, int | None, bool]]:
+    path = SCRIPTS_DIR / "keywords.txt"
+    if not path.exists():
+        return []
+    rows = []
+    for i, line in enumerate(path.read_text(encoding="utf-8").splitlines()):
+        parsed = parse_keyword_line(line)
+        if parsed:
+            keyword, score, done = parsed
+            rows.append((i, keyword, score, done))
+    return rows
 
 
 def env_number(key: str, default: float) -> float:

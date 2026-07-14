@@ -16,7 +16,6 @@ import json
 import re
 from pathlib import Path
 
-from generate_post import load_keywords, is_local
 from clusters import cluster_label
 from seo_strategy_status import build_status
 
@@ -27,6 +26,78 @@ REPORTS_DIR = ROOT / "reports"
 OUTPUT_FILE = ROOT / "static" / "data" / "seo.json"
 
 NEXT_TARGETS_LIMIT = 10
+
+
+def strip_score_prefix(text: str) -> str:
+    return re.sub(r"^\[\d+\]\s*", "", text).strip()
+
+
+def parse_keyword_line(line: str) -> tuple[str, int | None, bool] | None:
+    clean = line.strip()
+    if not clean:
+        return None
+
+    done = False
+    if clean.startswith("# DONE"):
+        done = True
+        clean = clean.replace("# DONE", "", 1).strip()
+
+    score = None
+    score_match = re.match(r"^\[(\d+)\]\s*(.+)$", clean)
+    if score_match:
+        score = int(score_match.group(1))
+        clean = score_match.group(2).strip()
+    else:
+        clean = strip_score_prefix(clean)
+
+    if not clean:
+        return None
+    return clean, score, done
+
+
+def load_keywords() -> list[tuple[int, str, int | None, bool]]:
+    path = SCRIPTS_DIR / "keywords.txt"
+    if not path.exists():
+        return []
+    rows = []
+    for i, line in enumerate(path.read_text(encoding="utf-8").splitlines()):
+        parsed = parse_keyword_line(line)
+        if parsed:
+            keyword, score, done = parsed
+            rows.append((i, keyword, score, done))
+    return rows
+
+
+def is_local(keyword: str) -> bool:
+    k = keyword.lower()
+    return any(
+        place in k
+        for place in [
+            "denver",
+            "colorado",
+            "phoenix",
+            "houston",
+            "chicago",
+            "atlanta",
+            "los angeles",
+            "miami",
+            "las vegas",
+            "austin",
+            "dallas",
+            "new york",
+            "seattle",
+            "san diego",
+            "charlotte",
+            "jacksonville",
+            "columbus",
+            "indianapolis",
+            "nashville",
+            "memphis",
+            "portland",
+            "detroit",
+            "boston",
+        ]
+    )
 
 
 def content_clusters() -> list[dict]:
