@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T10:17:19.535878+00:00",
+  "generated_at": "2026-07-14T14:22:02.085879+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -325,6 +325,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/16/battery-dead-but-lights-turn-on/",
+        "verified": true
+      }
+    },
+    "battery-dead-on-highway-how-to-get-help-fast": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/battery-dead-on-highway-how-to-get-help.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/battery-dead-on-highway-how-to-get-help-fast-what-to-do-next-1h8m",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/battery-dead-on-highway-how-to-get-help-fast-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822115151148974080/battery-dead-on-highway-how-to-get-help-fast",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/14/battery-dead-on-highway-how-to-get-help-fast/",
         "verified": true
       }
     },
@@ -8095,24 +8122,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 312,
-      "verified": 312
+      "checked": 313,
+      "verified": 313
     },
     "dev": {
-      "checked": 241,
-      "verified": 241
+      "checked": 242,
+      "verified": 242
     },
     "feeder": {
+      "checked": 310,
+      "verified": 310
+    },
+    "tumblr": {
       "checked": 309,
       "verified": 309
     },
-    "tumblr": {
-      "checked": 308,
-      "verified": 308
-    },
     "wordpress": {
-      "checked": 312,
-      "verified": 312
+      "checked": 313,
+      "verified": 313
     }
   }
 }
