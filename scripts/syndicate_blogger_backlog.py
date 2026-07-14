@@ -14,6 +14,7 @@ from syndicate_post import (
     log,
     mark_blogger_synced,
     parse_frontmatter,
+    save_blog_variation_run_summary,
     syndicate_blogger,
 )
 
@@ -76,6 +77,8 @@ def main():
         if not ok and "HTTP 403" in detail:
             log("BLOGGER_BACKLOG | stopping early after HTTP 403 to avoid repeated rejected writes")
             break
+
+    save_blog_variation_run_summary()
 
 
 if __name__ == "__main__":

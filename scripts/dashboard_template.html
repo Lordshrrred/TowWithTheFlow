@@ -447,6 +447,10 @@
         <div class="bstat-row"><span class="bstat-label">WordPress Catch-Up ETA</span><span class="bstat-value" id="bs-wordpress-eta">—</span></div>
         <div class="bstat-row"><span class="bstat-label">All Platforms ETA</span><span class="bstat-value" id="bs-full-eta">—</span></div>
         <div class="bstat-row"><span class="bstat-label">WordPress Site</span><span class="bstat-value" id="bs-wordpress-site">Connected server-side</span></div>
+        <div class="bstat-row"><span class="bstat-label">Blog Variations Cached</span><span class="bstat-value" id="bs-blog-var-cached">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Blog Variations Generated</span><span class="bstat-value" id="bs-blog-var-generated">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Blog Variations Reused</span><span class="bstat-value" id="bs-blog-var-reused">—</span></div>
+        <div class="bstat-row"><span class="bstat-label">Blog Variation Issues</span><span class="bstat-value" id="bs-blog-var-failed">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Backlink Coverage</span><span class="bstat-value" id="bs-backlink">—</span></div>
         <div class="bstat-row"><span class="bstat-label">Feeder Site</span><span class="bstat-value"><a class="bstat-link" href="https://lordshrrred.github.io/TWTF_Feeder/" target="_blank" rel="noopener">lordshrrred.github.io/TWTF_Feeder ↗</a></span></div>
         <div class="bstat-row"><span class="bstat-label">Last Checked</span><span class="bstat-value" id="bs-feeder-checked">—</span></div>
@@ -697,7 +701,7 @@ function renderToolSyndication(state){
 
 // ── Load all ──────────────────────────────────────────────────────────────────
 async function loadDashboard(){
-  const [logTxt,syncedTxt,wpSyncedTxt,bloggerSyncedTxt,kwTxt,ghTree,feederTree,deployInfo,auditJson,wpAuditJson,toolSyndState] = await Promise.all([
+  const [logTxt,syncedTxt,wpSyncedTxt,bloggerSyncedTxt,kwTxt,ghTree,feederTree,deployInfo,auditJson,wpAuditJson,toolSyndState,blogVariationCache] = await Promise.all([
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/syndication_log.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/synced-posts.txt`),
     ftext(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/wordpress-synced-posts.txt`),
@@ -709,6 +713,7 @@ async function loadDashboard(){
     fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/backlink_audit.json`),
     fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/wordpress_backlink_audit.json`),
     fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/tool_syndication_state.json`),
+    fjson(`${GITHUB_RAW}/${GITHUB_OWNER}/${TWTF_REPO}/main/scripts/blog_variation_cache.json`),
   ]);
 
   const logMap     = parseLog(logTxt);
@@ -733,7 +738,7 @@ async function loadDashboard(){
   renderRecent({logMap,fullRuns});
   renderMatrix({sortedSlugs,logMap,feederSet,postDateMap});
   renderPostQueue({allSlugs,syncedSet,wpSyncedSet,logMap,kwLines});
-  renderBottom({allSlugs,syncedSet,wpSyncedSet,bloggerSyncedSet,kwLines,feederFiles,deployInfo,logMap});
+  renderBottom({allSlugs,syncedSet,wpSyncedSet,bloggerSyncedSet,kwLines,feederFiles,deployInfo,logMap,blogVariationCache});
   renderToolSyndication(toolSyndState);
 
   document.getElementById("last-refreshed").textContent="Refreshed: "+new Date().toLocaleTimeString();
@@ -913,7 +918,7 @@ function backlogEtaText(backlogCount, perDay){
   return `${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})} (${days}d)`;
 }
 
-function renderBottom({allSlugs,syncedSet,wpSyncedSet,bloggerSyncedSet,kwLines,feederFiles,deployInfo,logMap}){
+function renderBottom({allSlugs,syncedSet,wpSyncedSet,bloggerSyncedSet,kwLines,feederFiles,deployInfo,logMap,blogVariationCache}){
   document.getElementById("bs-total-posts").textContent=allSlugs.length;
   document.getElementById("bs-kw-remaining").textContent=kwLines.length;
   if(deployInfo?.commit){
@@ -948,6 +953,12 @@ function renderBottom({allSlugs,syncedSet,wpSyncedSet,bloggerSyncedSet,kwLines,f
       wpSite.innerHTML=`<a class="bstat-link" href="${u.origin}" target="_blank" rel="noopener">${u.host} ↗</a>`;
     }catch{}
   }
+  const varSummary = blogVariationCache?.summary || {};
+  const varStats = varSummary.last_run_stats || {};
+  document.getElementById("bs-blog-var-cached").textContent = String(varSummary.cached_variations ?? Object.keys(blogVariationCache?.items || {}).length);
+  document.getElementById("bs-blog-var-generated").textContent = String(varStats.generated ?? 0);
+  document.getElementById("bs-blog-var-reused").textContent = String(varStats.reused ?? 0);
+  document.getElementById("bs-blog-var-failed").textContent = String((varStats.failed ?? 0) + (varStats.skipped ?? 0));
   document.getElementById("bs-backlink").textContent="Verifying backlinks…";
   document.getElementById("bs-feeder-checked").textContent=new Date().toLocaleDateString("en-US",{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"});
 }

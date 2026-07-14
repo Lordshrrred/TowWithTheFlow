@@ -12,6 +12,7 @@ from syndicate_post import (
     log,
     mark_wordpress_synced,
     parse_frontmatter,
+    save_blog_variation_run_summary,
     syndicate_wordpress,
 )
 
@@ -54,6 +55,7 @@ def main():
     if ok:
         mark_wordpress_synced(slug)
     log(f"WORDPRESS | {slug} | {'SUCCESS' if ok else 'FAIL'} | {detail}")
+    save_blog_variation_run_summary()
 
 
 if __name__ == "__main__":

@@ -251,7 +251,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt scripts/blog_variation_cache.json || true
           git diff --staged --quiet || git commit -m "Auto: syndicate general post $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
@@ -316,7 +316,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt scripts/blog_variation_cache.json || true
           git diff --staged --quiet || git commit -m "Auto: syndicate local post $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
@@ -376,7 +376,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt scripts/blog_variation_cache.json || true
           git diff --staged --quiet || git commit -m "Auto: syndicate post 3 $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
@@ -435,11 +435,11 @@ jobs:
 
       - name: Commit WordPress backlog results
         run: |
-          if git diff --quiet -- scripts/wordpress-synced-posts.txt; then
-            echo "No WordPress backlog state changes; leaving log-only output uncommitted"
+          if git diff --quiet -- scripts/wordpress-synced-posts.txt scripts/blog_variation_cache.json; then
+            echo "No WordPress backlog/cache state changes; leaving log-only output uncommitted"
             exit 0
           fi
-          git add scripts/wordpress-synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/wordpress-synced-posts.txt scripts/syndication_log.txt scripts/blog_variation_cache.json || true
           git commit -m "Auto: WordPress backlog syndication $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
@@ -479,11 +479,11 @@ jobs:
 
       - name: Commit Blogger backlog results
         run: |
-          if git diff --quiet -- scripts/blogger-synced-posts.txt; then
-            echo "No Blogger backlog state changes; leaving log-only output uncommitted"
+          if git diff --quiet -- scripts/blogger-synced-posts.txt scripts/blog_variation_cache.json; then
+            echo "No Blogger backlog/cache state changes; leaving log-only output uncommitted"
             exit 0
           fi
-          git add scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/blogger-synced-posts.txt scripts/syndication_log.txt scripts/blog_variation_cache.json || true
           git commit -m "Auto: Blogger backlog syndication $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
@@ -666,7 +666,7 @@ jobs:
 
       - name: Commit syndication log
         run: |
-          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt || true
+          git add scripts/synced-posts.txt scripts/wordpress-synced-posts.txt scripts/blogger-synced-posts.txt scripts/syndication_log.txt scripts/blog_variation_cache.json || true
           git diff --staged --quiet || git commit -m "Auto: syndicate post 4 $(date +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push

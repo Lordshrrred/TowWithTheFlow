@@ -137,12 +137,21 @@ WORDPRESS_OAUTH2_TOKEN = env_clean("WORDPRESS_OAUTH2_TOKEN")
 WORDPRESS_BLOG        = env_clean("WORDPRESS_BLOG") or env_clean("WORDPRESS_SITE_URL")
 WORDPRESS_SITE_URL    = env_clean("WORDPRESS_SITE_URL") or WORDPRESS_BLOG
 
+
+def env_int(key: str, default: int) -> int:
+    try:
+        return int(env_clean(key, str(default)) or default)
+    except ValueError:
+        return default
+
+
 BASE_URL       = "https://towwiththeflow.com"
 POSTS_DIR      = ROOT / "content" / "posts"
 LOG_FILE       = Path(__file__).parent / "syndication_log.txt"
 SYNCED_FILE    = Path(__file__).parent / "synced-posts.txt"
 WORDPRESS_SYNCED_FILE = Path(__file__).parent / "wordpress-synced-posts.txt"
 BLOGGER_SYNCED_FILE = Path(__file__).parent / "blogger-synced-posts.txt"
+BLOG_VARIATION_CACHE_FILE = Path(__file__).parent / "blog_variation_cache.json"
 _PUBLER_WORDPRESS_ACCOUNT_CACHE: dict | None = None
 FEEDER_OWNER   = "Lordshrrred"
 FEEDER_REPO    = "TWTF_Feeder"
@@ -151,6 +160,18 @@ PUBLER_API_BASE = "https://app.publer.com/api/v1"
 WORDPRESS_OAUTH_TOKEN_URL = "https://public-api.wordpress.com/oauth2/token"
 WORDPRESS_REST_POSTS_NEW_BASE = "https://public-api.wordpress.com/rest/v1/sites"
 WORDPRESS_TOKEN_INFO_URL = "https://public-api.wordpress.com/oauth2/token-info"
+BLOG_VARIATION_FORMAT_VERSION = "blog-variation-v1"
+BLOG_VARIATION_MAX_GENERATIONS = env_int("BLOG_VARIATION_MAX_GENERATIONS", 5)
+
+VARIATION_RUN_STATS = {
+    "generated": 0,
+    "reused": 0,
+    "skipped": 0,
+    "failed": 0,
+    "fallback_original": 0,
+    "estimated_input_tokens": 0,
+    "estimated_output_tokens": 0,
+}
 
 # Backlink block injected when missing
 BACKLINK_TMPL = (
@@ -273,14 +294,135 @@ def get_variant_title(title: str, slug: str, platform: str) -> str:
     return f"{title}: {suffix}"
 
 
+def estimate_tokens(text: str) -> int:
+    return max(1, round(len(text) / 4))
+
+
+def canonical_url_for_slug(slug: str) -> str:
+    return f"{BASE_URL}/{slug}/"
+
+
+def blog_variation_source_hash(body: str, platform: str, slug: str) -> str:
+    length_range, _ = variation_length_profile(slug, platform)
+    payload = {
+        "slug": slug,
+        "platform": platform,
+        "canonical_url": canonical_url_for_slug(slug),
+        "length_range": length_range,
+        "body": body,
+    }
+    raw = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
+
+
+def blog_variation_cache_key(body: str, platform: str, slug: str) -> str:
+    raw = (
+        f"{slug}::{platform}::{blog_variation_source_hash(body, platform, slug)}::"
+        f"{BLOG_VARIATION_FORMAT_VERSION}"
+    )
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:24]
+
+
+def load_blog_variation_cache() -> dict:
+    if BLOG_VARIATION_CACHE_FILE.exists():
+        try:
+            data = json.loads(BLOG_VARIATION_CACHE_FILE.read_text(encoding="utf-8"))
+            if isinstance(data, dict):
+                data.setdefault("items", {})
+                return data
+        except json.JSONDecodeError:
+            pass
+    return {"items": {}}
+
+
+def save_blog_variation_cache(cache: dict) -> None:
+    cache["summary"] = blog_variation_cache_summary(cache)
+    BLOG_VARIATION_CACHE_FILE.write_text(
+        json.dumps(cache, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+
+
+def blog_variation_cache_summary(cache: dict) -> dict:
+    items = cache.get("items", {})
+    return {
+        "updated_at": datetime.now().isoformat(),
+        "format_version": BLOG_VARIATION_FORMAT_VERSION,
+        "cached_variations": len(items),
+        "platform_counts": {
+            platform: sum(1 for item in items.values() if item.get("platform") == platform)
+            for platform in ["Dev.to", "Tumblr", "Blogger", "WordPress", "Feeder"]
+        },
+        "last_run_stats": dict(VARIATION_RUN_STATS),
+    }
+
+
+def save_blog_variation_run_summary() -> None:
+    cache = load_blog_variation_cache()
+    save_blog_variation_cache(cache)
+
+
+def valid_blog_variation_item(item: object, body: str, platform: str, slug: str) -> bool:
+    if not isinstance(item, dict):
+        return False
+    variation = str(item.get("body_markdown", "")).strip()
+    if not variation:
+        return False
+    if item.get("slug") != slug:
+        return False
+    if item.get("platform") != platform:
+        return False
+    if item.get("canonical_url") != canonical_url_for_slug(slug):
+        return False
+    if item.get("source_hash") != blog_variation_source_hash(body, platform, slug):
+        return False
+    if item.get("format_version") != BLOG_VARIATION_FORMAT_VERSION:
+        return False
+    if BASE_URL not in variation:
+        return False
+    return True
+
+
+def restore_backlink_if_missing(result: str, body: str) -> str:
+    if BASE_URL in result:
+        return result
+    backlink_start = body.rfind("---")
+    backlink = body[backlink_start:] if backlink_start >= 0 else ""
+    return (result.rstrip() + "\n\n" + backlink).strip()
+
+
 def get_variation(body: str, platform: str, slug: str) -> str:
     """Get a lightly rephrased version of the body for a specific platform.
-    Falls back to original body if Claude API is unavailable."""
+    Falls back to original body if Claude API is unavailable.
+
+    Variations are cached permanently per slug/platform/source hash so publish
+    retries and backlog retries do not pay Claude again for identical work.
+    """
+    cache = load_blog_variation_cache()
+    key = blog_variation_cache_key(body, platform, slug)
+    existing = cache.get("items", {}).get(key)
+    if valid_blog_variation_item(existing, body, platform, slug):
+        VARIATION_RUN_STATS["reused"] += 1
+        log(f"VARIATION | {platform} | reused cache key={key}")
+        return existing["body_markdown"]
+
     if not ANTHROPIC_API_KEY:
+        VARIATION_RUN_STATS["fallback_original"] += 1
+        return body
+    if VARIATION_RUN_STATS["generated"] >= BLOG_VARIATION_MAX_GENERATIONS:
+        VARIATION_RUN_STATS["skipped"] += 1
+        log(f"VARIATION | {platform} | generation cap reached, using original body")
         return body
     try:
         length_range, max_tokens = variation_length_profile(slug, platform)
         log(f"VARIATION | {platform} | requesting model={ANTHROPIC_VARIATION_MODEL}")
+        prompt = (
+            f"Platform: {platform}\n"
+            f"Slug: {slug}\n"
+            f"Target length: {length_range} words\n\n"
+            f"Rewrite this article body:\n\n{body}"
+        )
+        input_tokens = estimate_tokens(VARIATION_SYSTEM_PROMPT + prompt)
         client = make_client(ANTHROPIC_API_KEY)
         msg = create_message(
             client,
@@ -294,23 +436,48 @@ def get_variation(body: str, platform: str, slug: str) -> str:
             }],
             messages=[{
                 "role": "user",
-                "content": (
-                    f"Platform: {platform}\n"
-                    f"Slug: {slug}\n"
-                    f"Target length: {length_range} words\n\n"
-                    f"Rewrite this article body:\n\n{body}"
-                )
+                "content": prompt
             }]
         )
         log(f"VARIATION | {platform} | served by model={msg.model} "
             f"cache_read={getattr(msg.usage, 'cache_read_input_tokens', 0)} "
             f"cache_write={getattr(msg.usage, 'cache_creation_input_tokens', 0)}")
         result = msg.content[0].text.strip()
-        # Ensure backlink survived
+        if not result:
+            VARIATION_RUN_STATS["failed"] += 1
+            log(f"VARIATION | {platform} | empty model response — using original body")
+            return body
+        result = restore_backlink_if_missing(result, body)
         if BASE_URL not in result:
-            result = result.rstrip() + "\n\n" + body[body.rfind("---"):]  # restore original backlink section
+            VARIATION_RUN_STATS["failed"] += 1
+            log(f"VARIATION | {platform} | backlink missing after repair — using original body")
+            return body
+        output_tokens = estimate_tokens(result)
+        item = {
+            "slug": slug,
+            "platform": platform,
+            "canonical_url": canonical_url_for_slug(slug),
+            "body_markdown": result,
+            "model": getattr(msg, "model", ANTHROPIC_VARIATION_MODEL),
+            "generated_at": datetime.now().isoformat(),
+            "source_hash": blog_variation_source_hash(body, platform, slug),
+            "format_version": BLOG_VARIATION_FORMAT_VERSION,
+            "cache_key": key,
+            "estimated_tokens": {
+                "input": input_tokens,
+                "output": output_tokens,
+            },
+            "estimated_cost_usd": round(((input_tokens / 1_000_000) * 0.80) + ((output_tokens / 1_000_000) * 4.00), 6),
+        }
+        cache.setdefault("items", {})[key] = item
+        save_blog_variation_cache(cache)
+        VARIATION_RUN_STATS["generated"] += 1
+        VARIATION_RUN_STATS["estimated_input_tokens"] += input_tokens
+        VARIATION_RUN_STATS["estimated_output_tokens"] += output_tokens
+        log(f"VARIATION | {platform} | cached key={key}")
         return result
     except Exception as e:
+        VARIATION_RUN_STATS["failed"] += 1
         log(f"VARIATION | {platform} | Claude error: {e} — using original body")
         return body
 
@@ -1326,6 +1493,16 @@ def run_syndication(slug: str):
 
     if len(failures) >= 2:
         send_failure_alert(slug, failures)
+
+    save_blog_variation_run_summary()
+    log(
+        "VARIATION SUMMARY | "
+        f"generated={VARIATION_RUN_STATS['generated']} "
+        f"reused={VARIATION_RUN_STATS['reused']} "
+        f"skipped={VARIATION_RUN_STATS['skipped']} "
+        f"failed={VARIATION_RUN_STATS['failed']} "
+        f"fallback_original={VARIATION_RUN_STATS['fallback_original']}"
+    )
 
     return successes, failures
 
