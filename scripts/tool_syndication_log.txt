@@ -81,3 +81,9 @@
 [2026-07-13 22:18:25] RUN SUMMARY | generated=0 reused=1 deterministic=0 generation_failed=0 generation_skipped=0
 [2026-07-13 22:18:37] Eligible tools: 10
 [2026-07-13 22:18:37] VERIFY | engine-overheating-assistant | blogger | {'exists': True, 'contextual_link_found': True, 'nofollow_attr': False}
+[2026-07-14 16:04:55] Eligible tools: 10
+[2026-07-14 16:04:55] COMPANION | fuel-decision-assistant | blogger | generating model=claude-haiku-4-5-20251001
+[2026-07-14 16:05:07] COMPANION | fuel-decision-assistant | blogger | cached key=957722f2529c7d7280c8f781 title="How to Tell if You're Really Out of Fuel or Have a Fuel System Problem"
+[2026-07-14 16:05:07] OK | fuel-decision-assistant | blogger | https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-to-tell-if-youre-really-out-of-fuel.html
+[2026-07-14 16:05:27] FAIL | fuel-decision-assistant | wordpress | companion skipped: per-run companion generation cap reached
+[2026-07-14 16:05:27] RUN SUMMARY | generated=1 reused=0 deterministic=0 generation_failed=0 generation_skipped=1
