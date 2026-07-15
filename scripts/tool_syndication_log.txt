@@ -87,3 +87,9 @@
 [2026-07-14 16:05:07] OK | fuel-decision-assistant | blogger | https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-to-tell-if-youre-really-out-of-fuel.html
 [2026-07-14 16:05:27] FAIL | fuel-decision-assistant | wordpress | companion skipped: per-run companion generation cap reached
 [2026-07-14 16:05:27] RUN SUMMARY | generated=1 reused=0 deterministic=0 generation_failed=0 generation_skipped=1
+[2026-07-15 16:09:55] Eligible tools: 10
+[2026-07-15 16:09:56] COMPANION | winch-recovery-guide | blogger | generating model=claude-haiku-4-5-20251001
+[2026-07-15 16:10:09] COMPANION | winch-recovery-guide | blogger | cached key=1daf8bf1ea338a242feab6d5 title='How to Know If You Can Self-Recover Your Stuck Vehicle'
+[2026-07-15 16:10:09] OK | winch-recovery-guide | blogger | https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-to-know-if-you-can-self-recover.html
+[2026-07-15 16:10:29] FAIL | winch-recovery-guide | wordpress | companion skipped: per-run companion generation cap reached
+[2026-07-15 16:10:29] RUN SUMMARY | generated=1 reused=0 deterministic=0 generation_failed=0 generation_skipped=1
