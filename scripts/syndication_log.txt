@@ -12537,3 +12537,33 @@
 [2026-07-16 08:35:49] === SYNDICATE DONE: how-much-does-it-cost-to-tow-a-car-in-dallas-texas | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-16 08:35:49] SYNCED | how-much-does-it-cost-to-tow-a-car-in-dallas-texas marked in synced-posts.txt
 [2026-07-16 08:35:49] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-07-16 09:54:17] === SYNDICATE START: does-insurance-cover-towing-if-car-is-not-driveable ===
+[2026-07-16 09:54:17] PREFLIGHT | title: Does Insurance Cover Towing If Car Is Not Driveable: What You'll Actually Get Paid
+[2026-07-16 09:54:17] PREFLIGHT | date: 2026-07-16
+[2026-07-16 09:54:17] PREFLIGHT | timestamp: 2026-07-16 09:54:17
+[2026-07-16 09:54:17] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-07-16 09:54:17] PREFLIGHT | TUMBLR:  configured
+[2026-07-16 09:54:17] PREFLIGHT | BLOGGER: configured
+[2026-07-16 09:54:17] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-07-16 09:54:17] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-07-16 09:54:17] DEVTO | does-insurance-cover-towing-if-car-is-not-driveable | START
+[2026-07-16 09:54:17] DEVTO | does-insurance-cover-towing-if-car-is-not-driveable | account=TWTF1
+[2026-07-16 09:54:17] DEVTO | does-insurance-cover-towing-if-car-is-not-driveable | SUCCESS | https://dev.to/roadsideamericatowing/does-insurance-cover-towing-if-car-is-not-driveable-what-youll-actually-get-paid-what-drivers-1i7k
+[2026-07-16 09:54:17] --- waiting 60s before next platform ---
+[2026-07-16 09:55:17] TUMBLR | does-insurance-cover-towing-if-car-is-not-driveable | START
+[2026-07-16 09:55:18] TUMBLR | does-insurance-cover-towing-if-car-is-not-driveable | SUCCESS | https://towwiththeflow.tumblr.com/post/822311458442543105
+[2026-07-16 09:55:18] --- waiting 60s before next platform ---
+[2026-07-16 09:56:18] BLOGGER | does-insurance-cover-towing-if-car-is-not-driveable | START
+[2026-07-16 09:56:18] BLOGGER | does-insurance-cover-towing-if-car-is-not-driveable | step 1/3: refreshing access token
+[2026-07-16 09:56:18] BLOGGER | does-insurance-cover-towing-if-car-is-not-driveable | step 2/3: converting markdown to HTML
+[2026-07-16 09:56:18] BLOGGER | does-insurance-cover-towing-if-car-is-not-driveable | step 3/3: posting to blog 1959471973457654666
+[2026-07-16 09:56:19] BLOGGER | does-insurance-cover-towing-if-car-is-not-driveable | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/does-insurance-cover-towing-if-car-is.html
+[2026-07-16 09:56:19] --- waiting 60s before next platform ---
+[2026-07-16 09:57:19] WORDPRESS | does-insurance-cover-towing-if-car-is-not-driveable | START
+[2026-07-16 09:57:27] WORDPRESS | does-insurance-cover-towing-if-car-is-not-driveable | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/07/16/does-insurance-cover-towing-if-car-is-not-driveable/
+[2026-07-16 09:57:27] --- waiting 60s before next platform ---
+[2026-07-16 09:58:27] FEEDER | does-insurance-cover-towing-if-car-is-not-driveable | START
+[2026-07-16 09:58:29] FEEDER | does-insurance-cover-towing-if-car-is-not-driveable | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/does-insurance-cover-towing-if-car-is-not-driveable-guide/
+[2026-07-16 09:58:29] === SYNDICATE DONE: does-insurance-cover-towing-if-car-is-not-driveable | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-07-16 09:58:29] SYNCED | does-insurance-cover-towing-if-car-is-not-driveable marked in synced-posts.txt
+[2026-07-16 09:58:29] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
