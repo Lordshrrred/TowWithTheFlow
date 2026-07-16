@@ -12567,3 +12567,33 @@
 [2026-07-16 09:58:29] === SYNDICATE DONE: does-insurance-cover-towing-if-car-is-not-driveable | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-16 09:58:29] SYNCED | does-insurance-cover-towing-if-car-is-not-driveable marked in synced-posts.txt
 [2026-07-16 09:58:29] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-07-16 11:44:20] === SYNDICATE START: car-stuck-in-snow-denver-who-to-call-towing-cost ===
+[2026-07-16 11:44:20] PREFLIGHT | title: Car Stuck in Snow in Denver: Who to Call and What Towing Costs
+[2026-07-16 11:44:20] PREFLIGHT | date: 2026-07-16
+[2026-07-16 11:44:20] PREFLIGHT | timestamp: 2026-07-16 11:44:20
+[2026-07-16 11:44:20] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-07-16 11:44:20] PREFLIGHT | TUMBLR:  configured
+[2026-07-16 11:44:20] PREFLIGHT | BLOGGER: configured
+[2026-07-16 11:44:20] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-07-16 11:44:20] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-07-16 11:44:20] DEVTO | car-stuck-in-snow-denver-who-to-call-towing-cost | START
+[2026-07-16 11:44:20] DEVTO | car-stuck-in-snow-denver-who-to-call-towing-cost | account=TWTF1
+[2026-07-16 11:44:20] DEVTO | car-stuck-in-snow-denver-who-to-call-towing-cost | SUCCESS | https://dev.to/roadsideamericatowing/car-stuck-in-snow-in-denver-who-to-call-and-what-towing-costs-what-drivers-should-know-55ad
+[2026-07-16 11:44:20] --- waiting 60s before next platform ---
+[2026-07-16 11:45:20] TUMBLR | car-stuck-in-snow-denver-who-to-call-towing-cost | START
+[2026-07-16 11:45:21] TUMBLR | car-stuck-in-snow-denver-who-to-call-towing-cost | SUCCESS | https://towwiththeflow.tumblr.com/post/822318381997948928
+[2026-07-16 11:45:21] --- waiting 60s before next platform ---
+[2026-07-16 11:46:21] BLOGGER | car-stuck-in-snow-denver-who-to-call-towing-cost | START
+[2026-07-16 11:46:21] BLOGGER | car-stuck-in-snow-denver-who-to-call-towing-cost | step 1/3: refreshing access token
+[2026-07-16 11:46:21] BLOGGER | car-stuck-in-snow-denver-who-to-call-towing-cost | step 2/3: converting markdown to HTML
+[2026-07-16 11:46:21] BLOGGER | car-stuck-in-snow-denver-who-to-call-towing-cost | step 3/3: posting to blog 1959471973457654666
+[2026-07-16 11:46:22] BLOGGER | car-stuck-in-snow-denver-who-to-call-towing-cost | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-stuck-in-snow-in-denver-who-to-call.html
+[2026-07-16 11:46:22] --- waiting 60s before next platform ---
+[2026-07-16 11:47:22] WORDPRESS | car-stuck-in-snow-denver-who-to-call-towing-cost | START
+[2026-07-16 11:47:34] WORDPRESS | car-stuck-in-snow-denver-who-to-call-towing-cost | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/07/16/car-stuck-in-snow-denver-who-to-call-towing-cost/
+[2026-07-16 11:47:34] --- waiting 60s before next platform ---
+[2026-07-16 11:48:34] FEEDER | car-stuck-in-snow-denver-who-to-call-towing-cost | START
+[2026-07-16 11:48:35] FEEDER | car-stuck-in-snow-denver-who-to-call-towing-cost | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-stuck-in-snow-denver-who-to-call-towing-cost-guide/
+[2026-07-16 11:48:35] === SYNDICATE DONE: car-stuck-in-snow-denver-who-to-call-towing-cost | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-07-16 11:48:35] SYNCED | car-stuck-in-snow-denver-who-to-call-towing-cost marked in synced-posts.txt
+[2026-07-16 11:48:35] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
