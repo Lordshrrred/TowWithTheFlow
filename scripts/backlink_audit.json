@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T17:46:05.198699+00:00",
+  "generated_at": "2026-07-16T21:21:14.220375+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2069,6 +2069,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/car-starts-then-dies-immediately-causes-3/",
+        "verified": true
+      }
+    },
+    "car-stuck-in-snow-denver-who-to-call-towing-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-stuck-in-snow-in-denver-who-to-call.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-stuck-in-snow-in-denver-who-to-call-and-what-towing-costs-what-drivers-should-know-55ad",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-stuck-in-snow-denver-who-to-call-towing-cost-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822318381997948928/car-stuck-in-snow-denver-who-to-call-towing-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/16/car-stuck-in-snow-denver-who-to-call-towing-cost/",
         "verified": true
       }
     },
@@ -8392,24 +8419,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 323,
-      "verified": 323
+      "checked": 324,
+      "verified": 324
     },
     "dev": {
-      "checked": 252,
-      "verified": 252
+      "checked": 253,
+      "verified": 253
     },
     "feeder": {
+      "checked": 321,
+      "verified": 321
+    },
+    "tumblr": {
       "checked": 320,
       "verified": 320
     },
-    "tumblr": {
-      "checked": 319,
-      "verified": 319
-    },
     "wordpress": {
-      "checked": 323,
-      "verified": 323
+      "checked": 324,
+      "verified": 324
     }
   }
 }
