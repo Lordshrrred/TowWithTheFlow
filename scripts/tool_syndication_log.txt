@@ -93,3 +93,9 @@
 [2026-07-15 16:10:09] OK | winch-recovery-guide | blogger | https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-to-know-if-you-can-self-recover.html
 [2026-07-15 16:10:29] FAIL | winch-recovery-guide | wordpress | companion skipped: per-run companion generation cap reached
 [2026-07-15 16:10:29] RUN SUMMARY | generated=1 reused=0 deterministic=0 generation_failed=0 generation_skipped=1
+[2026-07-16 16:04:19] Eligible tools: 10
+[2026-07-16 16:04:20] COMPANION | storage-fee-calculator | blogger | generating model=claude-haiku-4-5-20251001
+[2026-07-16 16:04:32] COMPANION | storage-fee-calculator | blogger | cached key=e9dad5d8f2b074825647bdfd title='What Happens to Your Car in Storage: A Timeline and Cost Overview'
+[2026-07-16 16:04:33] OK | storage-fee-calculator | blogger | https://towingandflowingroadsidedenver.blogspot.com/2026/07/what-happens-to-your-car-in-storage.html
+[2026-07-16 16:04:53] FAIL | storage-fee-calculator | wordpress | companion skipped: per-run companion generation cap reached
+[2026-07-16 16:04:53] RUN SUMMARY | generated=1 reused=0 deterministic=0 generation_failed=0 generation_skipped=1
