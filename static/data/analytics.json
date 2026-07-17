@@ -1,10 +1,10 @@
 {
-  "pageviews": 108,
-  "sessions": 99,
-  "avgSessionDur": 65,
-  "bounceRate": 0.6060606060606061,
-  "newUsers": 94,
-  "returningUsers": 0,
+  "pageviews": 112,
+  "sessions": 102,
+  "avgSessionDur": 81,
+  "bounceRate": 0.5490196078431373,
+  "newUsers": 96,
+  "returningUsers": 1,
   "daily": [
     {
       "date": "20260617",
@@ -109,6 +109,10 @@
     {
       "date": "20260715",
       "pageviews": 11
+    },
+    {
+      "date": "20260716",
+      "pageviews": 4
     }
   ],
   "topPages": [
@@ -136,7 +140,7 @@
       "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
       "pageviews": 9,
       "avgDur": 62,
-      "bounceRate": 60.0,
+      "bounceRate": 50.0,
       "sessions": 10
     },
     {
@@ -144,8 +148,8 @@
       "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
       "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
       "pageviews": 6,
-      "avgDur": 81,
-      "bounceRate": 33.3,
+      "avgDur": 90,
+      "bounceRate": 16.7,
       "sessions": 6
     },
     {
@@ -177,24 +181,42 @@
     },
     {
       "rank": 8,
-      "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
-      "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+      "page": "/towing-cost-seattle-washington/",
+      "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+      "pageviews": 4,
+      "avgDur": 126,
+      "bounceRate": 66.7,
+      "sessions": 6
+    },
+    {
+      "rank": 9,
+      "page": "/contact/",
+      "title": "Contact | Tow With The Flow",
       "pageviews": 3,
       "avgDur": 10,
       "bounceRate": 50.0,
       "sessions": 2
     },
     {
-      "rank": 9,
+      "rank": 10,
+      "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
+      "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+      "pageviews": 3,
+      "avgDur": 28,
+      "bounceRate": 0.0,
+      "sessions": 2
+    },
+    {
+      "rank": 11,
       "page": "/progressive-insurance-towing-reimbursement-amount/",
       "title": "Progressive Insurance Towing Reimbursement Amount: What You'll Get Back | Tow With The Flow",
       "pageviews": 3,
-      "avgDur": 1,
-      "bounceRate": 100.0,
+      "avgDur": 8,
+      "bounceRate": 75.0,
       "sessions": 4
     },
     {
-      "rank": 10,
+      "rank": 12,
       "page": "/towing-cost-los-angeles-california/",
       "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 3,
@@ -203,16 +225,7 @@
       "sessions": 2
     },
     {
-      "rank": 11,
-      "page": "/towing-cost-seattle-washington/",
-      "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-      "pageviews": 3,
-      "avgDur": 187,
-      "bounceRate": 50.0,
-      "sessions": 4
-    },
-    {
-      "rank": 12,
+      "rank": 13,
       "page": "/usaa-roadside-assistance-towing-coverage-limits/",
       "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
       "pageviews": 3,
@@ -221,7 +234,7 @@
       "sessions": 3
     },
     {
-      "rank": 13,
+      "rank": 14,
       "page": "/aaa-towing-coverage-runs-out-what-happens-cost/",
       "title": "AAA Towing Coverage Runs Out: What Happens and Cost | Tow With The Flow",
       "pageviews": 2,
@@ -230,7 +243,7 @@
       "sessions": 2
     },
     {
-      "rank": 14,
+      "rank": 15,
       "page": "/geico-roadside-assistance-towing-limits-how-many-miles/",
       "title": "GEICO Roadside Assistance Towing Limits: How Many Miles Coverage You Get | Tow With The Flow",
       "pageviews": 2,
@@ -239,25 +252,25 @@
       "sessions": 2
     },
     {
-      "rank": 15,
+      "rank": 16,
       "page": "/progressive-roadside-assistance-towing-limit-miles/",
       "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
       "pageviews": 2,
       "avgDur": 178,
-      "bounceRate": 50.0,
-      "sessions": 2
-    },
-    {
-      "rank": 16,
-      "page": "/tow-truck-near-me-accepting-credit-card/",
-      "title": "Tow Truck Near Me Accepting Credit Card: How to Pay Without Cash | Tow With The Flow",
-      "pageviews": 2,
-      "avgDur": 15,
-      "bounceRate": 50.0,
+      "bounceRate": 0.0,
       "sessions": 2
     },
     {
       "rank": 17,
+      "page": "/tow-truck-near-me-accepting-credit-card/",
+      "title": "Tow Truck Near Me Accepting Credit Card: How to Pay Without Cash | Tow With The Flow",
+      "pageviews": 2,
+      "avgDur": 849,
+      "bounceRate": 0.0,
+      "sessions": 2
+    },
+    {
+      "rank": 18,
       "page": "/towing-cost-miami-florida/",
       "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
       "pageviews": 2,
@@ -266,7 +279,7 @@
       "sessions": 2
     },
     {
-      "rank": 18,
+      "rank": 19,
       "page": "/towing-cost-new-york-city-manhattan-rates/",
       "title": "Towing Cost New York City Manhattan Rates: What You'll Pay Right Now | Tow With The Flow",
       "pageviews": 2,
@@ -275,7 +288,16 @@
       "sessions": 2
     },
     {
-      "rank": 19,
+      "rank": 20,
+      "page": "/about/",
+      "title": "About Tow With The Flow | Tow With The Flow",
+      "pageviews": 1,
+      "avgDur": 3,
+      "bounceRate": 100.0,
+      "sessions": 1
+    },
+    {
+      "rank": 21,
       "page": "/allstate-roadside-assistance-towing-distance-covered/",
       "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
       "pageviews": 1,
@@ -284,7 +306,7 @@
       "sessions": 1
     },
     {
-      "rank": 20,
+      "rank": 22,
       "page": "/car-making-grinding-noise-when-starting-tow-truck-needed/",
       "title": "Car Making Grinding Noise When Starting: When You Need a Tow Truck | Tow With The Flow",
       "pageviews": 1,
@@ -293,7 +315,7 @@
       "sessions": 1
     },
     {
-      "rank": 21,
+      "rank": 23,
       "page": "/car-smoking-under-hood-on-highway-pull-over-or-keep-driving/",
       "title": "Car Smoking Under Hood on Highway: Pull Over or Keep Driving? | Tow With The Flow",
       "pageviews": 1,
@@ -302,7 +324,7 @@
       "sessions": 1
     },
     {
-      "rank": 22,
+      "rank": 24,
       "page": "/car-wont-shift-out-of-park-towing-options/",
       "title": "Car Won't Shift Out of Park Towing Options: What to Do When Stuck | Tow With The Flow",
       "pageviews": 1,
@@ -311,25 +333,16 @@
       "sessions": 1
     },
     {
-      "rank": 23,
-      "page": "/contact/",
-      "title": "Contact | Tow With The Flow",
+      "rank": 25,
+      "page": "/costco-auto-insurance-covers-towing-how-much/",
+      "title": "Costco Auto Insurance Covers Towing How Much: Coverage Limits Explained | Tow With The Flow",
       "pageviews": 1,
-      "avgDur": 5,
+      "avgDur": 53,
       "bounceRate": 0.0,
       "sessions": 1
     },
     {
-      "rank": 24,
-      "page": "/costco-auto-insurance-covers-towing-how-much/",
-      "title": "Costco Auto Insurance Covers Towing How Much: Coverage Limits Explained | Tow With The Flow",
-      "pageviews": 1,
-      "avgDur": 0,
-      "bounceRate": 100.0,
-      "sessions": 1
-    },
-    {
-      "rank": 25,
+      "rank": 26,
       "page": "/farmers-insurance-towing-benefit-how-many-times/",
       "title": "How Many Times Can You Use Farmers Insurance Towing Benefits? | Tow With The Flow",
       "pageviews": 1,
@@ -338,7 +351,7 @@
       "sessions": 1
     },
     {
-      "rank": 26,
+      "rank": 27,
       "page": "/geico-covers-towing-how-many-times-per-year/",
       "title": "GEICO Towing Coverage: How Many Times Per Year Are You Covered? | Tow With The Flow",
       "pageviews": 1,
@@ -347,7 +360,7 @@
       "sessions": 1
     },
     {
-      "rank": 27,
+      "rank": 28,
       "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
       "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
       "pageviews": 1,
@@ -356,7 +369,7 @@
       "sessions": 1
     },
     {
-      "rank": 28,
+      "rank": 29,
       "page": "/insurance-deductible-applies-to-towing-costs-when/",
       "title": "When Your Insurance Deductible Applies to Towing Costs | Tow With The Flow",
       "pageviews": 1,
@@ -365,18 +378,9 @@
       "sessions": 1
     },
     {
-      "rank": 29,
+      "rank": 30,
       "page": "/liberty-mutual-roadside-assistance-towing-distance-limits/",
       "title": "Liberty Mutual Roadside Assistance Towing Distance Limits: What You Need to Know | Tow With The Flow",
-      "pageviews": 1,
-      "avgDur": 0,
-      "bounceRate": 100.0,
-      "sessions": 1
-    },
-    {
-      "rank": 30,
-      "page": "/progressive-roadside-assistance-covers-how-much-towing/",
-      "title": "Progressive Roadside Assistance Covers How Much Towing: Complete Coverage Breakdown | Tow With The Flow",
       "pageviews": 1,
       "avgDur": 0,
       "bounceRate": 100.0,
@@ -386,84 +390,73 @@
   "trafficSources": [
     {
       "channel": "Organic Search",
-      "sessions": 58,
-      "pct": 56.9
+      "sessions": 61,
+      "pct": 58.7
     },
     {
       "channel": "Direct",
-      "sessions": 35,
-      "pct": 34.3
+      "sessions": 37,
+      "pct": 35.6
     },
     {
       "channel": "Unassigned",
       "sessions": 4,
-      "pct": 3.9
-    },
-    {
-      "channel": "Cross-network",
-      "sessions": 3,
-      "pct": 2.9
+      "pct": 3.8
     },
     {
       "channel": "AI Assistant",
       "sessions": 2,
-      "pct": 2.0
+      "pct": 1.9
     }
   ],
   "sourcesDetail": [
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 35,
-      "pct": 34.3
+      "sessions": 37,
+      "pct": 35.6
     },
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 27,
-      "pct": 26.5
+      "sessions": 28,
+      "pct": 26.9
     },
     {
       "source": "duckduckgo",
       "medium": "organic",
       "sessions": 15,
-      "pct": 14.7
+      "pct": 14.4
+    },
+    {
+      "source": "yahoo",
+      "medium": "organic",
+      "sessions": 10,
+      "pct": 9.6
     },
     {
       "source": "google",
       "medium": "organic",
       "sessions": 8,
-      "pct": 7.8
-    },
-    {
-      "source": "yahoo",
-      "medium": "organic",
-      "sessions": 8,
-      "pct": 7.8
+      "pct": 7.7
     },
     {
       "source": "(not set)",
       "medium": "(not set)",
       "sessions": 4,
-      "pct": 3.9
-    },
-    {
-      "source": "(data not available)",
-      "medium": "(data not available)",
-      "sessions": 3,
-      "pct": 2.9
+      "pct": 3.8
     },
     {
       "source": "copilot.com",
       "medium": "ai-assistant",
       "sessions": 2,
-      "pct": 2.0
+      "pct": 1.9
     }
   ],
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 77
+      "sessions": 80
     },
     {
       "country": "Vietnam",
@@ -525,11 +518,11 @@
   "topCities": [
     {
       "city": "(not set)",
-      "sessions": 11
+      "sessions": 14
     },
     {
-      "city": "",
-      "sessions": 3
+      "city": "Seattle",
+      "sessions": 5
     },
     {
       "city": "Atlanta",
@@ -548,10 +541,6 @@
       "sessions": 3
     },
     {
-      "city": "Seattle",
-      "sessions": 3
-    },
-    {
       "city": "Warren",
       "sessions": 3
     },
@@ -562,16 +551,20 @@
     {
       "city": "Hanoi",
       "sessions": 2
+    },
+    {
+      "city": "Houston",
+      "sessions": 2
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "sessions": 59
+      "sessions": 60
     },
     {
       "device": "mobile",
-      "sessions": 40
+      "sessions": 42
     }
   ],
   "browsers": [
@@ -581,11 +574,11 @@
     },
     {
       "browser": "Edge",
-      "sessions": 26
+      "sessions": 27
     },
     {
       "browser": "Safari",
-      "sessions": 22
+      "sessions": 24
     },
     {
       "browser": "Firefox",
@@ -599,11 +592,11 @@
   "os": [
     {
       "os": "Windows",
-      "sessions": 47
+      "sessions": 48
     },
     {
       "os": "iOS",
-      "sessions": 26
+      "sessions": 28
     },
     {
       "os": "Android",
@@ -620,12 +613,12 @@
   ],
   "ranges": {
     "30d": {
-      "pageviews": 108,
-      "sessions": 99,
-      "avgSessionDur": 65,
-      "bounceRate": 0.6060606060606061,
-      "newUsers": 94,
-      "returningUsers": 0,
+      "pageviews": 112,
+      "sessions": 102,
+      "avgSessionDur": 81,
+      "bounceRate": 0.5490196078431373,
+      "newUsers": 96,
+      "returningUsers": 1,
       "daily": [
         {
           "date": "20260617",
@@ -730,6 +723,10 @@
         {
           "date": "20260715",
           "pageviews": 11
+        },
+        {
+          "date": "20260716",
+          "pageviews": 4
         }
       ],
       "topPages": [
@@ -757,7 +754,7 @@
           "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 9,
           "avgDur": 62,
-          "bounceRate": 60.0,
+          "bounceRate": 50.0,
           "sessions": 10
         },
         {
@@ -765,8 +762,8 @@
           "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
           "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
           "pageviews": 6,
-          "avgDur": 81,
-          "bounceRate": 33.3,
+          "avgDur": 90,
+          "bounceRate": 16.7,
           "sessions": 6
         },
         {
@@ -798,24 +795,42 @@
         },
         {
           "rank": 8,
-          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
-          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+          "page": "/towing-cost-seattle-washington/",
+          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 126,
+          "bounceRate": 66.7,
+          "sessions": 6
+        },
+        {
+          "rank": 9,
+          "page": "/contact/",
+          "title": "Contact | Tow With The Flow",
           "pageviews": 3,
           "avgDur": 10,
           "bounceRate": 50.0,
           "sessions": 2
         },
         {
-          "rank": 9,
+          "rank": 10,
+          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
+          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 28,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 11,
           "page": "/progressive-insurance-towing-reimbursement-amount/",
           "title": "Progressive Insurance Towing Reimbursement Amount: What You'll Get Back | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 1,
-          "bounceRate": 100.0,
+          "avgDur": 8,
+          "bounceRate": 75.0,
           "sessions": 4
         },
         {
-          "rank": 10,
+          "rank": 12,
           "page": "/towing-cost-los-angeles-california/",
           "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 3,
@@ -824,16 +839,7 @@
           "sessions": 2
         },
         {
-          "rank": 11,
-          "page": "/towing-cost-seattle-washington/",
-          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 187,
-          "bounceRate": 50.0,
-          "sessions": 4
-        },
-        {
-          "rank": 12,
+          "rank": 13,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
           "pageviews": 3,
@@ -842,7 +848,7 @@
           "sessions": 3
         },
         {
-          "rank": 13,
+          "rank": 14,
           "page": "/aaa-towing-coverage-runs-out-what-happens-cost/",
           "title": "AAA Towing Coverage Runs Out: What Happens and Cost | Tow With The Flow",
           "pageviews": 2,
@@ -851,7 +857,7 @@
           "sessions": 2
         },
         {
-          "rank": 14,
+          "rank": 15,
           "page": "/geico-roadside-assistance-towing-limits-how-many-miles/",
           "title": "GEICO Roadside Assistance Towing Limits: How Many Miles Coverage You Get | Tow With The Flow",
           "pageviews": 2,
@@ -860,25 +866,25 @@
           "sessions": 2
         },
         {
-          "rank": 15,
+          "rank": 16,
           "page": "/progressive-roadside-assistance-towing-limit-miles/",
           "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 178,
-          "bounceRate": 50.0,
-          "sessions": 2
-        },
-        {
-          "rank": 16,
-          "page": "/tow-truck-near-me-accepting-credit-card/",
-          "title": "Tow Truck Near Me Accepting Credit Card: How to Pay Without Cash | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 15,
-          "bounceRate": 50.0,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
           "rank": 17,
+          "page": "/tow-truck-near-me-accepting-credit-card/",
+          "title": "Tow Truck Near Me Accepting Credit Card: How to Pay Without Cash | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 849,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 18,
           "page": "/towing-cost-miami-florida/",
           "title": "Towing Cost in Miami Florida: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 2,
@@ -887,7 +893,7 @@
           "sessions": 2
         },
         {
-          "rank": 18,
+          "rank": 19,
           "page": "/towing-cost-new-york-city-manhattan-rates/",
           "title": "Towing Cost New York City Manhattan Rates: What You'll Pay Right Now | Tow With The Flow",
           "pageviews": 2,
@@ -896,7 +902,16 @@
           "sessions": 2
         },
         {
-          "rank": 19,
+          "rank": 20,
+          "page": "/about/",
+          "title": "About Tow With The Flow | Tow With The Flow",
+          "pageviews": 1,
+          "avgDur": 3,
+          "bounceRate": 100.0,
+          "sessions": 1
+        },
+        {
+          "rank": 21,
           "page": "/allstate-roadside-assistance-towing-distance-covered/",
           "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
           "pageviews": 1,
@@ -905,7 +920,7 @@
           "sessions": 1
         },
         {
-          "rank": 20,
+          "rank": 22,
           "page": "/car-making-grinding-noise-when-starting-tow-truck-needed/",
           "title": "Car Making Grinding Noise When Starting: When You Need a Tow Truck | Tow With The Flow",
           "pageviews": 1,
@@ -914,7 +929,7 @@
           "sessions": 1
         },
         {
-          "rank": 21,
+          "rank": 23,
           "page": "/car-smoking-under-hood-on-highway-pull-over-or-keep-driving/",
           "title": "Car Smoking Under Hood on Highway: Pull Over or Keep Driving? | Tow With The Flow",
           "pageviews": 1,
@@ -923,7 +938,7 @@
           "sessions": 1
         },
         {
-          "rank": 22,
+          "rank": 24,
           "page": "/car-wont-shift-out-of-park-towing-options/",
           "title": "Car Won't Shift Out of Park Towing Options: What to Do When Stuck | Tow With The Flow",
           "pageviews": 1,
@@ -932,25 +947,16 @@
           "sessions": 1
         },
         {
-          "rank": 23,
-          "page": "/contact/",
-          "title": "Contact | Tow With The Flow",
+          "rank": 25,
+          "page": "/costco-auto-insurance-covers-towing-how-much/",
+          "title": "Costco Auto Insurance Covers Towing How Much: Coverage Limits Explained | Tow With The Flow",
           "pageviews": 1,
-          "avgDur": 5,
+          "avgDur": 53,
           "bounceRate": 0.0,
           "sessions": 1
         },
         {
-          "rank": 24,
-          "page": "/costco-auto-insurance-covers-towing-how-much/",
-          "title": "Costco Auto Insurance Covers Towing How Much: Coverage Limits Explained | Tow With The Flow",
-          "pageviews": 1,
-          "avgDur": 0,
-          "bounceRate": 100.0,
-          "sessions": 1
-        },
-        {
-          "rank": 25,
+          "rank": 26,
           "page": "/farmers-insurance-towing-benefit-how-many-times/",
           "title": "How Many Times Can You Use Farmers Insurance Towing Benefits? | Tow With The Flow",
           "pageviews": 1,
@@ -959,7 +965,7 @@
           "sessions": 1
         },
         {
-          "rank": 26,
+          "rank": 27,
           "page": "/geico-covers-towing-how-many-times-per-year/",
           "title": "GEICO Towing Coverage: How Many Times Per Year Are You Covered? | Tow With The Flow",
           "pageviews": 1,
@@ -968,7 +974,7 @@
           "sessions": 1
         },
         {
-          "rank": 27,
+          "rank": 28,
           "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
           "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
           "pageviews": 1,
@@ -977,7 +983,7 @@
           "sessions": 1
         },
         {
-          "rank": 28,
+          "rank": 29,
           "page": "/insurance-deductible-applies-to-towing-costs-when/",
           "title": "When Your Insurance Deductible Applies to Towing Costs | Tow With The Flow",
           "pageviews": 1,
@@ -986,18 +992,9 @@
           "sessions": 1
         },
         {
-          "rank": 29,
+          "rank": 30,
           "page": "/liberty-mutual-roadside-assistance-towing-distance-limits/",
           "title": "Liberty Mutual Roadside Assistance Towing Distance Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 1,
-          "avgDur": 0,
-          "bounceRate": 100.0,
-          "sessions": 1
-        },
-        {
-          "rank": 30,
-          "page": "/progressive-roadside-assistance-covers-how-much-towing/",
-          "title": "Progressive Roadside Assistance Covers How Much Towing: Complete Coverage Breakdown | Tow With The Flow",
           "pageviews": 1,
           "avgDur": 0,
           "bounceRate": 100.0,
@@ -1007,84 +1004,73 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 58,
-          "pct": 56.9
+          "sessions": 61,
+          "pct": 58.7
         },
         {
           "channel": "Direct",
-          "sessions": 35,
-          "pct": 34.3
+          "sessions": 37,
+          "pct": 35.6
         },
         {
           "channel": "Unassigned",
           "sessions": 4,
-          "pct": 3.9
-        },
-        {
-          "channel": "Cross-network",
-          "sessions": 3,
-          "pct": 2.9
+          "pct": 3.8
         },
         {
           "channel": "AI Assistant",
           "sessions": 2,
-          "pct": 2.0
+          "pct": 1.9
         }
       ],
       "sourcesDetail": [
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 35,
-          "pct": 34.3
+          "sessions": 37,
+          "pct": 35.6
         },
         {
           "source": "bing",
           "medium": "organic",
-          "sessions": 27,
-          "pct": 26.5
+          "sessions": 28,
+          "pct": 26.9
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 15,
-          "pct": 14.7
+          "pct": 14.4
+        },
+        {
+          "source": "yahoo",
+          "medium": "organic",
+          "sessions": 10,
+          "pct": 9.6
         },
         {
           "source": "google",
           "medium": "organic",
           "sessions": 8,
-          "pct": 7.8
-        },
-        {
-          "source": "yahoo",
-          "medium": "organic",
-          "sessions": 8,
-          "pct": 7.8
+          "pct": 7.7
         },
         {
           "source": "(not set)",
           "medium": "(not set)",
           "sessions": 4,
-          "pct": 3.9
-        },
-        {
-          "source": "(data not available)",
-          "medium": "(data not available)",
-          "sessions": 3,
-          "pct": 2.9
+          "pct": 3.8
         },
         {
           "source": "copilot.com",
           "medium": "ai-assistant",
           "sessions": 2,
-          "pct": 2.0
+          "pct": 1.9
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 77
+          "sessions": 80
         },
         {
           "country": "Vietnam",
@@ -1146,11 +1132,11 @@
       "topCities": [
         {
           "city": "(not set)",
-          "sessions": 11
+          "sessions": 14
         },
         {
-          "city": "",
-          "sessions": 3
+          "city": "Seattle",
+          "sessions": 5
         },
         {
           "city": "Atlanta",
@@ -1169,10 +1155,6 @@
           "sessions": 3
         },
         {
-          "city": "Seattle",
-          "sessions": 3
-        },
-        {
           "city": "Warren",
           "sessions": 3
         },
@@ -1183,16 +1165,20 @@
         {
           "city": "Hanoi",
           "sessions": 2
+        },
+        {
+          "city": "Houston",
+          "sessions": 2
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 59
+          "sessions": 60
         },
         {
           "device": "mobile",
-          "sessions": 40
+          "sessions": 42
         }
       ],
       "browsers": [
@@ -1202,11 +1188,11 @@
         },
         {
           "browser": "Edge",
-          "sessions": 26
+          "sessions": 27
         },
         {
           "browser": "Safari",
-          "sessions": 22
+          "sessions": 24
         },
         {
           "browser": "Firefox",
@@ -1220,11 +1206,11 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 47
+          "sessions": 48
         },
         {
           "os": "iOS",
-          "sessions": 26
+          "sessions": 28
         },
         {
           "os": "Android",
@@ -1241,12 +1227,12 @@
       ]
     },
     "90d": {
-      "pageviews": 138,
-      "sessions": 123,
-      "avgSessionDur": 59,
-      "bounceRate": 0.5853658536585366,
-      "newUsers": 118,
-      "returningUsers": 0,
+      "pageviews": 142,
+      "sessions": 126,
+      "avgSessionDur": 73,
+      "bounceRate": 0.5396825396825397,
+      "newUsers": 120,
+      "returningUsers": 1,
       "daily": [
         {
           "date": "20260423",
@@ -1411,6 +1397,10 @@
         {
           "date": "20260715",
           "pageviews": 11
+        },
+        {
+          "date": "20260716",
+          "pageviews": 4
         }
       ],
       "topPages": [
@@ -1429,7 +1419,7 @@
           "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 10,
           "avgDur": 59,
-          "bounceRate": 54.5,
+          "bounceRate": 45.5,
           "sessions": 11
         },
         {
@@ -1446,8 +1436,8 @@
           "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
           "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
           "pageviews": 7,
-          "avgDur": 70,
-          "bounceRate": 42.9,
+          "avgDur": 77,
+          "bounceRate": 28.6,
           "sessions": 7
         },
         {
@@ -1470,6 +1460,15 @@
         },
         {
           "rank": 7,
+          "page": "/contact/",
+          "title": "Contact | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 8,
+          "bounceRate": 33.3,
+          "sessions": 3
+        },
+        {
+          "rank": 8,
           "page": "/progressive-insurance-towing-coverage-how-many-times/",
           "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
           "pageviews": 4,
@@ -1478,25 +1477,43 @@
           "sessions": 4
         },
         {
-          "rank": 8,
-          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
-          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+          "rank": 9,
+          "page": "/towing-cost-seattle-washington/",
+          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 126,
+          "bounceRate": 66.7,
+          "sessions": 6
+        },
+        {
+          "rank": 10,
+          "page": "/about/",
+          "title": "About Tow With The Flow | Tow With The Flow",
           "pageviews": 3,
           "avgDur": 10,
           "bounceRate": 50.0,
           "sessions": 2
         },
         {
-          "rank": 9,
+          "rank": 11,
+          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
+          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 28,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 12,
           "page": "/progressive-insurance-towing-reimbursement-amount/",
           "title": "Progressive Insurance Towing Reimbursement Amount: What You'll Get Back | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 1,
-          "bounceRate": 100.0,
+          "avgDur": 8,
+          "bounceRate": 75.0,
           "sessions": 4
         },
         {
-          "rank": 10,
+          "rank": 13,
           "page": "/towing-cost-dallas-texas/",
           "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 3,
@@ -1505,7 +1522,7 @@
           "sessions": 3
         },
         {
-          "rank": 11,
+          "rank": 14,
           "page": "/towing-cost-los-angeles-california/",
           "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 3,
@@ -1514,16 +1531,7 @@
           "sessions": 2
         },
         {
-          "rank": 12,
-          "page": "/towing-cost-seattle-washington/",
-          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 187,
-          "bounceRate": 50.0,
-          "sessions": 4
-        },
-        {
-          "rank": 13,
+          "rank": 15,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
           "pageviews": 3,
@@ -1532,7 +1540,7 @@
           "sessions": 3
         },
         {
-          "rank": 14,
+          "rank": 16,
           "page": "/aaa-towing-coverage-runs-out-what-happens-cost/",
           "title": "AAA Towing Coverage Runs Out: What Happens and Cost | Tow With The Flow",
           "pageviews": 2,
@@ -1541,7 +1549,7 @@
           "sessions": 2
         },
         {
-          "rank": 15,
+          "rank": 17,
           "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
           "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
           "pageviews": 2,
@@ -1550,29 +1558,11 @@
           "sessions": 2
         },
         {
-          "rank": 16,
-          "page": "/about/",
-          "title": "About Tow With The Flow | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 17,
-          "bounceRate": 0.0,
-          "sessions": 1
-        },
-        {
-          "rank": 17,
+          "rank": 18,
           "page": "/allstate-roadside-assistance-towing-distance-covered/",
           "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 198,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 18,
-          "page": "/contact/",
-          "title": "Contact | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 4,
           "bounceRate": 0.0,
           "sessions": 2
         },
@@ -1591,7 +1581,7 @@
           "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 178,
-          "bounceRate": 50.0,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -1608,8 +1598,8 @@
           "page": "/tow-truck-near-me-accepting-credit-card/",
           "title": "Tow Truck Near Me Accepting Credit Card: How to Pay Without Cash | Tow With The Flow",
           "pageviews": 2,
-          "avgDur": 15,
-          "bounceRate": 50.0,
+          "avgDur": 849,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -1671,8 +1661,8 @@
           "page": "/costco-auto-insurance-covers-towing-how-much/",
           "title": "Costco Auto Insurance Covers Towing How Much: Coverage Limits Explained | Tow With The Flow",
           "pageviews": 1,
-          "avgDur": 0,
-          "bounceRate": 100.0,
+          "avgDur": 53,
+          "bounceRate": 0.0,
           "sessions": 1
         },
         {
@@ -1688,23 +1678,18 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 71,
-          "pct": 56.3
+          "sessions": 74,
+          "pct": 57.8
         },
         {
           "channel": "Direct",
-          "sessions": 44,
-          "pct": 34.9
+          "sessions": 46,
+          "pct": 35.9
         },
         {
           "channel": "Unassigned",
           "sessions": 5,
-          "pct": 4.0
-        },
-        {
-          "channel": "Cross-network",
-          "sessions": 3,
-          "pct": 2.4
+          "pct": 3.9
         },
         {
           "channel": "AI Assistant",
@@ -1721,44 +1706,38 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 44,
-          "pct": 34.9
+          "sessions": 46,
+          "pct": 35.9
         },
         {
           "source": "bing",
           "medium": "organic",
-          "sessions": 29,
-          "pct": 23.0
+          "sessions": 30,
+          "pct": 23.4
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 19,
-          "pct": 15.1
+          "pct": 14.8
         },
         {
           "source": "google",
           "medium": "organic",
           "sessions": 12,
-          "pct": 9.5
+          "pct": 9.4
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 10,
-          "pct": 7.9
+          "sessions": 12,
+          "pct": 9.4
         },
         {
           "source": "(not set)",
           "medium": "(not set)",
           "sessions": 4,
-          "pct": 3.2
-        },
-        {
-          "source": "(data not available)",
-          "medium": "(data not available)",
-          "sessions": 3,
-          "pct": 2.4
+          "pct": 3.1
         },
         {
           "source": "copilot.com",
@@ -1788,7 +1767,7 @@
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 97
+          "sessions": 100
         },
         {
           "country": "Vietnam",
@@ -1858,15 +1837,15 @@
       "topCities": [
         {
           "city": "(not set)",
-          "sessions": 15
+          "sessions": 18
+        },
+        {
+          "city": "Seattle",
+          "sessions": 5
         },
         {
           "city": "Boardman",
           "sessions": 4
-        },
-        {
-          "city": "",
-          "sessions": 3
         },
         {
           "city": "Atlanta",
@@ -1885,26 +1864,26 @@
           "sessions": 3
         },
         {
-          "city": "Seattle",
-          "sessions": 3
-        },
-        {
           "city": "Warren",
           "sessions": 3
         },
         {
           "city": "Ashburn",
           "sessions": 2
+        },
+        {
+          "city": "Boston",
+          "sessions": 2
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 75
+          "sessions": 76
         },
         {
           "device": "mobile",
-          "sessions": 48
+          "sessions": 50
         }
       ],
       "browsers": [
@@ -1914,11 +1893,11 @@
         },
         {
           "browser": "Safari",
-          "sessions": 30
+          "sessions": 32
         },
         {
           "browser": "Edge",
-          "sessions": 28
+          "sessions": 29
         },
         {
           "browser": "Firefox",
@@ -1932,11 +1911,11 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 57
+          "sessions": 58
         },
         {
           "os": "iOS",
-          "sessions": 32
+          "sessions": 34
         },
         {
           "os": "Android",
@@ -1953,12 +1932,12 @@
       ]
     },
     "180d": {
-      "pageviews": 141,
-      "sessions": 126,
-      "avgSessionDur": 58,
-      "bounceRate": 0.5952380952380952,
-      "newUsers": 121,
-      "returningUsers": 0,
+      "pageviews": 145,
+      "sessions": 129,
+      "avgSessionDur": 71,
+      "bounceRate": 0.5503875968992248,
+      "newUsers": 123,
+      "returningUsers": 1,
       "daily": [
         {
           "date": "20260416",
@@ -2127,6 +2106,10 @@
         {
           "date": "20260715",
           "pageviews": 11
+        },
+        {
+          "date": "20260716",
+          "pageviews": 4
         }
       ],
       "topPages": [
@@ -2145,7 +2128,7 @@
           "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 10,
           "avgDur": 59,
-          "bounceRate": 54.5,
+          "bounceRate": 45.5,
           "sessions": 11
         },
         {
@@ -2162,8 +2145,8 @@
           "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
           "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
           "pageviews": 7,
-          "avgDur": 70,
-          "bounceRate": 42.9,
+          "avgDur": 77,
+          "bounceRate": 28.6,
           "sessions": 7
         },
         {
@@ -2186,6 +2169,15 @@
         },
         {
           "rank": 7,
+          "page": "/contact/",
+          "title": "Contact | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 8,
+          "bounceRate": 33.3,
+          "sessions": 3
+        },
+        {
+          "rank": 8,
           "page": "/progressive-insurance-towing-coverage-how-many-times/",
           "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
           "pageviews": 4,
@@ -2194,25 +2186,43 @@
           "sessions": 4
         },
         {
-          "rank": 8,
-          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
-          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+          "rank": 9,
+          "page": "/towing-cost-seattle-washington/",
+          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 126,
+          "bounceRate": 66.7,
+          "sessions": 6
+        },
+        {
+          "rank": 10,
+          "page": "/about/",
+          "title": "About Tow With The Flow | Tow With The Flow",
           "pageviews": 3,
           "avgDur": 10,
           "bounceRate": 50.0,
           "sessions": 2
         },
         {
-          "rank": 9,
+          "rank": 11,
+          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
+          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 28,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 12,
           "page": "/progressive-insurance-towing-reimbursement-amount/",
           "title": "Progressive Insurance Towing Reimbursement Amount: What You'll Get Back | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 1,
-          "bounceRate": 100.0,
+          "avgDur": 8,
+          "bounceRate": 75.0,
           "sessions": 4
         },
         {
-          "rank": 10,
+          "rank": 13,
           "page": "/towing-cost-dallas-texas/",
           "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 3,
@@ -2221,7 +2231,7 @@
           "sessions": 3
         },
         {
-          "rank": 11,
+          "rank": 14,
           "page": "/towing-cost-los-angeles-california/",
           "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 3,
@@ -2230,16 +2240,7 @@
           "sessions": 2
         },
         {
-          "rank": 12,
-          "page": "/towing-cost-seattle-washington/",
-          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 187,
-          "bounceRate": 50.0,
-          "sessions": 4
-        },
-        {
-          "rank": 13,
+          "rank": 15,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
           "pageviews": 3,
@@ -2248,7 +2249,7 @@
           "sessions": 3
         },
         {
-          "rank": 14,
+          "rank": 16,
           "page": "/aaa-towing-coverage-runs-out-what-happens-cost/",
           "title": "AAA Towing Coverage Runs Out: What Happens and Cost | Tow With The Flow",
           "pageviews": 2,
@@ -2257,7 +2258,7 @@
           "sessions": 2
         },
         {
-          "rank": 15,
+          "rank": 17,
           "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
           "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
           "pageviews": 2,
@@ -2266,29 +2267,11 @@
           "sessions": 2
         },
         {
-          "rank": 16,
-          "page": "/about/",
-          "title": "About Tow With The Flow | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 17,
-          "bounceRate": 0.0,
-          "sessions": 1
-        },
-        {
-          "rank": 17,
+          "rank": 18,
           "page": "/allstate-roadside-assistance-towing-distance-covered/",
           "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 198,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 18,
-          "page": "/contact/",
-          "title": "Contact | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 4,
           "bounceRate": 0.0,
           "sessions": 2
         },
@@ -2307,7 +2290,7 @@
           "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 178,
-          "bounceRate": 50.0,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -2324,8 +2307,8 @@
           "page": "/tow-truck-near-me-accepting-credit-card/",
           "title": "Tow Truck Near Me Accepting Credit Card: How to Pay Without Cash | Tow With The Flow",
           "pageviews": 2,
-          "avgDur": 15,
-          "bounceRate": 50.0,
+          "avgDur": 849,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -2387,8 +2370,8 @@
           "page": "/costco-auto-insurance-covers-towing-how-much/",
           "title": "Costco Auto Insurance Covers Towing How Much: Coverage Limits Explained | Tow With The Flow",
           "pageviews": 1,
-          "avgDur": 0,
-          "bounceRate": 100.0,
+          "avgDur": 53,
+          "bounceRate": 0.0,
           "sessions": 1
         },
         {
@@ -2404,28 +2387,23 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 71,
-          "pct": 55.0
+          "sessions": 74,
+          "pct": 56.5
         },
         {
           "channel": "Direct",
-          "sessions": 47,
-          "pct": 36.4
+          "sessions": 49,
+          "pct": 37.4
         },
         {
           "channel": "Unassigned",
           "sessions": 5,
-          "pct": 3.9
-        },
-        {
-          "channel": "Cross-network",
-          "sessions": 3,
-          "pct": 2.3
+          "pct": 3.8
         },
         {
           "channel": "AI Assistant",
           "sessions": 2,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "channel": "Referral",
@@ -2437,32 +2415,32 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 47,
-          "pct": 36.4
+          "sessions": 49,
+          "pct": 37.4
         },
         {
           "source": "bing",
           "medium": "organic",
-          "sessions": 29,
-          "pct": 22.5
+          "sessions": 30,
+          "pct": 22.9
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 19,
-          "pct": 14.7
+          "pct": 14.5
         },
         {
           "source": "google",
           "medium": "organic",
           "sessions": 12,
-          "pct": 9.3
+          "pct": 9.2
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 10,
-          "pct": 7.8
+          "sessions": 12,
+          "pct": 9.2
         },
         {
           "source": "(not set)",
@@ -2471,16 +2449,10 @@
           "pct": 3.1
         },
         {
-          "source": "(data not available)",
-          "medium": "(data not available)",
-          "sessions": 3,
-          "pct": 2.3
-        },
-        {
           "source": "copilot.com",
           "medium": "ai-assistant",
           "sessions": 2,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "source": "chatgpt.com",
@@ -2504,7 +2476,7 @@
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 97
+          "sessions": 100
         },
         {
           "country": "(not set)",
@@ -2574,15 +2546,15 @@
       "topCities": [
         {
           "city": "(not set)",
-          "sessions": 18
+          "sessions": 21
+        },
+        {
+          "city": "Seattle",
+          "sessions": 5
         },
         {
           "city": "Boardman",
           "sessions": 4
-        },
-        {
-          "city": "",
-          "sessions": 3
         },
         {
           "city": "Atlanta",
@@ -2601,26 +2573,26 @@
           "sessions": 3
         },
         {
-          "city": "Seattle",
-          "sessions": 3
-        },
-        {
           "city": "Warren",
           "sessions": 3
         },
         {
           "city": "Ashburn",
           "sessions": 2
+        },
+        {
+          "city": "Boston",
+          "sessions": 2
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 75
+          "sessions": 76
         },
         {
           "device": "mobile",
-          "sessions": 51
+          "sessions": 53
         }
       ],
       "browsers": [
@@ -2630,11 +2602,11 @@
         },
         {
           "browser": "Safari",
-          "sessions": 30
+          "sessions": 32
         },
         {
           "browser": "Edge",
-          "sessions": 28
+          "sessions": 29
         },
         {
           "browser": "Firefox",
@@ -2648,11 +2620,11 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 57
+          "sessions": 58
         },
         {
           "os": "iOS",
-          "sessions": 32
+          "sessions": 34
         },
         {
           "os": "Android",
@@ -2669,12 +2641,12 @@
       ]
     },
     "365d": {
-      "pageviews": 141,
-      "sessions": 126,
-      "avgSessionDur": 58,
-      "bounceRate": 0.5952380952380952,
-      "newUsers": 121,
-      "returningUsers": 0,
+      "pageviews": 145,
+      "sessions": 129,
+      "avgSessionDur": 71,
+      "bounceRate": 0.5503875968992248,
+      "newUsers": 123,
+      "returningUsers": 1,
       "daily": [
         {
           "date": "20260416",
@@ -2843,6 +2815,10 @@
         {
           "date": "20260715",
           "pageviews": 11
+        },
+        {
+          "date": "20260716",
+          "pageviews": 4
         }
       ],
       "topPages": [
@@ -2861,7 +2837,7 @@
           "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 10,
           "avgDur": 59,
-          "bounceRate": 54.5,
+          "bounceRate": 45.5,
           "sessions": 11
         },
         {
@@ -2878,8 +2854,8 @@
           "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
           "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
           "pageviews": 7,
-          "avgDur": 70,
-          "bounceRate": 42.9,
+          "avgDur": 77,
+          "bounceRate": 28.6,
           "sessions": 7
         },
         {
@@ -2902,6 +2878,15 @@
         },
         {
           "rank": 7,
+          "page": "/contact/",
+          "title": "Contact | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 8,
+          "bounceRate": 33.3,
+          "sessions": 3
+        },
+        {
+          "rank": 8,
           "page": "/progressive-insurance-towing-coverage-how-many-times/",
           "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
           "pageviews": 4,
@@ -2910,25 +2895,43 @@
           "sessions": 4
         },
         {
-          "rank": 8,
-          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
-          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+          "rank": 9,
+          "page": "/towing-cost-seattle-washington/",
+          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 126,
+          "bounceRate": 66.7,
+          "sessions": 6
+        },
+        {
+          "rank": 10,
+          "page": "/about/",
+          "title": "About Tow With The Flow | Tow With The Flow",
           "pageviews": 3,
           "avgDur": 10,
           "bounceRate": 50.0,
           "sessions": 2
         },
         {
-          "rank": 9,
+          "rank": 11,
+          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
+          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 28,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 12,
           "page": "/progressive-insurance-towing-reimbursement-amount/",
           "title": "Progressive Insurance Towing Reimbursement Amount: What You'll Get Back | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 1,
-          "bounceRate": 100.0,
+          "avgDur": 8,
+          "bounceRate": 75.0,
           "sessions": 4
         },
         {
-          "rank": 10,
+          "rank": 13,
           "page": "/towing-cost-dallas-texas/",
           "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 3,
@@ -2937,7 +2940,7 @@
           "sessions": 3
         },
         {
-          "rank": 11,
+          "rank": 14,
           "page": "/towing-cost-los-angeles-california/",
           "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
           "pageviews": 3,
@@ -2946,16 +2949,7 @@
           "sessions": 2
         },
         {
-          "rank": 12,
-          "page": "/towing-cost-seattle-washington/",
-          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 187,
-          "bounceRate": 50.0,
-          "sessions": 4
-        },
-        {
-          "rank": 13,
+          "rank": 15,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
           "pageviews": 3,
@@ -2964,7 +2958,7 @@
           "sessions": 3
         },
         {
-          "rank": 14,
+          "rank": 16,
           "page": "/aaa-towing-coverage-runs-out-what-happens-cost/",
           "title": "AAA Towing Coverage Runs Out: What Happens and Cost | Tow With The Flow",
           "pageviews": 2,
@@ -2973,7 +2967,7 @@
           "sessions": 2
         },
         {
-          "rank": 15,
+          "rank": 17,
           "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
           "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
           "pageviews": 2,
@@ -2982,29 +2976,11 @@
           "sessions": 2
         },
         {
-          "rank": 16,
-          "page": "/about/",
-          "title": "About Tow With The Flow | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 17,
-          "bounceRate": 0.0,
-          "sessions": 1
-        },
-        {
-          "rank": 17,
+          "rank": 18,
           "page": "/allstate-roadside-assistance-towing-distance-covered/",
           "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 198,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 18,
-          "page": "/contact/",
-          "title": "Contact | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 4,
           "bounceRate": 0.0,
           "sessions": 2
         },
@@ -3023,7 +2999,7 @@
           "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 178,
-          "bounceRate": 50.0,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -3040,8 +3016,8 @@
           "page": "/tow-truck-near-me-accepting-credit-card/",
           "title": "Tow Truck Near Me Accepting Credit Card: How to Pay Without Cash | Tow With The Flow",
           "pageviews": 2,
-          "avgDur": 15,
-          "bounceRate": 50.0,
+          "avgDur": 849,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -3103,8 +3079,8 @@
           "page": "/costco-auto-insurance-covers-towing-how-much/",
           "title": "Costco Auto Insurance Covers Towing How Much: Coverage Limits Explained | Tow With The Flow",
           "pageviews": 1,
-          "avgDur": 0,
-          "bounceRate": 100.0,
+          "avgDur": 53,
+          "bounceRate": 0.0,
           "sessions": 1
         },
         {
@@ -3120,28 +3096,23 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 71,
-          "pct": 55.0
+          "sessions": 74,
+          "pct": 56.5
         },
         {
           "channel": "Direct",
-          "sessions": 47,
-          "pct": 36.4
+          "sessions": 49,
+          "pct": 37.4
         },
         {
           "channel": "Unassigned",
           "sessions": 5,
-          "pct": 3.9
-        },
-        {
-          "channel": "Cross-network",
-          "sessions": 3,
-          "pct": 2.3
+          "pct": 3.8
         },
         {
           "channel": "AI Assistant",
           "sessions": 2,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "channel": "Referral",
@@ -3153,32 +3124,32 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 47,
-          "pct": 36.4
+          "sessions": 49,
+          "pct": 37.4
         },
         {
           "source": "bing",
           "medium": "organic",
-          "sessions": 29,
-          "pct": 22.5
+          "sessions": 30,
+          "pct": 22.9
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 19,
-          "pct": 14.7
+          "pct": 14.5
         },
         {
           "source": "google",
           "medium": "organic",
           "sessions": 12,
-          "pct": 9.3
+          "pct": 9.2
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 10,
-          "pct": 7.8
+          "sessions": 12,
+          "pct": 9.2
         },
         {
           "source": "(not set)",
@@ -3187,16 +3158,10 @@
           "pct": 3.1
         },
         {
-          "source": "(data not available)",
-          "medium": "(data not available)",
-          "sessions": 3,
-          "pct": 2.3
-        },
-        {
           "source": "copilot.com",
           "medium": "ai-assistant",
           "sessions": 2,
-          "pct": 1.6
+          "pct": 1.5
         },
         {
           "source": "chatgpt.com",
@@ -3220,7 +3185,7 @@
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 97
+          "sessions": 100
         },
         {
           "country": "(not set)",
@@ -3290,15 +3255,15 @@
       "topCities": [
         {
           "city": "(not set)",
-          "sessions": 18
+          "sessions": 21
+        },
+        {
+          "city": "Seattle",
+          "sessions": 5
         },
         {
           "city": "Boardman",
           "sessions": 4
-        },
-        {
-          "city": "",
-          "sessions": 3
         },
         {
           "city": "Atlanta",
@@ -3317,26 +3282,26 @@
           "sessions": 3
         },
         {
-          "city": "Seattle",
-          "sessions": 3
-        },
-        {
           "city": "Warren",
           "sessions": 3
         },
         {
           "city": "Ashburn",
           "sessions": 2
+        },
+        {
+          "city": "Boston",
+          "sessions": 2
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 75
+          "sessions": 76
         },
         {
           "device": "mobile",
-          "sessions": 51
+          "sessions": 53
         }
       ],
       "browsers": [
@@ -3346,11 +3311,11 @@
         },
         {
           "browser": "Safari",
-          "sessions": 30
+          "sessions": 32
         },
         {
           "browser": "Edge",
-          "sessions": 28
+          "sessions": 29
         },
         {
           "browser": "Firefox",
@@ -3364,11 +3329,11 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 57
+          "sessions": 58
         },
         {
           "os": "iOS",
-          "sessions": 32
+          "sessions": 34
         },
         {
           "os": "Android",
@@ -3385,5 +3350,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-07-16T08:34:43.506962+00:00"
+  "lastUpdated": "2026-07-17T08:28:26.203633+00:00"
 }
