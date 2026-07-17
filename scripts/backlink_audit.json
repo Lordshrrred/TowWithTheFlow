@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T17:37:54.557834+00:00",
+  "generated_at": "2026-07-17T21:13:26.879953+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -6701,6 +6701,33 @@
         "verified": true
       }
     },
+    "towing-cost-in-los-angeles-california-flatbed": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-los-angeles-california.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-los-angeles-california-flatbed-what-youll-pay-right-now-quick-guide-37lo",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-los-angeles-california-flatbed-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822408437691531264/towing-cost-in-los-angeles-california-flatbed",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/17/towing-cost-in-los-angeles-california-flatbed/",
+        "verified": true
+      }
+    },
     "towing-cost-in-los-angeles-california-freeway": {
       "blog": {
         "reason": "ok",
@@ -8500,24 +8527,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 327,
-      "verified": 327
+      "checked": 328,
+      "verified": 328
     },
     "dev": {
-      "checked": 256,
-      "verified": 256
+      "checked": 257,
+      "verified": 257
     },
     "feeder": {
+      "checked": 325,
+      "verified": 325
+    },
+    "tumblr": {
       "checked": 324,
       "verified": 324
     },
-    "tumblr": {
-      "checked": 323,
-      "verified": 323
-    },
     "wordpress": {
-      "checked": 327,
-      "verified": 327
+      "checked": 328,
+      "verified": 328
     }
   }
 }
