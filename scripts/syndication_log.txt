@@ -12658,3 +12658,33 @@
 [2026-07-17 08:15:25] === SYNDICATE DONE: towing-cost-atlanta-georgia-after-accident | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-17 08:15:25] SYNCED | towing-cost-atlanta-georgia-after-accident marked in synced-posts.txt
 [2026-07-17 08:15:25] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-07-17 09:54:17] === SYNDICATE START: does-aaa-cover-towing-after-accident-or-only-breakdowns ===
+[2026-07-17 09:54:17] PREFLIGHT | title: Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For
+[2026-07-17 09:54:17] PREFLIGHT | date: 2026-07-17
+[2026-07-17 09:54:17] PREFLIGHT | timestamp: 2026-07-17 09:54:17
+[2026-07-17 09:54:17] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-07-17 09:54:17] PREFLIGHT | TUMBLR:  configured
+[2026-07-17 09:54:17] PREFLIGHT | BLOGGER: configured
+[2026-07-17 09:54:17] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-07-17 09:54:17] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-07-17 09:54:17] DEVTO | does-aaa-cover-towing-after-accident-or-only-breakdowns | START
+[2026-07-17 09:54:17] DEVTO | does-aaa-cover-towing-after-accident-or-only-breakdowns | account=TWTF1
+[2026-07-17 09:54:18] DEVTO | does-aaa-cover-towing-after-accident-or-only-breakdowns | SUCCESS | https://dev.to/roadsideamericatowing/does-aaa-cover-towing-after-an-accident-or-only-breakdowns-what-youre-actually-covered-for-1bc6
+[2026-07-17 09:54:18] --- waiting 60s before next platform ---
+[2026-07-17 09:55:18] TUMBLR | does-aaa-cover-towing-after-accident-or-only-breakdowns | START
+[2026-07-17 09:55:19] TUMBLR | does-aaa-cover-towing-after-accident-or-only-breakdowns | SUCCESS | https://towwiththeflow.tumblr.com/post/822402056257224704
+[2026-07-17 09:55:19] --- waiting 60s before next platform ---
+[2026-07-17 09:56:19] BLOGGER | does-aaa-cover-towing-after-accident-or-only-breakdowns | START
+[2026-07-17 09:56:19] BLOGGER | does-aaa-cover-towing-after-accident-or-only-breakdowns | step 1/3: refreshing access token
+[2026-07-17 09:56:19] BLOGGER | does-aaa-cover-towing-after-accident-or-only-breakdowns | step 2/3: converting markdown to HTML
+[2026-07-17 09:56:19] BLOGGER | does-aaa-cover-towing-after-accident-or-only-breakdowns | step 3/3: posting to blog 1959471973457654666
+[2026-07-17 09:56:19] BLOGGER | does-aaa-cover-towing-after-accident-or-only-breakdowns | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/does-aaa-cover-towing-after-accident-or.html
+[2026-07-17 09:56:19] --- waiting 60s before next platform ---
+[2026-07-17 09:57:19] WORDPRESS | does-aaa-cover-towing-after-accident-or-only-breakdowns | START
+[2026-07-17 09:57:28] WORDPRESS | does-aaa-cover-towing-after-accident-or-only-breakdowns | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/07/17/does-aaa-cover-towing-after-accident-or-only-breakdowns/
+[2026-07-17 09:57:28] --- waiting 60s before next platform ---
+[2026-07-17 09:58:28] FEEDER | does-aaa-cover-towing-after-accident-or-only-breakdowns | START
+[2026-07-17 09:58:29] FEEDER | does-aaa-cover-towing-after-accident-or-only-breakdowns | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/does-aaa-cover-towing-after-accident-or-only-breakdowns-advice/
+[2026-07-17 09:58:29] === SYNDICATE DONE: does-aaa-cover-towing-after-accident-or-only-breakdowns | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-07-17 09:58:29] SYNCED | does-aaa-cover-towing-after-accident-or-only-breakdowns marked in synced-posts.txt
+[2026-07-17 09:58:29] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
