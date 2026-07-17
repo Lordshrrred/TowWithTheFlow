@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-16T09:00:15.189336+00:00",
+  "generated_at": "2026-07-17T08:54:41.197418+00:00",
   "keywords": {
     "total": 802,
-    "live": 343,
-    "pending": 459,
+    "live": 347,
+    "pending": 455,
     "local": {
-      "live": 128,
-      "pending": 60
+      "live": 130,
+      "pending": 58
     },
     "pain_point": {
-      "live": 215,
-      "pending": 399
+      "live": 217,
+      "pending": 397
     }
   },
   "next_targets": [
-    {
-      "keyword": "tire blowout on highway steps to take",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does insurance cover towing if car is not driveable",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car overheating on highway should i pull over immediately",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "car won't start in cold weather tow or jump start",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "engine oil pressure warning light came on while driving",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "geico roadside assistance towing distance limit",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 153
+      "count": 155
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 41
+      "count": 42
     },
     {
       "slug": "battery-starting",
@@ -94,7 +94,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 11
+      "count": 12
     },
     {
       "slug": "towing-logistics",
@@ -126,27 +126,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-16T06:35:21.828846+00:00",
+    "generated_at": "2026-07-17T06:31:32.849041+00:00",
     "platforms": {
       "blog": {
-        "checked": 320,
-        "verified": 320
+        "checked": 324,
+        "verified": 324
       },
       "dev": {
-        "checked": 249,
-        "verified": 249
+        "checked": 253,
+        "verified": 253
       },
       "feeder": {
-        "checked": 317,
-        "verified": 317
+        "checked": 321,
+        "verified": 321
       },
       "tumblr": {
-        "checked": 316,
-        "verified": 316
-      },
-      "wordpress": {
         "checked": 320,
         "verified": 320
+      },
+      "wordpress": {
+        "checked": 324,
+        "verified": 324
       }
     }
   },
@@ -154,7 +154,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-16T09:00:15.111281+00:00",
+    "generated_at": "2026-07-17T08:54:41.119472+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -166,14 +166,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 15,
+        "rows": 16,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 78,
+        "rows": 82,
         "source": "ga4",
         "status": "ok"
       }
@@ -187,38 +187,38 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "10 Search Console impressions match this asset pattern.",
+        "reason": "12 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 6,
-    "top_query_count": 15,
+    "top_query_count": 16,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-16T09:00:15.205695+00:00",
+    "generatedAt": "2026-07-17T08:54:41.214199+00:00",
     "keywordGeneration": {
-      "currentInventory": 459,
-      "liveKeywords": 343,
-      "estimatedDaysRemaining": 114.8,
+      "currentInventory": 455,
+      "liveKeywords": 347,
+      "estimatedDaysRemaining": 113.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "114.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "113.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
       "backlogPosts": 74,
       "backlogUnits": 78,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-16T06:35:21.828846+00:00",
+      "generatedAt": "2026-07-17T06:31:32.849041+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.5,
+      "completedPerDay": 20.4,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": -0.5,
-      "estimatedCatchUpDays": 156.0,
-      "reason": "Backlinks are catching up by 0.5 platform links/day."
+      "netBacklinkUnitsPerDay": -0.4,
+      "estimatedCatchUpDays": 195.0,
+      "reason": "Backlinks are catching up by 0.4 platform links/day."
     },
     "curatedExpansion": {
       "supported": true,
