@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T17:22:02.215086+00:00",
+  "generated_at": "2026-07-18T21:13:12.402608+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -6566,6 +6566,33 @@
         "verified": true
       }
     },
+    "towing-cost-in-chicago-illinois-weekend-rate": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-chicago-illinois-weekend.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-chicago-illinois-weekend-rate-what-youll-pay-right-now-what-drivers-should-know-30ik",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-chicago-illinois-weekend-rate-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822498569234890752/towing-cost-in-chicago-illinois-weekend-rate",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/18/towing-cost-in-chicago-illinois-weekend-rate/",
+        "verified": true
+      }
+    },
     "towing-cost-in-chicago-illinois-winter-emergency": {
       "blog": {
         "reason": "ok",
@@ -8608,24 +8635,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 331,
-      "verified": 331
+      "checked": 332,
+      "verified": 332
     },
     "dev": {
-      "checked": 260,
-      "verified": 260
+      "checked": 261,
+      "verified": 261
     },
     "feeder": {
+      "checked": 329,
+      "verified": 329
+    },
+    "tumblr": {
       "checked": 328,
       "verified": 328
     },
-    "tumblr": {
-      "checked": 327,
-      "verified": 327
-    },
     "wordpress": {
-      "checked": 331,
-      "verified": 331
+      "checked": 332,
+      "verified": 332
     }
   }
 }
