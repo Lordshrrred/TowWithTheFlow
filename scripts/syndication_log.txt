@@ -12778,3 +12778,33 @@
 [2026-07-18 08:00:09] === SYNDICATE DONE: towing-cost-in-dallas-texas-hook-and-chain-vs-flatbed | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-18 08:00:09] SYNCED | towing-cost-in-dallas-texas-hook-and-chain-vs-flatbed marked in synced-posts.txt
 [2026-07-18 08:00:09] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-07-18 09:28:56] === SYNDICATE START: car-broke-down-on-road-trip-middle-of-nowhere-what-to-do ===
+[2026-07-18 09:28:56] PREFLIGHT | title: Car Broke Down on a Road Trip in the Middle of Nowhere: What to Do
+[2026-07-18 09:28:56] PREFLIGHT | date: 2026-07-18
+[2026-07-18 09:28:56] PREFLIGHT | timestamp: 2026-07-18 09:28:56
+[2026-07-18 09:28:56] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-07-18 09:28:56] PREFLIGHT | TUMBLR:  configured
+[2026-07-18 09:28:56] PREFLIGHT | BLOGGER: configured
+[2026-07-18 09:28:56] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-07-18 09:28:56] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-07-18 09:28:56] DEVTO | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | START
+[2026-07-18 09:28:56] DEVTO | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | account=TWTF1
+[2026-07-18 09:28:56] DEVTO | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | SUCCESS | https://dev.to/roadsideamericatowing/car-broke-down-on-a-road-trip-in-the-middle-of-nowhere-what-to-do-quick-guide-4gn0
+[2026-07-18 09:28:56] --- waiting 60s before next platform ---
+[2026-07-18 09:29:56] TUMBLR | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | START
+[2026-07-18 09:29:56] TUMBLR | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | SUCCESS | https://towwiththeflow.tumblr.com/post/822491057002627072
+[2026-07-18 09:29:56] --- waiting 60s before next platform ---
+[2026-07-18 09:30:56] BLOGGER | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | START
+[2026-07-18 09:30:56] BLOGGER | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | step 1/3: refreshing access token
+[2026-07-18 09:30:56] BLOGGER | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | step 2/3: converting markdown to HTML
+[2026-07-18 09:30:56] BLOGGER | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | step 3/3: posting to blog 1959471973457654666
+[2026-07-18 09:30:57] BLOGGER | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-broke-down-on-road-trip-in-middle.html
+[2026-07-18 09:30:57] --- waiting 60s before next platform ---
+[2026-07-18 09:31:57] WORDPRESS | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | START
+[2026-07-18 09:32:06] WORDPRESS | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/07/18/car-broke-down-on-road-trip-middle-of-nowhere-what-to-do/
+[2026-07-18 09:32:06] --- waiting 60s before next platform ---
+[2026-07-18 09:33:06] FEEDER | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | START
+[2026-07-18 09:33:06] FEEDER | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-on-road-trip-middle-of-nowhere-what-to-do-advice/
+[2026-07-18 09:33:06] === SYNDICATE DONE: car-broke-down-on-road-trip-middle-of-nowhere-what-to-do | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-07-18 09:33:06] SYNCED | car-broke-down-on-road-trip-middle-of-nowhere-what-to-do marked in synced-posts.txt
+[2026-07-18 09:33:06] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
