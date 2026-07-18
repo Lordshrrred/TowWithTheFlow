@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T09:52:21.150116+00:00",
+  "generated_at": "2026-07-18T13:55:49.841611+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2514,6 +2514,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/22/car-wont-start-clicking-noise-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-wont-start-cold-morning-dead-battery-or-something-else": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-wont-start-cold-morning-dead.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-wont-start-cold-morning-dead-battery-or-something-else-roadside-tips-3o1d",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-cold-morning-dead-battery-or-something-else-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822476004382687233/car-wont-start-cold-morning-dead-battery-or-something-else",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/18/car-wont-start-cold-morning-dead-battery-or-something-else/",
         "verified": true
       }
     },
@@ -8527,24 +8554,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 328,
-      "verified": 328
+      "checked": 329,
+      "verified": 329
     },
     "dev": {
-      "checked": 257,
-      "verified": 257
+      "checked": 258,
+      "verified": 258
     },
     "feeder": {
+      "checked": 326,
+      "verified": 326
+    },
+    "tumblr": {
       "checked": 325,
       "verified": 325
     },
-    "tumblr": {
-      "checked": 324,
-      "verified": 324
-    },
     "wordpress": {
-      "checked": 328,
-      "verified": 328
+      "checked": 329,
+      "verified": 329
     }
   }
 }
