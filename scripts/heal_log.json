@@ -9,5 +9,27 @@
         "diagnosis": "Claude API unavailable \u2014 manual investigation required."
       }
     }
+  },
+  {
+    "healed_at": "2026-07-19T08:33:59.985623+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key stored in GitHub secret DevTO_TWTF1_API_Key has expired or been revoked, causing 401 Unauthorized errors on all Dev.to syndication attempts. The health check script correctly identifies this as an authentication failure requiring secret rotation.",
+        "instructions": [
+          "Log into your Dev.to account at https://dev.to/settings/account",
+          "Navigate to Settings \u2192 Extensions \u2192 API Keys",
+          "Revoke the current API key associated with the roadsideamericatowing account (if present)",
+          "Generate a new API key and copy it",
+          "Go to your GitHub repository settings \u2192 Secrets and variables \u2192 Actions",
+          "Update the secret DevTO_TWTF1_API_Key with the new Dev.to API key value",
+          "If you have a DevTO_TWTF2_API_Key configured, verify it is also valid by testing at https://dev.to/api/articles/me/published with the header 'api-key: [key]'",
+          "Re-run the syndication system for the next article to verify the fix"
+        ],
+        "status": "human_required"
+      }
+    }
   }
 ]
