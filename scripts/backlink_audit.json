@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T17:24:06.213821+00:00",
+  "generated_at": "2026-07-19T21:13:35.507233+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -8241,6 +8241,33 @@
         "verified": true
       }
     },
+    "towing-cost-seattle-washington-flatbed-tow-truck": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-seattle-washington.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-seattle-washington-flatbed-tow-truck-what-youll-pay-right-now-quick-guide-3ejn",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-seattle-washington-flatbed-tow-truck-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822589277905010688/towing-cost-seattle-washington-flatbed-tow-truck",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/19/towing-cost-seattle-washington-flatbed-tow-truck/",
+        "verified": true
+      }
+    },
     "towing-cost-seattle-washington-no-insurance-rates": {
       "blog": {
         "reason": "ok",
@@ -8716,24 +8743,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 335,
-      "verified": 335
+      "checked": 336,
+      "verified": 336
     },
     "dev": {
-      "checked": 264,
-      "verified": 264
+      "checked": 265,
+      "verified": 265
     },
     "feeder": {
+      "checked": 333,
+      "verified": 333
+    },
+    "tumblr": {
       "checked": 332,
       "verified": 332
     },
-    "tumblr": {
-      "checked": 331,
-      "verified": 331
-    },
     "wordpress": {
-      "checked": 335,
-      "verified": 335
+      "checked": 336,
+      "verified": 336
     }
   }
 }
