@@ -111,3 +111,9 @@
 [2026-07-19 15:41:09] OK | should-i-call-a-tow-truck | devto | https://dev.to/denverroadsideelitetowing/should-i-call-a-tow-truck-86i
 [2026-07-19 15:41:30] OK | should-i-call-a-tow-truck | feeder | https://lordshrrred.github.io/TWTF_Feeder/should-i-call-a-tow-truck-tool/
 [2026-07-19 15:41:30] RUN SUMMARY | generated=0 reused=0 deterministic=2 generation_failed=0 generation_skipped=0
+[2026-07-20 16:16:48] Eligible tools: 10
+[2026-07-20 16:16:49] COMPANION | dead-battery-troubleshooter | blogger | generating model=claude-haiku-4-5-20251001
+[2026-07-20 16:17:01] COMPANION | dead-battery-troubleshooter | blogger | cached key=939f5dcb5a6bc74164cf7f9a title="Why Your Car Won't Start: Signs It's More Than a Dead Battery"
+[2026-07-20 16:17:02] OK | dead-battery-troubleshooter | blogger | https://towingandflowingroadsidedenver.blogspot.com/2026/07/why-your-car-wont-start-signs-its-more.html
+[2026-07-20 16:17:22] FAIL | dead-battery-troubleshooter | wordpress | companion skipped: per-run companion generation cap reached
+[2026-07-20 16:17:22] RUN SUMMARY | generated=1 reused=0 deterministic=0 generation_failed=0 generation_skipped=1

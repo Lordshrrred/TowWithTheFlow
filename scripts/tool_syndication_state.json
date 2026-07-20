@@ -24,6 +24,18 @@
       "status": "success",
       "url": "https://towwiththeflowyo.wordpress.com/2026/07/13/brake-warning-decision-guide/"
     },
+    "dead-battery-troubleshooter::blogger": {
+      "backlink_verified": false,
+      "checked_at": "2026-07-20T16:17:02.139371+00:00",
+      "companion_cache_key": "939f5dcb5a6bc74164cf7f9a",
+      "companion_model": "claude-haiku-4-5-20251001",
+      "companion_status": "generated",
+      "companion_title": "Why Your Car Won't Start: Signs It's More Than a Dead Battery",
+      "format": "companion_article",
+      "link_type": "followed_backlink",
+      "status": "success",
+      "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/why-your-car-wont-start-signs-its-more.html"
+    },
     "dead-battery-troubleshooter::devto": {
       "backlink_verification": {
         "contextual_link_found": true,
@@ -59,6 +71,14 @@
       "link_type": "nofollow_distribution",
       "status": "success",
       "url": "https://towwiththeflow.tumblr.com/post/821808452300046336"
+    },
+    "dead-battery-troubleshooter::wordpress": {
+      "checked_at": "2026-07-20T16:17:22.141093+00:00",
+      "companion_cache_key": "per-run companion generation cap reached",
+      "companion_status": "skipped",
+      "error": "COMPANION skipped: per-run companion generation cap reached",
+      "format": "companion_article",
+      "status": "failed"
     },
     "engine-overheating-assistant::blogger": {
       "backlink_verification": {
@@ -307,18 +327,18 @@
     }
   },
   "summary": {
-    "companion_articles_cached": 4,
-    "companion_articles_published": 4,
+    "companion_articles_cached": 5,
+    "companion_articles_published": 5,
     "deterministic_teasers_prepared": 6,
     "run_stats": {
-      "companion_generated": 0,
+      "companion_generated": 1,
       "companion_generation_failed": 0,
-      "companion_generation_skipped": 0,
+      "companion_generation_skipped": 1,
       "companion_reused": 0,
-      "deterministic_teasers": 2,
-      "estimated_companion_input_tokens": 0,
-      "estimated_companion_output_tokens": 0
+      "deterministic_teasers": 0,
+      "estimated_companion_input_tokens": 386,
+      "estimated_companion_output_tokens": 988
     },
-    "updated_at": "2026-07-19T15:41:30.604272+00:00"
+    "updated_at": "2026-07-20T16:17:22.142153+00:00"
   }
 }
