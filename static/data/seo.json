@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-19T08:56:46.950186+00:00",
+  "generated_at": "2026-07-20T09:44:45.463805+00:00",
   "keywords": {
     "total": 802,
-    "live": 355,
-    "pending": 447,
+    "live": 359,
+    "pending": 443,
     "local": {
-      "live": 134,
-      "pending": 54
+      "live": 136,
+      "pending": 52
     },
     "pain_point": {
-      "live": 221,
-      "pending": 393
+      "live": 223,
+      "pending": 391
     }
   },
   "next_targets": [
-    {
-      "keyword": "car making burning smell while driving emergency steps",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "electric vehicle ran out of charge on highway tow or charge",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car stuck in ditch on highway who pays for tow",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "car stuck in mud how to get out or call tow",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car won't shift out of park tow needed",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "fuel pump failed on highway signs and next steps",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 159
+      "count": 161
     },
     {
       "slug": "engine-mechanical",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 19
+      "count": 20
     },
     {
       "slug": "tire-wheel",
@@ -117,6 +117,11 @@
       "count": 5
     },
     {
+      "slug": "vehicle-safety",
+      "label": "Vehicle Safety",
+      "count": 1
+    },
+    {
       "slug": "emergency-checklists",
       "label": "Emergency Checklists",
       "count": 1
@@ -131,27 +136,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-19T06:46:36.370931+00:00",
+    "generated_at": "2026-07-20T07:36:18.582016+00:00",
     "platforms": {
       "blog": {
-        "checked": 332,
-        "verified": 332
+        "checked": 336,
+        "verified": 336
       },
       "dev": {
-        "checked": 261,
-        "verified": 261
+        "checked": 265,
+        "verified": 265
       },
       "feeder": {
-        "checked": 329,
-        "verified": 329
+        "checked": 333,
+        "verified": 333
       },
       "tumblr": {
-        "checked": 328,
-        "verified": 328
-      },
-      "wordpress": {
         "checked": 332,
         "verified": 332
+      },
+      "wordpress": {
+        "checked": 336,
+        "verified": 336
       }
     }
   },
@@ -159,7 +164,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-19T08:56:46.853989+00:00",
+    "generated_at": "2026-07-20T09:44:45.375349+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -178,7 +183,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 84,
+        "rows": 90,
         "source": "ga4",
         "status": "ok"
       }
@@ -201,29 +206,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-19T08:56:46.967092+00:00",
+    "generatedAt": "2026-07-20T09:44:45.481430+00:00",
     "keywordGeneration": {
-      "currentInventory": 447,
-      "liveKeywords": 355,
-      "estimatedDaysRemaining": 111.8,
+      "currentInventory": 443,
+      "liveKeywords": 359,
+      "estimatedDaysRemaining": 110.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "111.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "110.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
       "backlogPosts": 74,
       "backlogUnits": 78,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-19T06:46:36.370931+00:00",
+      "generatedAt": "2026-07-20T07:36:18.582016+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.1,
+      "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": -0.1,
-      "estimatedCatchUpDays": 780.0,
-      "reason": "Backlinks are catching up by 0.1 platform links/day."
+      "netBacklinkUnitsPerDay": 0.0,
+      "estimatedCatchUpDays": null,
+      "reason": "Backlinks are keeping pace, but not reducing the historical backlog."
     },
     "curatedExpansion": {
       "supported": true,
