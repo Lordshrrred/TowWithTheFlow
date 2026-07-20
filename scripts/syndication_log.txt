@@ -13019,3 +13019,33 @@
 [2026-07-20 08:41:25] === SYNDICATE DONE: towing-cost-in-denver-colorado-at-night | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-20 08:41:25] SYNCED | towing-cost-in-denver-colorado-at-night marked in synced-posts.txt
 [2026-07-20 08:41:25] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-07-20 10:08:00] === SYNDICATE START: car-wont-start-in-cold-weather-tow-or-jump-start-2 ===
+[2026-07-20 10:08:00] PREFLIGHT | title: Car Won't Start in Cold Weather: Tow or Jump Start?
+[2026-07-20 10:08:00] PREFLIGHT | date: 2026-07-20
+[2026-07-20 10:08:00] PREFLIGHT | timestamp: 2026-07-20 10:08:00
+[2026-07-20 10:08:00] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-07-20 10:08:00] PREFLIGHT | TUMBLR:  configured
+[2026-07-20 10:08:00] PREFLIGHT | BLOGGER: configured
+[2026-07-20 10:08:00] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-07-20 10:08:00] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-07-20 10:08:00] DEVTO | car-wont-start-in-cold-weather-tow-or-jump-start-2 | START
+[2026-07-20 10:08:00] DEVTO | car-wont-start-in-cold-weather-tow-or-jump-start-2 | account=TWTF1
+[2026-07-20 10:08:01] DEVTO | car-wont-start-in-cold-weather-tow-or-jump-start-2 | SUCCESS | https://dev.to/roadsideamericatowing/car-wont-start-in-cold-weather-tow-or-jump-start-roadside-tips-4a0b
+[2026-07-20 10:08:01] --- waiting 60s before next platform ---
+[2026-07-20 10:09:01] TUMBLR | car-wont-start-in-cold-weather-tow-or-jump-start-2 | START
+[2026-07-20 10:09:02] TUMBLR | car-wont-start-in-cold-weather-tow-or-jump-start-2 | SUCCESS | https://towwiththeflow.tumblr.com/post/822674709684617216
+[2026-07-20 10:09:02] --- waiting 60s before next platform ---
+[2026-07-20 10:10:02] BLOGGER | car-wont-start-in-cold-weather-tow-or-jump-start-2 | START
+[2026-07-20 10:10:02] BLOGGER | car-wont-start-in-cold-weather-tow-or-jump-start-2 | step 1/3: refreshing access token
+[2026-07-20 10:10:02] BLOGGER | car-wont-start-in-cold-weather-tow-or-jump-start-2 | step 2/3: converting markdown to HTML
+[2026-07-20 10:10:02] BLOGGER | car-wont-start-in-cold-weather-tow-or-jump-start-2 | step 3/3: posting to blog 1959471973457654666
+[2026-07-20 10:10:03] BLOGGER | car-wont-start-in-cold-weather-tow-or-jump-start-2 | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-wont-start-in-cold-weather-tow-or_01673700637.html
+[2026-07-20 10:10:03] --- waiting 60s before next platform ---
+[2026-07-20 10:11:03] WORDPRESS | car-wont-start-in-cold-weather-tow-or-jump-start-2 | START
+[2026-07-20 10:11:10] WORDPRESS | car-wont-start-in-cold-weather-tow-or-jump-start-2 | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/07/20/car-wont-start-in-cold-weather-tow-or-jump-start-2/
+[2026-07-20 10:11:10] --- waiting 60s before next platform ---
+[2026-07-20 10:12:10] FEEDER | car-wont-start-in-cold-weather-tow-or-jump-start-2 | START
+[2026-07-20 10:12:11] FEEDER | car-wont-start-in-cold-weather-tow-or-jump-start-2 | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-in-cold-weather-tow-or-jump-start-2-advice/
+[2026-07-20 10:12:11] === SYNDICATE DONE: car-wont-start-in-cold-weather-tow-or-jump-start-2 | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-07-20 10:12:11] SYNCED | car-wont-start-in-cold-weather-tow-or-jump-start-2 marked in synced-posts.txt
+[2026-07-20 10:12:11] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
