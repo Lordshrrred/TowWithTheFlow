@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T11:18:57.822998+00:00",
+  "generated_at": "2026-07-20T14:38:26.823018+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2150,6 +2150,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/10/car-starts-then-dies-immediately-causes-3/",
+        "verified": true
+      }
+    },
+    "car-stuck-in-ditch-on-highway-who-pays-for-tow": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-stuck-in-ditch-on-highway-who-pays.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-stuck-in-ditch-on-highway-who-pays-for-the-tow-what-drivers-should-know-4ddo",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-stuck-in-ditch-on-highway-who-pays-for-tow-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822661088355205120/car-stuck-in-ditch-on-highway-who-pays-for-tow",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/20/car-stuck-in-ditch-on-highway-who-pays-for-tow/",
         "verified": true
       }
     },
@@ -8743,24 +8770,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 336,
-      "verified": 336
+      "checked": 337,
+      "verified": 337
     },
     "dev": {
-      "checked": 265,
-      "verified": 265
+      "checked": 266,
+      "verified": 266
     },
     "feeder": {
+      "checked": 334,
+      "verified": 334
+    },
+    "tumblr": {
       "checked": 333,
       "verified": 333
     },
-    "tumblr": {
-      "checked": 332,
-      "verified": 332
-    },
     "wordpress": {
-      "checked": 336,
-      "verified": 336
+      "checked": 337,
+      "verified": 337
     }
   }
 }
