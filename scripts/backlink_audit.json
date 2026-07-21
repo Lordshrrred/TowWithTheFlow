@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T17:51:52.702269+00:00",
+  "generated_at": "2026-07-21T21:40:09.327434+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -6091,6 +6091,33 @@
         "verified": true
       }
     },
+    "towing-cost-boston-massachusetts-after-breakdown": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-boston-massachusetts.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-boston-massachusetts-after-breakdown-what-youll-pay-right-now-explained-kag",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-boston-massachusetts-after-breakdown-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822771735829053440/towing-cost-boston-massachusetts-after-breakdown",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/21/towing-cost-boston-massachusetts-after-breakdown/",
+        "verified": true
+      }
+    },
     "towing-cost-boston-massachusetts-urban-rate": {
       "blog": {
         "reason": "ok",
@@ -8932,24 +8959,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 343,
-      "verified": 343
+      "checked": 344,
+      "verified": 344
     },
     "dev": {
-      "checked": 272,
-      "verified": 272
+      "checked": 273,
+      "verified": 273
     },
     "feeder": {
+      "checked": 341,
+      "verified": 341
+    },
+    "tumblr": {
       "checked": 340,
       "verified": 340
     },
-    "tumblr": {
-      "checked": 339,
-      "verified": 339
-    },
     "wordpress": {
-      "checked": 343,
-      "verified": 343
+      "checked": 344,
+      "verified": 344
     }
   }
 }
