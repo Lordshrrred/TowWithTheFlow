@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-20T10:39:15.190764+00:00",
+  "generated_at": "2026-07-21T09:15:23.561343+00:00",
   "keywords": {
     "total": 802,
-    "live": 359,
-    "pending": 443,
+    "live": 363,
+    "pending": 439,
     "local": {
-      "live": 136,
-      "pending": 52
+      "live": 138,
+      "pending": 50
     },
     "pain_point": {
-      "live": 223,
-      "pending": 391
+      "live": 225,
+      "pending": 389
     }
   },
   "next_targets": [
-    {
-      "keyword": "car stuck in ditch on highway who pays for tow",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car won't start in cold weather tow or jump start",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "engine oil pressure warning light came on while driving",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "fuel pump failed on highway signs and next steps",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car stalled in intersection what to do right now",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how long can you wait on the side of highway for tow",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 161
+      "count": 163
     },
     {
       "slug": "engine-mechanical",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 29
+      "count": 30
     },
     {
       "slug": "highway-safety",
@@ -117,6 +117,11 @@
       "count": 5
     },
     {
+      "slug": "consumer-rights",
+      "label": "Consumer Rights",
+      "count": 1
+    },
+    {
       "slug": "vehicle-safety",
       "label": "Vehicle Safety",
       "count": 1
@@ -136,27 +141,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-20T07:36:18.582016+00:00",
+    "generated_at": "2026-07-21T06:45:03.022047+00:00",
     "platforms": {
       "blog": {
-        "checked": 336,
-        "verified": 336
+        "checked": 340,
+        "verified": 340
       },
       "dev": {
-        "checked": 265,
-        "verified": 265
+        "checked": 269,
+        "verified": 269
       },
       "feeder": {
-        "checked": 333,
-        "verified": 333
+        "checked": 337,
+        "verified": 337
       },
       "tumblr": {
-        "checked": 332,
-        "verified": 332
-      },
-      "wordpress": {
         "checked": 336,
         "verified": 336
+      },
+      "wordpress": {
+        "checked": 340,
+        "verified": 340
       }
     }
   },
@@ -164,7 +169,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-20T09:44:45.375349+00:00",
+    "generated_at": "2026-07-21T09:15:23.477491+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -176,14 +181,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 24,
+        "rows": 27,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 90,
+        "rows": 94,
         "source": "ga4",
         "status": "ok"
       }
@@ -197,38 +202,38 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "24 Search Console impressions match this asset pattern.",
+        "reason": "25 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 7,
-    "top_query_count": 24,
+    "top_landing_page_count": 9,
+    "top_query_count": 27,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-20T10:39:15.208900+00:00",
+    "generatedAt": "2026-07-21T09:15:23.579151+00:00",
     "keywordGeneration": {
-      "currentInventory": 443,
-      "liveKeywords": 359,
-      "estimatedDaysRemaining": 110.8,
+      "currentInventory": 439,
+      "liveKeywords": 363,
+      "estimatedDaysRemaining": 109.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "110.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "109.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
       "backlogPosts": 74,
       "backlogUnits": 78,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-20T07:36:18.582016+00:00",
+      "generatedAt": "2026-07-21T06:45:03.022047+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.0,
+      "completedPerDay": 19.9,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.0,
+      "netBacklinkUnitsPerDay": 0.1,
       "estimatedCatchUpDays": null,
-      "reason": "Backlinks are keeping pace, but not reducing the historical backlog."
+      "reason": "Backlog is growing by 0.1 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
