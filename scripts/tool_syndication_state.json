@@ -73,12 +73,16 @@
       "url": "https://towwiththeflow.tumblr.com/post/821808452300046336"
     },
     "dead-battery-troubleshooter::wordpress": {
-      "checked_at": "2026-07-20T16:17:22.141093+00:00",
-      "companion_cache_key": "per-run companion generation cap reached",
-      "companion_status": "skipped",
-      "error": "COMPANION skipped: per-run companion generation cap reached",
+      "backlink_verified": false,
+      "checked_at": "2026-07-21T16:08:34.011723+00:00",
+      "companion_cache_key": "dcf67e75f8abfacf11248094",
+      "companion_model": "claude-haiku-4-5-20251001",
+      "companion_status": "generated",
+      "companion_title": "Why Your Car Won't Start: Common Causes Beyond a Dead Battery",
       "format": "companion_article",
-      "status": "failed"
+      "link_type": "followed_backlink",
+      "status": "success",
+      "url": "https://towwiththeflowyo.wordpress.com/2026/07/21/why-your-car-wont-start-common-causes-beyond-a-dead-battery/"
     },
     "engine-overheating-assistant::blogger": {
       "backlink_verification": {
@@ -108,6 +112,18 @@
       "link_type": "followed_backlink",
       "status": "success",
       "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/flat-tire-decision-assistant.html"
+    },
+    "flat-tire-decision-assistant::tumblr": {
+      "backlink_verified": false,
+      "checked_at": "2026-07-21T16:08:54.651177+00:00",
+      "companion_cache_key": "",
+      "companion_model": "",
+      "companion_status": "not_applicable",
+      "companion_title": "",
+      "format": "deterministic_teaser",
+      "link_type": "nofollow_distribution",
+      "status": "success",
+      "url": "https://towwiththeflow.tumblr.com/post/822765299371835392"
     },
     "flat-tire-decision-assistant::wordpress": {
       "backlink_verification": {
@@ -327,18 +343,18 @@
     }
   },
   "summary": {
-    "companion_articles_cached": 5,
-    "companion_articles_published": 5,
-    "deterministic_teasers_prepared": 6,
+    "companion_articles_cached": 6,
+    "companion_articles_published": 6,
+    "deterministic_teasers_prepared": 7,
     "run_stats": {
       "companion_generated": 1,
       "companion_generation_failed": 0,
-      "companion_generation_skipped": 1,
+      "companion_generation_skipped": 0,
       "companion_reused": 0,
-      "deterministic_teasers": 0,
+      "deterministic_teasers": 1,
       "estimated_companion_input_tokens": 386,
-      "estimated_companion_output_tokens": 988
+      "estimated_companion_output_tokens": 932
     },
-    "updated_at": "2026-07-20T16:17:22.142153+00:00"
+    "updated_at": "2026-07-21T16:08:54.652556+00:00"
   }
 }

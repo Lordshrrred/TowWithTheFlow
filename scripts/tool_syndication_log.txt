@@ -117,3 +117,9 @@
 [2026-07-20 16:17:02] OK | dead-battery-troubleshooter | blogger | https://towingandflowingroadsidedenver.blogspot.com/2026/07/why-your-car-wont-start-signs-its-more.html
 [2026-07-20 16:17:22] FAIL | dead-battery-troubleshooter | wordpress | companion skipped: per-run companion generation cap reached
 [2026-07-20 16:17:22] RUN SUMMARY | generated=1 reused=0 deterministic=0 generation_failed=0 generation_skipped=1
+[2026-07-21 16:08:11] Eligible tools: 10
+[2026-07-21 16:08:12] COMPANION | dead-battery-troubleshooter | wordpress | generating model=claude-haiku-4-5-20251001
+[2026-07-21 16:08:28] COMPANION | dead-battery-troubleshooter | wordpress | cached key=dcf67e75f8abfacf11248094 title="Why Your Car Won't Start: Common Causes Beyond a Dead Battery"
+[2026-07-21 16:08:34] OK | dead-battery-troubleshooter | wordpress | https://towwiththeflowyo.wordpress.com/2026/07/21/why-your-car-wont-start-common-causes-beyond-a-dead-battery/
+[2026-07-21 16:08:54] OK | flat-tire-decision-assistant | tumblr | https://towwiththeflow.tumblr.com/post/822765299371835392
+[2026-07-21 16:08:54] RUN SUMMARY | generated=1 reused=0 deterministic=1 generation_failed=0 generation_skipped=0
