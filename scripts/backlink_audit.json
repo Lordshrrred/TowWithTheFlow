@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T14:29:13.333988+00:00",
+  "generated_at": "2026-07-22T17:47:39.389885+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -74,9 +74,9 @@
     },
     "airbag-deployed-car-still-drivable-or-need-tow": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/airbag-deployed-car-still-drivable-or.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -438,9 +438,9 @@
     },
     "brake-failure-while-driving-emergency-steps": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/brake-failure-while-driving-emergency_0760778376.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -636,6 +636,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/02/car-accident-towing-cost-insurance-deductible-applies/",
+        "verified": true
+      }
+    },
+    "car-battery-died-in-parking-garage-tow-or-jump": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-battery-died-in-parking-garage-tow.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-battery-died-in-parking-garage-tow-or-jump-start-quick-guide-4272",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-battery-died-in-parking-garage-tow-or-jump-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822855258689732608/car-battery-died-in-parking-garage-tow-or-jump",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/22/car-battery-died-in-parking-garage-tow-or-jump/",
         "verified": true
       }
     },
@@ -2410,9 +2437,9 @@
     },
     "car-wont-start-after-sitting-in-heat-phoenix-arizona": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-start-after-sitting-in-heat-in.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -7162,9 +7189,9 @@
     },
     "towing-cost-in-nashville-tennessee-average-rate": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-nashville-tennessee.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -8271,6 +8298,33 @@
         "verified": true
       }
     },
+    "towing-cost-portland-oregon-flatbed-vs-wheel-lift": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-portland-oregon-flatbed.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-in-portland-oregon-flatbed-vs-wheel-lift-what-youll-pay-right-now-explained-1dfg",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-portland-oregon-flatbed-vs-wheel-lift-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822849934503133184/towing-cost-portland-oregon-flatbed-vs-wheel-lift",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/22/towing-cost-portland-oregon-flatbed-vs-wheel-lift/",
+        "verified": true
+      }
+    },
     "towing-cost-portland-oregon-rainy-weather": {
       "blog": {
         "reason": "ok",
@@ -8986,24 +9040,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 345,
-      "verified": 341
+      "checked": 347,
+      "verified": 347
     },
     "dev": {
-      "checked": 274,
-      "verified": 274
+      "checked": 276,
+      "verified": 276
     },
     "feeder": {
-      "checked": 342,
-      "verified": 342
+      "checked": 344,
+      "verified": 344
     },
     "tumblr": {
-      "checked": 341,
-      "verified": 341
+      "checked": 343,
+      "verified": 343
     },
     "wordpress": {
-      "checked": 345,
-      "verified": 345
+      "checked": 347,
+      "verified": 347
     }
   }
 }
