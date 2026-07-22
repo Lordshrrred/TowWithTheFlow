@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-21T09:15:23.561343+00:00",
+  "generated_at": "2026-07-22T09:14:12.204688+00:00",
   "keywords": {
     "total": 802,
-    "live": 363,
-    "pending": 439,
+    "live": 367,
+    "pending": 435,
     "local": {
-      "live": 138,
-      "pending": 50
+      "live": 140,
+      "pending": 48
     },
     "pain_point": {
-      "live": 225,
-      "pending": 389
+      "live": 227,
+      "pending": 387
     }
   },
   "next_targets": [
-    {
-      "keyword": "engine oil pressure warning light came on while driving",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "geico roadside assistance towing distance limit",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "check engine light flashing should i pull over now",
       "score": 8,
@@ -63,23 +53,33 @@
       "keyword": "how long can you wait on the side of highway for tow",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "serpentine belt snapped while driving emergency steps",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car making grinding noise when braking safe to drive",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 163
+      "count": 165
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 45
+      "count": 46
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 43
+      "count": 44
     },
     {
       "slug": "battery-starting",
@@ -141,27 +141,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-21T06:45:03.022047+00:00",
+    "generated_at": "2026-07-22T06:49:28.431984+00:00",
     "platforms": {
       "blog": {
-        "checked": 340,
-        "verified": 340
+        "checked": 344,
+        "verified": 344
       },
       "dev": {
-        "checked": 269,
-        "verified": 269
+        "checked": 273,
+        "verified": 273
       },
       "feeder": {
-        "checked": 337,
-        "verified": 337
+        "checked": 341,
+        "verified": 341
       },
       "tumblr": {
-        "checked": 336,
-        "verified": 336
-      },
-      "wordpress": {
         "checked": 340,
         "verified": 340
+      },
+      "wordpress": {
+        "checked": 344,
+        "verified": 344
       }
     }
   },
@@ -169,7 +169,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-21T09:15:23.477491+00:00",
+    "generated_at": "2026-07-22T09:14:12.136946+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -188,7 +188,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 94,
+        "rows": 98,
         "source": "ga4",
         "status": "ok"
       }
@@ -211,22 +211,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-21T09:15:23.579151+00:00",
+    "generatedAt": "2026-07-22T09:14:12.217450+00:00",
     "keywordGeneration": {
-      "currentInventory": 439,
-      "liveKeywords": 363,
-      "estimatedDaysRemaining": 109.8,
+      "currentInventory": 435,
+      "liveKeywords": 367,
+      "estimatedDaysRemaining": 108.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "109.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "108.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
       "backlogPosts": 74,
       "backlogUnits": 78,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-21T06:45:03.022047+00:00",
+      "generatedAt": "2026-07-22T06:49:28.431984+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.9,
       "newPostsPerDay": 4.0,
