@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T10:40:02.587303+00:00",
+  "generated_at": "2026-07-22T14:29:13.333988+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -74,9 +74,9 @@
     },
     "airbag-deployed-car-still-drivable-or-need-tow": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/airbag-deployed-car-still-drivable-or.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -438,9 +438,9 @@
     },
     "brake-failure-while-driving-emergency-steps": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/brake-failure-while-driving-emergency_0760778376.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2410,9 +2410,9 @@
     },
     "car-wont-start-after-sitting-in-heat-phoenix-arizona": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-start-after-sitting-in-heat-in.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2931,6 +2931,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/12/check-engine-light-flashing-car-shaking-emergency/",
+        "verified": true
+      }
+    },
+    "check-engine-light-flashing-should-i-pull-over-now": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/check-engine-light-flashing-should-i.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/check-engine-light-flashing-should-i-pull-over-now-quick-guide-2k25",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/check-engine-light-flashing-should-i-pull-over-now-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/822841017215713280/check-engine-light-flashing-should-i-pull-over-now",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/22/check-engine-light-flashing-should-i-pull-over-now/",
         "verified": true
       }
     },
@@ -7135,9 +7162,9 @@
     },
     "towing-cost-in-nashville-tennessee-average-rate": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-nashville-tennessee.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -8959,24 +8986,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 344,
-      "verified": 344
+      "checked": 345,
+      "verified": 341
     },
     "dev": {
-      "checked": 273,
-      "verified": 273
+      "checked": 274,
+      "verified": 274
     },
     "feeder": {
+      "checked": 342,
+      "verified": 342
+    },
+    "tumblr": {
       "checked": 341,
       "verified": 341
     },
-    "tumblr": {
-      "checked": 340,
-      "verified": 340
-    },
     "wordpress": {
-      "checked": 344,
-      "verified": 344
+      "checked": 345,
+      "verified": 345
     }
   }
 }
