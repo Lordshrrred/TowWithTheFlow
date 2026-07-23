@@ -13380,3 +13380,33 @@
 [2026-07-23 08:44:09] === SYNDICATE DONE: towing-cost-in-denver-colorado-flatbed-rate | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-23 08:44:09] SYNCED | towing-cost-in-denver-colorado-flatbed-rate marked in synced-posts.txt
 [2026-07-23 08:44:09] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-07-23 10:06:50] === SYNDICATE START: car-stuck-in-mud-how-to-get-out-or-call-tow ===
+[2026-07-23 10:06:50] PREFLIGHT | title: Car Stuck in Mud: How to Get Out or When to Call a Tow
+[2026-07-23 10:06:50] PREFLIGHT | date: 2026-07-23
+[2026-07-23 10:06:50] PREFLIGHT | timestamp: 2026-07-23 10:06:50
+[2026-07-23 10:06:50] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-07-23 10:06:50] PREFLIGHT | TUMBLR:  configured
+[2026-07-23 10:06:50] PREFLIGHT | BLOGGER: configured
+[2026-07-23 10:06:50] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-07-23 10:06:50] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-07-23 10:06:50] DEVTO | car-stuck-in-mud-how-to-get-out-or-call-tow | START
+[2026-07-23 10:06:50] DEVTO | car-stuck-in-mud-how-to-get-out-or-call-tow | account=TWTF1
+[2026-07-23 10:06:50] DEVTO | car-stuck-in-mud-how-to-get-out-or-call-tow | SUCCESS | https://dev.to/roadsideamericatowing/car-stuck-in-mud-how-to-get-out-or-when-to-call-a-tow-roadside-tips-2169
+[2026-07-23 10:06:50] --- waiting 60s before next platform ---
+[2026-07-23 10:07:50] TUMBLR | car-stuck-in-mud-how-to-get-out-or-call-tow | START
+[2026-07-23 10:07:51] TUMBLR | car-stuck-in-mud-how-to-get-out-or-call-tow | SUCCESS | https://towwiththeflow.tumblr.com/post/822946426912997376
+[2026-07-23 10:07:51] --- waiting 60s before next platform ---
+[2026-07-23 10:08:51] BLOGGER | car-stuck-in-mud-how-to-get-out-or-call-tow | START
+[2026-07-23 10:08:51] BLOGGER | car-stuck-in-mud-how-to-get-out-or-call-tow | step 1/3: refreshing access token
+[2026-07-23 10:08:51] BLOGGER | car-stuck-in-mud-how-to-get-out-or-call-tow | step 2/3: converting markdown to HTML
+[2026-07-23 10:08:51] BLOGGER | car-stuck-in-mud-how-to-get-out-or-call-tow | step 3/3: posting to blog 1959471973457654666
+[2026-07-23 10:08:52] BLOGGER | car-stuck-in-mud-how-to-get-out-or-call-tow | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-stuck-in-mud-how-to-get-out-or-when.html
+[2026-07-23 10:08:52] --- waiting 60s before next platform ---
+[2026-07-23 10:09:52] WORDPRESS | car-stuck-in-mud-how-to-get-out-or-call-tow | START
+[2026-07-23 10:10:01] WORDPRESS | car-stuck-in-mud-how-to-get-out-or-call-tow | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/07/23/car-stuck-in-mud-how-to-get-out-or-call-tow/
+[2026-07-23 10:10:01] --- waiting 60s before next platform ---
+[2026-07-23 10:11:01] FEEDER | car-stuck-in-mud-how-to-get-out-or-call-tow | START
+[2026-07-23 10:11:02] FEEDER | car-stuck-in-mud-how-to-get-out-or-call-tow | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-stuck-in-mud-how-to-get-out-or-call-tow-advice/
+[2026-07-23 10:11:02] === SYNDICATE DONE: car-stuck-in-mud-how-to-get-out-or-call-tow | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-07-23 10:11:02] SYNCED | car-stuck-in-mud-how-to-get-out-or-call-tow marked in synced-posts.txt
+[2026-07-23 10:11:02] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
