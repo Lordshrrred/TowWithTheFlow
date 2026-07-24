@@ -13471,3 +13471,33 @@
 [2026-07-24 06:05:26] === SYNDICATE DONE: car-wont-shift-out-of-park-tow-needed | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-24 06:05:26] SYNCED | car-wont-shift-out-of-park-tow-needed marked in synced-posts.txt
 [2026-07-24 06:05:26] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-07-24 08:19:36] === SYNDICATE START: how-much-does-flatbed-tow-truck-cost-houston-texas ===
+[2026-07-24 08:19:36] PREFLIGHT | title: How Much Does a Flatbed Tow Truck Cost in Houston Texas: What You'll Pay Right Now
+[2026-07-24 08:19:36] PREFLIGHT | date: 2026-07-24
+[2026-07-24 08:19:36] PREFLIGHT | timestamp: 2026-07-24 08:19:36
+[2026-07-24 08:19:36] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-07-24 08:19:36] PREFLIGHT | TUMBLR:  configured
+[2026-07-24 08:19:36] PREFLIGHT | BLOGGER: configured
+[2026-07-24 08:19:36] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-07-24 08:19:36] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-07-24 08:19:36] DEVTO | how-much-does-flatbed-tow-truck-cost-houston-texas | START
+[2026-07-24 08:19:36] DEVTO | how-much-does-flatbed-tow-truck-cost-houston-texas | account=TWTF2
+[2026-07-24 08:19:37] DEVTO | how-much-does-flatbed-tow-truck-cost-houston-texas | SUCCESS | https://dev.to/denverroadsideelitetowing/how-much-does-a-flatbed-tow-truck-cost-in-houston-texas-what-youll-pay-right-now-explained-14fo
+[2026-07-24 08:19:37] --- waiting 60s before next platform ---
+[2026-07-24 08:20:37] TUMBLR | how-much-does-flatbed-tow-truck-cost-houston-texas | START
+[2026-07-24 08:20:37] TUMBLR | how-much-does-flatbed-tow-truck-cost-houston-texas | SUCCESS | https://towwiththeflow.tumblr.com/post/823030277755535360
+[2026-07-24 08:20:37] --- waiting 60s before next platform ---
+[2026-07-24 08:21:37] BLOGGER | how-much-does-flatbed-tow-truck-cost-houston-texas | START
+[2026-07-24 08:21:37] BLOGGER | how-much-does-flatbed-tow-truck-cost-houston-texas | step 1/3: refreshing access token
+[2026-07-24 08:21:38] BLOGGER | how-much-does-flatbed-tow-truck-cost-houston-texas | step 2/3: converting markdown to HTML
+[2026-07-24 08:21:38] BLOGGER | how-much-does-flatbed-tow-truck-cost-houston-texas | step 3/3: posting to blog 1959471973457654666
+[2026-07-24 08:21:39] BLOGGER | how-much-does-flatbed-tow-truck-cost-houston-texas | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-much-does-flatbed-tow-truck-cost-in.html
+[2026-07-24 08:21:39] --- waiting 60s before next platform ---
+[2026-07-24 08:22:39] WORDPRESS | how-much-does-flatbed-tow-truck-cost-houston-texas | START
+[2026-07-24 08:22:51] WORDPRESS | how-much-does-flatbed-tow-truck-cost-houston-texas | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/07/24/how-much-does-flatbed-tow-truck-cost-houston-texas/
+[2026-07-24 08:22:51] --- waiting 60s before next platform ---
+[2026-07-24 08:23:51] FEEDER | how-much-does-flatbed-tow-truck-cost-houston-texas | START
+[2026-07-24 08:23:53] FEEDER | how-much-does-flatbed-tow-truck-cost-houston-texas | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/how-much-does-flatbed-tow-truck-cost-houston-texas-guide/
+[2026-07-24 08:23:53] === SYNDICATE DONE: how-much-does-flatbed-tow-truck-cost-houston-texas | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-07-24 08:23:53] SYNCED | how-much-does-flatbed-tow-truck-cost-houston-texas marked in synced-posts.txt
+[2026-07-24 08:23:53] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
