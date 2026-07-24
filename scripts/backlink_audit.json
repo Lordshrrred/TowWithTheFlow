@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T10:35:21.088306+00:00",
+  "generated_at": "2026-07-24T14:18:09.171234+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1653,9 +1653,9 @@
     },
     "car-making-grinding-noise-when-braking-tow-cost-phoenix": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-making-grinding-noise-when-braking.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -1675,9 +1675,9 @@
     },
     "car-making-grinding-noise-when-starting-tow-truck-needed": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-making-grinding-noise-when-starting.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -2437,6 +2437,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/18/car-wont-shift-into-drive-need-tow-truck-2/",
+        "verified": true
+      }
+    },
+    "car-wont-shift-out-of-park-tow-needed": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-wont-shift-out-of-park-when-you.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-wont-shift-out-of-park-when-you-need-a-tow-and-what-to-try-first-explained-1gl8",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-shift-out-of-park-tow-needed-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/823021571316842496/car-wont-shift-out-of-park-tow-needed",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/24/car-wont-shift-out-of-park-tow-needed/",
         "verified": true
       }
     },
@@ -4408,9 +4435,9 @@
     },
     "motorcycle-towing-cost-accident-scene-police-called": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/motorcycle-towing-cost-when-police-are.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -4560,9 +4587,9 @@
     },
     "progressive-roadside-assistance-towing-limit-miles": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/progressive-roadside-assistance-towing.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -9175,24 +9202,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 352,
-      "verified": 348
+      "checked": 353,
+      "verified": 353
     },
     "dev": {
-      "checked": 281,
-      "verified": 281
+      "checked": 282,
+      "verified": 282
     },
     "feeder": {
+      "checked": 350,
+      "verified": 350
+    },
+    "tumblr": {
       "checked": 349,
       "verified": 349
     },
-    "tumblr": {
-      "checked": 348,
-      "verified": 348
-    },
     "wordpress": {
-      "checked": 352,
-      "verified": 352
+      "checked": 353,
+      "verified": 353
     }
   }
 }
