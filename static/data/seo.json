@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-23T09:13:00.118289+00:00",
+  "generated_at": "2026-07-24T09:08:44.613312+00:00",
   "keywords": {
     "total": 802,
-    "live": 371,
-    "pending": 431,
+    "live": 375,
+    "pending": 427,
     "local": {
-      "live": 142,
-      "pending": 46
+      "live": 144,
+      "pending": 44
     },
     "pain_point": {
-      "live": 229,
-      "pending": 385
+      "live": 231,
+      "pending": 383
     }
   },
   "next_targets": [
-    {
-      "keyword": "state farm roadside assistance vs aaa which is better",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car stuck in mud how to get out or call tow",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car won't shift out of park tow needed",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "car engine misfiring on freeway pull over or keep driving",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "flat tire on spare already how to get towed safely",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car ac compressor seized engine stopped moving tow needed",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 167
+      "count": 168
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 44
+      "count": 45
     },
     {
       "slug": "battery-starting",
@@ -102,24 +102,19 @@
       "count": 8
     },
     {
+      "slug": "roadside-help",
+      "label": "General Roadside Help",
+      "count": 6
+    },
+    {
       "slug": "accident-liability",
       "label": "Accidents & Towing Liability",
       "count": 6
     },
     {
-      "slug": "roadside-help",
-      "label": "General Roadside Help",
-      "count": 5
-    },
-    {
       "slug": "winter-weather",
       "label": "Winter & Weather Breakdowns",
       "count": 5
-    },
-    {
-      "slug": "consumer-rights",
-      "label": "Consumer Rights",
-      "count": 1
     },
     {
       "slug": "vehicle-safety",
@@ -129,6 +124,16 @@
     {
       "slug": "emergency-checklists",
       "label": "Emergency Checklists",
+      "count": 1
+    },
+    {
+      "slug": "consumer-rights",
+      "label": "Consumer Rights",
+      "count": 1
+    },
+    {
+      "slug": "vehicle-recovery",
+      "label": "Vehicle Recovery",
       "count": 1
     }
   ],
@@ -141,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-23T06:46:48.503917+00:00",
+    "generated_at": "2026-07-24T06:44:14.156949+00:00",
     "platforms": {
       "blog": {
-        "checked": 348,
-        "verified": 348
+        "checked": 352,
+        "verified": 352
       },
       "dev": {
-        "checked": 277,
-        "verified": 277
+        "checked": 281,
+        "verified": 281
       },
       "feeder": {
-        "checked": 345,
-        "verified": 345
+        "checked": 349,
+        "verified": 349
       },
       "tumblr": {
-        "checked": 344,
-        "verified": 344
-      },
-      "wordpress": {
         "checked": 348,
         "verified": 348
+      },
+      "wordpress": {
+        "checked": 352,
+        "verified": 352
       }
     }
   },
@@ -169,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-23T09:13:00.029929+00:00",
+    "generated_at": "2026-07-24T09:08:44.546680+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -181,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 28,
+        "rows": 30,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 100,
+        "rows": 106,
         "source": "ga4",
         "status": "ok"
       }
@@ -202,31 +207,31 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "26 Search Console impressions match this asset pattern.",
+        "reason": "28 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 10,
-    "top_query_count": 28,
+    "top_landing_page_count": 11,
+    "top_query_count": 30,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-23T09:13:00.134922+00:00",
+    "generatedAt": "2026-07-24T09:08:44.623585+00:00",
     "keywordGeneration": {
-      "currentInventory": 431,
-      "liveKeywords": 371,
-      "estimatedDaysRemaining": 107.8,
+      "currentInventory": 427,
+      "liveKeywords": 375,
+      "estimatedDaysRemaining": 106.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "107.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "106.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
       "backlogPosts": 74,
       "backlogUnits": 78,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-23T06:46:48.503917+00:00",
+      "generatedAt": "2026-07-24T06:44:14.156949+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
