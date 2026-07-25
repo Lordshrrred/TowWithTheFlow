@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T21:37:06.925734+00:00",
+  "generated_at": "2026-07-25T03:44:12.847785+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1332,9 +1332,9 @@
     },
     "car-died-on-freeway-in-los-angeles-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-died-on-freeway-in-los-angeles-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4197,9 +4197,9 @@
     },
     "insurance-covers-towing-after-accident-deductible": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/does-insurance-cover-towing-after.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4462,9 +4462,9 @@
     },
     "locked-keys-in-car-with-engine-running-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/locked-keys-in-car-with-engine-running.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -7162,9 +7162,9 @@
     },
     "towing-cost-in-denver-colorado-flatbed-vs-wheel-lift": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-denver-colorado-flatbed_0501685652.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -7190,6 +7190,7 @@
     "towing-cost-in-denver-colorado-long-distance": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-denver-colorado-long.html",
         "verified": true
       },
@@ -9284,7 +9285,7 @@
   "summary": {
     "blog": {
       "checked": 356,
-      "verified": 356
+      "verified": 352
     },
     "dev": {
       "checked": 285,
