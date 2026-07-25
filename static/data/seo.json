@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-24T10:05:49.258477+00:00",
+  "generated_at": "2026-07-25T09:41:07.141158+00:00",
   "keywords": {
     "total": 802,
-    "live": 375,
-    "pending": 427,
+    "live": 379,
+    "pending": 423,
     "local": {
-      "live": 144,
-      "pending": 44
+      "live": 146,
+      "pending": 42
     },
     "pain_point": {
-      "live": 231,
-      "pending": 383
+      "live": 233,
+      "pending": 381
     }
   },
   "next_targets": [
-    {
-      "keyword": "car won't shift out of park tow needed",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "fuel pump failed on highway signs and next steps",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car stalled in intersection what to do right now",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "car ac compressor seized engine stopped moving tow needed",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "progressive insurance towing coverage how much will they pay",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car ran out of gas on highway what to do",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 168
+      "count": 169
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 47
+      "count": 49
     },
     {
       "slug": "insurance-coverage",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 20
+      "count": 21
     },
     {
       "slug": "tire-wheel",
@@ -117,23 +117,23 @@
       "count": 5
     },
     {
-      "slug": "consumer-rights",
-      "label": "Consumer Rights",
-      "count": 1
-    },
-    {
       "slug": "vehicle-safety",
       "label": "Vehicle Safety",
       "count": 1
     },
     {
-      "slug": "vehicle-recovery",
-      "label": "Vehicle Recovery",
+      "slug": "emergency-checklists",
+      "label": "Emergency Checklists",
       "count": 1
     },
     {
-      "slug": "emergency-checklists",
-      "label": "Emergency Checklists",
+      "slug": "consumer-rights",
+      "label": "Consumer Rights",
+      "count": 1
+    },
+    {
+      "slug": "vehicle-recovery",
+      "label": "Vehicle Recovery",
       "count": 1
     }
   ],
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-24T06:44:14.156949+00:00",
+    "generated_at": "2026-07-25T06:35:38.838549+00:00",
     "platforms": {
       "blog": {
-        "checked": 352,
-        "verified": 352
+        "checked": 356,
+        "verified": 356
       },
       "dev": {
-        "checked": 281,
-        "verified": 281
+        "checked": 285,
+        "verified": 285
       },
       "feeder": {
-        "checked": 349,
-        "verified": 349
+        "checked": 353,
+        "verified": 353
       },
       "tumblr": {
-        "checked": 348,
-        "verified": 348
-      },
-      "wordpress": {
         "checked": 352,
         "verified": 352
+      },
+      "wordpress": {
+        "checked": 356,
+        "verified": 356
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-24T09:08:44.546680+00:00",
+    "generated_at": "2026-07-25T09:41:07.050662+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 106,
+        "rows": 104,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,7 +207,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "28 Search Console impressions match this asset pattern.",
+        "reason": "29 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-24T10:05:49.276277+00:00",
+    "generatedAt": "2026-07-25T09:41:07.159862+00:00",
     "keywordGeneration": {
-      "currentInventory": 427,
-      "liveKeywords": 375,
-      "estimatedDaysRemaining": 106.8,
+      "currentInventory": 423,
+      "liveKeywords": 379,
+      "estimatedDaysRemaining": 105.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "106.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "105.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
       "backlogPosts": 74,
       "backlogUnits": 78,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-24T06:44:14.156949+00:00",
+      "generatedAt": "2026-07-25T06:35:38.838549+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
