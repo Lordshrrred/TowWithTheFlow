@@ -1,15 +1,11 @@
 {
-  "pageviews": 146,
-  "sessions": 135,
-  "avgSessionDur": 109,
-  "bounceRate": 0.5259259259259259,
-  "newUsers": 127,
+  "pageviews": 148,
+  "sessions": 137,
+  "avgSessionDur": 114,
+  "bounceRate": 0.49635036496350365,
+  "newUsers": 129,
   "returningUsers": 1,
   "daily": [
-    {
-      "date": "20260624",
-      "pageviews": 4
-    },
     {
       "date": "20260625",
       "pageviews": 6
@@ -117,6 +113,10 @@
     {
       "date": "20260723",
       "pageviews": 7
+    },
+    {
+      "date": "20260724",
+      "pageviews": 6
     }
   ],
   "topPages": [
@@ -124,10 +124,10 @@
       "rank": 1,
       "page": "/",
       "title": "Tow With The Flow | Real help when your car breaks down.",
-      "pageviews": 14,
-      "avgDur": 2,
-      "bounceRate": 92.9,
-      "sessions": 14
+      "pageviews": 16,
+      "avgDur": 3,
+      "bounceRate": 93.8,
+      "sessions": 16
     },
     {
       "rank": 2,
@@ -143,8 +143,8 @@
       "page": "/state-farm-towing-coverage-maximum-distance-miles/",
       "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
       "pageviews": 10,
-      "avgDur": 153,
-      "bounceRate": 40.0,
+      "avgDur": 156,
+      "bounceRate": 30.0,
       "sessions": 10
     },
     {
@@ -167,30 +167,30 @@
     },
     {
       "rank": 6,
-      "page": "/progressive-insurance-towing-coverage-how-many-times/",
-      "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
+      "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+      "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
       "pageviews": 6,
-      "avgDur": 64,
-      "bounceRate": 57.1,
-      "sessions": 7
+      "avgDur": 25,
+      "bounceRate": 60.0,
+      "sessions": 5
     },
     {
       "rank": 7,
+      "page": "/progressive-insurance-towing-coverage-how-many-times/",
+      "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
+      "pageviews": 6,
+      "avgDur": 67,
+      "bounceRate": 42.9,
+      "sessions": 7
+    },
+    {
+      "rank": 8,
       "page": "/usaa-roadside-assistance-towing-coverage-limits/",
       "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
       "pageviews": 6,
       "avgDur": 107,
       "bounceRate": 16.7,
       "sessions": 6
-    },
-    {
-      "rank": 8,
-      "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-      "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-      "pageviews": 5,
-      "avgDur": 14,
-      "bounceRate": 50.0,
-      "sessions": 4
     },
     {
       "rank": 9,
@@ -215,8 +215,8 @@
       "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
       "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
       "pageviews": 3,
-      "avgDur": 22,
-      "bounceRate": 33.3,
+      "avgDur": 37,
+      "bounceRate": 0.0,
       "sessions": 3
     },
     {
@@ -394,18 +394,18 @@
   "trafficSources": [
     {
       "channel": "Organic Search",
-      "sessions": 89,
-      "pct": 63.1
+      "sessions": 88,
+      "pct": 63.3
     },
     {
       "channel": "Direct",
-      "sessions": 41,
-      "pct": 29.1
+      "sessions": 44,
+      "pct": 31.7
     },
     {
       "channel": "Unassigned",
-      "sessions": 10,
-      "pct": 7.1
+      "sessions": 6,
+      "pct": 4.3
     },
     {
       "channel": "AI Assistant",
@@ -415,34 +415,34 @@
   ],
   "sourcesDetail": [
     {
-      "source": "bing",
-      "medium": "organic",
-      "sessions": 45,
-      "pct": 31.9
-    },
-    {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 41,
-      "pct": 29.1
+      "sessions": 44,
+      "pct": 31.7
+    },
+    {
+      "source": "bing",
+      "medium": "organic",
+      "sessions": 44,
+      "pct": 31.7
     },
     {
       "source": "duckduckgo",
       "medium": "organic",
-      "sessions": 24,
-      "pct": 17.0
+      "sessions": 25,
+      "pct": 18.0
     },
     {
       "source": "yahoo",
       "medium": "organic",
-      "sessions": 18,
-      "pct": 12.8
+      "sessions": 17,
+      "pct": 12.2
     },
     {
       "source": "(not set)",
       "medium": "(not set)",
-      "sessions": 8,
-      "pct": 5.7
+      "sessions": 4,
+      "pct": 2.9
     },
     {
       "source": "copilot.com",
@@ -470,7 +470,7 @@
     },
     {
       "country": "China",
-      "sessions": 7
+      "sessions": 8
     },
     {
       "country": "Germany",
@@ -505,6 +505,10 @@
       "sessions": 1
     },
     {
+      "country": "Hong Kong",
+      "sessions": 1
+    },
+    {
       "country": "Malaysia",
       "sessions": 1
     },
@@ -531,6 +535,10 @@
       "sessions": 19
     },
     {
+      "city": "Boardman",
+      "sessions": 6
+    },
+    {
       "city": "Atlanta",
       "sessions": 5
     },
@@ -547,7 +555,7 @@
       "sessions": 4
     },
     {
-      "city": "Boardman",
+      "city": "",
       "sessions": 3
     },
     {
@@ -561,20 +569,16 @@
     {
       "city": "Warren",
       "sessions": 3
-    },
-    {
-      "city": "Ashburn",
-      "sessions": 2
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "sessions": 82
+      "sessions": 85
     },
     {
       "device": "mobile",
-      "sessions": 52
+      "sessions": 51
     },
     {
       "device": "tablet",
@@ -584,19 +588,19 @@
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 52
+      "sessions": 53
     },
     {
       "browser": "Edge",
-      "sessions": 38
+      "sessions": 37
     },
     {
       "browser": "Safari",
-      "sessions": 34
+      "sessions": 35
     },
     {
       "browser": "Android Webview",
-      "sessions": 5
+      "sessions": 6
     },
     {
       "browser": "Firefox",
@@ -606,11 +610,11 @@
   "os": [
     {
       "os": "Windows",
-      "sessions": 68
+      "sessions": 69
     },
     {
       "os": "iOS",
-      "sessions": 33
+      "sessions": 32
     },
     {
       "os": "Android",
@@ -618,26 +622,22 @@
     },
     {
       "os": "Macintosh",
-      "sessions": 10
+      "sessions": 9
     },
     {
       "os": "Linux",
-      "sessions": 4
+      "sessions": 7
     }
   ],
   "ranges": {
     "30d": {
-      "pageviews": 146,
-      "sessions": 135,
-      "avgSessionDur": 109,
-      "bounceRate": 0.5259259259259259,
-      "newUsers": 127,
+      "pageviews": 148,
+      "sessions": 137,
+      "avgSessionDur": 114,
+      "bounceRate": 0.49635036496350365,
+      "newUsers": 129,
       "returningUsers": 1,
       "daily": [
-        {
-          "date": "20260624",
-          "pageviews": 4
-        },
         {
           "date": "20260625",
           "pageviews": 6
@@ -745,6 +745,10 @@
         {
           "date": "20260723",
           "pageviews": 7
+        },
+        {
+          "date": "20260724",
+          "pageviews": 6
         }
       ],
       "topPages": [
@@ -752,10 +756,10 @@
           "rank": 1,
           "page": "/",
           "title": "Tow With The Flow | Real help when your car breaks down.",
-          "pageviews": 14,
-          "avgDur": 2,
-          "bounceRate": 92.9,
-          "sessions": 14
+          "pageviews": 16,
+          "avgDur": 3,
+          "bounceRate": 93.8,
+          "sessions": 16
         },
         {
           "rank": 2,
@@ -771,8 +775,8 @@
           "page": "/state-farm-towing-coverage-maximum-distance-miles/",
           "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 10,
-          "avgDur": 153,
-          "bounceRate": 40.0,
+          "avgDur": 156,
+          "bounceRate": 30.0,
           "sessions": 10
         },
         {
@@ -795,30 +799,30 @@
         },
         {
           "rank": 6,
-          "page": "/progressive-insurance-towing-coverage-how-many-times/",
-          "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
+          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
           "pageviews": 6,
-          "avgDur": 64,
-          "bounceRate": 57.1,
-          "sessions": 7
+          "avgDur": 25,
+          "bounceRate": 60.0,
+          "sessions": 5
         },
         {
           "rank": 7,
+          "page": "/progressive-insurance-towing-coverage-how-many-times/",
+          "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
+          "pageviews": 6,
+          "avgDur": 67,
+          "bounceRate": 42.9,
+          "sessions": 7
+        },
+        {
+          "rank": 8,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
           "pageviews": 6,
           "avgDur": 107,
           "bounceRate": 16.7,
           "sessions": 6
-        },
-        {
-          "rank": 8,
-          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 5,
-          "avgDur": 14,
-          "bounceRate": 50.0,
-          "sessions": 4
         },
         {
           "rank": 9,
@@ -843,8 +847,8 @@
           "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
           "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 22,
-          "bounceRate": 33.3,
+          "avgDur": 37,
+          "bounceRate": 0.0,
           "sessions": 3
         },
         {
@@ -1022,18 +1026,18 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 89,
-          "pct": 63.1
+          "sessions": 88,
+          "pct": 63.3
         },
         {
           "channel": "Direct",
-          "sessions": 41,
-          "pct": 29.1
+          "sessions": 44,
+          "pct": 31.7
         },
         {
           "channel": "Unassigned",
-          "sessions": 10,
-          "pct": 7.1
+          "sessions": 6,
+          "pct": 4.3
         },
         {
           "channel": "AI Assistant",
@@ -1043,34 +1047,34 @@
       ],
       "sourcesDetail": [
         {
-          "source": "bing",
-          "medium": "organic",
-          "sessions": 45,
-          "pct": 31.9
-        },
-        {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 41,
-          "pct": 29.1
+          "sessions": 44,
+          "pct": 31.7
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 44,
+          "pct": 31.7
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 24,
-          "pct": 17.0
+          "sessions": 25,
+          "pct": 18.0
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 18,
-          "pct": 12.8
+          "sessions": 17,
+          "pct": 12.2
         },
         {
           "source": "(not set)",
           "medium": "(not set)",
-          "sessions": 8,
-          "pct": 5.7
+          "sessions": 4,
+          "pct": 2.9
         },
         {
           "source": "copilot.com",
@@ -1098,7 +1102,7 @@
         },
         {
           "country": "China",
-          "sessions": 7
+          "sessions": 8
         },
         {
           "country": "Germany",
@@ -1130,6 +1134,10 @@
         },
         {
           "country": "Egypt",
+          "sessions": 1
+        },
+        {
+          "country": "Hong Kong",
           "sessions": 1
         },
         {
@@ -1159,6 +1167,10 @@
           "sessions": 19
         },
         {
+          "city": "Boardman",
+          "sessions": 6
+        },
+        {
           "city": "Atlanta",
           "sessions": 5
         },
@@ -1175,7 +1187,7 @@
           "sessions": 4
         },
         {
-          "city": "Boardman",
+          "city": "",
           "sessions": 3
         },
         {
@@ -1189,20 +1201,16 @@
         {
           "city": "Warren",
           "sessions": 3
-        },
-        {
-          "city": "Ashburn",
-          "sessions": 2
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 82
+          "sessions": 85
         },
         {
           "device": "mobile",
-          "sessions": 52
+          "sessions": 51
         },
         {
           "device": "tablet",
@@ -1212,19 +1220,19 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 52
+          "sessions": 53
         },
         {
           "browser": "Edge",
-          "sessions": 38
+          "sessions": 37
         },
         {
           "browser": "Safari",
-          "sessions": 34
+          "sessions": 35
         },
         {
           "browser": "Android Webview",
-          "sessions": 5
+          "sessions": 6
         },
         {
           "browser": "Firefox",
@@ -1234,11 +1242,11 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 68
+          "sessions": 69
         },
         {
           "os": "iOS",
-          "sessions": 33
+          "sessions": 32
         },
         {
           "os": "Android",
@@ -1246,20 +1254,20 @@
         },
         {
           "os": "Macintosh",
-          "sessions": 10
+          "sessions": 9
         },
         {
           "os": "Linux",
-          "sessions": 4
+          "sessions": 7
         }
       ]
     },
     "90d": {
-      "pageviews": 186,
-      "sessions": 170,
-      "avgSessionDur": 95,
-      "bounceRate": 0.5176470588235295,
-      "newUsers": 161,
+      "pageviews": 192,
+      "sessions": 176,
+      "avgSessionDur": 97,
+      "bounceRate": 0.5,
+      "newUsers": 167,
       "returningUsers": 1,
       "daily": [
         {
@@ -1453,6 +1461,10 @@
         {
           "date": "20260723",
           "pageviews": 7
+        },
+        {
+          "date": "20260724",
+          "pageviews": 6
         }
       ],
       "topPages": [
@@ -1460,10 +1472,10 @@
           "rank": 1,
           "page": "/",
           "title": "Tow With The Flow | Real help when your car breaks down.",
-          "pageviews": 24,
+          "pageviews": 28,
           "avgDur": 4,
-          "bounceRate": 87.0,
-          "sessions": 23
+          "bounceRate": 88.9,
+          "sessions": 27
         },
         {
           "rank": 2,
@@ -1479,8 +1491,8 @@
           "page": "/state-farm-towing-coverage-maximum-distance-miles/",
           "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 12,
-          "avgDur": 121,
-          "bounceRate": 46.2,
+          "avgDur": 123,
+          "bounceRate": 38.5,
           "sessions": 13
         },
         {
@@ -1494,6 +1506,15 @@
         },
         {
           "rank": 5,
+          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
+          "pageviews": 7,
+          "avgDur": 21,
+          "bounceRate": 66.7,
+          "sessions": 6
+        },
+        {
+          "rank": 6,
           "page": "/geico-roadside-assistance-how-many-calls-per-year/",
           "title": "GEICO Roadside Assistance How Many Calls Per Year: Usage Limits Explained | Tow With The Flow",
           "pageviews": 6,
@@ -1502,21 +1523,12 @@
           "sessions": 6
         },
         {
-          "rank": 6,
-          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 6,
-          "avgDur": 12,
-          "bounceRate": 60.0,
-          "sessions": 5
-        },
-        {
           "rank": 7,
           "page": "/progressive-insurance-towing-coverage-how-many-times/",
           "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
           "pageviews": 6,
-          "avgDur": 64,
-          "bounceRate": 57.1,
+          "avgDur": 67,
+          "bounceRate": 42.9,
           "sessions": 7
         },
         {
@@ -1587,8 +1599,8 @@
           "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
           "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 22,
-          "bounceRate": 33.3,
+          "avgDur": 37,
+          "bounceRate": 0.0,
           "sessions": 3
         },
         {
@@ -1730,18 +1742,18 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 111,
-          "pct": 63.1
+          "sessions": 112,
+          "pct": 62.9
         },
         {
           "channel": "Direct",
-          "sessions": 50,
-          "pct": 28.4
+          "sessions": 55,
+          "pct": 30.9
         },
         {
           "channel": "Unassigned",
-          "sessions": 11,
-          "pct": 6.2
+          "sessions": 7,
+          "pct": 3.9
         },
         {
           "channel": "AI Assistant",
@@ -1758,777 +1770,785 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 50,
-          "pct": 28.2
+          "sessions": 55,
+          "pct": 30.7
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 48,
-          "pct": 27.1
+          "pct": 26.8
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 28,
+          "sessions": 29,
+          "pct": 16.2
+        },
+        {
+          "source": "yahoo",
+          "medium": "organic",
+          "sessions": 21,
+          "pct": 11.7
+        },
+        {
+          "source": "google",
+          "medium": "organic",
+          "sessions": 12,
+          "pct": 6.7
+        },
+        {
+          "source": "(not set)",
+          "medium": "(not set)",
+          "sessions": 4,
+          "pct": 2.2
+        },
+        {
+          "source": "copilot.com",
+          "medium": "(not set)",
+          "sessions": 3,
+          "pct": 1.7
+        },
+        {
+          "source": "copilot.com",
+          "medium": "ai-assistant",
+          "sessions": 3,
+          "pct": 1.7
+        },
+        {
+          "source": "ecosia.org",
+          "medium": "organic",
+          "sessions": 2,
+          "pct": 1.1
+        },
+        {
+          "source": "chatgpt.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 0.6
+        },
+        {
+          "source": "us.search.yahoo.com",
+          "medium": "referral",
+          "sessions": 1,
+          "pct": 0.6
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "United States",
+          "sessions": 141
+        },
+        {
+          "country": "China",
+          "sessions": 8
+        },
+        {
+          "country": "Germany",
+          "sessions": 5
+        },
+        {
+          "country": "Vietnam",
+          "sessions": 4
+        },
+        {
+          "country": "Brazil",
+          "sessions": 2
+        },
+        {
+          "country": "Canada",
+          "sessions": 2
+        },
+        {
+          "country": "Iraq",
+          "sessions": 2
+        },
+        {
+          "country": "United Kingdom",
+          "sessions": 2
+        },
+        {
+          "country": "(not set)",
+          "sessions": 1
+        },
+        {
+          "country": "Algeria",
+          "sessions": 1
+        },
+        {
+          "country": "Egypt",
+          "sessions": 1
+        },
+        {
+          "country": "Hong Kong",
+          "sessions": 1
+        },
+        {
+          "country": "Malaysia",
+          "sessions": 1
+        },
+        {
+          "country": "Mexico",
+          "sessions": 1
+        },
+        {
+          "country": "Taiwan",
+          "sessions": 1
+        },
+        {
+          "country": "Thailand",
+          "sessions": 1
+        },
+        {
+          "country": "T\u00fcrkiye",
+          "sessions": 1
+        },
+        {
+          "country": "Uganda",
+          "sessions": 1
+        },
+        {
+          "country": "Venezuela",
+          "sessions": 1
+        }
+      ],
+      "topCities": [
+        {
+          "city": "(not set)",
+          "sessions": 23
+        },
+        {
+          "city": "Boardman",
+          "sessions": 7
+        },
+        {
+          "city": "Seattle",
+          "sessions": 6
+        },
+        {
+          "city": "Atlanta",
+          "sessions": 5
+        },
+        {
+          "city": "Chicago",
+          "sessions": 5
+        },
+        {
+          "city": "Minneapolis",
+          "sessions": 4
+        },
+        {
+          "city": "",
+          "sessions": 3
+        },
+        {
+          "city": "Dallas",
+          "sessions": 3
+        },
+        {
+          "city": "Frankfurt am Main",
+          "sessions": 3
+        },
+        {
+          "city": "Glenview",
+          "sessions": 3
+        }
+      ],
+      "devices": [
+        {
+          "device": "desktop",
+          "sessions": 107
+        },
+        {
+          "device": "mobile",
+          "sessions": 68
+        },
+        {
+          "device": "tablet",
+          "sessions": 1
+        }
+      ],
+      "browsers": [
+        {
+          "browser": "Chrome",
+          "sessions": 75
+        },
+        {
+          "browser": "Safari",
+          "sessions": 46
+        },
+        {
+          "browser": "Edge",
+          "sessions": 43
+        },
+        {
+          "browser": "Android Webview",
+          "sessions": 7
+        },
+        {
+          "browser": "Firefox",
+          "sessions": 5
+        }
+      ],
+      "os": [
+        {
+          "os": "Windows",
+          "sessions": 83
+        },
+        {
+          "os": "iOS",
+          "sessions": 43
+        },
+        {
+          "os": "Android",
+          "sessions": 27
+        },
+        {
+          "os": "Macintosh",
+          "sessions": 14
+        },
+        {
+          "os": "Linux",
+          "sessions": 9
+        }
+      ]
+    },
+    "180d": {
+      "pageviews": 196,
+      "sessions": 180,
+      "avgSessionDur": 95,
+      "bounceRate": 0.5111111111111111,
+      "newUsers": 171,
+      "returningUsers": 1,
+      "daily": [
+        {
+          "date": "20260416",
+          "pageviews": 3
+        },
+        {
+          "date": "20260423",
+          "pageviews": 1
+        },
+        {
+          "date": "20260514",
+          "pageviews": 1
+        },
+        {
+          "date": "20260526",
+          "pageviews": 7
+        },
+        {
+          "date": "20260527",
+          "pageviews": 1
+        },
+        {
+          "date": "20260529",
+          "pageviews": 1
+        },
+        {
+          "date": "20260530",
+          "pageviews": 1
+        },
+        {
+          "date": "20260602",
+          "pageviews": 1
+        },
+        {
+          "date": "20260604",
+          "pageviews": 1
+        },
+        {
+          "date": "20260606",
+          "pageviews": 1
+        },
+        {
+          "date": "20260607",
+          "pageviews": 3
+        },
+        {
+          "date": "20260608",
+          "pageviews": 1
+        },
+        {
+          "date": "20260609",
+          "pageviews": 2
+        },
+        {
+          "date": "20260612",
+          "pageviews": 2
+        },
+        {
+          "date": "20260614",
+          "pageviews": 5
+        },
+        {
+          "date": "20260615",
+          "pageviews": 2
+        },
+        {
+          "date": "20260617",
+          "pageviews": 1
+        },
+        {
+          "date": "20260619",
+          "pageviews": 2
+        },
+        {
+          "date": "20260620",
+          "pageviews": 2
+        },
+        {
+          "date": "20260621",
+          "pageviews": 1
+        },
+        {
+          "date": "20260622",
+          "pageviews": 3
+        },
+        {
+          "date": "20260623",
+          "pageviews": 2
+        },
+        {
+          "date": "20260624",
+          "pageviews": 4
+        },
+        {
+          "date": "20260625",
+          "pageviews": 6
+        },
+        {
+          "date": "20260627",
+          "pageviews": 1
+        },
+        {
+          "date": "20260628",
+          "pageviews": 3
+        },
+        {
+          "date": "20260629",
+          "pageviews": 2
+        },
+        {
+          "date": "20260630",
+          "pageviews": 8
+        },
+        {
+          "date": "20260701",
+          "pageviews": 1
+        },
+        {
+          "date": "20260702",
+          "pageviews": 2
+        },
+        {
+          "date": "20260704",
+          "pageviews": 3
+        },
+        {
+          "date": "20260705",
+          "pageviews": 1
+        },
+        {
+          "date": "20260706",
+          "pageviews": 1
+        },
+        {
+          "date": "20260707",
+          "pageviews": 7
+        },
+        {
+          "date": "20260708",
+          "pageviews": 9
+        },
+        {
+          "date": "20260709",
+          "pageviews": 8
+        },
+        {
+          "date": "20260710",
+          "pageviews": 4
+        },
+        {
+          "date": "20260711",
+          "pageviews": 6
+        },
+        {
+          "date": "20260712",
+          "pageviews": 3
+        },
+        {
+          "date": "20260713",
+          "pageviews": 9
+        },
+        {
+          "date": "20260714",
+          "pageviews": 8
+        },
+        {
+          "date": "20260715",
+          "pageviews": 11
+        },
+        {
+          "date": "20260716",
+          "pageviews": 4
+        },
+        {
+          "date": "20260717",
+          "pageviews": 3
+        },
+        {
+          "date": "20260718",
+          "pageviews": 6
+        },
+        {
+          "date": "20260719",
+          "pageviews": 9
+        },
+        {
+          "date": "20260720",
+          "pageviews": 4
+        },
+        {
+          "date": "20260721",
+          "pageviews": 9
+        },
+        {
+          "date": "20260722",
+          "pageviews": 7
+        },
+        {
+          "date": "20260723",
+          "pageviews": 7
+        },
+        {
+          "date": "20260724",
+          "pageviews": 6
+        }
+      ],
+      "topPages": [
+        {
+          "rank": 1,
+          "page": "/",
+          "title": "Tow With The Flow | Real help when your car breaks down.",
+          "pageviews": 32,
+          "avgDur": 4,
+          "bounceRate": 90.3,
+          "sessions": 31
+        },
+        {
+          "rank": 2,
+          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+          "pageviews": 12,
+          "avgDur": 245,
+          "bounceRate": 27.3,
+          "sessions": 11
+        },
+        {
+          "rank": 3,
+          "page": "/state-farm-towing-coverage-maximum-distance-miles/",
+          "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
+          "pageviews": 12,
+          "avgDur": 123,
+          "bounceRate": 38.5,
+          "sessions": 13
+        },
+        {
+          "rank": 4,
+          "page": "/car-died-while-driving-what-now/",
+          "title": "Car Died While Driving, What Now? | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 3,
+          "bounceRate": 87.5,
+          "sessions": 8
+        },
+        {
+          "rank": 5,
+          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
+          "pageviews": 7,
+          "avgDur": 21,
+          "bounceRate": 66.7,
+          "sessions": 6
+        },
+        {
+          "rank": 6,
+          "page": "/geico-roadside-assistance-how-many-calls-per-year/",
+          "title": "GEICO Roadside Assistance How Many Calls Per Year: Usage Limits Explained | Tow With The Flow",
+          "pageviews": 6,
+          "avgDur": 68,
+          "bounceRate": 83.3,
+          "sessions": 6
+        },
+        {
+          "rank": 7,
+          "page": "/progressive-insurance-towing-coverage-how-many-times/",
+          "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
+          "pageviews": 6,
+          "avgDur": 67,
+          "bounceRate": 42.9,
+          "sessions": 7
+        },
+        {
+          "rank": 8,
+          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
+          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
+          "pageviews": 6,
+          "avgDur": 107,
+          "bounceRate": 16.7,
+          "sessions": 6
+        },
+        {
+          "rank": 9,
+          "page": "/contact/",
+          "title": "Contact | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 8,
+          "bounceRate": 0.0,
+          "sessions": 3
+        },
+        {
+          "rank": 10,
+          "page": "/farmers-insurance-towing-benefit-how-much-pays/",
+          "title": "How Much Does Farmers Insurance Pay for Towing? Coverage Limits Explained | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 23,
+          "bounceRate": 60.0,
+          "sessions": 5
+        },
+        {
+          "rank": 11,
+          "page": "/progressive-insurance-towing-reimbursement-amount/",
+          "title": "Progressive Insurance Towing Reimbursement Amount: What You'll Get Back | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 189,
+          "bounceRate": 60.0,
+          "sessions": 5
+        },
+        {
+          "rank": 12,
+          "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
+          "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 146,
+          "bounceRate": 0.0,
+          "sessions": 4
+        },
+        {
+          "rank": 13,
+          "page": "/towing-cost-seattle-washington/",
+          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 4,
+          "avgDur": 129,
+          "bounceRate": 33.3,
+          "sessions": 6
+        },
+        {
+          "rank": 14,
+          "page": "/about/",
+          "title": "About Tow With The Flow | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 10,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 15,
+          "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
+          "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 37,
+          "bounceRate": 0.0,
+          "sessions": 3
+        },
+        {
+          "rank": 16,
+          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
+          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 28,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 17,
+          "page": "/liberty-mutual-towing-coverage-dollar-amount-limit/",
+          "title": "Liberty Mutual Towing Coverage Dollar Amount Limits Explained | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 11,
+          "bounceRate": 75.0,
+          "sessions": 4
+        },
+        {
+          "rank": 18,
+          "page": "/progressive-roadside-assistance-covers-how-much-towing/",
+          "title": "Progressive Roadside Assistance Covers How Much Towing: Complete Coverage Breakdown | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 383,
+          "bounceRate": 33.3,
+          "sessions": 3
+        },
+        {
+          "rank": 19,
+          "page": "/towing-cost-dallas-texas/",
+          "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 84,
+          "bounceRate": 33.3,
+          "sessions": 3
+        },
+        {
+          "rank": 20,
+          "page": "/towing-cost-los-angeles-california/",
+          "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
+          "pageviews": 3,
+          "avgDur": 64,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 21,
+          "page": "/aaa-towing-coverage-runs-out-what-happens-cost/",
+          "title": "AAA Towing Coverage Runs Out: What Happens and Cost | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 101,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 22,
+          "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
+          "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 57,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 23,
+          "page": "/allstate-roadside-assistance-towing-distance-covered/",
+          "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 198,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 24,
+          "page": "/car-making-grinding-noise-when-starting-tow-truck-needed/",
+          "title": "Car Making Grinding Noise When Starting: When You Need a Tow Truck | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 2
+        },
+        {
+          "rank": 25,
+          "page": "/cheapest-tow-truck-service-near-me-sunday/",
+          "title": "Find Cheapest Tow Truck Service Open Sundays Near You | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 183,
+          "bounceRate": 0.0,
+          "sessions": 1
+        },
+        {
+          "rank": 26,
+          "page": "/farmers-insurance-towing-benefit-how-many-times/",
+          "title": "How Many Times Can You Use Farmers Insurance Towing Benefits? | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 102,
+          "bounceRate": 50.0,
+          "sessions": 2
+        },
+        {
+          "rank": 27,
+          "page": "/geico-roadside-assistance-towing-limits-how-many-miles/",
+          "title": "GEICO Roadside Assistance Towing Limits: How Many Miles Coverage You Get | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 96,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 28,
+          "page": "/progressive-roadside-assistance-towing-limit-miles/",
+          "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 178,
+          "bounceRate": 0.0,
+          "sessions": 2
+        },
+        {
+          "rank": 29,
+          "page": "/roadside-assistance-without-insurance-membership-cost/",
+          "title": "Roadside Assistance Without Insurance Membership Cost: What You'll Actually Pay | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 2
+        },
+        {
+          "rank": 30,
+          "page": "/state-farm-roadside-assistance-towing-limit-miles/",
+          "title": "State Farm Roadside Assistance Towing Limit Miles: Coverage Distance Explained | Tow With The Flow",
+          "pageviews": 2,
+          "avgDur": 62,
+          "bounceRate": 0.0,
+          "sessions": 2
+        }
+      ],
+      "trafficSources": [
+        {
+          "channel": "Organic Search",
+          "sessions": 112,
+          "pct": 61.5
+        },
+        {
+          "channel": "Direct",
+          "sessions": 59,
+          "pct": 32.4
+        },
+        {
+          "channel": "Unassigned",
+          "sessions": 7,
+          "pct": 3.8
+        },
+        {
+          "channel": "AI Assistant",
+          "sessions": 3,
+          "pct": 1.6
+        },
+        {
+          "channel": "Referral",
+          "sessions": 1,
+          "pct": 0.5
+        }
+      ],
+      "sourcesDetail": [
+        {
+          "source": "(direct)",
+          "medium": "(none)",
+          "sessions": 59,
+          "pct": 32.2
+        },
+        {
+          "source": "bing",
+          "medium": "organic",
+          "sessions": 48,
+          "pct": 26.2
+        },
+        {
+          "source": "duckduckgo",
+          "medium": "organic",
+          "sessions": 29,
           "pct": 15.8
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 21,
-          "pct": 11.9
-        },
-        {
-          "source": "google",
-          "medium": "organic",
-          "sessions": 12,
-          "pct": 6.8
-        },
-        {
-          "source": "(not set)",
-          "medium": "(not set)",
-          "sessions": 8,
-          "pct": 4.5
-        },
-        {
-          "source": "copilot.com",
-          "medium": "(not set)",
-          "sessions": 3,
-          "pct": 1.7
-        },
-        {
-          "source": "copilot.com",
-          "medium": "ai-assistant",
-          "sessions": 3,
-          "pct": 1.7
-        },
-        {
-          "source": "ecosia.org",
-          "medium": "organic",
-          "sessions": 2,
-          "pct": 1.1
-        },
-        {
-          "source": "chatgpt.com",
-          "medium": "referral",
-          "sessions": 1,
-          "pct": 0.6
-        },
-        {
-          "source": "us.search.yahoo.com",
-          "medium": "referral",
-          "sessions": 1,
-          "pct": 0.6
-        }
-      ],
-      "topCountries": [
-        {
-          "country": "United States",
-          "sessions": 137
-        },
-        {
-          "country": "China",
-          "sessions": 7
-        },
-        {
-          "country": "Germany",
-          "sessions": 5
-        },
-        {
-          "country": "Vietnam",
-          "sessions": 4
-        },
-        {
-          "country": "Brazil",
-          "sessions": 2
-        },
-        {
-          "country": "Canada",
-          "sessions": 2
-        },
-        {
-          "country": "Iraq",
-          "sessions": 2
-        },
-        {
-          "country": "United Kingdom",
-          "sessions": 2
-        },
-        {
-          "country": "(not set)",
-          "sessions": 1
-        },
-        {
-          "country": "Algeria",
-          "sessions": 1
-        },
-        {
-          "country": "Egypt",
-          "sessions": 1
-        },
-        {
-          "country": "Malaysia",
-          "sessions": 1
-        },
-        {
-          "country": "Mexico",
-          "sessions": 1
-        },
-        {
-          "country": "Taiwan",
-          "sessions": 1
-        },
-        {
-          "country": "Thailand",
-          "sessions": 1
-        },
-        {
-          "country": "T\u00fcrkiye",
-          "sessions": 1
-        },
-        {
-          "country": "Uganda",
-          "sessions": 1
-        },
-        {
-          "country": "Venezuela",
-          "sessions": 1
-        }
-      ],
-      "topCities": [
-        {
-          "city": "(not set)",
-          "sessions": 23
-        },
-        {
-          "city": "Seattle",
-          "sessions": 6
-        },
-        {
-          "city": "Atlanta",
-          "sessions": 5
-        },
-        {
-          "city": "Chicago",
-          "sessions": 5
-        },
-        {
-          "city": "Boardman",
-          "sessions": 4
-        },
-        {
-          "city": "Minneapolis",
-          "sessions": 4
-        },
-        {
-          "city": "Dallas",
-          "sessions": 3
-        },
-        {
-          "city": "Frankfurt am Main",
-          "sessions": 3
-        },
-        {
-          "city": "Glenview",
-          "sessions": 3
-        },
-        {
-          "city": "Los Angeles",
-          "sessions": 3
-        }
-      ],
-      "devices": [
-        {
-          "device": "desktop",
-          "sessions": 103
-        },
-        {
-          "device": "mobile",
-          "sessions": 66
-        },
-        {
-          "device": "tablet",
-          "sessions": 1
-        }
-      ],
-      "browsers": [
-        {
-          "browser": "Chrome",
-          "sessions": 71
-        },
-        {
-          "browser": "Safari",
-          "sessions": 45
-        },
-        {
-          "browser": "Edge",
-          "sessions": 43
-        },
-        {
-          "browser": "Android Webview",
-          "sessions": 6
-        },
-        {
-          "browser": "Firefox",
-          "sessions": 5
-        }
-      ],
-      "os": [
-        {
-          "os": "Windows",
-          "sessions": 82
-        },
-        {
-          "os": "iOS",
-          "sessions": 42
-        },
-        {
-          "os": "Android",
-          "sessions": 26
-        },
-        {
-          "os": "Macintosh",
-          "sessions": 14
-        },
-        {
-          "os": "Linux",
-          "sessions": 6
-        }
-      ]
-    },
-    "180d": {
-      "pageviews": 190,
-      "sessions": 174,
-      "avgSessionDur": 93,
-      "bounceRate": 0.5287356321839081,
-      "newUsers": 165,
-      "returningUsers": 1,
-      "daily": [
-        {
-          "date": "20260416",
-          "pageviews": 3
-        },
-        {
-          "date": "20260423",
-          "pageviews": 1
-        },
-        {
-          "date": "20260514",
-          "pageviews": 1
-        },
-        {
-          "date": "20260526",
-          "pageviews": 7
-        },
-        {
-          "date": "20260527",
-          "pageviews": 1
-        },
-        {
-          "date": "20260529",
-          "pageviews": 1
-        },
-        {
-          "date": "20260530",
-          "pageviews": 1
-        },
-        {
-          "date": "20260602",
-          "pageviews": 1
-        },
-        {
-          "date": "20260604",
-          "pageviews": 1
-        },
-        {
-          "date": "20260606",
-          "pageviews": 1
-        },
-        {
-          "date": "20260607",
-          "pageviews": 3
-        },
-        {
-          "date": "20260608",
-          "pageviews": 1
-        },
-        {
-          "date": "20260609",
-          "pageviews": 2
-        },
-        {
-          "date": "20260612",
-          "pageviews": 2
-        },
-        {
-          "date": "20260614",
-          "pageviews": 5
-        },
-        {
-          "date": "20260615",
-          "pageviews": 2
-        },
-        {
-          "date": "20260617",
-          "pageviews": 1
-        },
-        {
-          "date": "20260619",
-          "pageviews": 2
-        },
-        {
-          "date": "20260620",
-          "pageviews": 2
-        },
-        {
-          "date": "20260621",
-          "pageviews": 1
-        },
-        {
-          "date": "20260622",
-          "pageviews": 3
-        },
-        {
-          "date": "20260623",
-          "pageviews": 2
-        },
-        {
-          "date": "20260624",
-          "pageviews": 4
-        },
-        {
-          "date": "20260625",
-          "pageviews": 6
-        },
-        {
-          "date": "20260627",
-          "pageviews": 1
-        },
-        {
-          "date": "20260628",
-          "pageviews": 3
-        },
-        {
-          "date": "20260629",
-          "pageviews": 2
-        },
-        {
-          "date": "20260630",
-          "pageviews": 8
-        },
-        {
-          "date": "20260701",
-          "pageviews": 1
-        },
-        {
-          "date": "20260702",
-          "pageviews": 2
-        },
-        {
-          "date": "20260704",
-          "pageviews": 3
-        },
-        {
-          "date": "20260705",
-          "pageviews": 1
-        },
-        {
-          "date": "20260706",
-          "pageviews": 1
-        },
-        {
-          "date": "20260707",
-          "pageviews": 7
-        },
-        {
-          "date": "20260708",
-          "pageviews": 9
-        },
-        {
-          "date": "20260709",
-          "pageviews": 8
-        },
-        {
-          "date": "20260710",
-          "pageviews": 4
-        },
-        {
-          "date": "20260711",
-          "pageviews": 6
-        },
-        {
-          "date": "20260712",
-          "pageviews": 3
-        },
-        {
-          "date": "20260713",
-          "pageviews": 9
-        },
-        {
-          "date": "20260714",
-          "pageviews": 8
-        },
-        {
-          "date": "20260715",
-          "pageviews": 11
-        },
-        {
-          "date": "20260716",
-          "pageviews": 4
-        },
-        {
-          "date": "20260717",
-          "pageviews": 3
-        },
-        {
-          "date": "20260718",
-          "pageviews": 6
-        },
-        {
-          "date": "20260719",
-          "pageviews": 9
-        },
-        {
-          "date": "20260720",
-          "pageviews": 4
-        },
-        {
-          "date": "20260721",
-          "pageviews": 9
-        },
-        {
-          "date": "20260722",
-          "pageviews": 7
-        },
-        {
-          "date": "20260723",
-          "pageviews": 7
-        }
-      ],
-      "topPages": [
-        {
-          "rank": 1,
-          "page": "/",
-          "title": "Tow With The Flow | Real help when your car breaks down.",
-          "pageviews": 28,
-          "avgDur": 4,
-          "bounceRate": 88.9,
-          "sessions": 27
-        },
-        {
-          "rank": 2,
-          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
-          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
-          "pageviews": 12,
-          "avgDur": 245,
-          "bounceRate": 27.3,
-          "sessions": 11
-        },
-        {
-          "rank": 3,
-          "page": "/state-farm-towing-coverage-maximum-distance-miles/",
-          "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
-          "pageviews": 12,
-          "avgDur": 121,
-          "bounceRate": 46.2,
-          "sessions": 13
-        },
-        {
-          "rank": 4,
-          "page": "/car-died-while-driving-what-now/",
-          "title": "Car Died While Driving, What Now? | Tow With The Flow",
-          "pageviews": 9,
-          "avgDur": 3,
-          "bounceRate": 87.5,
-          "sessions": 8
-        },
-        {
-          "rank": 5,
-          "page": "/geico-roadside-assistance-how-many-calls-per-year/",
-          "title": "GEICO Roadside Assistance How Many Calls Per Year: Usage Limits Explained | Tow With The Flow",
-          "pageviews": 6,
-          "avgDur": 68,
-          "bounceRate": 83.3,
-          "sessions": 6
-        },
-        {
-          "rank": 6,
-          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 6,
-          "avgDur": 12,
-          "bounceRate": 60.0,
-          "sessions": 5
-        },
-        {
-          "rank": 7,
-          "page": "/progressive-insurance-towing-coverage-how-many-times/",
-          "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
-          "pageviews": 6,
-          "avgDur": 64,
-          "bounceRate": 57.1,
-          "sessions": 7
-        },
-        {
-          "rank": 8,
-          "page": "/usaa-roadside-assistance-towing-coverage-limits/",
-          "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 6,
-          "avgDur": 107,
-          "bounceRate": 16.7,
-          "sessions": 6
-        },
-        {
-          "rank": 9,
-          "page": "/contact/",
-          "title": "Contact | Tow With The Flow",
-          "pageviews": 4,
-          "avgDur": 8,
-          "bounceRate": 0.0,
-          "sessions": 3
-        },
-        {
-          "rank": 10,
-          "page": "/farmers-insurance-towing-benefit-how-much-pays/",
-          "title": "How Much Does Farmers Insurance Pay for Towing? Coverage Limits Explained | Tow With The Flow",
-          "pageviews": 4,
-          "avgDur": 23,
-          "bounceRate": 60.0,
-          "sessions": 5
-        },
-        {
-          "rank": 11,
-          "page": "/progressive-insurance-towing-reimbursement-amount/",
-          "title": "Progressive Insurance Towing Reimbursement Amount: What You'll Get Back | Tow With The Flow",
-          "pageviews": 4,
-          "avgDur": 189,
-          "bounceRate": 60.0,
-          "sessions": 5
-        },
-        {
-          "rank": 12,
-          "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
-          "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
-          "pageviews": 4,
-          "avgDur": 146,
-          "bounceRate": 0.0,
-          "sessions": 4
-        },
-        {
-          "rank": 13,
-          "page": "/towing-cost-seattle-washington/",
-          "title": "Towing Cost in Seattle Washington: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 4,
-          "avgDur": 129,
-          "bounceRate": 33.3,
-          "sessions": 6
-        },
-        {
-          "rank": 14,
-          "page": "/about/",
-          "title": "About Tow With The Flow | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 10,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 15,
-          "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
-          "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 22,
-          "bounceRate": 33.3,
-          "sessions": 3
-        },
-        {
-          "rank": 16,
-          "page": "/liberty-mutual-roadside-assistance-towing-distance-covered/",
-          "title": "Liberty Mutual Roadside Assistance Towing Distance Covered: What You Need to Know | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 28,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 17,
-          "page": "/liberty-mutual-towing-coverage-dollar-amount-limit/",
-          "title": "Liberty Mutual Towing Coverage Dollar Amount Limits Explained | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 11,
-          "bounceRate": 75.0,
-          "sessions": 4
-        },
-        {
-          "rank": 18,
-          "page": "/progressive-roadside-assistance-covers-how-much-towing/",
-          "title": "Progressive Roadside Assistance Covers How Much Towing: Complete Coverage Breakdown | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 383,
-          "bounceRate": 33.3,
-          "sessions": 3
-        },
-        {
-          "rank": 19,
-          "page": "/towing-cost-dallas-texas/",
-          "title": "Towing Cost in Dallas Texas: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 84,
-          "bounceRate": 33.3,
-          "sessions": 3
-        },
-        {
-          "rank": 20,
-          "page": "/towing-cost-los-angeles-california/",
-          "title": "Towing Cost in Los Angeles California: What You'll Pay and What to Do | Tow With The Flow",
-          "pageviews": 3,
-          "avgDur": 64,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 21,
-          "page": "/aaa-towing-coverage-runs-out-what-happens-cost/",
-          "title": "AAA Towing Coverage Runs Out: What Happens and Cost | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 101,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 22,
-          "page": "/aaa-towing-vs-private-tow-truck-cost-comparison/",
-          "title": "AAA Towing vs Private Tow Truck: Real Cost Breakdown | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 57,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 23,
-          "page": "/allstate-roadside-assistance-towing-distance-covered/",
-          "title": "Allstate Roadside Assistance Towing Distance: How Far Will They Tow? | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 198,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 24,
-          "page": "/car-making-grinding-noise-when-starting-tow-truck-needed/",
-          "title": "Car Making Grinding Noise When Starting: When You Need a Tow Truck | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 0,
-          "bounceRate": 100.0,
-          "sessions": 2
-        },
-        {
-          "rank": 25,
-          "page": "/cheapest-tow-truck-service-near-me-sunday/",
-          "title": "Find Cheapest Tow Truck Service Open Sundays Near You | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 183,
-          "bounceRate": 0.0,
-          "sessions": 1
-        },
-        {
-          "rank": 26,
-          "page": "/farmers-insurance-towing-benefit-how-many-times/",
-          "title": "How Many Times Can You Use Farmers Insurance Towing Benefits? | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 102,
-          "bounceRate": 50.0,
-          "sessions": 2
-        },
-        {
-          "rank": 27,
-          "page": "/geico-roadside-assistance-towing-limits-how-many-miles/",
-          "title": "GEICO Roadside Assistance Towing Limits: How Many Miles Coverage You Get | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 96,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 28,
-          "page": "/progressive-roadside-assistance-towing-limit-miles/",
-          "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 178,
-          "bounceRate": 0.0,
-          "sessions": 2
-        },
-        {
-          "rank": 29,
-          "page": "/roadside-assistance-without-insurance-membership-cost/",
-          "title": "Roadside Assistance Without Insurance Membership Cost: What You'll Actually Pay | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 0,
-          "bounceRate": 100.0,
-          "sessions": 2
-        },
-        {
-          "rank": 30,
-          "page": "/state-farm-roadside-assistance-towing-limit-miles/",
-          "title": "State Farm Roadside Assistance Towing Limit Miles: Coverage Distance Explained | Tow With The Flow",
-          "pageviews": 2,
-          "avgDur": 62,
-          "bounceRate": 0.0,
-          "sessions": 2
-        }
-      ],
-      "trafficSources": [
-        {
-          "channel": "Organic Search",
-          "sessions": 111,
-          "pct": 61.7
-        },
-        {
-          "channel": "Direct",
-          "sessions": 54,
-          "pct": 30.0
-        },
-        {
-          "channel": "Unassigned",
-          "sessions": 11,
-          "pct": 6.1
-        },
-        {
-          "channel": "AI Assistant",
-          "sessions": 3,
-          "pct": 1.7
-        },
-        {
-          "channel": "Referral",
-          "sessions": 1,
-          "pct": 0.6
-        }
-      ],
-      "sourcesDetail": [
-        {
-          "source": "(direct)",
-          "medium": "(none)",
-          "sessions": 54,
-          "pct": 29.8
-        },
-        {
-          "source": "bing",
-          "medium": "organic",
-          "sessions": 48,
-          "pct": 26.5
-        },
-        {
-          "source": "duckduckgo",
-          "medium": "organic",
-          "sessions": 28,
-          "pct": 15.5
-        },
-        {
-          "source": "yahoo",
-          "medium": "organic",
-          "sessions": 21,
-          "pct": 11.6
+          "pct": 11.5
         },
         {
           "source": "google",
@@ -2539,20 +2559,20 @@
         {
           "source": "(not set)",
           "medium": "(not set)",
-          "sessions": 8,
-          "pct": 4.4
+          "sessions": 4,
+          "pct": 2.2
         },
         {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 3,
-          "pct": 1.7
+          "pct": 1.6
         },
         {
           "source": "copilot.com",
           "medium": "ai-assistant",
           "sessions": 3,
-          "pct": 1.7
+          "pct": 1.6
         },
         {
           "source": "ecosia.org",
@@ -2564,23 +2584,23 @@
           "source": "chatgpt.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 0.6
+          "pct": 0.5
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 0.6
+          "pct": 0.5
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 138
+          "sessions": 142
         },
         {
           "country": "China",
-          "sessions": 7
+          "sessions": 8
         },
         {
           "country": "Germany",
@@ -2619,6 +2639,10 @@
           "sessions": 1
         },
         {
+          "country": "Hong Kong",
+          "sessions": 1
+        },
+        {
           "country": "Malaysia",
           "sessions": 1
         },
@@ -2653,6 +2677,10 @@
           "sessions": 26
         },
         {
+          "city": "Boardman",
+          "sessions": 7
+        },
+        {
           "city": "Seattle",
           "sessions": 6
         },
@@ -2665,12 +2693,12 @@
           "sessions": 5
         },
         {
-          "city": "Boardman",
+          "city": "Minneapolis",
           "sessions": 4
         },
         {
-          "city": "Minneapolis",
-          "sessions": 4
+          "city": "",
+          "sessions": 3
         },
         {
           "city": "Dallas",
@@ -2683,20 +2711,16 @@
         {
           "city": "Glenview",
           "sessions": 3
-        },
-        {
-          "city": "Los Angeles",
-          "sessions": 3
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 104
+          "sessions": 108
         },
         {
           "device": "mobile",
-          "sessions": 69
+          "sessions": 71
         },
         {
           "device": "tablet",
@@ -2706,11 +2730,11 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 75
+          "sessions": 79
         },
         {
           "browser": "Safari",
-          "sessions": 45
+          "sessions": 46
         },
         {
           "browser": "Edge",
@@ -2718,7 +2742,7 @@
         },
         {
           "browser": "Android Webview",
-          "sessions": 6
+          "sessions": 7
         },
         {
           "browser": "Firefox",
@@ -2728,15 +2752,15 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 82
+          "sessions": 83
         },
         {
           "os": "iOS",
-          "sessions": 42
+          "sessions": 43
         },
         {
           "os": "Android",
-          "sessions": 29
+          "sessions": 30
         },
         {
           "os": "Macintosh",
@@ -2744,16 +2768,16 @@
         },
         {
           "os": "Linux",
-          "sessions": 7
+          "sessions": 10
         }
       ]
     },
     "365d": {
-      "pageviews": 190,
-      "sessions": 174,
-      "avgSessionDur": 93,
-      "bounceRate": 0.5287356321839081,
-      "newUsers": 165,
+      "pageviews": 196,
+      "sessions": 180,
+      "avgSessionDur": 95,
+      "bounceRate": 0.5111111111111111,
+      "newUsers": 171,
       "returningUsers": 1,
       "daily": [
         {
@@ -2955,6 +2979,10 @@
         {
           "date": "20260723",
           "pageviews": 7
+        },
+        {
+          "date": "20260724",
+          "pageviews": 6
         }
       ],
       "topPages": [
@@ -2962,10 +2990,10 @@
           "rank": 1,
           "page": "/",
           "title": "Tow With The Flow | Real help when your car breaks down.",
-          "pageviews": 28,
+          "pageviews": 32,
           "avgDur": 4,
-          "bounceRate": 88.9,
-          "sessions": 27
+          "bounceRate": 90.3,
+          "sessions": 31
         },
         {
           "rank": 2,
@@ -2981,8 +3009,8 @@
           "page": "/state-farm-towing-coverage-maximum-distance-miles/",
           "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 12,
-          "avgDur": 121,
-          "bounceRate": 46.2,
+          "avgDur": 123,
+          "bounceRate": 38.5,
           "sessions": 13
         },
         {
@@ -2996,6 +3024,15 @@
         },
         {
           "rank": 5,
+          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
+          "pageviews": 7,
+          "avgDur": 21,
+          "bounceRate": 66.7,
+          "sessions": 6
+        },
+        {
+          "rank": 6,
           "page": "/geico-roadside-assistance-how-many-calls-per-year/",
           "title": "GEICO Roadside Assistance How Many Calls Per Year: Usage Limits Explained | Tow With The Flow",
           "pageviews": 6,
@@ -3004,21 +3041,12 @@
           "sessions": 6
         },
         {
-          "rank": 6,
-          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 6,
-          "avgDur": 12,
-          "bounceRate": 60.0,
-          "sessions": 5
-        },
-        {
           "rank": 7,
           "page": "/progressive-insurance-towing-coverage-how-many-times/",
           "title": "Progressive Insurance Towing Coverage: How Many Times Can You Use It? | Tow With The Flow",
           "pageviews": 6,
-          "avgDur": 64,
-          "bounceRate": 57.1,
+          "avgDur": 67,
+          "bounceRate": 42.9,
           "sessions": 7
         },
         {
@@ -3089,8 +3117,8 @@
           "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
           "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 22,
-          "bounceRate": 33.3,
+          "avgDur": 37,
+          "bounceRate": 0.0,
           "sessions": 3
         },
         {
@@ -3232,54 +3260,54 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 111,
-          "pct": 61.7
+          "sessions": 112,
+          "pct": 61.5
         },
         {
           "channel": "Direct",
-          "sessions": 54,
-          "pct": 30.0
+          "sessions": 59,
+          "pct": 32.4
         },
         {
           "channel": "Unassigned",
-          "sessions": 11,
-          "pct": 6.1
+          "sessions": 7,
+          "pct": 3.8
         },
         {
           "channel": "AI Assistant",
           "sessions": 3,
-          "pct": 1.7
+          "pct": 1.6
         },
         {
           "channel": "Referral",
           "sessions": 1,
-          "pct": 0.6
+          "pct": 0.5
         }
       ],
       "sourcesDetail": [
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 54,
-          "pct": 29.8
+          "sessions": 59,
+          "pct": 32.2
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 48,
-          "pct": 26.5
+          "pct": 26.2
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 28,
-          "pct": 15.5
+          "sessions": 29,
+          "pct": 15.8
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 21,
-          "pct": 11.6
+          "pct": 11.5
         },
         {
           "source": "google",
@@ -3290,20 +3318,20 @@
         {
           "source": "(not set)",
           "medium": "(not set)",
-          "sessions": 8,
-          "pct": 4.4
+          "sessions": 4,
+          "pct": 2.2
         },
         {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 3,
-          "pct": 1.7
+          "pct": 1.6
         },
         {
           "source": "copilot.com",
           "medium": "ai-assistant",
           "sessions": 3,
-          "pct": 1.7
+          "pct": 1.6
         },
         {
           "source": "ecosia.org",
@@ -3315,23 +3343,23 @@
           "source": "chatgpt.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 0.6
+          "pct": 0.5
         },
         {
           "source": "us.search.yahoo.com",
           "medium": "referral",
           "sessions": 1,
-          "pct": 0.6
+          "pct": 0.5
         }
       ],
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 138
+          "sessions": 142
         },
         {
           "country": "China",
-          "sessions": 7
+          "sessions": 8
         },
         {
           "country": "Germany",
@@ -3370,6 +3398,10 @@
           "sessions": 1
         },
         {
+          "country": "Hong Kong",
+          "sessions": 1
+        },
+        {
           "country": "Malaysia",
           "sessions": 1
         },
@@ -3404,6 +3436,10 @@
           "sessions": 26
         },
         {
+          "city": "Boardman",
+          "sessions": 7
+        },
+        {
           "city": "Seattle",
           "sessions": 6
         },
@@ -3416,12 +3452,12 @@
           "sessions": 5
         },
         {
-          "city": "Boardman",
+          "city": "Minneapolis",
           "sessions": 4
         },
         {
-          "city": "Minneapolis",
-          "sessions": 4
+          "city": "",
+          "sessions": 3
         },
         {
           "city": "Dallas",
@@ -3434,20 +3470,16 @@
         {
           "city": "Glenview",
           "sessions": 3
-        },
-        {
-          "city": "Los Angeles",
-          "sessions": 3
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 104
+          "sessions": 108
         },
         {
           "device": "mobile",
-          "sessions": 69
+          "sessions": 71
         },
         {
           "device": "tablet",
@@ -3457,11 +3489,11 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 75
+          "sessions": 79
         },
         {
           "browser": "Safari",
-          "sessions": 45
+          "sessions": 46
         },
         {
           "browser": "Edge",
@@ -3469,7 +3501,7 @@
         },
         {
           "browser": "Android Webview",
-          "sessions": 6
+          "sessions": 7
         },
         {
           "browser": "Firefox",
@@ -3479,15 +3511,15 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 82
+          "sessions": 83
         },
         {
           "os": "iOS",
-          "sessions": 42
+          "sessions": 43
         },
         {
           "os": "Android",
-          "sessions": 29
+          "sessions": 30
         },
         {
           "os": "Macintosh",
@@ -3495,10 +3527,10 @@
         },
         {
           "os": "Linux",
-          "sessions": 7
+          "sessions": 10
         }
       ]
     }
   },
-  "lastUpdated": "2026-07-24T08:42:43.848694+00:00"
+  "lastUpdated": "2026-07-25T08:24:05.830235+00:00"
 }
