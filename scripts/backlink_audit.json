@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T10:18:43.982064+00:00",
+  "generated_at": "2026-07-26T14:03:43.615018+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -3049,9 +3049,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/denverroadsideelitetowing/cheapest-towing-service-near-me-after-hours-find-help-fast-when-youre-stuck-what-to-do-next-1iob",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -5007,6 +5007,33 @@
         "verified": true
       }
     },
+    "serpentine-belt-snapped-while-driving-emergency-steps": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/serpentine-belt-snapped-while-driving.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/serpentine-belt-snapped-while-driving-emergency-steps-to-take-right-now-what-to-do-next-3oof",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/serpentine-belt-snapped-while-driving-emergency-steps-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/823201725203759104/serpentine-belt-snapped-while-driving-emergency-steps",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/26/serpentine-belt-snapped-while-driving-emergency-steps/",
+        "verified": true
+      }
+    },
     "smoke-coming-from-under-car-not-hood-what-does-it-mean": {
       "blog": {
         "reason": "ok",
@@ -6743,9 +6770,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/denverroadsideelitetowing/towing-cost-in-denver-colorado-after-accident-what-youll-pay-right-now-roadside-tips-4ojo",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -9391,24 +9418,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 360,
-      "verified": 360
+      "checked": 361,
+      "verified": 361
     },
     "dev": {
-      "checked": 289,
-      "verified": 289
+      "checked": 288,
+      "verified": 288
     },
     "feeder": {
+      "checked": 358,
+      "verified": 358
+    },
+    "tumblr": {
       "checked": 357,
       "verified": 357
     },
-    "tumblr": {
-      "checked": 356,
-      "verified": 356
-    },
     "wordpress": {
-      "checked": 360,
-      "verified": 360
+      "checked": 361,
+      "verified": 361
     }
   }
 }
