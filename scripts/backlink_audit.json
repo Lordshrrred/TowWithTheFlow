@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T11:49:34.644861+00:00",
+  "generated_at": "2026-07-27T15:19:29.422703+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -743,12 +743,6 @@
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-battery-dies-in-parking-lot-what-to.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
@@ -821,6 +815,12 @@
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-breaks-down-on-bridge-who-to-call-and-what-to-do-roadside-tips-51mf",
@@ -1484,6 +1484,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/21/car-doors-wont-unlock-battery-dead-stranded-inside/",
+        "verified": true
+      }
+    },
+    "car-hydroplaned-into-ditch-tow-truck-or-insurance-call-first": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-hydroplaned-into-ditch-tow-truck-or.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-hydroplaned-into-ditch-tow-truck-or-insurance-call-first-what-drivers-should-know-1f06",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-hydroplaned-into-ditch-tow-truck-or-insurance-call-first-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/823298644888387584/car-hydroplaned-into-ditch-tow-truck-or-insurance-call-first",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/27/car-hydroplaned-into-ditch-tow-truck-or-insurance-call-first/",
         "verified": true
       }
     },
@@ -2420,6 +2447,7 @@
     "car-stuck-mud-towing-cost": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-stuck-in-mud-who-pays-towing-cost.html",
         "verified": true
       },
@@ -4002,9 +4030,9 @@
     },
     "how-much-does-a-tow-cost-in-colorado": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-tow-cost-in-colorado.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5160,9 +5188,9 @@
     },
     "state-farm-roadside-assistance-towing-limit-miles": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/state-farm-roadside-assistance-towing_01666866864.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -6335,9 +6363,9 @@
     },
     "towing-cost-atlanta-georgia-rush-hour-traffic": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-atlanta-georgia-rush.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -7210,9 +7238,9 @@
     },
     "towing-cost-in-chicago-illinois-winter-emergency": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-chicago-illinois-winter.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -8432,9 +8460,9 @@
     },
     "towing-cost-parking-lot-to-mechanic-shop": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-parking-lot-to-mechanic.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9068,9 +9096,9 @@
     },
     "towing-cost-tucson-arizona": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-tucson-arizona-what_0617412108.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9487,24 +9515,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 362,
-      "verified": 356
+      "checked": 363,
+      "verified": 361
     },
     "dev": {
-      "checked": 293,
-      "verified": 293
+      "checked": 294,
+      "verified": 294
     },
     "feeder": {
+      "checked": 362,
+      "verified": 362
+    },
+    "tumblr": {
       "checked": 361,
       "verified": 361
     },
-    "tumblr": {
-      "checked": 360,
-      "verified": 360
-    },
     "wordpress": {
-      "checked": 364,
-      "verified": 364
+      "checked": 365,
+      "verified": 365
     }
   }
 }
