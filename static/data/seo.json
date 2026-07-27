@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-26T09:00:12.251622+00:00",
+  "generated_at": "2026-07-27T10:28:51.942042+00:00",
   "keywords": {
     "total": 802,
-    "live": 383,
-    "pending": 419,
+    "live": 387,
+    "pending": 415,
     "local": {
-      "live": 148,
-      "pending": 40
+      "live": 150,
+      "pending": 38
     },
     "pain_point": {
-      "live": 235,
-      "pending": 379
+      "live": 237,
+      "pending": 377
     }
   },
   "next_targets": [
-    {
-      "keyword": "serpentine belt snapped while driving emergency steps",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car making grinding noise when braking safe to drive",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car hydroplaned into ditch tow truck or insurance call first",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "car stuck in snow ditch tow truck cost",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "engine smoking on freeway pull over or keep driving",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "who pays tow truck cost when not at fault accident",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 170
+      "count": 172
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 50
+      "count": 51
     },
     {
       "slug": "insurance-coverage",
@@ -119,7 +119,7 @@
     {
       "slug": "vehicle-safety",
       "label": "Vehicle Safety",
-      "count": 1
+      "count": 2
     },
     {
       "slug": "emergency-checklists",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-26T07:11:57.283422+00:00",
+    "generated_at": "2026-07-27T08:04:24.063579+00:00",
     "platforms": {
       "blog": {
-        "checked": 360,
-        "verified": 360
+        "checked": 363,
+        "verified": 317
       },
       "dev": {
-        "checked": 289,
-        "verified": 289
+        "checked": 293,
+        "verified": 293
       },
       "feeder": {
-        "checked": 357,
-        "verified": 357
+        "checked": 361,
+        "verified": 361
       },
       "tumblr": {
-        "checked": 356,
-        "verified": 356
-      },
-      "wordpress": {
         "checked": 360,
         "verified": 360
+      },
+      "wordpress": {
+        "checked": 364,
+        "verified": 364
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-26T09:00:12.171939+00:00",
+    "generated_at": "2026-07-27T10:28:51.865821+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,7 +186,7 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 32,
+        "rows": 35,
         "source": "search_console",
         "status": "ok"
       },
@@ -207,38 +207,38 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "30 Search Console impressions match this asset pattern.",
+        "reason": "32 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 12,
-    "top_query_count": 32,
+    "top_query_count": 35,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-26T09:00:12.270074+00:00",
+    "generatedAt": "2026-07-27T10:28:51.960578+00:00",
     "keywordGeneration": {
-      "currentInventory": 419,
-      "liveKeywords": 383,
-      "estimatedDaysRemaining": 104.8,
+      "currentInventory": 415,
+      "liveKeywords": 387,
+      "estimatedDaysRemaining": 103.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "104.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "103.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 74,
-      "backlogUnits": 78,
+      "backlogPosts": 118,
+      "backlogUnits": 125,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-26T07:11:57.283422+00:00",
+      "generatedAt": "2026-07-27T08:04:24.063579+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.1,
+      "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": -0.1,
-      "estimatedCatchUpDays": 780.0,
-      "reason": "Backlinks are catching up by 0.1 platform links/day."
+      "netBacklinkUnitsPerDay": 0.0,
+      "estimatedCatchUpDays": null,
+      "reason": "Backlinks are keeping pace, but not reducing the historical backlog."
     },
     "curatedExpansion": {
       "supported": true,
