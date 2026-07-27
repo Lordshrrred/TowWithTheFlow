@@ -1,9 +1,9 @@
 {
-  "pageviews": 158,
-  "sessions": 147,
-  "avgSessionDur": 125,
-  "bounceRate": 0.5034013605442177,
-  "newUsers": 138,
+  "pageviews": 161,
+  "sessions": 150,
+  "avgSessionDur": 123,
+  "bounceRate": 0.4866666666666667,
+  "newUsers": 141,
   "returningUsers": 1,
   "daily": [
     {
@@ -120,7 +120,7 @@
     },
     {
       "date": "20260726",
-      "pageviews": 1
+      "pageviews": 4
     }
   ],
   "topPages": [
@@ -162,21 +162,21 @@
     },
     {
       "rank": 5,
+      "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+      "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
+      "pageviews": 8,
+      "avgDur": 18,
+      "bounceRate": 57.1,
+      "sessions": 7
+    },
+    {
+      "rank": 6,
       "page": "/usaa-roadside-assistance-towing-coverage-limits/",
       "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
       "pageviews": 8,
       "avgDur": 80,
       "bounceRate": 37.5,
       "sessions": 8
-    },
-    {
-      "rank": 6,
-      "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-      "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-      "pageviews": 7,
-      "avgDur": 20,
-      "bounceRate": 50.0,
-      "sessions": 6
     },
     {
       "rank": 7,
@@ -256,7 +256,7 @@
       "title": "State Farm Roadside Assistance Towing Limit Miles: Coverage Distance Explained | Tow With The Flow",
       "pageviews": 3,
       "avgDur": 127,
-      "bounceRate": 33.3,
+      "bounceRate": 0.0,
       "sessions": 3
     },
     {
@@ -264,7 +264,7 @@
       "page": "/towing-cost-credit-card-roadside-assistance-covers/",
       "title": "Does Credit Card Roadside Assistance Cover Towing Costs? | Tow With The Flow",
       "pageviews": 3,
-      "avgDur": 0,
+      "avgDur": 2,
       "bounceRate": 100.0,
       "sessions": 3
     },
@@ -301,7 +301,7 @@
       "title": "Car Battery Dies in Parking Lot: Exactly What To Do | Tow With The Flow",
       "pageviews": 2,
       "avgDur": 833,
-      "bounceRate": 50.0,
+      "bounceRate": 0.0,
       "sessions": 2
     },
     {
@@ -398,18 +398,18 @@
   "trafficSources": [
     {
       "channel": "Organic Search",
-      "sessions": 95,
-      "pct": 63.8
+      "sessions": 96,
+      "pct": 63.6
     },
     {
       "channel": "Direct",
-      "sessions": 47,
-      "pct": 31.5
+      "sessions": 49,
+      "pct": 32.5
     },
     {
       "channel": "Unassigned",
-      "sessions": 6,
-      "pct": 4.0
+      "sessions": 5,
+      "pct": 3.3
     },
     {
       "channel": "AI Assistant",
@@ -421,32 +421,32 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 47,
-      "pct": 31.5
+      "sessions": 49,
+      "pct": 32.5
     },
     {
       "source": "bing",
       "medium": "organic",
       "sessions": 43,
-      "pct": 28.9
+      "pct": 28.5
     },
     {
       "source": "duckduckgo",
       "medium": "organic",
       "sessions": 31,
-      "pct": 20.8
+      "pct": 20.5
     },
     {
       "source": "yahoo",
       "medium": "organic",
-      "sessions": 19,
-      "pct": 12.8
+      "sessions": 20,
+      "pct": 13.2
     },
     {
       "source": "(not set)",
       "medium": "(not set)",
-      "sessions": 4,
-      "pct": 2.7
+      "sessions": 3,
+      "pct": 2.0
     },
     {
       "source": "copilot.com",
@@ -470,11 +470,15 @@
   "topCountries": [
     {
       "country": "United States",
-      "sessions": 107
+      "sessions": 108
     },
     {
       "country": "China",
-      "sessions": 10
+      "sessions": 11
+    },
+    {
+      "country": "Vietnam",
+      "sessions": 5
     },
     {
       "country": "Brazil",
@@ -486,10 +490,6 @@
     },
     {
       "country": "Germany",
-      "sessions": 4
-    },
-    {
-      "country": "Vietnam",
       "sessions": 4
     },
     {
@@ -552,7 +552,7 @@
   "topCities": [
     {
       "city": "(not set)",
-      "sessions": 19
+      "sessions": 22
     },
     {
       "city": "Boardman",
@@ -565,10 +565,6 @@
     {
       "city": "Minneapolis",
       "sessions": 5
-    },
-    {
-      "city": "",
-      "sessions": 4
     },
     {
       "city": "Chicago",
@@ -589,16 +585,20 @@
     {
       "city": "Glenview",
       "sessions": 3
+    },
+    {
+      "city": "Hanoi",
+      "sessions": 3
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "sessions": 92
+      "sessions": 94
     },
     {
       "device": "mobile",
-      "sessions": 54
+      "sessions": 55
     },
     {
       "device": "tablet",
@@ -608,7 +608,7 @@
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 56
+      "sessions": 59
     },
     {
       "browser": "Safari",
@@ -630,7 +630,7 @@
   "os": [
     {
       "os": "Windows",
-      "sessions": 76
+      "sessions": 78
     },
     {
       "os": "iOS",
@@ -638,7 +638,7 @@
     },
     {
       "os": "Android",
-      "sessions": 21
+      "sessions": 22
     },
     {
       "os": "Macintosh",
@@ -651,11 +651,11 @@
   ],
   "ranges": {
     "30d": {
-      "pageviews": 158,
-      "sessions": 147,
-      "avgSessionDur": 125,
-      "bounceRate": 0.5034013605442177,
-      "newUsers": 138,
+      "pageviews": 161,
+      "sessions": 150,
+      "avgSessionDur": 123,
+      "bounceRate": 0.4866666666666667,
+      "newUsers": 141,
       "returningUsers": 1,
       "daily": [
         {
@@ -772,7 +772,7 @@
         },
         {
           "date": "20260726",
-          "pageviews": 1
+          "pageviews": 4
         }
       ],
       "topPages": [
@@ -814,21 +814,21 @@
         },
         {
           "rank": 5,
+          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
+          "pageviews": 8,
+          "avgDur": 18,
+          "bounceRate": 57.1,
+          "sessions": 7
+        },
+        {
+          "rank": 6,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
           "pageviews": 8,
           "avgDur": 80,
           "bounceRate": 37.5,
           "sessions": 8
-        },
-        {
-          "rank": 6,
-          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 7,
-          "avgDur": 20,
-          "bounceRate": 50.0,
-          "sessions": 6
         },
         {
           "rank": 7,
@@ -908,7 +908,7 @@
           "title": "State Farm Roadside Assistance Towing Limit Miles: Coverage Distance Explained | Tow With The Flow",
           "pageviews": 3,
           "avgDur": 127,
-          "bounceRate": 33.3,
+          "bounceRate": 0.0,
           "sessions": 3
         },
         {
@@ -916,7 +916,7 @@
           "page": "/towing-cost-credit-card-roadside-assistance-covers/",
           "title": "Does Credit Card Roadside Assistance Cover Towing Costs? | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 0,
+          "avgDur": 2,
           "bounceRate": 100.0,
           "sessions": 3
         },
@@ -953,7 +953,7 @@
           "title": "Car Battery Dies in Parking Lot: Exactly What To Do | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 833,
-          "bounceRate": 50.0,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -1050,18 +1050,18 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 95,
-          "pct": 63.8
+          "sessions": 96,
+          "pct": 63.6
         },
         {
           "channel": "Direct",
-          "sessions": 47,
-          "pct": 31.5
+          "sessions": 49,
+          "pct": 32.5
         },
         {
           "channel": "Unassigned",
-          "sessions": 6,
-          "pct": 4.0
+          "sessions": 5,
+          "pct": 3.3
         },
         {
           "channel": "AI Assistant",
@@ -1073,32 +1073,32 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 47,
-          "pct": 31.5
+          "sessions": 49,
+          "pct": 32.5
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 43,
-          "pct": 28.9
+          "pct": 28.5
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 31,
-          "pct": 20.8
+          "pct": 20.5
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 19,
-          "pct": 12.8
+          "sessions": 20,
+          "pct": 13.2
         },
         {
           "source": "(not set)",
           "medium": "(not set)",
-          "sessions": 4,
-          "pct": 2.7
+          "sessions": 3,
+          "pct": 2.0
         },
         {
           "source": "copilot.com",
@@ -1122,11 +1122,15 @@
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 107
+          "sessions": 108
         },
         {
           "country": "China",
-          "sessions": 10
+          "sessions": 11
+        },
+        {
+          "country": "Vietnam",
+          "sessions": 5
         },
         {
           "country": "Brazil",
@@ -1138,10 +1142,6 @@
         },
         {
           "country": "Germany",
-          "sessions": 4
-        },
-        {
-          "country": "Vietnam",
           "sessions": 4
         },
         {
@@ -1204,7 +1204,7 @@
       "topCities": [
         {
           "city": "(not set)",
-          "sessions": 19
+          "sessions": 22
         },
         {
           "city": "Boardman",
@@ -1217,10 +1217,6 @@
         {
           "city": "Minneapolis",
           "sessions": 5
-        },
-        {
-          "city": "",
-          "sessions": 4
         },
         {
           "city": "Chicago",
@@ -1241,16 +1237,20 @@
         {
           "city": "Glenview",
           "sessions": 3
+        },
+        {
+          "city": "Hanoi",
+          "sessions": 3
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 92
+          "sessions": 94
         },
         {
           "device": "mobile",
-          "sessions": 54
+          "sessions": 55
         },
         {
           "device": "tablet",
@@ -1260,7 +1260,7 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 56
+          "sessions": 59
         },
         {
           "browser": "Safari",
@@ -1282,7 +1282,7 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 76
+          "sessions": 78
         },
         {
           "os": "iOS",
@@ -1290,7 +1290,7 @@
         },
         {
           "os": "Android",
-          "sessions": 21
+          "sessions": 22
         },
         {
           "os": "Macintosh",
@@ -1303,11 +1303,11 @@
       ]
     },
     "90d": {
-      "pageviews": 208,
-      "sessions": 192,
-      "avgSessionDur": 103,
-      "bounceRate": 0.515625,
-      "newUsers": 182,
+      "pageviews": 211,
+      "sessions": 195,
+      "avgSessionDur": 102,
+      "bounceRate": 0.5025641025641026,
+      "newUsers": 185,
       "returningUsers": 1,
       "daily": [
         {
@@ -1512,7 +1512,7 @@
         },
         {
           "date": "20260726",
-          "pageviews": 1
+          "pageviews": 4
         }
       ],
       "topPages": [
@@ -1556,10 +1556,10 @@
           "rank": 5,
           "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
           "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 18,
-          "bounceRate": 57.1,
-          "sessions": 7
+          "pageviews": 9,
+          "avgDur": 16,
+          "bounceRate": 62.5,
+          "sessions": 8
         },
         {
           "rank": 6,
@@ -1684,7 +1684,7 @@
           "title": "State Farm Roadside Assistance Towing Limit Miles: Coverage Distance Explained | Tow With The Flow",
           "pageviews": 3,
           "avgDur": 127,
-          "bounceRate": 33.3,
+          "bounceRate": 0.0,
           "sessions": 3
         },
         {
@@ -1692,7 +1692,7 @@
           "page": "/towing-cost-credit-card-roadside-assistance-covers/",
           "title": "Does Credit Card Roadside Assistance Cover Towing Costs? | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 0,
+          "avgDur": 2,
           "bounceRate": 100.0,
           "sessions": 3
         },
@@ -1747,7 +1747,7 @@
           "title": "Car Battery Dies in Parking Lot: Exactly What To Do | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 833,
-          "bounceRate": 50.0,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -1790,18 +1790,18 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 120,
-          "pct": 61.9
+          "sessions": 121,
+          "pct": 61.7
         },
         {
           "channel": "Direct",
-          "sessions": 63,
-          "pct": 32.5
+          "sessions": 65,
+          "pct": 33.2
         },
         {
           "channel": "Unassigned",
-          "sessions": 7,
-          "pct": 3.6
+          "sessions": 6,
+          "pct": 3.1
         },
         {
           "channel": "AI Assistant",
@@ -1818,38 +1818,38 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 63,
-          "pct": 32.3
+          "sessions": 65,
+          "pct": 33.0
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 48,
-          "pct": 24.6
+          "pct": 24.4
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 35,
-          "pct": 17.9
+          "pct": 17.8
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 23,
-          "pct": 11.8
+          "sessions": 24,
+          "pct": 12.2
         },
         {
           "source": "google",
           "medium": "organic",
           "sessions": 12,
-          "pct": 6.2
+          "pct": 6.1
         },
         {
           "source": "(not set)",
           "medium": "(not set)",
-          "sessions": 4,
-          "pct": 2.1
+          "sessions": 3,
+          "pct": 1.5
         },
         {
           "source": "copilot.com",
@@ -1885,14 +1885,18 @@
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 147
+          "sessions": 148
         },
         {
           "country": "China",
-          "sessions": 10
+          "sessions": 11
         },
         {
           "country": "Germany",
+          "sessions": 5
+        },
+        {
+          "country": "Vietnam",
           "sessions": 5
         },
         {
@@ -1901,10 +1905,6 @@
         },
         {
           "country": "Canada",
-          "sessions": 4
-        },
-        {
-          "country": "Vietnam",
           "sessions": 4
         },
         {
@@ -1967,7 +1967,7 @@
       "topCities": [
         {
           "city": "(not set)",
-          "sessions": 26
+          "sessions": 29
         },
         {
           "city": "Boardman",
@@ -1990,10 +1990,6 @@
           "sessions": 5
         },
         {
-          "city": "",
-          "sessions": 4
-        },
-        {
           "city": "Ashburn",
           "sessions": 3
         },
@@ -2004,16 +2000,20 @@
         {
           "city": "Frankfurt am Main",
           "sessions": 3
+        },
+        {
+          "city": "Glenview",
+          "sessions": 3
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 115
+          "sessions": 117
         },
         {
           "device": "mobile",
-          "sessions": 76
+          "sessions": 77
         },
         {
           "device": "tablet",
@@ -2023,7 +2023,7 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 83
+          "sessions": 86
         },
         {
           "browser": "Safari",
@@ -2045,7 +2045,7 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 90
+          "sessions": 92
         },
         {
           "os": "iOS",
@@ -2053,7 +2053,7 @@
         },
         {
           "os": "Android",
-          "sessions": 28
+          "sessions": 29
         },
         {
           "os": "Macintosh",
@@ -2066,11 +2066,11 @@
       ]
     },
     "180d": {
-      "pageviews": 212,
-      "sessions": 196,
-      "avgSessionDur": 101,
-      "bounceRate": 0.5255102040816326,
-      "newUsers": 186,
+      "pageviews": 215,
+      "sessions": 199,
+      "avgSessionDur": 100,
+      "bounceRate": 0.5125628140703518,
+      "newUsers": 189,
       "returningUsers": 1,
       "daily": [
         {
@@ -2283,7 +2283,7 @@
         },
         {
           "date": "20260726",
-          "pageviews": 1
+          "pageviews": 4
         }
       ],
       "topPages": [
@@ -2327,10 +2327,10 @@
           "rank": 5,
           "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
           "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 18,
-          "bounceRate": 57.1,
-          "sessions": 7
+          "pageviews": 9,
+          "avgDur": 16,
+          "bounceRate": 62.5,
+          "sessions": 8
         },
         {
           "rank": 6,
@@ -2455,7 +2455,7 @@
           "title": "State Farm Roadside Assistance Towing Limit Miles: Coverage Distance Explained | Tow With The Flow",
           "pageviews": 3,
           "avgDur": 127,
-          "bounceRate": 33.3,
+          "bounceRate": 0.0,
           "sessions": 3
         },
         {
@@ -2463,7 +2463,7 @@
           "page": "/towing-cost-credit-card-roadside-assistance-covers/",
           "title": "Does Credit Card Roadside Assistance Cover Towing Costs? | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 0,
+          "avgDur": 2,
           "bounceRate": 100.0,
           "sessions": 3
         },
@@ -2518,7 +2518,7 @@
           "title": "Car Battery Dies in Parking Lot: Exactly What To Do | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 833,
-          "bounceRate": 50.0,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -2561,18 +2561,18 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 120,
-          "pct": 60.6
+          "sessions": 121,
+          "pct": 60.5
         },
         {
           "channel": "Direct",
-          "sessions": 67,
-          "pct": 33.8
+          "sessions": 69,
+          "pct": 34.5
         },
         {
           "channel": "Unassigned",
-          "sessions": 7,
-          "pct": 3.5
+          "sessions": 6,
+          "pct": 3.0
         },
         {
           "channel": "AI Assistant",
@@ -2589,26 +2589,26 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 67,
-          "pct": 33.7
+          "sessions": 69,
+          "pct": 34.3
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 48,
-          "pct": 24.1
+          "pct": 23.9
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 35,
-          "pct": 17.6
+          "pct": 17.4
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 23,
-          "pct": 11.6
+          "sessions": 24,
+          "pct": 11.9
         },
         {
           "source": "google",
@@ -2619,8 +2619,8 @@
         {
           "source": "(not set)",
           "medium": "(not set)",
-          "sessions": 4,
-          "pct": 2.0
+          "sessions": 3,
+          "pct": 1.5
         },
         {
           "source": "copilot.com",
@@ -2656,14 +2656,18 @@
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 148
+          "sessions": 149
         },
         {
           "country": "China",
-          "sessions": 10
+          "sessions": 11
         },
         {
           "country": "Germany",
+          "sessions": 5
+        },
+        {
+          "country": "Vietnam",
           "sessions": 5
         },
         {
@@ -2676,10 +2680,6 @@
         },
         {
           "country": "Canada",
-          "sessions": 4
-        },
-        {
-          "country": "Vietnam",
           "sessions": 4
         },
         {
@@ -2738,7 +2738,7 @@
       "topCities": [
         {
           "city": "(not set)",
-          "sessions": 29
+          "sessions": 32
         },
         {
           "city": "Boardman",
@@ -2761,10 +2761,6 @@
           "sessions": 5
         },
         {
-          "city": "",
-          "sessions": 4
-        },
-        {
           "city": "Ashburn",
           "sessions": 3
         },
@@ -2775,16 +2771,20 @@
         {
           "city": "Frankfurt am Main",
           "sessions": 3
+        },
+        {
+          "city": "Glenview",
+          "sessions": 3
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 116
+          "sessions": 118
         },
         {
           "device": "mobile",
-          "sessions": 79
+          "sessions": 80
         },
         {
           "device": "tablet",
@@ -2794,7 +2794,7 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 87
+          "sessions": 90
         },
         {
           "browser": "Safari",
@@ -2816,7 +2816,7 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 90
+          "sessions": 92
         },
         {
           "os": "iOS",
@@ -2824,7 +2824,7 @@
         },
         {
           "os": "Android",
-          "sessions": 31
+          "sessions": 32
         },
         {
           "os": "Macintosh",
@@ -2837,11 +2837,11 @@
       ]
     },
     "365d": {
-      "pageviews": 212,
-      "sessions": 196,
-      "avgSessionDur": 101,
-      "bounceRate": 0.5255102040816326,
-      "newUsers": 186,
+      "pageviews": 215,
+      "sessions": 199,
+      "avgSessionDur": 100,
+      "bounceRate": 0.5125628140703518,
+      "newUsers": 189,
       "returningUsers": 1,
       "daily": [
         {
@@ -3054,7 +3054,7 @@
         },
         {
           "date": "20260726",
-          "pageviews": 1
+          "pageviews": 4
         }
       ],
       "topPages": [
@@ -3098,10 +3098,10 @@
           "rank": 5,
           "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
           "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 18,
-          "bounceRate": 57.1,
-          "sessions": 7
+          "pageviews": 9,
+          "avgDur": 16,
+          "bounceRate": 62.5,
+          "sessions": 8
         },
         {
           "rank": 6,
@@ -3226,7 +3226,7 @@
           "title": "State Farm Roadside Assistance Towing Limit Miles: Coverage Distance Explained | Tow With The Flow",
           "pageviews": 3,
           "avgDur": 127,
-          "bounceRate": 33.3,
+          "bounceRate": 0.0,
           "sessions": 3
         },
         {
@@ -3234,7 +3234,7 @@
           "page": "/towing-cost-credit-card-roadside-assistance-covers/",
           "title": "Does Credit Card Roadside Assistance Cover Towing Costs? | Tow With The Flow",
           "pageviews": 3,
-          "avgDur": 0,
+          "avgDur": 2,
           "bounceRate": 100.0,
           "sessions": 3
         },
@@ -3289,7 +3289,7 @@
           "title": "Car Battery Dies in Parking Lot: Exactly What To Do | Tow With The Flow",
           "pageviews": 2,
           "avgDur": 833,
-          "bounceRate": 50.0,
+          "bounceRate": 0.0,
           "sessions": 2
         },
         {
@@ -3332,18 +3332,18 @@
       "trafficSources": [
         {
           "channel": "Organic Search",
-          "sessions": 120,
-          "pct": 60.6
+          "sessions": 121,
+          "pct": 60.5
         },
         {
           "channel": "Direct",
-          "sessions": 67,
-          "pct": 33.8
+          "sessions": 69,
+          "pct": 34.5
         },
         {
           "channel": "Unassigned",
-          "sessions": 7,
-          "pct": 3.5
+          "sessions": 6,
+          "pct": 3.0
         },
         {
           "channel": "AI Assistant",
@@ -3360,26 +3360,26 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 67,
-          "pct": 33.7
+          "sessions": 69,
+          "pct": 34.3
         },
         {
           "source": "bing",
           "medium": "organic",
           "sessions": 48,
-          "pct": 24.1
+          "pct": 23.9
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
           "sessions": 35,
-          "pct": 17.6
+          "pct": 17.4
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 23,
-          "pct": 11.6
+          "sessions": 24,
+          "pct": 11.9
         },
         {
           "source": "google",
@@ -3390,8 +3390,8 @@
         {
           "source": "(not set)",
           "medium": "(not set)",
-          "sessions": 4,
-          "pct": 2.0
+          "sessions": 3,
+          "pct": 1.5
         },
         {
           "source": "copilot.com",
@@ -3427,14 +3427,18 @@
       "topCountries": [
         {
           "country": "United States",
-          "sessions": 148
+          "sessions": 149
         },
         {
           "country": "China",
-          "sessions": 10
+          "sessions": 11
         },
         {
           "country": "Germany",
+          "sessions": 5
+        },
+        {
+          "country": "Vietnam",
           "sessions": 5
         },
         {
@@ -3447,10 +3451,6 @@
         },
         {
           "country": "Canada",
-          "sessions": 4
-        },
-        {
-          "country": "Vietnam",
           "sessions": 4
         },
         {
@@ -3509,7 +3509,7 @@
       "topCities": [
         {
           "city": "(not set)",
-          "sessions": 29
+          "sessions": 32
         },
         {
           "city": "Boardman",
@@ -3532,10 +3532,6 @@
           "sessions": 5
         },
         {
-          "city": "",
-          "sessions": 4
-        },
-        {
           "city": "Ashburn",
           "sessions": 3
         },
@@ -3546,16 +3542,20 @@
         {
           "city": "Frankfurt am Main",
           "sessions": 3
+        },
+        {
+          "city": "Glenview",
+          "sessions": 3
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 116
+          "sessions": 118
         },
         {
           "device": "mobile",
-          "sessions": 79
+          "sessions": 80
         },
         {
           "device": "tablet",
@@ -3565,7 +3565,7 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 87
+          "sessions": 90
         },
         {
           "browser": "Safari",
@@ -3587,7 +3587,7 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 90
+          "sessions": 92
         },
         {
           "os": "iOS",
@@ -3595,7 +3595,7 @@
         },
         {
           "os": "Android",
-          "sessions": 31
+          "sessions": 32
         },
         {
           "os": "Macintosh",
@@ -3608,5 +3608,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-07-26T08:39:30.072004+00:00"
+  "lastUpdated": "2026-07-27T10:09:33.441468+00:00"
 }
