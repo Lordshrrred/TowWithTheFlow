@@ -13832,3 +13832,33 @@
 [2026-07-27 07:29:16] === SYNDICATE DONE: car-hydroplaned-into-ditch-tow-truck-or-insurance-call-first | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-27 07:29:16] SYNCED | car-hydroplaned-into-ditch-tow-truck-or-insurance-call-first marked in synced-posts.txt
 [2026-07-27 07:29:16] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-07-27 09:22:35] === SYNDICATE START: tow-truck-cost-dallas-texas-after-business-hours ===
+[2026-07-27 09:22:35] PREFLIGHT | title: Tow Truck Cost in Dallas Texas After Business Hours: What You'll Pay Right Now
+[2026-07-27 09:22:35] PREFLIGHT | date: 2026-07-27
+[2026-07-27 09:22:35] PREFLIGHT | timestamp: 2026-07-27 09:22:35
+[2026-07-27 09:22:35] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-07-27 09:22:35] PREFLIGHT | TUMBLR:  configured
+[2026-07-27 09:22:35] PREFLIGHT | BLOGGER: configured
+[2026-07-27 09:22:35] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-07-27 09:22:35] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-07-27 09:22:35] DEVTO | tow-truck-cost-dallas-texas-after-business-hours | START
+[2026-07-27 09:22:35] DEVTO | tow-truck-cost-dallas-texas-after-business-hours | account=TWTF2
+[2026-07-27 09:22:36] DEVTO | tow-truck-cost-dallas-texas-after-business-hours | SUCCESS | https://dev.to/denverroadsideelitetowing/tow-truck-cost-in-dallas-texas-after-business-hours-what-youll-pay-right-now-what-drivers-should-hkg
+[2026-07-27 09:22:36] --- waiting 60s before next platform ---
+[2026-07-27 09:23:36] TUMBLR | tow-truck-cost-dallas-texas-after-business-hours | START
+[2026-07-27 09:23:36] TUMBLR | tow-truck-cost-dallas-texas-after-business-hours | SUCCESS | https://towwiththeflow.tumblr.com/post/823306031238135808
+[2026-07-27 09:23:36] --- waiting 60s before next platform ---
+[2026-07-27 09:24:36] BLOGGER | tow-truck-cost-dallas-texas-after-business-hours | START
+[2026-07-27 09:24:36] BLOGGER | tow-truck-cost-dallas-texas-after-business-hours | step 1/3: refreshing access token
+[2026-07-27 09:24:36] BLOGGER | tow-truck-cost-dallas-texas-after-business-hours | step 2/3: converting markdown to HTML
+[2026-07-27 09:24:36] BLOGGER | tow-truck-cost-dallas-texas-after-business-hours | step 3/3: posting to blog 1959471973457654666
+[2026-07-27 09:24:37] BLOGGER | tow-truck-cost-dallas-texas-after-business-hours | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/tow-truck-cost-in-dallas-texas-after.html
+[2026-07-27 09:24:37] --- waiting 60s before next platform ---
+[2026-07-27 09:25:37] WORDPRESS | tow-truck-cost-dallas-texas-after-business-hours | START
+[2026-07-27 09:25:46] WORDPRESS | tow-truck-cost-dallas-texas-after-business-hours | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/07/27/tow-truck-cost-dallas-texas-after-business-hours/
+[2026-07-27 09:25:46] --- waiting 60s before next platform ---
+[2026-07-27 09:26:46] FEEDER | tow-truck-cost-dallas-texas-after-business-hours | START
+[2026-07-27 09:26:47] FEEDER | tow-truck-cost-dallas-texas-after-business-hours | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-dallas-texas-after-business-hours-help/
+[2026-07-27 09:26:47] === SYNDICATE DONE: tow-truck-cost-dallas-texas-after-business-hours | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-07-27 09:26:47] SYNCED | tow-truck-cost-dallas-texas-after-business-hours marked in synced-posts.txt
+[2026-07-27 09:26:47] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
