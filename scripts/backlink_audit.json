@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T21:19:19.051287+00:00",
+  "generated_at": "2026-07-27T04:08:39.544022+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -52,9 +52,9 @@
     },
     "aaa-towing-vs-private-tow-truck-cost-comparison": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/aaa-towing-vs-private-tow-truck-real.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -4144,7 +4144,6 @@
     "how-much-does-it-cost-to-tow-a-car-in-chicago-illinois": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-much-does-it-cost-to-tow-car-in_01903882384.html",
         "verified": true
       },
@@ -4826,9 +4825,9 @@
     },
     "ran-out-of-gas-on-highway-at-night-what-to-do": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/ran-out-of-gas-on-highway-at-night-what.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -6104,9 +6103,9 @@
     },
     "tow-truck-price-50-miles-miami": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-price-for-50-miles-from-miami.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -7963,9 +7962,9 @@
     },
     "towing-cost-los-angeles-california-no-insurance": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-los-angeles-california-no.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -8816,9 +8815,9 @@
     },
     "towing-cost-san-antonio-texas": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-san-antonio-texas-what.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -9501,7 +9500,7 @@
   "summary": {
     "blog": {
       "checked": 364,
-      "verified": 362
+      "verified": 361
     },
     "dev": {
       "checked": 293,
