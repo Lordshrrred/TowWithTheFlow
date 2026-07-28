@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T14:44:37.705258+00:00",
+  "generated_at": "2026-07-28T17:49:15.700346+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -614,6 +614,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/08/can-you-jump-start-a-completely-dead-battery-2/",
+        "verified": true
+      }
+    },
+    "car-ac-compressor-seized-engine-stopped-moving-tow-needed": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-ac-compressor-seized-engine-stopped.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-ac-compressor-seized-engine-stopped-what-to-do-right-now-explained-1hnd",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-ac-compressor-seized-engine-stopped-moving-tow-needed-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/823400117762686976/car-ac-compressor-seized-engine-stopped-moving-tow-needed",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/28/car-ac-compressor-seized-engine-stopped-moving-tow-needed/",
         "verified": true
       }
     },
@@ -2479,9 +2506,9 @@
     },
     "car-stuck-mud-towing-cost": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-stuck-in-mud-who-pays-towing-cost.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -4089,9 +4116,9 @@
     },
     "how-much-does-a-tow-cost-in-colorado": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-tow-cost-in-colorado.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -5978,6 +6005,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/24/tow-truck-cost-in-atlanta-georgia/",
+        "verified": true
+      }
+    },
+    "tow-truck-cost-in-miami-florida-after-accident": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/tow-truck-cost-in-miami-florida-after.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/tow-truck-cost-in-miami-florida-after-accident-what-youll-pay-right-now-roadside-tips-4j16",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-in-miami-florida-after-accident-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/823395066033930241/tow-truck-cost-in-miami-florida-after-accident",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/28/tow-truck-cost-in-miami-florida-after-accident/",
         "verified": true
       }
     },
@@ -8016,9 +8070,9 @@
     },
     "towing-cost-las-vegas-nevada-strip-area": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-las-vegas-nevada-strip.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9634,24 +9688,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 369,
-      "verified": 366
+      "checked": 371,
+      "verified": 371
     },
     "dev": {
-      "checked": 298,
-      "verified": 298
+      "checked": 300,
+      "verified": 300
     },
     "feeder": {
-      "checked": 366,
-      "verified": 366
+      "checked": 368,
+      "verified": 368
     },
     "tumblr": {
-      "checked": 365,
-      "verified": 365
+      "checked": 367,
+      "verified": 367
     },
     "wordpress": {
-      "checked": 369,
-      "verified": 369
+      "checked": 371,
+      "verified": 371
     }
   }
 }
