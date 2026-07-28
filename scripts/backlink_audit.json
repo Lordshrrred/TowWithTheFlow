@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T03:44:34.482540+00:00",
+  "generated_at": "2026-07-28T06:47:44.274227+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -743,6 +743,12 @@
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-battery-dies-in-parking-lot-what-to.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
@@ -815,6 +821,12 @@
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-breaks-down-on-bridge-who-to-call-and-what-to-do-roadside-tips-51mf",
@@ -2467,9 +2479,9 @@
     },
     "car-stuck-mud-towing-cost": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-stuck-in-mud-who-pays-towing-cost.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -3942,9 +3954,9 @@
     },
     "geico-roadside-assistance-vs-tow-truck-cost": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/geico-roadside-assistance-vs-tow-truck.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -4050,9 +4062,9 @@
     },
     "how-much-does-a-tow-cost-in-colorado": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-tow-cost-in-colorado.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -7977,9 +7989,9 @@
     },
     "towing-cost-las-vegas-nevada-strip-area": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-las-vegas-nevada-strip.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -8735,9 +8747,9 @@
     },
     "towing-cost-phoenix-arizona-summer-heat": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-phoenix-arizona-summer_0831535052.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9042,7 +9054,6 @@
     "towing-cost-seattle-washington": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-seattle-washington-what.html",
         "verified": true
       },
@@ -9596,8 +9607,8 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 366,
-      "verified": 361
+      "checked": 368,
+      "verified": 368
     },
     "dev": {
       "checked": 297,
