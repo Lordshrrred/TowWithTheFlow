@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T06:47:44.274227+00:00",
+  "generated_at": "2026-07-28T10:49:10.740572+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -258,9 +258,9 @@
     },
     "alternator-failed-while-driving-what-happens-next": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/alternator-failed-while-driving-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1626,6 +1626,7 @@
     "car-leaking-fluid-underneath-emergency-tow": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-leaking-fluid-underneath-when-you.html",
         "verified": true
       },
@@ -2138,9 +2139,9 @@
     },
     "car-shaking-violently-while-driving-tow-needed": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-shaking-violently-while-driving.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5090,9 +5091,9 @@
     },
     "run-flat-tire-completely-flat-can-i-still-drive": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/run-flat-tire-completely-flat-can-i.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6314,9 +6315,9 @@
     },
     "towing-cost-atlanta-georgia": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-atlanta-georgia-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6368,9 +6369,9 @@
     },
     "towing-cost-atlanta-georgia-holiday-weekend": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-atlanta-georgia-holiday.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -7216,9 +7217,9 @@
     },
     "towing-cost-houston-texas-sunday-emergency": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/sunday-emergency-towing-costs-in.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -7460,6 +7461,7 @@
     "towing-cost-in-denver-colorado-flatbed-vs-wheel-lift": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-denver-colorado-flatbed_0501685652.html",
         "verified": true
       },
@@ -7886,9 +7888,9 @@
     },
     "towing-cost-indianapolis-indiana-after-hours-fee": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-indianapolis-indiana.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -8286,9 +8288,9 @@
     },
     "towing-cost-miami-florida-hurricane-season": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-miami-florida-hurricane.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9608,7 +9610,7 @@
   "summary": {
     "blog": {
       "checked": 368,
-      "verified": 368
+      "verified": 360
     },
     "dev": {
       "checked": 297,
