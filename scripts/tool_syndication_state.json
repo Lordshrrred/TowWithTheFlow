@@ -257,13 +257,29 @@
       "status": "success",
       "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-to-tell-if-youre-really-out-of-fuel.html"
     },
+    "fuel-decision-assistant::tumblr": {
+      "backlink_verified": false,
+      "checked_at": "2026-07-29T16:12:58.549768+00:00",
+      "companion_cache_key": "",
+      "companion_model": "",
+      "companion_status": "not_applicable",
+      "companion_title": "",
+      "format": "deterministic_teaser",
+      "link_type": "nofollow_distribution",
+      "status": "success",
+      "url": "https://towwiththeflow.tumblr.com/post/823490330722746368"
+    },
     "fuel-decision-assistant::wordpress": {
-      "checked_at": "2026-07-14T16:05:27.830092+00:00",
-      "companion_cache_key": "per-run companion generation cap reached",
-      "companion_status": "skipped",
-      "error": "COMPANION skipped: per-run companion generation cap reached",
+      "backlink_verified": false,
+      "checked_at": "2026-07-29T16:12:38.075717+00:00",
+      "companion_cache_key": "4c65c4a6f219430d28958b2a",
+      "companion_model": "claude-haiku-4-5-20251001",
+      "companion_status": "generated",
+      "companion_title": "How to Tell If You're Really Out of Fuel or Facing a Fuel System Problem",
       "format": "companion_article",
-      "status": "failed"
+      "link_type": "followed_backlink",
+      "status": "success",
+      "url": "https://towwiththeflowyo.wordpress.com/2026/07/29/how-to-tell-if-youre-really-out-of-fuel-or-facing-a-fuel-system-problem/"
     },
     "locked-keys-assistant::blogger": {
       "backlink_verification": {
@@ -487,18 +503,18 @@
     }
   },
   "summary": {
-    "companion_articles_cached": 7,
-    "companion_articles_published": 7,
-    "deterministic_teasers_prepared": 18,
+    "companion_articles_cached": 8,
+    "companion_articles_published": 8,
+    "deterministic_teasers_prepared": 19,
     "run_stats": {
-      "companion_generated": 0,
+      "companion_generated": 1,
       "companion_generation_failed": 0,
       "companion_generation_skipped": 0,
       "companion_reused": 0,
-      "deterministic_teasers": 2,
-      "estimated_companion_input_tokens": 0,
-      "estimated_companion_output_tokens": 0
+      "deterministic_teasers": 1,
+      "estimated_companion_input_tokens": 378,
+      "estimated_companion_output_tokens": 837
     },
-    "updated_at": "2026-07-28T16:25:43.937810+00:00"
+    "updated_at": "2026-07-29T16:12:58.552729+00:00"
   }
 }
