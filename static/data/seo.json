@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-28T09:21:51.267776+00:00",
+  "generated_at": "2026-07-29T09:26:13.949847+00:00",
   "keywords": {
     "total": 802,
-    "live": 391,
-    "pending": 411,
+    "live": 395,
+    "pending": 407,
     "local": {
-      "live": 152,
-      "pending": 36
+      "live": 154,
+      "pending": 34
     },
     "pain_point": {
-      "live": 239,
-      "pending": 375
+      "live": 241,
+      "pending": 373
     }
   },
   "next_targets": [
-    {
-      "keyword": "flat tire on spare already how to get towed safely",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car ac compressor seized engine stopped moving tow needed",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "progressive insurance towing coverage how much will they pay",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "tow truck impound lot release fee who covers that",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "aaa membership worth it for single tow cost comparison",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how much does a tow truck cost with no insurance",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 174
+      "count": 176
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 52
+      "count": 53
     },
     {
       "slug": "insurance-coverage",
@@ -94,7 +94,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 12
+      "count": 13
     },
     {
       "slug": "towing-logistics",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-28T06:47:44.274227+00:00",
+    "generated_at": "2026-07-29T06:54:14.911395+00:00",
     "platforms": {
       "blog": {
-        "checked": 368,
-        "verified": 368
+        "checked": 372,
+        "verified": 328
       },
       "dev": {
-        "checked": 297,
-        "verified": 297
+        "checked": 301,
+        "verified": 301
       },
       "feeder": {
-        "checked": 365,
-        "verified": 365
+        "checked": 369,
+        "verified": 369
       },
       "tumblr": {
-        "checked": 364,
-        "verified": 364
-      },
-      "wordpress": {
         "checked": 368,
         "verified": 368
+      },
+      "wordpress": {
+        "checked": 372,
+        "verified": 372
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-28T09:21:51.184369+00:00",
+    "generated_at": "2026-07-29T09:26:13.871856+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 35,
+        "rows": 38,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 116,
+        "rows": 118,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,31 +207,31 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "32 Search Console impressions match this asset pattern.",
+        "reason": "34 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 12,
-    "top_query_count": 35,
+    "top_query_count": 38,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-28T09:21:51.285109+00:00",
+    "generatedAt": "2026-07-29T09:26:13.968292+00:00",
     "keywordGeneration": {
-      "currentInventory": 411,
-      "liveKeywords": 391,
-      "estimatedDaysRemaining": 102.8,
+      "currentInventory": 407,
+      "liveKeywords": 395,
+      "estimatedDaysRemaining": 101.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "102.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "101.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 74,
-      "backlogUnits": 78,
+      "backlogPosts": 103,
+      "backlogUnits": 122,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-28T06:47:44.274227+00:00",
+      "generatedAt": "2026-07-29T06:54:14.911395+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
