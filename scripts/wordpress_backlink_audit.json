@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-07-29T14:37:22.244774+00:00",
+  "generated_at": "2026-07-29T18:09:25.421013+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/07/29/how-to-tell-if-youre-really-out-of-fuel-or-facing-a-fuel-system-problem/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/29/car-ran-out-of-gas-on-highway-what-to-do/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/29/towing-cost-in-chicago-illinois-flatbed-no-insurance/",
     "https://towwiththeflowyo.wordpress.com/2026/07/29/progressive-insurance-towing-coverage-how-much-will-they-pay/",
     "https://towwiththeflowyo.wordpress.com/2026/07/28/towing-cost-in-dallas-texas-flatbed-no-insurance/",
     "https://towwiththeflowyo.wordpress.com/2026/07/28/car-ac-compressor-seized-engine-stopped-moving-tow-needed/",
@@ -462,7 +465,8 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/07/29/towing-cost-in-nashville-tennessee-no-insurance/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -1327,6 +1331,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/14/car-radiator-leak-steam-coming-out-tow-cost/",
+        "verified": true
+      }
+    },
+    "car-ran-out-of-gas-on-highway-what-to-do": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-ran-out-of-gas-on-highway-what-to-do/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/29/car-ran-out-of-gas-on-highway-what-to-do/",
         "verified": true
       }
     },
@@ -2309,6 +2322,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/03/how-to-start-a-frozen-car-battery/",
         "verified": true
+      }
+    },
+    "how-to-tell-if-youre-really-out-of-fuel-or-facing-a-fuel-system-problem": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/29/how-to-tell-if-youre-really-out-of-fuel-or-facing-a-fuel-system-problem/",
+        "verified": false
       }
     },
     "insurance-covers-towing-after-accident-deductible": {
@@ -3580,6 +3602,15 @@
         "verified": true
       }
     },
+    "towing-cost-in-chicago-illinois-flatbed-no-insurance": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-in-chicago-illinois-flatbed-no-insurance/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/29/towing-cost-in-chicago-illinois-flatbed-no-insurance/",
+        "verified": true
+      }
+    },
     "towing-cost-in-chicago-illinois-weekend-rate": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-in-chicago-illinois-weekend-rate/",
@@ -3748,6 +3779,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/20/towing-cost-in-nashville-tennessee-local-tow/",
+        "verified": true
+      }
+    },
+    "towing-cost-in-nashville-tennessee-no-insurance": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-in-nashville-tennessee-no-insurance/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/07/29/towing-cost-in-nashville-tennessee-no-insurance/",
         "verified": true
       }
     },
@@ -4628,8 +4668,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 462,
-      "verified": 374
+      "checked": 466,
+      "verified": 377
     }
   }
 }
