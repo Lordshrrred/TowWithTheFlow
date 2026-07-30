@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-29T10:28:17.326800+00:00",
+  "generated_at": "2026-07-30T09:17:09.324442+00:00",
   "keywords": {
     "total": 802,
-    "live": 395,
-    "pending": 407,
+    "live": 399,
+    "pending": 403,
     "local": {
-      "live": 154,
-      "pending": 34
+      "live": 156,
+      "pending": 32
     },
     "pain_point": {
-      "live": 241,
-      "pending": 373
+      "live": 243,
+      "pending": 371
     }
   },
   "next_targets": [
-    {
-      "keyword": "progressive insurance towing coverage how much will they pay",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car ran out of gas on highway what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car accident tow truck showed up without being called scam",
       "score": 8,
@@ -63,23 +53,33 @@
       "keyword": "how much does a tow truck cost with no insurance",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car overheating on highway should i pull over",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont start in cold weather tow or jump",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 176
+      "count": 178
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 53
+      "count": 54
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 46
+      "count": 47
     },
     {
       "slug": "battery-starting",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-29T06:54:14.911395+00:00",
+    "generated_at": "2026-07-30T06:46:36.302967+00:00",
     "platforms": {
       "blog": {
-        "checked": 372,
-        "verified": 328
+        "checked": 373,
+        "verified": 280
       },
       "dev": {
-        "checked": 301,
-        "verified": 301
+        "checked": 305,
+        "verified": 305
       },
       "feeder": {
-        "checked": 369,
-        "verified": 369
+        "checked": 373,
+        "verified": 373
       },
       "tumblr": {
-        "checked": 368,
-        "verified": 368
-      },
-      "wordpress": {
         "checked": 372,
         "verified": 372
+      },
+      "wordpress": {
+        "checked": 376,
+        "verified": 376
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-29T09:26:13.871856+00:00",
+    "generated_at": "2026-07-30T09:17:09.245951+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,7 +186,7 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 38,
+        "rows": 39,
         "source": "search_console",
         "status": "ok"
       },
@@ -207,31 +207,31 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "34 Search Console impressions match this asset pattern.",
+        "reason": "35 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 12,
-    "top_query_count": 38,
+    "top_query_count": 39,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-29T10:28:17.345373+00:00",
+    "generatedAt": "2026-07-30T09:17:09.343559+00:00",
     "keywordGeneration": {
-      "currentInventory": 407,
-      "liveKeywords": 395,
-      "estimatedDaysRemaining": 101.8,
+      "currentInventory": 403,
+      "liveKeywords": 399,
+      "estimatedDaysRemaining": 100.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "101.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "100.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 103,
-      "backlogUnits": 122,
+      "backlogPosts": 158,
+      "backlogUnits": 174,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-29T06:54:14.911395+00:00",
+      "generatedAt": "2026-07-30T06:46:36.302967+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
