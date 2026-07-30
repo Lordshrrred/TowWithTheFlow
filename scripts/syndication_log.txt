@@ -14223,3 +14223,33 @@
 [2026-07-30 08:44:26] === SYNDICATE DONE: towing-cost-portland-oregon-flatbed | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-30 08:44:26] SYNCED | towing-cost-portland-oregon-flatbed marked in synced-posts.txt
 [2026-07-30 08:44:26] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-07-30 10:05:04] === SYNDICATE START: car-stuck-in-snow-ditch-tow-truck-cost ===
+[2026-07-30 10:05:04] PREFLIGHT | title: Car Stuck in Snow Ditch Tow Truck Cost: What You'll Pay Right Now
+[2026-07-30 10:05:04] PREFLIGHT | date: 2026-07-30
+[2026-07-30 10:05:04] PREFLIGHT | timestamp: 2026-07-30 10:05:04
+[2026-07-30 10:05:04] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-07-30 10:05:04] PREFLIGHT | TUMBLR:  configured
+[2026-07-30 10:05:04] PREFLIGHT | BLOGGER: configured
+[2026-07-30 10:05:04] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-07-30 10:05:04] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-07-30 10:05:04] DEVTO | car-stuck-in-snow-ditch-tow-truck-cost | START
+[2026-07-30 10:05:04] DEVTO | car-stuck-in-snow-ditch-tow-truck-cost | account=TWTF1
+[2026-07-30 10:05:05] DEVTO | car-stuck-in-snow-ditch-tow-truck-cost | SUCCESS | https://dev.to/roadsideamericatowing/car-stuck-in-snow-ditch-tow-truck-cost-what-youll-pay-right-now-explained-c0b
+[2026-07-30 10:05:05] --- waiting 60s before next platform ---
+[2026-07-30 10:06:05] TUMBLR | car-stuck-in-snow-ditch-tow-truck-cost | START
+[2026-07-30 10:06:06] TUMBLR | car-stuck-in-snow-ditch-tow-truck-cost | SUCCESS | https://towwiththeflow.tumblr.com/post/823580495296282624
+[2026-07-30 10:06:06] --- waiting 60s before next platform ---
+[2026-07-30 10:07:06] BLOGGER | car-stuck-in-snow-ditch-tow-truck-cost | START
+[2026-07-30 10:07:06] BLOGGER | car-stuck-in-snow-ditch-tow-truck-cost | step 1/3: refreshing access token
+[2026-07-30 10:07:06] BLOGGER | car-stuck-in-snow-ditch-tow-truck-cost | step 2/3: converting markdown to HTML
+[2026-07-30 10:07:06] BLOGGER | car-stuck-in-snow-ditch-tow-truck-cost | step 3/3: posting to blog 1959471973457654666
+[2026-07-30 10:07:07] BLOGGER | car-stuck-in-snow-ditch-tow-truck-cost | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-stuck-in-snow-ditch-tow-truck-cost.html
+[2026-07-30 10:07:07] --- waiting 60s before next platform ---
+[2026-07-30 10:08:07] WORDPRESS | car-stuck-in-snow-ditch-tow-truck-cost | START
+[2026-07-30 10:08:09] WORDPRESS | car-stuck-in-snow-ditch-tow-truck-cost | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/07/30/car-stuck-in-snow-ditch-tow-truck-cost/
+[2026-07-30 10:08:09] --- waiting 60s before next platform ---
+[2026-07-30 10:09:09] FEEDER | car-stuck-in-snow-ditch-tow-truck-cost | START
+[2026-07-30 10:09:10] FEEDER | car-stuck-in-snow-ditch-tow-truck-cost | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-stuck-in-snow-ditch-tow-truck-cost-tips/
+[2026-07-30 10:09:10] === SYNDICATE DONE: car-stuck-in-snow-ditch-tow-truck-cost | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-07-30 10:09:10] SYNCED | car-stuck-in-snow-ditch-tow-truck-cost marked in synced-posts.txt
+[2026-07-30 10:09:10] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
