@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-07-29T19:44:31.113720+00:00",
+  "checked_at": "2026-07-30T03:30:11.989701+00:00",
   "checks": {
     "blogger": {
       "detail": "TowingandFlowingRoadsideDenver",
       "status": "healthy"
     },
     "devto": {
-      "detail": "TWTF1, TWTF2",
-      "status": "healthy"
+      "detail": "TWTF2: HTTP 401: {\"error\":\"unauthorized\",\"status\":401}",
+      "status": "unhealthy"
     },
     "feeder": {
       "status": "healthy"
@@ -21,5 +21,5 @@
     }
   },
   "last_alert_at": "",
-  "unhealthy_count": 0
+  "unhealthy_count": 1
 }
