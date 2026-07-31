@@ -517,28 +517,44 @@
       "status": "success",
       "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-to-know-if-you-can-self-recover.html"
     },
+    "winch-recovery-guide::tumblr": {
+      "backlink_verified": false,
+      "checked_at": "2026-07-31T16:28:08.764868+00:00",
+      "companion_cache_key": "",
+      "companion_model": "",
+      "companion_status": "not_applicable",
+      "companion_title": "",
+      "format": "deterministic_teaser",
+      "link_type": "nofollow_distribution",
+      "status": "success",
+      "url": "https://towwiththeflow.tumblr.com/post/823672479196364800"
+    },
     "winch-recovery-guide::wordpress": {
-      "checked_at": "2026-07-15T16:10:29.775990+00:00",
-      "companion_cache_key": "per-run companion generation cap reached",
-      "companion_status": "skipped",
-      "error": "COMPANION skipped: per-run companion generation cap reached",
+      "backlink_verified": false,
+      "checked_at": "2026-07-31T16:27:48.413466+00:00",
+      "companion_cache_key": "a552bb4b73081a570a588d88",
+      "companion_model": "claude-haiku-4-5-20251001",
+      "companion_status": "generated",
+      "companion_title": "How to Tell If You're Really Stuck: Signs Your Vehicle Needs Professional Help",
       "format": "companion_article",
-      "status": "failed"
+      "link_type": "followed_backlink",
+      "status": "success",
+      "url": "https://towwiththeflowyo.wordpress.com/2026/07/31/how-to-tell-if-youre-really-stuck-signs-your-vehicle-needs-professional-help/"
     }
   },
   "summary": {
-    "companion_articles_cached": 8,
-    "companion_articles_published": 8,
-    "deterministic_teasers_prepared": 21,
+    "companion_articles_cached": 9,
+    "companion_articles_published": 9,
+    "deterministic_teasers_prepared": 22,
     "run_stats": {
-      "companion_generated": 0,
+      "companion_generated": 1,
       "companion_generation_failed": 0,
       "companion_generation_skipped": 0,
       "companion_reused": 0,
-      "deterministic_teasers": 2,
-      "estimated_companion_input_tokens": 0,
-      "estimated_companion_output_tokens": 0
+      "deterministic_teasers": 1,
+      "estimated_companion_input_tokens": 367,
+      "estimated_companion_output_tokens": 966
     },
-    "updated_at": "2026-07-30T16:17:57.616336+00:00"
+    "updated_at": "2026-07-31T16:28:08.766552+00:00"
   }
 }
