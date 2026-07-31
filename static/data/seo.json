@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-30T09:17:09.324442+00:00",
+  "generated_at": "2026-07-31T09:30:29.262848+00:00",
   "keywords": {
     "total": 802,
-    "live": 399,
-    "pending": 403,
+    "live": 403,
+    "pending": 399,
     "local": {
-      "live": 156,
-      "pending": 32
+      "live": 158,
+      "pending": 30
     },
     "pain_point": {
-      "live": 243,
-      "pending": 371
+      "live": 245,
+      "pending": 369
     }
   },
   "next_targets": [
-    {
-      "keyword": "car accident tow truck showed up without being called scam",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car stuck in snow ditch tow truck cost",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "engine smoking on freeway pull over or keep driving",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "car wont start in cold weather tow or jump",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "check engine light flashing car shaking should i pull over",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "state farm roadside assistance towing coverage limit",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 178
+      "count": 181
     },
     {
       "slug": "engine-mechanical",
@@ -109,7 +109,7 @@
     {
       "slug": "accident-liability",
       "label": "Accidents & Towing Liability",
-      "count": 6
+      "count": 7
     },
     {
       "slug": "winter-weather",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-30T06:46:36.302967+00:00",
+    "generated_at": "2026-07-31T07:24:05.888792+00:00",
     "platforms": {
       "blog": {
-        "checked": 373,
-        "verified": 280
+        "checked": 380,
+        "verified": 336
       },
       "dev": {
-        "checked": 305,
-        "verified": 305
+        "checked": 309,
+        "verified": 309
       },
       "feeder": {
-        "checked": 373,
-        "verified": 373
+        "checked": 377,
+        "verified": 377
       },
       "tumblr": {
-        "checked": 372,
-        "verified": 372
-      },
-      "wordpress": {
         "checked": 376,
         "verified": 376
+      },
+      "wordpress": {
+        "checked": 380,
+        "verified": 380
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-30T09:17:09.245951+00:00",
+    "generated_at": "2026-07-31T09:30:29.184568+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,7 +186,7 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 39,
+        "rows": 42,
         "source": "search_console",
         "status": "ok"
       },
@@ -207,31 +207,31 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "35 Search Console impressions match this asset pattern.",
+        "reason": "36 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 12,
-    "top_query_count": 39,
+    "top_landing_page_count": 13,
+    "top_query_count": 42,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-30T09:17:09.343559+00:00",
+    "generatedAt": "2026-07-31T09:30:29.275691+00:00",
     "keywordGeneration": {
-      "currentInventory": 403,
-      "liveKeywords": 399,
-      "estimatedDaysRemaining": 100.8,
+      "currentInventory": 399,
+      "liveKeywords": 403,
+      "estimatedDaysRemaining": 99.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "100.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "99.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 158,
-      "backlogUnits": 174,
+      "backlogPosts": 118,
+      "backlogUnits": 122,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-30T06:46:36.302967+00:00",
+      "generatedAt": "2026-07-31T07:24:05.888792+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
