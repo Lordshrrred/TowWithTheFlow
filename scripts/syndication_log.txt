@@ -14404,3 +14404,33 @@
 [2026-07-31 12:03:53] === SYNDICATE DONE: towing-cost-detroit-michigan-no-insurance | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-07-31 12:03:53] SYNCED | towing-cost-detroit-michigan-no-insurance marked in synced-posts.txt
 [2026-07-31 12:03:53] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-08-01 05:42:41] === SYNDICATE START: can-you-negotiate-tow-truck-price-after-breakdown ===
+[2026-08-01 05:42:41] PREFLIGHT | title: Can You Negotiate Tow Truck Price After a Breakdown: What Actually Works
+[2026-08-01 05:42:41] PREFLIGHT | date: 2026-08-01
+[2026-08-01 05:42:41] PREFLIGHT | timestamp: 2026-08-01 05:42:41
+[2026-08-01 05:42:41] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-08-01 05:42:41] PREFLIGHT | TUMBLR:  configured
+[2026-08-01 05:42:41] PREFLIGHT | BLOGGER: configured
+[2026-08-01 05:42:41] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-01 05:42:41] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-01 05:42:41] DEVTO | can-you-negotiate-tow-truck-price-after-breakdown | START
+[2026-08-01 05:42:41] DEVTO | can-you-negotiate-tow-truck-price-after-breakdown | account=TWTF2
+[2026-08-01 05:42:41] DEVTO | can-you-negotiate-tow-truck-price-after-breakdown | SUCCESS | https://dev.to/denverroadsideelitetowing/can-you-negotiate-tow-truck-price-after-a-breakdown-what-actually-works-explained-862
+[2026-08-01 05:42:41] --- waiting 60s before next platform ---
+[2026-08-01 05:43:41] TUMBLR | can-you-negotiate-tow-truck-price-after-breakdown | START
+[2026-08-01 05:43:42] TUMBLR | can-you-negotiate-tow-truck-price-after-breakdown | SUCCESS | https://towwiththeflow.tumblr.com/post/823745180658171904
+[2026-08-01 05:43:42] --- waiting 60s before next platform ---
+[2026-08-01 05:44:42] BLOGGER | can-you-negotiate-tow-truck-price-after-breakdown | START
+[2026-08-01 05:44:42] BLOGGER | can-you-negotiate-tow-truck-price-after-breakdown | step 1/3: refreshing access token
+[2026-08-01 05:44:42] BLOGGER | can-you-negotiate-tow-truck-price-after-breakdown | step 2/3: converting markdown to HTML
+[2026-08-01 05:44:42] BLOGGER | can-you-negotiate-tow-truck-price-after-breakdown | step 3/3: posting to blog 1959471973457654666
+[2026-08-01 05:44:42] BLOGGER | can-you-negotiate-tow-truck-price-after-breakdown | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/can-you-negotiate-tow-truck-price-after.html
+[2026-08-01 05:44:42] --- waiting 60s before next platform ---
+[2026-08-01 05:45:42] WORDPRESS | can-you-negotiate-tow-truck-price-after-breakdown | START
+[2026-08-01 05:45:52] WORDPRESS | can-you-negotiate-tow-truck-price-after-breakdown | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/01/can-you-negotiate-tow-truck-price-after-breakdown/
+[2026-08-01 05:45:52] --- waiting 60s before next platform ---
+[2026-08-01 05:46:52] FEEDER | can-you-negotiate-tow-truck-price-after-breakdown | START
+[2026-08-01 05:46:53] FEEDER | can-you-negotiate-tow-truck-price-after-breakdown | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/can-you-negotiate-tow-truck-price-after-breakdown-help/
+[2026-08-01 05:46:53] === SYNDICATE DONE: can-you-negotiate-tow-truck-price-after-breakdown | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-01 05:46:53] SYNCED | can-you-negotiate-tow-truck-price-after-breakdown marked in synced-posts.txt
+[2026-08-01 05:46:53] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
