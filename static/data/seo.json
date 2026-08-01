@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-07-31T10:27:11.464602+00:00",
+  "generated_at": "2026-08-01T08:55:44.244095+00:00",
   "keywords": {
     "total": 802,
-    "live": 403,
-    "pending": 399,
+    "live": 407,
+    "pending": 395,
     "local": {
-      "live": 158,
-      "pending": 30
+      "live": 160,
+      "pending": 28
     },
     "pain_point": {
-      "live": 245,
-      "pending": 369
+      "live": 247,
+      "pending": 367
     }
   },
   "next_targets": [
-    {
-      "keyword": "engine smoking on freeway pull over or keep driving",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "who pays tow truck cost when not at fault accident",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "can you negotiate tow truck price after breakdown",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "state farm roadside assistance towing coverage limit",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car stuck in mud on side of road who to call",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "flat tire on highway no spare what to do",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 181
+      "count": 184
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 54
+      "count": 55
     },
     {
       "slug": "insurance-coverage",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-07-31T07:24:05.888792+00:00",
+    "generated_at": "2026-08-01T06:44:54.995150+00:00",
     "platforms": {
       "blog": {
-        "checked": 380,
-        "verified": 336
+        "checked": 381,
+        "verified": 296
       },
       "dev": {
-        "checked": 309,
-        "verified": 309
+        "checked": 313,
+        "verified": 313
       },
       "feeder": {
-        "checked": 377,
-        "verified": 377
+        "checked": 381,
+        "verified": 381
       },
       "tumblr": {
-        "checked": 376,
-        "verified": 376
-      },
-      "wordpress": {
         "checked": 380,
         "verified": 380
+      },
+      "wordpress": {
+        "checked": 384,
+        "verified": 384
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-07-31T09:30:29.184568+00:00",
+    "generated_at": "2026-08-01T08:55:44.167005+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 118,
+        "rows": 122,
         "source": "ga4",
         "status": "ok"
       }
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-07-31T10:27:11.482549+00:00",
+    "generatedAt": "2026-08-01T08:55:44.263140+00:00",
     "keywordGeneration": {
-      "currentInventory": 399,
-      "liveKeywords": 403,
-      "estimatedDaysRemaining": 99.8,
+      "currentInventory": 395,
+      "liveKeywords": 407,
+      "estimatedDaysRemaining": 98.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "99.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "98.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 118,
-      "backlogUnits": 122,
+      "backlogPosts": 155,
+      "backlogUnits": 166,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-07-31T07:24:05.888792+00:00",
+      "generatedAt": "2026-08-01T06:44:54.995150+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
