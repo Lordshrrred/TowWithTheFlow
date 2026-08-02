@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-08-02T14:10:59.885945+00:00",
+  "generated_at": "2026-08-02T17:23:12.602910+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/08/02/what-to-expect-when-retrieving-an-impounded-or-stored-vehicle/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/02/how-much-does-a-tow-truck-cost-with-no-insurance/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/02/towing-cost-charlotte-north-carolina-no-insurance/",
     "https://towwiththeflowyo.wordpress.com/2026/08/02/aaa-membership-worth-it-single-tow-cost-comparison/",
     "https://towwiththeflowyo.wordpress.com/2026/08/01/towing-cost-columbus-ohio-no-insurance/",
     "https://towwiththeflowyo.wordpress.com/2026/08/01/tow-truck-impound-lot-release-fee-who-covers-that/",
@@ -480,8 +483,7 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
-    "https://towwiththeflowyo.wordpress.com/2026/08/02/towing-cost-charlotte-north-carolina-no-insurance/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -2291,6 +2293,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/02/how-much-does-a-tow-truck-cost-in-denver-colorado-2/",
+        "verified": true
+      }
+    },
+    "how-much-does-a-tow-truck-cost-with-no-insurance": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/how-much-does-a-tow-truck-cost-with-no-insurance/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/02/how-much-does-a-tow-truck-cost-with-no-insurance/",
         "verified": true
       }
     },
@@ -4751,6 +4762,15 @@
         "verified": false
       }
     },
+    "what-to-expect-when-retrieving-an-impounded-or-stored-vehicle": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/02/what-to-expect-when-retrieving-an-impounded-or-stored-vehicle/",
+        "verified": false
+      }
+    },
     "what-to-keep-in-your-car-for-emergencies": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/what-to-keep-in-your-car-for-emergencies/",
@@ -4818,8 +4838,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 481,
-      "verified": 391
+      "checked": 483,
+      "verified": 392
     }
   }
 }
