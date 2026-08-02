@@ -437,13 +437,29 @@
       "status": "success",
       "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/what-happens-to-your-car-in-storage.html"
     },
+    "storage-fee-calculator::tumblr": {
+      "backlink_verified": false,
+      "checked_at": "2026-08-02T15:47:11.271816+00:00",
+      "companion_cache_key": "",
+      "companion_model": "",
+      "companion_status": "not_applicable",
+      "companion_title": "",
+      "format": "deterministic_teaser",
+      "link_type": "nofollow_distribution",
+      "status": "success",
+      "url": "https://towwiththeflow.tumblr.com/post/823851096239898624"
+    },
     "storage-fee-calculator::wordpress": {
-      "checked_at": "2026-07-16T16:04:53.502190+00:00",
-      "companion_cache_key": "per-run companion generation cap reached",
-      "companion_status": "skipped",
-      "error": "COMPANION skipped: per-run companion generation cap reached",
+      "backlink_verified": false,
+      "checked_at": "2026-08-02T15:46:50.860645+00:00",
+      "companion_cache_key": "3a3299a91729099ced5fbe78",
+      "companion_model": "claude-haiku-4-5-20251001",
+      "companion_status": "generated",
+      "companion_title": "What to Expect When Retrieving an Impounded or Stored Vehicle",
       "format": "companion_article",
-      "status": "failed"
+      "link_type": "followed_backlink",
+      "status": "success",
+      "url": "https://towwiththeflowyo.wordpress.com/2026/08/02/what-to-expect-when-retrieving-an-impounded-or-stored-vehicle/"
     },
     "tow-cost-estimator::blogger": {
       "backlink_verification": {
@@ -567,18 +583,18 @@
     }
   },
   "summary": {
-    "companion_articles_cached": 9,
-    "companion_articles_published": 9,
-    "deterministic_teasers_prepared": 24,
+    "companion_articles_cached": 10,
+    "companion_articles_published": 10,
+    "deterministic_teasers_prepared": 25,
     "run_stats": {
-      "companion_generated": 0,
+      "companion_generated": 1,
       "companion_generation_failed": 0,
       "companion_generation_skipped": 0,
       "companion_reused": 0,
-      "deterministic_teasers": 2,
-      "estimated_companion_input_tokens": 0,
-      "estimated_companion_output_tokens": 0
+      "deterministic_teasers": 1,
+      "estimated_companion_input_tokens": 362,
+      "estimated_companion_output_tokens": 953
     },
-    "updated_at": "2026-08-01T15:45:11.989868+00:00"
+    "updated_at": "2026-08-02T15:47:11.273627+00:00"
   }
 }
