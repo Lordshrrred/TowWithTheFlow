@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-08-01T08:55:44.244095+00:00",
+  "generated_at": "2026-08-02T08:58:05.195519+00:00",
   "keywords": {
     "total": 802,
-    "live": 407,
-    "pending": 395,
+    "live": 411,
+    "pending": 391,
     "local": {
-      "live": 160,
-      "pending": 28
+      "live": 162,
+      "pending": 26
     },
     "pain_point": {
-      "live": 247,
-      "pending": 367
+      "live": 249,
+      "pending": 365
     }
   },
   "next_targets": [
-    {
-      "keyword": "can you negotiate tow truck price after breakdown",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "tow truck impound lot release fee who covers that",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "aaa membership worth it for single tow cost comparison",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "flat tire on highway no spare what to do",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "battery warning light came on while driving how long do i have",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down in a tunnel what to do",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 184
+      "count": 187
     },
     {
       "slug": "engine-mechanical",
@@ -99,7 +99,7 @@
     {
       "slug": "towing-logistics",
       "label": "Towing Logistics & Process",
-      "count": 8
+      "count": 9
     },
     {
       "slug": "roadside-help",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-01T06:44:54.995150+00:00",
+    "generated_at": "2026-08-02T07:04:42.414523+00:00",
     "platforms": {
       "blog": {
-        "checked": 381,
-        "verified": 296
+        "checked": 385,
+        "verified": 218
       },
       "dev": {
-        "checked": 313,
-        "verified": 313
+        "checked": 317,
+        "verified": 317
       },
       "feeder": {
-        "checked": 381,
-        "verified": 381
+        "checked": 385,
+        "verified": 385
       },
       "tumblr": {
-        "checked": 380,
-        "verified": 380
-      },
-      "wordpress": {
         "checked": 384,
         "verified": 384
+      },
+      "wordpress": {
+        "checked": 388,
+        "verified": 388
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-01T08:55:44.167005+00:00",
+    "generated_at": "2026-08-02T08:58:05.118025+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 122,
+        "rows": 120,
         "source": "ga4",
         "status": "ok"
       }
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-01T08:55:44.263140+00:00",
+    "generatedAt": "2026-08-02T08:58:05.214754+00:00",
     "keywordGeneration": {
-      "currentInventory": 395,
-      "liveKeywords": 407,
-      "estimatedDaysRemaining": 98.8,
+      "currentInventory": 391,
+      "liveKeywords": 411,
+      "estimatedDaysRemaining": 97.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "98.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "97.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 155,
-      "backlogUnits": 166,
+      "backlogPosts": 217,
+      "backlogUnits": 248,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-01T06:44:54.995150+00:00",
+      "generatedAt": "2026-08-02T07:04:42.414523+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
