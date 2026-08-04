@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-08-03T11:11:38.150798+00:00",
+  "generated_at": "2026-08-04T09:26:20.140786+00:00",
   "keywords": {
     "total": 802,
-    "live": 415,
-    "pending": 387,
+    "live": 419,
+    "pending": 383,
     "local": {
-      "live": 164,
-      "pending": 24
+      "live": 166,
+      "pending": 22
     },
     "pain_point": {
-      "live": 251,
-      "pending": 363
+      "live": 253,
+      "pending": 361
     }
   },
   "next_targets": [
-    {
-      "keyword": "car overheating on highway should i pull over",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont start in cold weather tow or jump",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "check engine light flashing car shaking should i pull over",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "car overheating but coolant is full should i tow it",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "transmission slipping on highway do i need a tow",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont start after rain what to do",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 190
+      "count": 192
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 55
+      "count": 56
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 31
+      "count": 32
     },
     {
       "slug": "highway-safety",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-03T07:57:50.404525+00:00",
+    "generated_at": "2026-08-04T06:48:01.217243+00:00",
     "platforms": {
       "blog": {
-        "checked": 389,
-        "verified": 20
+        "checked": 393,
+        "verified": 23
       },
       "dev": {
-        "checked": 321,
-        "verified": 321
+        "checked": 325,
+        "verified": 325
       },
       "feeder": {
-        "checked": 389,
-        "verified": 389
+        "checked": 393,
+        "verified": 393
       },
       "tumblr": {
-        "checked": 388,
-        "verified": 388
-      },
-      "wordpress": {
         "checked": 392,
         "verified": 392
+      },
+      "wordpress": {
+        "checked": 396,
+        "verified": 396
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-03T10:26:22.390650+00:00",
+    "generated_at": "2026-08-04T09:26:20.063695+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 122,
+        "rows": 124,
         "source": "ga4",
         "status": "ok"
       }
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-03T11:11:38.170884+00:00",
+    "generatedAt": "2026-08-04T09:26:20.160846+00:00",
     "keywordGeneration": {
-      "currentInventory": 387,
-      "liveKeywords": 415,
-      "estimatedDaysRemaining": 96.8,
+      "currentInventory": 383,
+      "liveKeywords": 419,
+      "estimatedDaysRemaining": 95.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "96.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "95.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 373,
-      "backlogUnits": 450,
+      "backlogPosts": 378,
+      "backlogUnits": 451,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-03T07:57:50.404525+00:00",
+      "generatedAt": "2026-08-04T06:48:01.217243+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
