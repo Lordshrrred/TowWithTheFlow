@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T10:54:31.411517+00:00",
+  "generated_at": "2026-08-05T14:41:37.073004+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2233,9 +2233,9 @@
     },
     "car-ran-out-of-gas-on-highway-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-ran-out-of-gas-on-highway-what-to.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -2570,6 +2570,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/23/car-stuck-in-mud-how-to-get-out-or-call-tow/",
+        "verified": true
+      }
+    },
+    "car-stuck-in-mud-on-side-of-road-who-to-call": {
+      "blog": {
+        "reason": "site_unavailable",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-stuck-in-mud-on-side-of-road-who-to.html",
+        "verified": false
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-stuck-in-mud-on-side-of-road-who-to-call-right-now-quick-guide-3mdd",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-stuck-in-mud-on-side-of-road-who-to-call-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/824110138380189696/car-stuck-in-mud-on-side-of-road-who-to-call",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/05/car-stuck-in-mud-on-side-of-road-who-to-call/",
         "verified": true
       }
     },
@@ -5883,9 +5910,9 @@
     },
     "tow-truck-cost-aaa-vs-non-aaa-chicago": {
       "blog": {
-        "reason": "site_unavailable",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/aaa-vs-non-aaa-tow-truck-costs-in_01787328963.html",
-        "verified": false
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/aaa-vs-non-aaa-tow-truck-costs-in.html",
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -7879,9 +7906,9 @@
     },
     "towing-cost-in-chicago-illinois-weekend-rate": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-chicago-illinois-weekend.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -10453,24 +10480,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 397,
-      "verified": 0
+      "checked": 398,
+      "verified": 3
     },
     "dev": {
-      "checked": 329,
-      "verified": 329
+      "checked": 330,
+      "verified": 330
     },
     "feeder": {
+      "checked": 398,
+      "verified": 398
+    },
+    "tumblr": {
       "checked": 397,
       "verified": 397
     },
-    "tumblr": {
-      "checked": 396,
-      "verified": 396
-    },
     "wordpress": {
-      "checked": 400,
-      "verified": 400
+      "checked": 401,
+      "verified": 401
     }
   }
 }
