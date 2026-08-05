@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T03:47:00.723946+00:00",
+  "generated_at": "2026-08-05T06:52:01.167842+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1205,9 +1205,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "error:ReadTimeout",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/820950219757961216/car-broke-down-on-freeway-los-angeles-what-to-do",
-        "verified": null
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -1389,9 +1389,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "error:ReadTimeout",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/820955514479558656/car-broke-down-with-kids-in-car-safety-steps",
-        "verified": null
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -3719,9 +3719,9 @@
     },
     "engine-seized-driving-towing-cost": {
       "blog": {
-        "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/engine-seized-while-driving-towing.html",
-        "verified": true
+        "reason": "site_unavailable",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/engine-seized-while-driving-towing_01607531843.html",
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4698,9 +4698,9 @@
     },
     "insurance-covers-towing-after-accident-deductible": {
       "blog": {
-        "reason": "ok",
+        "reason": "site_unavailable",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/does-insurance-cover-towing-after.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5233,9 +5233,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "error:ReadTimeout",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/820961993129345024/ran-out-of-gas-in-denver-who-to-call",
-        "verified": null
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -5287,9 +5287,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "error:ReadTimeout",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/821030121575268352/ran-out-of-gas-on-highway-what-to-do",
-        "verified": null
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -5802,9 +5802,9 @@
     },
     "tire-blowout-at-highway-speed-what-to-do-step-by-step": {
       "blog": {
-        "reason": "ok",
+        "reason": "site_unavailable",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/tire-blowout-at-highway-speed-what-to.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -8576,9 +8576,9 @@
     },
     "towing-cost-jacksonville-florida": {
       "blog": {
-        "reason": "ok",
+        "reason": "site_unavailable",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-jacksonville-florida_01217036873.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -10454,7 +10454,7 @@
   "summary": {
     "blog": {
       "checked": 397,
-      "verified": 4
+      "verified": 0
     },
     "dev": {
       "checked": 329,
@@ -10465,8 +10465,8 @@
       "verified": 397
     },
     "tumblr": {
-      "checked": 392,
-      "verified": 392
+      "checked": 396,
+      "verified": 396
     },
     "wordpress": {
       "checked": 400,
