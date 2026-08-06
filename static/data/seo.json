@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-08-05T10:23:26.486093+00:00",
+  "generated_at": "2026-08-06T09:28:15.862127+00:00",
   "keywords": {
     "total": 802,
-    "live": 423,
-    "pending": 379,
+    "live": 427,
+    "pending": 375,
     "local": {
-      "live": 168,
-      "pending": 20
+      "live": 170,
+      "pending": 18
     },
     "pain_point": {
-      "live": 255,
-      "pending": 359
+      "live": 257,
+      "pending": 357
     }
   },
   "next_targets": [
-    {
-      "keyword": "car stuck in mud on side of road who to call",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "flat tire on highway no spare what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "battery warning light came on while driving how long do i have",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "what happens if i cant pay the tow truck driver",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car smoking under hood pulled over what to do next",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car overheated and now wont start tow or wait",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 194
+      "count": 196
     },
     {
       "slug": "engine-mechanical",
@@ -94,7 +94,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 13
+      "count": 14
     },
     {
       "slug": "towing-logistics",
@@ -122,6 +122,11 @@
       "count": 2
     },
     {
+      "slug": "vehicle-recovery",
+      "label": "Vehicle Recovery",
+      "count": 2
+    },
+    {
       "slug": "emergency-checklists",
       "label": "Emergency Checklists",
       "count": 1
@@ -129,11 +134,6 @@
     {
       "slug": "consumer-rights",
       "label": "Consumer Rights",
-      "count": 1
-    },
-    {
-      "slug": "vehicle-recovery",
-      "label": "Vehicle Recovery",
       "count": 1
     }
   ],
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-05T06:52:01.167842+00:00",
+    "generated_at": "2026-08-06T06:50:59.595400+00:00",
     "platforms": {
       "blog": {
-        "checked": 397,
-        "verified": 0
+        "checked": 401,
+        "verified": 255
       },
       "dev": {
-        "checked": 329,
-        "verified": 329
+        "checked": 333,
+        "verified": 333
       },
       "feeder": {
-        "checked": 397,
-        "verified": 397
+        "checked": 401,
+        "verified": 401
       },
       "tumblr": {
-        "checked": 396,
-        "verified": 396
-      },
-      "wordpress": {
         "checked": 400,
         "verified": 400
+      },
+      "wordpress": {
+        "checked": 404,
+        "verified": 404
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-05T09:22:37.046862+00:00",
+    "generated_at": "2026-08-06T09:28:15.783831+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 130,
+        "rows": 132,
         "source": "ga4",
         "status": "ok"
       }
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-05T10:23:26.501076+00:00",
+    "generatedAt": "2026-08-06T09:28:15.882022+00:00",
     "keywordGeneration": {
-      "currentInventory": 379,
-      "liveKeywords": 423,
-      "estimatedDaysRemaining": 94.8,
+      "currentInventory": 375,
+      "liveKeywords": 427,
+      "estimatedDaysRemaining": 93.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "94.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "93.8 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 400,
-      "backlogUnits": 478,
+      "backlogPosts": 215,
+      "backlogUnits": 227,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-05T06:52:01.167842+00:00",
+      "generatedAt": "2026-08-06T06:50:59.595400+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
