@@ -15199,3 +15199,33 @@
 [2026-08-07 11:18:08] === SYNDICATE DONE: towing-cost-portland-oregon-no-insurance-rates | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-08-07 11:18:08] SYNCED | towing-cost-portland-oregon-no-insurance-rates marked in synced-posts.txt
 [2026-08-07 11:18:08] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-08-08 05:00:46] === SYNDICATE START: transmission-slipping-on-highway-do-i-need-a-tow ===
+[2026-08-08 05:00:46] PREFLIGHT | title: Transmission Slipping on Highway: Do You Need a Tow?
+[2026-08-08 05:00:46] PREFLIGHT | date: 2026-08-08
+[2026-08-08 05:00:46] PREFLIGHT | timestamp: 2026-08-08 05:00:46
+[2026-08-08 05:00:46] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-08-08 05:00:46] PREFLIGHT | TUMBLR:  configured
+[2026-08-08 05:00:46] PREFLIGHT | BLOGGER: configured
+[2026-08-08 05:00:46] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-08 05:00:46] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-08 05:00:46] DEVTO | transmission-slipping-on-highway-do-i-need-a-tow | START
+[2026-08-08 05:00:46] DEVTO | transmission-slipping-on-highway-do-i-need-a-tow | account=TWTF2
+[2026-08-08 05:00:47] DEVTO | transmission-slipping-on-highway-do-i-need-a-tow | SUCCESS | https://dev.to/denverroadsideelitetowing/transmission-slipping-on-highway-do-you-need-a-tow-what-to-do-next-5311
+[2026-08-08 05:00:47] --- waiting 60s before next platform ---
+[2026-08-08 05:01:47] TUMBLR | transmission-slipping-on-highway-do-i-need-a-tow | START
+[2026-08-08 05:01:48] TUMBLR | transmission-slipping-on-highway-do-i-need-a-tow | SUCCESS | https://towwiththeflow.tumblr.com/post/824376723025068032
+[2026-08-08 05:01:48] --- waiting 60s before next platform ---
+[2026-08-08 05:02:48] BLOGGER | transmission-slipping-on-highway-do-i-need-a-tow | START
+[2026-08-08 05:02:48] BLOGGER | transmission-slipping-on-highway-do-i-need-a-tow | step 1/3: refreshing access token
+[2026-08-08 05:02:48] BLOGGER | transmission-slipping-on-highway-do-i-need-a-tow | step 2/3: converting markdown to HTML
+[2026-08-08 05:02:48] BLOGGER | transmission-slipping-on-highway-do-i-need-a-tow | step 3/3: posting to blog 1959471973457654666
+[2026-08-08 05:02:49] BLOGGER | transmission-slipping-on-highway-do-i-need-a-tow | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/transmission-slipping-on-highway-do-you.html
+[2026-08-08 05:02:49] --- waiting 60s before next platform ---
+[2026-08-08 05:03:49] WORDPRESS | transmission-slipping-on-highway-do-i-need-a-tow | START
+[2026-08-08 05:03:56] WORDPRESS | transmission-slipping-on-highway-do-i-need-a-tow | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/08/transmission-slipping-on-highway-do-i-need-a-tow/
+[2026-08-08 05:03:56] --- waiting 60s before next platform ---
+[2026-08-08 05:04:56] FEEDER | transmission-slipping-on-highway-do-i-need-a-tow | START
+[2026-08-08 05:04:57] FEEDER | transmission-slipping-on-highway-do-i-need-a-tow | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/transmission-slipping-on-highway-do-i-need-a-tow-tips/
+[2026-08-08 05:04:57] === SYNDICATE DONE: transmission-slipping-on-highway-do-i-need-a-tow | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-08 05:04:57] SYNCED | transmission-slipping-on-highway-do-i-need-a-tow marked in synced-posts.txt
+[2026-08-08 05:04:57] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
