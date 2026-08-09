@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-08-09T13:23:34.907779+00:00",
+  "generated_at": "2026-08-09T17:16:01.764414+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/08/09/towing-cost-san-diego-california-no-insurance-2-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/09/what-happens-if-i-cant-pay-the-tow-truck-driver/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/09/how-much-does-it-cost-to-tow-a-car-in-austin-texas/",
     "https://towwiththeflowyo.wordpress.com/2026/08/09/car-died-on-interstate-who-do-i-call-first/",
     "https://towwiththeflowyo.wordpress.com/2026/08/08/towing-cost-indianapolis-indiana-no-insurance/",
     "https://towwiththeflowyo.wordpress.com/2026/08/08/towing-cost-san-diego-california-no-insurance-2/",
@@ -509,7 +512,8 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/09/towing-cost-portland-oregon-local-rate/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -2436,6 +2440,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/24/how-much-does-flatbed-tow-truck-cost-houston-texas/",
+        "verified": true
+      }
+    },
+    "how-much-does-it-cost-to-tow-a-car-in-austin-texas": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/how-much-does-it-cost-to-tow-a-car-in-austin-texas/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/09/how-much-does-it-cost-to-tow-a-car-in-austin-texas/",
         "verified": true
       }
     },
@@ -4689,6 +4702,15 @@
         "verified": true
       }
     },
+    "towing-cost-portland-oregon-local-rate": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/towing-cost-portland-oregon-local-rate/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/09/towing-cost-portland-oregon-local-rate/",
+        "verified": true
+      }
+    },
     "towing-cost-portland-oregon-no-insurance-rates": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-portland-oregon-no-insurance-rates/",
@@ -4768,6 +4790,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/08/towing-cost-san-diego-california-no-insurance-2/",
         "verified": true
+      }
+    },
+    "towing-cost-san-diego-california-no-insurance-2-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/09/towing-cost-san-diego-california-no-insurance-2-2/",
+        "verified": false
       }
     },
     "towing-cost-seattle-mountain-pass-breakdown": {
@@ -4968,6 +4999,15 @@
         "verified": true
       }
     },
+    "what-happens-if-i-cant-pay-the-tow-truck-driver": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/what-happens-if-i-cant-pay-the-tow-truck-driver/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/09/what-happens-if-i-cant-pay-the-tow-truck-driver/",
+        "verified": true
+      }
+    },
     "what-happens-if-you-run-out-of-oil-while-driving": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/what-happens-if-you-run-out-of-oil-while-driving/",
@@ -5098,8 +5138,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 509,
-      "verified": 418
+      "checked": 513,
+      "verified": 421
     }
   }
 }
