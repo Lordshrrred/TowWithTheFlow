@@ -15539,3 +15539,33 @@
 [2026-08-10 09:34:25] === SYNDICATE DONE: car-overheated-and-now-wont-start-tow-or-wait | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-08-10 09:34:25] SYNCED | car-overheated-and-now-wont-start-tow-or-wait marked in synced-posts.txt
 [2026-08-10 09:34:25] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-08-10 11:22:04] === SYNDICATE START: towing-cost-columbus-ohio-local ===
+[2026-08-10 11:22:04] PREFLIGHT | title: Towing Cost in Columbus Ohio Local: What You'll Pay Right Now
+[2026-08-10 11:22:04] PREFLIGHT | date: 2026-08-10
+[2026-08-10 11:22:04] PREFLIGHT | timestamp: 2026-08-10 11:22:04
+[2026-08-10 11:22:04] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-08-10 11:22:04] PREFLIGHT | TUMBLR:  configured
+[2026-08-10 11:22:04] PREFLIGHT | BLOGGER: configured
+[2026-08-10 11:22:04] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-10 11:22:04] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-10 11:22:04] DEVTO | towing-cost-columbus-ohio-local | START
+[2026-08-10 11:22:04] DEVTO | towing-cost-columbus-ohio-local | account=TWTF1
+[2026-08-10 11:22:04] DEVTO | towing-cost-columbus-ohio-local | SUCCESS | https://dev.to/roadsideamericatowing/towing-cost-in-columbus-ohio-local-what-youll-pay-right-now-roadside-tips-53
+[2026-08-10 11:22:04] --- waiting 60s before next platform ---
+[2026-08-10 11:23:04] TUMBLR | towing-cost-columbus-ohio-local | START
+[2026-08-10 11:23:05] TUMBLR | towing-cost-columbus-ohio-local | SUCCESS | https://towwiththeflow.tumblr.com/post/824581905318133760
+[2026-08-10 11:23:05] --- waiting 60s before next platform ---
+[2026-08-10 11:24:05] BLOGGER | towing-cost-columbus-ohio-local | START
+[2026-08-10 11:24:05] BLOGGER | towing-cost-columbus-ohio-local | step 1/3: refreshing access token
+[2026-08-10 11:24:05] BLOGGER | towing-cost-columbus-ohio-local | step 2/3: converting markdown to HTML
+[2026-08-10 11:24:05] BLOGGER | towing-cost-columbus-ohio-local | step 3/3: posting to blog 1959471973457654666
+[2026-08-10 11:24:06] BLOGGER | towing-cost-columbus-ohio-local | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/towing-cost-in-columbus-ohio-local-what.html
+[2026-08-10 11:24:06] --- waiting 60s before next platform ---
+[2026-08-10 11:25:06] WORDPRESS | towing-cost-columbus-ohio-local | START
+[2026-08-10 11:25:14] WORDPRESS | towing-cost-columbus-ohio-local | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/10/towing-cost-columbus-ohio-local/
+[2026-08-10 11:25:14] --- waiting 60s before next platform ---
+[2026-08-10 11:26:14] FEEDER | towing-cost-columbus-ohio-local | START
+[2026-08-10 11:26:16] FEEDER | towing-cost-columbus-ohio-local | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-columbus-ohio-local-advice/
+[2026-08-10 11:26:16] === SYNDICATE DONE: towing-cost-columbus-ohio-local | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-10 11:26:16] SYNCED | towing-cost-columbus-ohio-local marked in synced-posts.txt
+[2026-08-10 11:26:16] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
