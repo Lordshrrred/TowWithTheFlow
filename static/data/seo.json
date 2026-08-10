@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-08-09T07:39:11.655082+00:00",
+  "generated_at": "2026-08-10T08:15:42.433475+00:00",
   "keywords": {
     "total": 802,
-    "live": 439,
-    "pending": 363,
+    "live": 443,
+    "pending": 359,
     "local": {
-      "live": 176,
-      "pending": 12
+      "live": 178,
+      "pending": 10
     },
     "pain_point": {
-      "live": 263,
-      "pending": 351
+      "live": 265,
+      "pending": 349
     }
   },
   "next_targets": [
-    {
-      "keyword": "car died on interstate who do i call first",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "what happens if i cant pay the tow truck driver",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car smoking under hood pulled over what to do next",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "electric vehicle ran out of charge on highway what to do",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car stalled in intersection how to stay safe",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "serpentine belt snapped while driving can i tow or drive",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 202
+      "count": 204
     },
     {
       "slug": "engine-mechanical",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 23
+      "count": 24
     },
     {
       "slug": "tire-wheel",
@@ -104,7 +104,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 8
+      "count": 9
     },
     {
       "slug": "accident-liability",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-09T05:25:56.225943+00:00",
+    "generated_at": "2026-08-10T05:49:55.148538+00:00",
     "platforms": {
       "blog": {
-        "checked": 413,
-        "verified": 25
+        "checked": 417,
+        "verified": 221
       },
       "dev": {
-        "checked": 343,
-        "verified": 343
+        "checked": 347,
+        "verified": 347
       },
       "feeder": {
-        "checked": 411,
-        "verified": 411
+        "checked": 415,
+        "verified": 415
       },
       "tumblr": {
-        "checked": 410,
-        "verified": 410
+        "checked": 414,
+        "verified": 414
       },
       "wordpress": {
-        "checked": 416,
-        "verified": 416
+        "checked": 420,
+        "verified": 420
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-09T07:39:11.579460+00:00",
+    "generated_at": "2026-08-10T08:15:42.348568+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 50,
+        "rows": 51,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 140,
+        "rows": 138,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,31 +207,31 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "32 Search Console impressions match this asset pattern.",
+        "reason": "31 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 12,
-    "top_query_count": 40,
+    "top_query_count": 39,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-09T07:39:11.675690+00:00",
+    "generatedAt": "2026-08-10T08:15:42.455101+00:00",
     "keywordGeneration": {
-      "currentInventory": 363,
-      "liveKeywords": 439,
-      "estimatedDaysRemaining": 90.8,
+      "currentInventory": 359,
+      "liveKeywords": 443,
+      "estimatedDaysRemaining": 89.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "90.8 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "89.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 395,
-      "backlogUnits": 475,
+      "backlogPosts": 258,
+      "backlogUnits": 283,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-09T05:25:56.225943+00:00",
+      "generatedAt": "2026-08-10T05:49:55.148538+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.5,
       "newPostsPerDay": 4.0,
