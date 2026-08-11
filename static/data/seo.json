@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-08-10T09:05:49.407595+00:00",
+  "generated_at": "2026-08-11T07:51:52.011435+00:00",
   "keywords": {
     "total": 802,
-    "live": 443,
-    "pending": 359,
+    "live": 447,
+    "pending": 355,
     "local": {
-      "live": 178,
-      "pending": 10
+      "live": 180,
+      "pending": 8
     },
     "pain_point": {
-      "live": 265,
-      "pending": 349
+      "live": 267,
+      "pending": 347
     }
   },
   "next_targets": [
-    {
-      "keyword": "car smoking under hood pulled over what to do next",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car overheated and now wont start tow or wait",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "power steering went out while driving is it safe to drive",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "serpentine belt snapped while driving can i tow or drive",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car accident on highway do police call tow truck or can i choose",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how much does a tow truck cost without insurance",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 204
+      "count": 206
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 59
+      "count": 60
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 34
+      "count": 35
     },
     {
       "slug": "highway-safety",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-10T05:49:55.148538+00:00",
+    "generated_at": "2026-08-11T05:38:26.088559+00:00",
     "platforms": {
       "blog": {
-        "checked": 417,
-        "verified": 221
+        "checked": 421,
+        "verified": 49
       },
       "dev": {
-        "checked": 347,
-        "verified": 347
+        "checked": 351,
+        "verified": 351
       },
       "feeder": {
-        "checked": 415,
-        "verified": 415
+        "checked": 419,
+        "verified": 419
       },
       "tumblr": {
-        "checked": 414,
-        "verified": 414
+        "checked": 418,
+        "verified": 418
       },
       "wordpress": {
-        "checked": 420,
-        "verified": 420
+        "checked": 424,
+        "verified": 424
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-10T08:15:42.348568+00:00",
+    "generated_at": "2026-08-11T07:51:51.926418+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 51,
+        "rows": 53,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 138,
+        "rows": 148,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,7 +207,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "31 Search Console impressions match this asset pattern.",
+        "reason": "29 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-10T09:05:49.428095+00:00",
+    "generatedAt": "2026-08-11T07:51:52.031226+00:00",
     "keywordGeneration": {
-      "currentInventory": 359,
-      "liveKeywords": 443,
-      "estimatedDaysRemaining": 89.8,
+      "currentInventory": 355,
+      "liveKeywords": 447,
+      "estimatedDaysRemaining": 88.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "89.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "88.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 258,
-      "backlogUnits": 283,
+      "backlogPosts": 387,
+      "backlogUnits": 459,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-10T05:49:55.148538+00:00",
+      "generatedAt": "2026-08-11T05:38:26.088559+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.5,
       "newPostsPerDay": 4.0,
