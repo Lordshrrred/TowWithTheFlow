@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T13:51:24.246671+00:00",
+  "generated_at": "2026-08-11T17:24:55.289632+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -182,9 +182,9 @@
     },
     "allstate-roadside-assistance-how-many-times-per-year": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/allstate-roadside-assistance-how-many.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -384,9 +384,9 @@
     },
     "battery-dead-on-highway-how-to-get-help-fast": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/battery-dead-on-highway-how-to-get-help.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -411,9 +411,9 @@
     },
     "battery-warning-light-came-on-while-driving-how-long-do-i-have": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/battery-warning-light-came-on-while.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -438,9 +438,9 @@
     },
     "blown-tire-highway-speed-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/blown-tire-at-highway-speed-what-to-do.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -573,9 +573,9 @@
     },
     "brake-failure-while-driving-what-to-do-immediately": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/brake-failure-while-driving-what-to-do.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -878,12 +878,6 @@
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-battery-dies-in-parking-lot-what-to.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
@@ -908,9 +902,9 @@
     },
     "car-battery-dies-parking-lot-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-dies-in-parking-lot-what-to_0839049097.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -956,12 +950,6 @@
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-breaks-down-on-bridge-who-to-call-and-what-to-do-roadside-tips-51mf",
@@ -986,9 +974,9 @@
     },
     "car-broke-down-bad-neighborhood-night-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-broke-down-in-bad-neighborhood-at.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1094,9 +1082,9 @@
     },
     "car-broke-down-in-tunnel-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-broke-down-in-tunnel-what-to-do.html",
-        "verified": true
+        "verified": false
       },
       "wordpress": {
         "reason": "ok",
@@ -1295,9 +1283,9 @@
     },
     "car-broke-down-on-highway-at-night-safety-tips": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-broke-down-on-highway-at-night.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1534,6 +1522,7 @@
     "car-died-on-highway-shoulder-safe-to-wait-for-tow": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-died-on-highway-shoulder-is-it-safe.html",
         "verified": true
       },
@@ -1560,9 +1549,9 @@
     },
     "car-died-on-interstate-who-do-i-call-first": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-died-on-interstate-who-do-i-call.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1642,9 +1631,9 @@
     },
     "car-doors-wont-unlock-battery-dead-stranded-inside": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-doors-wont-unlock-battery-dead.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1984,9 +1973,9 @@
     },
     "car-making-grinding-noise-when-starting-tow-truck-needed": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-making-grinding-noise-when-starting.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -2142,9 +2131,9 @@
     },
     "car-overheating-but-coolant-is-full-should-i-tow-it": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-overheating-but-coolant-is-full.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -2343,9 +2332,9 @@
     },
     "car-radiator-leak-steam-coming-out-tow-cost": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-radiator-leak-with-steam-what-to-do.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -3043,9 +3032,9 @@
     },
     "car-wont-start-after-rain-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-wont-start-after-rain-what-to-do.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3124,9 +3113,9 @@
     },
     "car-wont-start-but-battery-is-good": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-wont-start-but-battery-is-good-what_01661641394.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3205,9 +3194,9 @@
     },
     "car-wont-start-clicking-noise-tow-needed": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-start-clicking-noise-tow.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3393,11 +3382,38 @@
         "verified": true
       }
     },
-    "car-wont-start-in-parking-garage-who-to-call": {
+    "car-wont-start-in-hot-weather-battery-or-alternator": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-wont-start-in-parking-garage-who-to.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-wont-start-in-hot-weather-battery.html",
         "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-wont-start-in-hot-weather-battery-or-alternator-explained-2n91",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-in-hot-weather-battery-or-alternator-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/824665334222094336/car-wont-start-in-hot-weather-battery-or-alternator",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/11/car-wont-start-in-hot-weather-battery-or-alternator/",
+        "verified": true
+      }
+    },
+    "car-wont-start-in-parking-garage-who-to-call": {
+      "blog": {
+        "reason": "http_429",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-wont-start-in-parking-garage-who-to.html",
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3422,9 +3438,9 @@
     },
     "change-tire-highway-safely-houston": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/how-to-change-tire-on-highway-safely-in_0542587203.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3726,9 +3742,9 @@
     },
     "costco-auto-insurance-roadside-assistance-towing-coverage": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/costco-auto-insurance-roadside.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -3981,9 +3997,9 @@
     },
     "engine-seized-while-driving-towing-cost": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/engine-seized-while-driving-towing-cost.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4089,9 +4105,9 @@
     },
     "farmers-insurance-towing-benefit-how-many-times": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/how-many-times-can-you-use-farmers.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -4111,9 +4127,9 @@
     },
     "farmers-insurance-towing-benefit-how-much-pays": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/how-much-does-farmers-insurance-pay-for.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -4133,9 +4149,9 @@
     },
     "farmers-insurance-towing-reimbursement-after-breakdown": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/farmers-insurance-towing-reimbursement.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4479,9 +4495,9 @@
     },
     "geico-roadside-assistance-vs-tow-truck-cost": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/geico-roadside-assistance-vs-tow-truck.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4506,9 +4522,9 @@
     },
     "how-long-can-a-car-sit-broken-down-on-roadside": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-long-can-car-sit-broken-down-on.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4587,9 +4603,9 @@
     },
     "how-much-does-a-tow-cost-in-colorado": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-tow-cost-in-colorado.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4614,9 +4630,9 @@
     },
     "how-much-does-a-tow-truck-cost-in-denver-colorado": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/how-much-does-tow-truck-cost-in-denver.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4695,9 +4711,9 @@
     },
     "how-much-does-aaa-towing-cost-without-membership": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/how-much-does-aaa-towing-cost-without.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4749,9 +4765,9 @@
     },
     "how-much-does-it-cost-to-tow-a-car-in-austin-texas": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/how-much-does-it-cost-to-tow-car-in.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4776,9 +4792,9 @@
     },
     "how-much-does-it-cost-to-tow-a-car-in-chicago-illinois": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-much-does-it-cost-to-tow-car-in_01903882384.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4803,9 +4819,9 @@
     },
     "how-much-does-it-cost-to-tow-a-car-in-dallas-texas": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/how-much-does-it-cost-to-tow-car-in_0500111961.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4857,9 +4873,9 @@
     },
     "how-much-does-it-cost-to-tow-a-car-in-las-vegas-nevada": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/how-much-does-it-cost-to-tow-car-in-las.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4884,9 +4900,9 @@
     },
     "how-much-does-it-cost-to-tow-a-car-in-new-york-city": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/how-much-does-it-cost-to-tow-car-in-new.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5230,9 +5246,9 @@
     },
     "locked-keys-in-car-on-highway-roadside-help-cost": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/locked-keys-in-car-on-highway-roadside.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5365,9 +5381,9 @@
     },
     "motorcycle-towing-cost-accident-scene-police-called": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/motorcycle-towing-cost-when-police-are.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -5468,9 +5484,9 @@
     },
     "progressive-insurance-towing-coverage-how-many-times": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/progressive-insurance-towing-coverage.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -5620,9 +5636,9 @@
     },
     "ran-out-of-gas-on-highway-at-night-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/ran-out-of-gas-on-highway-at-night-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5674,9 +5690,9 @@
     },
     "ran-out-of-gas-on-highway-what-to-do-2": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/ran-out-of-gas-on-highway-what-to-do_0142747458.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5858,9 +5874,9 @@
     },
     "smoke-coming-from-under-car-not-hood-what-does-it-mean": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/smoke-coming-from-under-car-not-hood.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -5907,9 +5923,9 @@
     },
     "state-farm-roadside-assistance-dollar-limit-towing": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/state-farm-roadside-assistance-dollar.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6204,9 +6220,9 @@
     },
     "tire-blowout-highway-emergency-tow-cost": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tire-blowout-on-highway-emergency-tow.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6231,9 +6247,9 @@
     },
     "tire-blowout-on-highway-steps-to-take": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/tire-blowout-on-highway-steps-to-take.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6545,9 +6561,9 @@
     },
     "tow-truck-cost-flat-tire-cant-change-myself": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/tow-truck-cost-for-flat-tire-when-you.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -6751,9 +6767,9 @@
     },
     "tow-truck-cost-los-angeles-no-insurance": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/tow-truck-cost-los-angeles-no-insurance.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -7190,9 +7206,9 @@
     },
     "towing-cost-atlanta-georgia-miles-based": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-atlanta-georgia-miles.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -7217,9 +7233,9 @@
     },
     "towing-cost-atlanta-georgia-no-insurance": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-atlanta-georgia-no.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -7558,9 +7574,9 @@
     },
     "towing-cost-chicago-illinois": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-chicago-illinois-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -7765,6 +7781,7 @@
     "towing-cost-credit-card-roadside-assistance-covers": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/does-credit-card-roadside-assistance.html",
         "verified": true
       },
@@ -7857,9 +7874,9 @@
     },
     "towing-cost-denver-colorado-after-accident": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-denver-colorado-after_01705884268.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -7884,9 +7901,9 @@
     },
     "towing-cost-denver-colorado-flatbed": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-denver-colorado-flatbed.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -8929,9 +8946,9 @@
     },
     "towing-cost-in-phoenix-arizona-summer-heat-breakdown": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-phoenix-arizona-summer.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9032,9 +9049,9 @@
     },
     "towing-cost-indianapolis-indiana-no-insurance": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/towing-cost-indianapolis-indiana-no.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9054,6 +9071,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/08/towing-cost-indianapolis-indiana-no-insurance/",
+        "verified": true
+      }
+    },
+    "towing-cost-indianapolis-indiana-per-mile": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/towing-cost-in-indianapolis-indiana-per.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/towing-cost-in-indianapolis-indiana-per-mile-what-youll-pay-right-now-what-to-do-next-1ogk",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-indianapolis-indiana-per-mile-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/824659295445663745/towing-cost-indianapolis-indiana-per-mile",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/11/towing-cost-indianapolis-indiana-per-mile/",
         "verified": true
       }
     },
@@ -9135,9 +9179,9 @@
     },
     "towing-cost-las-vegas-nevada-strip-area": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-las-vegas-nevada-strip.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9243,9 +9287,9 @@
     },
     "towing-cost-los-angeles-california-no-insurance": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-los-angeles-california-no.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9351,9 +9395,9 @@
     },
     "towing-cost-luxury-car-mercedes-bmw": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-for-luxury-cars-mercedes_01553671919.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9378,9 +9422,9 @@
     },
     "towing-cost-memphis-tennessee": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-memphis-tennessee-what_0590805797.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9567,9 +9611,9 @@
     },
     "towing-cost-miami-florida-no-insurance-rates": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/towing-cost-miami-florida-no-insurance.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9665,9 +9709,9 @@
     },
     "towing-cost-nashville-tennessee-per-mile-rate": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-nashville-tennessee-per.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9854,9 +9898,9 @@
     },
     "towing-cost-per-mile-los-angeles": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-per-mile-los-angeles-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -10001,9 +10045,9 @@
     },
     "towing-cost-phoenix-arizona-flatbed-no-insurance": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-phoenix-arizona-flatbed-no.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -10202,9 +10246,9 @@
     },
     "towing-cost-portland-oregon-local-rate": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/towing-cost-in-portland-oregon-local.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -10230,6 +10274,7 @@
     "towing-cost-portland-oregon-no-insurance-rates": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/towing-cost-portland-oregon-no.html",
         "verified": true
       },
@@ -10255,12 +10300,6 @@
       }
     },
     "towing-cost-portland-oregon-rainy-weather": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-portland-oregon-rainy.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/towing-cost-in-portland-oregon-rainy-weather-what-to-expect-quick-guide-442k",
@@ -10334,9 +10373,9 @@
     },
     "towing-cost-san-diego-california": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-in-san-diego-california_01239152409.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -10415,14 +10454,14 @@
     },
     "towing-cost-san-diego-california-no-insurance-2": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/towing-cost-in-san-diego-california-no.html",
-        "verified": true
+        "verified": false
       },
       "wordpress": {
         "reason": "ok",
         "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/08/10/towing-cost-san-diego-california-no-insurance-2-3/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/11/towing-cost-san-diego-california-no-insurance-2-4/",
         "verified": true
       }
     },
@@ -10455,9 +10494,9 @@
     },
     "towing-cost-seattle-washington": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-seattle-washington-what.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -10563,9 +10602,9 @@
     },
     "towing-cost-seattle-washington-no-insurance-rates": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-seattle-washington-no.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -10693,9 +10732,9 @@
     },
     "transmission-slipping-on-highway-do-i-need-a-tow": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/transmission-slipping-on-highway-do-you.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -10904,9 +10943,9 @@
     },
     "what-happens-if-i-cant-pay-the-tow-truck-driver": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/what-happens-if-i-cant-pay-tow-truck.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -10958,9 +10997,9 @@
     },
     "what-happens-if-your-car-breaks-down-on-highway": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/what-happens-if-your-car-breaks-down-on_0319382764.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -11034,9 +11073,9 @@
     },
     "who-do-i-call-if-my-car-breaks-down-on-a-freeway-in-los-angeles": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/who-do-i-call-if-my-car-breaks-down-on.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -11117,24 +11156,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 425,
-      "verified": 425
+      "checked": 424,
+      "verified": 355
     },
     "dev": {
-      "checked": 352,
-      "verified": 352
+      "checked": 354,
+      "verified": 354
     },
     "feeder": {
-      "checked": 420,
-      "verified": 420
+      "checked": 422,
+      "verified": 422
     },
     "tumblr": {
-      "checked": 419,
-      "verified": 419
+      "checked": 421,
+      "verified": 421
     },
     "wordpress": {
-      "checked": 425,
-      "verified": 425
+      "checked": 427,
+      "verified": 427
     }
   }
 }
