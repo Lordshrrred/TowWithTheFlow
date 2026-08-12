@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-08-12T13:59:25.288907+00:00",
+  "generated_at": "2026-08-12T17:23:39.278607+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/08/12/towing-cost-san-diego-california-no-insurance-2-5/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/12/car-making-grinding-noise-when-braking-safe-to-drive-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/12/towing-cost-in-chicago-illinois-per-mile-rate/",
     "https://towwiththeflowyo.wordpress.com/2026/08/12/fuel-pump-failed-on-highway-signs-and-next-steps-2/",
     "https://towwiththeflowyo.wordpress.com/2026/08/11/towing-cost-memphis-tennessee-local-rate/",
     "https://towwiththeflowyo.wordpress.com/2026/08/11/towing-cost-san-diego-california-no-insurance-2-4/",
@@ -524,8 +527,7 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
-    "https://towwiththeflowyo.wordpress.com/2026/08/12/towing-cost-in-chicago-illinois-per-mile-rate/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -1264,6 +1266,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/26/car-making-grinding-noise-when-braking-safe-to-drive/",
+        "verified": true
+      }
+    },
+    "car-making-grinding-noise-when-braking-safe-to-drive-2": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-making-grinding-noise-when-braking-safe-to-drive-2/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/12/car-making-grinding-noise-when-braking-safe-to-drive-2/",
         "verified": true
       }
     },
@@ -4912,6 +4923,15 @@
         "verified": false
       }
     },
+    "towing-cost-san-diego-california-no-insurance-2-5": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/12/towing-cost-san-diego-california-no-insurance-2-5/",
+        "verified": false
+      }
+    },
     "towing-cost-seattle-mountain-pass-breakdown": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-seattle-mountain-pass-breakdown/",
@@ -5258,8 +5278,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 525,
-      "verified": 431
+      "checked": 527,
+      "verified": 432
     }
   }
 }
