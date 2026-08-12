@@ -15750,3 +15750,33 @@
 [2026-08-12 07:59:19] === SYNDICATE DONE: towing-cost-in-chicago-illinois-per-mile-rate | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-08-12 07:59:19] SYNCED | towing-cost-in-chicago-illinois-per-mile-rate marked in synced-posts.txt
 [2026-08-12 07:59:19] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-08-12 09:28:45] === SYNDICATE START: car-making-grinding-noise-when-braking-safe-to-drive-2 ===
+[2026-08-12 09:28:45] PREFLIGHT | title: Car Making Grinding Noise When Braking: Is It Safe to Drive?
+[2026-08-12 09:28:45] PREFLIGHT | date: 2026-08-12
+[2026-08-12 09:28:45] PREFLIGHT | timestamp: 2026-08-12 09:28:45
+[2026-08-12 09:28:45] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-08-12 09:28:45] PREFLIGHT | TUMBLR:  configured
+[2026-08-12 09:28:45] PREFLIGHT | BLOGGER: configured
+[2026-08-12 09:28:45] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-12 09:28:45] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-12 09:28:45] DEVTO | car-making-grinding-noise-when-braking-safe-to-drive-2 | START
+[2026-08-12 09:28:45] DEVTO | car-making-grinding-noise-when-braking-safe-to-drive-2 | account=TWTF1
+[2026-08-12 09:28:45] DEVTO | car-making-grinding-noise-when-braking-safe-to-drive-2 | SUCCESS | https://dev.to/roadsideamericatowing/car-making-grinding-noise-when-braking-is-it-safe-to-drive-what-to-do-next-4fi8
+[2026-08-12 09:28:45] --- waiting 60s before next platform ---
+[2026-08-12 09:29:45] TUMBLR | car-making-grinding-noise-when-braking-safe-to-drive-2 | START
+[2026-08-12 09:29:46] TUMBLR | car-making-grinding-noise-when-braking-safe-to-drive-2 | SUCCESS | https://towwiththeflow.tumblr.com/post/824755970063433728
+[2026-08-12 09:29:46] --- waiting 60s before next platform ---
+[2026-08-12 09:30:46] BLOGGER | car-making-grinding-noise-when-braking-safe-to-drive-2 | START
+[2026-08-12 09:30:46] BLOGGER | car-making-grinding-noise-when-braking-safe-to-drive-2 | step 1/3: refreshing access token
+[2026-08-12 09:30:46] BLOGGER | car-making-grinding-noise-when-braking-safe-to-drive-2 | step 2/3: converting markdown to HTML
+[2026-08-12 09:30:46] BLOGGER | car-making-grinding-noise-when-braking-safe-to-drive-2 | step 3/3: posting to blog 1959471973457654666
+[2026-08-12 09:30:47] BLOGGER | car-making-grinding-noise-when-braking-safe-to-drive-2 | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-making-grinding-noise-when-braking.html
+[2026-08-12 09:30:47] --- waiting 60s before next platform ---
+[2026-08-12 09:31:47] WORDPRESS | car-making-grinding-noise-when-braking-safe-to-drive-2 | START
+[2026-08-12 09:31:57] WORDPRESS | car-making-grinding-noise-when-braking-safe-to-drive-2 | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/12/car-making-grinding-noise-when-braking-safe-to-drive-2/
+[2026-08-12 09:31:57] --- waiting 60s before next platform ---
+[2026-08-12 09:32:57] FEEDER | car-making-grinding-noise-when-braking-safe-to-drive-2 | START
+[2026-08-12 09:32:58] FEEDER | car-making-grinding-noise-when-braking-safe-to-drive-2 | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-making-grinding-noise-when-braking-safe-to-drive-2-tips/
+[2026-08-12 09:32:58] === SYNDICATE DONE: car-making-grinding-noise-when-braking-safe-to-drive-2 | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-12 09:32:58] SYNCED | car-making-grinding-noise-when-braking-safe-to-drive-2 marked in synced-posts.txt
+[2026-08-12 09:32:58] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
