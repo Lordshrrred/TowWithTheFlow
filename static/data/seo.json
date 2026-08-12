@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-08-11T07:51:52.011435+00:00",
+  "generated_at": "2026-08-12T08:02:55.170137+00:00",
   "keywords": {
     "total": 802,
-    "live": 447,
-    "pending": 355,
+    "live": 451,
+    "pending": 351,
     "local": {
-      "live": 180,
-      "pending": 8
+      "live": 182,
+      "pending": 6
     },
     "pain_point": {
-      "live": 267,
-      "pending": 347
+      "live": 269,
+      "pending": 345
     }
   },
   "next_targets": [
-    {
-      "keyword": "power steering went out while driving is it safe to drive",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont start in hot weather battery or alternator",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "fuel pump failed on highway signs and what to do",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "how much does a tow truck cost without insurance",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "dead battery in extreme cold weather tow or jump start",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "check engine light flashing car shaking pull over now",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 206
+      "count": 208
     },
     {
       "slug": "engine-mechanical",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 35
+      "count": 36
     },
     {
       "slug": "highway-safety",
@@ -119,7 +119,7 @@
     {
       "slug": "vehicle-safety",
       "label": "Vehicle Safety",
-      "count": 2
+      "count": 3
     },
     {
       "slug": "vehicle-recovery",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-11T05:38:26.088559+00:00",
+    "generated_at": "2026-08-12T05:56:39.110245+00:00",
     "platforms": {
       "blog": {
-        "checked": 421,
-        "verified": 49
+        "checked": 425,
+        "verified": 30
       },
       "dev": {
-        "checked": 351,
-        "verified": 351
+        "checked": 355,
+        "verified": 355
       },
       "feeder": {
-        "checked": 419,
-        "verified": 419
+        "checked": 423,
+        "verified": 423
       },
       "tumblr": {
-        "checked": 418,
-        "verified": 418
+        "checked": 422,
+        "verified": 422
       },
       "wordpress": {
-        "checked": 424,
-        "verified": 424
+        "checked": 428,
+        "verified": 428
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-11T07:51:51.926418+00:00",
+    "generated_at": "2026-08-12T08:02:55.107281+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 53,
+        "rows": 52,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 148,
+        "rows": 152,
         "source": "ga4",
         "status": "ok"
       }
@@ -212,26 +212,26 @@
       }
     ],
     "top_landing_page_count": 12,
-    "top_query_count": 39,
+    "top_query_count": 37,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-11T07:51:52.031226+00:00",
+    "generatedAt": "2026-08-12T08:02:55.180787+00:00",
     "keywordGeneration": {
-      "currentInventory": 355,
-      "liveKeywords": 447,
-      "estimatedDaysRemaining": 88.8,
+      "currentInventory": 351,
+      "liveKeywords": 451,
+      "estimatedDaysRemaining": 87.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "88.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "87.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 387,
-      "backlogUnits": 459,
+      "backlogPosts": 404,
+      "backlogUnits": 482,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-11T05:38:26.088559+00:00",
+      "generatedAt": "2026-08-12T05:56:39.110245+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.5,
       "newPostsPerDay": 4.0,
