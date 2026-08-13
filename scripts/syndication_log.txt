@@ -15810,3 +15810,33 @@
 [2026-08-12 11:29:45] === SYNDICATE DONE: towing-cost-in-atlanta-georgia-average-price | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-08-12 11:29:45] SYNCED | towing-cost-in-atlanta-georgia-average-price marked in synced-posts.txt
 [2026-08-12 11:29:45] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-08-13 05:21:14] === SYNDICATE START: blown-head-gasket-can-i-drive-to-mechanic-or-need-tow ===
+[2026-08-13 05:21:14] PREFLIGHT | title: Blown Head Gasket: Can I Drive to the Mechanic or Do I Need a Tow?
+[2026-08-13 05:21:14] PREFLIGHT | date: 2026-08-13
+[2026-08-13 05:21:14] PREFLIGHT | timestamp: 2026-08-13 05:21:14
+[2026-08-13 05:21:14] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-08-13 05:21:14] PREFLIGHT | TUMBLR:  configured
+[2026-08-13 05:21:14] PREFLIGHT | BLOGGER: configured
+[2026-08-13 05:21:14] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-13 05:21:14] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-13 05:21:14] DEVTO | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | START
+[2026-08-13 05:21:14] DEVTO | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | account=TWTF2
+[2026-08-13 05:21:15] DEVTO | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | SUCCESS | https://dev.to/denverroadsideelitetowing/blown-head-gasket-can-i-drive-to-the-mechanic-or-do-i-need-a-tow-what-drivers-should-know-5m
+[2026-08-13 05:21:15] --- waiting 60s before next platform ---
+[2026-08-13 05:22:15] TUMBLR | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | START
+[2026-08-13 05:22:15] TUMBLR | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | SUCCESS | https://towwiththeflow.tumblr.com/post/824830995118309376
+[2026-08-13 05:22:15] --- waiting 60s before next platform ---
+[2026-08-13 05:23:15] BLOGGER | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | START
+[2026-08-13 05:23:15] BLOGGER | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | step 1/3: refreshing access token
+[2026-08-13 05:23:15] BLOGGER | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | step 2/3: converting markdown to HTML
+[2026-08-13 05:23:15] BLOGGER | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | step 3/3: posting to blog 1959471973457654666
+[2026-08-13 05:23:16] BLOGGER | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/blown-head-gasket-can-i-drive-to.html
+[2026-08-13 05:23:16] --- waiting 60s before next platform ---
+[2026-08-13 05:24:16] WORDPRESS | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | START
+[2026-08-13 05:24:26] WORDPRESS | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/13/blown-head-gasket-can-i-drive-to-mechanic-or-need-tow/
+[2026-08-13 05:24:26] --- waiting 60s before next platform ---
+[2026-08-13 05:25:26] FEEDER | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | START
+[2026-08-13 05:25:27] FEEDER | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/blown-head-gasket-can-i-drive-to-mechanic-or-need-tow-help/
+[2026-08-13 05:25:27] === SYNDICATE DONE: blown-head-gasket-can-i-drive-to-mechanic-or-need-tow | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-13 05:25:27] SYNCED | blown-head-gasket-can-i-drive-to-mechanic-or-need-tow marked in synced-posts.txt
+[2026-08-13 05:25:27] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
