@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-08-12T08:59:12.945982+00:00",
+  "generated_at": "2026-08-13T08:03:44.287063+00:00",
   "keywords": {
     "total": 802,
-    "live": 451,
-    "pending": 351,
+    "live": 455,
+    "pending": 347,
     "local": {
-      "live": 182,
-      "pending": 6
+      "live": 184,
+      "pending": 4
     },
     "pain_point": {
-      "live": 269,
-      "pending": 345
+      "live": 271,
+      "pending": 343
     }
   },
   "next_targets": [
-    {
-      "keyword": "fuel pump failed on highway signs and what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car making grinding noise when braking is it safe to drive",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "blown head gasket can i drive to mechanic or need tow",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "check engine light flashing car shaking pull over now",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "how much does emergency roadside assistance cost without membership",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "steering wheel locked up while driving what to do",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 208
+      "count": 210
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 60
+      "count": 62
     },
     {
       "slug": "insurance-coverage",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-12T05:56:39.110245+00:00",
+    "generated_at": "2026-08-13T05:57:03.318130+00:00",
     "platforms": {
       "blog": {
-        "checked": 425,
-        "verified": 30
+        "checked": 429,
+        "verified": 50
       },
       "dev": {
-        "checked": 355,
-        "verified": 355
+        "checked": 359,
+        "verified": 359
       },
       "feeder": {
-        "checked": 423,
-        "verified": 423
+        "checked": 427,
+        "verified": 427
       },
       "tumblr": {
-        "checked": 422,
-        "verified": 422
+        "checked": 426,
+        "verified": 426
       },
       "wordpress": {
-        "checked": 428,
-        "verified": 428
+        "checked": 432,
+        "verified": 432
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-12T08:02:55.107281+00:00",
+    "generated_at": "2026-08-13T08:03:44.208883+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 52,
+        "rows": 53,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 152,
+        "rows": 158,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,7 +207,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "29 Search Console impressions match this asset pattern.",
+        "reason": "27 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-12T08:59:12.965763+00:00",
+    "generatedAt": "2026-08-13T08:03:44.308597+00:00",
     "keywordGeneration": {
-      "currentInventory": 351,
-      "liveKeywords": 451,
-      "estimatedDaysRemaining": 87.8,
+      "currentInventory": 347,
+      "liveKeywords": 455,
+      "estimatedDaysRemaining": 86.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "87.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "86.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 404,
-      "backlogUnits": 482,
+      "backlogPosts": 394,
+      "backlogUnits": 466,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-12T05:56:39.110245+00:00",
+      "generatedAt": "2026-08-13T05:57:03.318130+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.5,
       "newPostsPerDay": 4.0,
