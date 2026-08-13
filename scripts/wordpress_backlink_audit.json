@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T14:02:24.326688+00:00",
+  "generated_at": "2026-08-13T17:23:06.167663+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/08/13/blown-head-gasket-can-i-drive-to-mechanic-or-need-tow/",
     "https://towwiththeflowyo.wordpress.com/2026/08/12/towing-cost-in-atlanta-georgia-average-price/",
@@ -530,6 +530,8 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/13/towing-cost-san-diego-california-no-insurance-2-6/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/13/electric-vehicle-ran-out-of-charge-on-highway-what-to-do/",
     "https://towwiththeflowyo.wordpress.com/2026/08/13/towing-cost-seattle-washington-flatbed/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
@@ -2169,6 +2171,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/19/electric-vehicle-ran-out-of-charge-on-highway-tow-or-charge/",
+        "verified": true
+      }
+    },
+    "electric-vehicle-ran-out-of-charge-on-highway-what-to-do": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/electric-vehicle-ran-out-of-charge-on-highway-what-to-do/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/13/electric-vehicle-ran-out-of-charge-on-highway-what-to-do/",
         "verified": true
       }
     },
@@ -4953,6 +4964,15 @@
         "verified": false
       }
     },
+    "towing-cost-san-diego-california-no-insurance-2-6": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/13/towing-cost-san-diego-california-no-insurance-2-6/",
+        "verified": false
+      }
+    },
     "towing-cost-seattle-mountain-pass-breakdown": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/towing-cost-seattle-mountain-pass-breakdown/",
@@ -5308,8 +5328,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 530,
-      "verified": 435
+      "checked": 532,
+      "verified": 436
     }
   }
 }
