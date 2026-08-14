@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-08-13T08:03:44.287063+00:00",
+  "generated_at": "2026-08-14T08:00:28.578394+00:00",
   "keywords": {
     "total": 802,
-    "live": 455,
-    "pending": 347,
+    "live": 459,
+    "pending": 343,
     "local": {
-      "live": 184,
-      "pending": 4
+      "live": 186,
+      "pending": 2
     },
     "pain_point": {
-      "live": 271,
-      "pending": 343
+      "live": 273,
+      "pending": 341
     }
   },
   "next_targets": [
-    {
-      "keyword": "blown head gasket can i drive to mechanic or need tow",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "electric vehicle ran out of charge on highway what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car stalled in intersection how to stay safe",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "steering wheel locked up while driving what to do",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "catalytic converter stolen car wont start need tow",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car axle broke while driving can it be towed",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 210
+      "count": 212
     },
     {
       "slug": "engine-mechanical",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 24
+      "count": 25
     },
     {
       "slug": "tire-wheel",
@@ -119,7 +119,7 @@
     {
       "slug": "vehicle-safety",
       "label": "Vehicle Safety",
-      "count": 3
+      "count": 4
     },
     {
       "slug": "vehicle-recovery",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-13T05:57:03.318130+00:00",
+    "generated_at": "2026-08-14T05:53:34.934476+00:00",
     "platforms": {
       "blog": {
-        "checked": 429,
-        "verified": 50
+        "checked": 433,
+        "verified": 41
       },
       "dev": {
-        "checked": 359,
-        "verified": 359
+        "checked": 363,
+        "verified": 363
       },
       "feeder": {
-        "checked": 427,
-        "verified": 427
+        "checked": 431,
+        "verified": 431
       },
       "tumblr": {
-        "checked": 426,
-        "verified": 426
+        "checked": 430,
+        "verified": 430
       },
       "wordpress": {
-        "checked": 432,
-        "verified": 432
+        "checked": 436,
+        "verified": 436
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-13T08:03:44.208883+00:00",
+    "generated_at": "2026-08-14T08:00:28.499894+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,7 +186,7 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 53,
+        "rows": 52,
         "source": "search_console",
         "status": "ok"
       },
@@ -207,31 +207,31 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "27 Search Console impressions match this asset pattern.",
+        "reason": "24 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 12,
-    "top_query_count": 37,
+    "top_query_count": 34,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-13T08:03:44.308597+00:00",
+    "generatedAt": "2026-08-14T08:00:28.600446+00:00",
     "keywordGeneration": {
-      "currentInventory": 347,
-      "liveKeywords": 455,
-      "estimatedDaysRemaining": 86.8,
+      "currentInventory": 343,
+      "liveKeywords": 459,
+      "estimatedDaysRemaining": 85.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "86.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "85.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 394,
-      "backlogUnits": 466,
+      "backlogPosts": 407,
+      "backlogUnits": 479,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-13T05:57:03.318130+00:00",
+      "generatedAt": "2026-08-14T05:53:34.934476+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.5,
       "newPostsPerDay": 4.0,
