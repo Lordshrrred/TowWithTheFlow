@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T13:51:43.980210+00:00",
+  "generated_at": "2026-08-14T17:21:15.007267+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2923,9 +2923,9 @@
     },
     "car-stuck-mud-towing-cost": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-stuck-in-mud-who-pays-towing-cost.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -5044,6 +5044,33 @@
         "verified": true
       }
     },
+    "how-much-does-it-cost-to-tow-a-car-in-nashville-tennessee": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/how-much-does-it-cost-to-tow-car-in_0633261085.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/how-much-does-it-cost-to-tow-a-car-in-nashville-tennessee-what-youll-pay-right-now-explained-160d",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-much-does-it-cost-to-tow-a-car-in-nashville-tennessee-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/824931037038706688/how-much-does-it-cost-to-tow-a-car-in-nashville-tennessee",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/14/how-much-does-it-cost-to-tow-a-car-in-nashville-tennessee/",
+        "verified": true
+      }
+    },
     "how-much-does-it-cost-to-tow-a-car-in-new-york-city": {
       "blog": {
         "reason": "ok",
@@ -5988,6 +6015,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/26/run-flat-tire-completely-flat-can-i-still-drive/",
+        "verified": true
+      }
+    },
+    "serpentine-belt-snapped-while-driving-can-i-tow-or-drive": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/serpentine-belt-snapped-while-driving.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/serpentine-belt-snapped-while-driving-can-i-tow-or-drive-what-to-do-next-107p",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/serpentine-belt-snapped-while-driving-can-i-tow-or-drive-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/824936241518755840/serpentine-belt-snapped-while-driving-can-i-tow-or-drive",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/14/serpentine-belt-snapped-while-driving-can-i-tow-or-drive/",
         "verified": true
       }
     },
@@ -9405,9 +9459,9 @@
     },
     "towing-cost-las-vegas-nevada-strip-area": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-las-vegas-nevada-strip.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -10718,8 +10772,7 @@
       },
       "wordpress": {
         "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/08/13/towing-cost-san-diego-california-no-insurance-2-6/",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/14/towing-cost-san-diego-california-no-insurance-2-7/",
         "verified": true
       }
     },
@@ -10752,9 +10805,9 @@
     },
     "towing-cost-seattle-washington": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-seattle-washington-what.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -11441,24 +11494,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 437,
-      "verified": 434
+      "checked": 439,
+      "verified": 439
     },
     "dev": {
-      "checked": 364,
-      "verified": 364
+      "checked": 366,
+      "verified": 366
     },
     "feeder": {
-      "checked": 432,
-      "verified": 432
+      "checked": 434,
+      "verified": 434
     },
     "tumblr": {
-      "checked": 431,
-      "verified": 431
+      "checked": 433,
+      "verified": 433
     },
     "wordpress": {
-      "checked": 437,
-      "verified": 437
+      "checked": 439,
+      "verified": 439
     }
   }
 }
