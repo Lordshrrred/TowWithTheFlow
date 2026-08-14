@@ -16024,3 +16024,33 @@
 [2026-08-14 09:24:10] WORDPRESS_BACKLOG | total=440 wordpress_synced=439 backlog=1
 [2026-08-14 09:24:10] WORDPRESS_BACKLOG | towing-cost-san-diego-california-no-insurance-2 | START
 [2026-08-14 09:24:18] WORDPRESS | towing-cost-san-diego-california-no-insurance-2 | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/14/towing-cost-san-diego-california-no-insurance-2-7/
+[2026-08-14 11:24:17] === SYNDICATE START: tow-truck-cost-portland-oregon-per-mile ===
+[2026-08-14 11:24:17] PREFLIGHT | title: Tow Truck Cost in Portland Oregon Per Mile: What You'll Pay Right Now
+[2026-08-14 11:24:17] PREFLIGHT | date: 2026-08-14
+[2026-08-14 11:24:17] PREFLIGHT | timestamp: 2026-08-14 11:24:17
+[2026-08-14 11:24:17] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-08-14 11:24:17] PREFLIGHT | TUMBLR:  configured
+[2026-08-14 11:24:17] PREFLIGHT | BLOGGER: configured
+[2026-08-14 11:24:17] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-14 11:24:17] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-14 11:24:17] DEVTO | tow-truck-cost-portland-oregon-per-mile | START
+[2026-08-14 11:24:17] DEVTO | tow-truck-cost-portland-oregon-per-mile | account=TWTF1
+[2026-08-14 11:24:18] DEVTO | tow-truck-cost-portland-oregon-per-mile | SUCCESS | https://dev.to/roadsideamericatowing/tow-truck-cost-in-portland-oregon-per-mile-what-youll-pay-right-now-explained-4eg5
+[2026-08-14 11:24:18] --- waiting 60s before next platform ---
+[2026-08-14 11:25:18] TUMBLR | tow-truck-cost-portland-oregon-per-mile | START
+[2026-08-14 11:25:19] TUMBLR | tow-truck-cost-portland-oregon-per-mile | SUCCESS | https://towwiththeflow.tumblr.com/post/824944433043750912
+[2026-08-14 11:25:19] --- waiting 60s before next platform ---
+[2026-08-14 11:26:19] BLOGGER | tow-truck-cost-portland-oregon-per-mile | START
+[2026-08-14 11:26:19] BLOGGER | tow-truck-cost-portland-oregon-per-mile | step 1/3: refreshing access token
+[2026-08-14 11:26:19] BLOGGER | tow-truck-cost-portland-oregon-per-mile | step 2/3: converting markdown to HTML
+[2026-08-14 11:26:19] BLOGGER | tow-truck-cost-portland-oregon-per-mile | step 3/3: posting to blog 1959471973457654666
+[2026-08-14 11:26:19] BLOGGER | tow-truck-cost-portland-oregon-per-mile | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/tow-truck-cost-in-portland-oregon-per.html
+[2026-08-14 11:26:19] --- waiting 60s before next platform ---
+[2026-08-14 11:27:19] WORDPRESS | tow-truck-cost-portland-oregon-per-mile | START
+[2026-08-14 11:27:27] WORDPRESS | tow-truck-cost-portland-oregon-per-mile | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/14/tow-truck-cost-portland-oregon-per-mile/
+[2026-08-14 11:27:27] --- waiting 60s before next platform ---
+[2026-08-14 11:28:27] FEEDER | tow-truck-cost-portland-oregon-per-mile | START
+[2026-08-14 11:28:28] FEEDER | tow-truck-cost-portland-oregon-per-mile | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-portland-oregon-per-mile-tips/
+[2026-08-14 11:28:28] === SYNDICATE DONE: tow-truck-cost-portland-oregon-per-mile | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-14 11:28:28] SYNCED | tow-truck-cost-portland-oregon-per-mile marked in synced-posts.txt
+[2026-08-14 11:28:28] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
