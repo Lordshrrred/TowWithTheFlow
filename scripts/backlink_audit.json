@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T17:21:15.007267+00:00",
+  "generated_at": "2026-08-14T20:55:32.534253+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -7073,6 +7073,33 @@
         "verified": true
       }
     },
+    "tow-truck-cost-portland-oregon-per-mile": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/tow-truck-cost-in-portland-oregon-per.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/tow-truck-cost-in-portland-oregon-per-mile-what-youll-pay-right-now-explained-4eg5",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tow-truck-cost-portland-oregon-per-mile-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/824944433043750912/tow-truck-cost-portland-oregon-per-mile",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/14/tow-truck-cost-portland-oregon-per-mile/",
+        "verified": true
+      }
+    },
     "tow-truck-damaged-my-car-who-pays": {
       "blog": {
         "reason": "ok",
@@ -11494,24 +11521,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 439,
-      "verified": 439
+      "checked": 440,
+      "verified": 440
     },
     "dev": {
-      "checked": 366,
-      "verified": 366
+      "checked": 367,
+      "verified": 367
     },
     "feeder": {
+      "checked": 435,
+      "verified": 435
+    },
+    "tumblr": {
       "checked": 434,
       "verified": 434
     },
-    "tumblr": {
-      "checked": 433,
-      "verified": 433
-    },
     "wordpress": {
-      "checked": 439,
-      "verified": 439
+      "checked": 440,
+      "verified": 440
     }
   }
 }
