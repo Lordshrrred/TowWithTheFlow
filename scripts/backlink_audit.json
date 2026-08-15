@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T08:55:01.213076+00:00",
+  "generated_at": "2026-08-15T13:05:21.229623+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -749,6 +749,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/28/car-ac-compressor-seized-engine-stopped-moving-tow-needed/",
+        "verified": true
+      }
+    },
+    "car-accident-on-highway-do-police-call-tow-truck-or-can-i-choose": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-accident-on-highway-do-police-call.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-accident-on-highway-do-police-call-the-tow-truck-or-can-you-choose-roadside-tips-3klh",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-accident-on-highway-do-police-call-tow-truck-or-can-i-choose-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825010126458175488/car-accident-on-highway-do-police-call-tow-truck-or-can-i-choose",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/15/car-accident-on-highway-do-police-call-tow-truck-or-can-i-choose/",
         "verified": true
       }
     },
@@ -1575,9 +1602,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://www.tumblr.com/towwiththeflow/819868438446178304/car-died-on-highway-shoulder-safe-to-wait-for-tow",
-        "verified": true
+        "verified": false
       },
       "wordpress": {
         "reason": "ok",
@@ -9425,9 +9452,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://www.tumblr.com/towwiththeflow/817331463000375296/towing-cost-jacksonville-florida",
-        "verified": true
+        "verified": false
       },
       "wordpress": {
         "reason": "ok",
@@ -9825,9 +9852,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://www.tumblr.com/towwiththeflow/821851275653251072/towing-cost-miami-florida-after-accident",
-        "verified": true
+        "verified": false
       },
       "wordpress": {
         "reason": "ok",
@@ -11521,24 +11548,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 440,
-      "verified": 440
+      "checked": 441,
+      "verified": 441
     },
     "dev": {
-      "checked": 367,
-      "verified": 367
+      "checked": 368,
+      "verified": 368
     },
     "feeder": {
-      "checked": 435,
-      "verified": 435
+      "checked": 436,
+      "verified": 436
     },
     "tumblr": {
-      "checked": 434,
-      "verified": 434
+      "checked": 435,
+      "verified": 432
     },
     "wordpress": {
-      "checked": 440,
-      "verified": 440
+      "checked": 441,
+      "verified": 441
     }
   }
 }
