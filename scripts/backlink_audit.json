@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T13:05:21.229623+00:00",
+  "generated_at": "2026-08-15T16:51:22.449076+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1602,9 +1602,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/819868438446178304/car-died-on-highway-shoulder-safe-to-wait-for-tow",
-        "verified": false
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -3881,6 +3881,33 @@
         "verified": true
       }
     },
+    "dead-battery-extreme-cold-weather-tow-or-jump-start": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/dead-battery-in-extreme-cold-weather.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/dead-battery-in-extreme-cold-weather-tow-or-jump-start-what-to-do-next-2no3",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/dead-battery-extreme-cold-weather-tow-or-jump-start-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825025117955538945/dead-battery-extreme-cold-weather-tow-or-jump-start",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/15/dead-battery-extreme-cold-weather-tow-or-jump-start/",
+        "verified": true
+      }
+    },
     "does-aaa-cover-towing-after-accident-or-only-breakdowns": {
       "blog": {
         "reason": "ok",
@@ -4879,6 +4906,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/02/how-much-does-a-tow-truck-cost-with-no-insurance/",
+        "verified": true
+      }
+    },
+    "how-much-does-a-tow-truck-cost-without-insurance": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/how-much-does-tow-truck-cost-without.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/how-much-does-a-tow-truck-cost-without-insurance-what-youll-pay-right-now-what-to-do-next-48bh",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-much-does-a-tow-truck-cost-without-insurance-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825018853941772288/how-much-does-a-tow-truck-cost-without-insurance",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/15/how-much-does-a-tow-truck-cost-without-insurance/",
         "verified": true
       }
     },
@@ -9452,9 +9506,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/817331463000375296/towing-cost-jacksonville-florida",
-        "verified": false
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -9852,9 +9906,9 @@
         "verified": true
       },
       "tumblr": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://www.tumblr.com/towwiththeflow/821851275653251072/towing-cost-miami-florida-after-accident",
-        "verified": false
+        "verified": true
       },
       "wordpress": {
         "reason": "ok",
@@ -11548,24 +11602,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 441,
-      "verified": 441
+      "checked": 443,
+      "verified": 443
     },
     "dev": {
-      "checked": 368,
-      "verified": 368
+      "checked": 370,
+      "verified": 370
     },
     "feeder": {
-      "checked": 436,
-      "verified": 436
+      "checked": 438,
+      "verified": 438
     },
     "tumblr": {
-      "checked": 435,
-      "verified": 432
+      "checked": 437,
+      "verified": 437
     },
     "wordpress": {
-      "checked": 441,
-      "verified": 441
+      "checked": 443,
+      "verified": 443
     }
   }
 }
