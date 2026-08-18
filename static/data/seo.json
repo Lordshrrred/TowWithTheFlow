@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-17T08:30:25.135319+00:00",
+  "generated_at": "2026-08-18T07:23:13.174009+00:00",
   "keywords": {
     "total": 802,
-    "live": 471,
-    "pending": 331,
+    "live": 475,
+    "pending": 327,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 283,
-      "pending": 331
+      "live": 287,
+      "pending": 327
     }
   },
   "next_targets": [
-    {
-      "keyword": "car flooded with water after heavy rain tow or dry out",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "emergency triangle vs flares which is safer on highway",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how much does roadside assistance cost without aaa",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down in tunnel what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "does state farm roadside assistance cover towing",
       "score": 8,
@@ -63,13 +43,33 @@
       "keyword": "car shaking violently at highway speed safe to drive",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down in parking garage how to get towed out",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont shift out of park what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down in tunnel who to call",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "flat tire no spare no roadside assistance options",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 215
+      "count": 216
     },
     {
       "slug": "engine-mechanical",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 25
+      "count": 26
     },
     {
       "slug": "tire-wheel",
@@ -99,7 +99,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 9
+      "count": 11
     },
     {
       "slug": "towing-logistics",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-17T05:07:58.736453+00:00",
+    "generated_at": "2026-08-18T04:58:48.506747+00:00",
     "platforms": {
       "blog": {
-        "checked": 445,
-        "verified": 301
+        "checked": 452,
+        "verified": 446
       },
       "dev": {
-        "checked": 375,
-        "verified": 375
+        "checked": 379,
+        "verified": 379
       },
       "feeder": {
-        "checked": 443,
-        "verified": 443
+        "checked": 447,
+        "verified": 447
       },
       "tumblr": {
-        "checked": 442,
-        "verified": 442
+        "checked": 446,
+        "verified": 446
       },
       "wordpress": {
-        "checked": 448,
-        "verified": 448
+        "checked": 452,
+        "verified": 452
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-17T07:37:36.983567+00:00",
+    "generated_at": "2026-08-18T07:23:13.084369+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 53,
+        "rows": 52,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 174,
+        "rows": 182,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,31 +207,31 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "15 Search Console impressions match this asset pattern.",
+        "reason": "14 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 11,
-    "top_query_count": 26,
+    "top_landing_page_count": 10,
+    "top_query_count": 24,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-17T08:30:25.150591+00:00",
+    "generatedAt": "2026-08-18T07:23:13.195424+00:00",
     "keywordGeneration": {
-      "currentInventory": 331,
-      "liveKeywords": 471,
-      "estimatedDaysRemaining": 82.8,
+      "currentInventory": 327,
+      "liveKeywords": 475,
+      "estimatedDaysRemaining": 81.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "82.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "81.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 208,
-      "backlogUnits": 231,
+      "backlogPosts": 76,
+      "backlogUnits": 90,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-17T05:07:58.736453+00:00",
+      "generatedAt": "2026-08-18T04:58:48.506747+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
