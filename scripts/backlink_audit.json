@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T09:01:11.216672+00:00",
+  "generated_at": "2026-08-19T13:21:19.823060+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -551,9 +551,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/roadsideamericatowing/brake-failure-while-driving-emergency-steps-to-take-right-now-explained-1ieo",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -1782,9 +1782,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/denverroadsideelitetowing/car-doors-wont-unlock-battery-dead-stranded-inside-what-to-do-right-now-what-drivers-should-know-1hml",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -3308,6 +3308,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/25/car-wont-start-after-getting-gas-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-wont-start-after-overheating-do-i-need-tow": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-wont-start-after-overheating-do-i.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-wont-start-after-overheating-do-i-need-a-tow-quick-guide-ikp",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-after-overheating-do-i-need-tow-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825372917544222720/car-wont-start-after-overheating-do-i-need-tow",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/19/car-wont-start-after-overheating-do-i-need-tow/",
         "verified": true
       }
     },
@@ -5645,9 +5672,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/insurance-covers-towing-but-not-after-midnight-what-you-need-to-know-what-to-do-next-44lh",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -6938,9 +6965,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/towwiththeflowyoo/tow-truck-cost-aaa-vs-non-aaa-in-chicago-at-night-what-drivers-should-know-44jd",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -11953,24 +11980,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 456,
-      "verified": 456
+      "checked": 457,
+      "verified": 457
     },
     "dev": {
-      "checked": 383,
-      "verified": 383
+      "checked": 380,
+      "verified": 380
     },
     "feeder": {
+      "checked": 452,
+      "verified": 452
+    },
+    "tumblr": {
       "checked": 451,
       "verified": 451
     },
-    "tumblr": {
-      "checked": 450,
-      "verified": 450
-    },
     "wordpress": {
-      "checked": 456,
-      "verified": 456
+      "checked": 457,
+      "verified": 457
     }
   }
 }
