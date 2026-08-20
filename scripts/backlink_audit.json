@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T16:59:23.928424+00:00",
+  "generated_at": "2026-08-20T20:57:11.313013+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1826,6 +1826,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+        "verified": true
+      }
+    },
+    "car-door-wont-open-from-inside-broken-down-roadside": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-door-wont-open-from-inside-when.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-door-wont-open-from-inside-when-broken-down-roadside-what-to-do-right-now-roadside-tips-fh7",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-door-wont-open-from-inside-broken-down-roadside-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825486442757242880/car-door-wont-open-from-inside-broken-down-roadside",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/20/car-door-wont-open-from-inside-broken-down-roadside/",
         "verified": true
       }
     },
@@ -12142,24 +12169,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 463,
-      "verified": 463
+      "checked": 464,
+      "verified": 464
     },
     "dev": {
-      "checked": 390,
-      "verified": 390
+      "checked": 391,
+      "verified": 391
     },
     "feeder": {
+      "checked": 459,
+      "verified": 459
+    },
+    "tumblr": {
       "checked": 458,
       "verified": 458
     },
-    "tumblr": {
-      "checked": 457,
-      "verified": 457
-    },
     "wordpress": {
-      "checked": 463,
-      "verified": 463
+      "checked": 464,
+      "verified": 464
     }
   }
 }
