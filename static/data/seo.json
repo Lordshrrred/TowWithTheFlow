@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-19T08:22:42.164438+00:00",
+  "generated_at": "2026-08-20T07:26:05.843501+00:00",
   "keywords": {
     "total": 802,
-    "live": 479,
-    "pending": 323,
+    "live": 483,
+    "pending": 319,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 291,
-      "pending": 323
+      "live": 295,
+      "pending": 319
     }
   },
   "next_targets": [
-    {
-      "keyword": "car wont start after overheating do i need a tow",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car shaking violently at highway speed safe to drive",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down in parking garage how to get towed out",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont shift out of park what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car broke down in tunnel who to call",
       "score": 8,
@@ -63,6 +43,26 @@
       "keyword": "tow truck cost after accident not my fault who pays",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car battery dead in parking garage towing cost",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car overheating towing cost vs driving to mechanic risk",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "blowout on highway at 70 mph what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "transmission failed on highway tow or drive to shop",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 67
+      "count": 69
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 39
+      "count": 40
     },
     {
       "slug": "highway-safety",
@@ -99,7 +99,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 11
+      "count": 12
     },
     {
       "slug": "towing-logistics",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-19T04:59:07.036200+00:00",
+    "generated_at": "2026-08-20T04:57:53.779444+00:00",
     "platforms": {
       "blog": {
-        "checked": 456,
-        "verified": 456
+        "checked": 460,
+        "verified": 460
       },
       "dev": {
-        "checked": 383,
-        "verified": 383
+        "checked": 387,
+        "verified": 387
       },
       "feeder": {
-        "checked": 451,
-        "verified": 451
+        "checked": 455,
+        "verified": 455
       },
       "tumblr": {
-        "checked": 450,
-        "verified": 450
+        "checked": 454,
+        "verified": 454
       },
       "wordpress": {
-        "checked": 456,
-        "verified": 456
+        "checked": 460,
+        "verified": 460
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-19T07:23:54.116186+00:00",
+    "generated_at": "2026-08-20T07:26:05.510692+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 56,
+        "rows": 55,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 188,
+        "rows": 192,
         "source": "ga4",
         "status": "ok"
       }
@@ -211,27 +211,27 @@
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 9,
-    "top_query_count": 26,
+    "top_landing_page_count": 8,
+    "top_query_count": 25,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-19T08:22:42.185423+00:00",
+    "generatedAt": "2026-08-20T07:26:05.854859+00:00",
     "keywordGeneration": {
-      "currentInventory": 323,
-      "liveKeywords": 479,
-      "estimatedDaysRemaining": 80.8,
+      "currentInventory": 319,
+      "liveKeywords": 483,
+      "estimatedDaysRemaining": 79.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "80.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "79.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 76,
       "backlogUnits": 84,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-19T04:59:07.036200+00:00",
+      "generatedAt": "2026-08-20T04:57:53.779444+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
