@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T13:20:46.528344+00:00",
+  "generated_at": "2026-08-20T16:59:23.928424+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -460,6 +460,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/06/battery-warning-light-came-on-while-driving-how-long-do-i-have/",
+        "verified": true
+      }
+    },
+    "battery-warning-light-on-while-driving-what-does-it-mean": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/battery-warning-light-on-while-driving.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/battery-warning-light-on-while-driving-what-does-it-mean-what-drivers-should-know-1c0d",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/battery-warning-light-on-while-driving-what-does-it-mean-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825479147283447808/battery-warning-light-on-while-driving-what-does-it-mean",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/20/battery-warning-light-on-while-driving-what-does-it-mean/",
         "verified": true
       }
     },
@@ -1592,9 +1619,9 @@
     },
     "car-broke-down-toll-road-towing-cost-responsibility": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-broke-down-on-toll-road-who-pays.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -3242,9 +3269,9 @@
     },
     "car-stuck-snow-tow-truck-cost-atlanta": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-stuck-in-snow-tow-truck-cost-in.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -4749,6 +4776,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/05/17/farmers-insurance-towing-reimbursement-after-breakdown/",
+        "verified": true
+      }
+    },
+    "flat-tire-no-spare-no-roadside-assistance-options": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/flat-tire-no-spare-no-roadside.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/flat-tire-no-spare-no-roadside-assistance-your-options-right-now-roadside-tips-4601",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/flat-tire-no-spare-no-roadside-assistance-options-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825473031442939904/flat-tire-no-spare-no-roadside-assistance-options",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/20/flat-tire-no-spare-no-roadside-assistance-options/",
         "verified": true
       }
     },
@@ -7144,9 +7198,9 @@
     },
     "tow-truck-cost-accident-scene-police-report-required": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-at-accident-scene-police.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -7686,9 +7740,9 @@
     },
     "tow-truck-damaged-my-car-who-pays-chicago": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-damaged-my-car-who-pays-in.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -12088,24 +12142,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 461,
-      "verified": 457
+      "checked": 463,
+      "verified": 463
     },
     "dev": {
-      "checked": 388,
-      "verified": 388
+      "checked": 390,
+      "verified": 390
     },
     "feeder": {
-      "checked": 456,
-      "verified": 456
+      "checked": 458,
+      "verified": 458
     },
     "tumblr": {
-      "checked": 455,
-      "verified": 455
+      "checked": 457,
+      "verified": 457
     },
     "wordpress": {
-      "checked": 461,
-      "verified": 461
+      "checked": 463,
+      "verified": 463
     }
   }
 }
