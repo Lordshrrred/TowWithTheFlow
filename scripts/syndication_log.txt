@@ -16746,3 +16746,33 @@
 [2026-08-20 09:07:25] === SYNDICATE DONE: battery-warning-light-on-while-driving-what-does-it-mean | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-08-20 09:07:25] SYNCED | battery-warning-light-on-while-driving-what-does-it-mean marked in synced-posts.txt
 [2026-08-20 09:07:25] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-08-20 10:59:18] === SYNDICATE START: car-door-wont-open-from-inside-broken-down-roadside ===
+[2026-08-20 10:59:18] PREFLIGHT | title: Car Door Won't Open From Inside When Broken Down Roadside: What to Do Right Now
+[2026-08-20 10:59:18] PREFLIGHT | date: 2026-08-20
+[2026-08-20 10:59:18] PREFLIGHT | timestamp: 2026-08-20 10:59:18
+[2026-08-20 10:59:18] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-08-20 10:59:18] PREFLIGHT | TUMBLR:  configured
+[2026-08-20 10:59:18] PREFLIGHT | BLOGGER: configured
+[2026-08-20 10:59:18] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-20 10:59:18] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-20 10:59:18] DEVTO | car-door-wont-open-from-inside-broken-down-roadside | START
+[2026-08-20 10:59:18] DEVTO | car-door-wont-open-from-inside-broken-down-roadside | account=TWTF1
+[2026-08-20 10:59:18] DEVTO | car-door-wont-open-from-inside-broken-down-roadside | SUCCESS | https://dev.to/roadsideamericatowing/car-door-wont-open-from-inside-when-broken-down-roadside-what-to-do-right-now-roadside-tips-fh7
+[2026-08-20 10:59:18] --- waiting 60s before next platform ---
+[2026-08-20 11:00:18] TUMBLR | car-door-wont-open-from-inside-broken-down-roadside | START
+[2026-08-20 11:00:19] TUMBLR | car-door-wont-open-from-inside-broken-down-roadside | SUCCESS | https://towwiththeflow.tumblr.com/post/825486442757242880
+[2026-08-20 11:00:19] --- waiting 60s before next platform ---
+[2026-08-20 11:01:19] BLOGGER | car-door-wont-open-from-inside-broken-down-roadside | START
+[2026-08-20 11:01:19] BLOGGER | car-door-wont-open-from-inside-broken-down-roadside | step 1/3: refreshing access token
+[2026-08-20 11:01:19] BLOGGER | car-door-wont-open-from-inside-broken-down-roadside | step 2/3: converting markdown to HTML
+[2026-08-20 11:01:19] BLOGGER | car-door-wont-open-from-inside-broken-down-roadside | step 3/3: posting to blog 1959471973457654666
+[2026-08-20 11:01:20] BLOGGER | car-door-wont-open-from-inside-broken-down-roadside | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-door-wont-open-from-inside-when.html
+[2026-08-20 11:01:20] --- waiting 60s before next platform ---
+[2026-08-20 11:02:20] WORDPRESS | car-door-wont-open-from-inside-broken-down-roadside | START
+[2026-08-20 11:02:32] WORDPRESS | car-door-wont-open-from-inside-broken-down-roadside | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/20/car-door-wont-open-from-inside-broken-down-roadside/
+[2026-08-20 11:02:32] --- waiting 60s before next platform ---
+[2026-08-20 11:03:32] FEEDER | car-door-wont-open-from-inside-broken-down-roadside | START
+[2026-08-20 11:03:33] FEEDER | car-door-wont-open-from-inside-broken-down-roadside | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-door-wont-open-from-inside-broken-down-roadside-advice/
+[2026-08-20 11:03:33] === SYNDICATE DONE: car-door-wont-open-from-inside-broken-down-roadside | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-20 11:03:33] SYNCED | car-door-wont-open-from-inside-broken-down-roadside marked in synced-posts.txt
+[2026-08-20 11:03:33] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
