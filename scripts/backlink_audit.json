@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T09:05:53.777598+00:00",
+  "generated_at": "2026-08-20T13:20:46.528344+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1266,6 +1266,33 @@
         "verified": true
       }
     },
+    "car-broke-down-in-tunnel-who-to-call": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-broke-down-in-tunnel-who-to-call.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-broke-down-in-a-tunnel-who-to-call-right-now-explained-12e1",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-in-tunnel-who-to-call-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825463653264441344/car-broke-down-in-tunnel-who-to-call",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/20/car-broke-down-in-tunnel-who-to-call/",
+        "verified": true
+      }
+    },
     "car-broke-down-on-bridge-what-to-do": {
       "blog": {
         "reason": "ok",
@@ -1565,9 +1592,9 @@
     },
     "car-broke-down-toll-road-towing-cost-responsibility": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-broke-down-on-toll-road-who-pays.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -3215,9 +3242,9 @@
     },
     "car-stuck-snow-tow-truck-cost-atlanta": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-stuck-in-snow-tow-truck-cost-in.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -7117,9 +7144,9 @@
     },
     "tow-truck-cost-accident-scene-police-report-required": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-cost-at-accident-scene-police.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -7659,9 +7686,9 @@
     },
     "tow-truck-damaged-my-car-who-pays-chicago": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/tow-truck-damaged-my-car-who-pays-in.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -12061,24 +12088,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 460,
-      "verified": 460
+      "checked": 461,
+      "verified": 457
     },
     "dev": {
-      "checked": 387,
-      "verified": 387
+      "checked": 388,
+      "verified": 388
     },
     "feeder": {
+      "checked": 456,
+      "verified": 456
+    },
+    "tumblr": {
       "checked": 455,
       "verified": 455
     },
-    "tumblr": {
-      "checked": 454,
-      "verified": 454
-    },
     "wordpress": {
-      "checked": 460,
-      "verified": 460
+      "checked": 461,
+      "verified": 461
     }
   }
 }
