@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T13:34:03.564072+00:00",
+  "generated_at": "2026-08-21T17:06:02.571263+00:00",
   "scanned_urls": [
     "https://towwiththeflowyo.wordpress.com/2026/08/21/car-broke-down-on-road-trip-in-unfamiliar-city-what-to-do/",
     "https://towwiththeflowyo.wordpress.com/2026/08/20/car-door-wont-open-from-inside-broken-down-roadside/",
@@ -564,6 +564,8 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/21/car-overheating-towing-cost-vs-driving-to-mechanic-risk/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/21/car-battery-dead-in-parking-garage-towing-cost/",
     "https://towwiththeflowyo.wordpress.com/2026/08/21/tow-truck-cost-after-accident-not-my-fault-who-pays/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
@@ -916,6 +918,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/16/car-axle-broke-while-driving-can-it-be-towed/",
+        "verified": true
+      }
+    },
+    "car-battery-dead-in-parking-garage-towing-cost": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-battery-dead-in-parking-garage-towing-cost/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/21/car-battery-dead-in-parking-garage-towing-cost/",
         "verified": true
       }
     },
@@ -1609,6 +1620,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/22/car-overheating-red-light-dashboard-what-to-do/",
+        "verified": true
+      }
+    },
+    "car-overheating-towing-cost-vs-driving-to-mechanic-risk": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-overheating-towing-cost-vs-driving-to-mechanic-risk/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/21/car-overheating-towing-cost-vs-driving-to-mechanic-risk/",
         "verified": true
       }
     },
@@ -5648,8 +5668,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 564,
-      "verified": 467
+      "checked": 566,
+      "verified": 469
     }
   }
 }
