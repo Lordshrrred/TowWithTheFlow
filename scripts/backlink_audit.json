@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T08:55:34.787106+00:00",
+  "generated_at": "2026-08-22T13:15:18.934833+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -568,6 +568,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/02/blown-tire-highway-too-dangerous-to-drive/",
+        "verified": true
+      }
+    },
+    "blowout-on-highway-at-70-mph-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/blowout-on-highway-at-70-mph-what-to-do.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/blowout-on-highway-at-70-mph-what-to-do-right-now-roadside-tips-f7a",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/blowout-on-highway-at-70-mph-what-to-do-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825644363713544192/blowout-on-highway-at-70-mph-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/22/blowout-on-highway-at-70-mph-what-to-do/",
         "verified": true
       }
     },
@@ -6781,9 +6808,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "ok",
+        "reason": "error:ReadTimeout",
         "url": "https://dev.to/roadsideamericatowing/smoke-coming-from-under-car-not-hood-what-it-means-explained-1fdc",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -12277,24 +12304,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 468,
-      "verified": 468
+      "checked": 469,
+      "verified": 469
     },
     "dev": {
       "checked": 395,
       "verified": 395
     },
     "feeder": {
+      "checked": 464,
+      "verified": 464
+    },
+    "tumblr": {
       "checked": 463,
       "verified": 463
     },
-    "tumblr": {
-      "checked": 462,
-      "verified": 462
-    },
     "wordpress": {
-      "checked": 468,
-      "verified": 468
+      "checked": 469,
+      "verified": 469
     }
   }
 }

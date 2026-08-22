@@ -1,6 +1,10 @@
 {
-  "generated_at": "2026-08-22T08:55:44.209298+00:00",
+  "generated_at": "2026-08-22T13:15:28.922175+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/08/22/blowout-on-highway-at-70-mph-what-to-do/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/21/car-overheating-towing-cost-vs-driving-to-mechanic-risk/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/21/car-battery-dead-in-parking-garage-towing-cost/",
+    "https://towwiththeflowyo.wordpress.com/2026/08/21/tow-truck-cost-after-accident-not-my-fault-who-pays/",
     "https://towwiththeflowyo.wordpress.com/2026/08/21/car-broke-down-on-road-trip-in-unfamiliar-city-what-to-do/",
     "https://towwiththeflowyo.wordpress.com/2026/08/20/car-door-wont-open-from-inside-broken-down-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/08/20/battery-warning-light-on-while-driving-what-does-it-mean/",
@@ -564,9 +568,7 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
-    "https://towwiththeflowyo.wordpress.com/2026/08/21/car-overheating-towing-cost-vs-driving-to-mechanic-risk/",
-    "https://towwiththeflowyo.wordpress.com/2026/08/21/car-battery-dead-in-parking-garage-towing-cost/",
-    "https://towwiththeflowyo.wordpress.com/2026/08/21/tow-truck-cost-after-accident-not-my-fault-who-pays/"
+    "https://towwiththeflowyo.wordpress.com/2026/08/22/transmission-failed-on-highway-tow-or-drive-to-shop/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -783,6 +785,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/02/blown-tire-highway-too-dangerous-to-drive/",
+        "verified": true
+      }
+    },
+    "blowout-on-highway-at-70-mph-what-to-do": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/blowout-on-highway-at-70-mph-what-to-do/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/22/blowout-on-highway-at-70-mph-what-to-do/",
         "verified": true
       }
     },
@@ -5421,6 +5432,15 @@
         "verified": true
       }
     },
+    "transmission-failed-on-highway-tow-or-drive-to-shop": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/transmission-failed-on-highway-tow-or-drive-to-shop/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/22/transmission-failed-on-highway-tow-or-drive-to-shop/",
+        "verified": true
+      }
+    },
     "transmission-fluid-leaking-can-i-drive-to-mechanic": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/transmission-fluid-leaking-can-i-drive-to-mechanic/",
@@ -5668,8 +5688,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 566,
-      "verified": 469
+      "checked": 568,
+      "verified": 471
     }
   }
 }
