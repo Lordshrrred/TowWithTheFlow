@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T02:00:34.523592+00:00",
+  "generated_at": "2026-08-22T04:57:41.730148+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -388,9 +388,9 @@
     },
     "battery-dead-but-lights-turn-on": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/battery-dead-but-lights-turn-on-whats.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -1857,9 +1857,9 @@
     },
     "car-died-while-driving-what-now": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-died-while-driving-what-now.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -2465,9 +2465,9 @@
     },
     "car-overheated-can-i-drive-it": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-overheated-can-i-drive-it-roadside.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -2771,6 +2771,7 @@
     "car-shakes-while-driving-slow-speeds": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-shakes-while-driving-at-slow-speeds.html",
         "verified": true
       },
@@ -3772,9 +3773,9 @@
     },
     "car-wont-start-clicking-noise-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-wont-start-clicking-noise-what-to.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -4764,9 +4765,9 @@
     },
     "engine-stalls-at-stop-sign-causes": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/engine-stalls-at-stop-signs-causes-and.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -12145,9 +12146,9 @@
     },
     "what-to-do-if-your-car-breaks-down-at-night": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/what-to-do-if-your-car-breaks-down-at.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "no_url",
@@ -12278,7 +12279,7 @@
   "summary": {
     "blog": {
       "checked": 468,
-      "verified": 468
+      "verified": 462
     },
     "dev": {
       "checked": 395,
