@@ -16957,3 +16957,33 @@
 [2026-08-22 07:12:56] === SYNDICATE DONE: transmission-failed-on-highway-tow-or-drive-to-shop | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-08-22 07:12:56] SYNCED | transmission-failed-on-highway-tow-or-drive-to-shop marked in synced-posts.txt
 [2026-08-22 07:12:56] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-08-22 08:46:14] === SYNDICATE START: tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost ===
+[2026-08-22 08:46:14] PREFLIGHT | title: Tire Blew Out and Spare Isn't Safe: What Towing Will Cost You
+[2026-08-22 08:46:14] PREFLIGHT | date: 2026-08-22
+[2026-08-22 08:46:14] PREFLIGHT | timestamp: 2026-08-22 08:46:14
+[2026-08-22 08:46:14] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-08-22 08:46:14] PREFLIGHT | TUMBLR:  configured
+[2026-08-22 08:46:14] PREFLIGHT | BLOGGER: configured
+[2026-08-22 08:46:14] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-22 08:46:14] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-22 08:46:14] DEVTO | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | START
+[2026-08-22 08:46:14] DEVTO | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | account=TWTF1
+[2026-08-22 08:46:15] DEVTO | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | SUCCESS | https://dev.to/roadsideamericatowing/tire-blew-out-and-spare-isnt-safe-what-towing-will-cost-you-explained-1m7e
+[2026-08-22 08:46:15] --- waiting 60s before next platform ---
+[2026-08-22 08:47:15] TUMBLR | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | START
+[2026-08-22 08:47:15] TUMBLR | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | SUCCESS | https://towwiththeflow.tumblr.com/post/825659265332199424
+[2026-08-22 08:47:15] --- waiting 60s before next platform ---
+[2026-08-22 08:48:15] BLOGGER | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | START
+[2026-08-22 08:48:15] BLOGGER | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | step 1/3: refreshing access token
+[2026-08-22 08:48:15] BLOGGER | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | step 2/3: converting markdown to HTML
+[2026-08-22 08:48:15] BLOGGER | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | step 3/3: posting to blog 1959471973457654666
+[2026-08-22 08:48:16] BLOGGER | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/tire-blew-out-and-spare-isnt-safe-what.html
+[2026-08-22 08:48:16] --- waiting 60s before next platform ---
+[2026-08-22 08:49:16] WORDPRESS | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | START
+[2026-08-22 08:49:24] WORDPRESS | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/22/tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost/
+[2026-08-22 08:49:24] --- waiting 60s before next platform ---
+[2026-08-22 08:50:24] FEEDER | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | START
+[2026-08-22 08:50:25] FEEDER | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost-guide/
+[2026-08-22 08:50:25] === SYNDICATE DONE: tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-22 08:50:25] SYNCED | tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost marked in synced-posts.txt
+[2026-08-22 08:50:25] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
