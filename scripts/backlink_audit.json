@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T16:49:14.495562+00:00",
+  "generated_at": "2026-08-22T20:49:46.650510+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -595,6 +595,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/22/blowout-on-highway-at-70-mph-what-to-do/",
+        "verified": true
+      }
+    },
+    "brake-failure-on-highway-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/brake-failure-on-highway-what-to-do.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/brake-failure-on-highway-what-to-do-right-now-quick-guide-4i41",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/brake-failure-on-highway-what-to-do-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825666850288484352/brake-failure-on-highway-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/22/brake-failure-on-highway-what-to-do/",
         "verified": true
       }
     },
@@ -12358,24 +12385,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 471,
-      "verified": 471
+      "checked": 472,
+      "verified": 472
     },
     "dev": {
-      "checked": 398,
-      "verified": 398
+      "checked": 399,
+      "verified": 399
     },
     "feeder": {
+      "checked": 467,
+      "verified": 467
+    },
+    "tumblr": {
       "checked": 466,
       "verified": 466
     },
-    "tumblr": {
-      "checked": 465,
-      "verified": 465
-    },
     "wordpress": {
-      "checked": 471,
-      "verified": 471
+      "checked": 472,
+      "verified": 472
     }
   }
 }
