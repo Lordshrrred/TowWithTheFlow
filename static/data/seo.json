@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-21T08:25:06.974794+00:00",
+  "generated_at": "2026-08-22T07:17:59.526504+00:00",
   "keywords": {
     "total": 802,
-    "live": 487,
-    "pending": 315,
+    "live": 491,
+    "pending": 311,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 299,
-      "pending": 315
+      "live": 303,
+      "pending": 311
     }
   },
   "next_targets": [
-    {
-      "keyword": "car broke down on road trip in unfamiliar city what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "tow truck cost after accident not my fault who pays",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car battery dead in parking garage towing cost",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car overheating towing cost vs driving to mechanic risk",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "blowout on highway at 70 mph what to do",
       "score": 8,
@@ -63,13 +43,33 @@
       "keyword": "car stuck in snow ditch who to call",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car engine seized up on highway what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "gas cap missing can i drive to gas station safely",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "transmission slipping on highway is it safe to drive",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "serpentine belt snapped on highway tow or wait",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 216
+      "count": 219
     },
     {
       "slug": "engine-mechanical",
@@ -127,13 +127,13 @@
       "count": 2
     },
     {
-      "slug": "consumer-rights",
-      "label": "Consumer Rights",
-      "count": 1
-    },
-    {
       "slug": "emergency-checklists",
       "label": "Emergency Checklists",
+      "count": 2
+    },
+    {
+      "slug": "consumer-rights",
+      "label": "Consumer Rights",
       "count": 1
     }
   ],
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-21T05:03:50.877712+00:00",
+    "generated_at": "2026-08-22T04:57:41.730148+00:00",
     "platforms": {
       "blog": {
-        "checked": 464,
-        "verified": 426
+        "checked": 468,
+        "verified": 462
       },
       "dev": {
-        "checked": 391,
-        "verified": 391
+        "checked": 395,
+        "verified": 395
       },
       "feeder": {
-        "checked": 459,
-        "verified": 459
+        "checked": 463,
+        "verified": 463
       },
       "tumblr": {
-        "checked": 458,
-        "verified": 458
+        "checked": 462,
+        "verified": 462
       },
       "wordpress": {
-        "checked": 464,
-        "verified": 464
+        "checked": 468,
+        "verified": 468
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-21T07:27:10.850879+00:00",
+    "generated_at": "2026-08-22T07:17:59.104847+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 196,
+        "rows": 202,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,38 +207,38 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "11 Search Console impressions match this asset pattern.",
+        "reason": "10 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 7,
-    "top_query_count": 23,
+    "top_query_count": 22,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-21T08:25:06.995816+00:00",
+    "generatedAt": "2026-08-22T07:17:59.540649+00:00",
     "keywordGeneration": {
-      "currentInventory": 315,
-      "liveKeywords": 487,
-      "estimatedDaysRemaining": 78.8,
+      "currentInventory": 311,
+      "liveKeywords": 491,
+      "estimatedDaysRemaining": 77.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "78.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "77.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 109,
-      "backlogUnits": 122,
+      "backlogPosts": 77,
+      "backlogUnits": 90,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-21T05:03:50.877712+00:00",
+      "generatedAt": "2026-08-22T04:57:41.730148+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.3,
+      "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": -0.3,
-      "estimatedCatchUpDays": 406.7,
-      "reason": "Backlinks are catching up by 0.3 platform links/day."
+      "netBacklinkUnitsPerDay": -0.1,
+      "estimatedCatchUpDays": 900.0,
+      "reason": "Backlinks are catching up by 0.1 platform links/day."
     },
     "curatedExpansion": {
       "supported": true,
