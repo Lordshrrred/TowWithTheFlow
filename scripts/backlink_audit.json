@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T13:15:18.934833+00:00",
+  "generated_at": "2026-08-22T16:49:14.495562+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -6808,9 +6808,9 @@
         "verified": true
       },
       "dev": {
-        "reason": "error:ReadTimeout",
+        "reason": "ok",
         "url": "https://dev.to/roadsideamericatowing/smoke-coming-from-under-car-not-hood-what-it-means-explained-1fdc",
-        "verified": null
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -7144,6 +7144,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/26/tire-blew-out-spare-is-also-flat-what-to-do/",
+        "verified": true
+      }
+    },
+    "tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/tire-blew-out-and-spare-isnt-safe-what.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/tire-blew-out-and-spare-isnt-safe-what-towing-will-cost-you-explained-1m7e",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825659265332199424/tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/22/tire-blew-out-spare-tire-not-safe-to-drive-to-mechanic-towing-cost/",
         "verified": true
       }
     },
@@ -11851,6 +11878,33 @@
         "verified": true
       }
     },
+    "transmission-failed-on-highway-tow-or-drive-to-shop": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/transmission-failed-on-highway-tow-or.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/transmission-failed-on-highway-tow-or-drive-to-shop-quick-guide-38l7",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/transmission-failed-on-highway-tow-or-drive-to-shop-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825653132202819584/transmission-failed-on-highway-tow-or-drive-to-shop",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/22/transmission-failed-on-highway-tow-or-drive-to-shop/",
+        "verified": true
+      }
+    },
     "transmission-fluid-leaking-can-i-drive-to-mechanic": {
       "blog": {
         "reason": "ok",
@@ -12304,24 +12358,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 469,
-      "verified": 469
+      "checked": 471,
+      "verified": 471
     },
     "dev": {
-      "checked": 395,
-      "verified": 395
+      "checked": 398,
+      "verified": 398
     },
     "feeder": {
-      "checked": 464,
-      "verified": 464
+      "checked": 466,
+      "verified": 466
     },
     "tumblr": {
-      "checked": 463,
-      "verified": 463
+      "checked": 465,
+      "verified": 465
     },
     "wordpress": {
-      "checked": 469,
-      "verified": 469
+      "checked": 471,
+      "verified": 471
     }
   }
 }
