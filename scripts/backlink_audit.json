@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T08:54:55.961460+00:00",
+  "generated_at": "2026-08-23T13:12:10.803316+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -4683,6 +4683,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/17/emergency-triangle-vs-flares-which-is-safer-on-highway/",
+        "verified": true
+      }
+    },
+    "engine-light-flashing-should-i-pull-over-immediately": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/engine-light-flashing-should-i-pull.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/engine-light-flashing-should-i-pull-over-immediately-what-to-do-next-41eo",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/engine-light-flashing-should-i-pull-over-immediately-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825735008486604800/engine-light-flashing-should-i-pull-over-immediately",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/23/engine-light-flashing-should-i-pull-over-immediately/",
         "verified": true
       }
     },
@@ -12385,24 +12412,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 472,
-      "verified": 472
+      "checked": 473,
+      "verified": 473
     },
     "dev": {
-      "checked": 399,
-      "verified": 399
+      "checked": 400,
+      "verified": 400
     },
     "feeder": {
+      "checked": 468,
+      "verified": 468
+    },
+    "tumblr": {
       "checked": 467,
       "verified": 467
     },
-    "tumblr": {
-      "checked": 466,
-      "verified": 466
-    },
     "wordpress": {
-      "checked": 472,
-      "verified": 472
+      "checked": 473,
+      "verified": 473
     }
   }
 }
