@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-22T07:17:59.526504+00:00",
+  "generated_at": "2026-08-23T07:19:04.221995+00:00",
   "keywords": {
     "total": 802,
-    "live": 491,
-    "pending": 311,
+    "live": 495,
+    "pending": 307,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 303,
-      "pending": 311
+      "live": 307,
+      "pending": 307
     }
   },
   "next_targets": [
-    {
-      "keyword": "blowout on highway at 70 mph what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "transmission failed on highway tow or drive to shop",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "tire blew out spare tire not safe to drive to mechanic towing cost",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "brake failure on highway what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "engine light flashing should i pull over immediately",
       "score": 8,
@@ -63,6 +43,26 @@
       "keyword": "serpentine belt snapped on highway tow or wait",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car submerged in water after flooding who to call",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car battery dead in extreme cold how to handle",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "airbag deployed car still runs can i drive it",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "catalytic converter stolen car wont start what to do",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 69
+      "count": 71
     },
     {
       "slug": "insurance-coverage",
@@ -94,7 +94,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 15
+      "count": 17
     },
     {
       "slug": "roadside-help",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-22T04:57:41.730148+00:00",
+    "generated_at": "2026-08-23T04:57:46.032848+00:00",
     "platforms": {
       "blog": {
-        "checked": 468,
-        "verified": 462
+        "checked": 472,
+        "verified": 469
       },
       "dev": {
-        "checked": 395,
-        "verified": 395
+        "checked": 399,
+        "verified": 399
       },
       "feeder": {
-        "checked": 463,
-        "verified": 463
+        "checked": 467,
+        "verified": 467
       },
       "tumblr": {
-        "checked": 462,
-        "verified": 462
+        "checked": 466,
+        "verified": 466
       },
       "wordpress": {
-        "checked": 468,
-        "verified": 468
+        "checked": 472,
+        "verified": 472
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-22T07:17:59.104847+00:00",
+    "generated_at": "2026-08-23T07:19:04.137695+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 55,
+        "rows": 57,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 202,
+        "rows": 212,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,7 +207,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "10 Search Console impressions match this asset pattern.",
+        "reason": "9 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -216,28 +216,28 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-22T07:17:59.540649+00:00",
+    "generatedAt": "2026-08-23T07:19:04.244113+00:00",
     "keywordGeneration": {
-      "currentInventory": 311,
-      "liveKeywords": 491,
-      "estimatedDaysRemaining": 77.8,
+      "currentInventory": 307,
+      "liveKeywords": 495,
+      "estimatedDaysRemaining": 76.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "77.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "76.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 77,
-      "backlogUnits": 90,
+      "backlogPosts": 79,
+      "backlogUnits": 87,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-22T04:57:41.730148+00:00",
+      "generatedAt": "2026-08-23T04:57:46.032848+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
       "netBacklinkUnitsPerDay": -0.1,
-      "estimatedCatchUpDays": 900.0,
+      "estimatedCatchUpDays": 870.0,
       "reason": "Backlinks are catching up by 0.1 platform links/day."
     },
     "curatedExpansion": {
