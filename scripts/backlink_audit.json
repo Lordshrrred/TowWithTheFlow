@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T17:04:56.917704+00:00",
+  "generated_at": "2026-08-24T20:58:00.289637+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -960,6 +960,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/16/car-axle-broke-while-driving-can-it-be-towed/",
+        "verified": true
+      }
+    },
+    "car-battery-dead-in-extreme-cold-how-to-handle": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-battery-dead-in-extreme-cold-how-to.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-battery-dead-in-extreme-cold-how-to-handle-it-right-now-explained-47k3",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-battery-dead-in-extreme-cold-how-to-handle-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825849055371509760/car-battery-dead-in-extreme-cold-how-to-handle",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/24/car-battery-dead-in-extreme-cold-how-to-handle/",
         "verified": true
       }
     },
@@ -12574,24 +12601,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 479,
-      "verified": 479
+      "checked": 480,
+      "verified": 480
     },
     "dev": {
-      "checked": 406,
-      "verified": 406
+      "checked": 407,
+      "verified": 407
     },
     "feeder": {
+      "checked": 475,
+      "verified": 475
+    },
+    "tumblr": {
       "checked": 474,
       "verified": 474
     },
-    "tumblr": {
-      "checked": 473,
-      "verified": 473
-    },
     "wordpress": {
-      "checked": 479,
-      "verified": 479
+      "checked": 480,
+      "verified": 480
     }
   }
 }
