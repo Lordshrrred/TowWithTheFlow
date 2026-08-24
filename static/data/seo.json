@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-23T07:19:04.221995+00:00",
+  "generated_at": "2026-08-24T07:42:55.440380+00:00",
   "keywords": {
     "total": 802,
-    "live": 495,
-    "pending": 307,
+    "live": 499,
+    "pending": 303,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 307,
-      "pending": 307
+      "live": 311,
+      "pending": 303
     }
   },
   "next_targets": [
-    {
-      "keyword": "engine light flashing should i pull over immediately",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car stuck in snow ditch who to call",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car engine seized up on highway what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "gas cap missing can i drive to gas station safely",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "transmission slipping on highway is it safe to drive",
       "score": 8,
@@ -63,6 +43,26 @@
       "keyword": "catalytic converter stolen car wont start what to do",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car axle broke while driving can it be driven to shop",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does geico roadside assistance cover lockout",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does aaa pay for towing if car is not driveable after crash",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car hit a pothole now making noise should i drive it",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 71
+      "count": 73
     },
     {
       "slug": "insurance-coverage",
@@ -112,19 +112,19 @@
       "count": 8
     },
     {
+      "slug": "vehicle-safety",
+      "label": "Vehicle Safety",
+      "count": 6
+    },
+    {
       "slug": "winter-weather",
       "label": "Winter & Weather Breakdowns",
       "count": 5
     },
     {
-      "slug": "vehicle-safety",
-      "label": "Vehicle Safety",
-      "count": 5
-    },
-    {
       "slug": "vehicle-recovery",
       "label": "Vehicle Recovery",
-      "count": 2
+      "count": 3
     },
     {
       "slug": "emergency-checklists",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-23T04:57:46.032848+00:00",
+    "generated_at": "2026-08-24T05:12:30.800185+00:00",
     "platforms": {
       "blog": {
-        "checked": 472,
-        "verified": 469
+        "checked": 476,
+        "verified": 462
       },
       "dev": {
-        "checked": 399,
-        "verified": 399
+        "checked": 403,
+        "verified": 403
       },
       "feeder": {
-        "checked": 467,
-        "verified": 467
+        "checked": 471,
+        "verified": 471
       },
       "tumblr": {
-        "checked": 466,
-        "verified": 466
+        "checked": 470,
+        "verified": 470
       },
       "wordpress": {
-        "checked": 472,
-        "verified": 472
+        "checked": 476,
+        "verified": 476
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-23T07:19:04.137695+00:00",
+    "generated_at": "2026-08-24T07:42:55.364188+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 212,
+        "rows": 210,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,37 +207,37 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "9 Search Console impressions match this asset pattern.",
+        "reason": "7 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 7,
-    "top_query_count": 22,
+    "top_query_count": 19,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-23T07:19:04.244113+00:00",
+    "generatedAt": "2026-08-24T07:42:55.463533+00:00",
     "keywordGeneration": {
-      "currentInventory": 307,
-      "liveKeywords": 495,
-      "estimatedDaysRemaining": 76.8,
+      "currentInventory": 303,
+      "liveKeywords": 499,
+      "estimatedDaysRemaining": 75.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "76.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "75.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 79,
-      "backlogUnits": 87,
+      "backlogPosts": 84,
+      "backlogUnits": 98,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-23T04:57:46.032848+00:00",
+      "generatedAt": "2026-08-24T05:12:30.800185+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
       "netBacklinkUnitsPerDay": -0.1,
-      "estimatedCatchUpDays": 870.0,
+      "estimatedCatchUpDays": 980.0,
       "reason": "Backlinks are catching up by 0.1 platform links/day."
     },
     "curatedExpansion": {
