@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T09:09:10.868016+00:00",
+  "generated_at": "2026-08-25T13:18:39.781623+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -123,6 +123,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/30/airbag-deployed-car-still-drivable-or-need-tow/",
+        "verified": true
+      }
+    },
+    "airbag-deployed-car-still-runs-can-i-drive-it": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/airbag-deployed-car-still-runs-can-i.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/airbag-deployed-car-still-runs-can-i-drive-it-quick-guide-12kk",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/airbag-deployed-car-still-runs-can-i-drive-it-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/825916796706193408/airbag-deployed-car-still-runs-can-i-drive-it",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/25/airbag-deployed-car-still-runs-can-i-drive-it/",
         "verified": true
       }
     },
@@ -12601,24 +12628,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 480,
-      "verified": 480
+      "checked": 481,
+      "verified": 481
     },
     "dev": {
-      "checked": 407,
-      "verified": 407
+      "checked": 408,
+      "verified": 408
     },
     "feeder": {
+      "checked": 476,
+      "verified": 476
+    },
+    "tumblr": {
       "checked": 475,
       "verified": 475
     },
-    "tumblr": {
-      "checked": 474,
-      "verified": 474
-    },
     "wordpress": {
-      "checked": 480,
-      "verified": 480
+      "checked": 481,
+      "verified": 481
     }
   }
 }
