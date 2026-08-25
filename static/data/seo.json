@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-24T08:35:12.908862+00:00",
+  "generated_at": "2026-08-25T07:28:39.544261+00:00",
   "keywords": {
     "total": 802,
-    "live": 499,
-    "pending": 303,
+    "live": 503,
+    "pending": 299,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 311,
-      "pending": 303
+      "live": 315,
+      "pending": 299
     }
   },
   "next_targets": [
-    {
-      "keyword": "transmission slipping on highway is it safe to drive",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "serpentine belt snapped on highway tow or wait",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car submerged in water after flooding who to call",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car battery dead in extreme cold how to handle",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "airbag deployed car still runs can i drive it",
       "score": 8,
@@ -63,6 +43,26 @@
       "keyword": "car hit a pothole now making noise should i drive it",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does usaa roadside assistance cover towing cost",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car smoking under hood on side of road what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "alternator died while driving signs and towing options",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car making burning smell while driving should i stop",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 73
+      "count": 74
     },
     {
       "slug": "insurance-coverage",
@@ -84,12 +84,12 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 41
+      "count": 42
     },
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 26
+      "count": 27
     },
     {
       "slug": "tire-wheel",
@@ -99,7 +99,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 14
+      "count": 15
     },
     {
       "slug": "towing-logistics",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-24T05:12:30.800185+00:00",
+    "generated_at": "2026-08-25T05:02:15.538137+00:00",
     "platforms": {
       "blog": {
-        "checked": 476,
-        "verified": 462
+        "checked": 480,
+        "verified": 480
       },
       "dev": {
-        "checked": 403,
-        "verified": 403
+        "checked": 407,
+        "verified": 407
       },
       "feeder": {
-        "checked": 471,
-        "verified": 471
+        "checked": 475,
+        "verified": 475
       },
       "tumblr": {
-        "checked": 470,
-        "verified": 470
+        "checked": 474,
+        "verified": 474
       },
       "wordpress": {
-        "checked": 476,
-        "verified": 476
+        "checked": 480,
+        "verified": 480
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-24T07:42:55.364188+00:00",
+    "generated_at": "2026-08-25T07:28:39.463263+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 210,
+        "rows": 216,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,37 +207,37 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "7 Search Console impressions match this asset pattern.",
+        "reason": "6 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 7,
-    "top_query_count": 19,
+    "top_query_count": 18,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-24T08:35:12.926322+00:00",
+    "generatedAt": "2026-08-25T07:28:39.566838+00:00",
     "keywordGeneration": {
-      "currentInventory": 303,
-      "liveKeywords": 499,
-      "estimatedDaysRemaining": 75.8,
+      "currentInventory": 299,
+      "liveKeywords": 503,
+      "estimatedDaysRemaining": 74.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "75.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "74.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 84,
-      "backlogUnits": 98,
+      "backlogPosts": 76,
+      "backlogUnits": 84,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-24T05:12:30.800185+00:00",
+      "generatedAt": "2026-08-25T05:02:15.538137+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
       "netBacklinkUnitsPerDay": -0.1,
-      "estimatedCatchUpDays": 980.0,
+      "estimatedCatchUpDays": 840.0,
       "reason": "Backlinks are catching up by 0.1 platform links/day."
     },
     "curatedExpansion": {
