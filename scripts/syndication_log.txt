@@ -17409,3 +17409,33 @@
 [2026-08-26 05:05:32] === SYNDICATE DONE: does-aaa-pay-for-towing-if-car-is-not-driveable-after-crash | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-08-26 05:05:32] SYNCED | does-aaa-pay-for-towing-if-car-is-not-driveable-after-crash marked in synced-posts.txt
 [2026-08-26 05:05:32] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-08-26 07:32:25] === SYNDICATE START: car-hit-pothole-now-making-noise-should-i-drive-it ===
+[2026-08-26 07:32:25] PREFLIGHT | title: Car Hit a Pothole and Now Making Noise: Should I Drive It?
+[2026-08-26 07:32:25] PREFLIGHT | date: 2026-08-26
+[2026-08-26 07:32:25] PREFLIGHT | timestamp: 2026-08-26 07:32:25
+[2026-08-26 07:32:25] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-08-26 07:32:25] PREFLIGHT | TUMBLR:  configured
+[2026-08-26 07:32:25] PREFLIGHT | BLOGGER: configured
+[2026-08-26 07:32:25] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-26 07:32:25] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-26 07:32:25] DEVTO | car-hit-pothole-now-making-noise-should-i-drive-it | START
+[2026-08-26 07:32:25] DEVTO | car-hit-pothole-now-making-noise-should-i-drive-it | account=TWTF2
+[2026-08-26 07:32:27] DEVTO | car-hit-pothole-now-making-noise-should-i-drive-it | SUCCESS | https://dev.to/denverroadsideelitetowing/car-hit-a-pothole-and-now-making-noise-should-i-drive-it-quick-guide-3kh8
+[2026-08-26 07:32:27] --- waiting 60s before next platform ---
+[2026-08-26 07:33:27] TUMBLR | car-hit-pothole-now-making-noise-should-i-drive-it | START
+[2026-08-26 07:33:27] TUMBLR | car-hit-pothole-now-making-noise-should-i-drive-it | SUCCESS | https://towwiththeflow.tumblr.com/post/826017010055004160
+[2026-08-26 07:33:27] --- waiting 60s before next platform ---
+[2026-08-26 07:34:27] BLOGGER | car-hit-pothole-now-making-noise-should-i-drive-it | START
+[2026-08-26 07:34:27] BLOGGER | car-hit-pothole-now-making-noise-should-i-drive-it | step 1/3: refreshing access token
+[2026-08-26 07:34:27] BLOGGER | car-hit-pothole-now-making-noise-should-i-drive-it | step 2/3: converting markdown to HTML
+[2026-08-26 07:34:27] BLOGGER | car-hit-pothole-now-making-noise-should-i-drive-it | step 3/3: posting to blog 1959471973457654666
+[2026-08-26 07:34:28] BLOGGER | car-hit-pothole-now-making-noise-should-i-drive-it | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-hit-pothole-and-now-making-noise.html
+[2026-08-26 07:34:28] --- waiting 60s before next platform ---
+[2026-08-26 07:35:28] WORDPRESS | car-hit-pothole-now-making-noise-should-i-drive-it | START
+[2026-08-26 07:35:29] WORDPRESS | car-hit-pothole-now-making-noise-should-i-drive-it | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/26/car-hit-pothole-now-making-noise-should-i-drive-it/
+[2026-08-26 07:35:29] --- waiting 60s before next platform ---
+[2026-08-26 07:36:29] FEEDER | car-hit-pothole-now-making-noise-should-i-drive-it | START
+[2026-08-26 07:36:31] FEEDER | car-hit-pothole-now-making-noise-should-i-drive-it | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-hit-pothole-now-making-noise-should-i-drive-it-tips/
+[2026-08-26 07:36:31] === SYNDICATE DONE: car-hit-pothole-now-making-noise-should-i-drive-it | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-26 07:36:31] SYNCED | car-hit-pothole-now-making-noise-should-i-drive-it marked in synced-posts.txt
+[2026-08-26 07:36:31] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
