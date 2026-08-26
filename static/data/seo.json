@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-25T07:28:39.544261+00:00",
+  "generated_at": "2026-08-26T07:30:11.381722+00:00",
   "keywords": {
     "total": 802,
-    "live": 503,
-    "pending": 299,
+    "live": 507,
+    "pending": 295,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 315,
-      "pending": 299
+      "live": 319,
+      "pending": 295
     }
   },
   "next_targets": [
-    {
-      "keyword": "airbag deployed car still runs can i drive it",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "catalytic converter stolen car wont start what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car axle broke while driving can it be driven to shop",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does geico roadside assistance cover lockout",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "does aaa pay for towing if car is not driveable after crash",
       "score": 8,
@@ -63,6 +43,26 @@
       "keyword": "car making burning smell while driving should i stop",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "broken down on highway at night safety tips what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car battery died in cold weather jump start vs tow",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "fuel pump failed on highway towing cost and options",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "dead battery no jumper cables options",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,17 +74,17 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 74
+      "count": 75
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 52
+      "count": 53
     },
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 42
+      "count": 43
     },
     {
       "slug": "highway-safety",
@@ -102,14 +102,14 @@
       "count": 15
     },
     {
-      "slug": "towing-logistics",
-      "label": "Towing Logistics & Process",
+      "slug": "accident-liability",
+      "label": "Accidents & Towing Liability",
       "count": 9
     },
     {
-      "slug": "accident-liability",
-      "label": "Accidents & Towing Liability",
-      "count": 8
+      "slug": "towing-logistics",
+      "label": "Towing Logistics & Process",
+      "count": 9
     },
     {
       "slug": "vehicle-safety",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-25T05:02:15.538137+00:00",
+    "generated_at": "2026-08-26T05:07:00.322310+00:00",
     "platforms": {
       "blog": {
-        "checked": 480,
-        "verified": 480
+        "checked": 481,
+        "verified": 238
       },
       "dev": {
-        "checked": 407,
-        "verified": 407
+        "checked": 411,
+        "verified": 411
       },
       "feeder": {
-        "checked": 475,
-        "verified": 475
+        "checked": 479,
+        "verified": 479
       },
       "tumblr": {
-        "checked": 474,
-        "verified": 474
+        "checked": 478,
+        "verified": 478
       },
       "wordpress": {
-        "checked": 480,
-        "verified": 480
+        "checked": 484,
+        "verified": 484
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-25T07:28:39.463263+00:00",
+    "generated_at": "2026-08-26T07:30:11.246200+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 216,
+        "rows": 218,
         "source": "ga4",
         "status": "ok"
       }
@@ -211,33 +211,33 @@
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 7,
-    "top_query_count": 18,
+    "top_landing_page_count": 6,
+    "top_query_count": 16,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-25T07:28:39.566838+00:00",
+    "generatedAt": "2026-08-26T07:30:11.405703+00:00",
     "keywordGeneration": {
-      "currentInventory": 299,
-      "liveKeywords": 503,
-      "estimatedDaysRemaining": 74.8,
+      "currentInventory": 295,
+      "liveKeywords": 507,
+      "estimatedDaysRemaining": 73.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "74.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "73.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 76,
-      "backlogUnits": 84,
+      "backlogPosts": 300,
+      "backlogUnits": 330,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-25T05:02:15.538137+00:00",
+      "generatedAt": "2026-08-26T05:07:00.322310+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
       "netBacklinkUnitsPerDay": -0.1,
-      "estimatedCatchUpDays": 840.0,
+      "estimatedCatchUpDays": 3300.0,
       "reason": "Backlinks are catching up by 0.1 platform links/day."
     },
     "curatedExpansion": {
