@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-26T08:29:11.446137+00:00",
+  "generated_at": "2026-08-27T17:53:27.232024+00:00",
   "keywords": {
     "total": 802,
-    "live": 507,
-    "pending": 295,
+    "live": 511,
+    "pending": 291,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 319,
-      "pending": 295
+      "live": 323,
+      "pending": 291
     }
   },
   "next_targets": [
-    {
-      "keyword": "does aaa pay for towing if car is not driveable after crash",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car hit a pothole now making noise should i drive it",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does usaa roadside assistance cover towing cost",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car smoking under hood on side of road what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "alternator died while driving signs and towing options",
       "score": 8,
@@ -63,23 +43,43 @@
       "keyword": "dead battery no jumper cables options",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "tire blowout on highway what to do",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "who pays towing costs after not at fault accident",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "flat tire on freeway no spare tire options",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how long can you drive with bad alternator",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 219
+      "count": 220
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 75
+      "count": 76
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 53
+      "count": 54
     },
     {
       "slug": "battery-starting",
@@ -114,7 +114,7 @@
     {
       "slug": "vehicle-safety",
       "label": "Vehicle Safety",
-      "count": 6
+      "count": 7
     },
     {
       "slug": "winter-weather",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-26T05:07:00.322310+00:00",
+    "generated_at": "2026-08-27T10:02:51.793006+00:00",
     "platforms": {
       "blog": {
-        "checked": 481,
-        "verified": 238
+        "checked": 485,
+        "verified": 218
       },
       "dev": {
-        "checked": 411,
+        "checked": 415,
         "verified": 411
       },
       "feeder": {
-        "checked": 479,
-        "verified": 479
+        "checked": 483,
+        "verified": 483
       },
       "tumblr": {
-        "checked": 478,
-        "verified": 478
+        "checked": 482,
+        "verified": 482
       },
       "wordpress": {
-        "checked": 484,
-        "verified": 484
+        "checked": 488,
+        "verified": 488
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-26T07:30:11.246200+00:00",
+    "generated_at": "2026-08-27T17:53:26.938084+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 57,
+        "rows": 58,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 218,
+        "rows": 220,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,38 +207,38 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "6 Search Console impressions match this asset pattern.",
+        "reason": "5 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 6,
+    "top_landing_page_count": 5,
     "top_query_count": 16,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-26T08:29:11.464780+00:00",
+    "generatedAt": "2026-08-27T17:53:27.249883+00:00",
     "keywordGeneration": {
-      "currentInventory": 295,
-      "liveKeywords": 507,
-      "estimatedDaysRemaining": 73.8,
+      "currentInventory": 291,
+      "liveKeywords": 511,
+      "estimatedDaysRemaining": 72.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "73.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "72.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 300,
-      "backlogUnits": 330,
+      "backlogPosts": 334,
+      "backlogUnits": 358,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-26T05:07:00.322310+00:00",
+      "generatedAt": "2026-08-27T10:02:51.793006+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.1,
+      "completedPerDay": 18.6,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": -0.1,
-      "estimatedCatchUpDays": 3300.0,
-      "reason": "Backlinks are catching up by 0.1 platform links/day."
+      "netBacklinkUnitsPerDay": 1.4,
+      "estimatedCatchUpDays": null,
+      "reason": "Backlog is growing by 1.4 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
