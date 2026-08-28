@@ -17650,3 +17650,33 @@
 [2026-08-28 15:16:53] === SYNDICATE DONE: fuel-pump-failed-on-highway-towing-cost-and-options | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-08-28 15:16:53] SYNCED | fuel-pump-failed-on-highway-towing-cost-and-options marked in synced-posts.txt
 [2026-08-28 15:16:53] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-08-28 16:31:12] === SYNDICATE START: dead-battery-no-jumper-cables-options ===
+[2026-08-28 16:31:12] PREFLIGHT | title: Dead Battery No Jumper Cables: Your Options Right Now
+[2026-08-28 16:31:12] PREFLIGHT | date: 2026-08-28
+[2026-08-28 16:31:12] PREFLIGHT | timestamp: 2026-08-28 16:31:12
+[2026-08-28 16:31:12] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-08-28 16:31:12] PREFLIGHT | TUMBLR:  configured
+[2026-08-28 16:31:12] PREFLIGHT | BLOGGER: configured
+[2026-08-28 16:31:12] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-08-28 16:31:12] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-08-28 16:31:12] DEVTO | dead-battery-no-jumper-cables-options | START
+[2026-08-28 16:31:12] DEVTO | dead-battery-no-jumper-cables-options | account=TWTF2
+[2026-08-28 16:31:13] DEVTO | dead-battery-no-jumper-cables-options | SUCCESS | https://dev.to/denverroadsideelitetowing/dead-battery-no-jumper-cables-your-options-right-now-quick-guide-2k8c
+[2026-08-28 16:31:13] --- waiting 60s before next platform ---
+[2026-08-28 16:32:13] TUMBLR | dead-battery-no-jumper-cables-options | START
+[2026-08-28 16:32:13] TUMBLR | dead-battery-no-jumper-cables-options | SUCCESS | https://towwiththeflow.tumblr.com/post/826232100276584448
+[2026-08-28 16:32:13] --- waiting 60s before next platform ---
+[2026-08-28 16:33:13] BLOGGER | dead-battery-no-jumper-cables-options | START
+[2026-08-28 16:33:13] BLOGGER | dead-battery-no-jumper-cables-options | step 1/3: refreshing access token
+[2026-08-28 16:33:13] BLOGGER | dead-battery-no-jumper-cables-options | step 2/3: converting markdown to HTML
+[2026-08-28 16:33:13] BLOGGER | dead-battery-no-jumper-cables-options | step 3/3: posting to blog 1959471973457654666
+[2026-08-28 16:33:14] BLOGGER | dead-battery-no-jumper-cables-options | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/08/dead-battery-no-jumper-cables-your.html
+[2026-08-28 16:33:14] --- waiting 60s before next platform ---
+[2026-08-28 16:34:14] WORDPRESS | dead-battery-no-jumper-cables-options | START
+[2026-08-28 16:34:24] WORDPRESS | dead-battery-no-jumper-cables-options | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/08/28/dead-battery-no-jumper-cables-options/
+[2026-08-28 16:34:24] --- waiting 60s before next platform ---
+[2026-08-28 16:35:24] FEEDER | dead-battery-no-jumper-cables-options | START
+[2026-08-28 16:35:25] FEEDER | dead-battery-no-jumper-cables-options | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/dead-battery-no-jumper-cables-options-advice/
+[2026-08-28 16:35:25] === SYNDICATE DONE: dead-battery-no-jumper-cables-options | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-08-28 16:35:25] SYNCED | dead-battery-no-jumper-cables-options marked in synced-posts.txt
+[2026-08-28 16:35:25] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
