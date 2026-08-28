@@ -1,15 +1,11 @@
 {
-  "pageviews": 1353,
-  "sessions": 1340,
-  "avgSessionDur": 26,
-  "bounceRate": 0.8746268656716418,
-  "newUsers": 1308,
-  "returningUsers": 2,
+  "pageviews": 1383,
+  "sessions": 1369,
+  "avgSessionDur": 25,
+  "bounceRate": 0.8736303871439006,
+  "newUsers": 1336,
+  "returningUsers": -1,
   "daily": [
-    {
-      "date": "20260728",
-      "pageviews": 12
-    },
     {
       "date": "20260729",
       "pageviews": 22
@@ -124,11 +120,15 @@
     },
     {
       "date": "20260826",
-      "pageviews": 53
+      "pageviews": 56
     },
     {
       "date": "20260827",
-      "pageviews": 17
+      "pageviews": 41
+    },
+    {
+      "date": "20260828",
+      "pageviews": 15
     }
   ],
   "topPages": [
@@ -136,10 +136,10 @@
       "rank": 1,
       "page": "/usaa-roadside-assistance-towing-coverage-limits/",
       "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-      "pageviews": 16,
-      "avgDur": 262,
-      "bounceRate": 41.2,
-      "sessions": 17
+      "pageviews": 18,
+      "avgDur": 251,
+      "bounceRate": 44.4,
+      "sessions": 18
     },
     {
       "rank": 2,
@@ -152,24 +152,6 @@
     },
     {
       "rank": 3,
-      "page": "/",
-      "title": "Tow With The Flow | Real help when your car breaks down.",
-      "pageviews": 14,
-      "avgDur": 112,
-      "bounceRate": 78.6,
-      "sessions": 14
-    },
-    {
-      "rank": 4,
-      "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
-      "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
-      "pageviews": 14,
-      "avgDur": 23,
-      "bounceRate": 42.9,
-      "sessions": 14
-    },
-    {
-      "rank": 5,
       "page": "/locked-keys-in-car-who-to-call-cheapest-option/",
       "title": "Locked Keys in Car: Who to Call for the Cheapest Option | Tow With The Flow",
       "pageviews": 14,
@@ -178,25 +160,34 @@
       "sessions": 14
     },
     {
-      "rank": 6,
+      "rank": 4,
       "page": "/car-wont-start-after-getting-gas-what-to-do/",
       "title": "Car Won't Start After Getting Gas: Quick Fixes That Work | Tow With The Flow",
       "pageviews": 13,
-      "avgDur": 1,
+      "avgDur": 2,
       "bounceRate": 100.0,
       "sessions": 13
     },
     {
-      "rank": 7,
+      "rank": 5,
+      "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
+      "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
+      "pageviews": 13,
+      "avgDur": 22,
+      "bounceRate": 46.2,
+      "sessions": 13
+    },
+    {
+      "rank": 6,
       "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
       "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
       "pageviews": 13,
-      "avgDur": 17,
-      "bounceRate": 81.2,
+      "avgDur": 20,
+      "bounceRate": 75.0,
       "sessions": 16
     },
     {
-      "rank": 8,
+      "rank": 7,
       "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
       "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
       "pageviews": 13,
@@ -205,7 +196,7 @@
       "sessions": 14
     },
     {
-      "rank": 9,
+      "rank": 8,
       "page": "/progressive-insurance-towing-reimbursement-amount/",
       "title": "Progressive Insurance Towing Reimbursement Amount: What You'll Get Back | Tow With The Flow",
       "pageviews": 12,
@@ -214,21 +205,30 @@
       "sessions": 13
     },
     {
+      "rank": 9,
+      "page": "/",
+      "title": "Tow With The Flow | Real help when your car breaks down.",
+      "pageviews": 11,
+      "avgDur": 143,
+      "bounceRate": 72.7,
+      "sessions": 11
+    },
+    {
       "rank": 10,
+      "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
+      "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
+      "pageviews": 11,
+      "avgDur": 18,
+      "bounceRate": 81.8,
+      "sessions": 11
+    },
+    {
+      "rank": 11,
       "page": "/progressive-roadside-assistance-covers-how-much-towing/",
       "title": "Progressive Roadside Assistance Covers How Much Towing: Complete Coverage Breakdown | Tow With The Flow",
       "pageviews": 11,
       "avgDur": 75,
       "bounceRate": 27.3,
-      "sessions": 11
-    },
-    {
-      "rank": 11,
-      "page": "/state-farm-towing-coverage-maximum-distance-miles/",
-      "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
-      "pageviews": 11,
-      "avgDur": 93,
-      "bounceRate": 45.5,
       "sessions": 11
     },
     {
@@ -242,15 +242,24 @@
     },
     {
       "rank": 13,
-      "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
-      "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
+      "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+      "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
       "pageviews": 10,
-      "avgDur": 20,
-      "bounceRate": 80.0,
+      "avgDur": 211,
+      "bounceRate": 40.0,
       "sessions": 10
     },
     {
       "rank": 14,
+      "page": "/state-farm-towing-coverage-maximum-distance-miles/",
+      "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
+      "pageviews": 10,
+      "avgDur": 69,
+      "bounceRate": 50.0,
+      "sessions": 10
+    },
+    {
+      "rank": 15,
       "page": "/car-engine-misfiring-on-freeway-pull-over-or-keep-driving",
       "title": "Car Engine Misfiring on Freeway: Pull Over or Keep Driving? | Tow With The Flow",
       "pageviews": 9,
@@ -259,7 +268,7 @@
       "sessions": 9
     },
     {
-      "rank": 15,
+      "rank": 16,
       "page": "/car-shakes-while-driving-slow-speeds",
       "title": "Car Shakes While Driving at Slow Speeds | Tow With The Flow",
       "pageviews": 9,
@@ -268,16 +277,16 @@
       "sessions": 9
     },
     {
-      "rank": 16,
-      "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
-      "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+      "rank": 17,
+      "page": "/car-wont-start-but-has-power-dashboard-lights-on",
+      "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
       "pageviews": 9,
-      "avgDur": 251,
-      "bounceRate": 22.2,
+      "avgDur": 0,
+      "bounceRate": 100.0,
       "sessions": 9
     },
     {
-      "rank": 17,
+      "rank": 18,
       "page": "/progressive-roadside-assistance-towing-limit-miles/",
       "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
       "pageviews": 9,
@@ -286,7 +295,7 @@
       "sessions": 11
     },
     {
-      "rank": 18,
+      "rank": 19,
       "page": "/alternator-failed-while-driving-what-happens-next/",
       "title": "Alternator Failed While Driving: What Happens Next | Tow With The Flow",
       "pageviews": 8,
@@ -295,7 +304,7 @@
       "sessions": 8
     },
     {
-      "rank": 19,
+      "rank": 20,
       "page": "/average-towing-cost-per-mile-usa",
       "title": "Average Towing Cost Per Mile in the USA | Tow With The Flow",
       "pageviews": 8,
@@ -304,7 +313,7 @@
       "sessions": 8
     },
     {
-      "rank": 20,
+      "rank": 21,
       "page": "/car-wont-shift-out-of-park-towing-options",
       "title": "Car Won't Shift Out of Park Towing Options: What to Do When Stuck | Tow With The Flow",
       "pageviews": 8,
@@ -313,16 +322,25 @@
       "sessions": 8
     },
     {
-      "rank": 21,
-      "page": "/car-wont-start-but-has-power-dashboard-lights-on",
-      "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
+      "rank": 22,
+      "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
+      "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
       "pageviews": 8,
-      "avgDur": 0,
+      "avgDur": 283,
+      "bounceRate": 37.5,
+      "sessions": 8
+    },
+    {
+      "rank": 23,
+      "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
+      "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
+      "pageviews": 8,
+      "avgDur": 2,
       "bounceRate": 100.0,
       "sessions": 8
     },
     {
-      "rank": 22,
+      "rank": 24,
       "page": "/brake-failure-while-driving-emergency-steps/",
       "title": "Brake Failure While Driving: Emergency Steps to Take Right Now | Tow With The Flow",
       "pageviews": 7,
@@ -331,7 +349,7 @@
       "sessions": 7
     },
     {
-      "rank": 23,
+      "rank": 25,
       "page": "/car-door-wont-open-from-inside-emergency/",
       "title": "Car Door Won't Open From Inside Emergency: What to Do Right Now | Tow With The Flow",
       "pageviews": 7,
@@ -340,7 +358,7 @@
       "sessions": 7
     },
     {
-      "rank": 24,
+      "rank": 26,
       "page": "/check-engine-light-flashing-car-shaking-emergency",
       "title": "Check Engine Light Flashing and Car Shaking: What to Do Right Now | Tow With The Flow",
       "pageviews": 7,
@@ -349,7 +367,7 @@
       "sessions": 7
     },
     {
-      "rank": 25,
+      "rank": 27,
       "page": "/electric-vehicle-ran-out-of-charge-on-highway-what-to-do/",
       "title": "Electric Vehicle Ran Out of Charge on Highway: What to Do Right Now | Tow With The Flow",
       "pageviews": 7,
@@ -358,7 +376,7 @@
       "sessions": 7
     },
     {
-      "rank": 26,
+      "rank": 28,
       "page": "/engine-oil-pressure-warning-light-came-on-while-driving",
       "title": "Engine Oil Pressure Warning Light Came On While Driving: What to Do Right Now | Tow With The Flow",
       "pageviews": 7,
@@ -367,27 +385,9 @@
       "sessions": 6
     },
     {
-      "rank": 27,
-      "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
-      "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
-      "pageviews": 7,
-      "avgDur": 316,
-      "bounceRate": 42.9,
-      "sessions": 7
-    },
-    {
-      "rank": 28,
-      "page": "/run-flat-tire-blowout-can-i-drive-to-shop",
-      "title": "Run Flat Tire Blowout: Can I Drive to the Shop? | Tow With The Flow",
-      "pageviews": 7,
-      "avgDur": 0,
-      "bounceRate": 100.0,
-      "sessions": 7
-    },
-    {
       "rank": 29,
-      "page": "/run-flat-tire-completely-flat-can-i-still-drive",
-      "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
+      "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz",
+      "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
       "pageviews": 7,
       "avgDur": 0,
       "bounceRate": 100.0,
@@ -395,10 +395,10 @@
     },
     {
       "rank": 30,
-      "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
-      "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
+      "page": "/run-flat-tire-blowout-can-i-drive-to-shop",
+      "title": "Run Flat Tire Blowout: Can I Drive to the Shop? | Tow With The Flow",
       "pageviews": 7,
-      "avgDur": 3,
+      "avgDur": 0,
       "bounceRate": 100.0,
       "sessions": 7
     }
@@ -406,18 +406,18 @@
   "trafficSources": [
     {
       "channel": "Direct",
-      "sessions": 1093,
-      "pct": 81.0
+      "sessions": 1119,
+      "pct": 81.6
     },
     {
       "channel": "Organic Search",
-      "sessions": 232,
-      "pct": 17.2
+      "sessions": 238,
+      "pct": 17.3
     },
     {
       "channel": "Unassigned",
-      "sessions": 19,
-      "pct": 1.4
+      "sessions": 10,
+      "pct": 0.7
     },
     {
       "channel": "AI Assistant",
@@ -434,38 +434,38 @@
     {
       "source": "(direct)",
       "medium": "(none)",
-      "sessions": 1093,
-      "pct": 81.0
+      "sessions": 1119,
+      "pct": 81.6
     },
     {
       "source": "bing",
       "medium": "organic",
-      "sessions": 97,
-      "pct": 7.2
+      "sessions": 101,
+      "pct": 7.4
     },
     {
       "source": "duckduckgo",
       "medium": "organic",
-      "sessions": 74,
+      "sessions": 76,
       "pct": 5.5
     },
     {
       "source": "yahoo",
       "medium": "organic",
       "sessions": 44,
-      "pct": 3.3
-    },
-    {
-      "source": "(not set)",
-      "medium": "(not set)",
-      "sessions": 14,
-      "pct": 1.0
+      "pct": 3.2
     },
     {
       "source": "ecosia.org",
       "medium": "organic",
       "sessions": 10,
       "pct": 0.7
+    },
+    {
+      "source": "(not set)",
+      "medium": "(not set)",
+      "sessions": 5,
+      "pct": 0.4
     },
     {
       "source": "copilot.com",
@@ -525,15 +525,15 @@
   "topCountries": [
     {
       "country": "Singapore",
-      "sessions": 786
+      "sessions": 802
     },
     {
       "country": "United States",
-      "sessions": 321
+      "sessions": 328
     },
     {
       "country": "China",
-      "sessions": 205
+      "sessions": 212
     },
     {
       "country": "Iran",
@@ -560,14 +560,6 @@
       "sessions": 3
     },
     {
-      "country": "France",
-      "sessions": 3
-    },
-    {
-      "country": "Germany",
-      "sessions": 3
-    },
-    {
       "country": "Netherlands",
       "sessions": 3
     },
@@ -584,11 +576,19 @@
       "sessions": 3
     },
     {
+      "country": "France",
+      "sessions": 2
+    },
+    {
       "country": "Hong Kong",
       "sessions": 2
     },
     {
       "country": "Indonesia",
+      "sessions": 2
+    },
+    {
+      "country": "Iraq",
       "sessions": 2
     },
     {
@@ -607,23 +607,19 @@
   "topCities": [
     {
       "city": "Singapore",
-      "sessions": 785
+      "sessions": 800
     },
     {
       "city": "(not set)",
-      "sessions": 185
+      "sessions": 201
     },
     {
       "city": "Shenzhen",
-      "sessions": 35
+      "sessions": 37
     },
     {
       "city": "San Jose",
-      "sessions": 29
-    },
-    {
-      "city": "",
-      "sessions": 14
+      "sessions": 30
     },
     {
       "city": "Chicago",
@@ -631,29 +627,33 @@
     },
     {
       "city": "Los Angeles",
-      "sessions": 10
+      "sessions": 12
     },
     {
       "city": "Ashburn",
       "sessions": 8
     },
     {
-      "city": "Denver",
+      "city": "Tehran",
       "sessions": 8
     },
     {
-      "city": "Tehran",
-      "sessions": 8
+      "city": "Denver",
+      "sessions": 7
+    },
+    {
+      "city": "Indianapolis",
+      "sessions": 7
     }
   ],
   "devices": [
     {
       "device": "desktop",
-      "sessions": 1038
+      "sessions": 1059
     },
     {
       "device": "mobile",
-      "sessions": 299
+      "sessions": 305
     },
     {
       "device": "tablet",
@@ -663,19 +663,19 @@
   "browsers": [
     {
       "browser": "Chrome",
-      "sessions": 969
+      "sessions": 989
     },
     {
       "browser": "Android Webview",
-      "sessions": 154
+      "sessions": 159
     },
     {
       "browser": "Safari",
-      "sessions": 103
+      "sessions": 102
     },
     {
       "browser": "Edge",
-      "sessions": 89
+      "sessions": 92
     },
     {
       "browser": "Firefox",
@@ -685,19 +685,19 @@
   "os": [
     {
       "os": "Windows",
-      "sessions": 882
+      "sessions": 899
     },
     {
       "os": "Android",
-      "sessions": 206
+      "sessions": 213
     },
     {
       "os": "iOS",
-      "sessions": 97
+      "sessions": 96
     },
     {
       "os": "Linux",
-      "sessions": 86
+      "sessions": 88
     },
     {
       "os": "Macintosh",
@@ -706,17 +706,13 @@
   ],
   "ranges": {
     "30d": {
-      "pageviews": 1353,
-      "sessions": 1340,
-      "avgSessionDur": 26,
-      "bounceRate": 0.8746268656716418,
-      "newUsers": 1308,
-      "returningUsers": 2,
+      "pageviews": 1383,
+      "sessions": 1369,
+      "avgSessionDur": 25,
+      "bounceRate": 0.8736303871439006,
+      "newUsers": 1336,
+      "returningUsers": -1,
       "daily": [
-        {
-          "date": "20260728",
-          "pageviews": 12
-        },
         {
           "date": "20260729",
           "pageviews": 22
@@ -831,11 +827,15 @@
         },
         {
           "date": "20260826",
-          "pageviews": 53
+          "pageviews": 56
         },
         {
           "date": "20260827",
-          "pageviews": 17
+          "pageviews": 41
+        },
+        {
+          "date": "20260828",
+          "pageviews": 15
         }
       ],
       "topPages": [
@@ -843,10 +843,10 @@
           "rank": 1,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 16,
-          "avgDur": 262,
-          "bounceRate": 41.2,
-          "sessions": 17
+          "pageviews": 18,
+          "avgDur": 251,
+          "bounceRate": 44.4,
+          "sessions": 18
         },
         {
           "rank": 2,
@@ -859,24 +859,6 @@
         },
         {
           "rank": 3,
-          "page": "/",
-          "title": "Tow With The Flow | Real help when your car breaks down.",
-          "pageviews": 14,
-          "avgDur": 112,
-          "bounceRate": 78.6,
-          "sessions": 14
-        },
-        {
-          "rank": 4,
-          "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
-          "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
-          "pageviews": 14,
-          "avgDur": 23,
-          "bounceRate": 42.9,
-          "sessions": 14
-        },
-        {
-          "rank": 5,
           "page": "/locked-keys-in-car-who-to-call-cheapest-option/",
           "title": "Locked Keys in Car: Who to Call for the Cheapest Option | Tow With The Flow",
           "pageviews": 14,
@@ -885,25 +867,34 @@
           "sessions": 14
         },
         {
-          "rank": 6,
+          "rank": 4,
           "page": "/car-wont-start-after-getting-gas-what-to-do/",
           "title": "Car Won't Start After Getting Gas: Quick Fixes That Work | Tow With The Flow",
           "pageviews": 13,
-          "avgDur": 1,
+          "avgDur": 2,
           "bounceRate": 100.0,
           "sessions": 13
         },
         {
-          "rank": 7,
+          "rank": 5,
+          "page": "/does-aaa-cover-towing-after-accident-or-only-breakdowns/",
+          "title": "Does AAA Cover Towing After an Accident or Only Breakdowns: What You're Actually Covered For | Tow With The Flow",
+          "pageviews": 13,
+          "avgDur": 22,
+          "bounceRate": 46.2,
+          "sessions": 13
+        },
+        {
+          "rank": 6,
           "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
           "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
           "pageviews": 13,
-          "avgDur": 17,
-          "bounceRate": 81.2,
+          "avgDur": 20,
+          "bounceRate": 75.0,
           "sessions": 16
         },
         {
-          "rank": 8,
+          "rank": 7,
           "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz/",
           "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
           "pageviews": 13,
@@ -912,7 +903,7 @@
           "sessions": 14
         },
         {
-          "rank": 9,
+          "rank": 8,
           "page": "/progressive-insurance-towing-reimbursement-amount/",
           "title": "Progressive Insurance Towing Reimbursement Amount: What You'll Get Back | Tow With The Flow",
           "pageviews": 12,
@@ -921,21 +912,30 @@
           "sessions": 13
         },
         {
+          "rank": 9,
+          "page": "/",
+          "title": "Tow With The Flow | Real help when your car breaks down.",
+          "pageviews": 11,
+          "avgDur": 143,
+          "bounceRate": 72.7,
+          "sessions": 11
+        },
+        {
           "rank": 10,
+          "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
+          "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
+          "pageviews": 11,
+          "avgDur": 18,
+          "bounceRate": 81.8,
+          "sessions": 11
+        },
+        {
+          "rank": 11,
           "page": "/progressive-roadside-assistance-covers-how-much-towing/",
           "title": "Progressive Roadside Assistance Covers How Much Towing: Complete Coverage Breakdown | Tow With The Flow",
           "pageviews": 11,
           "avgDur": 75,
           "bounceRate": 27.3,
-          "sessions": 11
-        },
-        {
-          "rank": 11,
-          "page": "/state-farm-towing-coverage-maximum-distance-miles/",
-          "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
-          "pageviews": 11,
-          "avgDur": 93,
-          "bounceRate": 45.5,
           "sessions": 11
         },
         {
@@ -949,15 +949,24 @@
         },
         {
           "rank": 13,
-          "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
-          "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
+          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
           "pageviews": 10,
-          "avgDur": 20,
-          "bounceRate": 80.0,
+          "avgDur": 211,
+          "bounceRate": 40.0,
           "sessions": 10
         },
         {
           "rank": 14,
+          "page": "/state-farm-towing-coverage-maximum-distance-miles/",
+          "title": "State Farm Towing Coverage Maximum Distance Miles: What You Need to Know | Tow With The Flow",
+          "pageviews": 10,
+          "avgDur": 69,
+          "bounceRate": 50.0,
+          "sessions": 10
+        },
+        {
+          "rank": 15,
           "page": "/car-engine-misfiring-on-freeway-pull-over-or-keep-driving",
           "title": "Car Engine Misfiring on Freeway: Pull Over or Keep Driving? | Tow With The Flow",
           "pageviews": 9,
@@ -966,7 +975,7 @@
           "sessions": 9
         },
         {
-          "rank": 15,
+          "rank": 16,
           "page": "/car-shakes-while-driving-slow-speeds",
           "title": "Car Shakes While Driving at Slow Speeds | Tow With The Flow",
           "pageviews": 9,
@@ -975,16 +984,16 @@
           "sessions": 9
         },
         {
-          "rank": 16,
-          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
-          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+          "rank": 17,
+          "page": "/car-wont-start-but-has-power-dashboard-lights-on",
+          "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
           "pageviews": 9,
-          "avgDur": 251,
-          "bounceRate": 22.2,
+          "avgDur": 0,
+          "bounceRate": 100.0,
           "sessions": 9
         },
         {
-          "rank": 17,
+          "rank": 18,
           "page": "/progressive-roadside-assistance-towing-limit-miles/",
           "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 9,
@@ -993,7 +1002,7 @@
           "sessions": 11
         },
         {
-          "rank": 18,
+          "rank": 19,
           "page": "/alternator-failed-while-driving-what-happens-next/",
           "title": "Alternator Failed While Driving: What Happens Next | Tow With The Flow",
           "pageviews": 8,
@@ -1002,7 +1011,7 @@
           "sessions": 8
         },
         {
-          "rank": 19,
+          "rank": 20,
           "page": "/average-towing-cost-per-mile-usa",
           "title": "Average Towing Cost Per Mile in the USA | Tow With The Flow",
           "pageviews": 8,
@@ -1011,7 +1020,7 @@
           "sessions": 8
         },
         {
-          "rank": 20,
+          "rank": 21,
           "page": "/car-wont-shift-out-of-park-towing-options",
           "title": "Car Won't Shift Out of Park Towing Options: What to Do When Stuck | Tow With The Flow",
           "pageviews": 8,
@@ -1020,16 +1029,25 @@
           "sessions": 8
         },
         {
-          "rank": 21,
-          "page": "/car-wont-start-but-has-power-dashboard-lights-on",
-          "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
+          "rank": 22,
+          "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
+          "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
           "pageviews": 8,
-          "avgDur": 0,
+          "avgDur": 283,
+          "bounceRate": 37.5,
+          "sessions": 8
+        },
+        {
+          "rank": 23,
+          "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
+          "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
+          "pageviews": 8,
+          "avgDur": 2,
           "bounceRate": 100.0,
           "sessions": 8
         },
         {
-          "rank": 22,
+          "rank": 24,
           "page": "/brake-failure-while-driving-emergency-steps/",
           "title": "Brake Failure While Driving: Emergency Steps to Take Right Now | Tow With The Flow",
           "pageviews": 7,
@@ -1038,7 +1056,7 @@
           "sessions": 7
         },
         {
-          "rank": 23,
+          "rank": 25,
           "page": "/car-door-wont-open-from-inside-emergency/",
           "title": "Car Door Won't Open From Inside Emergency: What to Do Right Now | Tow With The Flow",
           "pageviews": 7,
@@ -1047,7 +1065,7 @@
           "sessions": 7
         },
         {
-          "rank": 24,
+          "rank": 26,
           "page": "/check-engine-light-flashing-car-shaking-emergency",
           "title": "Check Engine Light Flashing and Car Shaking: What to Do Right Now | Tow With The Flow",
           "pageviews": 7,
@@ -1056,7 +1074,7 @@
           "sessions": 7
         },
         {
-          "rank": 25,
+          "rank": 27,
           "page": "/electric-vehicle-ran-out-of-charge-on-highway-what-to-do/",
           "title": "Electric Vehicle Ran Out of Charge on Highway: What to Do Right Now | Tow With The Flow",
           "pageviews": 7,
@@ -1065,7 +1083,7 @@
           "sessions": 7
         },
         {
-          "rank": 26,
+          "rank": 28,
           "page": "/engine-oil-pressure-warning-light-came-on-while-driving",
           "title": "Engine Oil Pressure Warning Light Came On While Driving: What to Do Right Now | Tow With The Flow",
           "pageviews": 7,
@@ -1074,27 +1092,9 @@
           "sessions": 6
         },
         {
-          "rank": 27,
-          "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
-          "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
-          "pageviews": 7,
-          "avgDur": 316,
-          "bounceRate": 42.9,
-          "sessions": 7
-        },
-        {
-          "rank": 28,
-          "page": "/run-flat-tire-blowout-can-i-drive-to-shop",
-          "title": "Run Flat Tire Blowout: Can I Drive to the Shop? | Tow With The Flow",
-          "pageviews": 7,
-          "avgDur": 0,
-          "bounceRate": 100.0,
-          "sessions": 7
-        },
-        {
           "rank": 29,
-          "page": "/run-flat-tire-completely-flat-can-i-still-drive",
-          "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
+          "page": "/rental-car-broke-down-who-pays-towing-enterprise-hertz",
+          "title": "Rental Car Broke Down: Who Pays for Towing at Enterprise, Hertz & Other Companies | Tow With The Flow",
           "pageviews": 7,
           "avgDur": 0,
           "bounceRate": 100.0,
@@ -1102,10 +1102,10 @@
         },
         {
           "rank": 30,
-          "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
-          "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
+          "page": "/run-flat-tire-blowout-can-i-drive-to-shop",
+          "title": "Run Flat Tire Blowout: Can I Drive to the Shop? | Tow With The Flow",
           "pageviews": 7,
-          "avgDur": 3,
+          "avgDur": 0,
           "bounceRate": 100.0,
           "sessions": 7
         }
@@ -1113,18 +1113,18 @@
       "trafficSources": [
         {
           "channel": "Direct",
-          "sessions": 1093,
-          "pct": 81.0
+          "sessions": 1119,
+          "pct": 81.6
         },
         {
           "channel": "Organic Search",
-          "sessions": 232,
-          "pct": 17.2
+          "sessions": 238,
+          "pct": 17.3
         },
         {
           "channel": "Unassigned",
-          "sessions": 19,
-          "pct": 1.4
+          "sessions": 10,
+          "pct": 0.7
         },
         {
           "channel": "AI Assistant",
@@ -1141,38 +1141,38 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 1093,
-          "pct": 81.0
+          "sessions": 1119,
+          "pct": 81.6
         },
         {
           "source": "bing",
           "medium": "organic",
-          "sessions": 97,
-          "pct": 7.2
+          "sessions": 101,
+          "pct": 7.4
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 74,
+          "sessions": 76,
           "pct": 5.5
         },
         {
           "source": "yahoo",
           "medium": "organic",
           "sessions": 44,
-          "pct": 3.3
-        },
-        {
-          "source": "(not set)",
-          "medium": "(not set)",
-          "sessions": 14,
-          "pct": 1.0
+          "pct": 3.2
         },
         {
           "source": "ecosia.org",
           "medium": "organic",
           "sessions": 10,
           "pct": 0.7
+        },
+        {
+          "source": "(not set)",
+          "medium": "(not set)",
+          "sessions": 5,
+          "pct": 0.4
         },
         {
           "source": "copilot.com",
@@ -1232,15 +1232,15 @@
       "topCountries": [
         {
           "country": "Singapore",
-          "sessions": 786
+          "sessions": 802
         },
         {
           "country": "United States",
-          "sessions": 321
+          "sessions": 328
         },
         {
           "country": "China",
-          "sessions": 205
+          "sessions": 212
         },
         {
           "country": "Iran",
@@ -1267,14 +1267,6 @@
           "sessions": 3
         },
         {
-          "country": "France",
-          "sessions": 3
-        },
-        {
-          "country": "Germany",
-          "sessions": 3
-        },
-        {
           "country": "Netherlands",
           "sessions": 3
         },
@@ -1291,11 +1283,19 @@
           "sessions": 3
         },
         {
+          "country": "France",
+          "sessions": 2
+        },
+        {
           "country": "Hong Kong",
           "sessions": 2
         },
         {
           "country": "Indonesia",
+          "sessions": 2
+        },
+        {
+          "country": "Iraq",
           "sessions": 2
         },
         {
@@ -1314,23 +1314,19 @@
       "topCities": [
         {
           "city": "Singapore",
-          "sessions": 785
+          "sessions": 800
         },
         {
           "city": "(not set)",
-          "sessions": 185
+          "sessions": 201
         },
         {
           "city": "Shenzhen",
-          "sessions": 35
+          "sessions": 37
         },
         {
           "city": "San Jose",
-          "sessions": 29
-        },
-        {
-          "city": "",
-          "sessions": 14
+          "sessions": 30
         },
         {
           "city": "Chicago",
@@ -1338,29 +1334,33 @@
         },
         {
           "city": "Los Angeles",
-          "sessions": 10
+          "sessions": 12
         },
         {
           "city": "Ashburn",
           "sessions": 8
         },
         {
-          "city": "Denver",
+          "city": "Tehran",
           "sessions": 8
         },
         {
-          "city": "Tehran",
-          "sessions": 8
+          "city": "Denver",
+          "sessions": 7
+        },
+        {
+          "city": "Indianapolis",
+          "sessions": 7
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 1038
+          "sessions": 1059
         },
         {
           "device": "mobile",
-          "sessions": 299
+          "sessions": 305
         },
         {
           "device": "tablet",
@@ -1370,19 +1370,19 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 969
+          "sessions": 989
         },
         {
           "browser": "Android Webview",
-          "sessions": 154
+          "sessions": 159
         },
         {
           "browser": "Safari",
-          "sessions": 103
+          "sessions": 102
         },
         {
           "browser": "Edge",
-          "sessions": 89
+          "sessions": 92
         },
         {
           "browser": "Firefox",
@@ -1392,19 +1392,19 @@
       "os": [
         {
           "os": "Windows",
-          "sessions": 882
+          "sessions": 899
         },
         {
           "os": "Android",
-          "sessions": 206
+          "sessions": 213
         },
         {
           "os": "iOS",
-          "sessions": 97
+          "sessions": 96
         },
         {
           "os": "Linux",
-          "sessions": 86
+          "sessions": 88
         },
         {
           "os": "Macintosh",
@@ -1413,17 +1413,13 @@
       ]
     },
     "90d": {
-      "pageviews": 1563,
-      "sessions": 1542,
+      "pageviews": 1604,
+      "sessions": 1582,
       "avgSessionDur": 36,
-      "bounceRate": 0.8255512321660181,
-      "newUsers": 1498,
-      "returningUsers": 3,
+      "bounceRate": 0.8230088495575221,
+      "newUsers": 1537,
+      "returningUsers": 0,
       "daily": [
-        {
-          "date": "20260529",
-          "pageviews": 1
-        },
         {
           "date": "20260530",
           "pageviews": 1
@@ -1734,11 +1730,15 @@
         },
         {
           "date": "20260826",
-          "pageviews": 53
+          "pageviews": 56
         },
         {
           "date": "20260827",
-          "pageviews": 17
+          "pageviews": 41
+        },
+        {
+          "date": "20260828",
+          "pageviews": 15
         }
       ],
       "topPages": [
@@ -1755,10 +1755,10 @@
           "rank": 2,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 25,
-          "avgDur": 197,
-          "bounceRate": 42.3,
-          "sessions": 26
+          "pageviews": 28,
+          "avgDur": 186,
+          "bounceRate": 42.9,
+          "sessions": 28
         },
         {
           "rank": 3,
@@ -1771,21 +1771,21 @@
         },
         {
           "rank": 4,
-          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 22,
-          "avgDur": 27,
-          "bounceRate": 70.8,
-          "sessions": 24
+          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+          "pageviews": 23,
+          "avgDur": 226,
+          "bounceRate": 31.8,
+          "sessions": 22
         },
         {
           "rank": 5,
-          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
-          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
-          "pageviews": 21,
-          "avgDur": 248,
-          "bounceRate": 25.0,
-          "sessions": 20
+          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
+          "pageviews": 22,
+          "avgDur": 29,
+          "bounceRate": 66.7,
+          "sessions": 24
         },
         {
           "rank": 6,
@@ -1828,7 +1828,7 @@
           "page": "/car-wont-start-after-getting-gas-what-to-do/",
           "title": "Car Won't Start After Getting Gas: Quick Fixes That Work | Tow With The Flow",
           "pageviews": 15,
-          "avgDur": 1,
+          "avgDur": 2,
           "bounceRate": 100.0,
           "sessions": 15
         },
@@ -1861,6 +1861,15 @@
         },
         {
           "rank": 14,
+          "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
+          "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
+          "pageviews": 11,
+          "avgDur": 18,
+          "bounceRate": 81.8,
+          "sessions": 11
+        },
+        {
+          "rank": 15,
           "page": "/progressive-roadside-assistance-towing-limit-miles/",
           "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 11,
@@ -1869,21 +1878,12 @@
           "sessions": 13
         },
         {
-          "rank": 15,
+          "rank": 16,
           "page": "/car-bottomed-out-on-road-now-wont-drive-emergency/",
           "title": "Car Bottomed Out on Road Now Won't Drive: Emergency Steps | Tow With The Flow",
           "pageviews": 10,
           "avgDur": 1,
           "bounceRate": 100.0,
-          "sessions": 10
-        },
-        {
-          "rank": 16,
-          "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
-          "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
-          "pageviews": 10,
-          "avgDur": 20,
-          "bounceRate": 80.0,
           "sessions": 10
         },
         {
@@ -1915,6 +1915,15 @@
         },
         {
           "rank": 20,
+          "page": "/car-wont-start-but-has-power-dashboard-lights-on",
+          "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 9
+        },
+        {
+          "rank": 21,
           "page": "/farmers-insurance-towing-benefit-how-much-pays/",
           "title": "How Much Does Farmers Insurance Pay for Towing? Coverage Limits Explained | Tow With The Flow",
           "pageviews": 9,
@@ -1923,7 +1932,25 @@
           "sessions": 12
         },
         {
-          "rank": 21,
+          "rank": 22,
+          "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
+          "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 263,
+          "bounceRate": 33.3,
+          "sessions": 9
+        },
+        {
+          "rank": 23,
+          "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
+          "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 4,
+          "bounceRate": 88.9,
+          "sessions": 9
+        },
+        {
+          "rank": 24,
           "page": "/alternator-failed-while-driving-what-happens-next/",
           "title": "Alternator Failed While Driving: What Happens Next | Tow With The Flow",
           "pageviews": 8,
@@ -1932,7 +1959,7 @@
           "sessions": 8
         },
         {
-          "rank": 22,
+          "rank": 25,
           "page": "/average-towing-cost-per-mile-usa",
           "title": "Average Towing Cost Per Mile in the USA | Tow With The Flow",
           "pageviews": 8,
@@ -1941,7 +1968,7 @@
           "sessions": 8
         },
         {
-          "rank": 23,
+          "rank": 26,
           "page": "/car-door-wont-open-from-inside-emergency/",
           "title": "Car Door Won't Open From Inside Emergency: What to Do Right Now | Tow With The Flow",
           "pageviews": 8,
@@ -1950,7 +1977,7 @@
           "sessions": 8
         },
         {
-          "rank": 24,
+          "rank": 27,
           "page": "/car-wont-shift-out-of-park-towing-options",
           "title": "Car Won't Shift Out of Park Towing Options: What to Do When Stuck | Tow With The Flow",
           "pageviews": 8,
@@ -1959,34 +1986,16 @@
           "sessions": 8
         },
         {
-          "rank": 25,
-          "page": "/car-wont-start-but-has-power-dashboard-lights-on",
-          "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 0,
-          "bounceRate": 100.0,
-          "sessions": 8
-        },
-        {
-          "rank": 26,
-          "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
-          "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 289,
-          "bounceRate": 37.5,
-          "sessions": 8
-        },
-        {
-          "rank": 27,
-          "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
-          "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 4,
-          "bounceRate": 87.5,
-          "sessions": 8
-        },
-        {
           "rank": 28,
+          "page": "/state-farm-covers-towing-how-much-per-year/",
+          "title": "State Farm Towing Coverage: Annual Limits and What You Get | Tow With The Flow",
+          "pageviews": 8,
+          "avgDur": 87,
+          "bounceRate": 50.0,
+          "sessions": 8
+        },
+        {
+          "rank": 29,
           "page": "/brake-failure-while-driving-emergency-steps/",
           "title": "Brake Failure While Driving: Emergency Steps to Take Right Now | Tow With The Flow",
           "pageviews": 7,
@@ -1995,39 +2004,30 @@
           "sessions": 7
         },
         {
-          "rank": 29,
+          "rank": 30,
           "page": "/car-battery-died-in-parking-garage-who-to-call/",
           "title": "Car Battery Died in Parking Garage: Who to Call Right Now | Tow With The Flow",
           "pageviews": 7,
           "avgDur": 169,
-          "bounceRate": 71.4,
-          "sessions": 7
-        },
-        {
-          "rank": 30,
-          "page": "/check-engine-light-flashing-car-shaking-emergency",
-          "title": "Check Engine Light Flashing and Car Shaking: What to Do Right Now | Tow With The Flow",
-          "pageviews": 7,
-          "avgDur": 3,
-          "bounceRate": 85.7,
+          "bounceRate": 57.1,
           "sessions": 7
         }
       ],
       "trafficSources": [
         {
           "channel": "Direct",
-          "sessions": 1159,
-          "pct": 74.8
+          "sessions": 1190,
+          "pct": 75.1
         },
         {
           "channel": "Organic Search",
-          "sessions": 359,
-          "pct": 23.2
+          "sessions": 372,
+          "pct": 23.5
         },
         {
           "channel": "Unassigned",
-          "sessions": 24,
-          "pct": 1.5
+          "sessions": 15,
+          "pct": 0.9
         },
         {
           "channel": "AI Assistant",
@@ -2044,32 +2044,26 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 1159,
-          "pct": 74.7
+          "sessions": 1190,
+          "pct": 75.1
         },
         {
           "source": "bing",
           "medium": "organic",
-          "sessions": 147,
-          "pct": 9.5
+          "sessions": 153,
+          "pct": 9.7
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 112,
-          "pct": 7.2
+          "sessions": 117,
+          "pct": 7.4
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 69,
+          "sessions": 70,
           "pct": 4.4
-        },
-        {
-          "source": "(not set)",
-          "medium": "(not set)",
-          "sessions": 16,
-          "pct": 1.0
         },
         {
           "source": "google",
@@ -2084,10 +2078,16 @@
           "pct": 0.8
         },
         {
+          "source": "(not set)",
+          "medium": "(not set)",
+          "sessions": 7,
+          "pct": 0.4
+        },
+        {
           "source": "copilot.com",
           "medium": "(not set)",
           "sessions": 7,
-          "pct": 0.5
+          "pct": 0.4
         },
         {
           "source": "copilot.com",
@@ -2135,15 +2135,15 @@
       "topCountries": [
         {
           "country": "Singapore",
-          "sessions": 787
+          "sessions": 804
         },
         {
           "country": "United States",
-          "sessions": 478
+          "sessions": 492
         },
         {
           "country": "China",
-          "sessions": 216
+          "sessions": 223
         },
         {
           "country": "Canada",
@@ -2166,12 +2166,12 @@
           "sessions": 7
         },
         {
-          "country": "Morocco",
+          "country": "Iraq",
           "sessions": 5
         },
         {
-          "country": "Iraq",
-          "sessions": 4
+          "country": "Morocco",
+          "sessions": 5
         },
         {
           "country": "T\u00fcrkiye",
@@ -2217,35 +2217,31 @@
       "topCities": [
         {
           "city": "Singapore",
-          "sessions": 785
+          "sessions": 801
         },
         {
           "city": "(not set)",
-          "sessions": 215
+          "sessions": 230
         },
         {
           "city": "Shenzhen",
-          "sessions": 35
+          "sessions": 37
         },
         {
           "city": "San Jose",
-          "sessions": 30
+          "sessions": 31
         },
         {
           "city": "Chicago",
-          "sessions": 20
+          "sessions": 21
         },
         {
-          "city": "",
-          "sessions": 14
+          "city": "Los Angeles",
+          "sessions": 15
         },
         {
           "city": "Ashburn",
           "sessions": 14
-        },
-        {
-          "city": "Los Angeles",
-          "sessions": 13
         },
         {
           "city": "Seattle",
@@ -2254,16 +2250,20 @@
         {
           "city": "Atlanta",
           "sessions": 10
+        },
+        {
+          "city": "Boardman",
+          "sessions": 9
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 1161
+          "sessions": 1189
         },
         {
           "device": "mobile",
-          "sessions": 377
+          "sessions": 387
         },
         {
           "device": "tablet",
@@ -2273,55 +2273,55 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 1055
+          "sessions": 1081
         },
         {
           "browser": "Android Webview",
-          "sessions": 162
+          "sessions": 167
         },
         {
           "browser": "Safari",
-          "sessions": 157
+          "sessions": 158
         },
         {
           "browser": "Edge",
-          "sessions": 135
+          "sessions": 140
         },
         {
           "browser": "Firefox",
-          "sessions": 27
+          "sessions": 28
         }
       ],
       "os": [
         {
           "os": "Windows",
-          "sessions": 978
+          "sessions": 1000
         },
         {
           "os": "Android",
-          "sessions": 235
+          "sessions": 244
         },
         {
           "os": "iOS",
-          "sessions": 147
+          "sessions": 148
         },
         {
           "os": "Linux",
-          "sessions": 97
+          "sessions": 100
         },
         {
           "os": "Macintosh",
-          "sessions": 85
+          "sessions": 86
         }
       ]
     },
     "180d": {
-      "pageviews": 1576,
-      "sessions": 1548,
+      "pageviews": 1618,
+      "sessions": 1589,
       "avgSessionDur": 36,
-      "bounceRate": 0.8255813953488372,
-      "newUsers": 1505,
-      "returningUsers": 3,
+      "bounceRate": 0.8225298930144745,
+      "newUsers": 1545,
+      "returningUsers": 0,
       "daily": [
         {
           "date": "20260416",
@@ -2657,11 +2657,15 @@
         },
         {
           "date": "20260826",
-          "pageviews": 53
+          "pageviews": 56
         },
         {
           "date": "20260827",
-          "pageviews": 17
+          "pageviews": 41
+        },
+        {
+          "date": "20260828",
+          "pageviews": 15
         }
       ],
       "topPages": [
@@ -2678,10 +2682,10 @@
           "rank": 2,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 25,
-          "avgDur": 197,
-          "bounceRate": 42.3,
-          "sessions": 26
+          "pageviews": 28,
+          "avgDur": 186,
+          "bounceRate": 42.9,
+          "sessions": 28
         },
         {
           "rank": 3,
@@ -2694,21 +2698,21 @@
         },
         {
           "rank": 4,
-          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 22,
-          "avgDur": 27,
-          "bounceRate": 70.8,
-          "sessions": 24
+          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+          "pageviews": 23,
+          "avgDur": 226,
+          "bounceRate": 31.8,
+          "sessions": 22
         },
         {
           "rank": 5,
-          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
-          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
-          "pageviews": 21,
-          "avgDur": 248,
-          "bounceRate": 25.0,
-          "sessions": 20
+          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
+          "pageviews": 22,
+          "avgDur": 29,
+          "bounceRate": 66.7,
+          "sessions": 24
         },
         {
           "rank": 6,
@@ -2751,7 +2755,7 @@
           "page": "/car-wont-start-after-getting-gas-what-to-do/",
           "title": "Car Won't Start After Getting Gas: Quick Fixes That Work | Tow With The Flow",
           "pageviews": 15,
-          "avgDur": 1,
+          "avgDur": 2,
           "bounceRate": 100.0,
           "sessions": 15
         },
@@ -2784,6 +2788,15 @@
         },
         {
           "rank": 14,
+          "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
+          "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
+          "pageviews": 11,
+          "avgDur": 18,
+          "bounceRate": 81.8,
+          "sessions": 11
+        },
+        {
+          "rank": 15,
           "page": "/progressive-roadside-assistance-towing-limit-miles/",
           "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 11,
@@ -2792,21 +2805,12 @@
           "sessions": 13
         },
         {
-          "rank": 15,
+          "rank": 16,
           "page": "/car-bottomed-out-on-road-now-wont-drive-emergency/",
           "title": "Car Bottomed Out on Road Now Won't Drive: Emergency Steps | Tow With The Flow",
           "pageviews": 10,
           "avgDur": 1,
           "bounceRate": 100.0,
-          "sessions": 10
-        },
-        {
-          "rank": 16,
-          "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
-          "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
-          "pageviews": 10,
-          "avgDur": 20,
-          "bounceRate": 80.0,
           "sessions": 10
         },
         {
@@ -2838,6 +2842,15 @@
         },
         {
           "rank": 20,
+          "page": "/car-wont-start-but-has-power-dashboard-lights-on",
+          "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 9
+        },
+        {
+          "rank": 21,
           "page": "/farmers-insurance-towing-benefit-how-much-pays/",
           "title": "How Much Does Farmers Insurance Pay for Towing? Coverage Limits Explained | Tow With The Flow",
           "pageviews": 9,
@@ -2846,7 +2859,25 @@
           "sessions": 12
         },
         {
-          "rank": 21,
+          "rank": 22,
+          "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
+          "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 263,
+          "bounceRate": 33.3,
+          "sessions": 9
+        },
+        {
+          "rank": 23,
+          "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
+          "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 4,
+          "bounceRate": 88.9,
+          "sessions": 9
+        },
+        {
+          "rank": 24,
           "page": "/alternator-failed-while-driving-what-happens-next/",
           "title": "Alternator Failed While Driving: What Happens Next | Tow With The Flow",
           "pageviews": 8,
@@ -2855,7 +2886,7 @@
           "sessions": 8
         },
         {
-          "rank": 22,
+          "rank": 25,
           "page": "/average-towing-cost-per-mile-usa",
           "title": "Average Towing Cost Per Mile in the USA | Tow With The Flow",
           "pageviews": 8,
@@ -2864,7 +2895,7 @@
           "sessions": 8
         },
         {
-          "rank": 23,
+          "rank": 26,
           "page": "/car-door-wont-open-from-inside-emergency/",
           "title": "Car Door Won't Open From Inside Emergency: What to Do Right Now | Tow With The Flow",
           "pageviews": 8,
@@ -2873,7 +2904,7 @@
           "sessions": 8
         },
         {
-          "rank": 24,
+          "rank": 27,
           "page": "/car-wont-shift-out-of-park-towing-options",
           "title": "Car Won't Shift Out of Park Towing Options: What to Do When Stuck | Tow With The Flow",
           "pageviews": 8,
@@ -2882,34 +2913,16 @@
           "sessions": 8
         },
         {
-          "rank": 25,
-          "page": "/car-wont-start-but-has-power-dashboard-lights-on",
-          "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 0,
-          "bounceRate": 100.0,
-          "sessions": 8
-        },
-        {
-          "rank": 26,
-          "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
-          "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 289,
-          "bounceRate": 37.5,
-          "sessions": 8
-        },
-        {
-          "rank": 27,
-          "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
-          "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 4,
-          "bounceRate": 87.5,
-          "sessions": 8
-        },
-        {
           "rank": 28,
+          "page": "/state-farm-covers-towing-how-much-per-year/",
+          "title": "State Farm Towing Coverage: Annual Limits and What You Get | Tow With The Flow",
+          "pageviews": 8,
+          "avgDur": 87,
+          "bounceRate": 50.0,
+          "sessions": 8
+        },
+        {
+          "rank": 29,
           "page": "/brake-failure-while-driving-emergency-steps/",
           "title": "Brake Failure While Driving: Emergency Steps to Take Right Now | Tow With The Flow",
           "pageviews": 7,
@@ -2918,39 +2931,30 @@
           "sessions": 7
         },
         {
-          "rank": 29,
+          "rank": 30,
           "page": "/car-battery-died-in-parking-garage-who-to-call/",
           "title": "Car Battery Died in Parking Garage: Who to Call Right Now | Tow With The Flow",
           "pageviews": 7,
           "avgDur": 169,
-          "bounceRate": 71.4,
-          "sessions": 7
-        },
-        {
-          "rank": 30,
-          "page": "/check-engine-light-flashing-car-shaking-emergency",
-          "title": "Check Engine Light Flashing and Car Shaking: What to Do Right Now | Tow With The Flow",
-          "pageviews": 7,
-          "avgDur": 3,
-          "bounceRate": 85.7,
+          "bounceRate": 57.1,
           "sessions": 7
         }
       ],
       "trafficSources": [
         {
           "channel": "Direct",
-          "sessions": 1164,
-          "pct": 74.8
+          "sessions": 1195,
+          "pct": 75.1
         },
         {
           "channel": "Organic Search",
-          "sessions": 359,
-          "pct": 23.1
+          "sessions": 373,
+          "pct": 23.4
         },
         {
           "channel": "Unassigned",
-          "sessions": 24,
-          "pct": 1.5
+          "sessions": 15,
+          "pct": 0.9
         },
         {
           "channel": "AI Assistant",
@@ -2967,32 +2971,26 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 1164,
-          "pct": 74.8
+          "sessions": 1195,
+          "pct": 75.1
         },
         {
           "source": "bing",
           "medium": "organic",
-          "sessions": 147,
-          "pct": 9.4
+          "sessions": 153,
+          "pct": 9.6
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 112,
-          "pct": 7.2
+          "sessions": 118,
+          "pct": 7.4
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 69,
+          "sessions": 70,
           "pct": 4.4
-        },
-        {
-          "source": "(not set)",
-          "medium": "(not set)",
-          "sessions": 16,
-          "pct": 1.0
         },
         {
           "source": "google",
@@ -3005,6 +3003,12 @@
           "medium": "organic",
           "sessions": 12,
           "pct": 0.8
+        },
+        {
+          "source": "(not set)",
+          "medium": "(not set)",
+          "sessions": 7,
+          "pct": 0.4
         },
         {
           "source": "copilot.com",
@@ -3064,15 +3068,15 @@
       "topCountries": [
         {
           "country": "Singapore",
-          "sessions": 787
+          "sessions": 804
         },
         {
           "country": "United States",
-          "sessions": 480
+          "sessions": 495
         },
         {
           "country": "China",
-          "sessions": 216
+          "sessions": 223
         },
         {
           "country": "Canada",
@@ -3095,6 +3099,10 @@
           "sessions": 8
         },
         {
+          "country": "Iraq",
+          "sessions": 5
+        },
+        {
           "country": "Morocco",
           "sessions": 5
         },
@@ -3104,10 +3112,6 @@
         },
         {
           "country": "(not set)",
-          "sessions": 4
-        },
-        {
-          "country": "Iraq",
           "sessions": 4
         },
         {
@@ -3146,35 +3150,31 @@
       "topCities": [
         {
           "city": "Singapore",
-          "sessions": 785
+          "sessions": 801
         },
         {
           "city": "(not set)",
-          "sessions": 219
+          "sessions": 235
         },
         {
           "city": "Shenzhen",
-          "sessions": 35
+          "sessions": 37
         },
         {
           "city": "San Jose",
-          "sessions": 30
+          "sessions": 31
         },
         {
           "city": "Chicago",
-          "sessions": 20
+          "sessions": 21
         },
         {
-          "city": "",
-          "sessions": 14
+          "city": "Los Angeles",
+          "sessions": 15
         },
         {
           "city": "Ashburn",
           "sessions": 14
-        },
-        {
-          "city": "Los Angeles",
-          "sessions": 13
         },
         {
           "city": "Seattle",
@@ -3183,16 +3183,20 @@
         {
           "city": "Atlanta",
           "sessions": 10
+        },
+        {
+          "city": "Boardman",
+          "sessions": 9
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 1165
+          "sessions": 1193
         },
         {
           "device": "mobile",
-          "sessions": 380
+          "sessions": 391
         },
         {
           "device": "tablet",
@@ -3202,55 +3206,55 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 1062
+          "sessions": 1089
         },
         {
           "browser": "Android Webview",
-          "sessions": 162
+          "sessions": 167
         },
         {
           "browser": "Safari",
-          "sessions": 157
+          "sessions": 159
         },
         {
           "browser": "Edge",
-          "sessions": 135
+          "sessions": 140
         },
         {
           "browser": "Firefox",
-          "sessions": 27
+          "sessions": 28
         }
       ],
       "os": [
         {
           "os": "Windows",
-          "sessions": 979
+          "sessions": 1001
         },
         {
           "os": "Android",
-          "sessions": 238
+          "sessions": 247
         },
         {
           "os": "iOS",
-          "sessions": 147
+          "sessions": 149
         },
         {
           "os": "Linux",
-          "sessions": 98
+          "sessions": 101
         },
         {
           "os": "Macintosh",
-          "sessions": 87
+          "sessions": 88
         }
       ]
     },
     "365d": {
-      "pageviews": 1576,
-      "sessions": 1548,
+      "pageviews": 1618,
+      "sessions": 1589,
       "avgSessionDur": 36,
-      "bounceRate": 0.8255813953488372,
-      "newUsers": 1505,
-      "returningUsers": 3,
+      "bounceRate": 0.8225298930144745,
+      "newUsers": 1545,
+      "returningUsers": 0,
       "daily": [
         {
           "date": "20260416",
@@ -3586,11 +3590,15 @@
         },
         {
           "date": "20260826",
-          "pageviews": 53
+          "pageviews": 56
         },
         {
           "date": "20260827",
-          "pageviews": 17
+          "pageviews": 41
+        },
+        {
+          "date": "20260828",
+          "pageviews": 15
         }
       ],
       "topPages": [
@@ -3607,10 +3615,10 @@
           "rank": 2,
           "page": "/usaa-roadside-assistance-towing-coverage-limits/",
           "title": "USAA Roadside Assistance Towing Coverage Limits: What You Need to Know | Tow With The Flow",
-          "pageviews": 25,
-          "avgDur": 197,
-          "bounceRate": 42.3,
-          "sessions": 26
+          "pageviews": 28,
+          "avgDur": 186,
+          "bounceRate": 42.9,
+          "sessions": 28
         },
         {
           "rank": 3,
@@ -3623,21 +3631,21 @@
         },
         {
           "rank": 4,
-          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
-          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
-          "pageviews": 22,
-          "avgDur": 27,
-          "bounceRate": 70.8,
-          "sessions": 24
+          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
+          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
+          "pageviews": 23,
+          "avgDur": 226,
+          "bounceRate": 31.8,
+          "sessions": 22
         },
         {
           "rank": 5,
-          "page": "/costco-auto-insurance-roadside-assistance-towing-coverage/",
-          "title": "Costco Auto Insurance Roadside Assistance: What Towing Coverage You Get | Tow With The Flow",
-          "pageviews": 21,
-          "avgDur": 248,
-          "bounceRate": 25.0,
-          "sessions": 20
+          "page": "/how-long-can-a-car-sit-broken-down-on-roadside/",
+          "title": "How Long Can a Car Sit Broken Down on the Roadside? | Tow With The Flow",
+          "pageviews": 22,
+          "avgDur": 29,
+          "bounceRate": 66.7,
+          "sessions": 24
         },
         {
           "rank": 6,
@@ -3680,7 +3688,7 @@
           "page": "/car-wont-start-after-getting-gas-what-to-do/",
           "title": "Car Won't Start After Getting Gas: Quick Fixes That Work | Tow With The Flow",
           "pageviews": 15,
-          "avgDur": 1,
+          "avgDur": 2,
           "bounceRate": 100.0,
           "sessions": 15
         },
@@ -3713,6 +3721,15 @@
         },
         {
           "rank": 14,
+          "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
+          "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
+          "pageviews": 11,
+          "avgDur": 18,
+          "bounceRate": 81.8,
+          "sessions": 11
+        },
+        {
+          "rank": 15,
           "page": "/progressive-roadside-assistance-towing-limit-miles/",
           "title": "Progressive Roadside Assistance Towing Limit Miles: What You Need to Know | Tow With The Flow",
           "pageviews": 11,
@@ -3721,21 +3738,12 @@
           "sessions": 13
         },
         {
-          "rank": 15,
+          "rank": 16,
           "page": "/car-bottomed-out-on-road-now-wont-drive-emergency/",
           "title": "Car Bottomed Out on Road Now Won't Drive: Emergency Steps | Tow With The Flow",
           "pageviews": 10,
           "avgDur": 1,
           "bounceRate": 100.0,
-          "sessions": 10
-        },
-        {
-          "rank": 16,
-          "page": "/car-doors-wont-unlock-battery-dead-stranded-inside/",
-          "title": "Car Doors Won't Unlock Battery Dead Stranded Inside: What to Do Right Now | Tow With The Flow",
-          "pageviews": 10,
-          "avgDur": 20,
-          "bounceRate": 80.0,
           "sessions": 10
         },
         {
@@ -3767,6 +3775,15 @@
         },
         {
           "rank": 20,
+          "page": "/car-wont-start-but-has-power-dashboard-lights-on",
+          "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 0,
+          "bounceRate": 100.0,
+          "sessions": 9
+        },
+        {
+          "rank": 21,
           "page": "/farmers-insurance-towing-benefit-how-much-pays/",
           "title": "How Much Does Farmers Insurance Pay for Towing? Coverage Limits Explained | Tow With The Flow",
           "pageviews": 9,
@@ -3775,7 +3792,25 @@
           "sessions": 12
         },
         {
-          "rank": 21,
+          "rank": 22,
+          "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
+          "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 263,
+          "bounceRate": 33.3,
+          "sessions": 9
+        },
+        {
+          "rank": 23,
+          "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
+          "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
+          "pageviews": 9,
+          "avgDur": 4,
+          "bounceRate": 88.9,
+          "sessions": 9
+        },
+        {
+          "rank": 24,
           "page": "/alternator-failed-while-driving-what-happens-next/",
           "title": "Alternator Failed While Driving: What Happens Next | Tow With The Flow",
           "pageviews": 8,
@@ -3784,7 +3819,7 @@
           "sessions": 8
         },
         {
-          "rank": 22,
+          "rank": 25,
           "page": "/average-towing-cost-per-mile-usa",
           "title": "Average Towing Cost Per Mile in the USA | Tow With The Flow",
           "pageviews": 8,
@@ -3793,7 +3828,7 @@
           "sessions": 8
         },
         {
-          "rank": 23,
+          "rank": 26,
           "page": "/car-door-wont-open-from-inside-emergency/",
           "title": "Car Door Won't Open From Inside Emergency: What to Do Right Now | Tow With The Flow",
           "pageviews": 8,
@@ -3802,7 +3837,7 @@
           "sessions": 8
         },
         {
-          "rank": 24,
+          "rank": 27,
           "page": "/car-wont-shift-out-of-park-towing-options",
           "title": "Car Won't Shift Out of Park Towing Options: What to Do When Stuck | Tow With The Flow",
           "pageviews": 8,
@@ -3811,34 +3846,16 @@
           "sessions": 8
         },
         {
-          "rank": 25,
-          "page": "/car-wont-start-but-has-power-dashboard-lights-on",
-          "title": "Car Won't Start But Has Power Dashboard Lights On: What to Check First | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 0,
-          "bounceRate": 100.0,
-          "sessions": 8
-        },
-        {
-          "rank": 26,
-          "page": "/geico-roadside-assistance-towing-coverage-how-much-pays/",
-          "title": "GEICO Roadside Assistance Towing Coverage: How Much They Pay | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 289,
-          "bounceRate": 37.5,
-          "sessions": 8
-        },
-        {
-          "rank": 27,
-          "page": "/run-flat-tire-completely-flat-can-i-still-drive/",
-          "title": "Run Flat Tire Completely Flat: Can I Still Drive? | Tow With The Flow",
-          "pageviews": 8,
-          "avgDur": 4,
-          "bounceRate": 87.5,
-          "sessions": 8
-        },
-        {
           "rank": 28,
+          "page": "/state-farm-covers-towing-how-much-per-year/",
+          "title": "State Farm Towing Coverage: Annual Limits and What You Get | Tow With The Flow",
+          "pageviews": 8,
+          "avgDur": 87,
+          "bounceRate": 50.0,
+          "sessions": 8
+        },
+        {
+          "rank": 29,
           "page": "/brake-failure-while-driving-emergency-steps/",
           "title": "Brake Failure While Driving: Emergency Steps to Take Right Now | Tow With The Flow",
           "pageviews": 7,
@@ -3847,39 +3864,30 @@
           "sessions": 7
         },
         {
-          "rank": 29,
+          "rank": 30,
           "page": "/car-battery-died-in-parking-garage-who-to-call/",
           "title": "Car Battery Died in Parking Garage: Who to Call Right Now | Tow With The Flow",
           "pageviews": 7,
           "avgDur": 169,
-          "bounceRate": 71.4,
-          "sessions": 7
-        },
-        {
-          "rank": 30,
-          "page": "/check-engine-light-flashing-car-shaking-emergency",
-          "title": "Check Engine Light Flashing and Car Shaking: What to Do Right Now | Tow With The Flow",
-          "pageviews": 7,
-          "avgDur": 3,
-          "bounceRate": 85.7,
+          "bounceRate": 57.1,
           "sessions": 7
         }
       ],
       "trafficSources": [
         {
           "channel": "Direct",
-          "sessions": 1164,
-          "pct": 74.8
+          "sessions": 1195,
+          "pct": 75.1
         },
         {
           "channel": "Organic Search",
-          "sessions": 359,
-          "pct": 23.1
+          "sessions": 373,
+          "pct": 23.4
         },
         {
           "channel": "Unassigned",
-          "sessions": 24,
-          "pct": 1.5
+          "sessions": 15,
+          "pct": 0.9
         },
         {
           "channel": "AI Assistant",
@@ -3896,32 +3904,26 @@
         {
           "source": "(direct)",
           "medium": "(none)",
-          "sessions": 1164,
-          "pct": 74.8
+          "sessions": 1195,
+          "pct": 75.1
         },
         {
           "source": "bing",
           "medium": "organic",
-          "sessions": 147,
-          "pct": 9.4
+          "sessions": 153,
+          "pct": 9.6
         },
         {
           "source": "duckduckgo",
           "medium": "organic",
-          "sessions": 112,
-          "pct": 7.2
+          "sessions": 118,
+          "pct": 7.4
         },
         {
           "source": "yahoo",
           "medium": "organic",
-          "sessions": 69,
+          "sessions": 70,
           "pct": 4.4
-        },
-        {
-          "source": "(not set)",
-          "medium": "(not set)",
-          "sessions": 16,
-          "pct": 1.0
         },
         {
           "source": "google",
@@ -3934,6 +3936,12 @@
           "medium": "organic",
           "sessions": 12,
           "pct": 0.8
+        },
+        {
+          "source": "(not set)",
+          "medium": "(not set)",
+          "sessions": 7,
+          "pct": 0.4
         },
         {
           "source": "copilot.com",
@@ -3993,15 +4001,15 @@
       "topCountries": [
         {
           "country": "Singapore",
-          "sessions": 787
+          "sessions": 804
         },
         {
           "country": "United States",
-          "sessions": 480
+          "sessions": 495
         },
         {
           "country": "China",
-          "sessions": 216
+          "sessions": 223
         },
         {
           "country": "Canada",
@@ -4024,6 +4032,10 @@
           "sessions": 8
         },
         {
+          "country": "Iraq",
+          "sessions": 5
+        },
+        {
           "country": "Morocco",
           "sessions": 5
         },
@@ -4033,10 +4045,6 @@
         },
         {
           "country": "(not set)",
-          "sessions": 4
-        },
-        {
-          "country": "Iraq",
           "sessions": 4
         },
         {
@@ -4075,35 +4083,31 @@
       "topCities": [
         {
           "city": "Singapore",
-          "sessions": 785
+          "sessions": 801
         },
         {
           "city": "(not set)",
-          "sessions": 219
+          "sessions": 235
         },
         {
           "city": "Shenzhen",
-          "sessions": 35
+          "sessions": 37
         },
         {
           "city": "San Jose",
-          "sessions": 30
+          "sessions": 31
         },
         {
           "city": "Chicago",
-          "sessions": 20
+          "sessions": 21
         },
         {
-          "city": "",
-          "sessions": 14
+          "city": "Los Angeles",
+          "sessions": 15
         },
         {
           "city": "Ashburn",
           "sessions": 14
-        },
-        {
-          "city": "Los Angeles",
-          "sessions": 13
         },
         {
           "city": "Seattle",
@@ -4112,16 +4116,20 @@
         {
           "city": "Atlanta",
           "sessions": 10
+        },
+        {
+          "city": "Boardman",
+          "sessions": 9
         }
       ],
       "devices": [
         {
           "device": "desktop",
-          "sessions": 1165
+          "sessions": 1193
         },
         {
           "device": "mobile",
-          "sessions": 380
+          "sessions": 391
         },
         {
           "device": "tablet",
@@ -4131,48 +4139,48 @@
       "browsers": [
         {
           "browser": "Chrome",
-          "sessions": 1062
+          "sessions": 1089
         },
         {
           "browser": "Android Webview",
-          "sessions": 162
+          "sessions": 167
         },
         {
           "browser": "Safari",
-          "sessions": 157
+          "sessions": 159
         },
         {
           "browser": "Edge",
-          "sessions": 135
+          "sessions": 140
         },
         {
           "browser": "Firefox",
-          "sessions": 27
+          "sessions": 28
         }
       ],
       "os": [
         {
           "os": "Windows",
-          "sessions": 979
+          "sessions": 1001
         },
         {
           "os": "Android",
-          "sessions": 238
+          "sessions": 247
         },
         {
           "os": "iOS",
-          "sessions": 147
+          "sessions": 149
         },
         {
           "os": "Linux",
-          "sessions": 98
+          "sessions": 101
         },
         {
           "os": "Macintosh",
-          "sessions": 87
+          "sessions": 88
         }
       ]
     }
   },
-  "lastUpdated": "2026-08-27T17:39:30.735549+00:00"
+  "lastUpdated": "2026-08-28T18:43:54.860200+00:00"
 }
