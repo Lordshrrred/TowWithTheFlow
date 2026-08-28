@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-27T17:53:27.232024+00:00",
+  "generated_at": "2026-08-28T18:59:45.569029+00:00",
   "keywords": {
     "total": 802,
-    "live": 511,
-    "pending": 291,
+    "live": 515,
+    "pending": 287,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 323,
-      "pending": 291
+      "live": 327,
+      "pending": 287
     }
   },
   "next_targets": [
-    {
-      "keyword": "alternator died while driving signs and towing options",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car making burning smell while driving should i stop",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "broken down on highway at night safety tips what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car battery died in cold weather jump start vs tow",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "fuel pump failed on highway towing cost and options",
       "score": 8,
@@ -63,6 +43,26 @@
       "keyword": "how long can you drive with bad alternator",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "coolant leak emergency can i drive home",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont shift out of park roadside help",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car hydroplaned into ditch towing options",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "flat tire on freeway at night who to call",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -84,12 +84,12 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 43
+      "count": 45
     },
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 27
+      "count": 28
     },
     {
       "slug": "tire-wheel",
@@ -99,7 +99,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 15
+      "count": 16
     },
     {
       "slug": "accident-liability",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-27T10:02:51.793006+00:00",
+    "generated_at": "2026-08-28T11:40:56.852501+00:00",
     "platforms": {
       "blog": {
-        "checked": 485,
-        "verified": 218
+        "checked": 492,
+        "verified": 435
       },
       "dev": {
-        "checked": 415,
-        "verified": 411
+        "checked": 419,
+        "verified": 419
       },
       "feeder": {
-        "checked": 483,
-        "verified": 483
+        "checked": 487,
+        "verified": 487
       },
       "tumblr": {
-        "checked": 482,
-        "verified": 482
+        "checked": 486,
+        "verified": 486
       },
       "wordpress": {
-        "checked": 488,
-        "verified": 488
+        "checked": 492,
+        "verified": 492
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-27T17:53:26.938084+00:00",
+    "generated_at": "2026-08-28T18:59:45.432476+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 220,
+        "rows": 226,
         "source": "ga4",
         "status": "ok"
       }
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-27T17:53:27.249883+00:00",
+    "generatedAt": "2026-08-28T18:59:45.591953+00:00",
     "keywordGeneration": {
-      "currentInventory": 291,
-      "liveKeywords": 511,
-      "estimatedDaysRemaining": 72.8,
+      "currentInventory": 287,
+      "liveKeywords": 515,
+      "estimatedDaysRemaining": 71.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "72.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "71.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 334,
-      "backlogUnits": 358,
+      "backlogPosts": 123,
+      "backlogUnits": 141,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-27T10:02:51.793006+00:00",
+      "generatedAt": "2026-08-28T11:40:56.852501+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 18.6,
       "newPostsPerDay": 4.0,
