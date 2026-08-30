@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-29T12:49:26.276474+00:00",
+  "generated_at": "2026-08-30T12:12:47.856169+00:00",
   "keywords": {
     "total": 802,
-    "live": 519,
-    "pending": 283,
+    "live": 523,
+    "pending": 279,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 331,
-      "pending": 283
+      "live": 335,
+      "pending": 279
     }
   },
   "next_targets": [
-    {
-      "keyword": "flat tire on freeway no spare tire options",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how long can you drive with bad alternator",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "coolant leak emergency can i drive home",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont shift out of park roadside help",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "car hydroplaned into ditch towing options",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "does usaa cover emergency roadside towing costs",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "engine seized while driving need emergency tow",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car died on toll road who to call",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car breakdown in construction zone safety protocol",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont go over 30 mph limp mode",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 76
+      "count": 78
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 46
+      "count": 47
     },
     {
       "slug": "highway-safety",
@@ -94,7 +94,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 18
+      "count": 19
     },
     {
       "slug": "roadside-help",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-29T07:15:06.435574+00:00",
+    "generated_at": "2026-08-30T05:37:59.588508+00:00",
     "platforms": {
       "blog": {
-        "checked": 493,
-        "verified": 283
+        "checked": 496,
+        "verified": 248
       },
       "dev": {
-        "checked": 423,
-        "verified": 423
+        "checked": 427,
+        "verified": 427
       },
       "feeder": {
-        "checked": 491,
-        "verified": 491
+        "checked": 495,
+        "verified": 495
       },
       "tumblr": {
-        "checked": 490,
-        "verified": 490
+        "checked": 494,
+        "verified": 494
       },
       "wordpress": {
-        "checked": 496,
-        "verified": 496
+        "checked": 500,
+        "verified": 500
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-29T12:49:26.214141+00:00",
+    "generated_at": "2026-08-30T12:12:47.775985+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 58,
+        "rows": 59,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 234,
+        "rows": 238,
         "source": "ga4",
         "status": "ok"
       }
@@ -211,27 +211,27 @@
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 5,
-    "top_query_count": 16,
+    "top_landing_page_count": 6,
+    "top_query_count": 17,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-29T12:49:26.288282+00:00",
+    "generatedAt": "2026-08-30T12:12:47.881317+00:00",
     "keywordGeneration": {
-      "currentInventory": 283,
-      "liveKeywords": 519,
-      "estimatedDaysRemaining": 70.8,
+      "currentInventory": 279,
+      "liveKeywords": 523,
+      "estimatedDaysRemaining": 69.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "70.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "69.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 274,
-      "backlogUnits": 297,
+      "backlogPosts": 302,
+      "backlogUnits": 336,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-29T07:15:06.435574+00:00",
+      "generatedAt": "2026-08-30T05:37:59.588508+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
