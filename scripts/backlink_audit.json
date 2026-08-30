@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T19:27:51.522240+00:00",
+  "generated_at": "2026-08-30T22:52:57.815852+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -5062,6 +5062,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/16/does-insurance-cover-towing-if-car-is-not-driveable/",
+        "verified": true
+      }
+    },
+    "does-state-farm-pay-for-towing-after-accident": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/does-state-farm-pay-for-towing-after.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/does-state-farm-pay-for-towing-after-accident-what-youre-actually-covered-for-what-to-do-next-3c1m",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/does-state-farm-pay-for-towing-after-accident-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/826401410035974144/does-state-farm-pay-for-towing-after-accident",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/08/30/does-state-farm-pay-for-towing-after-accident/",
         "verified": true
       }
     },
@@ -13223,24 +13250,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 503,
-      "verified": 503
+      "checked": 504,
+      "verified": 504
     },
     "dev": {
-      "checked": 430,
-      "verified": 430
+      "checked": 431,
+      "verified": 431
     },
     "feeder": {
+      "checked": 499,
+      "verified": 499
+    },
+    "tumblr": {
       "checked": 498,
       "verified": 498
     },
-    "tumblr": {
-      "checked": 497,
-      "verified": 497
-    },
     "wordpress": {
-      "checked": 503,
-      "verified": 503
+      "checked": 504,
+      "verified": 504
     }
   }
 }
