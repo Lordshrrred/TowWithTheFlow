@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-30T12:12:47.856169+00:00",
+  "generated_at": "2026-08-31T14:23:44.899218+00:00",
   "keywords": {
     "total": 802,
-    "live": 523,
-    "pending": 279,
+    "live": 527,
+    "pending": 275,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 335,
-      "pending": 279
+      "live": 339,
+      "pending": 275
     }
   },
   "next_targets": [
-    {
-      "keyword": "car hydroplaned into ditch towing options",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "flat tire on freeway at night who to call",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does geico cover towing after breakdown",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does state farm pay for towing after accident",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "how much to tow car 100 miles interstate",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "car wont go over 30 mph limp mode",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car breakdown on one way street blocking traffic",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car transmission slipping highway speed tow needed",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "usaa towing coverage how much does it pay",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car fuel pump went out highway breakdown cost",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 54
+      "count": 56
     },
     {
       "slug": "battery-starting",
@@ -94,7 +94,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 19
+      "count": 20
     },
     {
       "slug": "roadside-help",
@@ -124,7 +124,7 @@
     {
       "slug": "vehicle-recovery",
       "label": "Vehicle Recovery",
-      "count": 3
+      "count": 4
     },
     {
       "slug": "emergency-checklists",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-30T05:37:59.588508+00:00",
+    "generated_at": "2026-08-31T05:50:08.955810+00:00",
     "platforms": {
       "blog": {
-        "checked": 496,
-        "verified": 248
+        "checked": 504,
+        "verified": 501
       },
       "dev": {
-        "checked": 427,
-        "verified": 427
+        "checked": 431,
+        "verified": 431
       },
       "feeder": {
-        "checked": 495,
-        "verified": 495
+        "checked": 499,
+        "verified": 499
       },
       "tumblr": {
-        "checked": 494,
-        "verified": 494
+        "checked": 498,
+        "verified": 498
       },
       "wordpress": {
-        "checked": 500,
-        "verified": 500
+        "checked": 504,
+        "verified": 504
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-30T12:12:47.775985+00:00",
+    "generated_at": "2026-08-31T14:23:44.834394+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 59,
+        "rows": 60,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 238,
+        "rows": 240,
         "source": "ga4",
         "status": "ok"
       }
@@ -211,34 +211,34 @@
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 6,
-    "top_query_count": 17,
+    "top_landing_page_count": 7,
+    "top_query_count": 18,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-30T12:12:47.881317+00:00",
+    "generatedAt": "2026-08-31T14:23:44.917995+00:00",
     "keywordGeneration": {
-      "currentInventory": 279,
-      "liveKeywords": 523,
-      "estimatedDaysRemaining": 69.8,
+      "currentInventory": 275,
+      "liveKeywords": 527,
+      "estimatedDaysRemaining": 68.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "69.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "68.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 302,
-      "backlogUnits": 336,
+      "backlogPosts": 79,
+      "backlogUnits": 87,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-30T05:37:59.588508+00:00",
+      "generatedAt": "2026-08-31T05:50:08.955810+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.6,
+      "completedPerDay": 19.2,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.4,
+      "netBacklinkUnitsPerDay": 0.8,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.4 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.8 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
