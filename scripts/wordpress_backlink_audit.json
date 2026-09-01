@@ -1,6 +1,9 @@
 {
-  "generated_at": "2026-09-01T13:43:13.809586+00:00",
+  "generated_at": "2026-09-01T19:34:08.659738+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/09/01/car-breakdown-on-one-way-street-blocking-traffic/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/01/car-wont-go-over-30-mph-limp-mode/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/01/car-breakdown-in-construction-zone-safety-protocol/",
     "https://towwiththeflowyo.wordpress.com/2026/08/31/car-died-on-toll-road-who-to-call/",
     "https://towwiththeflowyo.wordpress.com/2026/08/31/engine-seized-while-driving-need-emergency-tow/",
     "https://towwiththeflowyo.wordpress.com/2026/08/31/does-usaa-cover-emergency-roadside-towing-costs/",
@@ -606,7 +609,8 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/01/car-transmission-slipping-highway-speed-tow-needed/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -1129,6 +1133,24 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/09/car-bottomed-out-on-road-now-wont-drive-emergency/",
+        "verified": true
+      }
+    },
+    "car-breakdown-in-construction-zone-safety-protocol": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-breakdown-in-construction-zone-safety-protocol/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/01/car-breakdown-in-construction-zone-safety-protocol/",
+        "verified": true
+      }
+    },
+    "car-breakdown-on-one-way-street-blocking-traffic": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-breakdown-on-one-way-street-blocking-traffic/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/01/car-breakdown-on-one-way-street-blocking-traffic/",
         "verified": true
       }
     },
@@ -2104,12 +2126,30 @@
         "verified": true
       }
     },
+    "car-transmission-slipping-highway-speed-tow-needed": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-transmission-slipping-highway-speed-tow-needed/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/01/car-transmission-slipping-highway-speed-tow-needed/",
+        "verified": true
+      }
+    },
     "car-transmission-slipping-need-tow-truck-now": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/car-transmission-slipping-need-tow-truck-now/",
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/14/car-transmission-slipping-need-tow-truck-now/",
+        "verified": true
+      }
+    },
+    "car-wont-go-over-30-mph-limp-mode": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-wont-go-over-30-mph-limp-mode/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/01/car-wont-go-over-30-mph-limp-mode/",
         "verified": true
       }
     },
@@ -6068,8 +6108,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 606,
-      "verified": 509
+      "checked": 610,
+      "verified": 513
     }
   }
 }
