@@ -18213,3 +18213,33 @@
 [2026-09-01 11:58:19] === SYNDICATE DONE: car-breakdown-on-one-way-street-blocking-traffic | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-01 11:58:19] SYNCED | car-breakdown-on-one-way-street-blocking-traffic marked in synced-posts.txt
 [2026-09-01 11:58:19] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-01 13:27:25] === SYNDICATE START: car-transmission-slipping-highway-speed-tow-needed ===
+[2026-09-01 13:27:25] PREFLIGHT | title: Car Transmission Slipping at Highway Speed: When You Need a Tow Right Now
+[2026-09-01 13:27:25] PREFLIGHT | date: 2026-09-01
+[2026-09-01 13:27:25] PREFLIGHT | timestamp: 2026-09-01 13:27:25
+[2026-09-01 13:27:25] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-09-01 13:27:25] PREFLIGHT | TUMBLR:  configured
+[2026-09-01 13:27:25] PREFLIGHT | BLOGGER: configured
+[2026-09-01 13:27:25] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-01 13:27:25] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-01 13:27:25] DEVTO | car-transmission-slipping-highway-speed-tow-needed | START
+[2026-09-01 13:27:25] DEVTO | car-transmission-slipping-highway-speed-tow-needed | account=TWTF1
+[2026-09-01 13:27:25] DEVTO | car-transmission-slipping-highway-speed-tow-needed | SUCCESS | https://dev.to/roadsideamericatowing/car-transmission-slipping-at-highway-speed-when-you-need-a-tow-right-now-quick-guide-344p
+[2026-09-01 13:27:25] --- waiting 60s before next platform ---
+[2026-09-01 13:28:25] TUMBLR | car-transmission-slipping-highway-speed-tow-needed | START
+[2026-09-01 13:28:26] TUMBLR | car-transmission-slipping-highway-speed-tow-needed | SUCCESS | https://towwiththeflow.tumblr.com/post/826582924744949760
+[2026-09-01 13:28:26] --- waiting 60s before next platform ---
+[2026-09-01 13:29:26] BLOGGER | car-transmission-slipping-highway-speed-tow-needed | START
+[2026-09-01 13:29:26] BLOGGER | car-transmission-slipping-highway-speed-tow-needed | step 1/3: refreshing access token
+[2026-09-01 13:29:26] BLOGGER | car-transmission-slipping-highway-speed-tow-needed | step 2/3: converting markdown to HTML
+[2026-09-01 13:29:26] BLOGGER | car-transmission-slipping-highway-speed-tow-needed | step 3/3: posting to blog 1959471973457654666
+[2026-09-01 13:29:27] BLOGGER | car-transmission-slipping-highway-speed-tow-needed | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-transmission-slipping-at-highway.html
+[2026-09-01 13:29:27] --- waiting 60s before next platform ---
+[2026-09-01 13:30:27] WORDPRESS | car-transmission-slipping-highway-speed-tow-needed | START
+[2026-09-01 13:30:35] WORDPRESS | car-transmission-slipping-highway-speed-tow-needed | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/01/car-transmission-slipping-highway-speed-tow-needed/
+[2026-09-01 13:30:35] --- waiting 60s before next platform ---
+[2026-09-01 13:31:35] FEEDER | car-transmission-slipping-highway-speed-tow-needed | START
+[2026-09-01 13:31:36] FEEDER | car-transmission-slipping-highway-speed-tow-needed | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-transmission-slipping-highway-speed-tow-needed-tips/
+[2026-09-01 13:31:36] === SYNDICATE DONE: car-transmission-slipping-highway-speed-tow-needed | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-01 13:31:36] SYNCED | car-transmission-slipping-highway-speed-tow-needed marked in synced-posts.txt
+[2026-09-01 13:31:36] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
