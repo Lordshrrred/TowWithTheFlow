@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-08-31T15:37:21.856449+00:00",
+  "generated_at": "2026-09-01T11:59:56.720568+00:00",
   "keywords": {
     "total": 802,
-    "live": 527,
-    "pending": 275,
+    "live": 531,
+    "pending": 271,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 339,
-      "pending": 275
+      "live": 343,
+      "pending": 271
     }
   },
   "next_targets": [
-    {
-      "keyword": "how much to tow car 100 miles interstate",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does usaa cover emergency roadside towing costs",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "engine seized while driving need emergency tow",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car died on toll road who to call",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "car breakdown in construction zone safety protocol",
       "score": 7,
@@ -63,18 +43,38 @@
       "keyword": "car fuel pump went out highway breakdown cost",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car thermostat stuck open overheating tow needed",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car clutch went out manual transmission tow cost",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car battery died in parking garage towing options",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "engine seized while driving need immediate tow",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 222
+      "count": 224
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 78
+      "count": 79
     },
     {
       "slug": "insurance-coverage",
@@ -99,7 +99,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 16
+      "count": 17
     },
     {
       "slug": "accident-liability",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-08-31T05:50:08.955810+00:00",
+    "generated_at": "2026-09-01T05:21:27.349676+00:00",
     "platforms": {
       "blog": {
-        "checked": 504,
-        "verified": 501
+        "checked": 505,
+        "verified": 109
       },
       "dev": {
-        "checked": 431,
-        "verified": 431
+        "checked": 435,
+        "verified": 435
       },
       "feeder": {
-        "checked": 499,
-        "verified": 499
+        "checked": 503,
+        "verified": 503
       },
       "tumblr": {
-        "checked": 498,
-        "verified": 498
+        "checked": 502,
+        "verified": 502
       },
       "wordpress": {
-        "checked": 504,
-        "verified": 504
+        "checked": 508,
+        "verified": 508
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-08-31T14:23:44.834394+00:00",
+    "generated_at": "2026-09-01T11:59:56.638019+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 60,
+        "rows": 61,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 240,
+        "rows": 250,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,7 +207,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "5 Search Console impressions match this asset pattern.",
+        "reason": "4 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -216,29 +216,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-08-31T15:37:21.880425+00:00",
+    "generatedAt": "2026-09-01T11:59:56.747214+00:00",
     "keywordGeneration": {
-      "currentInventory": 275,
-      "liveKeywords": 527,
-      "estimatedDaysRemaining": 68.8,
+      "currentInventory": 271,
+      "liveKeywords": 531,
+      "estimatedDaysRemaining": 67.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "68.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "67.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 79,
-      "backlogUnits": 87,
+      "backlogPosts": 426,
+      "backlogUnits": 483,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-08-31T05:50:08.955810+00:00",
+      "generatedAt": "2026-09-01T05:21:27.349676+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 18.9,
+      "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 1.1,
+      "netBacklinkUnitsPerDay": 0.4,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 1.1 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.4 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
