@@ -18153,3 +18153,33 @@
 [2026-09-01 09:09:30] === SYNDICATE DONE: car-breakdown-in-construction-zone-safety-protocol | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-01 09:09:30] SYNCED | car-breakdown-in-construction-zone-safety-protocol marked in synced-posts.txt
 [2026-09-01 09:09:30] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-01 10:48:51] === SYNDICATE START: car-wont-go-over-30-mph-limp-mode ===
+[2026-09-01 10:48:51] PREFLIGHT | title: Car Won't Go Over 30 MPH Limp Mode: What's Happening and What to Do
+[2026-09-01 10:48:51] PREFLIGHT | date: 2026-09-01
+[2026-09-01 10:48:51] PREFLIGHT | timestamp: 2026-09-01 10:48:51
+[2026-09-01 10:48:51] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-09-01 10:48:51] PREFLIGHT | TUMBLR:  configured
+[2026-09-01 10:48:51] PREFLIGHT | BLOGGER: configured
+[2026-09-01 10:48:51] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-01 10:48:51] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-01 10:48:51] DEVTO | car-wont-go-over-30-mph-limp-mode | START
+[2026-09-01 10:48:51] DEVTO | car-wont-go-over-30-mph-limp-mode | account=TWTF2
+[2026-09-01 10:48:52] DEVTO | car-wont-go-over-30-mph-limp-mode | SUCCESS | https://dev.to/denverroadsideelitetowing/car-wont-go-over-30-mph-limp-mode-whats-happening-and-what-to-do-what-to-do-next-7d1
+[2026-09-01 10:48:52] --- waiting 60s before next platform ---
+[2026-09-01 10:49:52] TUMBLR | car-wont-go-over-30-mph-limp-mode | START
+[2026-09-01 10:49:52] TUMBLR | car-wont-go-over-30-mph-limp-mode | SUCCESS | https://towwiththeflow.tumblr.com/post/826572949282816000
+[2026-09-01 10:49:52] --- waiting 60s before next platform ---
+[2026-09-01 10:50:52] BLOGGER | car-wont-go-over-30-mph-limp-mode | START
+[2026-09-01 10:50:52] BLOGGER | car-wont-go-over-30-mph-limp-mode | step 1/3: refreshing access token
+[2026-09-01 10:50:52] BLOGGER | car-wont-go-over-30-mph-limp-mode | step 2/3: converting markdown to HTML
+[2026-09-01 10:50:52] BLOGGER | car-wont-go-over-30-mph-limp-mode | step 3/3: posting to blog 1959471973457654666
+[2026-09-01 10:50:53] BLOGGER | car-wont-go-over-30-mph-limp-mode | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-wont-go-over-30-mph-limp-mode-whats.html
+[2026-09-01 10:50:53] --- waiting 60s before next platform ---
+[2026-09-01 10:51:53] WORDPRESS | car-wont-go-over-30-mph-limp-mode | START
+[2026-09-01 10:52:00] WORDPRESS | car-wont-go-over-30-mph-limp-mode | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/01/car-wont-go-over-30-mph-limp-mode/
+[2026-09-01 10:52:00] --- waiting 60s before next platform ---
+[2026-09-01 10:53:00] FEEDER | car-wont-go-over-30-mph-limp-mode | START
+[2026-09-01 10:53:01] FEEDER | car-wont-go-over-30-mph-limp-mode | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-wont-go-over-30-mph-limp-mode-help/
+[2026-09-01 10:53:01] === SYNDICATE DONE: car-wont-go-over-30-mph-limp-mode | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-01 10:53:01] SYNCED | car-wont-go-over-30-mph-limp-mode marked in synced-posts.txt
+[2026-09-01 10:53:01] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
