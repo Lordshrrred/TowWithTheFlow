@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-01T11:59:56.720568+00:00",
+  "generated_at": "2026-09-02T11:42:45.779376+00:00",
   "keywords": {
     "total": 802,
-    "live": 531,
-    "pending": 271,
+    "live": 535,
+    "pending": 267,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 343,
-      "pending": 271
+      "live": 347,
+      "pending": 267
     }
   },
   "next_targets": [
-    {
-      "keyword": "car breakdown in construction zone safety protocol",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont go over 30 mph limp mode",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car breakdown on one way street blocking traffic",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car transmission slipping highway speed tow needed",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "usaa towing coverage how much does it pay",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "engine seized while driving need immediate tow",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car power steering failed highway emergency protocol",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "engine light flashing car shaking tow immediately",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car making squealing noise emergency towing needed",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car smoking under hood safe to drive towing",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 79
+      "count": 80
     },
     {
       "slug": "insurance-coverage",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 28
+      "count": 29
     },
     {
       "slug": "tire-wheel",
@@ -99,7 +99,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 17
+      "count": 19
     },
     {
       "slug": "accident-liability",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-01T05:21:27.349676+00:00",
+    "generated_at": "2026-09-02T04:52:20.542173+00:00",
     "platforms": {
       "blog": {
-        "checked": 505,
-        "verified": 109
+        "checked": 510,
+        "verified": 431
       },
       "dev": {
-        "checked": 435,
-        "verified": 435
+        "checked": 439,
+        "verified": 439
       },
       "feeder": {
-        "checked": 503,
-        "verified": 503
+        "checked": 507,
+        "verified": 507
       },
       "tumblr": {
-        "checked": 502,
-        "verified": 502
+        "checked": 506,
+        "verified": 506
       },
       "wordpress": {
-        "checked": 508,
-        "verified": 508
+        "checked": 512,
+        "verified": 512
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-01T11:59:56.638019+00:00",
+    "generated_at": "2026-09-02T11:42:45.715821+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 250,
+        "rows": 258,
         "source": "ga4",
         "status": "ok"
       }
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-01T11:59:56.747214+00:00",
+    "generatedAt": "2026-09-02T11:42:45.791580+00:00",
     "keywordGeneration": {
-      "currentInventory": 271,
-      "liveKeywords": 531,
-      "estimatedDaysRemaining": 67.8,
+      "currentInventory": 267,
+      "liveKeywords": 535,
+      "estimatedDaysRemaining": 66.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "67.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "66.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 426,
-      "backlogUnits": 483,
+      "backlogPosts": 148,
+      "backlogUnits": 165,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-01T05:21:27.349676+00:00",
+      "generatedAt": "2026-09-02T04:52:20.542173+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
