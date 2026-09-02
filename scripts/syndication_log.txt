@@ -18274,3 +18274,33 @@
 [2026-09-02 08:41:35] === SYNDICATE DONE: usaa-towing-coverage-how-much-does-it-pay | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-02 08:41:35] SYNCED | usaa-towing-coverage-how-much-does-it-pay marked in synced-posts.txt
 [2026-09-02 08:41:35] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-02 11:58:31] === SYNDICATE START: car-thermostat-stuck-open-overheating-tow-needed ===
+[2026-09-02 11:58:31] PREFLIGHT | title: Car Thermostat Stuck Open Overheating: When You Need a Tow Right Now
+[2026-09-02 11:58:31] PREFLIGHT | date: 2026-09-02
+[2026-09-02 11:58:31] PREFLIGHT | timestamp: 2026-09-02 11:58:31
+[2026-09-02 11:58:31] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-09-02 11:58:31] PREFLIGHT | TUMBLR:  configured
+[2026-09-02 11:58:31] PREFLIGHT | BLOGGER: configured
+[2026-09-02 11:58:31] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-02 11:58:31] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-02 11:58:31] DEVTO | car-thermostat-stuck-open-overheating-tow-needed | START
+[2026-09-02 11:58:31] DEVTO | car-thermostat-stuck-open-overheating-tow-needed | account=TWTF1
+[2026-09-02 11:58:32] DEVTO | car-thermostat-stuck-open-overheating-tow-needed | SUCCESS | https://dev.to/roadsideamericatowing/car-thermostat-stuck-open-overheating-when-you-need-a-tow-right-now-quick-guide-3e9k
+[2026-09-02 11:58:32] --- waiting 60s before next platform ---
+[2026-09-02 11:59:32] TUMBLR | car-thermostat-stuck-open-overheating-tow-needed | START
+[2026-09-02 11:59:33] TUMBLR | car-thermostat-stuck-open-overheating-tow-needed | SUCCESS | https://towwiththeflow.tumblr.com/post/826667929426935808
+[2026-09-02 11:59:33] --- waiting 60s before next platform ---
+[2026-09-02 12:00:33] BLOGGER | car-thermostat-stuck-open-overheating-tow-needed | START
+[2026-09-02 12:00:33] BLOGGER | car-thermostat-stuck-open-overheating-tow-needed | step 1/3: refreshing access token
+[2026-09-02 12:00:33] BLOGGER | car-thermostat-stuck-open-overheating-tow-needed | step 2/3: converting markdown to HTML
+[2026-09-02 12:00:33] BLOGGER | car-thermostat-stuck-open-overheating-tow-needed | step 3/3: posting to blog 1959471973457654666
+[2026-09-02 12:00:34] BLOGGER | car-thermostat-stuck-open-overheating-tow-needed | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-thermostat-stuck-open-overheating.html
+[2026-09-02 12:00:34] --- waiting 60s before next platform ---
+[2026-09-02 12:01:34] WORDPRESS | car-thermostat-stuck-open-overheating-tow-needed | START
+[2026-09-02 12:01:42] WORDPRESS | car-thermostat-stuck-open-overheating-tow-needed | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/02/car-thermostat-stuck-open-overheating-tow-needed/
+[2026-09-02 12:01:42] --- waiting 60s before next platform ---
+[2026-09-02 12:02:42] FEEDER | car-thermostat-stuck-open-overheating-tow-needed | START
+[2026-09-02 12:02:44] FEEDER | car-thermostat-stuck-open-overheating-tow-needed | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-thermostat-stuck-open-overheating-tow-needed-advice/
+[2026-09-02 12:02:44] === SYNDICATE DONE: car-thermostat-stuck-open-overheating-tow-needed | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-02 12:02:44] SYNCED | car-thermostat-stuck-open-overheating-tow-needed marked in synced-posts.txt
+[2026-09-02 12:02:44] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
