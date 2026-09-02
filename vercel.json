@@ -1,6 +1,7 @@
 {
   "framework": "hugo",
   "buildCommand": "python3 scripts/build_dashboard.py && hugo --minify",
+  "ignoreCommand": "node scripts/vercel-ignore-build.js",
   "outputDirectory": "public",
   "env": {
     "HUGO_VERSION": "0.160.0"
