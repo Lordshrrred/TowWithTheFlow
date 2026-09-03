@@ -1,6 +1,10 @@
 {
-  "generated_at": "2026-09-03T13:01:53.138724+00:00",
+  "generated_at": "2026-09-03T19:26:57.586662+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/09/03/car-fuel-pump-went-out-highway-breakdown-cost-2/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/03/car-power-steering-failed-highway-emergency-protocol/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/03/engine-seized-while-driving-need-immediate-tow/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/03/car-battery-died-in-parking-garage-towing-options/",
     "https://towwiththeflowyo.wordpress.com/2026/09/02/car-clutch-went-out-manual-transmission-tow-cost/",
     "https://towwiththeflowyo.wordpress.com/2026/09/02/car-thermostat-stuck-open-overheating-tow-needed/",
     "https://towwiththeflowyo.wordpress.com/2026/09/02/car-fuel-pump-went-out-highway-breakdown-cost/",
@@ -614,7 +618,8 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/03/engine-light-flashing-car-shaking-tow-immediately/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -1059,6 +1064,15 @@
         "verified": true
       }
     },
+    "car-battery-died-in-parking-garage-towing-options": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-battery-died-in-parking-garage-towing-options/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/03/car-battery-died-in-parking-garage-towing-options/",
+        "verified": true
+      }
+    },
     "car-battery-died-in-parking-garage-who-to-call": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/car-battery-died-in-parking-garage-who-to-call/",
@@ -1500,6 +1514,15 @@
         "verified": true
       }
     },
+    "car-fuel-pump-went-out-highway-breakdown-cost-2": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/03/car-fuel-pump-went-out-highway-breakdown-cost-2/",
+        "verified": false
+      }
+    },
     "car-hit-pothole-now-making-noise-should-i-drive-it": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/car-hit-pothole-now-making-noise-should-i-drive-it/",
@@ -1830,6 +1853,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/21/car-overheating-towing-cost-vs-driving-to-mechanic-risk/",
+        "verified": true
+      }
+    },
+    "car-power-steering-failed-highway-emergency-protocol": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-power-steering-failed-highway-emergency-protocol/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/03/car-power-steering-failed-highway-emergency-protocol/",
         "verified": true
       }
     },
@@ -2778,6 +2810,15 @@
         "verified": true
       }
     },
+    "engine-light-flashing-car-shaking-tow-immediately": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/engine-light-flashing-car-shaking-tow-immediately/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/03/engine-light-flashing-car-shaking-tow-immediately/",
+        "verified": true
+      }
+    },
     "engine-light-flashing-should-i-pull-over-immediately": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/engine-light-flashing-should-i-pull-over-immediately/",
@@ -2820,6 +2861,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/31/engine-seized-while-driving-need-emergency-tow/",
+        "verified": true
+      }
+    },
+    "engine-seized-while-driving-need-immediate-tow": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/engine-seized-while-driving-need-immediate-tow/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/03/engine-seized-while-driving-need-immediate-tow/",
         "verified": true
       }
     },
@@ -6148,8 +6198,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 614,
-      "verified": 517
+      "checked": 619,
+      "verified": 521
     }
   }
 }
