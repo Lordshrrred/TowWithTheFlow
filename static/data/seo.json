@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-02T12:21:20.940802+00:00",
+  "generated_at": "2026-09-03T11:42:09.995281+00:00",
   "keywords": {
     "total": 802,
-    "live": 535,
-    "pending": 267,
+    "live": 539,
+    "pending": 263,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 347,
-      "pending": 267
+      "live": 351,
+      "pending": 263
     }
   },
   "next_targets": [
-    {
-      "keyword": "usaa towing coverage how much does it pay",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car fuel pump went out highway breakdown cost",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car thermostat stuck open overheating tow needed",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car clutch went out manual transmission tow cost",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "car battery died in parking garage towing options",
       "score": 7,
@@ -63,18 +43,38 @@
       "keyword": "car smoking under hood safe to drive towing",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "brake pedal goes to floor emergency towing",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car died in drive thru towing options",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car accelerator stuck emergency towing protocol",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car overheating steam coming out tow or drive",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 224
+      "count": 225
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 80
+      "count": 82
     },
     {
       "slug": "insurance-coverage",
@@ -99,7 +99,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 19
+      "count": 20
     },
     {
       "slug": "accident-liability",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-02T04:52:20.542173+00:00",
+    "generated_at": "2026-09-03T04:49:34.419595+00:00",
     "platforms": {
       "blog": {
-        "checked": 510,
-        "verified": 431
+        "checked": 512,
+        "verified": 394
       },
       "dev": {
-        "checked": 439,
-        "verified": 439
+        "checked": 442,
+        "verified": 442
       },
       "feeder": {
-        "checked": 507,
-        "verified": 507
+        "checked": 510,
+        "verified": 510
       },
       "tumblr": {
-        "checked": 506,
-        "verified": 506
+        "checked": 509,
+        "verified": 509
       },
       "wordpress": {
-        "checked": 512,
-        "verified": 512
+        "checked": 515,
+        "verified": 515
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-02T11:42:45.715821+00:00",
+    "generated_at": "2026-09-03T11:42:09.902476+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 258,
+        "rows": 262,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,7 +207,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "4 Search Console impressions match this asset pattern.",
+        "reason": "3 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -216,29 +216,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-02T12:21:20.964387+00:00",
+    "generatedAt": "2026-09-03T11:42:10.018715+00:00",
     "keywordGeneration": {
-      "currentInventory": 267,
-      "liveKeywords": 535,
-      "estimatedDaysRemaining": 66.8,
+      "currentInventory": 263,
+      "liveKeywords": 539,
+      "estimatedDaysRemaining": 65.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "66.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "65.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 148,
-      "backlogUnits": 165,
+      "backlogPosts": 185,
+      "backlogUnits": 205,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-02T04:52:20.542173+00:00",
+      "generatedAt": "2026-09-03T04:49:34.419595+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.6,
+      "completedPerDay": 19.3,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.4,
+      "netBacklinkUnitsPerDay": 0.7,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.4 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.7 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
