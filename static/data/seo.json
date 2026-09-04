@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-03T11:42:09.995281+00:00",
+  "generated_at": "2026-09-04T11:43:30.167526+00:00",
   "keywords": {
     "total": 802,
-    "live": 539,
-    "pending": 263,
+    "live": 543,
+    "pending": 259,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 351,
-      "pending": 263
+      "live": 355,
+      "pending": 259
     }
   },
   "next_targets": [
-    {
-      "keyword": "car battery died in parking garage towing options",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "engine seized while driving need immediate tow",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car power steering failed highway emergency protocol",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "engine light flashing car shaking tow immediately",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "car making squealing noise emergency towing needed",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "car overheating steam coming out tow or drive",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car won't start clicking noise tow truck cost",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "usaa roadside assistance towing coverage how many times",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "liberty mutual roadside assistance towing coverage limits",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car overheating in traffic need emergency tow",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 82
+      "count": 84
     },
     {
       "slug": "insurance-coverage",
@@ -84,12 +84,12 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 47
+      "count": 48
     },
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 29
+      "count": 30
     },
     {
       "slug": "tire-wheel",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-03T04:49:34.419595+00:00",
+    "generated_at": "2026-09-04T04:45:01.414258+00:00",
     "platforms": {
       "blog": {
-        "checked": 512,
-        "verified": 394
+        "checked": 519,
+        "verified": 513
       },
       "dev": {
-        "checked": 442,
-        "verified": 442
+        "checked": 446,
+        "verified": 446
       },
       "feeder": {
-        "checked": 510,
-        "verified": 510
-      },
-      "tumblr": {
-        "checked": 509,
-        "verified": 509
-      },
-      "wordpress": {
         "checked": 515,
         "verified": 515
+      },
+      "tumblr": {
+        "checked": 514,
+        "verified": 514
+      },
+      "wordpress": {
+        "checked": 520,
+        "verified": 520
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-03T11:42:09.902476+00:00",
+    "generated_at": "2026-09-04T11:43:30.102468+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 61,
+        "rows": 59,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 262,
+        "rows": 272,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,38 +207,38 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "3 Search Console impressions match this asset pattern.",
+        "reason": "2 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
     "top_landing_page_count": 7,
-    "top_query_count": 18,
+    "top_query_count": 17,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-03T11:42:10.018715+00:00",
+    "generatedAt": "2026-09-04T11:43:30.186082+00:00",
     "keywordGeneration": {
-      "currentInventory": 263,
-      "liveKeywords": 539,
-      "estimatedDaysRemaining": 65.8,
+      "currentInventory": 259,
+      "liveKeywords": 543,
+      "estimatedDaysRemaining": 64.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "65.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "64.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 185,
-      "backlogUnits": 205,
+      "backlogPosts": 84,
+      "backlogUnits": 92,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-03T04:49:34.419595+00:00",
+      "generatedAt": "2026-09-04T04:45:01.414258+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.3,
+      "completedPerDay": 19.4,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.7,
+      "netBacklinkUnitsPerDay": 0.6,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.7 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.6 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
