@@ -18494,3 +18494,33 @@
 [2026-09-04 08:33:04] === SYNDICATE DONE: car-making-squealing-noise-emergency-towing-needed | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-04 08:33:04] SYNCED | car-making-squealing-noise-emergency-towing-needed marked in synced-posts.txt
 [2026-09-04 08:33:04] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-04 10:31:07] === SYNDICATE START: car-smoking-under-hood-safe-to-drive-towing ===
+[2026-09-04 10:31:07] PREFLIGHT | title: Car Smoking Under Hood: Safe to Drive or Do You Need a Tow?
+[2026-09-04 10:31:07] PREFLIGHT | date: 2026-09-04
+[2026-09-04 10:31:07] PREFLIGHT | timestamp: 2026-09-04 10:31:07
+[2026-09-04 10:31:07] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-09-04 10:31:07] PREFLIGHT | TUMBLR:  configured
+[2026-09-04 10:31:07] PREFLIGHT | BLOGGER: configured
+[2026-09-04 10:31:07] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-04 10:31:07] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-04 10:31:07] DEVTO | car-smoking-under-hood-safe-to-drive-towing | START
+[2026-09-04 10:31:07] DEVTO | car-smoking-under-hood-safe-to-drive-towing | account=TWTF2
+[2026-09-04 10:31:08] DEVTO | car-smoking-under-hood-safe-to-drive-towing | SUCCESS | https://dev.to/denverroadsideelitetowing/car-smoking-under-hood-safe-to-drive-or-do-you-need-a-tow-roadside-tips-abp
+[2026-09-04 10:31:08] --- waiting 60s before next platform ---
+[2026-09-04 10:32:08] TUMBLR | car-smoking-under-hood-safe-to-drive-towing | START
+[2026-09-04 10:32:09] TUMBLR | car-smoking-under-hood-safe-to-drive-towing | SUCCESS | https://towwiththeflow.tumblr.com/post/826843624940634112
+[2026-09-04 10:32:09] --- waiting 60s before next platform ---
+[2026-09-04 10:33:09] BLOGGER | car-smoking-under-hood-safe-to-drive-towing | START
+[2026-09-04 10:33:09] BLOGGER | car-smoking-under-hood-safe-to-drive-towing | step 1/3: refreshing access token
+[2026-09-04 10:33:09] BLOGGER | car-smoking-under-hood-safe-to-drive-towing | step 2/3: converting markdown to HTML
+[2026-09-04 10:33:09] BLOGGER | car-smoking-under-hood-safe-to-drive-towing | step 3/3: posting to blog 1959471973457654666
+[2026-09-04 10:33:09] BLOGGER | car-smoking-under-hood-safe-to-drive-towing | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-smoking-under-hood-safe-to-drive-or.html
+[2026-09-04 10:33:09] --- waiting 60s before next platform ---
+[2026-09-04 10:34:09] WORDPRESS | car-smoking-under-hood-safe-to-drive-towing | START
+[2026-09-04 10:34:10] WORDPRESS | car-smoking-under-hood-safe-to-drive-towing | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/04/car-smoking-under-hood-safe-to-drive-towing/
+[2026-09-04 10:34:10] --- waiting 60s before next platform ---
+[2026-09-04 10:35:10] FEEDER | car-smoking-under-hood-safe-to-drive-towing | START
+[2026-09-04 10:35:12] FEEDER | car-smoking-under-hood-safe-to-drive-towing | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-smoking-under-hood-safe-to-drive-towing-help/
+[2026-09-04 10:35:12] === SYNDICATE DONE: car-smoking-under-hood-safe-to-drive-towing | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-04 10:35:12] SYNCED | car-smoking-under-hood-safe-to-drive-towing marked in synced-posts.txt
+[2026-09-04 10:35:12] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
