@@ -1,6 +1,11 @@
 {
-  "generated_at": "2026-09-04T12:52:28.727198+00:00",
+  "generated_at": "2026-09-04T19:07:02.108092+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/09/04/car-fuel-pump-went-out-highway-breakdown-cost-3/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/04/brake-pedal-goes-to-floor-emergency-towing/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/04/car-smoking-under-hood-safe-to-drive-towing/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/04/car-making-squealing-noise-emergency-towing-needed/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/03/engine-light-flashing-car-shaking-tow-immediately/",
     "https://towwiththeflowyo.wordpress.com/2026/09/03/car-fuel-pump-went-out-highway-breakdown-cost-2/",
     "https://towwiththeflowyo.wordpress.com/2026/09/03/car-power-steering-failed-highway-emergency-protocol/",
     "https://towwiththeflowyo.wordpress.com/2026/09/03/engine-seized-while-driving-need-immediate-tow/",
@@ -619,7 +624,7 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
-    "https://towwiththeflowyo.wordpress.com/2026/09/03/engine-light-flashing-car-shaking-tow-immediately/"
+    "https://towwiththeflowyo.wordpress.com/2026/09/04/car-died-in-drive-thru-towing-options/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -908,6 +913,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/20/brake-failure-while-driving-what-to-do-immediately/",
+        "verified": true
+      }
+    },
+    "brake-pedal-goes-to-floor-emergency-towing": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/brake-pedal-goes-to-floor-emergency-towing/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/04/brake-pedal-goes-to-floor-emergency-towing/",
         "verified": true
       }
     },
@@ -1406,6 +1420,15 @@
         "verified": true
       }
     },
+    "car-died-in-drive-thru-towing-options": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-died-in-drive-thru-towing-options/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/04/car-died-in-drive-thru-towing-options/",
+        "verified": true
+      }
+    },
     "car-died-on-freeway-in-los-angeles-what-to-do": {
       "wordpress": {
         "matched": "https://towwiththeflow.com/car-died-on-freeway-in-los-angeles-what-to-do/",
@@ -1520,6 +1543,15 @@
         "reason": "slug_mismatch",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/09/03/car-fuel-pump-went-out-highway-breakdown-cost-2/",
+        "verified": false
+      }
+    },
+    "car-fuel-pump-went-out-highway-breakdown-cost-3": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/04/car-fuel-pump-went-out-highway-breakdown-cost-3/",
         "verified": false
       }
     },
@@ -1728,6 +1760,15 @@
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/03/car-making-noise-when-turning-steering-wheel-houston-2/",
         "verified": false
+      }
+    },
+    "car-making-squealing-noise-emergency-towing-needed": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-making-squealing-noise-emergency-towing-needed/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/04/car-making-squealing-noise-emergency-towing-needed/",
+        "verified": true
       }
     },
     "car-overheated-and-now-wont-start-tow-or-wait": {
@@ -1988,6 +2029,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/11/car-smoking-under-hood-safe-to-drive-or-tow/",
+        "verified": true
+      }
+    },
+    "car-smoking-under-hood-safe-to-drive-towing": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-smoking-under-hood-safe-to-drive-towing/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/04/car-smoking-under-hood-safe-to-drive-towing/",
         "verified": true
       }
     },
@@ -6198,8 +6248,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 619,
-      "verified": 521
+      "checked": 624,
+      "verified": 525
     }
   }
 }
