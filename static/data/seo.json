@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-04T12:19:57.154715+00:00",
+  "generated_at": "2026-09-05T10:54:40.449975+00:00",
   "keywords": {
     "total": 802,
-    "live": 543,
-    "pending": 259,
+    "live": 547,
+    "pending": 255,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 355,
-      "pending": 259
+      "live": 359,
+      "pending": 255
     }
   },
   "next_targets": [
-    {
-      "keyword": "car making squealing noise emergency towing needed",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car smoking under hood safe to drive towing",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "brake pedal goes to floor emergency towing",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car died in drive thru towing options",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "car accelerator stuck emergency towing protocol",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "car overheating in traffic need emergency tow",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car battery dead in parking lot tow truck access",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "flat tire spare is also flat tow cost",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car sliding on ice hit curb need tow",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "transmission slipping car shaking need tow truck",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 84
+      "count": 86
     },
     {
       "slug": "insurance-coverage",
@@ -92,13 +92,13 @@
       "count": 30
     },
     {
-      "slug": "tire-wheel",
-      "label": "Tire & Wheel Issues",
-      "count": 20
-    },
-    {
       "slug": "roadside-help",
       "label": "General Roadside Help",
+      "count": 22
+    },
+    {
+      "slug": "tire-wheel",
+      "label": "Tire & Wheel Issues",
       "count": 20
     },
     {
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-04T04:45:01.414258+00:00",
+    "generated_at": "2026-09-05T04:40:52.744160+00:00",
     "platforms": {
       "blog": {
-        "checked": 519,
-        "verified": 513
+        "checked": 524,
+        "verified": 519
       },
       "dev": {
-        "checked": 446,
-        "verified": 446
+        "checked": 450,
+        "verified": 450
       },
       "feeder": {
-        "checked": 515,
-        "verified": 515
+        "checked": 519,
+        "verified": 519
       },
       "tumblr": {
-        "checked": 514,
-        "verified": 514
+        "checked": 517,
+        "verified": 517
       },
       "wordpress": {
-        "checked": 520,
-        "verified": 520
+        "checked": 524,
+        "verified": 524
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-04T11:43:30.102468+00:00",
+    "generated_at": "2026-09-05T10:54:40.369283+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 59,
+        "rows": 56,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 272,
+        "rows": 276,
         "source": "ga4",
         "status": "ok"
       }
@@ -211,27 +211,27 @@
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 7,
-    "top_query_count": 17,
+    "top_landing_page_count": 6,
+    "top_query_count": 15,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-04T12:19:57.169132+00:00",
+    "generatedAt": "2026-09-05T10:54:40.473511+00:00",
     "keywordGeneration": {
-      "currentInventory": 259,
-      "liveKeywords": 543,
-      "estimatedDaysRemaining": 64.8,
+      "currentInventory": 255,
+      "liveKeywords": 547,
+      "estimatedDaysRemaining": 63.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "64.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "63.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 84,
-      "backlogUnits": 92,
+      "backlogPosts": 81,
+      "backlogUnits": 91,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-04T04:45:01.414258+00:00",
+      "generatedAt": "2026-09-05T04:40:52.744160+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.4,
       "newPostsPerDay": 4.0,
