@@ -18584,3 +18584,33 @@
 [2026-09-04 13:06:16] === SYNDICATE DONE: car-died-in-drive-thru-towing-options | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-04 13:06:16] SYNCED | car-died-in-drive-thru-towing-options marked in synced-posts.txt
 [2026-09-04 13:06:16] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-05 07:30:04] === SYNDICATE START: car-accelerator-stuck-emergency-towing-protocol ===
+[2026-09-05 07:30:04] PREFLIGHT | title: Car Accelerator Stuck Emergency Towing Protocol: What to Do Right Now
+[2026-09-05 07:30:04] PREFLIGHT | date: 2026-09-05
+[2026-09-05 07:30:04] PREFLIGHT | timestamp: 2026-09-05 07:30:04
+[2026-09-05 07:30:04] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-09-05 07:30:04] PREFLIGHT | TUMBLR:  configured
+[2026-09-05 07:30:04] PREFLIGHT | BLOGGER: configured
+[2026-09-05 07:30:04] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-05 07:30:04] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-05 07:30:04] DEVTO | car-accelerator-stuck-emergency-towing-protocol | START
+[2026-09-05 07:30:04] DEVTO | car-accelerator-stuck-emergency-towing-protocol | account=TWTF2
+[2026-09-05 07:30:04] DEVTO | car-accelerator-stuck-emergency-towing-protocol | SUCCESS | https://dev.to/denverroadsideelitetowing/car-accelerator-stuck-emergency-towing-protocol-what-to-do-right-now-what-drivers-should-know-25k3
+[2026-09-05 07:30:04] --- waiting 60s before next platform ---
+[2026-09-05 07:31:04] TUMBLR | car-accelerator-stuck-emergency-towing-protocol | START
+[2026-09-05 07:31:05] TUMBLR | car-accelerator-stuck-emergency-towing-protocol | SUCCESS | https://towwiththeflow.tumblr.com/post/826922830340980736
+[2026-09-05 07:31:05] --- waiting 60s before next platform ---
+[2026-09-05 07:32:05] BLOGGER | car-accelerator-stuck-emergency-towing-protocol | START
+[2026-09-05 07:32:05] BLOGGER | car-accelerator-stuck-emergency-towing-protocol | step 1/3: refreshing access token
+[2026-09-05 07:32:05] BLOGGER | car-accelerator-stuck-emergency-towing-protocol | step 2/3: converting markdown to HTML
+[2026-09-05 07:32:05] BLOGGER | car-accelerator-stuck-emergency-towing-protocol | step 3/3: posting to blog 1959471973457654666
+[2026-09-05 07:32:06] BLOGGER | car-accelerator-stuck-emergency-towing-protocol | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-accelerator-stuck-emergency-towing.html
+[2026-09-05 07:32:06] --- waiting 60s before next platform ---
+[2026-09-05 07:33:06] WORDPRESS | car-accelerator-stuck-emergency-towing-protocol | START
+[2026-09-05 07:33:07] WORDPRESS | car-accelerator-stuck-emergency-towing-protocol | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/05/car-accelerator-stuck-emergency-towing-protocol/
+[2026-09-05 07:33:07] --- waiting 60s before next platform ---
+[2026-09-05 07:34:07] FEEDER | car-accelerator-stuck-emergency-towing-protocol | START
+[2026-09-05 07:34:07] FEEDER | car-accelerator-stuck-emergency-towing-protocol | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-accelerator-stuck-emergency-towing-protocol-advice/
+[2026-09-05 07:34:07] === SYNDICATE DONE: car-accelerator-stuck-emergency-towing-protocol | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-05 07:34:07] SYNCED | car-accelerator-stuck-emergency-towing-protocol marked in synced-posts.txt
+[2026-09-05 07:34:07] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
