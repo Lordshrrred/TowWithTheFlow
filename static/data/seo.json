@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-05T10:54:40.449975+00:00",
+  "generated_at": "2026-09-06T11:19:46.441597+00:00",
   "keywords": {
     "total": 802,
-    "live": 547,
-    "pending": 255,
+    "live": 551,
+    "pending": 251,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 359,
-      "pending": 255
+      "live": 363,
+      "pending": 251
     }
   },
   "next_targets": [
-    {
-      "keyword": "car accelerator stuck emergency towing protocol",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car overheating steam coming out tow or drive",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car won't start clicking noise tow truck cost",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "usaa roadside assistance towing coverage how many times",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "liberty mutual roadside assistance towing coverage limits",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "transmission slipping car shaking need tow truck",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "flat tire on freeway who to call tow truck",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "engine seized while driving towing cost insurance",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car stuck in snow who pays towing cost",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont start clicking noise cold weather",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,17 +74,17 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 86
+      "count": 87
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 56
+      "count": 57
     },
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 48
+      "count": 49
     },
     {
       "slug": "highway-safety",
@@ -94,7 +94,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 22
+      "count": 23
     },
     {
       "slug": "tire-wheel",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-05T04:40:52.744160+00:00",
+    "generated_at": "2026-09-06T04:49:36.873467+00:00",
     "platforms": {
       "blog": {
-        "checked": 524,
-        "verified": 519
+        "checked": 528,
+        "verified": 526
       },
       "dev": {
-        "checked": 450,
-        "verified": 450
+        "checked": 454,
+        "verified": 454
       },
       "feeder": {
-        "checked": 519,
-        "verified": 519
+        "checked": 523,
+        "verified": 523
       },
       "tumblr": {
-        "checked": 517,
-        "verified": 517
+        "checked": 521,
+        "verified": 521
       },
       "wordpress": {
-        "checked": 524,
-        "verified": 524
+        "checked": 528,
+        "verified": 528
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-05T10:54:40.369283+00:00",
+    "generated_at": "2026-09-06T11:19:46.355440+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 56,
+        "rows": 55,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 276,
+        "rows": 292,
         "source": "ga4",
         "status": "ok"
       }
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-05T10:54:40.473511+00:00",
+    "generatedAt": "2026-09-06T11:19:46.466007+00:00",
     "keywordGeneration": {
-      "currentInventory": 255,
-      "liveKeywords": 547,
-      "estimatedDaysRemaining": 63.8,
+      "currentInventory": 251,
+      "liveKeywords": 551,
+      "estimatedDaysRemaining": 62.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "63.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "62.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 81,
-      "backlogUnits": 91,
+      "backlogPosts": 79,
+      "backlogUnits": 88,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-05T04:40:52.744160+00:00",
+      "generatedAt": "2026-09-06T04:49:36.873467+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.4,
       "newPostsPerDay": 4.0,
