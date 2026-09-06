@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-09-06T18:27:04.033339+00:00",
+  "generated_at": "2026-09-06T22:13:51.209424+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/24-hour-towing-extra-costs-in-houston.html",
         "verified": true
       },
@@ -1075,6 +1074,7 @@
     "car-axle-broke-while-driving-can-it-be-driven-to-shop": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-axle-broke-while-driving-can-it-be_0732663494.html",
         "verified": true
       },
@@ -2517,12 +2517,6 @@
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-fuel-pump-went-out-highway-breakdown-cost-tips/",
         "verified": true
       },
-      "tumblr": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://www.tumblr.com/towwiththeflow/826663364666261504/car-fuel-pump-went-out-highway-breakdown-cost",
-        "verified": true
-      },
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/car-fuel-pump-went-out-highway-breakdown-cost-4/",
@@ -3233,7 +3227,6 @@
     "car-overheating-on-freeway-no-exit-nearby-what-to-do": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-overheating-on-freeway-no-exit.html",
         "verified": true
       },
@@ -5448,9 +5441,9 @@
     },
     "does-aaa-pay-for-towing-if-car-is-not-driveable-after-crash": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/does-aaa-pay-for-towing-if-car-is-not.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -6314,6 +6307,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/28/flat-tire-on-spare-already-how-to-get-towed-safely/",
+        "verified": true
+      }
+    },
+    "flat-tire-spare-is-also-flat-tow-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/flat-tire-spare-is-also-flat-what-tow.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/flat-tire-spare-is-also-flat-what-a-tow-will-cost-you-quick-guide-275n",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/flat-tire-spare-is-also-flat-tow-cost-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/827032078509096960/flat-tire-spare-is-also-flat-tow-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/flat-tire-spare-is-also-flat-tow-cost/",
         "verified": true
       }
     },
@@ -13977,24 +13997,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 531,
+      "checked": 532,
       "verified": 531
     },
     "dev": {
-      "checked": 457,
-      "verified": 457
+      "checked": 458,
+      "verified": 458
     },
     "feeder": {
-      "checked": 526,
-      "verified": 526
+      "checked": 527,
+      "verified": 527
     },
     "tumblr": {
       "checked": 525,
       "verified": 525
     },
     "wordpress": {
-      "checked": 531,
-      "verified": 531
+      "checked": 532,
+      "verified": 532
     }
   }
 }
