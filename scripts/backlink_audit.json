@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T12:17:42.514858+00:00",
+  "generated_at": "2026-09-06T15:40:25.663449+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -313,7 +313,6 @@
     "alternator-died-while-driving-signs-and-towing-options": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/alternator-died-while-driving-signs-and.html",
         "verified": true
       },
@@ -2488,12 +2487,6 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-fuel-pump-went-out-highway-breakdown-cost-tips/",
-        "verified": true
-      },
-      "tumblr": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://www.tumblr.com/towwiththeflow/826663364666261504/car-fuel-pump-went-out-highway-breakdown-cost",
         "verified": true
       },
       "wordpress": {
@@ -6585,7 +6578,6 @@
     "geico-roadside-assistance-towing-limits-how-many-miles": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/geico-roadside-assistance-towing-limits.html",
         "verified": true
       },
@@ -7439,6 +7431,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/04/20/is-roadside-assistance-cheaper-than-towing/",
+        "verified": true
+      }
+    },
+    "liberty-mutual-roadside-assistance-towing-coverage-limits": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/liberty-mutual-roadside-assistance.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/liberty-mutual-roadside-assistance-towing-coverage-limits-what-youre-actually-covered-for-what-5d36",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/liberty-mutual-roadside-assistance-towing-coverage-limits-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/827014363512782848/liberty-mutual-roadside-assistance-towing-coverage-limits",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/liberty-mutual-roadside-assistance-towing-coverage-limits/",
         "verified": true
       }
     },
@@ -12420,7 +12439,7 @@
     "towing-cost-oklahoma-city-oklahoma": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-oklahoma-city-oklahoma.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/towing-cost-in-oklahoma-city-oklahoma_01704393790.html",
         "verified": true
       },
       "dev": {
@@ -13897,24 +13916,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 528,
-      "verified": 528
+      "checked": 529,
+      "verified": 529
     },
     "dev": {
-      "checked": 454,
-      "verified": 454
+      "checked": 455,
+      "verified": 455
     },
     "feeder": {
-      "checked": 523,
-      "verified": 523
+      "checked": 524,
+      "verified": 524
     },
     "tumblr": {
       "checked": 522,
       "verified": 522
     },
     "wordpress": {
-      "checked": 528,
-      "verified": 528
+      "checked": 529,
+      "verified": 529
     }
   }
 }
