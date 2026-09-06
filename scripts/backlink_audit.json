@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T22:10:26.549844+00:00",
+  "generated_at": "2026-09-06T04:49:36.873467+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -654,9 +654,9 @@
     },
     "brake-failure-on-highway-what-to-do": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/brake-failure-on-highway-what-to-do.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -682,7 +682,6 @@
     "brake-failure-while-driving-emergency-steps": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/brake-failure-while-driving-emergency_0760778376.html",
         "verified": true
       },
@@ -2490,12 +2489,6 @@
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-fuel-pump-went-out-highway-breakdown-cost-tips/",
         "verified": true
       },
-      "tumblr": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://www.tumblr.com/towwiththeflow/826663364666261504/car-fuel-pump-went-out-highway-breakdown-cost",
-        "verified": true
-      },
       "wordpress": {
         "reason": "ok",
         "recovered_live": true,
@@ -3059,7 +3052,6 @@
     "car-overheated-can-i-drive-it": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-overheated-can-i-drive-it-roadside.html",
         "verified": true
       },
@@ -3208,7 +3200,8 @@
     "car-overheating-on-highway-should-i-pull-over-immediately": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-overheating-on-highway-should-i.html",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-overheating-on-highway-should-i.html",
         "verified": true
       },
       "dev": {
@@ -3738,9 +3731,9 @@
     },
     "car-spun-out-on-highway-what-to-do-after": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-spun-out-on-highway-what-to-do.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4129,6 +4122,7 @@
     "car-submerged-in-water-after-flooding-who-to-call": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-submerged-in-water-after-flooding.html",
         "verified": true
       },
@@ -4637,6 +4631,7 @@
     "car-wont-start-clicking-noise-tow-truck-cost": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-wont-start-clicking-noise-what-it.html",
         "verified": true
       },
@@ -5633,9 +5628,9 @@
     },
     "driving-in-snow-emergency-kit-checklist": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/driving-in-snow-emergency-kit-checklist_02130691165.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -13898,7 +13893,7 @@
   "summary": {
     "blog": {
       "checked": 528,
-      "verified": 527
+      "verified": 526
     },
     "dev": {
       "checked": 454,
@@ -13909,8 +13904,8 @@
       "verified": 523
     },
     "tumblr": {
-      "checked": 522,
-      "verified": 522
+      "checked": 521,
+      "verified": 521
     },
     "wordpress": {
       "checked": 528,
