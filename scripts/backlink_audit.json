@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-09-06T15:40:25.663449+00:00",
+  "generated_at": "2026-09-06T18:27:04.033339+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/24-hour-towing-extra-costs-in-houston.html",
         "verified": true
       },
@@ -1176,6 +1177,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/21/car-battery-dead-in-parking-garage-towing-cost/",
+        "verified": true
+      }
+    },
+    "car-battery-dead-in-parking-lot-tow-truck-access": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-battery-dead-in-parking-lot-tow.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/car-battery-dead-in-parking-lot-tow-truck-access-and-what-to-do-first-quick-guide-921",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-battery-dead-in-parking-lot-tow-truck-access-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/827027415647830016/car-battery-dead-in-parking-lot-tow-truck-access",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/car-battery-dead-in-parking-lot-tow-truck-access/",
         "verified": true
       }
     },
@@ -2489,10 +2517,15 @@
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-fuel-pump-went-out-highway-breakdown-cost-tips/",
         "verified": true
       },
-      "wordpress": {
+      "tumblr": {
         "reason": "ok",
         "recovered_live": true,
-        "url": "https://towwiththeflowyo.wordpress.com/2026/09/04/car-fuel-pump-went-out-highway-breakdown-cost-3/",
+        "url": "https://www.tumblr.com/towwiththeflow/826663364666261504/car-fuel-pump-went-out-highway-breakdown-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/car-fuel-pump-went-out-highway-breakdown-cost-4/",
         "verified": true
       }
     },
@@ -3116,6 +3149,33 @@
         "verified": true
       }
     },
+    "car-overheating-in-traffic-need-emergency-tow": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-overheating-in-traffic-what-to-do.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-overheating-in-traffic-what-to-do-and-when-you-need-an-emergency-tow-roadside-tips-45oj",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-overheating-in-traffic-need-emergency-tow-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/827021411994468352/car-overheating-in-traffic-need-emergency-tow",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/car-overheating-in-traffic-need-emergency-tow/",
+        "verified": true
+      }
+    },
     "car-overheating-in-traffic-what-to-do": {
       "blog": {
         "reason": "ok",
@@ -3173,6 +3233,7 @@
     "car-overheating-on-freeway-no-exit-nearby-what-to-do": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-overheating-on-freeway-no-exit.html",
         "verified": true
       },
@@ -13916,24 +13977,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 529,
-      "verified": 529
+      "checked": 531,
+      "verified": 531
     },
     "dev": {
-      "checked": 455,
-      "verified": 455
+      "checked": 457,
+      "verified": 457
     },
     "feeder": {
-      "checked": 524,
-      "verified": 524
+      "checked": 526,
+      "verified": 526
     },
     "tumblr": {
-      "checked": 522,
-      "verified": 522
+      "checked": 525,
+      "verified": 525
     },
     "wordpress": {
-      "checked": 529,
-      "verified": 529
+      "checked": 531,
+      "verified": 531
     }
   }
 }

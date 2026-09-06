@@ -1,6 +1,10 @@
 {
-  "generated_at": "2026-09-06T15:40:37.613893+00:00",
+  "generated_at": "2026-09-06T18:27:12.881177+00:00",
   "scanned_urls": [
+    "https://towwiththeflowyo.wordpress.com/2026/09/06/car-fuel-pump-went-out-highway-breakdown-cost-4/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/06/car-battery-dead-in-parking-lot-tow-truck-access/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/06/car-overheating-in-traffic-need-emergency-tow/",
+    "https://towwiththeflowyo.wordpress.com/2026/09/06/liberty-mutual-roadside-assistance-towing-coverage-limits/",
     "https://towwiththeflowyo.wordpress.com/2026/09/05/usaa-roadside-assistance-towing-coverage-how-many-times/",
     "https://towwiththeflowyo.wordpress.com/2026/09/05/car-wont-start-clicking-noise-tow-truck-cost/",
     "https://towwiththeflowyo.wordpress.com/2026/09/05/car-overheating-steam-coming-out-tow-or-drive/",
@@ -628,9 +632,7 @@
     "https://towwiththeflowyo.wordpress.com/2026/04/11/towing-cost-miami-florida-hurricane-season/",
     "https://towwiththeflowyo.wordpress.com/2026/04/11/how-long-can-a-car-sit-broken-down-on-roadside/",
     "https://towwiththeflowyo.wordpress.com/2026/04/10/engine-stalls-at-stop-sign-causes/",
-    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/",
-    "https://towwiththeflowyo.wordpress.com/2026/09/06/car-overheating-in-traffic-need-emergency-tow/",
-    "https://towwiththeflowyo.wordpress.com/2026/09/06/liberty-mutual-roadside-assistance-towing-coverage-limits/"
+    "https://towwiththeflowyo.wordpress.com/2026/04/10/car-died-while-driving-what-now/"
   ],
   "site": "https://towwiththeflowyo.wordpress.com",
   "slugs": {
@@ -1072,6 +1074,15 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/21/car-battery-dead-in-parking-garage-towing-cost/",
+        "verified": true
+      }
+    },
+    "car-battery-dead-in-parking-lot-tow-truck-access": {
+      "wordpress": {
+        "matched": "https://towwiththeflow.com/car-battery-dead-in-parking-lot-tow-truck-access/",
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/car-battery-dead-in-parking-lot-tow-truck-access/",
         "verified": true
       }
     },
@@ -1567,6 +1578,15 @@
         "reason": "slug_mismatch",
         "recovered_live": true,
         "url": "https://towwiththeflowyo.wordpress.com/2026/09/04/car-fuel-pump-went-out-highway-breakdown-cost-3/",
+        "verified": false
+      }
+    },
+    "car-fuel-pump-went-out-highway-breakdown-cost-4": {
+      "wordpress": {
+        "matched": "",
+        "reason": "slug_mismatch",
+        "recovered_live": true,
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/car-fuel-pump-went-out-highway-breakdown-cost-4/",
         "verified": false
       }
     },
@@ -6308,8 +6328,8 @@
   "source": "wordpress-sitemap-scan",
   "summary": {
     "wordpress": {
-      "checked": 630,
-      "verified": 531
+      "checked": 632,
+      "verified": 532
     }
   }
 }
