@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T20:09:49.444415+00:00",
+  "generated_at": "2026-09-07T23:01:08.689711+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2514,6 +2514,12 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-fuel-pump-went-out-highway-breakdown-cost-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://www.tumblr.com/towwiththeflow/826663364666261504/car-fuel-pump-went-out-highway-breakdown-cost",
         "verified": true
       },
       "wordpress": {
@@ -6046,6 +6052,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/23/engine-seized-while-driving-towing-cost/",
+        "verified": true
+      }
+    },
+    "engine-seized-while-driving-towing-cost-insurance": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/engine-seized-while-driving-towing-cost.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/engine-seized-while-driving-towing-cost-and-what-your-insurance-actually-covers-what-drivers-1knf",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/engine-seized-while-driving-towing-cost-insurance-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/827128753883938816/engine-seized-while-driving-towing-cost-insurance",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/07/engine-seized-while-driving-towing-cost-insurance/",
         "verified": true
       }
     },
@@ -14077,24 +14110,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 535,
-      "verified": 535
+      "checked": 536,
+      "verified": 536
     },
     "dev": {
-      "checked": 461,
-      "verified": 461
+      "checked": 462,
+      "verified": 462
     },
     "feeder": {
+      "checked": 531,
+      "verified": 531
+    },
+    "tumblr": {
       "checked": 530,
       "verified": 530
     },
-    "tumblr": {
-      "checked": 528,
-      "verified": 528
-    },
     "wordpress": {
-      "checked": 535,
-      "verified": 535
+      "checked": 536,
+      "verified": 536
     }
   }
 }
