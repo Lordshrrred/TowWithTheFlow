@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T04:50:54.890073+00:00",
+  "generated_at": "2026-09-08T13:00:34.502013+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1496,12 +1496,6 @@
       }
     },
     "car-breaks-down-on-bridge-who-to-call": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-breaks-down-on-bridge-who-to-call.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-breaks-down-on-bridge-who-to-call-and-what-to-do-roadside-tips-51mf",
@@ -2514,6 +2508,12 @@
         "reason": "ok",
         "recovered_live": true,
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-fuel-pump-went-out-highway-breakdown-cost-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://www.tumblr.com/towwiththeflow/826663364666261504/car-fuel-pump-went-out-highway-breakdown-cost",
         "verified": true
       },
       "wordpress": {
@@ -4281,9 +4281,9 @@
     },
     "car-transmission-slipping-need-tow-truck-now": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-transmission-slipping-need-tow.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -4417,6 +4417,7 @@
     "car-wont-shift-out-of-park-towing-options": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/car-wont-shift-out-of-park-towing.html",
         "verified": true
       },
@@ -12492,7 +12493,8 @@
     "towing-cost-new-york-city": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-new-york-city-what-youll.html",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/towing-cost-in-new-york-city-after.html",
         "verified": true
       },
       "dev": {
@@ -13789,7 +13791,7 @@
     "usaa-roadside-assistance-towing-coverage-limits-military": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/usaa-roadside-assistance-towing_0506151275.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/06/usaa-roadside-assistance-towing_0809168967.html",
         "verified": true
       },
       "dev": {
@@ -14104,8 +14106,8 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 536,
-      "verified": 536
+      "checked": 535,
+      "verified": 534
     },
     "dev": {
       "checked": 462,
@@ -14116,8 +14118,8 @@
       "verified": 531
     },
     "tumblr": {
-      "checked": 529,
-      "verified": 529
+      "checked": 530,
+      "verified": 530
     },
     "wordpress": {
       "checked": 536,
