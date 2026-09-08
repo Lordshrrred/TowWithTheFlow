@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T19:37:43.012699+00:00",
+  "generated_at": "2026-09-08T22:54:40.717958+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -129,6 +129,7 @@
     "airbag-deployed-car-still-runs-can-i-drive-it": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/airbag-deployed-car-still-runs-can-i.html",
         "verified": true
       },
@@ -1316,9 +1317,9 @@
     },
     "car-battery-died-parking-garage-tow-truck-can-reach": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-died-in-parking-garage-can.html",
-        "verified": true
+        "verified": false
       },
       "feeder": {
         "reason": "ok",
@@ -1364,12 +1365,6 @@
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
-      "blog": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-battery-dies-in-parking-lot-what-to.html",
-        "verified": true
-      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
@@ -2516,12 +2511,6 @@
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-fuel-pump-went-out-highway-breakdown-cost-tips/",
         "verified": true
       },
-      "tumblr": {
-        "reason": "ok",
-        "recovered_live": true,
-        "url": "https://www.tumblr.com/towwiththeflow/826663364666261504/car-fuel-pump-went-out-highway-breakdown-cost",
-        "verified": true
-      },
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/car-fuel-pump-went-out-highway-breakdown-cost-4/",
@@ -2638,9 +2627,9 @@
     },
     "car-key-broke-in-ignition-need-tow-truck": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-key-broke-in-ignition-do-you-need.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -2796,9 +2785,9 @@
     },
     "car-making-burning-smell-while-driving-should-i-stop": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-making-burning-smell-while-driving.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -3470,6 +3459,7 @@
     "car-ran-out-of-gas-on-highway-what-to-do": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-ran-out-of-gas-on-highway-what-to.html",
         "verified": true
       },
@@ -5170,7 +5160,7 @@
     "cheapest-tow-truck-service-near-me-sunday-winter": {
       "blog": {
         "reason": "ok",
-        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/find-cheapest-tow-truck-service-near.html",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/find-cheapest-tow-truck-service-near_0193239315.html",
         "verified": true
       },
       "feeder": {
@@ -5495,6 +5485,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/15/dead-battery-extreme-cold-weather-tow-or-jump-start/",
+        "verified": true
+      }
+    },
+    "dead-battery-jump-start-failed-towing-cost": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/dead-battery-jump-start-failed-what-tow.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/dead-battery-jump-start-failed-what-a-tow-will-cost-you-explained-gaf",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/dead-battery-jump-start-failed-towing-cost-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/827217192159477760/dead-battery-jump-start-failed-towing-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/08/dead-battery-jump-start-failed-towing-cost/",
         "verified": true
       }
     },
@@ -7631,7 +7648,6 @@
     "is-it-illegal-to-leave-your-car-on-the-side-of-the-road": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/is-it-illegal-to-leave-your-car-on-side.html",
         "verified": true
       },
@@ -8686,9 +8702,9 @@
     },
     "state-farm-towing-coverage-maximum-distance-miles": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/state-farm-towing-coverage-maximum.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -9244,6 +9260,7 @@
     "tow-truck-cost-denver-snow-emergency": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/tow-truck-cost-denver-snow-emergency.html",
         "verified": true
       },
@@ -10490,6 +10507,7 @@
     "towing-cost-construction-zone-police-required": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-construction-zone-police.html",
         "verified": true
       },
@@ -10517,6 +10535,7 @@
     "towing-cost-credit-card-roadside-assistance-covers": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/does-credit-card-roadside-assistance.html",
         "verified": true
       },
@@ -12970,7 +12989,6 @@
     "towing-cost-phoenix-arizona-weekend-rates": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/towing-cost-in-phoenix-arizona-weekend.html",
         "verified": true
       },
@@ -13505,6 +13523,7 @@
     "towing-cost-toll-road-breakdown-emergency-lane": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-toll-road-breakdown.html",
         "verified": true
       },
@@ -14194,23 +14213,23 @@
   "summary": {
     "blog": {
       "checked": 539,
-      "verified": 538
+      "verified": 536
     },
     "dev": {
-      "checked": 465,
-      "verified": 465
+      "checked": 466,
+      "verified": 466
     },
     "feeder": {
-      "checked": 534,
-      "verified": 534
+      "checked": 535,
+      "verified": 535
     },
     "tumblr": {
       "checked": 533,
       "verified": 533
     },
     "wordpress": {
-      "checked": 539,
-      "verified": 539
+      "checked": 540,
+      "verified": 540
     }
   }
 }
