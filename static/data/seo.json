@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-07T13:45:55.179298+00:00",
+  "generated_at": "2026-09-08T11:43:28.693949+00:00",
   "keywords": {
     "total": 802,
-    "live": 555,
-    "pending": 247,
+    "live": 559,
+    "pending": 243,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 367,
-      "pending": 247
+      "live": 371,
+      "pending": 243
     }
   },
   "next_targets": [
-    {
-      "keyword": "car sliding on ice hit curb need tow",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "transmission slipping car shaking need tow truck",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "flat tire on freeway who to call tow truck",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "engine seized while driving towing cost insurance",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "car stuck in snow who pays towing cost",
       "score": 7,
@@ -63,18 +43,38 @@
       "keyword": "car fire smoke under hood towing needed",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car wont shift gears manual transmission towing",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car making grinding noise when braking tow",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car stuck in snow tow truck vs roadside assistance",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "progressive insurance covers towing how much",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 225
+      "count": 226
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 88
+      "count": 89
     },
     {
       "slug": "insurance-coverage",
@@ -99,7 +99,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 21
+      "count": 22
     },
     {
       "slug": "towing-logistics",
@@ -119,7 +119,7 @@
     {
       "slug": "winter-weather",
       "label": "Winter & Weather Breakdowns",
-      "count": 5
+      "count": 6
     },
     {
       "slug": "vehicle-recovery",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-07T04:54:05.335887+00:00",
+    "generated_at": "2026-09-08T04:50:54.890073+00:00",
     "platforms": {
       "blog": {
-        "checked": 532,
-        "verified": 532
+        "checked": 536,
+        "verified": 536
       },
       "dev": {
-        "checked": 458,
-        "verified": 376
+        "checked": 462,
+        "verified": 462
       },
       "feeder": {
-        "checked": 527,
-        "verified": 527
+        "checked": 531,
+        "verified": 531
       },
       "tumblr": {
-        "checked": 525,
-        "verified": 525
+        "checked": 529,
+        "verified": 529
       },
       "wordpress": {
-        "checked": 532,
-        "verified": 532
+        "checked": 536,
+        "verified": 536
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-07T13:00:12.373413+00:00",
+    "generated_at": "2026-09-08T11:43:28.603968+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 55,
+        "rows": 54,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 302,
+        "rows": 310,
         "source": "ga4",
         "status": "ok"
       }
@@ -212,33 +212,33 @@
       }
     ],
     "top_landing_page_count": 7,
-    "top_query_count": 15,
+    "top_query_count": 14,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-07T13:45:55.198339+00:00",
+    "generatedAt": "2026-09-08T11:43:28.720931+00:00",
     "keywordGeneration": {
-      "currentInventory": 247,
-      "liveKeywords": 555,
-      "estimatedDaysRemaining": 61.8,
+      "currentInventory": 243,
+      "liveKeywords": 559,
+      "estimatedDaysRemaining": 60.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "61.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "60.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 159,
-      "backlogUnits": 168,
+      "backlogPosts": 77,
+      "backlogUnits": 86,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-07T04:54:05.335887+00:00",
+      "generatedAt": "2026-09-08T04:50:54.890073+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.1,
+      "completedPerDay": 19.4,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.9,
+      "netBacklinkUnitsPerDay": 0.6,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.9 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.6 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
