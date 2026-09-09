@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T22:54:40.717958+00:00",
+  "generated_at": "2026-09-09T04:55:30.276402+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -129,7 +129,6 @@
     "airbag-deployed-car-still-runs-can-i-drive-it": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/airbag-deployed-car-still-runs-can-i.html",
         "verified": true
       },
@@ -1317,9 +1316,9 @@
     },
     "car-battery-died-parking-garage-tow-truck-can-reach": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/car-battery-died-in-parking-garage-can.html",
-        "verified": false
+        "verified": true
       },
       "feeder": {
         "reason": "ok",
@@ -1365,6 +1364,12 @@
       }
     },
     "car-battery-dies-parking-lot-phoenix": {
+      "blog": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/04/car-battery-dies-in-parking-lot-what-to.html",
+        "verified": true
+      },
       "dev": {
         "reason": "ok",
         "url": "https://dev.to/towwiththeflowyoo/car-battery-dies-in-parking-lot-what-to-do-in-phoenix-roadside-tips-4n23",
@@ -2511,6 +2516,12 @@
         "url": "https://lordshrrred.github.io/TWTF_Feeder/car-fuel-pump-went-out-highway-breakdown-cost-tips/",
         "verified": true
       },
+      "tumblr": {
+        "reason": "ok",
+        "recovered_live": true,
+        "url": "https://www.tumblr.com/towwiththeflow/826663364666261504/car-fuel-pump-went-out-highway-breakdown-cost",
+        "verified": true
+      },
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/09/06/car-fuel-pump-went-out-highway-breakdown-cost-4/",
@@ -2785,9 +2796,9 @@
     },
     "car-making-burning-smell-while-driving-should-i-stop": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/08/car-making-burning-smell-while-driving.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -3459,7 +3470,6 @@
     "car-ran-out-of-gas-on-highway-what-to-do": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/car-ran-out-of-gas-on-highway-what-to.html",
         "verified": true
       },
@@ -8702,9 +8712,9 @@
     },
     "state-farm-towing-coverage-maximum-distance-miles": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/state-farm-towing-coverage-maximum.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9260,7 +9270,6 @@
     "tow-truck-cost-denver-snow-emergency": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/tow-truck-cost-denver-snow-emergency.html",
         "verified": true
       },
@@ -10507,7 +10516,6 @@
     "towing-cost-construction-zone-police-required": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-construction-zone-police.html",
         "verified": true
       },
@@ -10535,7 +10543,6 @@
     "towing-cost-credit-card-roadside-assistance-covers": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/does-credit-card-roadside-assistance.html",
         "verified": true
       },
@@ -13523,7 +13530,6 @@
     "towing-cost-toll-road-breakdown-emergency-lane": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/05/towing-cost-toll-road-breakdown.html",
         "verified": true
       },
@@ -13816,6 +13822,7 @@
     "transmission-slipping-symptoms-houston": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/07/transmission-slipping-symptoms-what.html",
         "verified": true
       },
@@ -14212,8 +14219,8 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 539,
-      "verified": 536
+      "checked": 540,
+      "verified": 540
     },
     "dev": {
       "checked": 466,
@@ -14224,8 +14231,8 @@
       "verified": 535
     },
     "tumblr": {
-      "checked": 533,
-      "verified": 533
+      "checked": 534,
+      "verified": 534
     },
     "wordpress": {
       "checked": 540,
