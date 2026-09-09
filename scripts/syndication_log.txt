@@ -19099,3 +19099,33 @@
 [2026-09-09 08:48:00] === SYNDICATE DONE: car-accident-towing-fee-who-pays-insurance | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-09 08:48:00] SYNCED | car-accident-towing-fee-who-pays-insurance marked in synced-posts.txt
 [2026-09-09 08:48:00] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-09 10:48:56] === SYNDICATE START: car-fire-smoke-under-hood-towing-needed ===
+[2026-09-09 10:48:56] PREFLIGHT | title: Car Fire Smoke Under Hood: What to Do Right Now and Why You Need a Tow
+[2026-09-09 10:48:56] PREFLIGHT | date: 2026-09-09
+[2026-09-09 10:48:56] PREFLIGHT | timestamp: 2026-09-09 10:48:56
+[2026-09-09 10:48:56] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-09-09 10:48:56] PREFLIGHT | TUMBLR:  configured
+[2026-09-09 10:48:56] PREFLIGHT | BLOGGER: configured
+[2026-09-09 10:48:56] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-09 10:48:56] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-09 10:48:56] DEVTO | car-fire-smoke-under-hood-towing-needed | START
+[2026-09-09 10:48:56] DEVTO | car-fire-smoke-under-hood-towing-needed | account=TWTF2
+[2026-09-09 10:48:56] DEVTO | car-fire-smoke-under-hood-towing-needed | SUCCESS | https://dev.to/denverroadsideelitetowing/car-fire-smoke-under-hood-what-to-do-right-now-and-why-you-need-a-tow-quick-guide-5ffp
+[2026-09-09 10:48:56] --- waiting 60s before next platform ---
+[2026-09-09 10:49:56] TUMBLR | car-fire-smoke-under-hood-towing-needed | START
+[2026-09-09 10:49:57] TUMBLR | car-fire-smoke-under-hood-towing-needed | SUCCESS | https://towwiththeflow.tumblr.com/post/827297729647656960
+[2026-09-09 10:49:57] --- waiting 60s before next platform ---
+[2026-09-09 10:50:57] BLOGGER | car-fire-smoke-under-hood-towing-needed | START
+[2026-09-09 10:50:57] BLOGGER | car-fire-smoke-under-hood-towing-needed | step 1/3: refreshing access token
+[2026-09-09 10:50:57] BLOGGER | car-fire-smoke-under-hood-towing-needed | step 2/3: converting markdown to HTML
+[2026-09-09 10:50:57] BLOGGER | car-fire-smoke-under-hood-towing-needed | step 3/3: posting to blog 1959471973457654666
+[2026-09-09 10:50:59] BLOGGER | car-fire-smoke-under-hood-towing-needed | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-fire-smoke-under-hood-what-to-do.html
+[2026-09-09 10:50:59] --- waiting 60s before next platform ---
+[2026-09-09 10:51:59] WORDPRESS | car-fire-smoke-under-hood-towing-needed | START
+[2026-09-09 10:52:07] WORDPRESS | car-fire-smoke-under-hood-towing-needed | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/09/car-fire-smoke-under-hood-towing-needed/
+[2026-09-09 10:52:07] --- waiting 60s before next platform ---
+[2026-09-09 10:53:07] FEEDER | car-fire-smoke-under-hood-towing-needed | START
+[2026-09-09 10:53:09] FEEDER | car-fire-smoke-under-hood-towing-needed | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-fire-smoke-under-hood-towing-needed-advice/
+[2026-09-09 10:53:09] === SYNDICATE DONE: car-fire-smoke-under-hood-towing-needed | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-09 10:53:09] SYNCED | car-fire-smoke-under-hood-towing-needed marked in synced-posts.txt
+[2026-09-09 10:53:09] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
