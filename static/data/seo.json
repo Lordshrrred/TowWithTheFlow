@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-09T12:32:52.944397+00:00",
+  "generated_at": "2026-09-10T11:47:36.215921+00:00",
   "keywords": {
     "total": 802,
-    "live": 563,
-    "pending": 239,
+    "live": 567,
+    "pending": 235,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 375,
-      "pending": 239
+      "live": 379,
+      "pending": 235
     }
   },
   "next_targets": [
-    {
-      "keyword": "car accident towing fee who pays insurance",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car fire smoke under hood towing needed",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont shift gears manual transmission towing",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car making grinding noise when braking tow",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "car stuck in snow tow truck vs roadside assistance",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "how long can you leave a broken down car on the highway",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car wont start after rain flooded engine what to do",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down in bad neighborhood safe steps",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "roadside assistance for rental car who pays",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does comprehensive insurance cover towing cost",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,12 +74,12 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 90
+      "count": 93
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 58
+      "count": 59
     },
     {
       "slug": "battery-starting",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-09T04:55:30.276402+00:00",
+    "generated_at": "2026-09-10T04:56:30.793930+00:00",
     "platforms": {
       "blog": {
-        "checked": 540,
-        "verified": 540
+        "checked": 544,
+        "verified": 543
       },
       "dev": {
-        "checked": 466,
-        "verified": 466
+        "checked": 470,
+        "verified": 470
       },
       "feeder": {
-        "checked": 535,
-        "verified": 535
+        "checked": 539,
+        "verified": 539
       },
       "tumblr": {
-        "checked": 534,
-        "verified": 534
+        "checked": 537,
+        "verified": 537
       },
       "wordpress": {
-        "checked": 540,
-        "verified": 540
+        "checked": 544,
+        "verified": 544
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-09T11:49:29.746875+00:00",
+    "generated_at": "2026-09-10T11:47:36.136911+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,7 +186,7 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 52,
+        "rows": 51,
         "source": "search_console",
         "status": "ok"
       },
@@ -216,29 +216,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-09T12:32:52.963756+00:00",
+    "generatedAt": "2026-09-10T11:47:36.242001+00:00",
     "keywordGeneration": {
-      "currentInventory": 239,
-      "liveKeywords": 563,
-      "estimatedDaysRemaining": 59.8,
+      "currentInventory": 235,
+      "liveKeywords": 567,
+      "estimatedDaysRemaining": 58.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "59.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "58.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 77,
-      "backlogUnits": 85,
+      "backlogUnits": 87,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-09T04:55:30.276402+00:00",
+      "generatedAt": "2026-09-10T04:56:30.793930+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.4,
+      "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.6,
+      "netBacklinkUnitsPerDay": 0.2,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.6 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.2 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
