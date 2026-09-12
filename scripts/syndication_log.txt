@@ -19460,3 +19460,33 @@
 [2026-09-12 07:45:22] === SYNDICATE DONE: roadside-assistance-rental-car-who-pays | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-12 07:45:22] SYNCED | roadside-assistance-rental-car-who-pays marked in synced-posts.txt
 [2026-09-12 07:45:22] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-12 09:42:33] === SYNDICATE START: does-comprehensive-insurance-cover-towing-cost ===
+[2026-09-12 09:42:33] PREFLIGHT | title: Does Comprehensive Insurance Cover Towing Cost: What You're Actually Covered For
+[2026-09-12 09:42:33] PREFLIGHT | date: 2026-09-12
+[2026-09-12 09:42:33] PREFLIGHT | timestamp: 2026-09-12 09:42:33
+[2026-09-12 09:42:33] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-09-12 09:42:33] PREFLIGHT | TUMBLR:  configured
+[2026-09-12 09:42:33] PREFLIGHT | BLOGGER: configured
+[2026-09-12 09:42:33] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-12 09:42:33] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-12 09:42:33] DEVTO | does-comprehensive-insurance-cover-towing-cost | START
+[2026-09-12 09:42:33] DEVTO | does-comprehensive-insurance-cover-towing-cost | account=TWTF2
+[2026-09-12 09:42:34] DEVTO | does-comprehensive-insurance-cover-towing-cost | SUCCESS | https://dev.to/denverroadsideelitetowing/does-comprehensive-insurance-cover-towing-cost-what-youre-actually-covered-for-what-drivers-1hk2
+[2026-09-12 09:42:34] --- waiting 60s before next platform ---
+[2026-09-12 09:43:34] TUMBLR | does-comprehensive-insurance-cover-towing-cost | START
+[2026-09-12 09:43:35] TUMBLR | does-comprehensive-insurance-cover-towing-cost | SUCCESS | https://towwiththeflow.tumblr.com/post/827565344843595776
+[2026-09-12 09:43:35] --- waiting 60s before next platform ---
+[2026-09-12 09:44:35] BLOGGER | does-comprehensive-insurance-cover-towing-cost | START
+[2026-09-12 09:44:35] BLOGGER | does-comprehensive-insurance-cover-towing-cost | step 1/3: refreshing access token
+[2026-09-12 09:44:35] BLOGGER | does-comprehensive-insurance-cover-towing-cost | step 2/3: converting markdown to HTML
+[2026-09-12 09:44:35] BLOGGER | does-comprehensive-insurance-cover-towing-cost | step 3/3: posting to blog 1959471973457654666
+[2026-09-12 09:44:36] BLOGGER | does-comprehensive-insurance-cover-towing-cost | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/does-comprehensive-insurance-cover.html
+[2026-09-12 09:44:36] --- waiting 60s before next platform ---
+[2026-09-12 09:45:36] WORDPRESS | does-comprehensive-insurance-cover-towing-cost | START
+[2026-09-12 09:45:44] WORDPRESS | does-comprehensive-insurance-cover-towing-cost | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/12/does-comprehensive-insurance-cover-towing-cost/
+[2026-09-12 09:45:44] --- waiting 60s before next platform ---
+[2026-09-12 09:46:44] FEEDER | does-comprehensive-insurance-cover-towing-cost | START
+[2026-09-12 09:46:45] FEEDER | does-comprehensive-insurance-cover-towing-cost | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/does-comprehensive-insurance-cover-towing-cost-advice/
+[2026-09-12 09:46:45] === SYNDICATE DONE: does-comprehensive-insurance-cover-towing-cost | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-12 09:46:45] SYNCED | does-comprehensive-insurance-cover-towing-cost marked in synced-posts.txt
+[2026-09-12 09:46:45] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
