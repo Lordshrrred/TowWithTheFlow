@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-11T12:25:12.076496+00:00",
+  "generated_at": "2026-09-12T11:14:24.025089+00:00",
   "keywords": {
     "total": 802,
-    "live": 571,
-    "pending": 231,
+    "live": 575,
+    "pending": 227,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 383,
-      "pending": 231
+      "live": 387,
+      "pending": 227
     }
   },
   "next_targets": [
-    {
-      "keyword": "car serpentine belt snapped can i drive",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how long can you leave a broken down car on the highway",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont start after rain flooded engine what to do",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down in bad neighborhood safe steps",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "roadside assistance for rental car who pays",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "usaa roadside assistance towing coverage limit",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "progressive insurance towing coverage limit per incident",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "aaa towing coverage miles per year limit",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does insurance cover towing if car breaks down not accident",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how far will a tow truck take your car on insurance",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -84,17 +84,17 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 53
+      "count": 54
     },
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 30
+      "count": 31
     },
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 23
+      "count": 24
     },
     {
       "slug": "tire-wheel",
@@ -114,7 +114,7 @@
     {
       "slug": "vehicle-safety",
       "label": "Vehicle Safety",
-      "count": 7
+      "count": 8
     },
     {
       "slug": "winter-weather",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-11T04:53:27.386815+00:00",
+    "generated_at": "2026-09-12T04:47:22.263321+00:00",
     "platforms": {
       "blog": {
-        "checked": 546,
-        "verified": 498
+        "checked": 552,
+        "verified": 547
       },
       "dev": {
-        "checked": 474,
-        "verified": 474
+        "checked": 478,
+        "verified": 478
       },
       "feeder": {
-        "checked": 543,
-        "verified": 543
+        "checked": 547,
+        "verified": 547
       },
       "tumblr": {
-        "checked": 542,
-        "verified": 542
+        "checked": 546,
+        "verified": 546
       },
       "wordpress": {
-        "checked": 548,
-        "verified": 548
+        "checked": 552,
+        "verified": 552
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-11T11:47:30.374264+00:00",
+    "generated_at": "2026-09-12T11:14:23.956861+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 48,
+        "rows": 42,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 328,
+        "rows": 336,
         "source": "ga4",
         "status": "ok"
       }
@@ -207,7 +207,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "2 Search Console impressions match this asset pattern.",
+        "reason": "1 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -216,22 +216,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-11T12:25:12.089365+00:00",
+    "generatedAt": "2026-09-12T11:14:24.039814+00:00",
     "keywordGeneration": {
-      "currentInventory": 231,
-      "liveKeywords": 571,
-      "estimatedDaysRemaining": 57.8,
+      "currentInventory": 227,
+      "liveKeywords": 575,
+      "estimatedDaysRemaining": 56.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "57.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "56.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 117,
-      "backlogUnits": 135,
+      "backlogPosts": 81,
+      "backlogUnits": 90,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-11T04:53:27.386815+00:00",
+      "generatedAt": "2026-09-12T04:47:22.263321+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
