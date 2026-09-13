@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T18:55:00.953361+00:00",
+  "generated_at": "2026-09-13T22:36:55.247839+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -47,6 +47,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/08/02/aaa-membership-worth-it-single-tow-cost-comparison/",
+        "verified": true
+      }
+    },
+    "aaa-towing-coverage-miles-per-year-limit": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/aaa-towing-coverage-miles-per-year.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/aaa-towing-coverage-miles-per-year-limit-what-youre-actually-covered-for-explained-4ao2",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/aaa-towing-coverage-miles-per-year-limit-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/827667816850358272/aaa-towing-coverage-miles-per-year-limit",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/13/aaa-towing-coverage-miles-per-year-limit/",
         "verified": true
       }
     },
@@ -6456,9 +6483,9 @@
     },
     "engine-seized-while-driving-towing-cost-insurance": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/engine-seized-while-driving-towing-cost.html",
-        "verified": true
+        "verified": false
       },
       "dev": {
         "reason": "ok",
@@ -14725,24 +14752,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 559,
+      "checked": 560,
       "verified": 559
     },
     "dev": {
-      "checked": 485,
-      "verified": 485
+      "checked": 486,
+      "verified": 486
     },
     "feeder": {
-      "checked": 554,
-      "verified": 554
+      "checked": 555,
+      "verified": 555
     },
     "tumblr": {
-      "checked": 552,
-      "verified": 552
+      "checked": 553,
+      "verified": 553
     },
     "wordpress": {
-      "checked": 559,
-      "verified": 559
+      "checked": 560,
+      "verified": 560
     }
   }
 }
