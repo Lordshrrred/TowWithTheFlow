@@ -19550,3 +19550,33 @@
 [2026-09-12 12:36:37] === SYNDICATE DONE: wheel-fell-off-car-while-driving-who-to-call | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-12 12:36:37] SYNCED | wheel-fell-off-car-while-driving-who-to-call marked in synced-posts.txt
 [2026-09-12 12:36:37] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-13 08:33:16] === SYNDICATE START: how-to-stay-safe-waiting-for-tow-truck-on-highway ===
+[2026-09-13 08:33:16] PREFLIGHT | title: How to Stay Safe Waiting for a Tow Truck on the Highway
+[2026-09-13 08:33:16] PREFLIGHT | date: 2026-09-13
+[2026-09-13 08:33:16] PREFLIGHT | timestamp: 2026-09-13 08:33:16
+[2026-09-13 08:33:16] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-09-13 08:33:16] PREFLIGHT | TUMBLR:  configured
+[2026-09-13 08:33:16] PREFLIGHT | BLOGGER: configured
+[2026-09-13 08:33:16] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-13 08:33:16] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-13 08:33:16] DEVTO | how-to-stay-safe-waiting-for-tow-truck-on-highway | START
+[2026-09-13 08:33:16] DEVTO | how-to-stay-safe-waiting-for-tow-truck-on-highway | account=TWTF2
+[2026-09-13 08:33:16] DEVTO | how-to-stay-safe-waiting-for-tow-truck-on-highway | SUCCESS | https://dev.to/denverroadsideelitetowing/how-to-stay-safe-waiting-for-a-tow-truck-on-the-highway-what-drivers-should-know-3a8
+[2026-09-13 08:33:16] --- waiting 60s before next platform ---
+[2026-09-13 08:34:16] TUMBLR | how-to-stay-safe-waiting-for-tow-truck-on-highway | START
+[2026-09-13 08:34:17] TUMBLR | how-to-stay-safe-waiting-for-tow-truck-on-highway | SUCCESS | https://towwiththeflow.tumblr.com/post/827651582327947264
+[2026-09-13 08:34:17] --- waiting 60s before next platform ---
+[2026-09-13 08:35:17] BLOGGER | how-to-stay-safe-waiting-for-tow-truck-on-highway | START
+[2026-09-13 08:35:17] BLOGGER | how-to-stay-safe-waiting-for-tow-truck-on-highway | step 1/3: refreshing access token
+[2026-09-13 08:35:17] BLOGGER | how-to-stay-safe-waiting-for-tow-truck-on-highway | step 2/3: converting markdown to HTML
+[2026-09-13 08:35:17] BLOGGER | how-to-stay-safe-waiting-for-tow-truck-on-highway | step 3/3: posting to blog 1959471973457654666
+[2026-09-13 08:35:18] BLOGGER | how-to-stay-safe-waiting-for-tow-truck-on-highway | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-to-stay-safe-waiting-for-tow-truck.html
+[2026-09-13 08:35:18] --- waiting 60s before next platform ---
+[2026-09-13 08:36:18] WORDPRESS | how-to-stay-safe-waiting-for-tow-truck-on-highway | START
+[2026-09-13 08:36:26] WORDPRESS | how-to-stay-safe-waiting-for-tow-truck-on-highway | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/13/how-to-stay-safe-waiting-for-tow-truck-on-highway/
+[2026-09-13 08:36:26] --- waiting 60s before next platform ---
+[2026-09-13 08:37:26] FEEDER | how-to-stay-safe-waiting-for-tow-truck-on-highway | START
+[2026-09-13 08:37:27] FEEDER | how-to-stay-safe-waiting-for-tow-truck-on-highway | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/how-to-stay-safe-waiting-for-tow-truck-on-highway-guide/
+[2026-09-13 08:37:27] === SYNDICATE DONE: how-to-stay-safe-waiting-for-tow-truck-on-highway | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-13 08:37:27] SYNCED | how-to-stay-safe-waiting-for-tow-truck-on-highway marked in synced-posts.txt
+[2026-09-13 08:37:27] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
