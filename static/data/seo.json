@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-12T11:14:24.025089+00:00",
+  "generated_at": "2026-09-13T12:16:24.407803+00:00",
   "keywords": {
     "total": 802,
-    "live": 575,
-    "pending": 227,
+    "live": 579,
+    "pending": 223,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 387,
-      "pending": 227
+      "live": 391,
+      "pending": 223
     }
   },
   "next_targets": [
-    {
-      "keyword": "roadside assistance for rental car who pays",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does comprehensive insurance cover towing cost",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how much does aaa membership cost compared to paying for tow",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "wheel fell off car while driving who to call",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "how to stay safe waiting for tow truck on highway",
       "score": 7,
@@ -63,13 +43,33 @@
       "keyword": "how far will a tow truck take your car on insurance",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "usaa roadside assistance towing reimbursement process",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does credit card roadside assistance cover towing cost",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "roadside assistance through car dealership worth it",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how to dispute a towing charge after roadside emergency",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 227
+      "count": 228
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 61
+      "count": 63
     },
     {
       "slug": "battery-starting",
@@ -99,7 +99,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 22
+      "count": 23
     },
     {
       "slug": "towing-logistics",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-12T04:47:22.263321+00:00",
+    "generated_at": "2026-09-13T05:02:42.967720+00:00",
     "platforms": {
       "blog": {
-        "checked": 552,
-        "verified": 547
+        "checked": 556,
+        "verified": 556
       },
       "dev": {
-        "checked": 478,
-        "verified": 478
+        "checked": 482,
+        "verified": 482
       },
       "feeder": {
-        "checked": 547,
-        "verified": 547
+        "checked": 551,
+        "verified": 551
       },
       "tumblr": {
-        "checked": 546,
-        "verified": 546
+        "checked": 550,
+        "verified": 550
       },
       "wordpress": {
-        "checked": 552,
-        "verified": 552
+        "checked": 556,
+        "verified": 556
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-12T11:14:23.956861+00:00",
+    "generated_at": "2026-09-13T12:16:24.063650+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 336,
+        "rows": 346,
         "source": "ga4",
         "status": "ok"
       }
@@ -216,29 +216,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-12T11:14:24.039814+00:00",
+    "generatedAt": "2026-09-13T12:16:24.421142+00:00",
     "keywordGeneration": {
-      "currentInventory": 227,
-      "liveKeywords": 575,
-      "estimatedDaysRemaining": 56.8,
+      "currentInventory": 223,
+      "liveKeywords": 579,
+      "estimatedDaysRemaining": 55.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "56.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "55.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 81,
-      "backlogUnits": 90,
+      "backlogPosts": 77,
+      "backlogUnits": 85,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-12T04:47:22.263321+00:00",
+      "generatedAt": "2026-09-13T05:02:42.967720+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.8,
+      "completedPerDay": 19.9,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.2,
+      "netBacklinkUnitsPerDay": 0.1,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.2 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.1 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
