@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-14T14:32:08.432452+00:00",
+  "generated_at": "2026-09-15T12:05:41.263161+00:00",
   "keywords": {
     "total": 802,
-    "live": 583,
-    "pending": 219,
+    "live": 587,
+    "pending": 215,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 395,
-      "pending": 219
+      "live": 399,
+      "pending": 215
     }
   },
   "next_targets": [
-    {
-      "keyword": "does insurance cover towing if car breaks down not accident",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how far will a tow truck take your car on insurance",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "usaa roadside assistance towing reimbursement process",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does credit card roadside assistance cover towing cost",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "roadside assistance through car dealership worth it",
       "score": 7,
@@ -63,13 +43,33 @@
       "keyword": "locked keys in car highway rest stop what to do",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "how long can you wait for aaa tow truck",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car overheating tow or let it cool down",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does aaa cover towing after accident or just breakdowns",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "roadside assistance worth it if you have insurance already",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 228
+      "count": 229
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 66
+      "count": 69
     },
     {
       "slug": "battery-starting",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-14T05:17:33.277638+00:00",
+    "generated_at": "2026-09-15T05:04:42.345049+00:00",
     "platforms": {
       "blog": {
-        "checked": 560,
-        "verified": 556
+        "checked": 561,
+        "verified": 454
       },
       "dev": {
-        "checked": 486,
-        "verified": 486
+        "checked": 490,
+        "verified": 490
       },
       "feeder": {
-        "checked": 555,
-        "verified": 555
+        "checked": 559,
+        "verified": 559
       },
       "tumblr": {
-        "checked": 554,
-        "verified": 554
+        "checked": 557,
+        "verified": 557
       },
       "wordpress": {
-        "checked": 560,
-        "verified": 560
+        "checked": 564,
+        "verified": 564
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-14T13:20:11.149944+00:00",
+    "generated_at": "2026-09-15T12:05:41.151901+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 38,
+        "rows": 34,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 354,
+        "rows": 362,
         "source": "ga4",
         "status": "ok"
       }
@@ -204,41 +204,35 @@
       "opens": 0,
       "top_events": []
     },
-    "top_actions": [
-      {
-        "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "1 Search Console impressions match this asset pattern.",
-        "title": "Build or refine authority asset: Insurance Comparison"
-      }
-    ],
-    "top_landing_page_count": 6,
-    "top_query_count": 8,
+    "top_actions": [],
+    "top_landing_page_count": 5,
+    "top_query_count": 5,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-14T14:32:08.446713+00:00",
+    "generatedAt": "2026-09-15T12:05:41.289214+00:00",
     "keywordGeneration": {
-      "currentInventory": 219,
-      "liveKeywords": 583,
-      "estimatedDaysRemaining": 54.8,
+      "currentInventory": 215,
+      "liveKeywords": 587,
+      "estimatedDaysRemaining": 53.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "54.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "53.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 81,
-      "backlogUnits": 89,
+      "backlogPosts": 179,
+      "backlogUnits": 196,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-14T05:17:33.277638+00:00",
+      "generatedAt": "2026-09-15T05:04:42.345049+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.9,
+      "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.1,
+      "netBacklinkUnitsPerDay": 0.2,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.1 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.2 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
