@@ -19972,3 +19972,33 @@
 [2026-09-16 11:16:09] === SYNDICATE DONE: locked-keys-in-car-highway-rest-stop-what-to-do | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-16 11:16:09] SYNCED | locked-keys-in-car-highway-rest-stop-what-to-do marked in synced-posts.txt
 [2026-09-16 11:16:09] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-16 12:17:13] === SYNDICATE START: how-long-can-you-wait-for-aaa-tow-truck ===
+[2026-09-16 12:17:13] PREFLIGHT | title: How Long Can You Wait for a AAA Tow Truck: Real Wait Times and What to Do
+[2026-09-16 12:17:13] PREFLIGHT | date: 2026-09-16
+[2026-09-16 12:17:13] PREFLIGHT | timestamp: 2026-09-16 12:17:13
+[2026-09-16 12:17:13] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-09-16 12:17:13] PREFLIGHT | TUMBLR:  configured
+[2026-09-16 12:17:13] PREFLIGHT | BLOGGER: configured
+[2026-09-16 12:17:13] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-16 12:17:13] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-16 12:17:13] DEVTO | how-long-can-you-wait-for-aaa-tow-truck | START
+[2026-09-16 12:17:13] DEVTO | how-long-can-you-wait-for-aaa-tow-truck | account=TWTF1
+[2026-09-16 12:17:13] DEVTO | how-long-can-you-wait-for-aaa-tow-truck | SUCCESS | https://dev.to/roadsideamericatowing/how-long-can-you-wait-for-a-aaa-tow-truck-real-wait-times-and-what-to-do-roadside-tips-361a
+[2026-09-16 12:17:13] --- waiting 60s before next platform ---
+[2026-09-16 12:18:13] TUMBLR | how-long-can-you-wait-for-aaa-tow-truck | START
+[2026-09-16 12:18:14] TUMBLR | how-long-can-you-wait-for-aaa-tow-truck | SUCCESS | https://towwiththeflow.tumblr.com/post/827937462739402752
+[2026-09-16 12:18:14] --- waiting 60s before next platform ---
+[2026-09-16 12:19:14] BLOGGER | how-long-can-you-wait-for-aaa-tow-truck | START
+[2026-09-16 12:19:14] BLOGGER | how-long-can-you-wait-for-aaa-tow-truck | step 1/3: refreshing access token
+[2026-09-16 12:19:14] BLOGGER | how-long-can-you-wait-for-aaa-tow-truck | step 2/3: converting markdown to HTML
+[2026-09-16 12:19:14] BLOGGER | how-long-can-you-wait-for-aaa-tow-truck | step 3/3: posting to blog 1959471973457654666
+[2026-09-16 12:19:15] BLOGGER | how-long-can-you-wait-for-aaa-tow-truck | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-long-can-you-wait-for-aaa-tow-truck.html
+[2026-09-16 12:19:15] --- waiting 60s before next platform ---
+[2026-09-16 12:20:15] WORDPRESS | how-long-can-you-wait-for-aaa-tow-truck | START
+[2026-09-16 12:20:23] WORDPRESS | how-long-can-you-wait-for-aaa-tow-truck | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/16/how-long-can-you-wait-for-aaa-tow-truck/
+[2026-09-16 12:20:23] --- waiting 60s before next platform ---
+[2026-09-16 12:21:23] FEEDER | how-long-can-you-wait-for-aaa-tow-truck | START
+[2026-09-16 12:21:25] FEEDER | how-long-can-you-wait-for-aaa-tow-truck | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/how-long-can-you-wait-for-aaa-tow-truck-help/
+[2026-09-16 12:21:25] === SYNDICATE DONE: how-long-can-you-wait-for-aaa-tow-truck | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-16 12:21:25] SYNCED | how-long-can-you-wait-for-aaa-tow-truck marked in synced-posts.txt
+[2026-09-16 12:21:25] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
