@@ -20002,3 +20002,33 @@
 [2026-09-16 12:21:25] === SYNDICATE DONE: how-long-can-you-wait-for-aaa-tow-truck | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-16 12:21:25] SYNCED | how-long-can-you-wait-for-aaa-tow-truck marked in synced-posts.txt
 [2026-09-16 12:21:25] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-16 13:37:09] === SYNDICATE START: car-overheating-tow-or-let-it-cool-down ===
+[2026-09-16 13:37:09] PREFLIGHT | title: Car Overheating: Tow or Let It Cool Down? The Honest Answer
+[2026-09-16 13:37:09] PREFLIGHT | date: 2026-09-16
+[2026-09-16 13:37:09] PREFLIGHT | timestamp: 2026-09-16 13:37:09
+[2026-09-16 13:37:09] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-09-16 13:37:09] PREFLIGHT | TUMBLR:  configured
+[2026-09-16 13:37:09] PREFLIGHT | BLOGGER: configured
+[2026-09-16 13:37:09] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-16 13:37:09] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-16 13:37:09] DEVTO | car-overheating-tow-or-let-it-cool-down | START
+[2026-09-16 13:37:09] DEVTO | car-overheating-tow-or-let-it-cool-down | account=TWTF1
+[2026-09-16 13:37:09] DEVTO | car-overheating-tow-or-let-it-cool-down | SUCCESS | https://dev.to/roadsideamericatowing/car-overheating-tow-or-let-it-cool-down-the-honest-answer-explained-2k05
+[2026-09-16 13:37:09] --- waiting 60s before next platform ---
+[2026-09-16 13:38:09] TUMBLR | car-overheating-tow-or-let-it-cool-down | START
+[2026-09-16 13:38:10] TUMBLR | car-overheating-tow-or-let-it-cool-down | SUCCESS | https://towwiththeflow.tumblr.com/post/827942491707867136
+[2026-09-16 13:38:10] --- waiting 60s before next platform ---
+[2026-09-16 13:39:10] BLOGGER | car-overheating-tow-or-let-it-cool-down | START
+[2026-09-16 13:39:10] BLOGGER | car-overheating-tow-or-let-it-cool-down | step 1/3: refreshing access token
+[2026-09-16 13:39:10] BLOGGER | car-overheating-tow-or-let-it-cool-down | step 2/3: converting markdown to HTML
+[2026-09-16 13:39:10] BLOGGER | car-overheating-tow-or-let-it-cool-down | step 3/3: posting to blog 1959471973457654666
+[2026-09-16 13:39:11] BLOGGER | car-overheating-tow-or-let-it-cool-down | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-overheating-tow-or-let-it-cool-down.html
+[2026-09-16 13:39:11] --- waiting 60s before next platform ---
+[2026-09-16 13:40:11] WORDPRESS | car-overheating-tow-or-let-it-cool-down | START
+[2026-09-16 13:40:18] WORDPRESS | car-overheating-tow-or-let-it-cool-down | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/16/car-overheating-tow-or-let-it-cool-down/
+[2026-09-16 13:40:18] --- waiting 60s before next platform ---
+[2026-09-16 13:41:18] FEEDER | car-overheating-tow-or-let-it-cool-down | START
+[2026-09-16 13:41:19] FEEDER | car-overheating-tow-or-let-it-cool-down | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-overheating-tow-or-let-it-cool-down-tips/
+[2026-09-16 13:41:19] === SYNDICATE DONE: car-overheating-tow-or-let-it-cool-down | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-16 13:41:19] SYNCED | car-overheating-tow-or-let-it-cool-down marked in synced-posts.txt
+[2026-09-16 13:41:19] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
