@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-15T12:05:41.263161+00:00",
+  "generated_at": "2026-09-16T12:01:23.320863+00:00",
   "keywords": {
     "total": 802,
-    "live": 587,
-    "pending": 215,
+    "live": 591,
+    "pending": 211,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 399,
-      "pending": 215
+      "live": 403,
+      "pending": 211
     }
   },
   "next_targets": [
-    {
-      "keyword": "roadside assistance through car dealership worth it",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how to dispute a towing charge after roadside emergency",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car overheating on highway should i pull over now",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont start after sitting in cold weather",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "state farm roadside assistance how many times per year",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "roadside assistance worth it if you have insurance already",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car shaking violently at highway speeds safe to drive",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how far will aaa tow your car for free",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "oil pressure warning light came on driving what to do",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont start after rain electrical problem",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,17 +74,17 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 94
+      "count": 95
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 69
+      "count": 70
     },
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 54
+      "count": 55
     },
     {
       "slug": "highway-safety",
@@ -127,14 +127,14 @@
       "count": 4
     },
     {
-      "slug": "emergency-checklists",
-      "label": "Emergency Checklists",
+      "slug": "consumer-rights",
+      "label": "Consumer Rights",
       "count": 2
     },
     {
-      "slug": "consumer-rights",
-      "label": "Consumer Rights",
-      "count": 1
+      "slug": "emergency-checklists",
+      "label": "Emergency Checklists",
+      "count": 2
     }
   ],
   "competitive_research": {
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-15T05:04:42.345049+00:00",
+    "generated_at": "2026-09-16T05:01:27.750574+00:00",
     "platforms": {
       "blog": {
-        "checked": 561,
-        "verified": 454
+        "checked": 568,
+        "verified": 562
       },
       "dev": {
-        "checked": 490,
-        "verified": 490
+        "checked": 494,
+        "verified": 494
       },
       "feeder": {
-        "checked": 559,
-        "verified": 559
+        "checked": 563,
+        "verified": 563
       },
       "tumblr": {
-        "checked": 557,
-        "verified": 557
+        "checked": 561,
+        "verified": 561
       },
       "wordpress": {
-        "checked": 564,
-        "verified": 564
+        "checked": 568,
+        "verified": 568
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-15T12:05:41.151901+00:00",
+    "generated_at": "2026-09-16T12:01:22.929436+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 34,
+        "rows": 32,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 362,
+        "rows": 370,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,22 +210,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-15T12:05:41.289214+00:00",
+    "generatedAt": "2026-09-16T12:01:23.337002+00:00",
     "keywordGeneration": {
-      "currentInventory": 215,
-      "liveKeywords": 587,
-      "estimatedDaysRemaining": 53.8,
+      "currentInventory": 211,
+      "liveKeywords": 591,
+      "estimatedDaysRemaining": 52.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "53.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "52.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 179,
-      "backlogUnits": 196,
+      "backlogPosts": 83,
+      "backlogUnits": 92,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-15T05:04:42.345049+00:00",
+      "generatedAt": "2026-09-16T05:01:27.750574+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
