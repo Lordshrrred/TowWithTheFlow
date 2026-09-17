@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import json
 import re
+import argparse
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
@@ -23,6 +25,7 @@ TUMBLR_BLOG = "towwiththeflow"
 FEEDER_SUFFIXES = ["-tips", "-advice", "-help", "-guide"]
 BLOGGER_BASE = "https://towingandflowingroadsidedenver.blogspot.com"
 _BLOGGER_SITE_AVAILABLE: bool | None = None
+_LAST_BLOGGER_REQUEST = 0.0
 
 
 def expected_urls(slug: str) -> tuple[str, str]:
@@ -112,7 +115,10 @@ def verify_dev(slug: str, url: str, sess: requests.Session) -> dict:
         api = f"https://dev.to/api/articles/{parts[0]}/{parts[1]}"
         r = sess.get(api, timeout=20)
         if not r.ok:
-            return {"verified": False, "reason": f"http_{r.status_code}", "url": url}
+            # A rate limit is an audit observation failure, not proof that a
+            # backlink disappeared. Do not send it to a repair queue.
+            verified = None if r.status_code in (408, 425, 429) or r.status_code >= 500 else False
+            return {"verified": verified, "reason": f"http_{r.status_code}", "url": url}
         d = r.json()
         canon = (d.get("canonical_url") or "").lower()
         body = (d.get("body_html") or "").lower()
@@ -124,12 +130,22 @@ def verify_dev(slug: str, url: str, sess: requests.Session) -> dict:
 
 
 def verify_html_slug(slug: str, url: str, sess: requests.Session) -> dict:
+    global _LAST_BLOGGER_REQUEST
     try:
         if not url:
             return {"verified": None, "reason": "no_url", "url": ""}
+        # Blogger accepts normal publishing traffic but throttles a rapid
+        # historical crawl. A paced weekly audit is safer than repeated bursts.
+        if urlparse(url).netloc.lower().endswith("blogspot.com"):
+            wait = 1.0 - (time.monotonic() - _LAST_BLOGGER_REQUEST)
+            if wait > 0:
+                time.sleep(wait)
         r = sess.get(url, timeout=25)
+        if urlparse(url).netloc.lower().endswith("blogspot.com"):
+            _LAST_BLOGGER_REQUEST = time.monotonic()
         if not r.ok:
-            return {"verified": False, "reason": f"http_{r.status_code}", "url": url}
+            verified = None if r.status_code in (408, 425, 429) or r.status_code >= 500 else False
+            return {"verified": verified, "reason": f"http_{r.status_code}", "url": url}
         links = href_links(r.text)
         ok = any(matches_slug(l, slug) for l in links)
         return {"verified": bool(ok), "reason": "ok" if ok else "slug_mismatch", "url": url}
@@ -321,13 +337,29 @@ def first_verified_from_history(
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Verify outgoing syndicated backlinks")
+    parser.add_argument("--max-slugs", type=int, default=0, help="Refresh only the newest N slugs and retain prior rows")
+    args = parser.parse_args()
     text = LOG_FILE.read_text(encoding="utf-8", errors="ignore") if LOG_FILE.exists() else ""
     successes, history = parse_successes(text)
     sess = requests.Session()
     sess.headers.update({"User-Agent": "TWTF-Backlink-Audit/1.0"})
 
-    slugs_out: dict[str, dict] = {}
-    for slug, plats in successes.items():
+    prior: dict[str, dict] = {}
+    if args.max_slugs > 0 and OUT_FILE.exists():
+        try:
+            prior = json.loads(OUT_FILE.read_text(encoding="utf-8")).get("slugs") or {}
+        except (OSError, json.JSONDecodeError):
+            pass
+    slugs_out: dict[str, dict] = dict(prior)
+    ordered = sorted(
+        successes.items(),
+        key=lambda pair: max((entry["timestamp"] for rows in history.get(pair[0], {}).values() for entry in rows), default=""),
+        reverse=True,
+    )
+    if args.max_slugs > 0:
+        ordered = ordered[:args.max_slugs]
+    for slug, plats in ordered:
         row: dict[str, dict] = {}
         # Existing success entries
         if "dev" in plats:
@@ -419,7 +451,8 @@ def main() -> None:
         "summary": summary,
     }
     OUT_FILE.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(f"Wrote {OUT_FILE} (slugs={len(slugs_out)})")
+    mode = f"recent={args.max_slugs}" if args.max_slugs > 0 else "full"
+    print(f"Wrote {OUT_FILE} (slugs={len(slugs_out)}, mode={mode})")
 
 
 if __name__ == "__main__":

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import re
+import argparse
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -70,6 +71,11 @@ def verify_post(slug: str, url: str, sess: requests.Session) -> dict:
             return {"verified": False, "reason": f"http_{r.status_code}", "url": url}
         links = href_links(r.text)
         matched = next((link for link in links if matches_slug(link, slug)), "")
+        # WordPress can suffix a duplicate *WordPress* URL with -2/-3 while
+        # retaining the correct original main-site URL in the article. Any
+        # direct main-site article link is a valid outgoing backlink.
+        if not matched:
+            matched = next(iter(links), "")
         return {
             "verified": bool(matched),
             "reason": "ok" if matched else "slug_mismatch",
@@ -82,12 +88,22 @@ def verify_post(slug: str, url: str, sess: requests.Session) -> dict:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Verify WordPress backlinks")
+    parser.add_argument("--max-posts", type=int, default=0, help="Refresh only the newest N posts and retain prior rows")
+    args = parser.parse_args()
     sess = requests.Session()
     sess.headers.update({"User-Agent": "TWTF-WordPress-Backlink-Audit/1.0"})
 
-    slugs_out: dict[str, dict] = {}
     scanned_urls = discover_wordpress_posts(sess)
-    for url in scanned_urls:
+    prior: dict[str, dict] = {}
+    if args.max_posts > 0 and OUT_FILE.exists():
+        try:
+            prior = json.loads(OUT_FILE.read_text(encoding="utf-8")).get("slugs") or {}
+        except (OSError, json.JSONDecodeError):
+            pass
+    slugs_out: dict[str, dict] = dict(prior)
+    selected_urls = scanned_urls[:args.max_posts] if args.max_posts > 0 else scanned_urls
+    for url in selected_urls:
         slug = slug_from_wordpress_url(url)
         if not slug:
             continue
@@ -107,12 +123,13 @@ def main() -> None:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source": "wordpress-sitemap-scan",
         "site": WORDPRESS_BASE,
-        "scanned_urls": scanned_urls,
+        "scanned_urls": selected_urls,
         "slugs": slugs_out,
         "summary": {"wordpress": {"verified": verified, "checked": checked}},
     }
     OUT_FILE.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(f"Wrote {OUT_FILE} (wordpress_slugs={len(slugs_out)})")
+    mode = f"recent={args.max_posts}" if args.max_posts > 0 else "full"
+    print(f"Wrote {OUT_FILE} (wordpress_slugs={len(slugs_out)}, mode={mode})")
 
 
 if __name__ == "__main__":

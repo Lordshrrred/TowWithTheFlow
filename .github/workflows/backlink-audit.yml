@@ -2,7 +2,10 @@ name: Backlink Audit
 
 on:
   schedule:
-    - cron: '15 */4 * * *'
+    # A small daily sample catches fresh failures without hammering hosts.
+    - cron: '15 3 * * 1-6'
+    # A paced full inventory audit keeps historic evidence fresh once/week.
+    - cron: '15 3 * * 0'
   workflow_dispatch:
   push:
     branches: [main]
@@ -37,8 +40,13 @@ jobs:
 
       - name: Run backlink audits
         run: |
-          python scripts/audit_backlinks.py
-          python scripts/audit_wordpress_site.py
+          if [ "${{ github.event.schedule }}" = "15 3 * * 0" ]; then
+            python scripts/audit_backlinks.py
+            python scripts/audit_wordpress_site.py
+          else
+            python scripts/audit_backlinks.py --max-slugs 40
+            python scripts/audit_wordpress_site.py --max-posts 40
+          fi
 
       - name: Commit audit json
         run: |

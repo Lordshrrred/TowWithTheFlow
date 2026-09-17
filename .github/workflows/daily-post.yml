@@ -98,7 +98,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - run: hugo --minify
+      - run: |
+          python scripts/check_cluster_health.py
+          hugo --minify
 
       - name: Configure git
         run: |
@@ -176,7 +178,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - run: hugo --minify
+      - run: |
+          python scripts/check_cluster_health.py
+          hugo --minify
 
       - name: Configure git
         run: |
@@ -536,7 +540,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - run: hugo --minify
+      - run: |
+          python scripts/check_cluster_health.py
+          hugo --minify
 
       - name: Configure git
         run: |
@@ -594,7 +600,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - run: hugo --minify
+      - run: |
+          python scripts/check_cluster_health.py
+          hugo --minify
 
       - name: Configure git
         run: |

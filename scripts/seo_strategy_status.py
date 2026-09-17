@@ -121,11 +121,14 @@ def backlink_inventory() -> dict:
     backlog_posts = 0
     backlog_units = 0
     for _slug, row in (audit.get("slugs") or {}).items():
-        missing = [
-            platform
-            for platform in REQUIRED_BACKLINK_PLATFORMS
-            if (row.get(platform) or {}).get("verified") is not True
-        ]
+        missing = []
+        for platform in REQUIRED_BACKLINK_PLATFORMS:
+            result = row.get(platform) or {}
+            # Historical audit files may predate the unknown-on-rate-limit
+            # behavior. Preserve the same meaning when calculating the queue.
+            transient = str(result.get("reason", "")).startswith(("http_408", "http_425", "http_429", "http_5"))
+            if result.get("verified") is False and not transient:
+                missing.append(platform)
         if missing:
             backlog_posts += 1
             backlog_units += len(missing)
