@@ -20122,3 +20122,33 @@
 [2026-09-17 12:28:29] === SYNDICATE DONE: car-shaking-violently-highway-speeds-safe-to-drive | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-17 12:28:29] SYNCED | car-shaking-violently-highway-speeds-safe-to-drive marked in synced-posts.txt
 [2026-09-17 12:28:29] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-17 13:46:40] === SYNDICATE START: how-far-will-aaa-tow-your-car-for-free ===
+[2026-09-17 13:46:40] PREFLIGHT | title: How Far Will AAA Tow Your Car for Free: The Real Numbers by Membership Level
+[2026-09-17 13:46:40] PREFLIGHT | date: 2026-09-17
+[2026-09-17 13:46:40] PREFLIGHT | timestamp: 2026-09-17 13:46:40
+[2026-09-17 13:46:40] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-09-17 13:46:40] PREFLIGHT | TUMBLR:  configured
+[2026-09-17 13:46:40] PREFLIGHT | BLOGGER: configured
+[2026-09-17 13:46:40] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-17 13:46:40] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-17 13:46:40] DEVTO | how-far-will-aaa-tow-your-car-for-free | START
+[2026-09-17 13:46:40] DEVTO | how-far-will-aaa-tow-your-car-for-free | account=TWTF1
+[2026-09-17 13:46:40] DEVTO | how-far-will-aaa-tow-your-car-for-free | SUCCESS | https://dev.to/roadsideamericatowing/how-far-will-aaa-tow-your-car-for-free-the-real-numbers-by-membership-level-roadside-tips-5hnj
+[2026-09-17 13:46:40] --- waiting 60s before next platform ---
+[2026-09-17 13:47:40] TUMBLR | how-far-will-aaa-tow-your-car-for-free | START
+[2026-09-17 13:47:41] TUMBLR | how-far-will-aaa-tow-your-car-for-free | SUCCESS | https://towwiththeflow.tumblr.com/post/828033687750836224
+[2026-09-17 13:47:41] --- waiting 60s before next platform ---
+[2026-09-17 13:48:41] BLOGGER | how-far-will-aaa-tow-your-car-for-free | START
+[2026-09-17 13:48:41] BLOGGER | how-far-will-aaa-tow-your-car-for-free | step 1/3: refreshing access token
+[2026-09-17 13:48:41] BLOGGER | how-far-will-aaa-tow-your-car-for-free | step 2/3: converting markdown to HTML
+[2026-09-17 13:48:41] BLOGGER | how-far-will-aaa-tow-your-car-for-free | step 3/3: posting to blog 1959471973457654666
+[2026-09-17 13:48:42] BLOGGER | how-far-will-aaa-tow-your-car-for-free | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-far-will-aaa-tow-your-car-for-free.html
+[2026-09-17 13:48:42] --- waiting 60s before next platform ---
+[2026-09-17 13:49:42] WORDPRESS | how-far-will-aaa-tow-your-car-for-free | START
+[2026-09-17 13:49:52] WORDPRESS | how-far-will-aaa-tow-your-car-for-free | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/17/how-far-will-aaa-tow-your-car-for-free/
+[2026-09-17 13:49:52] --- waiting 60s before next platform ---
+[2026-09-17 13:50:52] FEEDER | how-far-will-aaa-tow-your-car-for-free | START
+[2026-09-17 13:50:53] FEEDER | how-far-will-aaa-tow-your-car-for-free | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/how-far-will-aaa-tow-your-car-for-free-guide/
+[2026-09-17 13:50:53] === SYNDICATE DONE: how-far-will-aaa-tow-your-car-for-free | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-17 13:50:53] SYNCED | how-far-will-aaa-tow-your-car-for-free marked in synced-posts.txt
+[2026-09-17 13:50:53] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
