@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-17T12:03:50.454661+00:00",
+  "generated_at": "2026-09-18T11:47:30.002180+00:00",
   "keywords": {
     "total": 802,
-    "live": 595,
-    "pending": 207,
+    "live": 599,
+    "pending": 203,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 407,
-      "pending": 207
+      "live": 411,
+      "pending": 203
     }
   },
   "next_targets": [
-    {
-      "keyword": "does aaa cover towing after accident or just breakdowns",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "roadside assistance worth it if you have insurance already",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car shaking violently at highway speeds safe to drive",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how far will aaa tow your car for free",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "oil pressure warning light came on driving what to do",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "aaa vs roadside assistance through insurance which is better",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "how much does roadside assistance cost without a membership",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does liability insurance cover towing costs",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "towing a car from dealership to mechanic cost",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does comprehensive insurance cover towing after accident",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,12 +74,12 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 96
+      "count": 97
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 72
+      "count": 75
     },
     {
       "slug": "battery-starting",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-17T05:07:30.090748+00:00",
+    "generated_at": "2026-09-18T08:13:18.144960+00:00",
     "platforms": {
       "blog": {
-        "checked": 572,
-        "verified": 552
+        "checked": 573,
+        "verified": 454
       },
       "dev": {
-        "checked": 498,
-        "verified": 498
+        "checked": 502,
+        "verified": 502
       },
       "feeder": {
-        "checked": 567,
-        "verified": 567
+        "checked": 571,
+        "verified": 571
       },
       "tumblr": {
-        "checked": 565,
-        "verified": 565
+        "checked": 569,
+        "verified": 569
       },
       "wordpress": {
-        "checked": 572,
-        "verified": 572
+        "checked": 576,
+        "verified": 576
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-17T12:03:50.388352+00:00",
+    "generated_at": "2026-09-18T11:47:29.928553+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 30,
+        "rows": 28,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 370,
+        "rows": 380,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,28 +210,28 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-17T12:03:50.470234+00:00",
+    "generatedAt": "2026-09-18T11:47:30.029279+00:00",
     "keywordGeneration": {
-      "currentInventory": 207,
-      "liveKeywords": 595,
-      "estimatedDaysRemaining": 51.8,
+      "currentInventory": 203,
+      "liveKeywords": 599,
+      "estimatedDaysRemaining": 50.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "51.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "50.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 97,
-      "backlogUnits": 106,
+      "backlogPosts": 1,
+      "backlogUnits": 1,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-17T05:07:30.090748+00:00",
+      "generatedAt": "2026-09-18T08:13:18.144960+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
       "netBacklinkUnitsPerDay": -0.1,
-      "estimatedCatchUpDays": 1060.0,
+      "estimatedCatchUpDays": 10.0,
       "reason": "Backlinks are catching up by 0.1 platform links/day."
     },
     "curatedExpansion": {
