@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T18:48:28.299151+00:00",
+  "generated_at": "2026-09-18T08:13:18.144960+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -1134,6 +1134,7 @@
     "car-alternator-died-while-driving-tow-needed": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-alternator-died-while-driving-tow.html",
         "verified": true
       },
@@ -1637,6 +1638,7 @@
     "car-broke-down-bad-neighborhood-safe-steps": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-broke-down-in-bad-neighborhood-safe.html",
         "verified": true
       },
@@ -3558,6 +3560,7 @@
     "car-overheating-tow-or-let-it-cool-down": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-overheating-tow-or-let-it-cool-down.html",
         "verified": true
       },
@@ -3666,6 +3669,7 @@
     "car-radiator-leak-can-i-drive-to-mechanic": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-radiator-leak-can-i-drive-to.html",
         "verified": true
       },
@@ -3741,9 +3745,10 @@
     },
     "car-serpentine-belt-snapped-can-i-drive": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-serpentine-belt-snapped-can-i-drive.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -4495,9 +4500,9 @@
     },
     "car-stuck-in-snow-who-pays-towing-cost": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-stuck-in-snow-who-pays-towing-cost.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -4940,9 +4945,9 @@
     },
     "car-wont-start-after-rain-flooded-engine-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-wont-start-after-rain-flooded.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -4994,9 +4999,10 @@
     },
     "car-wont-start-after-sitting-in-cold-weather": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-wont-start-after-sitting-in-cold.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -5978,9 +5984,9 @@
     },
     "does-aaa-cover-towing-after-accident-or-just-breakdowns": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/does-aaa-cover-towing-after-accident-or.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -6059,9 +6065,9 @@
     },
     "does-comprehensive-insurance-cover-towing-cost": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/does-comprehensive-insurance-cover.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -6086,9 +6092,9 @@
     },
     "does-credit-card-roadside-assistance-cover-towing-cost": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/does-credit-card-roadside-assistance.html",
-        "verified": true
+        "verified": null
       },
       "dev": {
         "reason": "ok",
@@ -6189,9 +6195,10 @@
     },
     "does-insurance-cover-towing-if-car-breaks-down-not-accident": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/does-insurance-cover-towing-if-car.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -7443,6 +7450,33 @@
         "verified": true
       }
     },
+    "how-far-will-aaa-tow-your-car-for-free": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-far-will-aaa-tow-your-car-for-free.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/how-far-will-aaa-tow-your-car-for-free-the-real-numbers-by-membership-level-roadside-tips-5hnj",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-far-will-aaa-tow-your-car-for-free-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/828033687750836224/how-far-will-aaa-tow-your-car-for-free",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/17/how-far-will-aaa-tow-your-car-for-free/",
+        "verified": true
+      }
+    },
     "how-far-will-tow-truck-take-car-on-insurance": {
       "blog": {
         "reason": "ok",
@@ -7526,9 +7560,9 @@
     },
     "how-long-can-you-leave-broken-down-car-on-highway": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-long-can-you-leave-broken-down-car.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -7771,9 +7805,10 @@
     },
     "how-much-does-aaa-membership-cost-compared-to-paying-for-tow": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-much-does-aaa-membership-cost.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -8260,6 +8295,7 @@
     "how-to-stay-safe-waiting-for-tow-truck-on-highway": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-to-stay-safe-waiting-for-tow-truck.html",
         "verified": true
       },
@@ -8867,9 +8903,9 @@
     },
     "progressive-insurance-towing-coverage-limit-per-incident": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/progressive-insurance-towing-coverage.html",
-        "verified": false
+        "verified": null
       },
       "dev": {
         "reason": "ok",
@@ -9101,9 +9137,9 @@
     },
     "roadside-assistance-rental-car-who-pays": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/roadside-assistance-for-rental-car-who.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9447,9 +9483,10 @@
     },
     "state-farm-roadside-assistance-how-many-times-per-year": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/state-farm-roadside-assistance-how-many.html",
-        "verified": false
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -15099,6 +15136,7 @@
     "wheel-fell-off-car-while-driving-who-to-call": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/wheel-fell-off-car-while-driving-who-to.html",
         "verified": true
       },
@@ -15237,24 +15275,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 574,
-      "verified": 443
+      "checked": 573,
+      "verified": 454
     },
     "dev": {
-      "checked": 501,
-      "verified": 501
+      "checked": 502,
+      "verified": 502
     },
     "feeder": {
-      "checked": 570,
-      "verified": 570
+      "checked": 571,
+      "verified": 571
     },
     "tumblr": {
-      "checked": 568,
-      "verified": 568
+      "checked": 569,
+      "verified": 569
     },
     "wordpress": {
-      "checked": 575,
-      "verified": 575
+      "checked": 576,
+      "verified": 576
     }
   }
 }
