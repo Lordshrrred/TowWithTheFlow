@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T08:13:18.144960+00:00",
+  "generated_at": "2026-09-19T08:01:28.300056+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -53,6 +53,7 @@
     "aaa-towing-coverage-miles-per-year-limit": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/aaa-towing-coverage-miles-per-year.html",
         "verified": true
       },
@@ -1638,7 +1639,6 @@
     "car-broke-down-bad-neighborhood-safe-steps": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-broke-down-in-bad-neighborhood-safe.html",
         "verified": true
       },
@@ -3560,7 +3560,6 @@
     "car-overheating-tow-or-let-it-cool-down": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-overheating-tow-or-let-it-cool-down.html",
         "verified": true
       },
@@ -3669,7 +3668,6 @@
     "car-radiator-leak-can-i-drive-to-mechanic": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-radiator-leak-can-i-drive-to.html",
         "verified": true
       },
@@ -3746,7 +3744,6 @@
     "car-serpentine-belt-snapped-can-i-drive": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-serpentine-belt-snapped-can-i-drive.html",
         "verified": true
       },
@@ -4473,9 +4470,9 @@
     },
     "car-stuck-in-snow-tow-truck-vs-roadside-assistance": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-stuck-in-snow-tow-truck-vs-roadside.html",
-        "verified": true
+        "verified": null
       },
       "dev": {
         "reason": "ok",
@@ -4943,6 +4940,33 @@
         "verified": true
       }
     },
+    "car-wont-start-after-rain-electrical-problem": {
+      "blog": {
+        "reason": "http_429",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-wont-start-after-rain-electrical.html",
+        "verified": null
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-wont-start-after-rain-electrical-problem-whats-wrong-and-what-to-do-what-drivers-should-o3a",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-after-rain-electrical-problem-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/828112349821042688/car-wont-start-after-rain-electrical-problem",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/18/car-wont-start-after-rain-electrical-problem/",
+        "verified": true
+      }
+    },
     "car-wont-start-after-rain-flooded-engine-what-to-do": {
       "blog": {
         "reason": "ok",
@@ -5000,7 +5024,6 @@
     "car-wont-start-after-sitting-in-cold-weather": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-wont-start-after-sitting-in-cold.html",
         "verified": true
       },
@@ -6092,9 +6115,9 @@
     },
     "does-credit-card-roadside-assistance-cover-towing-cost": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/does-credit-card-roadside-assistance.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -6196,7 +6219,6 @@
     "does-insurance-cover-towing-if-car-breaks-down-not-accident": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/does-insurance-cover-towing-if-car.html",
         "verified": true
       },
@@ -7561,6 +7583,7 @@
     "how-long-can-you-leave-broken-down-car-on-highway": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-long-can-you-leave-broken-down-car.html",
         "verified": true
       },
@@ -7609,6 +7632,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/09/16/how-long-can-you-wait-for-aaa-tow-truck/",
+        "verified": true
+      }
+    },
+    "how-long-can-you-wait-for-tow-truck-side-of-road": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-long-can-you-wait-for-tow-truck-on.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/how-long-can-you-wait-for-a-tow-truck-on-the-side-of-the-road-what-to-do-next-20nh",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-long-can-you-wait-for-tow-truck-side-of-road-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/828121729843019776/how-long-can-you-wait-for-tow-truck-side-of-road",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/18/how-long-can-you-wait-for-tow-truck-side-of-road/",
         "verified": true
       }
     },
@@ -7805,10 +7855,9 @@
     },
     "how-much-does-aaa-membership-cost-compared-to-paying-for-tow": {
       "blog": {
-        "reason": "ok",
-        "recovered_live": true,
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-much-does-aaa-membership-cost.html",
-        "verified": true
+        "verified": null
       },
       "dev": {
         "reason": "ok",
@@ -8240,9 +8289,9 @@
     },
     "how-to-dispute-a-towing-charge-after-roadside-emergency": {
       "blog": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-to-dispute-towing-charge-after.html",
-        "verified": true
+        "verified": null
       },
       "dev": {
         "reason": "ok",
@@ -8262,6 +8311,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/09/15/how-to-dispute-a-towing-charge-after-roadside-emergency/",
+        "verified": true
+      }
+    },
+    "how-to-signal-for-help-car-breaks-down-no-phone": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-to-signal-for-help-if-your-car.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/how-to-signal-for-help-if-your-car-breaks-down-and-you-have-no-phone-quick-guide-2g24",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/how-to-signal-for-help-car-breaks-down-no-phone-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/828116707052748800/how-to-signal-for-help-car-breaks-down-no-phone",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/18/how-to-signal-for-help-car-breaks-down-no-phone/",
         "verified": true
       }
     },
@@ -8295,7 +8371,6 @@
     "how-to-stay-safe-waiting-for-tow-truck-on-highway": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-to-stay-safe-waiting-for-tow-truck.html",
         "verified": true
       },
@@ -8563,6 +8638,7 @@
     "locked-keys-in-car-highway-rest-stop-what-to-do": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/locked-keys-in-car-at-highway-rest-stop.html",
         "verified": true
       },
@@ -8798,6 +8874,33 @@
         "verified": true
       }
     },
+    "oil-pressure-warning-light-came-on-driving-what-to-do": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/oil-pressure-warning-light-came-on.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/oil-pressure-warning-light-came-on-while-driving-what-to-do-right-now-roadside-tips-11de",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/oil-pressure-warning-light-came-on-driving-what-to-do-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/828104702101176320/oil-pressure-warning-light-came-on-driving-what-to-do",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/09/18/oil-pressure-warning-light-came-on-driving-what-to-do/",
+        "verified": true
+      }
+    },
     "power-steering-went-out-while-driving-is-it-safe-to-drive": {
       "blog": {
         "reason": "http_429",
@@ -8903,9 +9006,10 @@
     },
     "progressive-insurance-towing-coverage-limit-per-incident": {
       "blog": {
-        "reason": "http_429",
+        "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/progressive-insurance-towing-coverage.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9138,6 +9242,7 @@
     "roadside-assistance-rental-car-who-pays": {
       "blog": {
         "reason": "ok",
+        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/roadside-assistance-for-rental-car-who.html",
         "verified": true
       },
@@ -9484,7 +9589,6 @@
     "state-farm-roadside-assistance-how-many-times-per-year": {
       "blog": {
         "reason": "ok",
-        "recovered_live": true,
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/09/state-farm-roadside-assistance-how-many.html",
         "verified": true
       },
@@ -15275,24 +15379,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 573,
-      "verified": 454
+      "checked": 575,
+      "verified": 456
     },
     "dev": {
-      "checked": 502,
-      "verified": 502
+      "checked": 506,
+      "verified": 506
     },
     "feeder": {
-      "checked": 571,
-      "verified": 571
+      "checked": 575,
+      "verified": 575
     },
     "tumblr": {
-      "checked": 569,
-      "verified": 569
+      "checked": 573,
+      "verified": 573
     },
     "wordpress": {
-      "checked": 576,
-      "verified": 576
+      "checked": 580,
+      "verified": 580
     }
   }
 }
