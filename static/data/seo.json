@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-18T12:26:33.203247+00:00",
+  "generated_at": "2026-09-19T11:30:43.803349+00:00",
   "keywords": {
     "total": 802,
-    "live": 599,
-    "pending": 203,
+    "live": 603,
+    "pending": 199,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 411,
-      "pending": 203
+      "live": 415,
+      "pending": 199
     }
   },
   "next_targets": [
-    {
-      "keyword": "oil pressure warning light came on driving what to do",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont start after rain electrical problem",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how to signal for help if car breaks down no phone",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how long can you wait for a tow truck on the side of the road",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "geico roadside assistance towing reimbursement limit",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "does comprehensive insurance cover towing after accident",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "how much does a second tow cost same day",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "progressive roadside assistance towing distance limit",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does gap insurance cover towing after total loss",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "geico roadside assistance towing how much will they pay",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 97
+      "count": 98
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 55
+      "count": 56
     },
     {
       "slug": "highway-safety",
@@ -94,7 +94,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 24
+      "count": 26
     },
     {
       "slug": "tire-wheel",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-18T08:13:18.144960+00:00",
+    "generated_at": "2026-09-19T08:01:28.300056+00:00",
     "platforms": {
       "blog": {
-        "checked": 573,
-        "verified": 454
+        "checked": 575,
+        "verified": 456
       },
       "dev": {
-        "checked": 502,
-        "verified": 502
+        "checked": 506,
+        "verified": 506
       },
       "feeder": {
-        "checked": 571,
-        "verified": 571
+        "checked": 575,
+        "verified": 575
       },
       "tumblr": {
-        "checked": 569,
-        "verified": 569
+        "checked": 573,
+        "verified": 573
       },
       "wordpress": {
-        "checked": 576,
-        "verified": 576
+        "checked": 580,
+        "verified": 580
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-18T11:47:29.928553+00:00",
+    "generated_at": "2026-09-19T11:30:43.728317+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 28,
+        "rows": 27,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 380,
+        "rows": 388,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,22 +210,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-18T12:26:33.222202+00:00",
+    "generatedAt": "2026-09-19T11:30:43.830454+00:00",
     "keywordGeneration": {
-      "currentInventory": 203,
-      "liveKeywords": 599,
-      "estimatedDaysRemaining": 50.8,
+      "currentInventory": 199,
+      "liveKeywords": 603,
+      "estimatedDaysRemaining": 49.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "50.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "49.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 1,
       "backlogUnits": 1,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-18T08:13:18.144960+00:00",
+      "generatedAt": "2026-09-19T08:01:28.300056+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
