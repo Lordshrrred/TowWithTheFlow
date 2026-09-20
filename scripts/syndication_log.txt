@@ -20393,3 +20393,33 @@
 [2026-09-19 12:44:29] === SYNDICATE DONE: does-liability-insurance-cover-towing-costs | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-19 12:44:29] SYNCED | does-liability-insurance-cover-towing-costs marked in synced-posts.txt
 [2026-09-19 12:44:29] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-20 08:18:21] === SYNDICATE START: towing-car-from-dealership-to-mechanic-cost ===
+[2026-09-20 08:18:21] PREFLIGHT | title: Towing a Car from a Dealership to a Mechanic: What It Costs and How to Save
+[2026-09-20 08:18:21] PREFLIGHT | date: 2026-09-20
+[2026-09-20 08:18:21] PREFLIGHT | timestamp: 2026-09-20 08:18:21
+[2026-09-20 08:18:21] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-09-20 08:18:21] PREFLIGHT | TUMBLR:  configured
+[2026-09-20 08:18:21] PREFLIGHT | BLOGGER: configured
+[2026-09-20 08:18:21] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-20 08:18:21] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-20 08:18:21] DEVTO | towing-car-from-dealership-to-mechanic-cost | START
+[2026-09-20 08:18:21] DEVTO | towing-car-from-dealership-to-mechanic-cost | account=TWTF2
+[2026-09-20 08:18:22] DEVTO | towing-car-from-dealership-to-mechanic-cost | SUCCESS | https://dev.to/denverroadsideelitetowing/towing-a-car-from-a-dealership-to-a-mechanic-what-it-costs-and-how-to-save-what-to-do-next-5ang
+[2026-09-20 08:18:22] --- waiting 60s before next platform ---
+[2026-09-20 08:19:22] TUMBLR | towing-car-from-dealership-to-mechanic-cost | START
+[2026-09-20 08:19:22] TUMBLR | towing-car-from-dealership-to-mechanic-cost | SUCCESS | https://towwiththeflow.tumblr.com/post/828284822847995904
+[2026-09-20 08:19:22] --- waiting 60s before next platform ---
+[2026-09-20 08:20:22] BLOGGER | towing-car-from-dealership-to-mechanic-cost | START
+[2026-09-20 08:20:22] BLOGGER | towing-car-from-dealership-to-mechanic-cost | step 1/3: refreshing access token
+[2026-09-20 08:20:22] BLOGGER | towing-car-from-dealership-to-mechanic-cost | step 2/3: converting markdown to HTML
+[2026-09-20 08:20:22] BLOGGER | towing-car-from-dealership-to-mechanic-cost | step 3/3: posting to blog 1959471973457654666
+[2026-09-20 08:20:23] BLOGGER | towing-car-from-dealership-to-mechanic-cost | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/towing-car-from-dealership-to-mechanic.html
+[2026-09-20 08:20:23] --- waiting 60s before next platform ---
+[2026-09-20 08:21:23] WORDPRESS | towing-car-from-dealership-to-mechanic-cost | START
+[2026-09-20 08:21:31] WORDPRESS | towing-car-from-dealership-to-mechanic-cost | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/20/towing-car-from-dealership-to-mechanic-cost/
+[2026-09-20 08:21:31] --- waiting 60s before next platform ---
+[2026-09-20 08:22:31] FEEDER | towing-car-from-dealership-to-mechanic-cost | START
+[2026-09-20 08:22:32] FEEDER | towing-car-from-dealership-to-mechanic-cost | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-car-from-dealership-to-mechanic-cost-tips/
+[2026-09-20 08:22:32] === SYNDICATE DONE: towing-car-from-dealership-to-mechanic-cost | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-20 08:22:32] SYNCED | towing-car-from-dealership-to-mechanic-cost marked in synced-posts.txt
+[2026-09-20 08:22:32] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
