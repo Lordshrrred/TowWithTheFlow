@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-19T11:30:43.803349+00:00",
+  "generated_at": "2026-09-20T11:47:27.220821+00:00",
   "keywords": {
     "total": 802,
-    "live": 603,
-    "pending": 199,
+    "live": 607,
+    "pending": 195,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 415,
-      "pending": 199
+      "live": 419,
+      "pending": 195
     }
   },
   "next_targets": [
-    {
-      "keyword": "geico roadside assistance towing reimbursement limit",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "aaa vs roadside assistance through insurance which is better",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how much does roadside assistance cost without a membership",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does liability insurance cover towing costs",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "towing a car from dealership to mechanic cost",
       "score": 7,
@@ -63,13 +43,33 @@
       "keyword": "geico roadside assistance towing how much will they pay",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does geico cover towing after an accident",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does aaa cover towing for flat tire",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does homeowners insurance cover towing costs",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does uber or lyft help if your car breaks down",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 229
+      "count": 230
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 75
+      "count": 78
     },
     {
       "slug": "battery-starting",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-19T08:01:28.300056+00:00",
+    "generated_at": "2026-09-20T08:48:45.129665+00:00",
     "platforms": {
       "blog": {
-        "checked": 575,
-        "verified": 456
+        "checked": 573,
+        "verified": 573
       },
       "dev": {
-        "checked": 506,
-        "verified": 506
+        "checked": 428,
+        "verified": 428
       },
       "feeder": {
-        "checked": 575,
-        "verified": 575
+        "checked": 579,
+        "verified": 579
       },
       "tumblr": {
         "checked": 573,
         "verified": 573
       },
       "wordpress": {
-        "checked": 580,
-        "verified": 580
+        "checked": 584,
+        "verified": 584
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-19T11:30:43.728317+00:00",
+    "generated_at": "2026-09-20T11:47:27.138197+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 388,
+        "rows": 394,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,29 +210,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-19T11:30:43.830454+00:00",
+    "generatedAt": "2026-09-20T11:47:27.249648+00:00",
     "keywordGeneration": {
-      "currentInventory": 199,
-      "liveKeywords": 603,
-      "estimatedDaysRemaining": 49.8,
+      "currentInventory": 195,
+      "liveKeywords": 607,
+      "estimatedDaysRemaining": 48.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "49.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "48.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 1,
-      "backlogUnits": 1,
+      "backlogPosts": 0,
+      "backlogUnits": 0,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-19T08:01:28.300056+00:00",
+      "generatedAt": "2026-09-20T08:48:45.129665+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
       "netBacklinkUnitsPerDay": -0.1,
-      "estimatedCatchUpDays": 10.0,
-      "reason": "Backlinks are catching up by 0.1 platform links/day."
+      "estimatedCatchUpDays": "maintenance",
+      "reason": "Backlink backlog is clear; new posts should syndicate, verify, and complete as they publish."
     },
     "curatedExpansion": {
       "supported": true,
