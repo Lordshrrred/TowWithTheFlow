@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-20T11:47:27.220821+00:00",
+  "generated_at": "2026-09-21T13:19:40.860695+00:00",
   "keywords": {
     "total": 802,
-    "live": 607,
-    "pending": 195,
+    "live": 611,
+    "pending": 191,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 419,
-      "pending": 195
+      "live": 423,
+      "pending": 191
     }
   },
   "next_targets": [
-    {
-      "keyword": "towing a car from dealership to mechanic cost",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does comprehensive insurance cover towing after accident",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how much does a second tow cost same day",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "progressive roadside assistance towing distance limit",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "does gap insurance cover towing after total loss",
       "score": 7,
@@ -63,13 +43,33 @@
       "keyword": "does uber or lyft help if your car breaks down",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car skidding on ice into ditch who to call",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does tesla roadside assistance cover towing cost",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how much does a long distance tow truck cost per mile",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car overheating on highway do i need a tow",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 230
+      "count": 232
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 78
+      "count": 80
     },
     {
       "slug": "battery-starting",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-20T08:48:45.129665+00:00",
+    "generated_at": "2026-09-21T08:52:53.403600+00:00",
     "platforms": {
       "blog": {
-        "checked": 573,
-        "verified": 573
+        "checked": 577,
+        "verified": 577
       },
       "dev": {
-        "checked": 428,
-        "verified": 428
+        "checked": 432,
+        "verified": 432
       },
       "feeder": {
-        "checked": 579,
-        "verified": 579
+        "checked": 583,
+        "verified": 583
       },
       "tumblr": {
-        "checked": 573,
-        "verified": 573
+        "checked": 577,
+        "verified": 577
       },
       "wordpress": {
-        "checked": 584,
-        "verified": 584
+        "checked": 588,
+        "verified": 588
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-20T11:47:27.138197+00:00",
+    "generated_at": "2026-09-21T13:19:40.682328+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 27,
+        "rows": 24,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 394,
+        "rows": 398,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,27 +210,27 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-20T11:47:27.249648+00:00",
+    "generatedAt": "2026-09-21T13:19:40.883250+00:00",
     "keywordGeneration": {
-      "currentInventory": 195,
-      "liveKeywords": 607,
-      "estimatedDaysRemaining": 48.8,
+      "currentInventory": 191,
+      "liveKeywords": 611,
+      "estimatedDaysRemaining": 47.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "48.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "47.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 0,
       "backlogUnits": 0,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-20T08:48:45.129665+00:00",
+      "generatedAt": "2026-09-21T08:52:53.403600+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.1,
+      "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": -0.1,
+      "netBacklinkUnitsPerDay": 0.0,
       "estimatedCatchUpDays": "maintenance",
       "reason": "Backlink backlog is clear; new posts should syndicate, verify, and complete as they publish."
     },
