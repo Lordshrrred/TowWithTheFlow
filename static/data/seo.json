@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-21T14:39:16.227302+00:00",
+  "generated_at": "2026-09-22T12:02:00.772739+00:00",
   "keywords": {
     "total": 802,
-    "live": 611,
-    "pending": 191,
+    "live": 615,
+    "pending": 187,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 423,
-      "pending": 191
+      "live": 427,
+      "pending": 187
     }
   },
   "next_targets": [
-    {
-      "keyword": "does gap insurance cover towing after total loss",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "geico roadside assistance towing how much will they pay",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does geico cover towing after an accident",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does aaa cover towing for flat tire",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "does homeowners insurance cover towing costs",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "car overheating on highway do i need a tow",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does roadside assistance cover flat tire on rim",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does car insurance cover towing after accident",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "transmission slipping on highway need tow",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does geico roadside assistance cover towing cost",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 80
+      "count": 84
     },
     {
       "slug": "battery-starting",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-21T08:52:53.403600+00:00",
+    "generated_at": "2026-09-22T08:30:21.776670+00:00",
     "platforms": {
       "blog": {
-        "checked": 577,
-        "verified": 577
+        "checked": 584,
+        "verified": 584
       },
       "dev": {
-        "checked": 432,
-        "verified": 432
+        "checked": 436,
+        "verified": 436
       },
       "feeder": {
-        "checked": 583,
-        "verified": 583
+        "checked": 587,
+        "verified": 587
       },
       "tumblr": {
-        "checked": 577,
-        "verified": 577
+        "checked": 579,
+        "verified": 579
       },
       "wordpress": {
-        "checked": 588,
-        "verified": 588
+        "checked": 592,
+        "verified": 592
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-21T13:19:40.682328+00:00",
+    "generated_at": "2026-09-22T12:02:00.698877+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 24,
+        "rows": 23,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 398,
+        "rows": 400,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,22 +210,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-21T14:39:16.241652+00:00",
+    "generatedAt": "2026-09-22T12:02:00.800602+00:00",
     "keywordGeneration": {
-      "currentInventory": 191,
-      "liveKeywords": 611,
-      "estimatedDaysRemaining": 47.8,
+      "currentInventory": 187,
+      "liveKeywords": 615,
+      "estimatedDaysRemaining": 46.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "47.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "46.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 0,
       "backlogUnits": 0,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-21T08:52:53.403600+00:00",
+      "generatedAt": "2026-09-22T08:30:21.776670+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
