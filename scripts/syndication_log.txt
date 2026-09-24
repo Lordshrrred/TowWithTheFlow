@@ -20938,3 +20938,12 @@
 [2026-09-24 12:38:01] WORDPRESS_BACKLOG | total=604 wordpress_synced=603 backlog=1
 [2026-09-24 12:38:01] WORDPRESS_BACKLOG | how-much-does-a-long-distance-tow-truck-cost-per-mile | START
 [2026-09-24 12:38:07] WORDPRESS | how-much-does-a-long-distance-tow-truck-cost-per-mile | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/24/how-much-does-a-long-distance-tow-truck-cost-per-mile-2/
+[2026-09-24 12:40:00] BLOGGER_BACKLOG | total=604 blogger_synced=603 backlog=1 limit=1 order=oldest
+[2026-09-24 12:40:00] BLOGGER_BACKLOG | how-much-does-a-long-distance-tow-truck-cost-per-mile | START
+[2026-09-24 12:40:00] BLOGGER | how-much-does-a-long-distance-tow-truck-cost-per-mile | step 1/3: refreshing access token
+[2026-09-24 12:40:00] BLOGGER | how-much-does-a-long-distance-tow-truck-cost-per-mile | step 2/3: converting markdown to HTML
+[2026-09-24 12:40:00] VARIATION | Blogger | requesting model=claude-haiku-4-5-20251001
+[2026-09-24 12:40:17] VARIATION | Blogger | served by model=claude-haiku-4-5-20251001 cache_read=0 cache_write=0
+[2026-09-24 12:40:17] VARIATION | Blogger | cached key=74d105aa96f7a3a5bb0b9227
+[2026-09-24 12:40:17] BLOGGER | how-much-does-a-long-distance-tow-truck-cost-per-mile | step 3/3: posting to blog 1959471973457654666
+[2026-09-24 12:40:18] BLOGGER | how-much-does-a-long-distance-tow-truck-cost-per-mile | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-much-does-long-distance-tow-truck_0567889547.html
