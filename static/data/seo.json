@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-09-23T13:05:52.452770+00:00",
+  "generated_at": "2026-09-24T12:10:53.439529+00:00",
   "keywords": {
     "total": 802,
-    "live": 619,
-    "pending": 183,
+    "live": 623,
+    "pending": 179,
     "local": {
       "live": 188,
       "pending": 0
     },
     "pain_point": {
-      "live": 431,
-      "pending": 183
+      "live": 435,
+      "pending": 179
     }
   },
   "next_targets": [
-    {
-      "keyword": "how much does a long distance tow truck cost per mile",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car overheating on highway do i need a tow",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does roadside assistance cover flat tire on rim",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does car insurance cover towing after accident",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "transmission slipping on highway need tow",
       "score": 7,
@@ -63,23 +43,43 @@
       "keyword": "car smoking under hood on highway stop or drive",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down on railroad tracks what to do",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does aaa cover towing for someone else driving my car",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont start after rain dead battery or something else",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how far will insurance tow my car for free",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 234
+      "count": 235
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 98
+      "count": 99
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 84
+      "count": 86
     },
     {
       "slug": "battery-starting",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-23T08:32:18.274572+00:00",
+    "generated_at": "2026-09-24T08:24:14.639040+00:00",
     "platforms": {
       "blog": {
-        "checked": 588,
-        "verified": 587
+        "checked": 591,
+        "verified": 560
       },
       "dev": {
-        "checked": 440,
-        "verified": 440
+        "checked": 443,
+        "verified": 443
       },
       "feeder": {
-        "checked": 591,
-        "verified": 591
+        "checked": 594,
+        "verified": 594
       },
       "tumblr": {
-        "checked": 583,
-        "verified": 583
+        "checked": 588,
+        "verified": 588
       },
       "wordpress": {
-        "checked": 596,
-        "verified": 596
+        "checked": 599,
+        "verified": 599
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-23T12:07:14.992349+00:00",
+    "generated_at": "2026-09-24T12:10:53.351848+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 21,
+        "rows": 19,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 414,
+        "rows": 418,
         "source": "ga4",
         "status": "ok"
       }
@@ -205,34 +205,34 @@
       "top_events": []
     },
     "top_actions": [],
-    "top_landing_page_count": 4,
-    "top_query_count": 4,
+    "top_landing_page_count": 3,
+    "top_query_count": 3,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-23T13:05:52.481414+00:00",
+    "generatedAt": "2026-09-24T12:10:53.468414+00:00",
     "keywordGeneration": {
-      "currentInventory": 183,
-      "liveKeywords": 619,
-      "estimatedDaysRemaining": 45.8,
+      "currentInventory": 179,
+      "liveKeywords": 623,
+      "estimatedDaysRemaining": 44.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
-      "status": "paused",
-      "reason": "45.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "status": "running",
+      "reason": "44.8 publishing days of inventory remain, at or below the 45 day resume threshold."
     },
     "backlinks": {
-      "backlogPosts": 1,
-      "backlogUnits": 1,
+      "backlogPosts": 31,
+      "backlogUnits": 31,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-23T08:32:18.274572+00:00",
+      "generatedAt": "2026-09-24T08:24:14.639040+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.0,
+      "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.0,
+      "netBacklinkUnitsPerDay": 0.4,
       "estimatedCatchUpDays": null,
-      "reason": "Backlinks are keeping pace, but not reducing the historical backlog."
+      "reason": "Backlog is growing by 0.4 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
