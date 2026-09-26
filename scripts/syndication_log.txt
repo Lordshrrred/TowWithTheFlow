@@ -21194,3 +21194,33 @@
 [2026-09-26 10:38:46] === SYNDICATE DONE: car-accident-freeway-houston-towing-cost-who-pays | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-26 10:38:46] SYNCED | car-accident-freeway-houston-towing-cost-who-pays marked in synced-posts.txt
 [2026-09-26 10:38:46] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-26 11:52:27] === SYNDICATE START: car-wont-start-parking-lot-night-safe-to-wait-for-tow ===
+[2026-09-26 11:52:27] PREFLIGHT | title: Car Won't Start in Parking Lot at Night: Is It Safe to Wait for a Tow?
+[2026-09-26 11:52:27] PREFLIGHT | date: 2026-09-26
+[2026-09-26 11:52:27] PREFLIGHT | timestamp: 2026-09-26 11:52:27
+[2026-09-26 11:52:27] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-09-26 11:52:27] PREFLIGHT | TUMBLR:  configured
+[2026-09-26 11:52:27] PREFLIGHT | BLOGGER: configured
+[2026-09-26 11:52:27] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-26 11:52:27] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-26 11:52:27] DEVTO | car-wont-start-parking-lot-night-safe-to-wait-for-tow | START
+[2026-09-26 11:52:27] DEVTO | car-wont-start-parking-lot-night-safe-to-wait-for-tow | account=TWTF1
+[2026-09-26 11:52:28] DEVTO | car-wont-start-parking-lot-night-safe-to-wait-for-tow | SUCCESS | https://dev.to/roadsideamericatowing/car-wont-start-in-parking-lot-at-night-is-it-safe-to-wait-for-a-tow-what-drivers-should-know-17id
+[2026-09-26 11:52:28] --- waiting 60s before next platform ---
+[2026-09-26 11:53:28] TUMBLR | car-wont-start-parking-lot-night-safe-to-wait-for-tow | START
+[2026-09-26 11:53:29] TUMBLR | car-wont-start-parking-lot-night-safe-to-wait-for-tow | SUCCESS | https://towwiththeflow.tumblr.com/post/828841875183190016
+[2026-09-26 11:53:29] --- waiting 60s before next platform ---
+[2026-09-26 11:54:29] BLOGGER | car-wont-start-parking-lot-night-safe-to-wait-for-tow | START
+[2026-09-26 11:54:29] BLOGGER | car-wont-start-parking-lot-night-safe-to-wait-for-tow | step 1/3: refreshing access token
+[2026-09-26 11:54:29] BLOGGER | car-wont-start-parking-lot-night-safe-to-wait-for-tow | step 2/3: converting markdown to HTML
+[2026-09-26 11:54:29] BLOGGER | car-wont-start-parking-lot-night-safe-to-wait-for-tow | step 3/3: posting to blog 1959471973457654666
+[2026-09-26 11:54:29] BLOGGER | car-wont-start-parking-lot-night-safe-to-wait-for-tow | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/car-wont-start-in-parking-lot-at-night.html
+[2026-09-26 11:54:29] --- waiting 60s before next platform ---
+[2026-09-26 11:55:29] WORDPRESS | car-wont-start-parking-lot-night-safe-to-wait-for-tow | START
+[2026-09-26 11:55:37] WORDPRESS | car-wont-start-parking-lot-night-safe-to-wait-for-tow | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/26/car-wont-start-parking-lot-night-safe-to-wait-for-tow/
+[2026-09-26 11:55:37] --- waiting 60s before next platform ---
+[2026-09-26 11:56:37] FEEDER | car-wont-start-parking-lot-night-safe-to-wait-for-tow | START
+[2026-09-26 11:56:38] FEEDER | car-wont-start-parking-lot-night-safe-to-wait-for-tow | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-parking-lot-night-safe-to-wait-for-tow-tips/
+[2026-09-26 11:56:38] === SYNDICATE DONE: car-wont-start-parking-lot-night-safe-to-wait-for-tow | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-26 11:56:38] SYNCED | car-wont-start-parking-lot-night-safe-to-wait-for-tow marked in synced-posts.txt
+[2026-09-26 11:56:38] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
