@@ -2,6 +2,8 @@
 
 This file is read by every agent that works on this repo. Follow these rules without exception.
 
+@AGENTS.md
+
 ---
 
 ## Automation First — Never Ask the User to Do Manual Steps

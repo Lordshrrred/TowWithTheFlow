@@ -2,7 +2,9 @@
 public/
 resources/
 .hugo_build.lock
-.claude/
+.claude/*
+!.claude/settings.json
+!.claude/hooks/
 *.code-workspace
 
 # OS / stray files
@@ -52,3 +54,8 @@ static/_data/dashboard-config.json
 # Built dashboard outputs contain injected secrets — never commit
 static/dashboard/
 .vercel
+
+# Secrets: .env files are symlinks to iCloud Dev Secrets and must never be committed
+.env*
+!.env.example
+!.env*.example
