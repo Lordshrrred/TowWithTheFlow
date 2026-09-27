@@ -21254,3 +21254,33 @@
 [2026-09-26 13:21:16] === SYNDICATE DONE: towing-cost-in-dallas-texas-after-highway-breakdown | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-26 13:21:16] SYNCED | towing-cost-in-dallas-texas-after-highway-breakdown marked in synced-posts.txt
 [2026-09-26 13:21:16] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-27 09:13:20] === SYNDICATE START: how-to-stay-safe-broken-down-on-highway-at-night ===
+[2026-09-27 09:13:20] PREFLIGHT | title: How to Stay Safe Broken Down on Highway at Night: What to Do Right Now
+[2026-09-27 09:13:20] PREFLIGHT | date: 2026-09-27
+[2026-09-27 09:13:20] PREFLIGHT | timestamp: 2026-09-27 09:13:20
+[2026-09-27 09:13:20] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-09-27 09:13:20] PREFLIGHT | TUMBLR:  configured
+[2026-09-27 09:13:20] PREFLIGHT | BLOGGER: configured
+[2026-09-27 09:13:20] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-27 09:13:20] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-27 09:13:20] DEVTO | how-to-stay-safe-broken-down-on-highway-at-night | START
+[2026-09-27 09:13:20] DEVTO | how-to-stay-safe-broken-down-on-highway-at-night | account=TWTF2
+[2026-09-27 09:13:21] DEVTO | how-to-stay-safe-broken-down-on-highway-at-night | SUCCESS | https://dev.to/denverroadsideelitetowing/how-to-stay-safe-broken-down-on-highway-at-night-what-to-do-right-now-quick-guide-1f02
+[2026-09-27 09:13:21] --- waiting 60s before next platform ---
+[2026-09-27 09:14:21] TUMBLR | how-to-stay-safe-broken-down-on-highway-at-night | START
+[2026-09-27 09:14:21] TUMBLR | how-to-stay-safe-broken-down-on-highway-at-night | SUCCESS | https://towwiththeflow.tumblr.com/post/828922460792651776
+[2026-09-27 09:14:21] --- waiting 60s before next platform ---
+[2026-09-27 09:15:21] BLOGGER | how-to-stay-safe-broken-down-on-highway-at-night | START
+[2026-09-27 09:15:21] BLOGGER | how-to-stay-safe-broken-down-on-highway-at-night | step 1/3: refreshing access token
+[2026-09-27 09:15:21] BLOGGER | how-to-stay-safe-broken-down-on-highway-at-night | step 2/3: converting markdown to HTML
+[2026-09-27 09:15:21] BLOGGER | how-to-stay-safe-broken-down-on-highway-at-night | step 3/3: posting to blog 1959471973457654666
+[2026-09-27 09:15:22] BLOGGER | how-to-stay-safe-broken-down-on-highway-at-night | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-to-stay-safe-broken-down-on-highway.html
+[2026-09-27 09:15:22] --- waiting 60s before next platform ---
+[2026-09-27 09:16:22] WORDPRESS | how-to-stay-safe-broken-down-on-highway-at-night | START
+[2026-09-27 09:16:30] WORDPRESS | how-to-stay-safe-broken-down-on-highway-at-night | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/27/how-to-stay-safe-broken-down-on-highway-at-night/
+[2026-09-27 09:16:30] --- waiting 60s before next platform ---
+[2026-09-27 09:17:30] FEEDER | how-to-stay-safe-broken-down-on-highway-at-night | START
+[2026-09-27 09:17:31] FEEDER | how-to-stay-safe-broken-down-on-highway-at-night | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/how-to-stay-safe-broken-down-on-highway-at-night-advice/
+[2026-09-27 09:17:31] === SYNDICATE DONE: how-to-stay-safe-broken-down-on-highway-at-night | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-27 09:17:31] SYNCED | how-to-stay-safe-broken-down-on-highway-at-night marked in synced-posts.txt
+[2026-09-27 09:17:31] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
