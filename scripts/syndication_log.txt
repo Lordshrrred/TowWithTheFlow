@@ -21443,3 +21443,33 @@
 [2026-09-28 12:18:01] === SYNDICATE DONE: car-wont-start-in-walmart-parking-lot-what-to-do | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-28 12:18:01] SYNCED | car-wont-start-in-walmart-parking-lot-what-to-do marked in synced-posts.txt
 [2026-09-28 12:18:01] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-28 13:46:30] === SYNDICATE START: how-much-does-it-cost-to-tow-a-car-in-los-angeles ===
+[2026-09-28 13:46:30] PREFLIGHT | title: How Much Does It Cost to Tow a Car in Los Angeles: What You'll Pay Right Now
+[2026-09-28 13:46:30] PREFLIGHT | date: 2026-09-28
+[2026-09-28 13:46:30] PREFLIGHT | timestamp: 2026-09-28 13:46:30
+[2026-09-28 13:46:30] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-09-28 13:46:30] PREFLIGHT | TUMBLR:  configured
+[2026-09-28 13:46:30] PREFLIGHT | BLOGGER: configured
+[2026-09-28 13:46:30] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-28 13:46:30] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-28 13:46:30] DEVTO | how-much-does-it-cost-to-tow-a-car-in-los-angeles | START
+[2026-09-28 13:46:30] DEVTO | how-much-does-it-cost-to-tow-a-car-in-los-angeles | account=TWTF2
+[2026-09-28 13:46:30] DEVTO | how-much-does-it-cost-to-tow-a-car-in-los-angeles | SUCCESS | https://dev.to/denverroadsideelitetowing/how-much-does-it-cost-to-tow-a-car-in-los-angeles-what-youll-pay-right-now-what-to-do-next-1h1p
+[2026-09-28 13:46:30] --- waiting 60s before next platform ---
+[2026-09-28 13:47:30] TUMBLR | how-much-does-it-cost-to-tow-a-car-in-los-angeles | START
+[2026-09-28 13:47:31] TUMBLR | how-much-does-it-cost-to-tow-a-car-in-los-angeles | SUCCESS | https://towwiththeflow.tumblr.com/post/829030243898703872
+[2026-09-28 13:47:31] --- waiting 60s before next platform ---
+[2026-09-28 13:48:31] BLOGGER | how-much-does-it-cost-to-tow-a-car-in-los-angeles | START
+[2026-09-28 13:48:31] BLOGGER | how-much-does-it-cost-to-tow-a-car-in-los-angeles | step 1/3: refreshing access token
+[2026-09-28 13:48:31] BLOGGER | how-much-does-it-cost-to-tow-a-car-in-los-angeles | step 2/3: converting markdown to HTML
+[2026-09-28 13:48:31] BLOGGER | how-much-does-it-cost-to-tow-a-car-in-los-angeles | step 3/3: posting to blog 1959471973457654666
+[2026-09-28 13:48:32] BLOGGER | how-much-does-it-cost-to-tow-a-car-in-los-angeles | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/how-much-does-it-cost-to-tow-car-in-los.html
+[2026-09-28 13:48:32] --- waiting 60s before next platform ---
+[2026-09-28 13:49:32] WORDPRESS | how-much-does-it-cost-to-tow-a-car-in-los-angeles | START
+[2026-09-28 13:49:39] WORDPRESS | how-much-does-it-cost-to-tow-a-car-in-los-angeles | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/28/how-much-does-it-cost-to-tow-a-car-in-los-angeles/
+[2026-09-28 13:49:39] --- waiting 60s before next platform ---
+[2026-09-28 13:50:39] FEEDER | how-much-does-it-cost-to-tow-a-car-in-los-angeles | START
+[2026-09-28 13:50:41] FEEDER | how-much-does-it-cost-to-tow-a-car-in-los-angeles | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/how-much-does-it-cost-to-tow-a-car-in-los-angeles-guide/
+[2026-09-28 13:50:41] === SYNDICATE DONE: how-much-does-it-cost-to-tow-a-car-in-los-angeles | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-28 13:50:41] SYNCED | how-much-does-it-cost-to-tow-a-car-in-los-angeles marked in synced-posts.txt
+[2026-09-28 13:50:41] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
