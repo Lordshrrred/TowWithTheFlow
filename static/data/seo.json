@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-09-27T12:25:49.826613+00:00",
+  "generated_at": "2026-09-28T14:27:30.607370+00:00",
   "keywords": {
     "total": 836,
-    "live": 635,
-    "pending": 201,
+    "live": 639,
+    "pending": 197,
     "local": {
-      "live": 192,
-      "pending": 5
+      "live": 194,
+      "pending": 3
     },
     "pain_point": {
-      "live": 443,
-      "pending": 196
+      "live": 445,
+      "pending": 194
     }
   },
   "next_targets": [
-    {
-      "keyword": "how to stay safe broken down on highway at night",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does state farm roadside assistance cover towing cost",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "blown head gasket symptoms should i tow or drive",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "fuel pump failure on highway symptoms and what to do",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car wont go into gear automatic transmission emergency",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "power steering went out while driving is it safe to drive home",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 239
+      "count": 241
     },
     {
       "slug": "engine-mechanical",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 33
+      "count": 34
     },
     {
       "slug": "roadside-help",
@@ -117,14 +117,14 @@
       "count": 8
     },
     {
-      "slug": "winter-weather",
-      "label": "Winter & Weather Breakdowns",
+      "slug": "vehicle-recovery",
+      "label": "Vehicle Recovery",
       "count": 6
     },
     {
-      "slug": "vehicle-recovery",
-      "label": "Vehicle Recovery",
-      "count": 5
+      "slug": "winter-weather",
+      "label": "Winter & Weather Breakdowns",
+      "count": 6
     },
     {
       "slug": "consumer-rights",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-27T09:37:44.308946+00:00",
+    "generated_at": "2026-09-28T09:41:09.877289+00:00",
     "platforms": {
       "blog": {
-        "checked": 557,
-        "verified": 557
+        "checked": 561,
+        "verified": 550
       },
       "dev": {
-        "checked": 489,
-        "verified": 489
+        "checked": 493,
+        "verified": 493
       },
       "feeder": {
-        "checked": 607,
-        "verified": 607
+        "checked": 611,
+        "verified": 611
       },
       "tumblr": {
-        "checked": 600,
-        "verified": 600
+        "checked": 604,
+        "verified": 604
       },
       "wordpress": {
-        "checked": 612,
-        "verified": 612
+        "checked": 616,
+        "verified": 616
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-27T12:25:49.744145+00:00",
+    "generated_at": "2026-09-28T14:27:30.515451+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 438,
+        "rows": 448,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,29 +210,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-27T12:25:49.856793+00:00",
+    "generatedAt": "2026-09-28T14:27:30.637590+00:00",
     "keywordGeneration": {
-      "currentInventory": 201,
-      "liveKeywords": 635,
-      "estimatedDaysRemaining": 50.2,
+      "currentInventory": 197,
+      "liveKeywords": 639,
+      "estimatedDaysRemaining": 49.2,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "50.2 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "49.2 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
-      "backlogPosts": 0,
-      "backlogUnits": 0,
+      "backlogPosts": 11,
+      "backlogUnits": 11,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-27T09:37:44.308946+00:00",
+      "generatedAt": "2026-09-28T09:41:09.877289+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
       "netBacklinkUnitsPerDay": 0.2,
-      "estimatedCatchUpDays": "maintenance",
-      "reason": "Backlink backlog is clear; new posts should syndicate, verify, and complete as they publish."
+      "estimatedCatchUpDays": null,
+      "reason": "Backlog is growing by 0.2 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
