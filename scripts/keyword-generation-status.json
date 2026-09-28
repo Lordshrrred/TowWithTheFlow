@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-25T13:05:06.908141+00:00",
+  "generatedAt": "2026-09-28T16:11:13.181941+00:00",
   "keywordGeneration": {
-    "currentInventory": 175,
-    "liveKeywords": 627,
-    "estimatedDaysRemaining": 43.8,
+    "currentInventory": 197,
+    "liveKeywords": 639,
+    "estimatedDaysRemaining": 49.2,
     "publishingCadencePerDay": 4.0,
     "pauseThresholdDays": 90.0,
     "resumeThresholdDays": 45.0,
     "status": "running",
-    "reason": "43.8 publishing days of inventory remain, at or below the 45 day resume threshold."
+    "reason": "49.2 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
   },
   "backlinks": {
-    "backlogPosts": 4,
-    "backlogUnits": 4,
+    "backlogPosts": 11,
+    "backlogUnits": 11,
     "requiredPlatformsPerPost": 5,
-    "generatedAt": "2026-09-25T08:47:01.016368+00:00",
+    "generatedAt": "2026-09-28T09:41:09.877289+00:00",
     "source": "backlink_audit.json",
     "completedPerDay": 19.8,
     "newPostsPerDay": 4.0,
