@@ -21593,3 +21593,33 @@
 [2026-09-29 12:15:54] === SYNDICATE DONE: car-stuck-in-snow-ditch-denver-how-to-get-towed | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-09-29 12:15:54] SYNCED | car-stuck-in-snow-ditch-denver-how-to-get-towed marked in synced-posts.txt
 [2026-09-29 12:15:54] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-09-29 13:31:34] === SYNDICATE START: engine-knocking-noise-highway-speed-tow-or-drive ===
+[2026-09-29 13:31:34] PREFLIGHT | title: Engine Making Knocking Noise at Highway Speed: Tow or Drive?
+[2026-09-29 13:31:34] PREFLIGHT | date: 2026-09-29
+[2026-09-29 13:31:34] PREFLIGHT | timestamp: 2026-09-29 13:31:34
+[2026-09-29 13:31:34] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-09-29 13:31:34] PREFLIGHT | TUMBLR:  configured
+[2026-09-29 13:31:34] PREFLIGHT | BLOGGER: configured
+[2026-09-29 13:31:34] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-09-29 13:31:34] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-09-29 13:31:34] DEVTO | engine-knocking-noise-highway-speed-tow-or-drive | START
+[2026-09-29 13:31:34] DEVTO | engine-knocking-noise-highway-speed-tow-or-drive | account=TWTF1
+[2026-09-29 13:31:35] DEVTO | engine-knocking-noise-highway-speed-tow-or-drive | SUCCESS | https://dev.to/roadsideamericatowing/engine-making-knocking-noise-at-highway-speed-tow-or-drive-what-drivers-should-know-3i48
+[2026-09-29 13:31:35] --- waiting 60s before next platform ---
+[2026-09-29 13:32:35] TUMBLR | engine-knocking-noise-highway-speed-tow-or-drive | START
+[2026-09-29 13:32:36] TUMBLR | engine-knocking-noise-highway-speed-tow-or-drive | SUCCESS | https://towwiththeflow.tumblr.com/post/829119902070800384
+[2026-09-29 13:32:36] --- waiting 60s before next platform ---
+[2026-09-29 13:33:36] BLOGGER | engine-knocking-noise-highway-speed-tow-or-drive | START
+[2026-09-29 13:33:36] BLOGGER | engine-knocking-noise-highway-speed-tow-or-drive | step 1/3: refreshing access token
+[2026-09-29 13:33:36] BLOGGER | engine-knocking-noise-highway-speed-tow-or-drive | step 2/3: converting markdown to HTML
+[2026-09-29 13:33:36] BLOGGER | engine-knocking-noise-highway-speed-tow-or-drive | step 3/3: posting to blog 1959471973457654666
+[2026-09-29 13:33:37] BLOGGER | engine-knocking-noise-highway-speed-tow-or-drive | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/09/engine-making-knocking-noise-at-highway.html
+[2026-09-29 13:33:37] --- waiting 60s before next platform ---
+[2026-09-29 13:34:37] WORDPRESS | engine-knocking-noise-highway-speed-tow-or-drive | START
+[2026-09-29 13:34:38] WORDPRESS | engine-knocking-noise-highway-speed-tow-or-drive | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/09/29/engine-knocking-noise-highway-speed-tow-or-drive/
+[2026-09-29 13:34:38] --- waiting 60s before next platform ---
+[2026-09-29 13:35:38] FEEDER | engine-knocking-noise-highway-speed-tow-or-drive | START
+[2026-09-29 13:35:39] FEEDER | engine-knocking-noise-highway-speed-tow-or-drive | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/engine-knocking-noise-highway-speed-tow-or-drive-advice/
+[2026-09-29 13:35:39] === SYNDICATE DONE: engine-knocking-noise-highway-speed-tow-or-drive | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-09-29 13:35:39] SYNCED | engine-knocking-noise-highway-speed-tow-or-drive marked in synced-posts.txt
+[2026-09-29 13:35:39] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
