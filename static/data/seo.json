@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-09-28T16:11:29.403309+00:00",
+  "generated_at": "2026-09-29T13:18:34.893534+00:00",
   "keywords": {
     "total": 872,
-    "live": 639,
-    "pending": 233,
+    "live": 643,
+    "pending": 229,
     "local": {
-      "live": 194,
-      "pending": 14
+      "live": 196,
+      "pending": 12
     },
     "pain_point": {
-      "live": 445,
-      "pending": 219
+      "live": 447,
+      "pending": 217
     }
   },
   "next_targets": [
-    {
-      "keyword": "car wont start in walmart parking lot what do i do",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car smoking from hood on highway what to do",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "tire blew out on freeway car wont move who do i call",
       "score": 9,
@@ -63,18 +53,28 @@
       "keyword": "tow truck taking too long what are my options roadside",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "alternator died while driving signs and what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car engine seized up can it be towed safely",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 241
+      "count": 243
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 101
+      "count": 102
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 58
+      "count": 59
     },
     {
       "slug": "highway-safety",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-28T09:41:09.877289+00:00",
+    "generated_at": "2026-09-29T09:47:27.494050+00:00",
     "platforms": {
       "blog": {
-        "checked": 561,
-        "verified": 550
+        "checked": 556,
+        "verified": 556
       },
       "dev": {
-        "checked": 493,
-        "verified": 493
+        "checked": 497,
+        "verified": 497
       },
       "feeder": {
-        "checked": 611,
-        "verified": 611
+        "checked": 615,
+        "verified": 615
       },
       "tumblr": {
-        "checked": 604,
-        "verified": 604
+        "checked": 608,
+        "verified": 608
       },
       "wordpress": {
-        "checked": 616,
-        "verified": 616
+        "checked": 620,
+        "verified": 620
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-28T14:27:30.515451+00:00",
+    "generated_at": "2026-09-29T13:18:34.812861+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 448,
+        "rows": 450,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,29 +210,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-28T16:11:29.431169+00:00",
+    "generatedAt": "2026-09-29T13:18:34.922907+00:00",
     "keywordGeneration": {
-      "currentInventory": 233,
-      "liveKeywords": 639,
-      "estimatedDaysRemaining": 58.2,
+      "currentInventory": 229,
+      "liveKeywords": 643,
+      "estimatedDaysRemaining": 57.2,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "58.2 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "57.2 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
-      "backlogPosts": 11,
-      "backlogUnits": 11,
+      "backlogPosts": 0,
+      "backlogUnits": 0,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-28T09:41:09.877289+00:00",
+      "generatedAt": "2026-09-29T09:47:27.494050+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
       "netBacklinkUnitsPerDay": 0.2,
-      "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.2 platform links/day at the current rate."
+      "estimatedCatchUpDays": "maintenance",
+      "reason": "Backlink backlog is clear; new posts should syndicate, verify, and complete as they publish."
     },
     "curatedExpansion": {
       "supported": true,
