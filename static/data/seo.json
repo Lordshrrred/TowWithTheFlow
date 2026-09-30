@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-09-29T13:18:34.893534+00:00",
+  "generated_at": "2026-09-30T12:59:35.473611+00:00",
   "keywords": {
     "total": 872,
-    "live": 643,
-    "pending": 229,
+    "live": 647,
+    "pending": 225,
     "local": {
-      "live": 196,
-      "pending": 12
+      "live": 198,
+      "pending": 10
     },
     "pain_point": {
-      "live": 447,
-      "pending": 217
+      "live": 449,
+      "pending": 215
     }
   },
   "next_targets": [
-    {
-      "keyword": "tire blew out on freeway car wont move who do i call",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "engine making knocking noise at highway speed tow or drive",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "how do i know if my car needs a flatbed tow",
       "score": 9,
@@ -63,18 +53,28 @@
       "keyword": "car engine seized up can it be towed safely",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "stranded on highway with baby what to do roadside emergency",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "brake failure while driving what to do emergency",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 243
+      "count": 244
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 102
+      "count": 103
     },
     {
       "slug": "insurance-coverage",
@@ -99,7 +99,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 25
+      "count": 26
     },
     {
       "slug": "towing-logistics",
@@ -119,7 +119,7 @@
     {
       "slug": "vehicle-recovery",
       "label": "Vehicle Recovery",
-      "count": 6
+      "count": 7
     },
     {
       "slug": "winter-weather",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-09-29T09:47:27.494050+00:00",
+    "generated_at": "2026-09-30T09:39:24.167025+00:00",
     "platforms": {
       "blog": {
-        "checked": 556,
-        "verified": 556
+        "checked": 560,
+        "verified": 560
       },
       "dev": {
-        "checked": 497,
-        "verified": 497
+        "checked": 501,
+        "verified": 501
       },
       "feeder": {
-        "checked": 615,
-        "verified": 615
+        "checked": 619,
+        "verified": 619
       },
       "tumblr": {
-        "checked": 608,
-        "verified": 608
+        "checked": 611,
+        "verified": 611
       },
       "wordpress": {
-        "checked": 620,
-        "verified": 620
+        "checked": 624,
+        "verified": 624
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-09-29T13:18:34.812861+00:00",
+    "generated_at": "2026-09-30T12:59:35.394649+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 450,
+        "rows": 444,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,22 +210,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-09-29T13:18:34.922907+00:00",
+    "generatedAt": "2026-09-30T12:59:35.493239+00:00",
     "keywordGeneration": {
-      "currentInventory": 229,
-      "liveKeywords": 643,
-      "estimatedDaysRemaining": 57.2,
+      "currentInventory": 225,
+      "liveKeywords": 647,
+      "estimatedDaysRemaining": 56.2,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "57.2 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "56.2 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
       "backlogPosts": 0,
       "backlogUnits": 0,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-09-29T09:47:27.494050+00:00",
+      "generatedAt": "2026-09-30T09:39:24.167025+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
