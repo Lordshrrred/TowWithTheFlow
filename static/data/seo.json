@@ -1,34 +1,19 @@
 {
-  "generated_at": "2026-10-01T13:52:19.540200+00:00",
+  "generated_at": "2026-10-02T13:09:17.068564+00:00",
   "keywords": {
     "total": 902,
-    "live": 651,
-    "pending": 251,
+    "live": 655,
+    "pending": 247,
     "local": {
-      "live": 200,
-      "pending": 20
+      "live": 202,
+      "pending": 18
     },
     "pain_point": {
-      "live": 451,
-      "pending": 231
+      "live": 453,
+      "pending": 229
     }
   },
   "next_targets": [
-    {
-      "keyword": "stuck on railroad tracks car wont start what to do",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down on houston highway no phone signal",
-      "score": 9,
-      "type": "local"
-    },
-    {
-      "keyword": "car wont start after filling up with gas what to do",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "timing chain snapped can i drive it or need tow",
       "score": 9,
@@ -63,13 +48,28 @@
       "keyword": "alternator died while driving signs and what to do",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car engine seized up can it be towed safely",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "stranded on highway with baby what to do roadside emergency",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "brake failure while driving what to do emergency",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 244
+      "count": 245
     },
     {
       "slug": "engine-mechanical",
@@ -84,12 +84,12 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 59
+      "count": 61
     },
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 36
+      "count": 37
     },
     {
       "slug": "roadside-help",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-01T10:04:34.734516+00:00",
+    "generated_at": "2026-10-02T09:41:47.081423+00:00",
     "platforms": {
       "blog": {
-        "checked": 572,
-        "verified": 538
+        "checked": 576,
+        "verified": 551
       },
       "dev": {
-        "checked": 505,
-        "verified": 505
+        "checked": 509,
+        "verified": 509
       },
       "feeder": {
-        "checked": 623,
-        "verified": 623
+        "checked": 627,
+        "verified": 627
       },
       "tumblr": {
-        "checked": 614,
-        "verified": 614
+        "checked": 620,
+        "verified": 620
       },
       "wordpress": {
-        "checked": 628,
-        "verified": 628
+        "checked": 632,
+        "verified": 632
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-01T13:52:19.477257+00:00",
+    "generated_at": "2026-10-02T13:09:16.971527+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +186,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 20,
+        "rows": 19,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 452,
+        "rows": 460,
         "source": "ga4",
         "status": "ok"
       }
@@ -210,22 +210,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-01T13:52:19.556812+00:00",
+    "generatedAt": "2026-10-02T13:09:17.100240+00:00",
     "keywordGeneration": {
-      "currentInventory": 251,
-      "liveKeywords": 651,
-      "estimatedDaysRemaining": 62.8,
+      "currentInventory": 247,
+      "liveKeywords": 655,
+      "estimatedDaysRemaining": 61.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "62.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "61.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
-      "backlogPosts": 34,
-      "backlogUnits": 34,
+      "backlogPosts": 25,
+      "backlogUnits": 25,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-01T10:04:34.734516+00:00",
+      "generatedAt": "2026-10-02T09:41:47.081423+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
