@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-02T13:09:17.068564+00:00",
+  "generated_at": "2026-10-02T14:16:32.155305+00:00",
   "keywords": {
-    "total": 902,
+    "total": 933,
     "live": 655,
-    "pending": 247,
+    "pending": 278,
     "local": {
       "live": 202,
-      "pending": 18
+      "pending": 31
     },
     "pain_point": {
       "live": 453,
-      "pending": 229
+      "pending": 247
     }
   },
   "next_targets": [
@@ -30,37 +30,37 @@
       "type": "pain_point"
     },
     {
+      "keyword": "engine light flashing on highway should i pull over",
+      "score": 9,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "blew a tire on highway no spare what to do now",
+      "score": 9,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "brake failure on highway what to do emergency",
+      "score": 9,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car wont start after running out of gas what is wrong",
+      "score": 9,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "locked keys in car with engine running who to call",
+      "score": 9,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down no cell service on highway what to do",
+      "score": 9,
+      "type": "pain_point"
+    },
+    {
       "keyword": "blown head gasket symptoms should i tow or drive",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "catalytic converter stolen car wont start can it be towed",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "tow truck taking too long what are my options roadside",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "alternator died while driving signs and what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car engine seized up can it be towed safely",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "stranded on highway with baby what to do roadside emergency",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "brake failure while driving what to do emergency",
       "score": 8,
       "type": "pain_point"
     }
@@ -210,16 +210,16 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-02T13:09:17.100240+00:00",
+    "generatedAt": "2026-10-02T14:16:32.183465+00:00",
     "keywordGeneration": {
-      "currentInventory": 247,
+      "currentInventory": 278,
       "liveKeywords": 655,
-      "estimatedDaysRemaining": 61.8,
+      "estimatedDaysRemaining": 69.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "61.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "69.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
       "backlogPosts": 25,
