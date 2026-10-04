@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-03T12:00:39.647685+00:00",
+  "generated_at": "2026-10-04T12:50:40.445551+00:00",
   "keywords": {
     "total": 933,
-    "live": 659,
-    "pending": 274,
+    "live": 663,
+    "pending": 270,
     "local": {
-      "live": 204,
-      "pending": 29
+      "live": 206,
+      "pending": 27
     },
     "pain_point": {
-      "live": 455,
-      "pending": 245
+      "live": 457,
+      "pending": 243
     }
   },
   "next_targets": [
-    {
-      "keyword": "how long can you wait on side of road before police tow your car",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "engine light flashing on highway should i pull over",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "blew a tire on highway no spare what to do now",
       "score": 9,
@@ -63,6 +53,16 @@
       "keyword": "tow truck taking too long what are my options roadside",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "alternator died while driving signs and what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car engine seized up can it be towed safely",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 103
+      "count": 104
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 62
+      "count": 63
     },
     {
       "slug": "highway-safety",
@@ -102,13 +102,13 @@
       "count": 27
     },
     {
-      "slug": "towing-logistics",
-      "label": "Towing Logistics & Process",
-      "count": 9
-    },
-    {
       "slug": "accident-liability",
       "label": "Accidents & Towing Liability",
+      "count": 10
+    },
+    {
+      "slug": "towing-logistics",
+      "label": "Towing Logistics & Process",
       "count": 9
     },
     {
@@ -124,7 +124,7 @@
     {
       "slug": "winter-weather",
       "label": "Winter & Weather Breakdowns",
-      "count": 6
+      "count": 7
     },
     {
       "slug": "consumer-rights",
@@ -146,27 +146,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-03T09:06:08.277736+00:00",
+    "generated_at": "2026-10-04T10:09:08.485848+00:00",
     "platforms": {
       "blog": {
-        "checked": 580,
-        "verified": 572
+        "checked": 613,
+        "verified": 613
       },
       "dev": {
-        "checked": 513,
-        "verified": 513
+        "checked": 533,
+        "verified": 533
       },
       "feeder": {
-        "checked": 631,
-        "verified": 631
+        "checked": 635,
+        "verified": 635
       },
       "tumblr": {
-        "checked": 623,
-        "verified": 623
+        "checked": 615,
+        "verified": 615
       },
       "wordpress": {
-        "checked": 636,
-        "verified": 636
+        "checked": 640,
+        "verified": 640
       }
     }
   },
@@ -174,7 +174,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-03T12:00:39.567737+00:00",
+    "generated_at": "2026-10-04T12:50:40.375586+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -193,7 +193,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 464,
+        "rows": 472,
         "source": "ga4",
         "status": "ok"
       }
@@ -205,34 +205,34 @@
       "top_events": []
     },
     "top_actions": [],
-    "top_landing_page_count": 2,
-    "top_query_count": 2,
+    "top_landing_page_count": 1,
+    "top_query_count": 1,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-03T12:00:39.677676+00:00",
+    "generatedAt": "2026-10-04T12:50:40.468197+00:00",
     "keywordGeneration": {
-      "currentInventory": 274,
-      "liveKeywords": 659,
-      "estimatedDaysRemaining": 68.5,
+      "currentInventory": 270,
+      "liveKeywords": 663,
+      "estimatedDaysRemaining": 67.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "68.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "67.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
-      "backlogPosts": 8,
-      "backlogUnits": 8,
+      "backlogPosts": 0,
+      "backlogUnits": 0,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-03T09:06:08.277736+00:00",
+      "generatedAt": "2026-10-04T10:09:08.485848+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
       "netBacklinkUnitsPerDay": 0.2,
-      "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.2 platform links/day at the current rate."
+      "estimatedCatchUpDays": "maintenance",
+      "reason": "Backlink backlog is clear; new posts should syndicate, verify, and complete as they publish."
     },
     "curatedExpansion": {
       "supported": true,
