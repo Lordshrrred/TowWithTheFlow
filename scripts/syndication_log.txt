@@ -22230,3 +22230,33 @@
 [2026-10-04 09:31:58] === SYNDICATE DONE: blew-a-tire-on-highway-no-spare-what-to-do-now | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-10-04 09:31:58] SYNCED | blew-a-tire-on-highway-no-spare-what-to-do-now marked in synced-posts.txt
 [2026-10-04 09:31:58] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-10-04 10:55:54] === SYNDICATE START: towing-cost-detroit-michigan-per-mile ===
+[2026-10-04 10:55:54] PREFLIGHT | title: Towing Cost in Detroit Michigan Per Mile: What You'll Pay Right Now
+[2026-10-04 10:55:54] PREFLIGHT | date: 2026-10-04
+[2026-10-04 10:55:54] PREFLIGHT | timestamp: 2026-10-04 10:55:54
+[2026-10-04 10:55:54] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-10-04 10:55:54] PREFLIGHT | TUMBLR:  configured
+[2026-10-04 10:55:54] PREFLIGHT | BLOGGER: configured
+[2026-10-04 10:55:54] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-10-04 10:55:54] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-10-04 10:55:54] DEVTO | towing-cost-detroit-michigan-per-mile | START
+[2026-10-04 10:55:54] DEVTO | towing-cost-detroit-michigan-per-mile | account=TWTF2
+[2026-10-04 10:55:55] DEVTO | towing-cost-detroit-michigan-per-mile | SUCCESS | https://dev.to/denverroadsideelitetowing/towing-cost-in-detroit-michigan-per-mile-what-youll-pay-right-now-what-to-do-next-1i2o
+[2026-10-04 10:55:55] --- waiting 60s before next platform ---
+[2026-10-04 10:56:55] TUMBLR | towing-cost-detroit-michigan-per-mile | START
+[2026-10-04 10:56:55] TUMBLR | towing-cost-detroit-michigan-per-mile | SUCCESS | https://towwiththeflow.tumblr.com/post/829563092737343488
+[2026-10-04 10:56:55] --- waiting 60s before next platform ---
+[2026-10-04 10:57:55] BLOGGER | towing-cost-detroit-michigan-per-mile | START
+[2026-10-04 10:57:55] BLOGGER | towing-cost-detroit-michigan-per-mile | step 1/3: refreshing access token
+[2026-10-04 10:57:55] BLOGGER | towing-cost-detroit-michigan-per-mile | step 2/3: converting markdown to HTML
+[2026-10-04 10:57:55] BLOGGER | towing-cost-detroit-michigan-per-mile | step 3/3: posting to blog 1959471973457654666
+[2026-10-04 10:57:56] BLOGGER | towing-cost-detroit-michigan-per-mile | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-detroit-michigan-per.html
+[2026-10-04 10:57:56] --- waiting 60s before next platform ---
+[2026-10-04 10:58:56] WORDPRESS | towing-cost-detroit-michigan-per-mile | START
+[2026-10-04 10:59:04] WORDPRESS | towing-cost-detroit-michigan-per-mile | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/10/04/towing-cost-detroit-michigan-per-mile/
+[2026-10-04 10:59:04] --- waiting 60s before next platform ---
+[2026-10-04 11:00:04] FEEDER | towing-cost-detroit-michigan-per-mile | START
+[2026-10-04 11:00:06] FEEDER | towing-cost-detroit-michigan-per-mile | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-detroit-michigan-per-mile-guide/
+[2026-10-04 11:00:06] === SYNDICATE DONE: towing-cost-detroit-michigan-per-mile | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-10-04 11:00:06] SYNCED | towing-cost-detroit-michigan-per-mile marked in synced-posts.txt
+[2026-10-04 11:00:06] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
