@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-06T13:36:18.035576+00:00",
+  "generated_at": "2026-10-07T13:54:03.041639+00:00",
   "keywords": {
     "total": 970,
-    "live": 670,
-    "pending": 300,
+    "live": 674,
+    "pending": 296,
     "local": {
-      "live": 210,
-      "pending": 34
+      "live": 212,
+      "pending": 32
     },
     "pain_point": {
-      "live": 460,
-      "pending": 266
+      "live": 462,
+      "pending": 264
     }
   },
   "next_targets": [
-    {
-      "keyword": "locked keys in car with engine running who to call",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down no cell service on highway what to do",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "run flat tire warning light on can i keep driving or tow",
       "score": 9,
@@ -63,18 +53,28 @@
       "keyword": "tow truck taking too long what are my options roadside",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "alternator died while driving signs and what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car engine seized up can it be towed safely",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 249
+      "count": 251
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 105
+      "count": 106
     },
     {
       "slug": "insurance-coverage",
@@ -135,6 +135,11 @@
       "slug": "emergency-checklists",
       "label": "Emergency Checklists",
       "count": 2
+    },
+    {
+      "slug": "trailer-rv-towing",
+      "label": "Trailer & RV Towing",
+      "count": 1
     }
   ],
   "competitive_research": {
@@ -146,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-06T10:12:34.292612+00:00",
+    "generated_at": "2026-10-07T10:11:36.704093+00:00",
     "platforms": {
       "blog": {
-        "checked": 624,
-        "verified": 586
+        "checked": 628,
+        "verified": 617
       },
       "dev": {
-        "checked": 540,
-        "verified": 540
+        "checked": 544,
+        "verified": 544
       },
       "feeder": {
-        "checked": 642,
-        "verified": 642
+        "checked": 646,
+        "verified": 646
       },
       "tumblr": {
-        "checked": 622,
-        "verified": 622
+        "checked": 627,
+        "verified": 627
       },
       "wordpress": {
-        "checked": 647,
-        "verified": 647
+        "checked": 651,
+        "verified": 651
       }
     }
   },
@@ -174,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-06T13:36:17.925646+00:00",
+    "generated_at": "2026-10-07T13:54:02.957216+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -186,14 +191,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 17,
+        "rows": 18,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 480,
+        "rows": 488,
         "source": "ga4",
         "status": "ok"
       }
@@ -228,27 +233,27 @@
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 3,
-    "top_query_count": 3,
+    "top_landing_page_count": 4,
+    "top_query_count": 4,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-06T13:36:18.070468+00:00",
+    "generatedAt": "2026-10-07T13:54:03.073193+00:00",
     "keywordGeneration": {
-      "currentInventory": 300,
-      "liveKeywords": 670,
-      "estimatedDaysRemaining": 75.0,
+      "currentInventory": 296,
+      "liveKeywords": 674,
+      "estimatedDaysRemaining": 74.0,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "75.0 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "74.0 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
-      "backlogPosts": 38,
-      "backlogUnits": 38,
+      "backlogPosts": 11,
+      "backlogUnits": 11,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-06T10:12:34.292612+00:00",
+      "generatedAt": "2026-10-07T10:11:36.704093+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.4,
       "newPostsPerDay": 4.0,
