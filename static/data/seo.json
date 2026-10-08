@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-07T14:51:24.416876+00:00",
+  "generated_at": "2026-10-08T14:00:28.354014+00:00",
   "keywords": {
     "total": 1005,
-    "live": 674,
-    "pending": 331,
+    "live": 678,
+    "pending": 327,
     "local": {
-      "live": 212,
-      "pending": 50
+      "live": 214,
+      "pending": 48
     },
     "pain_point": {
-      "live": 462,
-      "pending": 281
+      "live": 464,
+      "pending": 279
     }
   },
   "next_targets": [
-    {
-      "keyword": "run flat tire warning light on can i keep driving or tow",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "smoking from hood stopped on side of road what to do",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "car broke down with kids in the car at night what to do",
       "score": 9,
@@ -45,11 +35,6 @@
       "type": "pain_point"
     },
     {
-      "keyword": "dead battery in parking garage denver who to call",
-      "score": 9,
-      "type": "local"
-    },
-    {
       "keyword": "car broke down on road trip no aaa what do i do",
       "score": 9,
       "type": "pain_point"
@@ -63,18 +48,33 @@
       "keyword": "how long does it take for a tow truck to arrive",
       "score": 9,
       "type": "pain_point"
+    },
+    {
+      "keyword": "blown head gasket symptoms should i tow or drive",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "catalytic converter stolen car wont start can it be towed",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "tow truck taking too long what are my options roadside",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 251
+      "count": 252
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 106
+      "count": 107
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 64
+      "count": 65
     },
     {
       "slug": "highway-safety",
@@ -99,7 +99,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 28
+      "count": 29
     },
     {
       "slug": "accident-liability",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-07T10:11:36.704093+00:00",
+    "generated_at": "2026-10-08T10:29:47.297999+00:00",
     "platforms": {
       "blog": {
-        "checked": 628,
-        "verified": 617
+        "checked": 632,
+        "verified": 590
       },
       "dev": {
-        "checked": 544,
-        "verified": 544
+        "checked": 548,
+        "verified": 548
       },
       "feeder": {
-        "checked": 646,
-        "verified": 646
+        "checked": 650,
+        "verified": 650
       },
       "tumblr": {
-        "checked": 627,
-        "verified": 627
+        "checked": 631,
+        "verified": 631
       },
       "wordpress": {
-        "checked": 651,
-        "verified": 651
+        "checked": 655,
+        "verified": 655
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-07T13:54:02.957216+00:00",
+    "generated_at": "2026-10-08T14:00:28.255583+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,30 +198,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 488,
+        "rows": 490,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 1,
+      "completes": 2,
       "completion_rate": 1.0,
-      "opens": 1,
+      "opens": 2,
       "top_events": [
         {
-          "count": 4,
+          "count": 8,
           "event": "estimate_generated"
         },
         {
-          "count": 4,
+          "count": 7,
           "event": "field_change"
         },
         {
-          "count": 1,
+          "count": 2,
           "event": "calculator_complete"
         },
         {
-          "count": 1,
+          "count": 2,
           "event": "calculator_open"
         }
       ]
@@ -238,29 +238,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-07T14:51:24.439364+00:00",
+    "generatedAt": "2026-10-08T14:00:28.383303+00:00",
     "keywordGeneration": {
-      "currentInventory": 331,
-      "liveKeywords": 674,
-      "estimatedDaysRemaining": 82.8,
+      "currentInventory": 327,
+      "liveKeywords": 678,
+      "estimatedDaysRemaining": 81.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "82.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "81.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
-      "backlogPosts": 11,
-      "backlogUnits": 11,
+      "backlogPosts": 42,
+      "backlogUnits": 42,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-07T10:11:36.704093+00:00",
+      "generatedAt": "2026-10-08T10:29:47.297999+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.4,
+      "completedPerDay": 19.8,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.6,
+      "netBacklinkUnitsPerDay": 0.2,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.6 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.2 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
