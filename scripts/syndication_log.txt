@@ -22972,3 +22972,33 @@
 [2026-10-09 12:31:16] === SYNDICATE DONE: how-much-does-a-tow-truck-cost-in-dallas-texas | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-10-09 12:31:16] SYNCED | how-much-does-a-tow-truck-cost-in-dallas-texas marked in synced-posts.txt
 [2026-10-09 12:31:16] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-10-09 13:36:29] === SYNDICATE START: car-wont-start-in-parking-lot-who-do-i-call ===
+[2026-10-09 13:36:29] PREFLIGHT | title: Car Won't Start in Parking Lot: Who Do I Call Right Now
+[2026-10-09 13:36:29] PREFLIGHT | date: 2026-10-09
+[2026-10-09 13:36:29] PREFLIGHT | timestamp: 2026-10-09 13:36:29
+[2026-10-09 13:36:29] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-10-09 13:36:29] PREFLIGHT | TUMBLR:  configured
+[2026-10-09 13:36:29] PREFLIGHT | BLOGGER: configured
+[2026-10-09 13:36:29] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-10-09 13:36:29] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-10-09 13:36:29] DEVTO | car-wont-start-in-parking-lot-who-do-i-call | START
+[2026-10-09 13:36:29] DEVTO | car-wont-start-in-parking-lot-who-do-i-call | account=TWTF1
+[2026-10-09 13:36:29] DEVTO | car-wont-start-in-parking-lot-who-do-i-call | SUCCESS | https://dev.to/roadsideamericatowing/car-wont-start-in-parking-lot-who-do-i-call-right-now-quick-guide-1ppf
+[2026-10-09 13:36:29] --- waiting 60s before next platform ---
+[2026-10-09 13:37:29] TUMBLR | car-wont-start-in-parking-lot-who-do-i-call | START
+[2026-10-09 13:37:30] TUMBLR | car-wont-start-in-parking-lot-who-do-i-call | SUCCESS | https://towwiththeflow.tumblr.com/post/830026179864133632
+[2026-10-09 13:37:30] --- waiting 60s before next platform ---
+[2026-10-09 13:38:30] BLOGGER | car-wont-start-in-parking-lot-who-do-i-call | START
+[2026-10-09 13:38:30] BLOGGER | car-wont-start-in-parking-lot-who-do-i-call | step 1/3: refreshing access token
+[2026-10-09 13:38:30] BLOGGER | car-wont-start-in-parking-lot-who-do-i-call | step 2/3: converting markdown to HTML
+[2026-10-09 13:38:30] BLOGGER | car-wont-start-in-parking-lot-who-do-i-call | step 3/3: posting to blog 1959471973457654666
+[2026-10-09 13:38:30] BLOGGER | car-wont-start-in-parking-lot-who-do-i-call | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-wont-start-in-parking-lot-who-do-i.html
+[2026-10-09 13:38:30] --- waiting 60s before next platform ---
+[2026-10-09 13:39:30] WORDPRESS | car-wont-start-in-parking-lot-who-do-i-call | START
+[2026-10-09 13:39:37] WORDPRESS | car-wont-start-in-parking-lot-who-do-i-call | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/10/09/car-wont-start-in-parking-lot-who-do-i-call/
+[2026-10-09 13:39:37] --- waiting 60s before next platform ---
+[2026-10-09 13:40:37] FEEDER | car-wont-start-in-parking-lot-who-do-i-call | START
+[2026-10-09 13:40:39] FEEDER | car-wont-start-in-parking-lot-who-do-i-call | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-wont-start-in-parking-lot-who-do-i-call-help/
+[2026-10-09 13:40:39] === SYNDICATE DONE: car-wont-start-in-parking-lot-who-do-i-call | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-10-09 13:40:39] SYNCED | car-wont-start-in-parking-lot-who-do-i-call marked in synced-posts.txt
+[2026-10-09 13:40:39] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
