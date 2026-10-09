@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-08T14:00:28.354014+00:00",
+  "generated_at": "2026-10-09T13:44:24.784406+00:00",
   "keywords": {
     "total": 1005,
-    "live": 678,
-    "pending": 327,
+    "live": 682,
+    "pending": 323,
     "local": {
-      "live": 214,
-      "pending": 48
+      "live": 216,
+      "pending": 46
     },
     "pain_point": {
-      "live": 464,
-      "pending": 279
+      "live": 466,
+      "pending": 277
     }
   },
   "next_targets": [
-    {
-      "keyword": "car broke down with kids in the car at night what to do",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how long can you wait on the side of the highway for a tow",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "tire blew out at highway speed car pulling hard what to do",
       "score": 9,
@@ -63,13 +53,23 @@
       "keyword": "tow truck taking too long what are my options roadside",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "alternator died while driving signs and what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car engine seized up can it be towed safely",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 252
+      "count": 253
     },
     {
       "slug": "engine-mechanical",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 37
+      "count": 39
     },
     {
       "slug": "roadside-help",
@@ -102,14 +102,14 @@
       "count": 29
     },
     {
-      "slug": "accident-liability",
-      "label": "Accidents & Towing Liability",
+      "slug": "towing-logistics",
+      "label": "Towing Logistics & Process",
       "count": 10
     },
     {
-      "slug": "towing-logistics",
-      "label": "Towing Logistics & Process",
-      "count": 9
+      "slug": "accident-liability",
+      "label": "Accidents & Towing Liability",
+      "count": 10
     },
     {
       "slug": "vehicle-safety",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-08T10:29:47.297999+00:00",
+    "generated_at": "2026-10-09T10:29:02.276158+00:00",
     "platforms": {
       "blog": {
-        "checked": 632,
-        "verified": 590
+        "checked": 631,
+        "verified": 624
       },
       "dev": {
-        "checked": 548,
-        "verified": 548
+        "checked": 552,
+        "verified": 552
       },
       "feeder": {
-        "checked": 650,
-        "verified": 650
+        "checked": 654,
+        "verified": 654
       },
       "tumblr": {
-        "checked": 631,
-        "verified": 631
+        "checked": 635,
+        "verified": 635
       },
       "wordpress": {
-        "checked": 655,
-        "verified": 655
+        "checked": 659,
+        "verified": 659
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-08T14:00:28.255583+00:00",
+    "generated_at": "2026-10-09T13:44:24.696743+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,7 +198,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 490,
+        "rows": 502,
         "source": "ga4",
         "status": "ok"
       }
@@ -209,11 +209,11 @@
       "opens": 2,
       "top_events": [
         {
-          "count": 8,
+          "count": 9,
           "event": "estimate_generated"
         },
         {
-          "count": 7,
+          "count": 8,
           "event": "field_change"
         },
         {
@@ -238,29 +238,29 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-08T14:00:28.383303+00:00",
+    "generatedAt": "2026-10-09T13:44:24.815906+00:00",
     "keywordGeneration": {
-      "currentInventory": 327,
-      "liveKeywords": 678,
-      "estimatedDaysRemaining": 81.8,
+      "currentInventory": 323,
+      "liveKeywords": 682,
+      "estimatedDaysRemaining": 80.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "81.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "80.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
-      "backlogPosts": 42,
-      "backlogUnits": 42,
+      "backlogPosts": 7,
+      "backlogUnits": 7,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-08T10:29:47.297999+00:00",
+      "generatedAt": "2026-10-09T10:29:02.276158+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.8,
+      "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.2,
+      "netBacklinkUnitsPerDay": 0.4,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.2 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.4 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
