@@ -13,14 +13,14 @@
           ],
           "clicks": 0,
           "ctr": 0.0,
-          "impressions": 1,
+          "impressions": 2,
           "page": "https://towwiththeflow.com/how-much-does-a-tow-cost-in-colorado/",
           "path": "/how-much-does-a-tow-cost-in-colorado/",
-          "position": 46.0,
+          "position": 47.0,
           "query": "tow truck insurance colorado"
         }
       ],
-      "impressions": 1
+      "impressions": 2
     },
     {
       "asset": "Tow Cost Estimator",
@@ -52,19 +52,11 @@
   ],
   "backlink_supported": [
     {
-      "backlinks": 6,
-      "clicks": 0,
-      "impressions": 1,
-      "path": "/how-much-does-a-tow-cost-in-colorado/",
-      "position": 46.0,
-      "syndications": 5
-    },
-    {
       "backlinks": 5,
       "clicks": 0,
       "impressions": 2,
-      "path": "/what-to-do-if-your-car-breaks-down-at-night/",
-      "position": 89.0,
+      "path": "/how-much-does-a-tow-cost-in-colorado/",
+      "position": 47.0,
       "syndications": 5
     },
     {
@@ -82,6 +74,14 @@
       "path": "/car-wont-start-clicking-noise-what-to-do/",
       "position": 66.0,
       "syndications": 4
+    },
+    {
+      "backlinks": 4,
+      "clicks": 0,
+      "impressions": 2,
+      "path": "/what-to-do-if-your-car-breaks-down-at-night/",
+      "position": 89.0,
+      "syndications": 5
     }
   ],
   "cannibalization": [],
@@ -96,7 +96,7 @@
     "current_gsc_rows": 4,
     "previous_gsc_rows": 14
   },
-  "generated_at": "2026-10-10T13:01:52.213508+00:00",
+  "generated_at": "2026-10-11T13:30:19.646611+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -104,12 +104,12 @@
   },
   "periods": {
     "current": [
-      "2026-09-12",
-      "2026-10-09"
+      "2026-09-13",
+      "2026-10-10"
     ],
     "previous": [
-      "2026-08-15",
-      "2026-09-11"
+      "2026-08-16",
+      "2026-09-12"
     ]
   },
   "request_counts": {
@@ -127,7 +127,7 @@
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 506,
+      "rows": 520,
       "source": "ga4",
       "status": "ok"
     }
@@ -136,7 +136,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-10T13:01:52.213508+00:00",
+    "generated_at": "2026-10-11T13:30:19.646611+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -155,7 +155,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 506,
+        "rows": 520,
         "source": "ga4",
         "status": "ok"
       }
@@ -186,7 +186,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "1 Search Console impressions match this asset pattern.",
+        "reason": "2 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -220,7 +220,7 @@
   "top_actions": [
     {
       "next_action": "Use the authority backlog and build as a separate scoped asset.",
-      "reason": "1 Search Console impressions match this asset pattern.",
+      "reason": "2 Search Console impressions match this asset pattern.",
       "title": "Build or refine authority asset: Insurance Comparison"
     }
   ],
@@ -247,6 +247,29 @@
     },
     {
       "categories": [
+        "city/location",
+        "insurance",
+        "towing cost",
+        "vehicle type"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/how-much-does-a-tow-cost-in-colorado/",
+      "impressions": 2,
+      "position": 47.0,
+      "queries": {
+        "tow truck insurance colorado": 2
+      },
+      "top_queries": [
+        [
+          "tow truck insurance colorado",
+          2
+        ]
+      ],
+      "weighted_position": 94.0
+    },
+    {
+      "categories": [
         "general roadside"
       ],
       "clicks": 0,
@@ -264,29 +287,6 @@
         ]
       ],
       "weighted_position": 54.0
-    },
-    {
-      "categories": [
-        "city/location",
-        "insurance",
-        "towing cost",
-        "vehicle type"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "/how-much-does-a-tow-cost-in-colorado/",
-      "impressions": 1,
-      "position": 46.0,
-      "queries": {
-        "tow truck insurance colorado": 1
-      },
-      "top_queries": [
-        [
-          "tow truck insurance colorado",
-          1
-        ]
-      ],
-      "weighted_position": 46.0
     },
     {
       "categories": [
@@ -333,6 +333,29 @@
     },
     {
       "categories": [
+        "city/location",
+        "insurance",
+        "towing cost",
+        "vehicle type"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "tow truck insurance colorado",
+      "impressions": 2,
+      "position": 47.0,
+      "queries": {
+        "tow truck insurance colorado": 2
+      },
+      "top_queries": [
+        [
+          "tow truck insurance colorado",
+          2
+        ]
+      ],
+      "weighted_position": 94.0
+    },
+    {
+      "categories": [
         "general roadside"
       ],
       "clicks": 0,
@@ -350,29 +373,6 @@
         ]
       ],
       "weighted_position": 54.0
-    },
-    {
-      "categories": [
-        "city/location",
-        "insurance",
-        "towing cost",
-        "vehicle type"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "tow truck insurance colorado",
-      "impressions": 1,
-      "position": 46.0,
-      "queries": {
-        "tow truck insurance colorado": 1
-      },
-      "top_queries": [
-        [
-          "tow truck insurance colorado",
-          1
-        ]
-      ],
-      "weighted_position": 46.0
     },
     {
       "categories": [
