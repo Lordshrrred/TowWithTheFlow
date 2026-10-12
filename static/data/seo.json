@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-11T13:30:19.723658+00:00",
+  "generated_at": "2026-10-12T16:04:57.494439+00:00",
   "keywords": {
     "total": 1037,
-    "live": 690,
-    "pending": 347,
+    "live": 694,
+    "pending": 343,
     "local": {
-      "live": 220,
-      "pending": 57
+      "live": 222,
+      "pending": 55
     },
     "pain_point": {
-      "live": 470,
-      "pending": 290
+      "live": 472,
+      "pending": 288
     }
   },
   "next_targets": [
-    {
-      "keyword": "how long does it take for a tow truck to arrive",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car wont start in parking garage what to do",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "ran out of gas on the freeway what should i do",
       "score": 9,
@@ -63,13 +53,23 @@
       "keyword": "blown head gasket symptoms should i tow or drive",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "catalytic converter stolen car wont start can it be towed",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "tow truck taking too long what are my options roadside",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 256
+      "count": 258
     },
     {
       "slug": "engine-mechanical",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 66
+      "count": 67
     },
     {
       "slug": "highway-safety",
@@ -92,14 +92,14 @@
       "count": 41
     },
     {
-      "slug": "tire-wheel",
-      "label": "Tire & Wheel Issues",
+      "slug": "roadside-help",
+      "label": "General Roadside Help",
       "count": 30
     },
     {
-      "slug": "roadside-help",
-      "label": "General Roadside Help",
-      "count": 29
+      "slug": "tire-wheel",
+      "label": "Tire & Wheel Issues",
+      "count": 30
     },
     {
       "slug": "towing-logistics",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-11T10:14:02.397367+00:00",
+    "generated_at": "2026-10-12T10:41:23.709229+00:00",
     "platforms": {
       "blog": {
-        "checked": 664,
-        "verified": 121
+        "checked": 668,
+        "verified": 128
       },
       "dev": {
-        "checked": 498,
-        "verified": 498
+        "checked": 502,
+        "verified": 502
       },
       "feeder": {
-        "checked": 662,
-        "verified": 662
+        "checked": 666,
+        "verified": 666
       },
       "tumblr": {
-        "checked": 659,
-        "verified": 659
+        "checked": 663,
+        "verified": 663
       },
       "wordpress": {
-        "checked": 667,
-        "verified": 667
+        "checked": 671,
+        "verified": 671
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-11T13:30:19.646611+00:00",
+    "generated_at": "2026-10-12T16:04:57.433648+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,14 +191,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 18,
+        "rows": 12,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 520,
+        "rows": 524,
         "source": "ga4",
         "status": "ok"
       }
@@ -238,22 +238,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-11T13:30:19.746472+00:00",
+    "generatedAt": "2026-10-12T16:04:57.511317+00:00",
     "keywordGeneration": {
-      "currentInventory": 347,
-      "liveKeywords": 690,
-      "estimatedDaysRemaining": 86.8,
+      "currentInventory": 343,
+      "liveKeywords": 694,
+      "estimatedDaysRemaining": 85.8,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "running",
-      "reason": "86.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "reason": "85.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
     },
     "backlinks": {
-      "backlogPosts": 543,
-      "backlogUnits": 543,
+      "backlogPosts": 540,
+      "backlogUnits": 540,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-11T10:14:02.397367+00:00",
+      "generatedAt": "2026-10-12T10:41:23.709229+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
