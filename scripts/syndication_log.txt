@@ -23332,3 +23332,33 @@
 [2026-10-12 14:01:07] === SYNDICATE DONE: ran-out-of-gas-on-freeway-what-to-do | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-10-12 14:01:07] SYNCED | ran-out-of-gas-on-freeway-what-to-do marked in synced-posts.txt
 [2026-10-12 14:01:07] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-10-12 15:20:53] === SYNDICATE START: car-broke-down-in-denver-at-night-who-to-call ===
+[2026-10-12 15:20:53] PREFLIGHT | title: Car Broke Down in Denver at Night: Who to Call Right Now
+[2026-10-12 15:20:53] PREFLIGHT | date: 2026-10-12
+[2026-10-12 15:20:53] PREFLIGHT | timestamp: 2026-10-12 15:20:53
+[2026-10-12 15:20:53] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-10-12 15:20:53] PREFLIGHT | TUMBLR:  configured
+[2026-10-12 15:20:53] PREFLIGHT | BLOGGER: configured
+[2026-10-12 15:20:53] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-10-12 15:20:53] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-10-12 15:20:53] DEVTO | car-broke-down-in-denver-at-night-who-to-call | START
+[2026-10-12 15:20:53] DEVTO | car-broke-down-in-denver-at-night-who-to-call | account=TWTF2
+[2026-10-12 15:20:53] DEVTO | car-broke-down-in-denver-at-night-who-to-call | SUCCESS | https://dev.to/denverroadsideelitetowing/car-broke-down-in-denver-at-night-who-to-call-right-now-what-to-do-next-38kj
+[2026-10-12 15:20:53] --- waiting 60s before next platform ---
+[2026-10-12 15:21:53] TUMBLR | car-broke-down-in-denver-at-night-who-to-call | START
+[2026-10-12 15:21:54] TUMBLR | car-broke-down-in-denver-at-night-who-to-call | SUCCESS | https://towwiththeflow.tumblr.com/post/830304539290877952
+[2026-10-12 15:21:54] --- waiting 60s before next platform ---
+[2026-10-12 15:22:54] BLOGGER | car-broke-down-in-denver-at-night-who-to-call | START
+[2026-10-12 15:22:54] BLOGGER | car-broke-down-in-denver-at-night-who-to-call | step 1/3: refreshing access token
+[2026-10-12 15:22:54] BLOGGER | car-broke-down-in-denver-at-night-who-to-call | step 2/3: converting markdown to HTML
+[2026-10-12 15:22:54] BLOGGER | car-broke-down-in-denver-at-night-who-to-call | step 3/3: posting to blog 1959471973457654666
+[2026-10-12 15:22:55] BLOGGER | car-broke-down-in-denver-at-night-who-to-call | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-broke-down-in-denver-at-night-who.html
+[2026-10-12 15:22:55] --- waiting 60s before next platform ---
+[2026-10-12 15:23:55] WORDPRESS | car-broke-down-in-denver-at-night-who-to-call | START
+[2026-10-12 15:24:03] WORDPRESS | car-broke-down-in-denver-at-night-who-to-call | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/10/12/car-broke-down-in-denver-at-night-who-to-call/
+[2026-10-12 15:24:03] --- waiting 60s before next platform ---
+[2026-10-12 15:25:03] FEEDER | car-broke-down-in-denver-at-night-who-to-call | START
+[2026-10-12 15:25:04] FEEDER | car-broke-down-in-denver-at-night-who-to-call | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-in-denver-at-night-who-to-call-guide/
+[2026-10-12 15:25:04] === SYNDICATE DONE: car-broke-down-in-denver-at-night-who-to-call | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-10-12 15:25:04] SYNCED | car-broke-down-in-denver-at-night-who-to-call marked in synced-posts.txt
+[2026-10-12 15:25:04] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
