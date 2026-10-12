@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-12T16:04:57.494439+00:00",
+  "generated_at": "2026-10-12T17:06:19.036352+00:00",
   "keywords": {
-    "total": 1037,
+    "total": 1064,
     "live": 694,
-    "pending": 343,
+    "pending": 370,
     "local": {
       "live": 222,
-      "pending": 55
+      "pending": 67
     },
     "pain_point": {
       "live": 472,
-      "pending": 288
+      "pending": 303
     }
   },
   "next_targets": [
@@ -50,18 +50,18 @@
       "type": "pain_point"
     },
     {
-      "keyword": "blown head gasket symptoms should i tow or drive",
-      "score": 8,
+      "keyword": "car broke down on interstate at night what to do",
+      "score": 9,
       "type": "pain_point"
     },
     {
-      "keyword": "catalytic converter stolen car wont start can it be towed",
-      "score": 8,
+      "keyword": "car wont start after sitting in cold what to do",
+      "score": 9,
       "type": "pain_point"
     },
     {
-      "keyword": "tow truck taking too long what are my options roadside",
-      "score": 8,
+      "keyword": "battery light came on while driving should i pull over",
+      "score": 9,
       "type": "pain_point"
     }
   ],
@@ -238,16 +238,16 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-12T16:04:57.511317+00:00",
+    "generatedAt": "2026-10-12T17:06:19.053433+00:00",
     "keywordGeneration": {
-      "currentInventory": 343,
+      "currentInventory": 370,
       "liveKeywords": 694,
-      "estimatedDaysRemaining": 85.8,
+      "estimatedDaysRemaining": 92.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
-      "status": "running",
-      "reason": "85.8 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: running."
+      "status": "paused",
+      "reason": "92.5 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
       "backlogPosts": 540,
