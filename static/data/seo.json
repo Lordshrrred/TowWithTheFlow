@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-12T17:06:19.036352+00:00",
+  "generated_at": "2026-10-13T14:33:41.293028+00:00",
   "keywords": {
     "total": 1064,
-    "live": 694,
-    "pending": 370,
+    "live": 698,
+    "pending": 366,
     "local": {
-      "live": 222,
-      "pending": 67
+      "live": 224,
+      "pending": 65
     },
     "pain_point": {
-      "live": 472,
-      "pending": 303
+      "live": 474,
+      "pending": 301
     }
   },
   "next_targets": [
-    {
-      "keyword": "ran out of gas on the freeway what should i do",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "engine light came on highway is it safe to keep driving",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "car died on highway shoulder safe to wait for tow truck",
       "score": 9,
@@ -63,6 +53,16 @@
       "keyword": "battery light came on while driving should i pull over",
       "score": 9,
       "type": "pain_point"
+    },
+    {
+      "keyword": "what to do if car breaks down with no phone",
+      "score": 9,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "smoke coming from under hood while driving what to do",
+      "score": 9,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 107
+      "count": 109
     },
     {
       "slug": "insurance-coverage",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 41
+      "count": 43
     },
     {
       "slug": "roadside-help",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-12T10:41:23.709229+00:00",
+    "generated_at": "2026-10-13T10:29:40.640539+00:00",
     "platforms": {
       "blog": {
-        "checked": 668,
-        "verified": 128
+        "checked": 672,
+        "verified": 136
       },
       "dev": {
-        "checked": 502,
-        "verified": 502
+        "checked": 505,
+        "verified": 505
       },
       "feeder": {
-        "checked": 666,
-        "verified": 666
+        "checked": 670,
+        "verified": 670
       },
       "tumblr": {
-        "checked": 663,
-        "verified": 663
+        "checked": 667,
+        "verified": 667
       },
       "wordpress": {
-        "checked": 671,
-        "verified": 671
+        "checked": 675,
+        "verified": 675
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-12T16:04:57.433648+00:00",
+    "generated_at": "2026-10-13T14:33:41.209085+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,37 +191,37 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 12,
+        "rows": 9,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 524,
+        "rows": 532,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 2,
+      "completes": 3,
       "completion_rate": 1.0,
-      "opens": 2,
+      "opens": 3,
       "top_events": [
         {
-          "count": 9,
+          "count": 19,
           "event": "estimate_generated"
         },
         {
-          "count": 8,
+          "count": 13,
           "event": "field_change"
         },
         {
-          "count": 2,
+          "count": 3,
           "event": "calculator_complete"
         },
         {
-          "count": 2,
+          "count": 3,
           "event": "calculator_open"
         }
       ]
@@ -238,22 +238,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-12T17:06:19.053433+00:00",
+    "generatedAt": "2026-10-13T14:33:41.325946+00:00",
     "keywordGeneration": {
-      "currentInventory": 370,
-      "liveKeywords": 694,
-      "estimatedDaysRemaining": 92.5,
+      "currentInventory": 366,
+      "liveKeywords": 698,
+      "estimatedDaysRemaining": 91.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "92.5 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "91.5 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 540,
-      "backlogUnits": 540,
+      "backlogPosts": 536,
+      "backlogUnits": 536,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-12T10:41:23.709229+00:00",
+      "generatedAt": "2026-10-13T10:29:40.640539+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
