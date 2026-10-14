@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-13T14:33:41.293028+00:00",
+  "generated_at": "2026-10-14T12:21:06.876775+00:00",
   "keywords": {
     "total": 1064,
-    "live": 698,
-    "pending": 366,
+    "live": 702,
+    "pending": 362,
     "local": {
-      "live": 224,
-      "pending": 65
+      "live": 226,
+      "pending": 63
     },
     "pain_point": {
-      "live": 474,
-      "pending": 301
+      "live": 476,
+      "pending": 299
     }
   },
   "next_targets": [
-    {
-      "keyword": "car died on highway shoulder safe to wait for tow truck",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "transmission slipping while driving should i pull over now",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "car wont start clicking sound need tow or jump start",
       "score": 9,
@@ -63,18 +53,28 @@
       "keyword": "smoke coming from under hood while driving what to do",
       "score": 9,
       "type": "pain_point"
+    },
+    {
+      "keyword": "blown head gasket symptoms should i tow or drive",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "catalytic converter stolen car wont start can it be towed",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 258
+      "count": 260
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 109
+      "count": 110
     },
     {
       "slug": "insurance-coverage",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 43
+      "count": 44
     },
     {
       "slug": "roadside-help",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-13T10:29:40.640539+00:00",
+    "generated_at": "2026-10-14T08:38:46.299875+00:00",
     "platforms": {
       "blog": {
-        "checked": 672,
-        "verified": 136
+        "checked": 676,
+        "verified": 127
       },
       "dev": {
-        "checked": 505,
-        "verified": 505
+        "checked": 510,
+        "verified": 510
       },
       "feeder": {
-        "checked": 670,
-        "verified": 670
+        "checked": 674,
+        "verified": 674
       },
       "tumblr": {
-        "checked": 667,
-        "verified": 667
+        "checked": 671,
+        "verified": 671
       },
       "wordpress": {
-        "checked": 675,
-        "verified": 675
+        "checked": 679,
+        "verified": 679
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-13T14:33:41.209085+00:00",
+    "generated_at": "2026-10-14T12:21:06.787605+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,7 +198,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 532,
+        "rows": 534,
         "source": "ga4",
         "status": "ok"
       }
@@ -238,22 +238,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-13T14:33:41.325946+00:00",
+    "generatedAt": "2026-10-14T12:21:06.909744+00:00",
     "keywordGeneration": {
-      "currentInventory": 366,
-      "liveKeywords": 698,
-      "estimatedDaysRemaining": 91.5,
+      "currentInventory": 362,
+      "liveKeywords": 702,
+      "estimatedDaysRemaining": 90.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "91.5 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "90.5 publishing days of inventory remain, above the 90 day pause threshold."
     },
     "backlinks": {
-      "backlogPosts": 536,
-      "backlogUnits": 536,
+      "backlogPosts": 549,
+      "backlogUnits": 549,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-13T10:29:40.640539+00:00",
+      "generatedAt": "2026-10-14T08:38:46.299875+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
