@@ -1,6 +1,6 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-10-14T12:21:06.787605+00:00
+Generated: 2026-10-15T12:06:06.940759+00:00
 
 ## 1. Data Connection/Freshness
 

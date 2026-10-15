@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-14T13:09:32.547637+00:00",
+  "generated_at": "2026-10-15T12:06:07.026995+00:00",
   "keywords": {
     "total": 1064,
-    "live": 702,
-    "pending": 362,
+    "live": 706,
+    "pending": 358,
     "local": {
-      "live": 226,
-      "pending": 63
+      "live": 228,
+      "pending": 61
     },
     "pain_point": {
-      "live": 476,
-      "pending": 299
+      "live": 478,
+      "pending": 297
     }
   },
   "next_targets": [
-    {
-      "keyword": "car wont start clicking sound need tow or jump start",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "tire blew out on highway what to do next",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "locked out of car in unsafe area what to do",
       "score": 9,
@@ -63,13 +53,23 @@
       "keyword": "catalytic converter stolen car wont start can it be towed",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "tow truck taking too long what are my options roadside",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "alternator died while driving signs and what to do",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 260
+      "count": 261
     },
     {
       "slug": "engine-mechanical",
@@ -84,21 +84,21 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 67
+      "count": 68
     },
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 44
-    },
-    {
-      "slug": "roadside-help",
-      "label": "General Roadside Help",
-      "count": 30
+      "count": 45
     },
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
+      "count": 31
+    },
+    {
+      "slug": "roadside-help",
+      "label": "General Roadside Help",
       "count": 30
     },
     {
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-14T08:38:46.299875+00:00",
+    "generated_at": "2026-10-15T08:15:22.153516+00:00",
     "platforms": {
       "blog": {
-        "checked": 676,
-        "verified": 127
+        "checked": 680,
+        "verified": 137
       },
       "dev": {
-        "checked": 510,
-        "verified": 510
+        "checked": 514,
+        "verified": 514
       },
       "feeder": {
-        "checked": 674,
-        "verified": 674
+        "checked": 678,
+        "verified": 678
       },
       "tumblr": {
-        "checked": 671,
-        "verified": 671
+        "checked": 675,
+        "verified": 675
       },
       "wordpress": {
-        "checked": 679,
-        "verified": 679
+        "checked": 683,
+        "verified": 683
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-14T12:21:06.787605+00:00",
+    "generated_at": "2026-10-15T12:06:06.940759+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -238,22 +238,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-14T13:09:32.578206+00:00",
+    "generatedAt": "2026-10-15T12:06:07.059042+00:00",
     "keywordGeneration": {
-      "currentInventory": 362,
-      "liveKeywords": 702,
-      "estimatedDaysRemaining": 90.5,
+      "currentInventory": 358,
+      "liveKeywords": 706,
+      "estimatedDaysRemaining": 89.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "90.5 publishing days of inventory remain, above the 90 day pause threshold."
+      "reason": "89.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 549,
-      "backlogUnits": 549,
+      "backlogPosts": 543,
+      "backlogUnits": 543,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-14T08:38:46.299875+00:00",
+      "generatedAt": "2026-10-15T08:15:22.153516+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,
