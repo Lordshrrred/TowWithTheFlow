@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-15T12:06:07.026995+00:00",
+  "generated_at": "2026-10-16T11:53:28.874987+00:00",
   "keywords": {
     "total": 1064,
-    "live": 706,
-    "pending": 358,
+    "live": 710,
+    "pending": 354,
     "local": {
-      "live": 228,
-      "pending": 61
+      "live": 230,
+      "pending": 59
     },
     "pain_point": {
-      "live": 478,
-      "pending": 297
+      "live": 480,
+      "pending": 295
     }
   },
   "next_targets": [
-    {
-      "keyword": "locked out of car in unsafe area what to do",
-      "score": 9,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down on interstate at night what to do",
-      "score": 9,
-      "type": "pain_point"
-    },
     {
       "keyword": "car wont start after sitting in cold what to do",
       "score": 9,
@@ -63,13 +53,23 @@
       "keyword": "alternator died while driving signs and what to do",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car engine seized up can it be towed safely",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "stranded on highway with baby what to do roadside emergency",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 261
+      "count": 262
     },
     {
       "slug": "engine-mechanical",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 45
+      "count": 47
     },
     {
       "slug": "tire-wheel",
@@ -104,7 +104,7 @@
     {
       "slug": "towing-logistics",
       "label": "Towing Logistics & Process",
-      "count": 10
+      "count": 11
     },
     {
       "slug": "accident-liability",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-15T08:15:22.153516+00:00",
+    "generated_at": "2026-10-16T08:06:58.713550+00:00",
     "platforms": {
       "blog": {
-        "checked": 680,
-        "verified": 137
+        "checked": 684,
+        "verified": 139
       },
       "dev": {
-        "checked": 514,
-        "verified": 514
+        "checked": 518,
+        "verified": 518
       },
       "feeder": {
-        "checked": 678,
-        "verified": 678
+        "checked": 682,
+        "verified": 682
       },
       "tumblr": {
-        "checked": 675,
-        "verified": 675
+        "checked": 679,
+        "verified": 679
       },
       "wordpress": {
-        "checked": 683,
-        "verified": 683
+        "checked": 687,
+        "verified": 687
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-15T12:06:06.940759+00:00",
+    "generated_at": "2026-10-16T11:53:28.785637+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -238,22 +238,22 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-15T12:06:07.059042+00:00",
+    "generatedAt": "2026-10-16T11:53:28.908775+00:00",
     "keywordGeneration": {
-      "currentInventory": 358,
-      "liveKeywords": 706,
-      "estimatedDaysRemaining": 89.5,
+      "currentInventory": 354,
+      "liveKeywords": 710,
+      "estimatedDaysRemaining": 88.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "89.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "88.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 543,
-      "backlogUnits": 543,
+      "backlogPosts": 545,
+      "backlogUnits": 545,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-15T08:15:22.153516+00:00",
+      "generatedAt": "2026-10-16T08:06:58.713550+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 19.6,
       "newPostsPerDay": 4.0,

@@ -1,6 +1,6 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-10-15T12:06:06.940759+00:00
+Generated: 2026-10-16T11:53:28.785637+00:00
 
 ## 1. Data Connection/Freshness
 
@@ -12,16 +12,16 @@ Generated: 2026-10-15T12:06:06.940759+00:00
 | Page | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
 |  | 0 | 2 | 0.0% | 89.0 |
+|  | 0 | 2 | 0.0% | 41.5 |
 |  | 0 | 2 | 0.0% | 47.0 |
-|  | 0 | 1 | 0.0% | 54.0 |
 |  | 0 | 1 | 0.0% | 66.0 |
 
 ## 3. Top Real Queries
 | Query | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
 | car broke down on the road at night | 0 | 2 | 0.0% | 89.0 |
+| car died | 0 | 2 | 0.0% | 41.5 |
 | tow truck insurance colorado | 0 | 2 | 0.0% | 47.0 |
-| car died | 0 | 1 | 0.0% | 54.0 |
 | truck won't start just clicks | 0 | 1 | 0.0% | 66.0 |
 
 ## 4. Near-Page-One Opportunities
@@ -45,8 +45,8 @@ No city/local opportunities found with current thresholds.
 ## 10. Backlink-Supported Pages
 | Page | Backlinks | Syndications | Impressions | Clicks |
 | --- | --- | --- | --- | --- |
+| /car-died-while-driving-what-now/ | 5 | 5 | 2 | 0 |
 | /how-much-does-a-tow-cost-in-colorado/ | 5 | 5 | 2 | 0 |
-| /car-died-while-driving-what-now/ | 5 | 5 | 1 | 0 |
 | /car-wont-start-clicking-noise-what-to-do/ | 5 | 4 | 1 | 0 |
 | /what-to-do-if-your-car-breaks-down-at-night/ | 4 | 5 | 2 | 0 |
 

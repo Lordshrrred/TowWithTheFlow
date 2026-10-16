@@ -55,16 +55,16 @@
       "backlinks": 5,
       "clicks": 0,
       "impressions": 2,
-      "path": "/how-much-does-a-tow-cost-in-colorado/",
-      "position": 47.0,
+      "path": "/car-died-while-driving-what-now/",
+      "position": 41.5,
       "syndications": 5
     },
     {
       "backlinks": 5,
       "clicks": 0,
-      "impressions": 1,
-      "path": "/car-died-while-driving-what-now/",
-      "position": 54.0,
+      "impressions": 2,
+      "path": "/how-much-does-a-tow-cost-in-colorado/",
+      "position": 47.0,
       "syndications": 5
     },
     {
@@ -96,7 +96,7 @@
     "current_gsc_rows": 4,
     "previous_gsc_rows": 5
   },
-  "generated_at": "2026-10-15T12:06:06.940759+00:00",
+  "generated_at": "2026-10-16T11:53:28.785637+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -104,12 +104,12 @@
   },
   "periods": {
     "current": [
-      "2026-09-17",
-      "2026-10-14"
+      "2026-09-18",
+      "2026-10-15"
     ],
     "previous": [
-      "2026-08-20",
-      "2026-09-16"
+      "2026-08-21",
+      "2026-09-17"
     ]
   },
   "request_counts": {
@@ -136,7 +136,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-15T12:06:06.940759+00:00",
+    "generated_at": "2026-10-16T11:53:28.785637+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -247,6 +247,26 @@
     },
     {
       "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/car-died-while-driving-what-now/",
+      "impressions": 2,
+      "position": 41.5,
+      "queries": {
+        "car died": 2
+      },
+      "top_queries": [
+        [
+          "car died",
+          2
+        ]
+      ],
+      "weighted_position": 83.0
+    },
+    {
+      "categories": [
         "city/location",
         "insurance",
         "towing cost",
@@ -267,26 +287,6 @@
         ]
       ],
       "weighted_position": 94.0
-    },
-    {
-      "categories": [
-        "general roadside"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "/car-died-while-driving-what-now/",
-      "impressions": 1,
-      "position": 54.0,
-      "queries": {
-        "car died": 1
-      },
-      "top_queries": [
-        [
-          "car died",
-          1
-        ]
-      ],
-      "weighted_position": 54.0
     },
     {
       "categories": [
@@ -333,6 +333,26 @@
     },
     {
       "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "car died",
+      "impressions": 2,
+      "position": 41.5,
+      "queries": {
+        "car died": 2
+      },
+      "top_queries": [
+        [
+          "car died",
+          2
+        ]
+      ],
+      "weighted_position": 83.0
+    },
+    {
+      "categories": [
         "city/location",
         "insurance",
         "towing cost",
@@ -353,26 +373,6 @@
         ]
       ],
       "weighted_position": 94.0
-    },
-    {
-      "categories": [
-        "general roadside"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "car died",
-      "impressions": 1,
-      "position": 54.0,
-      "queries": {
-        "car died": 1
-      },
-      "top_queries": [
-        [
-          "car died",
-          1
-        ]
-      ],
-      "weighted_position": 54.0
     },
     {
       "categories": [
