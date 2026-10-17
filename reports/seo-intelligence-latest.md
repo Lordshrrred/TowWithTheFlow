@@ -1,11 +1,11 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-10-16T11:53:28.785637+00:00
+Generated: 2026-10-17T11:09:46.191155+00:00
 
 ## 1. Data Connection/Freshness
 
 - **search_console**: ok. Fetched Search Console query/page data. Rows: 9.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 534.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 544.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
