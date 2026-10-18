@@ -55,14 +55,6 @@
       "backlinks": 5,
       "clicks": 0,
       "impressions": 2,
-      "path": "/car-died-while-driving-what-now/",
-      "position": 41.5,
-      "syndications": 5
-    },
-    {
-      "backlinks": 5,
-      "clicks": 0,
-      "impressions": 2,
       "path": "/how-much-does-a-tow-cost-in-colorado/",
       "position": 47.0,
       "syndications": 5
@@ -82,6 +74,14 @@
       "path": "/what-to-do-if-your-car-breaks-down-at-night/",
       "position": 89.0,
       "syndications": 5
+    },
+    {
+      "backlinks": 4,
+      "clicks": 0,
+      "impressions": 2,
+      "path": "/car-died-while-driving-what-now/",
+      "position": 41.5,
+      "syndications": 5
     }
   ],
   "cannibalization": [],
@@ -96,7 +96,7 @@
     "current_gsc_rows": 4,
     "previous_gsc_rows": 5
   },
-  "generated_at": "2026-10-17T11:09:46.191155+00:00",
+  "generated_at": "2026-10-18T11:41:07.152538+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -104,12 +104,12 @@
   },
   "periods": {
     "current": [
-      "2026-09-19",
-      "2026-10-16"
+      "2026-09-20",
+      "2026-10-17"
     ],
     "previous": [
-      "2026-08-22",
-      "2026-09-18"
+      "2026-08-23",
+      "2026-09-19"
     ]
   },
   "request_counts": {
@@ -127,7 +127,7 @@
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 544,
+      "rows": 542,
       "source": "ga4",
       "status": "ok"
     }
@@ -136,7 +136,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-17T11:09:46.191155+00:00",
+    "generated_at": "2026-10-18T11:41:07.152538+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -155,7 +155,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 544,
+        "rows": 542,
         "source": "ga4",
         "status": "ok"
       }

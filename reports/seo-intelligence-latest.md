@@ -1,11 +1,11 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-10-17T11:09:46.191155+00:00
+Generated: 2026-10-18T11:41:07.152538+00:00
 
 ## 1. Data Connection/Freshness
 
 - **search_console**: ok. Fetched Search Console query/page data. Rows: 9.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 544.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 542.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
@@ -45,10 +45,10 @@ No city/local opportunities found with current thresholds.
 ## 10. Backlink-Supported Pages
 | Page | Backlinks | Syndications | Impressions | Clicks |
 | --- | --- | --- | --- | --- |
-| /car-died-while-driving-what-now/ | 5 | 5 | 2 | 0 |
 | /how-much-does-a-tow-cost-in-colorado/ | 5 | 5 | 2 | 0 |
 | /car-wont-start-clicking-noise-what-to-do/ | 5 | 4 | 1 | 0 |
 | /what-to-do-if-your-car-breaks-down-at-night/ | 4 | 5 | 2 | 0 |
+| /car-died-while-driving-what-now/ | 4 | 5 | 2 | 0 |
 
 ## 11. Recommended Authority Assets
 | Asset | Impressions | Clicks | Backlog | Priority |
