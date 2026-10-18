@@ -68,14 +68,16 @@ def verify_post(slug: str, url: str, sess: requests.Session) -> dict:
     try:
         r = sess.get(url, timeout=20)
         if not r.ok:
-            return {"verified": False, "reason": f"http_{r.status_code}", "url": url}
+            verified = None if r.status_code in (408, 425, 429) or r.status_code >= 500 else False
+            return {"verified": verified, "reason": f"http_{r.status_code}", "url": url}
         links = href_links(r.text)
         matched = next((link for link in links if matches_slug(link, slug)), "")
         # WordPress can suffix a duplicate *WordPress* URL with -2/-3 while
-        # retaining the correct original main-site URL in the article. Any
-        # direct main-site article link is a valid outgoing backlink.
-        if not matched:
-            matched = next(iter(links), "")
+        # retaining the original main-site slug. A homepage or unrelated
+        # navigation link must never count as verification for this article.
+        original_slug = re.sub(r"-(?:[2-9]|[1-9]\d+)$", "", slug)
+        if not matched and original_slug != slug:
+            matched = next((link for link in links if matches_slug(link, original_slug)), "")
         return {
             "verified": bool(matched),
             "reason": "ok" if matched else "slug_mismatch",

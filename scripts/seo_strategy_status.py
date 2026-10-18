@@ -120,14 +120,19 @@ def backlink_inventory() -> dict:
 
     backlog_posts = 0
     backlog_units = 0
+    verification_gaps = 0
     for _slug, row in (audit.get("slugs") or {}).items():
         missing = []
         for platform in REQUIRED_BACKLINK_PLATFORMS:
             result = row.get(platform) or {}
             # Historical audit files may predate the unknown-on-rate-limit
             # behavior. Preserve the same meaning when calculating the queue.
-            transient = str(result.get("reason", "")).startswith(("http_408", "http_425", "http_429", "http_5"))
-            if result.get("verified") is False and not transient:
+            transient = str(result.get("reason", "")).startswith(("http_408", "http_425", "http_429", "http_5", "site_unavailable"))
+            if platform not in row:
+                missing.append(platform)
+            elif transient or result.get("verified") is None:
+                verification_gaps += 1
+            elif result.get("verified") is False:
                 missing.append(platform)
         if missing:
             backlog_posts += 1
@@ -136,6 +141,7 @@ def backlink_inventory() -> dict:
     return {
         "backlogPosts": backlog_posts,
         "backlogUnits": backlog_units,
+        "verificationGaps": verification_gaps,
         "requiredPlatformsPerPost": len(REQUIRED_BACKLINK_PLATFORMS),
         "generatedAt": audit.get("generated_at"),
         "source": "backlink_audit.json",
@@ -175,7 +181,13 @@ def backlink_throughput() -> dict:
     backlog_units = inventory.get("backlogUnits")
     net_units_per_day = round(new_units_per_day - completed_per_day, 1)
 
-    if backlog_units in (None, 0):
+    if backlog_units is None:
+        estimate = None
+        reason = "Backlink inventory is unavailable; refresh the audit before claiming the backlog is clear."
+    elif backlog_units == 0 and inventory.get("verificationGaps", 0):
+        estimate = None
+        reason = "No confirmed missing links, but verification gaps remain; recheck them before claiming completion."
+    elif backlog_units == 0:
         estimate = "maintenance"
         reason = "Backlink backlog is clear; new posts should syndicate, verify, and complete as they publish."
     elif completed_per_day > new_units_per_day:

@@ -8,6 +8,7 @@ runaway loop is visible instead of silently burning API spend.
 from __future__ import annotations
 
 import time
+import json
 
 import anthropic
 
@@ -28,7 +29,10 @@ def create_message(client: anthropic.Anthropic, *, log=print, **kwargs):
     our own logs instead of surfacing only as a bare stack trace.
     """
     try:
-        return client.messages.create(**kwargs)
+        message = client.messages.create(**kwargs)
+        usage = message.usage.model_dump() if getattr(message, "usage", None) else {}
+        log("CLAUDE_USAGE " + json.dumps({"model": message.model, "usage": usage, "stop_reason": message.stop_reason}))
+        return message
     except (anthropic.RateLimitError, anthropic.APIConnectionError, anthropic.InternalServerError) as e:
         log(f"CLAUDE_API | giving up after {MAX_RETRIES} retries: {e}")
         raise

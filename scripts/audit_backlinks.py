@@ -371,7 +371,7 @@ def main() -> None:
                 row["blog"] = verify_html_slug(slug, plats["blog"]["url"], sess)
             else:
                 row["blog"] = {
-                    "verified": False,
+                    "verified": None,
                     "reason": "site_unavailable",
                     "url": plats["blog"]["url"],
                 }
@@ -415,7 +415,7 @@ def main() -> None:
             rec = recover_blogger(slug, sess)
             if rec:
                 row["blog"] = rec
-        elif row["blog"].get("verified") is not True:
+        elif row["blog"].get("verified") is False:
             # Also try blogger recovery when we have a stale/broken logged URL.
             rec = recover_blogger(slug, sess)
             if rec:

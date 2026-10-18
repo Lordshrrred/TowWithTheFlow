@@ -17,7 +17,9 @@
 - Daily: audit the newest 40 syndicated articles and 40 WordPress pages.
 - Weekly: run a complete, paced inventory audit. Blogger requests are limited to one per second to avoid rate limits.
 - Treat rate limits and temporary server errors as unknown, never as missing backlinks. Repair only confirmed missing or wrong links.
+- Missing platform records count toward the backlog. Inaccessible Blogger probes and incomplete verification are separate gaps, not proof that existing articles need republishing. Unavailable audit data never means a clear backlog.
 - The audit accepts a direct link to the original Tow With The Flow article even when WordPress changed its own duplicate URL suffix.
+- WordPress homepage/navigation links do not verify a specific article; its original article slug must match. Temporary WordPress HTTP failures remain unknown.
 - Do not bulk republish old content. Repair only the affected destination post, preserve its publication date, and use small batches after confirmed failures.
 
 ## Success measures
@@ -25,3 +27,4 @@
 - Zero confirmed missing backlinks on newly syndicated posts.
 - A shrinking backlog before increasing publishing volume.
 - More Search Console impressions, then click-through rate and page-one opportunities, rather than raw post count.
+- Shared Claude calls log actual model/token/cache usage for future cost attribution without logging content or credentials.
