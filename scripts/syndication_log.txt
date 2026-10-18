@@ -24114,3 +24114,33 @@
 [2026-10-18 11:31:54] === SYNDICATE DONE: catalytic-converter-stolen-car-wont-start-can-it-be-towed | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-10-18 11:31:54] SYNCED | catalytic-converter-stolen-car-wont-start-can-it-be-towed marked in synced-posts.txt
 [2026-10-18 11:31:54] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-10-18 12:44:43] === SYNDICATE START: towing-cost-in-atlanta-georgia-no-insurance ===
+[2026-10-18 12:44:43] PREFLIGHT | title: Towing Cost in Atlanta Georgia No Insurance: What You'll Pay Right Now
+[2026-10-18 12:44:43] PREFLIGHT | date: 2026-10-18
+[2026-10-18 12:44:43] PREFLIGHT | timestamp: 2026-10-18 12:44:43
+[2026-10-18 12:44:43] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-10-18 12:44:43] PREFLIGHT | TUMBLR:  configured
+[2026-10-18 12:44:43] PREFLIGHT | BLOGGER: configured
+[2026-10-18 12:44:43] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-10-18 12:44:43] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-10-18 12:44:43] DEVTO | towing-cost-in-atlanta-georgia-no-insurance | START
+[2026-10-18 12:44:43] DEVTO | towing-cost-in-atlanta-georgia-no-insurance | account=TWTF1
+[2026-10-18 12:44:45] DEVTO | towing-cost-in-atlanta-georgia-no-insurance | SUCCESS | https://dev.to/roadsideamericatowing/towing-cost-in-atlanta-georgia-no-insurance-what-youll-pay-right-now-what-drivers-should-know-35bd
+[2026-10-18 12:44:45] --- waiting 60s before next platform ---
+[2026-10-18 12:45:45] TUMBLR | towing-cost-in-atlanta-georgia-no-insurance | START
+[2026-10-18 12:45:45] TUMBLR | towing-cost-in-atlanta-georgia-no-insurance | SUCCESS | https://towwiththeflow.tumblr.com/post/830838297421135872
+[2026-10-18 12:45:45] --- waiting 60s before next platform ---
+[2026-10-18 12:46:45] BLOGGER | towing-cost-in-atlanta-georgia-no-insurance | START
+[2026-10-18 12:46:45] BLOGGER | towing-cost-in-atlanta-georgia-no-insurance | step 1/3: refreshing access token
+[2026-10-18 12:46:45] BLOGGER | towing-cost-in-atlanta-georgia-no-insurance | step 2/3: converting markdown to HTML
+[2026-10-18 12:46:45] BLOGGER | towing-cost-in-atlanta-georgia-no-insurance | step 3/3: posting to blog 1959471973457654666
+[2026-10-18 12:46:46] BLOGGER | towing-cost-in-atlanta-georgia-no-insurance | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-atlanta-georgia-no.html
+[2026-10-18 12:46:46] --- waiting 60s before next platform ---
+[2026-10-18 12:47:46] WORDPRESS | towing-cost-in-atlanta-georgia-no-insurance | START
+[2026-10-18 12:47:55] WORDPRESS | towing-cost-in-atlanta-georgia-no-insurance | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/10/18/towing-cost-in-atlanta-georgia-no-insurance/
+[2026-10-18 12:47:55] --- waiting 60s before next platform ---
+[2026-10-18 12:48:55] FEEDER | towing-cost-in-atlanta-georgia-no-insurance | START
+[2026-10-18 12:48:57] FEEDER | towing-cost-in-atlanta-georgia-no-insurance | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-atlanta-georgia-no-insurance-tips/
+[2026-10-18 12:48:57] === SYNDICATE DONE: towing-cost-in-atlanta-georgia-no-insurance | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-10-18 12:48:57] SYNCED | towing-cost-in-atlanta-georgia-no-insurance marked in synced-posts.txt
+[2026-10-18 12:48:57] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
