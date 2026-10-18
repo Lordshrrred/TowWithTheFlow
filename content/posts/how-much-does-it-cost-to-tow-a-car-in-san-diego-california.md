@@ -52,7 +52,7 @@ the article on [whether it's safe to wait for a tow on a highway shoulder](/car-
 
 You pay out of pocket, and that means negotiating upfront. Without AAA, without roadside coverage through your insurer, and without a motor club, you are a cash customer. Call at least two local tow companies before committing. Get a price quoted before they hook up, not after.
 
-A short tow in San Diego paying cash typically runs $100 to $175. Prices tend to run higher at night, on weekends, and during peak beach traffic hours in the summer when Pacific Beach and Mission Beach corridors are jammed and response times stretch. For a detailed look at what to expect without coverage, see [Towing Cost in San Diego California No Insurance](/towing-cost-san-diego-california-no-insurance-2/).
+A short tow in San Diego paying cash typically runs $100 to $175. Prices tend to run higher at night, on weekends, and during peak beach traffic hours in the summer when Pacific Beach and Mission Beach corridors are jammed and response times stretch. For a detailed look at what to expect without coverage, see [Towing Cost in San Diego California No Insurance](/towing-cost-san-diego-california-no-insurance/).
 
 One concrete way to reduce exposure: download the AAA app before you ever need it. A basic AAA membership costs around $60 to $80 per year and covers four tows up to five miles each. One tow pays for it.
 

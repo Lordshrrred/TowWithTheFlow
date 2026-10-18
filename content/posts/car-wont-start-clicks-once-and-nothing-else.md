@@ -36,7 +36,7 @@ Connect jumper cables or a jump pack, let the donor vehicle run for two to three
 
 One more check while the hood is open: look at the battery terminals. Corroded terminals, the white or blue-green buildup around the post, can block enough current to cause this exact symptom even with a fully charged battery. A tight, clean connection at the positive and negative terminals is required before any diagnosis means anything.
 
-If you're dealing with cold temperatures, keep in mind that battery capacity drops sharply below 32 degrees. A battery that worked fine yesterday can fail to deliver enough cranking amps on a cold morning. See [Car Won't Start in Cold Weather: Tow or Jump Start?](/car-wont-start-in-cold-weather-tow-or-jumpstart/) for more on cold-weather specifics.
+If you're dealing with cold temperatures, keep in mind that battery capacity drops sharply below 32 degrees. A battery that worked fine yesterday can fail to deliver enough cranking amps on a cold morning. See [Car Won't Start in Cold Weather: Tow or Jump Start?](/car-wont-start-in-cold-weather-tow-or-jump-start/) for more on cold-weather specifics.
 
 ## Can I Fix This Myself on the Side of the Road?
 

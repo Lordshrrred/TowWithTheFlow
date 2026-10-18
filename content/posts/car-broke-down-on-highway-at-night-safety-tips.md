@@ -55,7 +55,7 @@ After that, call roadside assistance or a tow truck. Give them your exact mile m
 *Photo: Pexels*
 S on any satellite-capable device you have. Some newer smartphones support satellite emergency SOS even without cell coverage.
 
-If you broke down because you ran out of fuel, see the specific steps in [what to do when you run out of gas on the highway](/ran-out-of-gas-on-highway-what-to-do-2/) before you call for a tow, since fuel delivery is faster and cheaper.
+If you broke down because you ran out of fuel, see the specific steps in [what to do when you run out of gas on the highway](/ran-out-of-gas-on-highway-what-to-do/) before you call for a tow, since fuel delivery is faster and cheaper.
 
 ## What Are the Biggest Mistakes People Make During a Night Highway Breakdown?
 

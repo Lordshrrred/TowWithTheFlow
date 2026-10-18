@@ -55,7 +55,7 @@ The repair cost depends entirely on what caused the misfire. A single ignition c
 
 Your auto insurance roadside assistance or a membership like AAA may cover the tow. Check your policy before you call a private tow truck. If you have USAA, [here is what their roadside coverage actually pays](/usaa-towing-coverage-how-much-does-it-pay/) so you know what to expect before you get the bill.
 
-If the misfire turns into an engine seizure from heat or hydrolock, you are looking at a far more serious situation. [Engine seized while driving](/engine-seized-while-driving-need-immediate-tow/) is a different breakdown entirely, but it starts the same way: ignored warning signs while driving.
+If the misfire turns into an engine seizure from heat or hydrolock, you are looking at a far more serious situation. [Engine seized while driving](/engine-seized-while-driving-need-emergency-tow/) is a different breakdown entirely, but it starts the same way: ignored warning signs while driving.
 
 ---
 

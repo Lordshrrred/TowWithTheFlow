@@ -57,7 +57,7 @@ Get quotes from at least two companies before you commit. Call one company, get 
 *Photo: Pexels*
 u $40 to $60.
 
-For a full breakdown of what to expect without coverage, see [towing cost in San Diego with no insurance](/towing-cost-san-diego-california-no-insurance-2/).
+For a full breakdown of what to expect without coverage, see [towing cost in San Diego with no insurance](/towing-cost-san-diego-california-no-insurance/).
 
 ## Flatbed vs. Wheel-Lift: Does My Car Require One or the Other?
 

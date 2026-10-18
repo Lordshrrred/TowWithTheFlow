@@ -57,7 +57,7 @@ hrough your insurer, AAA, or a credit card, it covers the tow but not the car da
 
 If you are carrying only liability coverage (the Texas state minimum), you are responsible for your own tow out of pocket. A local haul from the 59/610 interchange area to a shop in Greenway Plaza or Midtown will run you $150 to $225 cash.
 
-For details on what you would pay if you have no comprehensive coverage, the [Houston towing cost without insurance](https://towwiththeflow.com/towing-cost-houston-texas-flatbed-no-insurance-2/) page has current numbers.
+For details on what you would pay if you have no comprehensive coverage, the [Houston towing cost without insurance](https://towwiththeflow.com/towing-cost-houston-texas-flatbed-no-insurance/) page has current numbers.
 
 ## What Should I Do at the Scene Before the Tow Truck Arrives?
 

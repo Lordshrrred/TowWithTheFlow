@@ -46,12 +46,12 @@ COMPANION_CACHE_FILE = Path(__file__).parent / "tool_companion_cache.json"
 PLATFORM_POLICY_FILE = Path(__file__).parent / "tool_syndication_platform_policy.json"
 BASE_URL = "https://towwiththeflow.com"
 COMPANION_FORMAT_VERSION = "tool-companion-v1"
-COMPANION_MODEL = os.getenv("TOOL_COMPANION_MODEL", "claude-haiku-4-5-20251001")
+COMPANION_MODEL = os.getenv("TOOL_COMPANION_MODEL", "claude-haiku-5-5")
 DEFAULT_MAX_GENERATIONS = int(os.getenv("TOOL_COMPANION_MAX_GENERATIONS", "1"))
 
 sys.path.insert(0, str(Path(__file__).parent))
 import syndicate_post as sp  # noqa: E402  (reuse auth + HTML helpers only)
-from claude_utils import make_client, create_message  # noqa: E402
+from claude_utils import make_client, create_message, message_text  # noqa: E402
 
 PLATFORMS = ["blogger", "wordpress", "tumblr", "devto", "feeder"]
 
@@ -328,7 +328,7 @@ def get_or_generate_companion(
             }],
             messages=[{"role": "user", "content": prompt}],
         )
-        raw = msg.content[0].text if getattr(msg, "content", None) else ""
+        raw = message_text(msg) if getattr(msg, "content", None) else ""
         parsed = _extract_json_object(raw)
         cleaned = sanitize_companion(parsed or {}, tool)
         if not cleaned:

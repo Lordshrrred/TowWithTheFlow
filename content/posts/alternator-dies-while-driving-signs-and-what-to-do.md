@@ -40,7 +40,7 @@ Once stopped, call for a tow. This is not a jump-start situation. A jump-start w
 
 Yes, eventually. Modern vehicles pull a consistent electrical load from fuel injectors, the engine control module, ignition coils, and sensors. Once the battery drops below roughly 10 to 10.5 volts, those systems start misfiring or shutting down. The engine will stumble, then die. Power steering on electric-assist systems and ABS may give you warnings before that point, but your mechanical braking still works. Steer toward the shoulder and use firm, steady brake pressure.
 
-If your car dies in traffic rather than on a shoulder, that is a different emergency. The steps for handling a [car stalled in an intersection](/car-stalled-in-intersection-what-to-do/) apply directly: hazards on, stay visible, get help moving the car if you cannot safely coast clear.
+If your car dies in traffic rather than on a shoulder, that is a different emergency. The steps for handling a [car stalled in an intersection](/car-stalled-in-intersection-what-to-do-right-now/) apply directly: hazards on, stay visible, get help moving the car if you cannot safely coast clear.
 
 ## Do I Need a Tow, or Can I Drive Home on the Battery?
 

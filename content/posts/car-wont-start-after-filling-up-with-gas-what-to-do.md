@@ -16,7 +16,7 @@ faq:
   - q: "Is it safe to push the car away from the gas pump if it won't start?"
     a: "Yes, and you should. Put it in neutral, release the parking brake, and get help from the attendant or a bystander to push it to a parking spot clear of the fuel dispensers. Keep the hazards on."
   - q: "How do I know if I need a tow or if a jump start will fix this?"
-    a: "If the engine cranks normally but won't fire, a jump start will not help. That is a fuel or sensor issue, not a battery issue. If you hear nothing or just a single click when you turn the key, then the battery is involved and a jump is worth trying first. [This breakdown of tow vs. jump decisions](/car-wont-start-in-cold-weather-tow-or-jumpstart/) walks through the distinction."
+    a: "If the engine cranks normally but won't fire, a jump start will not help. That is a fuel or sensor issue, not a battery issue. If you hear nothing or just a single click when you turn the key, then the battery is involved and a jump is worth trying first. [This breakdown of tow vs. jump decisions](/car-wont-start-in-cold-weather-tow-or-jump-start/) walks through the distinction."
 ---
 ```
 
@@ -65,7 +65,7 @@ Yes, in some cases. If the engine cranks normally but does not fire and you have
 - **Crankshaft position sensor failure.** The engine will crank but the ECU has no signal to fire injectors. This sensor is on the Ford 4.6L V8 and many GM 3.8L V6 engines, among others, and is a known failure point.
 - **Dead battery from a pre-existing drain.** A fill-up does not cause this, but if your battery was borderline before, cycling the ignition multiple times during repeated start attempts can finish it off.
 
-If the engine is not cranking at all and you just hear a click, that is a battery or starter issue, not a gas-related problem. Check out [what to do when your car won't start in cold weather](/car-wont-start-in-cold-weather-tow-or-jumpstart/) for battery-specific steps that apply in any season.
+If the engine is not cranking at all and you just hear a click, that is a battery or starter issue, not a gas-related problem. Check out [what to do when your car won't start in cold weather](/car-wont-start-in-cold-weather-tow-or-jump-start/) for battery-specific steps that apply in any season.
 
 ---
 
@@ -88,7 +88,7 @@ A: Rarely, but it happens. Some vehicles will not start if the EVAP system canno
 A: Yes, and you should. Put it in neutral, release the parking brake, and get help from the attendant or a bystander to push it to a parking spot clear of the fuel dispensers. Keep the hazards on.
 
 **Q: How do I know if I need a tow or if a jump start will fix this?**
-A: If the engine cranks normally but won't fire, a jump start will not help. That is a fuel or sensor issue, not a battery issue. If you hear nothing or just a single click when you turn the key, then the battery is involved and a jump is worth trying first. [This breakdown of tow vs. jump decisions](/car-wont-start-in-cold-weather-tow-or-jumpstart/) walks through the distinction.
+A: If the engine cranks normally but won't fire, a jump start will not help. That is a fuel or sensor issue, not a battery issue. If you hear nothing or just a single click when you turn the key, then the battery is involved and a jump is worth trying first. [This breakdown of tow vs. jump decisions](/car-wont-start-in-cold-weather-tow-or-jump-start/) walks through the distinction.
 
 ---
 

@@ -3,10 +3,13 @@
 ## Publishing guardrails
 
 - Publish only one page per defined keyword intent. A duplicate or near-duplicate is a reason to expand the existing guide, not create another URL.
+- `scripts/consolidate_articles.py` previews repeated titles and identical bodies; `--execute` archives extra markdown privately, preserves the established complete original, rewrites internal links and installs permanent Vercel redirects. The generator rejects repeated returned titles or existing slugs instead of inventing a numbered duplicate.
 - Keep the current four-post daily ceiling until Search Console produces enough impressions and clicks to rank opportunities by evidence.
 - Every generated post must pass the cluster-health check and Hugo build before it is committed. Clusters provide the hub and related-guide links without additional API calls.
 
 ## Keyword and research loop
+
+- Article writing uses Sonnet 5.5; keyword planning, variations, tool companions and repair suggestions use Haiku 5.5. The shared client removes unsupported sampling settings, bounds effort, and turns off up-front thinking for routine work. Text extraction rejects truncated output.
 
 - Keep 45 to 90 publishing days of scored keyword inventory. Below 45 days, the research job resumes; above 90, it pauses. This avoids paid research churn.
 - Use Search Console and GA4 daily for evidence. The normal report makes two requests to each service and makes no paid model, web-search, or rank-tracking calls.

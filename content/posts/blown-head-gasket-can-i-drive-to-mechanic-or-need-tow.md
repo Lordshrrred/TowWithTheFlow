@@ -34,7 +34,7 @@ Driving with a blown head gasket compounds the damage every minute the engine ru
 
 Even if hydrolock doesn't happen, the engine will overheat. Aluminum cylinder heads warp at temperatures above roughly 230 to 240 degrees Fahrenheit. Once warped, the head has to be milled flat or replaced before a new gasket will seal. That adds hundreds of dollars to an already expensive repair. Running the engine overheated also risks cracking the head, which can make the head unrepairable entirely.
 
-If the car is already overheating on top of the head gasket failure, pull over immediately and shut it off. See [car overheating on highway: should I pull over immediately](/car-overheating-on-highway-should-i-pull-over-immediately-2/) for what to do in those first few minutes.
+If the car is already overheating on top of the head gasket failure, pull over immediately and shut it off. See [car overheating on highway: should I pull over immediately](/car-overheating-on-highway-should-i-pull-over-immediately/) for what to do in those first few minutes.
 
 ## What Should I Do Right Now While I Wait for the Tow?
 

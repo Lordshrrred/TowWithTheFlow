@@ -57,7 +57,7 @@ The most common cause is low oil level from a slow leak or burning oil that fina
 - **Spun rod bearing.** If you heard a deep knocking before or after the light came on, this may have already happened. That is engine-out territory.
 - **Oil cooler line failure.** Some vehicles route oil through a cooler near the radiator. A burst line can dump oil fast.
 
-The knocking sound is the key detail. No knock with normal oil level points to a sensor or pump issue. Knock plus oil pressure light means the engine may already be damaged. See [engine seized while driving: what to do and how to get an emergency tow](/engine-seized-while-driving-need-immediate-tow/) if things have already gotten that far.
+The knocking sound is the key detail. No knock with normal oil level points to a sensor or pump issue. Knock plus oil pressure light means the engine may already be damaged. See [engine seized while driving: what to do and how to get an emergency tow](/engine-seized-while-driving-need-emergency-tow/) if things have already gotten that far.
 
 ## What Happens If I Ignored the Light and Kept Driving?
 

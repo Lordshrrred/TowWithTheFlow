@@ -58,7 +58,7 @@ You pay out of pocket, and flatbed costs hit harder without coverage. A 15-mile 
 
 If you're uninsured, getting quotes from two companies before committing is worth the 10 minutes. Pricing varies enough between operators that a second call can save you $40 to $60, especially on a flatbed.
 
-More detail on out-of-pocket costs is in [towing cost in San Diego California no insurance](/towing-cost-san-diego-california-no-insurance-2/).
+More detail on out-of-pocket costs is in [towing cost in San Diego California no insurance](/towing-cost-san-diego-california-no-insurance/).
 
 
 ![roadside assistance highway](/images/towing-cost-san-diego-california-flatbed-vs-wheel-lift/bottom.jpg)

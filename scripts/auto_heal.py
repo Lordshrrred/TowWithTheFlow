@@ -40,7 +40,7 @@ PATCHABLE_FILES = {
     "scripts/generate_post.py",
 }
 
-CLAUDE_MODEL = "claude-haiku-4-5-20251001"
+CLAUDE_MODEL = "claude-haiku-5-5"
 
 # Cooldown: at most 3 auto-heal runs per calendar day, minimum 1 hour apart.
 MAX_HEALS_PER_DAY = 3
@@ -268,6 +268,8 @@ Rules:
                 },
                 json={
                     "model": CLAUDE_MODEL,
+                    "thinking": {"type": "disabled"},
+                    "output_config": {"effort": "medium"},
                     "max_tokens": 1500,
                     "messages": [{"role": "user", "content": prompt}],
                 },

@@ -39,7 +39,7 @@ If it fires up, drive it for at least 20 to 30 minutes, highway speed if possibl
 
 Call for a jump start first if the car clicks or cranks slowly. Call a tow immediately if the car is completely silent when you turn the key (possible alternator, starter, or fully shorted battery), if you've already jumped it and it died again, or if there's corrosion so heavy on the terminals that cables won't seat properly.
 
-Denver roadside assistance for a jump start typically runs $50 to $100 without a membership plan. If you end up needing a tow to a shop, a local haul inside the city runs $75 to $150 for the first several miles. Check out the full breakdown at [Towing Cost in Denver Colorado: What You'll Pay and What to Do](/towing-cost-denver-colorado/) before you call so you know what to expect. If you're not sure whether a jump will work or you need a tow, [Car Won't Start in Cold Weather: Tow or Jump Start?](/car-wont-start-in-cold-weather-tow-or-jumpstart/) lays out the decision clearly.
+Denver roadside assistance for a jump start typically runs $50 to $100 without a membership plan. If you end up needing a tow to a shop, a local haul inside the city runs $75 to $150 for the first several miles. Check out the full breakdown at [Towing Cost in Denver Colorado: What You'll Pay and What to Do](/towing-cost-denver-colorado/) before you call so you know what to expect. If you're not sure whether a jump will work or you need a tow, [Car Won't Start in Cold Weather: Tow or Jump Start?](/car-wont-start-in-cold-weather-tow-or-jump-start/) lays out the decision clearly.
 
 ## How Much Does a New Battery Cost If I'm Stuck in Denver?
 

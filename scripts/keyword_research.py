@@ -15,7 +15,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import anthropic
 
-from claude_utils import make_client, create_message
+from claude_utils import make_client, create_message, message_text
 from seo_strategy_status import write_status
 
 ROOT = Path(__file__).parent.parent
@@ -114,7 +114,7 @@ def main():
     message = create_message(
         client,
         log=log,
-        model="claude-sonnet-4-6",
+        model="claude-haiku-5-5",
         max_tokens=1500,
         system=[{
             "type": "text",
@@ -124,7 +124,7 @@ def main():
         messages=[{"role": "user", "content": user_message}]
     )
 
-    response_text = message.content[0].text.strip()
+    response_text = message_text(message).strip()
 
     # Strip markdown code fences if present
     response_text = re.sub(r'^```\w*\n?', '', response_text)

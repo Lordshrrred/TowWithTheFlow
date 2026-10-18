@@ -42,7 +42,7 @@ Only to get it out of immediate danger, like off an active lane of traffic, and 
 
 Before you move it at all, check that the hood latch didn't pop. A hood that flies up at speed is immediately fatal. Push down on the hood and make sure it's fully latched.
 
-If the crash happened on a highway and traffic is moving around you, your priority is getting yourself and any passengers away from the vehicle and behind a guardrail or well off the shoulder. A second impact from passing traffic is the most dangerous thing you face right now. The same principle applies after any breakdown: see [Car Stalled in Intersection: What to Do Right Now](/car-stalled-in-intersection-what-to-do/) for how to handle being stuck in or near moving traffic.
+If the crash happened on a highway and traffic is moving around you, your priority is getting yourself and any passengers away from the vehicle and behind a guardrail or well off the shoulder. A second impact from passing traffic is the most dangerous thing you face right now. The same principle applies after any breakdown: see [Car Stalled in Intersection: What to Do Right Now](/car-stalled-in-intersection-what-to-do-right-now/) for how to handle being stuck in or near moving traffic.
 
 ## Who Do I Call and What Should I Tell
 ![mechanic car repair](/images/airbag-deployed-car-still-runs-can-i-drive-it/mid.jpg)

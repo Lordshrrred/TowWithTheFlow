@@ -20,7 +20,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import anthropic
 
-from claude_utils import make_client, create_message
+from claude_utils import make_client, create_message, message_text
 from generate_post import load_keywords, is_local, load_post_index
 
 ROOT = Path(__file__).parent.parent
@@ -37,7 +37,7 @@ CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 BASE_URL = "https://towwiththeflow.com"
 KEYWORD_LIMIT = 10
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-sonnet-5-5"
 MAX_CONTINUATIONS = 3  # cap on resuming a paused server-tool turn
 
 SYSTEM_PROMPT = """You are an SEO analyst researching search visibility for towwiththeflow.com, a car breakdown and roadside emergency help site.

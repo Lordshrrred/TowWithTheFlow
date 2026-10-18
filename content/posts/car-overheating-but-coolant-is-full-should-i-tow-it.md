@@ -32,7 +32,7 @@ One clear sign of a head gasket failure: look at the coolant in the overflow tan
 
 No, it is not safe. An overheating engine with full coolant is not a slow-developing problem you can manage. Aluminum cylinder heads warp at around 230 to 250 degrees Fahrenheit, and modern engines can hit those temps within minutes of the gauge spiking. A warped head or cracked block turns a $300 thermostat job into a $3,000 to $8,000 engine repair or replacement. The math is not close. Pull over, shut it off, and do not restart it until you know the cause.
 
-If you are on a highway or freeway, get to the right shoulder as quickly as safely possible. Do not exit the car onto a live lane. Turn on your hazards, stay inside if traffic is close, and call for a tow. For more on handling a highway overheat safely, see [Car Overheating on Highway: Should I Pull Over Immediately?](/car-overheating-on-highway-should-i-pull-over-immediately-2/).
+If you are on a highway or freeway, get to the right shoulder as quickly as safely possible. Do not exit the car onto a live lane. Turn on your hazards, stay inside if traffic is close, and call for a tow. For more on handling a highway overheat safely, see [Car Overheating on Highway: Should I Pull Over Immediately?](/car-overheating-on-highway-should-i-pull-over-immediately/).
 
 ## What Should I Do Right Now While I Wait for the Tow?
 

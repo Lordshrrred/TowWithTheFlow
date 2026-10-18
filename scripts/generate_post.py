@@ -22,7 +22,8 @@ from dotenv import load_dotenv
 import anthropic
 import requests
 
-from claude_utils import make_client, create_message
+from claude_utils import make_client, create_message, message_text
+from consolidate_articles import identity as article_identity, field as article_field, repeated_body
 from clusters import assign_cluster
 from assign_clusters import set_cluster_field
 
@@ -462,7 +463,7 @@ def generate_post(keyword: str, post_index: list[tuple[str, str]] | None = None,
 
     message = create_message(
         client,
-        model="claude-sonnet-4-6",
+        model="claude-sonnet-5-5",
         max_tokens=3200,
         system=[{
             "type": "text",
@@ -472,7 +473,7 @@ def generate_post(keyword: str, post_index: list[tuple[str, str]] | None = None,
         messages=[{"role": "user", "content": user_message}]
     )
 
-    content = message.content[0].text.strip()
+    content = message_text(message).strip()
 
     # Strip markdown code fences if present
     if content.startswith('```'):
@@ -706,6 +707,13 @@ def main():
     print(f"Loaded {len(post_index)} existing posts for internal linking")
 
     content = generate_post(keyword, post_index, city=city)
+    generated_title = article_identity(article_field(content, "title"))
+    repeated = next((slug for slug, title in post_index if article_identity(title) == generated_title), None)
+    if repeated:
+        raise ValueError(f"Repeated article title blocked before saving: {repeated}")
+    repeated = repeated_body(content, ((file.stem, file.read_text(encoding="utf-8")) for file in POSTS_DIR.glob("*.md")))
+    if repeated:
+        raise ValueError(f"Repeated article body blocked before saving: {repeated}")
     slug = extract_slug(content, keyword)
     filename = POSTS_DIR / f"{slug}.md"
 
@@ -715,15 +723,7 @@ def main():
     # silently collides with the original at the same URL (one clobbers
     # the other in the build with no warning).
     if filename.exists():
-        slug = slug + "-2"
-        filename = POSTS_DIR / f"{slug}.md"
-        content = re.sub(
-            r'^slug:\s*.+$',
-            f'slug: "{slug}"',
-            content,
-            count=1,
-            flags=re.MULTILINE,
-        )
+        raise ValueError(f"Existing article slug blocked; update the original instead: {slug}")
 
     # Assign a content cluster (see clusters.py) — drives the /clusters/*/
     # hub pages and the automatic "Related Guides" internal linking.

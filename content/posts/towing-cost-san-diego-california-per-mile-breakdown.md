@@ -59,7 +59,7 @@ Paying out of pocket does not automatically mean a higher rate per mile, but it 
 *Photo: Pexels*
 you owe. Without it, there is no cap.
 
-San Diego is not a cheap market. Without any roadside plan, a mid-length tow of 12 to 15 miles can easily run $180 to $230. Storage fees at the destination shop, if you cannot arrange a repair quickly, stack on top of that. For a full breakdown of what you are looking at without coverage, read [Towing Cost in San Diego California No Insurance](/towing-cost-san-diego-california-no-insurance-2/).
+San Diego is not a cheap market. Without any roadside plan, a mid-length tow of 12 to 15 miles can easily run $180 to $230. Storage fees at the destination shop, if you cannot arrange a repair quickly, stack on top of that. For a full breakdown of what you are looking at without coverage, read [Towing Cost in San Diego California No Insurance](/towing-cost-san-diego-california-no-insurance/).
 
 ## How Do I Make Sure I'm Not Overcharged on a Per-Mile Tow?
 

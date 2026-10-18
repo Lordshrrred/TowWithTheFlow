@@ -30,7 +30,7 @@ from urllib.parse import urlparse
 from dotenv import load_dotenv
 import requests
 
-from claude_utils import make_client, create_message
+from claude_utils import make_client, create_message, message_text
 
 ROOT = Path(__file__).parent.parent
 
@@ -116,7 +116,7 @@ else:
     FEEDER_TRIGGER_TOKEN = ""
 
 ANTHROPIC_API_KEY     = env_clean("ANTHROPIC_API_KEY")
-ANTHROPIC_VARIATION_MODEL = env_clean("ANTHROPIC_VARIATION_MODEL") or "claude-haiku-4-5-20251001"
+ANTHROPIC_VARIATION_MODEL = env_clean("ANTHROPIC_VARIATION_MODEL") or "claude-haiku-5-5"
 
 # Set DEVTO_ENABLED=false in GitHub secrets or .env to cleanly disable Dev.to
 # without touching any other platform. Useful when an API key is revoked or
@@ -442,7 +442,7 @@ def get_variation(body: str, platform: str, slug: str) -> str:
         log(f"VARIATION | {platform} | served by model={msg.model} "
             f"cache_read={getattr(msg.usage, 'cache_read_input_tokens', 0)} "
             f"cache_write={getattr(msg.usage, 'cache_creation_input_tokens', 0)}")
-        result = msg.content[0].text.strip()
+        result = message_text(msg).strip()
         if not result:
             VARIATION_RUN_STATS["failed"] += 1
             log(f"VARIATION | {platform} | empty model response — using original body")

@@ -24,7 +24,7 @@ import glob
 from datetime import datetime
 from pathlib import Path
 
-from claude_utils import make_client, create_message
+from claude_utils import make_client, create_message, message_text
 from clusters import assign_cluster
 from assign_clusters import set_cluster_field
 from generate_post import extract_faq_pairs, build_faq_yaml, insert_faq_frontmatter, count_body_words
@@ -34,7 +34,7 @@ POSTS_DIR = ROOT / "content" / "posts"
 LOG_FILE = Path(__file__).parent / "syndication_log.txt"
 SKIP = {"_index.md", "tow-content-log.md"}
 
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-sonnet-5-5"
 MIN_WORDS = 500
 
 EXPAND_SYSTEM_PROMPT = """You are expanding an existing published page for towwiththeflow.com, a car breakdown and roadside emergency help site, in the voice of a knowledgeable direct mechanic who wastes no words.
@@ -147,7 +147,7 @@ def process_post(client, path: Path) -> str:
         }],
         messages=[{"role": "user", "content": user_message}],
     )
-    result = strip_code_fences(response.content[0].text)
+    result = strip_code_fences(message_text(response))
 
     if mode == "expand":
         new_body = result
