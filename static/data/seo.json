@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-18T11:41:07.235797+00:00",
+  "generated_at": "2026-10-19T13:55:43.653757+00:00",
   "keywords": {
     "total": 1064,
-    "live": 718,
-    "pending": 346,
+    "live": 722,
+    "pending": 342,
     "local": {
-      "live": 234,
-      "pending": 55
+      "live": 236,
+      "pending": 53
     },
     "pain_point": {
-      "live": 484,
-      "pending": 291
+      "live": 486,
+      "pending": 289
     }
   },
   "next_targets": [
-    {
-      "keyword": "blown head gasket symptoms should i tow or drive",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "catalytic converter stolen car wont start can it be towed",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "tow truck taking too long what are my options roadside",
       "score": 8,
@@ -63,6 +53,16 @@
       "keyword": "power steering went out while driving is it safe to drive home",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "alternator died while driving can i make it home",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "airbag light came on while driving is it safe",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -74,7 +74,7 @@
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 111
+      "count": 107
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 70
+      "count": 67
     },
     {
       "slug": "highway-safety",
@@ -92,14 +92,14 @@
       "count": 49
     },
     {
-      "slug": "roadside-help",
-      "label": "General Roadside Help",
-      "count": 31
-    },
-    {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
       "count": 31
+    },
+    {
+      "slug": "roadside-help",
+      "label": "General Roadside Help",
+      "count": 30
     },
     {
       "slug": "towing-logistics",
@@ -114,7 +114,7 @@
     {
       "slug": "vehicle-safety",
       "label": "Vehicle Safety",
-      "count": 9
+      "count": 10
     },
     {
       "slug": "vehicle-recovery",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-18T08:14:53.605358+00:00",
+    "generated_at": "2026-10-19T08:46:36.005366+00:00",
     "platforms": {
       "blog": {
-        "checked": 692,
-        "verified": 375
+        "checked": 656,
+        "verified": 348
       },
       "dev": {
-        "checked": 479,
-        "verified": 479
+        "checked": 483,
+        "verified": 483
       },
       "feeder": {
-        "checked": 690,
-        "verified": 690
+        "checked": 694,
+        "verified": 694
       },
       "tumblr": {
-        "checked": 687,
-        "verified": 687
+        "checked": 691,
+        "verified": 691
       },
       "wordpress": {
-        "checked": 695,
-        "verified": 695
+        "checked": 699,
+        "verified": 699
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-18T11:41:07.152538+00:00",
+    "generated_at": "2026-10-19T13:55:43.575326+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,7 +198,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 542,
+        "rows": 546,
         "source": "ga4",
         "status": "ok"
       }
@@ -238,29 +238,30 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-18T11:41:07.269007+00:00",
+    "generatedAt": "2026-10-19T13:55:43.672845+00:00",
     "keywordGeneration": {
-      "currentInventory": 346,
-      "liveKeywords": 718,
-      "estimatedDaysRemaining": 86.5,
+      "currentInventory": 342,
+      "liveKeywords": 722,
+      "estimatedDaysRemaining": 85.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "86.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "85.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 317,
-      "backlogUnits": 317,
+      "backlogPosts": 73,
+      "backlogUnits": 83,
+      "verificationGaps": 497,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-18T08:14:53.605358+00:00",
+      "generatedAt": "2026-10-19T08:46:36.005366+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.6,
+      "completedPerDay": 19.9,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.4,
+      "netBacklinkUnitsPerDay": 0.1,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.4 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.1 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
