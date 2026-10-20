@@ -1,0 +1,399 @@
+{
+  "authority_asset_opportunities": [
+    {
+      "asset": "Insurance Comparison",
+      "clicks": 0,
+      "evidence_queries": [
+        {
+          "categories": [
+            "towing cost",
+            "insurance",
+            "city/location",
+            "vehicle type"
+          ],
+          "clicks": 0,
+          "ctr": 0.0,
+          "impressions": 2,
+          "page": "https://towwiththeflow.com/how-much-does-a-tow-cost-in-colorado/",
+          "path": "/how-much-does-a-tow-cost-in-colorado/",
+          "position": 47.0,
+          "query": "tow truck insurance colorado"
+        }
+      ],
+      "impressions": 2
+    },
+    {
+      "asset": "Tow Cost Estimator",
+      "backlog_status": "live",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0,
+      "priority": 1,
+      "url": "tow-cost-estimator"
+    },
+    {
+      "asset": "Tow or Drive Decision Tree",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "Roadside Checklists",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "State Law Resources",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    }
+  ],
+  "backlink_supported": [
+    {
+      "backlinks": 5,
+      "clicks": 0,
+      "impressions": 2,
+      "path": "/how-much-does-a-tow-cost-in-colorado/",
+      "position": 47.0,
+      "syndications": 5
+    },
+    {
+      "backlinks": 5,
+      "clicks": 0,
+      "impressions": 1,
+      "path": "/car-wont-start-clicking-noise-what-to-do/",
+      "position": 66.0,
+      "syndications": 4
+    },
+    {
+      "backlinks": 4,
+      "clicks": 0,
+      "impressions": 2,
+      "path": "/what-to-do-if-your-car-breaks-down-at-night/",
+      "position": 89.0,
+      "syndications": 5
+    },
+    {
+      "backlinks": 4,
+      "clicks": 0,
+      "impressions": 2,
+      "path": "/car-died-while-driving-what-now/",
+      "position": 41.5,
+      "syndications": 5
+    }
+  ],
+  "cannibalization": [],
+  "city_opportunities": [],
+  "classifications": {
+    "ctr_opportunities": [],
+    "engagement_winners": [],
+    "near_page_one": [],
+    "weak_engagement": []
+  },
+  "comparison": {
+    "current_gsc_rows": 4,
+    "previous_gsc_rows": 5
+  },
+  "generated_at": "2026-10-20T12:08:51.350677+00:00",
+  "intent_map": {
+    "generatedAt": "2026-07-10T17:36:01.700206+00:00",
+    "metadataFlagCount": 118,
+    "overlapGroupCount": 10
+  },
+  "periods": {
+    "current": [
+      "2026-09-22",
+      "2026-10-19"
+    ],
+    "previous": [
+      "2026-08-25",
+      "2026-09-21"
+    ]
+  },
+  "request_counts": {
+    "ga4": 2,
+    "gsc": 2
+  },
+  "statuses": [
+    {
+      "cached": false,
+      "message": "Fetched Search Console query/page data.",
+      "rows": 9,
+      "source": "search_console",
+      "status": "ok"
+    },
+    {
+      "cached": false,
+      "message": "Fetched GA4 organic landing-page behavior.",
+      "rows": 558,
+      "source": "ga4",
+      "status": "ok"
+    }
+  ],
+  "summary": {
+    "cannibalization_count": 0,
+    "ctr_opportunity_count": 0,
+    "declining_page_count": 0,
+    "generated_at": "2026-10-20T12:08:51.350677+00:00",
+    "impression_growth_count": 5,
+    "near_page_one_count": 0,
+    "report_path": "reports/seo-intelligence-latest.md",
+    "request_counts": {
+      "ga4": 2,
+      "gsc": 2
+    },
+    "statuses": [
+      {
+        "cached": false,
+        "message": "Fetched Search Console query/page data.",
+        "rows": 9,
+        "source": "search_console",
+        "status": "ok"
+      },
+      {
+        "cached": false,
+        "message": "Fetched GA4 organic landing-page behavior.",
+        "rows": 558,
+        "source": "ga4",
+        "status": "ok"
+      }
+    ],
+    "tool_engine": {
+      "completes": 3,
+      "completion_rate": 1.0,
+      "opens": 3,
+      "top_events": [
+        {
+          "count": 19,
+          "event": "estimate_generated"
+        },
+        {
+          "count": 13,
+          "event": "field_change"
+        },
+        {
+          "count": 3,
+          "event": "calculator_complete"
+        },
+        {
+          "count": 3,
+          "event": "calculator_open"
+        }
+      ]
+    },
+    "top_actions": [
+      {
+        "next_action": "Use the authority backlog and build as a separate scoped asset.",
+        "reason": "2 Search Console impressions match this asset pattern.",
+        "title": "Build or refine authority asset: Insurance Comparison"
+      }
+    ],
+    "top_landing_page_count": 4,
+    "top_query_count": 4,
+    "winning_page_count": 0
+  },
+  "tool_engine": {
+    "completes": 3,
+    "completion_rate": 1.0,
+    "opens": 3,
+    "top_events": [
+      {
+        "count": 19,
+        "event": "estimate_generated"
+      },
+      {
+        "count": 13,
+        "event": "field_change"
+      },
+      {
+        "count": 3,
+        "event": "calculator_complete"
+      },
+      {
+        "count": 3,
+        "event": "calculator_open"
+      }
+    ]
+  },
+  "top_actions": [
+    {
+      "next_action": "Use the authority backlog and build as a separate scoped asset.",
+      "reason": "2 Search Console impressions match this asset pattern.",
+      "title": "Build or refine authority asset: Insurance Comparison"
+    }
+  ],
+  "top_landing_pages": [
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/what-to-do-if-your-car-breaks-down-at-night/",
+      "impressions": 2,
+      "position": 89.0,
+      "queries": {
+        "car broke down on the road at night": 2
+      },
+      "top_queries": [
+        [
+          "car broke down on the road at night",
+          2
+        ]
+      ],
+      "weighted_position": 178.0
+    },
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/car-died-while-driving-what-now/",
+      "impressions": 2,
+      "position": 41.5,
+      "queries": {
+        "car died": 2
+      },
+      "top_queries": [
+        [
+          "car died",
+          2
+        ]
+      ],
+      "weighted_position": 83.0
+    },
+    {
+      "categories": [
+        "city/location",
+        "insurance",
+        "towing cost",
+        "vehicle type"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/how-much-does-a-tow-cost-in-colorado/",
+      "impressions": 2,
+      "position": 47.0,
+      "queries": {
+        "tow truck insurance colorado": 2
+      },
+      "top_queries": [
+        [
+          "tow truck insurance colorado",
+          2
+        ]
+      ],
+      "weighted_position": 94.0
+    },
+    {
+      "categories": [
+        "roadside emergency",
+        "vehicle type"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/car-wont-start-clicking-noise-what-to-do/",
+      "impressions": 1,
+      "position": 66.0,
+      "queries": {
+        "truck won't start just clicks": 1
+      },
+      "top_queries": [
+        [
+          "truck won't start just clicks",
+          1
+        ]
+      ],
+      "weighted_position": 66.0
+    }
+  ],
+  "top_queries": [
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "car broke down on the road at night",
+      "impressions": 2,
+      "position": 89.0,
+      "queries": {
+        "car broke down on the road at night": 2
+      },
+      "top_queries": [
+        [
+          "car broke down on the road at night",
+          2
+        ]
+      ],
+      "weighted_position": 178.0
+    },
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "car died",
+      "impressions": 2,
+      "position": 41.5,
+      "queries": {
+        "car died": 2
+      },
+      "top_queries": [
+        [
+          "car died",
+          2
+        ]
+      ],
+      "weighted_position": 83.0
+    },
+    {
+      "categories": [
+        "city/location",
+        "insurance",
+        "towing cost",
+        "vehicle type"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "tow truck insurance colorado",
+      "impressions": 2,
+      "position": 47.0,
+      "queries": {
+        "tow truck insurance colorado": 2
+      },
+      "top_queries": [
+        [
+          "tow truck insurance colorado",
+          2
+        ]
+      ],
+      "weighted_position": 94.0
+    },
+    {
+      "categories": [
+        "roadside emergency",
+        "vehicle type"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "truck won't start just clicks",
+      "impressions": 1,
+      "position": 66.0,
+      "queries": {
+        "truck won't start just clicks": 1
+      },
+      "top_queries": [
+        [
+          "truck won't start just clicks",
+          1
+        ]
+      ],
+      "weighted_position": 66.0
+    }
+  ]
+}
