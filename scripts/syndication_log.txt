@@ -24265,3 +24265,33 @@
 [2026-10-19 15:14:59] === SYNDICATE DONE: towing-cost-in-austin-texas-after-breakdown-no-insurance | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-10-19 15:14:59] SYNCED | towing-cost-in-austin-texas-after-breakdown-no-insurance marked in synced-posts.txt
 [2026-10-19 15:14:59] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-10-20 09:16:57] === SYNDICATE START: car-engine-seized-up-can-it-be-towed-safely ===
+[2026-10-20 09:16:57] PREFLIGHT | title: Car Engine Seized Up: Can It Be Towed Safely?
+[2026-10-20 09:16:57] PREFLIGHT | date: 2026-10-20
+[2026-10-20 09:16:57] PREFLIGHT | timestamp: 2026-10-20 09:16:57
+[2026-10-20 09:16:57] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-10-20 09:16:57] PREFLIGHT | TUMBLR:  configured
+[2026-10-20 09:16:57] PREFLIGHT | BLOGGER: configured
+[2026-10-20 09:16:57] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-10-20 09:16:57] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-10-20 09:16:57] DEVTO | car-engine-seized-up-can-it-be-towed-safely | START
+[2026-10-20 09:16:57] DEVTO | car-engine-seized-up-can-it-be-towed-safely | account=TWTF2
+[2026-10-20 09:16:57] DEVTO | car-engine-seized-up-can-it-be-towed-safely | SUCCESS | https://dev.to/denverroadsideelitetowing/car-engine-seized-up-can-it-be-towed-safely-what-drivers-should-know-3n0j
+[2026-10-20 09:16:57] --- waiting 60s before next platform ---
+[2026-10-20 09:17:57] TUMBLR | car-engine-seized-up-can-it-be-towed-safely | START
+[2026-10-20 09:17:58] TUMBLR | car-engine-seized-up-can-it-be-towed-safely | SUCCESS | https://towwiththeflow.tumblr.com/post/831006418231558144
+[2026-10-20 09:17:58] --- waiting 60s before next platform ---
+[2026-10-20 09:18:58] BLOGGER | car-engine-seized-up-can-it-be-towed-safely | START
+[2026-10-20 09:18:58] BLOGGER | car-engine-seized-up-can-it-be-towed-safely | step 1/3: refreshing access token
+[2026-10-20 09:18:58] BLOGGER | car-engine-seized-up-can-it-be-towed-safely | step 2/3: converting markdown to HTML
+[2026-10-20 09:18:58] BLOGGER | car-engine-seized-up-can-it-be-towed-safely | step 3/3: posting to blog 1959471973457654666
+[2026-10-20 09:18:59] BLOGGER | car-engine-seized-up-can-it-be-towed-safely | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-engine-seized-up-can-it-be-towed.html
+[2026-10-20 09:18:59] --- waiting 60s before next platform ---
+[2026-10-20 09:19:59] WORDPRESS | car-engine-seized-up-can-it-be-towed-safely | START
+[2026-10-20 09:20:08] WORDPRESS | car-engine-seized-up-can-it-be-towed-safely | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/10/20/car-engine-seized-up-can-it-be-towed-safely/
+[2026-10-20 09:20:08] --- waiting 60s before next platform ---
+[2026-10-20 09:21:08] FEEDER | car-engine-seized-up-can-it-be-towed-safely | START
+[2026-10-20 09:21:09] FEEDER | car-engine-seized-up-can-it-be-towed-safely | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-engine-seized-up-can-it-be-towed-safely-advice/
+[2026-10-20 09:21:09] === SYNDICATE DONE: car-engine-seized-up-can-it-be-towed-safely | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-10-20 09:21:09] SYNCED | car-engine-seized-up-can-it-be-towed-safely marked in synced-posts.txt
+[2026-10-20 09:21:09] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
