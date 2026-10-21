@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-20T12:08:51.424315+00:00",
+  "generated_at": "2026-10-21T12:22:46.984459+00:00",
   "keywords": {
     "total": 1064,
-    "live": 726,
-    "pending": 338,
+    "live": 730,
+    "pending": 334,
     "local": {
-      "live": 238,
-      "pending": 51
+      "live": 240,
+      "pending": 49
     },
     "pain_point": {
-      "live": 488,
-      "pending": 287
+      "live": 490,
+      "pending": 285
     }
   },
   "next_targets": [
-    {
-      "keyword": "car engine seized up can it be towed safely",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "stranded on highway with baby what to do roadside emergency",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "brake failure while driving what to do emergency",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "radiator hose burst while driving can i drive to shop",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "geico roadside assistance how many times per year",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "oil pressure warning light came on do i pull over immediately",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 266
+      "count": 268
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 107
+      "count": 108
     },
     {
       "slug": "insurance-coverage",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 49
+      "count": 50
     },
     {
       "slug": "roadside-help",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-20T08:27:25.941031+00:00",
+    "generated_at": "2026-10-21T08:30:17.684741+00:00",
     "platforms": {
       "blog": {
-        "checked": 656,
-        "verified": 348
+        "checked": 686,
+        "verified": 378
       },
       "dev": {
-        "checked": 487,
-        "verified": 487
+        "checked": 491,
+        "verified": 491
       },
       "feeder": {
-        "checked": 698,
-        "verified": 698
+        "checked": 702,
+        "verified": 702
       },
       "tumblr": {
-        "checked": 695,
-        "verified": 695
+        "checked": 699,
+        "verified": 699
       },
       "wordpress": {
-        "checked": 703,
-        "verified": 703
+        "checked": 707,
+        "verified": 707
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-20T12:08:51.350677+00:00",
+    "generated_at": "2026-10-21T12:22:46.901507+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,14 +191,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 9,
+        "rows": 8,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 558,
+        "rows": 566,
         "source": "ga4",
         "status": "ok"
       }
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-20T12:08:51.448143+00:00",
+    "generatedAt": "2026-10-21T12:22:47.017164+00:00",
     "keywordGeneration": {
-      "currentInventory": 338,
-      "liveKeywords": 726,
-      "estimatedDaysRemaining": 84.5,
+      "currentInventory": 334,
+      "liveKeywords": 730,
+      "estimatedDaysRemaining": 83.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "84.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "83.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 501,
+      "verificationGaps": 475,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-20T08:27:25.941031+00:00",
+      "generatedAt": "2026-10-21T08:30:17.684741+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
