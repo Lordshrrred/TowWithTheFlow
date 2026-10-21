@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T08:27:25.941031+00:00",
+  "generated_at": "2026-10-21T08:30:17.684741+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -393,7 +393,7 @@
     },
     "alternator-died-while-driving-signs-and-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/alternator-died-while-driving-signs-and.html",
         "verified": null
       },
@@ -573,7 +573,7 @@
     },
     "battery-light-came-on-while-driving-should-i-pull-over": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/battery-light-came-on-while-driving.html",
         "verified": null
       },
@@ -708,9 +708,9 @@
     },
     "blown-head-gasket-symptoms-should-i-tow-or-drive": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/blown-head-gasket-symptoms-should-i-tow.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1865,9 +1865,9 @@
     },
     "car-broke-down-in-chicago-illinois-tow-truck-cost-no-insurance": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-broke-down-in-chicago-illinois-tow.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -1892,9 +1892,9 @@
     },
     "car-broke-down-in-denver-at-night-who-to-call": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-broke-down-in-denver-at-night-who.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -2147,7 +2147,7 @@
     },
     "car-broke-down-on-atlanta-highway-who-to-call": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-broke-down-on-atlanta-highway-who.html",
         "verified": null
       },
@@ -2471,9 +2471,9 @@
     },
     "car-broke-down-on-highway-in-houston-texas-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-broke-down-on-highway-in-houston.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -2498,9 +2498,9 @@
     },
     "car-broke-down-on-houston-freeway-who-to-call": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-broke-down-on-houston-freeway-who.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -2552,9 +2552,9 @@
     },
     "car-broke-down-on-interstate-at-night-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-broke-down-on-interstate-at-night.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -2606,9 +2606,9 @@
     },
     "car-broke-down-on-jacksonville-highway-who-to-call": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-broke-down-on-jacksonville-highway.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -2687,7 +2687,7 @@
     },
     "car-broke-down-on-memphis-highway-who-to-call": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-broke-down-on-memphis-highway-who.html",
         "verified": null
       },
@@ -3033,9 +3033,9 @@
     },
     "car-died-on-highway-shoulder-safe-to-wait-for-tow-truck": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-died-on-highway-shoulder-is-it-safe.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -3245,6 +3245,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/07/27/car-engine-misfiring-on-freeway-pull-over-or-keep-driving/",
+        "verified": true
+      }
+    },
+    "car-engine-seized-up-can-it-be-towed-safely": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-engine-seized-up-can-it-be-towed.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-engine-seized-up-can-it-be-towed-safely-what-drivers-should-know-3n0j",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-engine-seized-up-can-it-be-towed-safely-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/831006418231558144/car-engine-seized-up-can-it-be-towed-safely",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/10/20/car-engine-seized-up-can-it-be-towed-safely/",
         "verified": true
       }
     },
@@ -4180,6 +4207,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/09/23/car-overheating-on-highway-do-i-need-a-tow/",
+        "verified": true
+      }
+    },
+    "car-overheating-on-highway-in-phoenix-arizona-tow-cost": {
+      "blog": {
+        "reason": "http_429",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-overheating-on-highway-in-phoenix.html",
+        "verified": null
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/denverroadsideelitetowing/car-overheating-on-highway-in-phoenix-arizona-tow-cost-and-what-to-do-what-to-do-next-3e5k",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/car-overheating-on-highway-in-phoenix-arizona-tow-cost-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/831014470976405504/car-overheating-on-highway-in-phoenix-arizona-tow-cost",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/10/20/car-overheating-on-highway-in-phoenix-arizona-tow-cost/",
         "verified": true
       }
     },
@@ -5965,9 +6019,9 @@
     },
     "car-wont-start-after-sitting-in-cold-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-wont-start-after-sitting-in-cold.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -6236,9 +6290,9 @@
     },
     "car-wont-start-clicking-sound-need-tow-or-jump-start": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-wont-start-clicking-sound-do-you.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -6479,9 +6533,9 @@
     },
     "car-wont-start-in-parking-garage-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/car-wont-start-in-parking-garage-what.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -6614,9 +6668,9 @@
     },
     "catalytic-converter-stolen-car-wont-start-can-it-be-towed": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/catalytic-converter-stolen-and-car-wont.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -8069,9 +8123,9 @@
     },
     "engine-light-came-on-highway-is-it-safe-to-keep-driving": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/engine-light-came-on-highway-is-it-safe.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9453,9 +9507,9 @@
     },
     "how-long-does-it-take-for-a-tow-truck-to-arrive": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/how-long-does-it-take-for-tow-truck-to.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9714,9 +9768,9 @@
     },
     "how-much-does-a-tow-truck-cost-in-new-york-city": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/how-much-does-tow-truck-cost-in-new.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -9957,9 +10011,9 @@
     },
     "how-much-does-it-cost-to-tow-a-car-in-boston-massachusetts": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/how-much-does-it-cost-to-tow-car-in.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -10200,7 +10254,7 @@
     },
     "how-much-does-it-cost-to-tow-a-car-in-san-diego": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/how-much-does-it-cost-to-tow-car-in-san_0211123910.html",
         "verified": null
       },
@@ -10227,9 +10281,9 @@
     },
     "how-much-does-it-cost-to-tow-a-car-in-san-diego-california": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/how-much-does-it-cost-to-tow-car-in-san.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -11032,9 +11086,9 @@
     },
     "locked-out-of-car-in-unsafe-area-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/locked-out-of-car-in-unsafe-area-what.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -11422,9 +11476,9 @@
     },
     "ran-out-of-gas-on-freeway-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/ran-out-of-gas-on-freeway-what-to-do.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -11876,7 +11930,7 @@
     },
     "smoke-coming-from-under-hood-while-driving-what-to-do": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/smoke-coming-from-under-hood-while.html",
         "verified": null
       },
@@ -12247,6 +12301,33 @@
         "verified": true
       }
     },
+    "stranded-on-highway-with-baby-what-to-do-roadside-emergency": {
+      "blog": {
+        "reason": "http_429",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/stranded-on-highway-with-baby-what-to.html",
+        "verified": null
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/stranded-on-the-highway-with-a-baby-what-to-do-right-now-roadside-tips-1njg",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/stranded-on-highway-with-baby-what-to-do-roadside-emergency-advice/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/831018872008245248/stranded-on-highway-with-baby-what-to-do-roadside-emergency",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/10/20/stranded-on-highway-with-baby-what-to-do-roadside-emergency/",
+        "verified": true
+      }
+    },
     "stuck-on-railroad-tracks-car-wont-start-what-to-do": {
       "blog": {
         "reason": "ok",
@@ -12384,9 +12465,9 @@
     },
     "tire-blew-out-on-highway-what-to-do-next": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/tire-blew-out-on-highway-what-to-do-next.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -13505,9 +13586,9 @@
     },
     "tow-truck-taking-too-long-what-are-my-options-roadside": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/tow-truck-taking-too-long-your-options.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -14839,7 +14920,7 @@
     },
     "towing-cost-in-atlanta-georgia-no-insurance": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-atlanta-georgia-no.html",
         "verified": null
       },
@@ -14866,9 +14947,9 @@
     },
     "towing-cost-in-austin-texas-after-breakdown-no-insurance": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-austin-texas-after.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -15325,9 +15406,9 @@
     },
     "towing-cost-in-denver-colorado-without-insurance": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-denver-colorado-without.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -15374,6 +15455,33 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/06/23/towing-cost-in-denver-to-repair-shop-distance-fees/",
+        "verified": true
+      }
+    },
+    "towing-cost-in-houston-texas-per-mile": {
+      "blog": {
+        "reason": "ok",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-houston-texas-per-mile.html",
+        "verified": true
+      },
+      "dev": {
+        "reason": "ok",
+        "url": "https://dev.to/roadsideamericatowing/towing-cost-in-houston-texas-per-mile-what-youll-actually-pay-quick-guide-34o0",
+        "verified": true
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-houston-texas-per-mile-tips/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/831024421186813952/towing-cost-in-houston-texas-per-mile",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/10/20/towing-cost-in-houston-texas-per-mile/",
         "verified": true
       }
     },
@@ -15568,7 +15676,7 @@
     },
     "towing-cost-in-memphis-tennessee-flatbed": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "http_429",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-memphis-tennessee.html",
         "verified": null
       },
@@ -15784,9 +15892,9 @@
     },
     "towing-cost-in-phoenix-arizona-no-insurance": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-phoenix-arizona-no.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -15892,9 +16000,9 @@
     },
     "towing-cost-in-seattle-washington-no-insurance": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-seattle-washington-no.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -17492,9 +17600,9 @@
     },
     "towing-cost-san-diego-california-per-mile-breakdown": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/towing-cost-in-san-diego-california-per.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -18054,9 +18162,9 @@
     },
     "transmission-slipping-while-driving-should-i-pull-over-now": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/transmission-slipping-while-driving.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -18373,9 +18481,9 @@
     },
     "what-to-do-if-car-breaks-down-with-no-phone": {
       "blog": {
-        "reason": "site_unavailable",
+        "reason": "ok",
         "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/10/what-to-do-if-your-car-breaks-down-with.html",
-        "verified": null
+        "verified": true
       },
       "dev": {
         "reason": "ok",
@@ -18586,24 +18694,24 @@
   "source": "github-actions-audit",
   "summary": {
     "blog": {
-      "checked": 656,
-      "verified": 348
+      "checked": 686,
+      "verified": 378
     },
     "dev": {
-      "checked": 487,
-      "verified": 487
+      "checked": 491,
+      "verified": 491
     },
     "feeder": {
-      "checked": 698,
-      "verified": 698
+      "checked": 702,
+      "verified": 702
     },
     "tumblr": {
-      "checked": 695,
-      "verified": 695
+      "checked": 699,
+      "verified": 699
     },
     "wordpress": {
-      "checked": 703,
-      "verified": 703
+      "checked": 707,
+      "verified": 707
     }
   }
 }
