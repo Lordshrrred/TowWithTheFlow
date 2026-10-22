@@ -94,9 +94,9 @@
   },
   "comparison": {
     "current_gsc_rows": 4,
-    "previous_gsc_rows": 4
+    "previous_gsc_rows": 3
   },
-  "generated_at": "2026-10-21T12:22:46.901507+00:00",
+  "generated_at": "2026-10-22T12:23:09.468448+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -104,12 +104,12 @@
   },
   "periods": {
     "current": [
-      "2026-09-23",
-      "2026-10-20"
+      "2026-09-24",
+      "2026-10-21"
     ],
     "previous": [
-      "2026-08-26",
-      "2026-09-22"
+      "2026-08-27",
+      "2026-09-23"
     ]
   },
   "request_counts": {
@@ -120,14 +120,14 @@
     {
       "cached": false,
       "message": "Fetched Search Console query/page data.",
-      "rows": 8,
+      "rows": 7,
       "source": "search_console",
       "status": "ok"
     },
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 566,
+      "rows": 568,
       "source": "ga4",
       "status": "ok"
     }
@@ -136,7 +136,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-21T12:22:46.901507+00:00",
+    "generated_at": "2026-10-22T12:23:09.468448+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -148,37 +148,37 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 8,
+        "rows": 7,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 566,
+        "rows": 568,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 3,
+      "completes": 4,
       "completion_rate": 1.0,
-      "opens": 3,
+      "opens": 4,
       "top_events": [
         {
-          "count": 19,
+          "count": 33,
           "event": "estimate_generated"
         },
         {
-          "count": 13,
+          "count": 18,
           "event": "field_change"
         },
         {
-          "count": 3,
+          "count": 4,
           "event": "calculator_complete"
         },
         {
-          "count": 3,
+          "count": 4,
           "event": "calculator_open"
         }
       ]
@@ -195,24 +195,24 @@
     "winning_page_count": 0
   },
   "tool_engine": {
-    "completes": 3,
+    "completes": 4,
     "completion_rate": 1.0,
-    "opens": 3,
+    "opens": 4,
     "top_events": [
       {
-        "count": 19,
+        "count": 33,
         "event": "estimate_generated"
       },
       {
-        "count": 13,
+        "count": 18,
         "event": "field_change"
       },
       {
-        "count": 3,
+        "count": 4,
         "event": "calculator_complete"
       },
       {
-        "count": 3,
+        "count": 4,
         "event": "calculator_open"
       }
     ]
