@@ -1,11 +1,11 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-10-22T12:23:09.468448+00:00
+Generated: 2026-10-23T12:04:52.488255+00:00
 
 ## 1. Data Connection/Freshness
 
-- **search_console**: ok. Fetched Search Console query/page data. Rows: 7.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 568.
+- **search_console**: ok. Fetched Search Console query/page data. Rows: 6.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 572.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
@@ -14,7 +14,6 @@ Generated: 2026-10-22T12:23:09.468448+00:00
 |  | 0 | 2 | 0.0% | 89.0 |
 |  | 0 | 2 | 0.0% | 41.5 |
 |  | 0 | 2 | 0.0% | 47.0 |
-|  | 0 | 1 | 0.0% | 66.0 |
 
 ## 3. Top Real Queries
 | Query | Clicks | Impressions | CTR | Avg position |
@@ -22,7 +21,6 @@ Generated: 2026-10-22T12:23:09.468448+00:00
 | car broke down on the road at night | 0 | 2 | 0.0% | 89.0 |
 | car died | 0 | 2 | 0.0% | 41.5 |
 | tow truck insurance colorado | 0 | 2 | 0.0% | 47.0 |
-| truck won't start just clicks | 0 | 1 | 0.0% | 66.0 |
 
 ## 4. Near-Page-One Opportunities
 None found with current thresholds.
@@ -46,7 +44,6 @@ No city/local opportunities found with current thresholds.
 | Page | Backlinks | Syndications | Impressions | Clicks |
 | --- | --- | --- | --- | --- |
 | /how-much-does-a-tow-cost-in-colorado/ | 5 | 5 | 2 | 0 |
-| /car-wont-start-clicking-noise-what-to-do/ | 5 | 4 | 1 | 0 |
 | /what-to-do-if-your-car-breaks-down-at-night/ | 4 | 5 | 2 | 0 |
 | /car-died-while-driving-what-now/ | 4 | 5 | 2 | 0 |
 

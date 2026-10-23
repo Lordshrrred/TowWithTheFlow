@@ -60,14 +60,6 @@
       "syndications": 5
     },
     {
-      "backlinks": 5,
-      "clicks": 0,
-      "impressions": 1,
-      "path": "/car-wont-start-clicking-noise-what-to-do/",
-      "position": 66.0,
-      "syndications": 4
-    },
-    {
       "backlinks": 4,
       "clicks": 0,
       "impressions": 2,
@@ -93,10 +85,10 @@
     "weak_engagement": []
   },
   "comparison": {
-    "current_gsc_rows": 4,
+    "current_gsc_rows": 3,
     "previous_gsc_rows": 3
   },
-  "generated_at": "2026-10-22T12:23:09.468448+00:00",
+  "generated_at": "2026-10-23T12:04:52.488255+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -104,12 +96,12 @@
   },
   "periods": {
     "current": [
-      "2026-09-24",
-      "2026-10-21"
+      "2026-09-25",
+      "2026-10-22"
     ],
     "previous": [
-      "2026-08-27",
-      "2026-09-23"
+      "2026-08-28",
+      "2026-09-24"
     ]
   },
   "request_counts": {
@@ -120,14 +112,14 @@
     {
       "cached": false,
       "message": "Fetched Search Console query/page data.",
-      "rows": 7,
+      "rows": 6,
       "source": "search_console",
       "status": "ok"
     },
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 568,
+      "rows": 572,
       "source": "ga4",
       "status": "ok"
     }
@@ -136,7 +128,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-22T12:23:09.468448+00:00",
+    "generated_at": "2026-10-23T12:04:52.488255+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -148,14 +140,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 7,
+        "rows": 6,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 568,
+        "rows": 572,
         "source": "ga4",
         "status": "ok"
       }
@@ -190,8 +182,8 @@
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 4,
-    "top_query_count": 4,
+    "top_landing_page_count": 3,
+    "top_query_count": 3,
     "winning_page_count": 0
   },
   "tool_engine": {
@@ -287,27 +279,6 @@
         ]
       ],
       "weighted_position": 94.0
-    },
-    {
-      "categories": [
-        "roadside emergency",
-        "vehicle type"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "/car-wont-start-clicking-noise-what-to-do/",
-      "impressions": 1,
-      "position": 66.0,
-      "queries": {
-        "truck won't start just clicks": 1
-      },
-      "top_queries": [
-        [
-          "truck won't start just clicks",
-          1
-        ]
-      ],
-      "weighted_position": 66.0
     }
   ],
   "top_queries": [
@@ -373,27 +344,6 @@
         ]
       ],
       "weighted_position": 94.0
-    },
-    {
-      "categories": [
-        "roadside emergency",
-        "vehicle type"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "truck won't start just clicks",
-      "impressions": 1,
-      "position": 66.0,
-      "queries": {
-        "truck won't start just clicks": 1
-      },
-      "top_queries": [
-        [
-          "truck won't start just clicks",
-          1
-        ]
-      ],
-      "weighted_position": 66.0
     }
   ]
 }
