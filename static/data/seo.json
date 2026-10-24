@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-23T12:56:05.100715+00:00",
+  "generated_at": "2026-10-24T11:36:35.751589+00:00",
   "keywords": {
     "total": 1064,
-    "live": 738,
-    "pending": 326,
+    "live": 742,
+    "pending": 322,
     "local": {
-      "live": 244,
-      "pending": 45
+      "live": 246,
+      "pending": 43
     },
     "pain_point": {
-      "live": 494,
-      "pending": 281
+      "live": 496,
+      "pending": 279
     }
   },
   "next_targets": [
-    {
-      "keyword": "alternator died while driving can i make it home",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "airbag light came on while driving is it safe",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "check engine light flashing car shaking pull over or drive",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "serpentine belt snapped while driving is it a tow",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car leaking fluid and wont start emergency tow",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "timing belt broke while driving can it be driven",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 272
+      "count": 274
     },
     {
       "slug": "engine-mechanical",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 68
+      "count": 69
     },
     {
       "slug": "highway-safety",
@@ -107,14 +107,14 @@
       "count": 11
     },
     {
-      "slug": "vehicle-safety",
-      "label": "Vehicle Safety",
+      "slug": "accident-liability",
+      "label": "Accidents & Towing Liability",
       "count": 11
     },
     {
-      "slug": "accident-liability",
-      "label": "Accidents & Towing Liability",
-      "count": 10
+      "slug": "vehicle-safety",
+      "label": "Vehicle Safety",
+      "count": 11
     },
     {
       "slug": "vehicle-recovery",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-23T08:28:35.082460+00:00",
+    "generated_at": "2026-10-24T08:03:48.141453+00:00",
     "platforms": {
       "blog": {
-        "checked": 660,
-        "verified": 352
+        "checked": 700,
+        "verified": 392
       },
       "dev": {
-        "checked": 499,
-        "verified": 499
+        "checked": 503,
+        "verified": 503
       },
       "feeder": {
-        "checked": 710,
-        "verified": 710
+        "checked": 714,
+        "verified": 714
       },
       "tumblr": {
-        "checked": 707,
-        "verified": 707
+        "checked": 711,
+        "verified": 711
       },
       "wordpress": {
-        "checked": 715,
-        "verified": 715
+        "checked": 719,
+        "verified": 719
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-23T12:04:52.488255+00:00",
+    "generated_at": "2026-10-24T11:36:35.667746+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,14 +191,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 6,
+        "rows": 5,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 572,
+        "rows": 574,
         "source": "ga4",
         "status": "ok"
       }
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-23T12:56:05.123558+00:00",
+    "generatedAt": "2026-10-24T11:36:35.785484+00:00",
     "keywordGeneration": {
-      "currentInventory": 326,
-      "liveKeywords": 738,
-      "estimatedDaysRemaining": 81.5,
+      "currentInventory": 322,
+      "liveKeywords": 742,
+      "estimatedDaysRemaining": 80.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "81.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "80.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 509,
+      "verificationGaps": 473,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-23T08:28:35.082460+00:00",
+      "generatedAt": "2026-10-24T08:03:48.141453+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
