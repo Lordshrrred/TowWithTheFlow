@@ -55,24 +55,24 @@
       "backlinks": 5,
       "clicks": 0,
       "impressions": 2,
-      "path": "/how-much-does-a-tow-cost-in-colorado/",
-      "position": 47.0,
-      "syndications": 5
-    },
-    {
-      "backlinks": 4,
-      "clicks": 0,
-      "impressions": 2,
       "path": "/what-to-do-if-your-car-breaks-down-at-night/",
       "position": 89.0,
       "syndications": 5
     },
     {
-      "backlinks": 4,
+      "backlinks": 5,
       "clicks": 0,
       "impressions": 2,
       "path": "/car-died-while-driving-what-now/",
       "position": 41.5,
+      "syndications": 5
+    },
+    {
+      "backlinks": 5,
+      "clicks": 0,
+      "impressions": 2,
+      "path": "/how-much-does-a-tow-cost-in-colorado/",
+      "position": 47.0,
       "syndications": 5
     }
   ],
@@ -88,7 +88,7 @@
     "current_gsc_rows": 3,
     "previous_gsc_rows": 2
   },
-  "generated_at": "2026-10-24T11:36:35.667746+00:00",
+  "generated_at": "2026-10-25T11:58:22.256292+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -96,12 +96,12 @@
   },
   "periods": {
     "current": [
-      "2026-09-26",
-      "2026-10-23"
+      "2026-09-27",
+      "2026-10-24"
     ],
     "previous": [
-      "2026-08-29",
-      "2026-09-25"
+      "2026-08-30",
+      "2026-09-26"
     ]
   },
   "request_counts": {
@@ -119,7 +119,7 @@
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 574,
+      "rows": 576,
       "source": "ga4",
       "status": "ok"
     }
@@ -128,7 +128,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-24T11:36:35.667746+00:00",
+    "generated_at": "2026-10-25T11:58:22.256292+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -147,30 +147,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 574,
+        "rows": 576,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 4,
+      "completes": 7,
       "completion_rate": 1.0,
-      "opens": 4,
+      "opens": 7,
       "top_events": [
         {
-          "count": 33,
+          "count": 170,
           "event": "estimate_generated"
         },
         {
-          "count": 18,
+          "count": 67,
           "event": "field_change"
         },
         {
-          "count": 4,
+          "count": 7,
           "event": "calculator_complete"
         },
         {
-          "count": 4,
+          "count": 7,
           "event": "calculator_open"
         }
       ]
@@ -187,24 +187,24 @@
     "winning_page_count": 0
   },
   "tool_engine": {
-    "completes": 4,
+    "completes": 7,
     "completion_rate": 1.0,
-    "opens": 4,
+    "opens": 7,
     "top_events": [
       {
-        "count": 33,
+        "count": 170,
         "event": "estimate_generated"
       },
       {
-        "count": 18,
+        "count": 67,
         "event": "field_change"
       },
       {
-        "count": 4,
+        "count": 7,
         "event": "calculator_complete"
       },
       {
-        "count": 4,
+        "count": 7,
         "event": "calculator_open"
       }
     ]

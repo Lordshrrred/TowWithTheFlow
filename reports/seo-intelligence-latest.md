@@ -1,11 +1,11 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-10-24T11:36:35.667746+00:00
+Generated: 2026-10-25T11:58:22.256292+00:00
 
 ## 1. Data Connection/Freshness
 
 - **search_console**: ok. Fetched Search Console query/page data. Rows: 5.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 574.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 576.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
@@ -43,9 +43,9 @@ No city/local opportunities found with current thresholds.
 ## 10. Backlink-Supported Pages
 | Page | Backlinks | Syndications | Impressions | Clicks |
 | --- | --- | --- | --- | --- |
+| /what-to-do-if-your-car-breaks-down-at-night/ | 5 | 5 | 2 | 0 |
+| /car-died-while-driving-what-now/ | 5 | 5 | 2 | 0 |
 | /how-much-does-a-tow-cost-in-colorado/ | 5 | 5 | 2 | 0 |
-| /what-to-do-if-your-car-breaks-down-at-night/ | 4 | 5 | 2 | 0 |
-| /car-died-while-driving-what-now/ | 4 | 5 | 2 | 0 |
 
 ## 11. Recommended Authority Assets
 | Asset | Impressions | Clicks | Backlog | Priority |
@@ -56,13 +56,13 @@ No city/local opportunities found with current thresholds.
 1. **Build or refine authority asset: Insurance Comparison** — 2 Search Console impressions match this asset pattern. Next: Use the authority backlog and build as a separate scoped asset.
 
 ## 13. Tool Engine Usage
-- Calculator opens: 4 · Completions: 4 · Completion rate: 100.0%
+- Calculator opens: 7 · Completions: 7 · Completion rate: 100.0%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 33 |
-| field_change | 18 |
-| calculator_complete | 4 |
-| calculator_open | 4 |
+| estimate_generated | 170 |
+| field_change | 67 |
+| calculator_complete | 7 |
+| calculator_open | 7 |
 
 ## 14. Data Limitations
 
