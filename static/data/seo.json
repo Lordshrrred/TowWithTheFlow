@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-26T14:38:24.930265+00:00",
+  "generated_at": "2026-10-27T12:39:10.182497+00:00",
   "keywords": {
     "total": 1064,
-    "live": 750,
-    "pending": 314,
+    "live": 754,
+    "pending": 310,
     "local": {
-      "live": 250,
-      "pending": 39
+      "live": 252,
+      "pending": 37
     },
     "pain_point": {
-      "live": 500,
-      "pending": 275
+      "live": 502,
+      "pending": 273
     }
   },
   "next_targets": [
-    {
-      "keyword": "car wont shift out of park on busy street",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "coolant leaking fast can i drive to nearest mechanic",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car died in tunnel what do i do",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "transmission slipping bad can i drive to mechanic or need tow",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does my car insurance cover towing if i cause the accident",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car making burning smell after driving should i pull over",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 278
+      "count": 279
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 114
+      "count": 116
     },
     {
       "slug": "insurance-coverage",
@@ -117,13 +117,13 @@
       "count": 11
     },
     {
-      "slug": "vehicle-recovery",
-      "label": "Vehicle Recovery",
-      "count": 7
-    },
-    {
       "slug": "winter-weather",
       "label": "Winter & Weather Breakdowns",
+      "count": 8
+    },
+    {
+      "slug": "vehicle-recovery",
+      "label": "Vehicle Recovery",
       "count": 7
     },
     {
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-26T08:49:19.767057+00:00",
+    "generated_at": "2026-10-27T08:54:53.857141+00:00",
     "platforms": {
       "blog": {
-        "checked": 696,
-        "verified": 696
+        "checked": 707,
+        "verified": 707
       },
       "dev": {
-        "checked": 479,
-        "verified": 479
+        "checked": 483,
+        "verified": 483
       },
       "feeder": {
-        "checked": 722,
-        "verified": 722
+        "checked": 726,
+        "verified": 726
       },
       "tumblr": {
-        "checked": 719,
-        "verified": 719
+        "checked": 723,
+        "verified": 723
       },
       "wordpress": {
-        "checked": 727,
-        "verified": 727
+        "checked": 731,
+        "verified": 731
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-26T13:32:19.365536+00:00",
+    "generated_at": "2026-10-27T12:39:10.097816+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,7 +198,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 580,
+        "rows": 582,
         "source": "ga4",
         "status": "ok"
       }
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-26T14:38:24.964493+00:00",
+    "generatedAt": "2026-10-27T12:39:10.215903+00:00",
     "keywordGeneration": {
-      "currentInventory": 314,
-      "liveKeywords": 750,
-      "estimatedDaysRemaining": 78.5,
+      "currentInventory": 310,
+      "liveKeywords": 754,
+      "estimatedDaysRemaining": 77.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "78.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "77.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 209,
+      "verificationGaps": 202,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-26T08:49:19.767057+00:00",
+      "generatedAt": "2026-10-27T08:54:53.857141+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
