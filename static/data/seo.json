@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-27T12:39:10.182497+00:00",
+  "generated_at": "2026-10-28T13:31:11.687606+00:00",
   "keywords": {
     "total": 1064,
-    "live": 754,
-    "pending": 310,
+    "live": 758,
+    "pending": 306,
     "local": {
-      "live": 252,
-      "pending": 37
+      "live": 254,
+      "pending": 35
     },
     "pain_point": {
-      "live": 502,
-      "pending": 273
+      "live": 504,
+      "pending": 271
     }
   },
   "next_targets": [
-    {
-      "keyword": "car died in tunnel what do i do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "serpentine belt snapped while driving is it a tow",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car leaking fluid and wont start emergency tow",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "car making burning smell after driving should i pull over",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "brake pedal went to floor while driving what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car leaking coolant on side of road can i add water and drive",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 279
+      "count": 281
     },
     {
       "slug": "engine-mechanical",
@@ -94,7 +94,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 31
+      "count": 33
     },
     {
       "slug": "tire-wheel",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-27T08:54:53.857141+00:00",
+    "generated_at": "2026-10-28T09:35:17.898158+00:00",
     "platforms": {
       "blog": {
-        "checked": 707,
-        "verified": 707
+        "checked": 703,
+        "verified": 703
       },
       "dev": {
-        "checked": 483,
-        "verified": 483
+        "checked": 487,
+        "verified": 487
       },
       "feeder": {
-        "checked": 726,
-        "verified": 726
+        "checked": 730,
+        "verified": 730
       },
       "tumblr": {
-        "checked": 723,
-        "verified": 723
+        "checked": 727,
+        "verified": 727
       },
       "wordpress": {
-        "checked": 731,
-        "verified": 731
+        "checked": 735,
+        "verified": 735
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-27T12:39:10.097816+00:00",
+    "generated_at": "2026-10-28T13:31:11.604195+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,7 +198,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 582,
+        "rows": 584,
         "source": "ga4",
         "status": "ok"
       }
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-27T12:39:10.215903+00:00",
+    "generatedAt": "2026-10-28T13:31:11.712897+00:00",
     "keywordGeneration": {
-      "currentInventory": 310,
-      "liveKeywords": 754,
-      "estimatedDaysRemaining": 77.5,
+      "currentInventory": 306,
+      "liveKeywords": 758,
+      "estimatedDaysRemaining": 76.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "77.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "76.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 202,
+      "verificationGaps": 210,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-27T08:54:53.857141+00:00",
+      "generatedAt": "2026-10-28T09:35:17.898158+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
