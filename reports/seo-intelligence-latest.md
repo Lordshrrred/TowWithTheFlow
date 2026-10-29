@@ -1,11 +1,11 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-10-28T13:31:11.604195+00:00
+Generated: 2026-10-29T13:41:43.644720+00:00
 
 ## 1. Data Connection/Freshness
 
 - **search_console**: ok. Fetched Search Console query/page data. Rows: 5.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 584.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 582.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
@@ -56,13 +56,13 @@ No city/local opportunities found with current thresholds.
 1. **Build or refine authority asset: Insurance Comparison** — 2 Search Console impressions match this asset pattern. Next: Use the authority backlog and build as a separate scoped asset.
 
 ## 13. Tool Engine Usage
-- Calculator opens: 8 · Completions: 8 · Completion rate: 100.0%
+- Calculator opens: 11 · Completions: 11 · Completion rate: 100.0%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 173 |
-| field_change | 69 |
-| calculator_complete | 8 |
-| calculator_open | 8 |
+| estimate_generated | 194 |
+| field_change | 82 |
+| calculator_complete | 11 |
+| calculator_open | 11 |
 
 ## 14. Data Limitations
 

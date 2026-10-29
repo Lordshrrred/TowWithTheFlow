@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-28T14:39:20.577019+00:00",
+  "generated_at": "2026-10-29T13:41:43.712094+00:00",
   "keywords": {
     "total": 1064,
-    "live": 758,
-    "pending": 306,
+    "live": 762,
+    "pending": 302,
     "local": {
-      "live": 254,
-      "pending": 35
+      "live": 256,
+      "pending": 33
     },
     "pain_point": {
-      "live": 504,
-      "pending": 271
+      "live": 506,
+      "pending": 269
     }
   },
   "next_targets": [
-    {
-      "keyword": "car leaking fluid and wont start emergency tow",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "timing belt broke while driving can it be driven",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car overheating every few miles can i drive or do i tow",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "car leaking coolant on side of road can i add water and drive",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "power steering failed while driving is it safe to drive home",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "airbag light on after accident can i still drive car",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 281
+      "count": 283
     },
     {
       "slug": "engine-mechanical",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 69
+      "count": 70
     },
     {
       "slug": "highway-safety",
@@ -94,17 +94,12 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 33
+      "count": 34
     },
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
       "count": 31
-    },
-    {
-      "slug": "accident-liability",
-      "label": "Accidents & Towing Liability",
-      "count": 11
     },
     {
       "slug": "towing-logistics",
@@ -114,6 +109,11 @@
     {
       "slug": "vehicle-safety",
       "label": "Vehicle Safety",
+      "count": 11
+    },
+    {
+      "slug": "accident-liability",
+      "label": "Accidents & Towing Liability",
       "count": 11
     },
     {
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-28T09:35:17.898158+00:00",
+    "generated_at": "2026-10-29T09:53:01.402891+00:00",
     "platforms": {
       "blog": {
-        "checked": 703,
-        "verified": 703
+        "checked": 706,
+        "verified": 706
       },
       "dev": {
-        "checked": 487,
-        "verified": 487
+        "checked": 491,
+        "verified": 491
       },
       "feeder": {
-        "checked": 730,
-        "verified": 730
+        "checked": 734,
+        "verified": 734
       },
       "tumblr": {
-        "checked": 727,
-        "verified": 727
+        "checked": 731,
+        "verified": 731
       },
       "wordpress": {
-        "checked": 735,
-        "verified": 735
+        "checked": 739,
+        "verified": 739
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-28T13:31:11.604195+00:00",
+    "generated_at": "2026-10-29T13:41:43.644720+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,30 +198,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 584,
+        "rows": 582,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 8,
+      "completes": 11,
       "completion_rate": 1.0,
-      "opens": 8,
+      "opens": 11,
       "top_events": [
         {
-          "count": 173,
+          "count": 194,
           "event": "estimate_generated"
         },
         {
-          "count": 69,
+          "count": 82,
           "event": "field_change"
         },
         {
-          "count": 8,
+          "count": 11,
           "event": "calculator_complete"
         },
         {
-          "count": 8,
+          "count": 11,
           "event": "calculator_open"
         }
       ]
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-28T14:39:20.610730+00:00",
+    "generatedAt": "2026-10-29T13:41:43.736521+00:00",
     "keywordGeneration": {
-      "currentInventory": 306,
-      "liveKeywords": 758,
-      "estimatedDaysRemaining": 76.5,
+      "currentInventory": 302,
+      "liveKeywords": 762,
+      "estimatedDaysRemaining": 75.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "76.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "75.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 210,
+      "verificationGaps": 211,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-28T09:35:17.898158+00:00",
+      "generatedAt": "2026-10-29T09:53:01.402891+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
