@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-29T13:41:43.712094+00:00",
+  "generated_at": "2026-10-30T13:31:29.629372+00:00",
   "keywords": {
     "total": 1064,
-    "live": 762,
-    "pending": 302,
+    "live": 766,
+    "pending": 298,
     "local": {
-      "live": 256,
-      "pending": 33
+      "live": 258,
+      "pending": 31
     },
     "pain_point": {
-      "live": 506,
-      "pending": 269
+      "live": 508,
+      "pending": 267
     }
   },
   "next_targets": [
-    {
-      "keyword": "car overheating every few miles can i drive or do i tow",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how long does it take for a tow truck to arrive on highway",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car engine smoking on highway safe to keep driving",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "airbag light on after accident can i still drive car",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "how long can you wait for a tow truck on highway",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does aaa cover towing if car is not registered in my name",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 283
+      "count": 285
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 116
+      "count": 117
     },
     {
       "slug": "insurance-coverage",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 50
+      "count": 51
     },
     {
       "slug": "roadside-help",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-29T09:53:01.402891+00:00",
+    "generated_at": "2026-10-30T09:56:33.476140+00:00",
     "platforms": {
       "blog": {
-        "checked": 706,
-        "verified": 706
+        "checked": 697,
+        "verified": 697
       },
       "dev": {
-        "checked": 491,
-        "verified": 491
+        "checked": 495,
+        "verified": 495
       },
       "feeder": {
-        "checked": 734,
-        "verified": 734
+        "checked": 738,
+        "verified": 738
       },
       "tumblr": {
-        "checked": 731,
-        "verified": 731
+        "checked": 735,
+        "verified": 735
       },
       "wordpress": {
-        "checked": 739,
-        "verified": 739
+        "checked": 743,
+        "verified": 743
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-29T13:41:43.644720+00:00",
+    "generated_at": "2026-10-30T13:31:29.550478+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,14 +191,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 5,
+        "rows": 7,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 582,
+        "rows": 584,
         "source": "ga4",
         "status": "ok"
       }
@@ -229,7 +229,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "2 Search Console impressions match this asset pattern.",
+        "reason": "1 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-29T13:41:43.736521+00:00",
+    "generatedAt": "2026-10-30T13:31:29.651665+00:00",
     "keywordGeneration": {
-      "currentInventory": 302,
-      "liveKeywords": 762,
-      "estimatedDaysRemaining": 75.5,
+      "currentInventory": 298,
+      "liveKeywords": 766,
+      "estimatedDaysRemaining": 74.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "75.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "74.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 211,
+      "verificationGaps": 224,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-29T09:53:01.402891+00:00",
+      "generatedAt": "2026-10-30T09:56:33.476140+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,

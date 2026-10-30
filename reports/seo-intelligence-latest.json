@@ -13,14 +13,14 @@
           ],
           "clicks": 0,
           "ctr": 0.0,
-          "impressions": 2,
+          "impressions": 1,
           "page": "https://towwiththeflow.com/how-much-does-a-tow-cost-in-colorado/",
           "path": "/how-much-does-a-tow-cost-in-colorado/",
-          "position": 47.0,
+          "position": 48.0,
           "query": "tow truck insurance colorado"
         }
       ],
-      "impressions": 2
+      "impressions": 1
     },
     {
       "asset": "Tow Cost Estimator",
@@ -55,14 +55,6 @@
       "backlinks": 5,
       "clicks": 0,
       "impressions": 2,
-      "path": "/what-to-do-if-your-car-breaks-down-at-night/",
-      "position": 89.0,
-      "syndications": 5
-    },
-    {
-      "backlinks": 5,
-      "clicks": 0,
-      "impressions": 2,
       "path": "/car-died-while-driving-what-now/",
       "position": 41.5,
       "syndications": 5
@@ -70,9 +62,17 @@
     {
       "backlinks": 5,
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
+      "path": "/what-to-do-if-your-car-breaks-down-at-night/",
+      "position": 90.0,
+      "syndications": 5
+    },
+    {
+      "backlinks": 5,
+      "clicks": 0,
+      "impressions": 1,
       "path": "/how-much-does-a-tow-cost-in-colorado/",
-      "position": 47.0,
+      "position": 48.0,
       "syndications": 5
     }
   ],
@@ -86,9 +86,9 @@
   },
   "comparison": {
     "current_gsc_rows": 3,
-    "previous_gsc_rows": 2
+    "previous_gsc_rows": 4
   },
-  "generated_at": "2026-10-29T13:41:43.644720+00:00",
+  "generated_at": "2026-10-30T13:31:29.550478+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -96,12 +96,12 @@
   },
   "periods": {
     "current": [
-      "2026-10-01",
-      "2026-10-28"
+      "2026-10-02",
+      "2026-10-29"
     ],
     "previous": [
-      "2026-09-03",
-      "2026-09-30"
+      "2026-09-04",
+      "2026-10-01"
     ]
   },
   "request_counts": {
@@ -112,14 +112,14 @@
     {
       "cached": false,
       "message": "Fetched Search Console query/page data.",
-      "rows": 5,
+      "rows": 7,
       "source": "search_console",
       "status": "ok"
     },
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 582,
+      "rows": 584,
       "source": "ga4",
       "status": "ok"
     }
@@ -128,7 +128,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-29T13:41:43.644720+00:00",
+    "generated_at": "2026-10-30T13:31:29.550478+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -140,14 +140,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 5,
+        "rows": 7,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 582,
+        "rows": 584,
         "source": "ga4",
         "status": "ok"
       }
@@ -178,7 +178,7 @@
     "top_actions": [
       {
         "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "2 Search Console impressions match this asset pattern.",
+        "reason": "1 Search Console impressions match this asset pattern.",
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
@@ -212,31 +212,11 @@
   "top_actions": [
     {
       "next_action": "Use the authority backlog and build as a separate scoped asset.",
-      "reason": "2 Search Console impressions match this asset pattern.",
+      "reason": "1 Search Console impressions match this asset pattern.",
       "title": "Build or refine authority asset: Insurance Comparison"
     }
   ],
   "top_landing_pages": [
-    {
-      "categories": [
-        "general roadside"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "/what-to-do-if-your-car-breaks-down-at-night/",
-      "impressions": 2,
-      "position": 89.0,
-      "queries": {
-        "car broke down on the road at night": 2
-      },
-      "top_queries": [
-        [
-          "car broke down on the road at night",
-          2
-        ]
-      ],
-      "weighted_position": 178.0
-    },
     {
       "categories": [
         "general roadside"
@@ -259,6 +239,26 @@
     },
     {
       "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/what-to-do-if-your-car-breaks-down-at-night/",
+      "impressions": 1,
+      "position": 90.0,
+      "queries": {
+        "car broke down on the road at night": 1
+      },
+      "top_queries": [
+        [
+          "car broke down on the road at night",
+          1
+        ]
+      ],
+      "weighted_position": 90.0
+    },
+    {
+      "categories": [
         "city/location",
         "insurance",
         "towing cost",
@@ -267,41 +267,21 @@
       "clicks": 0,
       "ctr": 0.0,
       "id": "/how-much-does-a-tow-cost-in-colorado/",
-      "impressions": 2,
-      "position": 47.0,
+      "impressions": 1,
+      "position": 48.0,
       "queries": {
-        "tow truck insurance colorado": 2
+        "tow truck insurance colorado": 1
       },
       "top_queries": [
         [
           "tow truck insurance colorado",
-          2
+          1
         ]
       ],
-      "weighted_position": 94.0
+      "weighted_position": 48.0
     }
   ],
   "top_queries": [
-    {
-      "categories": [
-        "general roadside"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "car broke down on the road at night",
-      "impressions": 2,
-      "position": 89.0,
-      "queries": {
-        "car broke down on the road at night": 2
-      },
-      "top_queries": [
-        [
-          "car broke down on the road at night",
-          2
-        ]
-      ],
-      "weighted_position": 178.0
-    },
     {
       "categories": [
         "general roadside"
@@ -324,6 +304,26 @@
     },
     {
       "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "car broke down on the road at night",
+      "impressions": 1,
+      "position": 90.0,
+      "queries": {
+        "car broke down on the road at night": 1
+      },
+      "top_queries": [
+        [
+          "car broke down on the road at night",
+          1
+        ]
+      ],
+      "weighted_position": 90.0
+    },
+    {
+      "categories": [
         "city/location",
         "insurance",
         "towing cost",
@@ -332,18 +332,18 @@
       "clicks": 0,
       "ctr": 0.0,
       "id": "tow truck insurance colorado",
-      "impressions": 2,
-      "position": 47.0,
+      "impressions": 1,
+      "position": 48.0,
       "queries": {
-        "tow truck insurance colorado": 2
+        "tow truck insurance colorado": 1
       },
       "top_queries": [
         [
           "tow truck insurance colorado",
-          2
+          1
         ]
       ],
-      "weighted_position": 94.0
+      "weighted_position": 48.0
     }
   ]
 }
