@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-30T14:40:14.946313+00:00",
+  "generated_at": "2026-10-31T13:02:42.611493+00:00",
   "keywords": {
     "total": 1064,
-    "live": 766,
-    "pending": 298,
+    "live": 770,
+    "pending": 294,
     "local": {
-      "live": 258,
-      "pending": 31
+      "live": 260,
+      "pending": 29
     },
     "pain_point": {
-      "live": 508,
-      "pending": 267
+      "live": 510,
+      "pending": 265
     }
   },
   "next_targets": [
-    {
-      "keyword": "car engine smoking on highway safe to keep driving",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "transmission slipping bad can i drive to mechanic or need tow",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "does my car insurance cover towing if i cause the accident",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "does aaa cover towing if car is not registered in my name",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down on interstate median what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "what happens if tow truck damages my car",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 285
+      "count": 287
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 117
+      "count": 119
     },
     {
       "slug": "insurance-coverage",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-30T09:56:33.476140+00:00",
+    "generated_at": "2026-10-31T09:32:28.457186+00:00",
     "platforms": {
       "blog": {
-        "checked": 697,
-        "verified": 697
+        "checked": 681,
+        "verified": 681
       },
       "dev": {
-        "checked": 495,
-        "verified": 495
+        "checked": 499,
+        "verified": 499
       },
       "feeder": {
-        "checked": 738,
-        "verified": 738
+        "checked": 742,
+        "verified": 742
       },
       "tumblr": {
-        "checked": 735,
-        "verified": 735
+        "checked": 739,
+        "verified": 739
       },
       "wordpress": {
-        "checked": 743,
-        "verified": 743
+        "checked": 747,
+        "verified": 747
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-30T13:31:29.550478+00:00",
+    "generated_at": "2026-10-31T13:02:42.556367+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,7 +198,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 584,
+        "rows": 580,
         "source": "ga4",
         "status": "ok"
       }
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-30T14:40:14.980689+00:00",
+    "generatedAt": "2026-10-31T13:02:42.628530+00:00",
     "keywordGeneration": {
-      "currentInventory": 298,
-      "liveKeywords": 766,
-      "estimatedDaysRemaining": 74.5,
+      "currentInventory": 294,
+      "liveKeywords": 770,
+      "estimatedDaysRemaining": 73.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "74.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "73.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 224,
+      "verificationGaps": 244,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-30T09:56:33.476140+00:00",
+      "generatedAt": "2026-10-31T09:32:28.457186+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
