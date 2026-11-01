@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-10-31T13:02:42.611493+00:00",
+  "generated_at": "2026-11-01T13:45:33.335342+00:00",
   "keywords": {
     "total": 1064,
-    "live": 770,
-    "pending": 294,
+    "live": 774,
+    "pending": 290,
     "local": {
-      "live": 260,
-      "pending": 29
+      "live": 262,
+      "pending": 27
     },
     "pain_point": {
-      "live": 510,
-      "pending": 265
+      "live": 512,
+      "pending": 263
     }
   },
   "next_targets": [
-    {
-      "keyword": "does my car insurance cover towing if i cause the accident",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car making burning smell after driving should i pull over",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "brake pedal went to floor while driving what to do",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "what happens if tow truck damages my car",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does roadside assistance cover flat tire or just towing",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how to know if my car needs a flatbed tow",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 287
+      "count": 289
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 91
+      "count": 92
     },
     {
       "slug": "battery-starting",
@@ -94,7 +94,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 34
+      "count": 35
     },
     {
       "slug": "tire-wheel",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-10-31T09:32:28.457186+00:00",
+    "generated_at": "2026-11-01T10:38:34.466156+00:00",
     "platforms": {
       "blog": {
-        "checked": 681,
-        "verified": 681
+        "checked": 580,
+        "verified": 580
       },
       "dev": {
-        "checked": 499,
-        "verified": 499
+        "checked": 399,
+        "verified": 399
       },
       "feeder": {
-        "checked": 742,
-        "verified": 742
+        "checked": 746,
+        "verified": 746
       },
       "tumblr": {
-        "checked": 739,
-        "verified": 739
+        "checked": 743,
+        "verified": 743
       },
       "wordpress": {
-        "checked": 747,
-        "verified": 747
+        "checked": 751,
+        "verified": 751
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-31T13:02:42.556367+00:00",
+    "generated_at": "2026-11-01T13:45:33.268912+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,14 +191,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 7,
+        "rows": 5,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 580,
+        "rows": 582,
         "source": "ga4",
         "status": "ok"
       }
@@ -233,28 +233,28 @@
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 3,
-    "top_query_count": 3,
+    "top_landing_page_count": 2,
+    "top_query_count": 2,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-10-31T13:02:42.628530+00:00",
+    "generatedAt": "2026-11-01T13:45:33.360653+00:00",
     "keywordGeneration": {
-      "currentInventory": 294,
-      "liveKeywords": 770,
-      "estimatedDaysRemaining": 73.5,
+      "currentInventory": 290,
+      "liveKeywords": 774,
+      "estimatedDaysRemaining": 72.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "73.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "72.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 244,
+      "verificationGaps": 453,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-10-31T09:32:28.457186+00:00",
+      "generatedAt": "2026-11-01T10:38:34.466156+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,

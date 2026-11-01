@@ -52,27 +52,19 @@
   ],
   "backlink_supported": [
     {
+      "backlinks": 6,
+      "clicks": 0,
+      "impressions": 1,
+      "path": "/how-much-does-a-tow-cost-in-colorado/",
+      "position": 48.0,
+      "syndications": 5
+    },
+    {
       "backlinks": 5,
       "clicks": 0,
       "impressions": 2,
       "path": "/car-died-while-driving-what-now/",
       "position": 41.5,
-      "syndications": 5
-    },
-    {
-      "backlinks": 5,
-      "clicks": 0,
-      "impressions": 1,
-      "path": "/what-to-do-if-your-car-breaks-down-at-night/",
-      "position": 90.0,
-      "syndications": 5
-    },
-    {
-      "backlinks": 5,
-      "clicks": 0,
-      "impressions": 1,
-      "path": "/how-much-does-a-tow-cost-in-colorado/",
-      "position": 48.0,
       "syndications": 5
     }
   ],
@@ -85,10 +77,10 @@
     "weak_engagement": []
   },
   "comparison": {
-    "current_gsc_rows": 3,
-    "previous_gsc_rows": 4
+    "current_gsc_rows": 2,
+    "previous_gsc_rows": 3
   },
-  "generated_at": "2026-10-31T13:02:42.556367+00:00",
+  "generated_at": "2026-11-01T13:45:33.268912+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -96,12 +88,12 @@
   },
   "periods": {
     "current": [
-      "2026-10-03",
-      "2026-10-30"
+      "2026-10-04",
+      "2026-10-31"
     ],
     "previous": [
-      "2026-09-05",
-      "2026-10-02"
+      "2026-09-06",
+      "2026-10-03"
     ]
   },
   "request_counts": {
@@ -112,14 +104,14 @@
     {
       "cached": false,
       "message": "Fetched Search Console query/page data.",
-      "rows": 7,
+      "rows": 5,
       "source": "search_console",
       "status": "ok"
     },
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 580,
+      "rows": 582,
       "source": "ga4",
       "status": "ok"
     }
@@ -128,7 +120,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-10-31T13:02:42.556367+00:00",
+    "generated_at": "2026-11-01T13:45:33.268912+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -140,14 +132,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 7,
+        "rows": 5,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 580,
+        "rows": 582,
         "source": "ga4",
         "status": "ok"
       }
@@ -182,8 +174,8 @@
         "title": "Build or refine authority asset: Insurance Comparison"
       }
     ],
-    "top_landing_page_count": 3,
-    "top_query_count": 3,
+    "top_landing_page_count": 2,
+    "top_query_count": 2,
     "winning_page_count": 0
   },
   "tool_engine": {
@@ -239,26 +231,6 @@
     },
     {
       "categories": [
-        "general roadside"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "/what-to-do-if-your-car-breaks-down-at-night/",
-      "impressions": 1,
-      "position": 90.0,
-      "queries": {
-        "car broke down on the road at night": 1
-      },
-      "top_queries": [
-        [
-          "car broke down on the road at night",
-          1
-        ]
-      ],
-      "weighted_position": 90.0
-    },
-    {
-      "categories": [
         "city/location",
         "insurance",
         "towing cost",
@@ -301,26 +273,6 @@
         ]
       ],
       "weighted_position": 83.0
-    },
-    {
-      "categories": [
-        "general roadside"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "car broke down on the road at night",
-      "impressions": 1,
-      "position": 90.0,
-      "queries": {
-        "car broke down on the road at night": 1
-      },
-      "top_queries": [
-        [
-          "car broke down on the road at night",
-          1
-        ]
-      ],
-      "weighted_position": 90.0
     },
     {
       "categories": [
