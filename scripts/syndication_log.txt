@@ -25770,3 +25770,33 @@
 [2026-11-01 11:05:14] === SYNDICATE DONE: tow-truck-cost-in-dallas-texas-local-tow | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-11-01 11:05:14] SYNCED | tow-truck-cost-in-dallas-texas-local-tow marked in synced-posts.txt
 [2026-11-01 11:05:14] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-01 12:01:46] === SYNDICATE START: car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive ===
+[2026-11-01 12:01:46] PREFLIGHT | title: Car Leaking Coolant on Side of Road: Can I Add Water and Drive?
+[2026-11-01 12:01:46] PREFLIGHT | date: 2026-11-01
+[2026-11-01 12:01:46] PREFLIGHT | timestamp: 2026-11-01 12:01:46
+[2026-11-01 12:01:46] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-11-01 12:01:46] PREFLIGHT | TUMBLR:  configured
+[2026-11-01 12:01:46] PREFLIGHT | BLOGGER: configured
+[2026-11-01 12:01:46] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-01 12:01:46] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-01 12:01:46] DEVTO | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | START
+[2026-11-01 12:01:46] DEVTO | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | account=TWTF1
+[2026-11-01 12:01:46] DEVTO | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | SUCCESS | https://dev.to/roadsideamericatowing/car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive-roadside-tips-4kj5
+[2026-11-01 12:01:46] --- waiting 60s before next platform ---
+[2026-11-01 12:02:46] TUMBLR | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | START
+[2026-11-01 12:02:47] TUMBLR | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | SUCCESS | https://towwiththeflow.tumblr.com/post/832107726228340737
+[2026-11-01 12:02:47] --- waiting 60s before next platform ---
+[2026-11-01 12:03:47] BLOGGER | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | START
+[2026-11-01 12:03:47] BLOGGER | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | step 1/3: refreshing access token
+[2026-11-01 12:03:47] BLOGGER | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | step 2/3: converting markdown to HTML
+[2026-11-01 12:03:47] BLOGGER | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | step 3/3: posting to blog 1959471973457654666
+[2026-11-01 12:03:48] BLOGGER | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/car-leaking-coolant-on-side-of-road-can.html
+[2026-11-01 12:03:48] --- waiting 60s before next platform ---
+[2026-11-01 12:04:48] WORDPRESS | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | START
+[2026-11-01 12:04:55] WORDPRESS | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/01/car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive/
+[2026-11-01 12:04:55] --- waiting 60s before next platform ---
+[2026-11-01 12:05:55] FEEDER | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | START
+[2026-11-01 12:05:56] FEEDER | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive-advice/
+[2026-11-01 12:05:56] === SYNDICATE DONE: car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-11-01 12:05:56] SYNCED | car-leaking-coolant-on-side-of-road-can-i-add-water-and-drive marked in synced-posts.txt
+[2026-11-01 12:05:56] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
