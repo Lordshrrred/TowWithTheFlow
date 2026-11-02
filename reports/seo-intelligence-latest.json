@@ -62,9 +62,9 @@
     {
       "backlinks": 5,
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "path": "/car-died-while-driving-what-now/",
-      "position": 41.5,
+      "position": 29.0,
       "syndications": 5
     }
   ],
@@ -78,9 +78,9 @@
   },
   "comparison": {
     "current_gsc_rows": 2,
-    "previous_gsc_rows": 3
+    "previous_gsc_rows": 4
   },
-  "generated_at": "2026-11-01T13:45:33.268912+00:00",
+  "generated_at": "2026-11-02T16:31:13.465163+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -88,12 +88,12 @@
   },
   "periods": {
     "current": [
-      "2026-10-04",
-      "2026-10-31"
+      "2026-10-05",
+      "2026-11-01"
     ],
     "previous": [
-      "2026-09-06",
-      "2026-10-03"
+      "2026-09-07",
+      "2026-10-04"
     ]
   },
   "request_counts": {
@@ -104,7 +104,7 @@
     {
       "cached": false,
       "message": "Fetched Search Console query/page data.",
-      "rows": 5,
+      "rows": 6,
       "source": "search_console",
       "status": "ok"
     },
@@ -120,7 +120,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-01T13:45:33.268912+00:00",
+    "generated_at": "2026-11-02T16:31:13.465163+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -132,7 +132,7 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 5,
+        "rows": 6,
         "source": "search_console",
         "status": "ok"
       },
@@ -145,24 +145,24 @@
       }
     ],
     "tool_engine": {
-      "completes": 11,
+      "completes": 10,
       "completion_rate": 1.0,
-      "opens": 11,
+      "opens": 10,
       "top_events": [
         {
-          "count": 194,
+          "count": 190,
           "event": "estimate_generated"
         },
         {
-          "count": 82,
+          "count": 78,
           "event": "field_change"
         },
         {
-          "count": 11,
+          "count": 10,
           "event": "calculator_complete"
         },
         {
-          "count": 11,
+          "count": 10,
           "event": "calculator_open"
         }
       ]
@@ -179,24 +179,24 @@
     "winning_page_count": 0
   },
   "tool_engine": {
-    "completes": 11,
+    "completes": 10,
     "completion_rate": 1.0,
-    "opens": 11,
+    "opens": 10,
     "top_events": [
       {
-        "count": 194,
+        "count": 190,
         "event": "estimate_generated"
       },
       {
-        "count": 82,
+        "count": 78,
         "event": "field_change"
       },
       {
-        "count": 11,
+        "count": 10,
         "event": "calculator_complete"
       },
       {
-        "count": 11,
+        "count": 10,
         "event": "calculator_open"
       }
     ]
@@ -216,18 +216,18 @@
       "clicks": 0,
       "ctr": 0.0,
       "id": "/car-died-while-driving-what-now/",
-      "impressions": 2,
-      "position": 41.5,
+      "impressions": 1,
+      "position": 29.0,
       "queries": {
-        "car died": 2
+        "car died": 1
       },
       "top_queries": [
         [
           "car died",
-          2
+          1
         ]
       ],
-      "weighted_position": 83.0
+      "weighted_position": 29.0
     },
     {
       "categories": [
@@ -261,18 +261,18 @@
       "clicks": 0,
       "ctr": 0.0,
       "id": "car died",
-      "impressions": 2,
-      "position": 41.5,
+      "impressions": 1,
+      "position": 29.0,
       "queries": {
-        "car died": 2
+        "car died": 1
       },
       "top_queries": [
         [
           "car died",
-          2
+          1
         ]
       ],
-      "weighted_position": 83.0
+      "weighted_position": 29.0
     },
     {
       "categories": [

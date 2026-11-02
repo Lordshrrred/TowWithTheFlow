@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-11-01T13:45:33.335342+00:00",
+  "generated_at": "2026-11-02T16:31:13.538700+00:00",
   "keywords": {
     "total": 1064,
-    "live": 774,
-    "pending": 290,
+    "live": 778,
+    "pending": 286,
     "local": {
-      "live": 262,
-      "pending": 27
+      "live": 264,
+      "pending": 25
     },
     "pain_point": {
-      "live": 512,
-      "pending": 263
+      "live": 514,
+      "pending": 261
     }
   },
   "next_targets": [
-    {
-      "keyword": "brake pedal went to floor while driving what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car leaking coolant on side of road can i add water and drive",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "power steering failed while driving is it safe to drive home",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "how to know if my car needs a flatbed tow",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car axle broken on highway can it be towed",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does lyft or uber offer roadside assistance to drivers",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 289
+      "count": 291
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 119
+      "count": 121
     },
     {
       "slug": "insurance-coverage",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-01T10:38:34.466156+00:00",
+    "generated_at": "2026-11-02T10:56:10.883214+00:00",
     "platforms": {
       "blog": {
-        "checked": 580,
-        "verified": 580
+        "checked": 545,
+        "verified": 545
       },
       "dev": {
-        "checked": 399,
-        "verified": 399
+        "checked": 403,
+        "verified": 403
       },
       "feeder": {
-        "checked": 746,
-        "verified": 746
+        "checked": 750,
+        "verified": 750
       },
       "tumblr": {
-        "checked": 743,
-        "verified": 743
+        "checked": 747,
+        "verified": 747
       },
       "wordpress": {
-        "checked": 751,
-        "verified": 751
+        "checked": 755,
+        "verified": 755
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-01T13:45:33.268912+00:00",
+    "generated_at": "2026-11-02T16:31:13.465163+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,7 +191,7 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 5,
+        "rows": 6,
         "source": "search_console",
         "status": "ok"
       },
@@ -204,24 +204,24 @@
       }
     ],
     "tool_engine": {
-      "completes": 11,
+      "completes": 10,
       "completion_rate": 1.0,
-      "opens": 11,
+      "opens": 10,
       "top_events": [
         {
-          "count": 194,
+          "count": 190,
           "event": "estimate_generated"
         },
         {
-          "count": 82,
+          "count": 78,
           "event": "field_change"
         },
         {
-          "count": 11,
+          "count": 10,
           "event": "calculator_complete"
         },
         {
-          "count": 11,
+          "count": 10,
           "event": "calculator_open"
         }
       ]
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-01T13:45:33.360653+00:00",
+    "generatedAt": "2026-11-02T16:31:13.557679+00:00",
     "keywordGeneration": {
-      "currentInventory": 290,
-      "liveKeywords": 774,
-      "estimatedDaysRemaining": 72.5,
+      "currentInventory": 286,
+      "liveKeywords": 778,
+      "estimatedDaysRemaining": 71.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "72.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "71.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 453,
+      "verificationGaps": 492,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-01T10:38:34.466156+00:00",
+      "generatedAt": "2026-11-02T10:56:10.883214+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,

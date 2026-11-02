@@ -1,23 +1,23 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-11-01T13:45:33.268912+00:00
+Generated: 2026-11-02T16:31:13.465163+00:00
 
 ## 1. Data Connection/Freshness
 
-- **search_console**: ok. Fetched Search Console query/page data. Rows: 5.
+- **search_console**: ok. Fetched Search Console query/page data. Rows: 6.
 - **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 582.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
 | Page | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
-|  | 0 | 2 | 0.0% | 41.5 |
+|  | 0 | 1 | 0.0% | 29.0 |
 |  | 0 | 1 | 0.0% | 48.0 |
 
 ## 3. Top Real Queries
 | Query | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
-| car died | 0 | 2 | 0.0% | 41.5 |
+| car died | 0 | 1 | 0.0% | 29.0 |
 | tow truck insurance colorado | 0 | 1 | 0.0% | 48.0 |
 
 ## 4. Near-Page-One Opportunities
@@ -42,7 +42,7 @@ No city/local opportunities found with current thresholds.
 | Page | Backlinks | Syndications | Impressions | Clicks |
 | --- | --- | --- | --- | --- |
 | /how-much-does-a-tow-cost-in-colorado/ | 6 | 5 | 1 | 0 |
-| /car-died-while-driving-what-now/ | 5 | 5 | 2 | 0 |
+| /car-died-while-driving-what-now/ | 5 | 5 | 1 | 0 |
 
 ## 11. Recommended Authority Assets
 | Asset | Impressions | Clicks | Backlog | Priority |
@@ -53,13 +53,13 @@ No city/local opportunities found with current thresholds.
 1. **Build or refine authority asset: Insurance Comparison** — 1 Search Console impressions match this asset pattern. Next: Use the authority backlog and build as a separate scoped asset.
 
 ## 13. Tool Engine Usage
-- Calculator opens: 11 · Completions: 11 · Completion rate: 100.0%
+- Calculator opens: 10 · Completions: 10 · Completion rate: 100.0%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 194 |
-| field_change | 82 |
-| calculator_complete | 11 |
-| calculator_open | 11 |
+| estimate_generated | 190 |
+| field_change | 78 |
+| calculator_complete | 10 |
+| calculator_open | 10 |
 
 ## 14. Data Limitations
 
