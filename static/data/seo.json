@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-11-02T17:31:04.035322+00:00",
+  "generated_at": "2026-11-03T14:39:02.347064+00:00",
   "keywords": {
     "total": 1064,
-    "live": 778,
-    "pending": 286,
+    "live": 782,
+    "pending": 282,
     "local": {
-      "live": 264,
-      "pending": 25
+      "live": 266,
+      "pending": 23
     },
     "pain_point": {
-      "live": 514,
-      "pending": 261
+      "live": 516,
+      "pending": 259
     }
   },
   "next_targets": [
-    {
-      "keyword": "power steering failed while driving is it safe to drive home",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "airbag light on after accident can i still drive car",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "how long can you wait for a tow truck on highway",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "does lyft or uber offer roadside assistance to drivers",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "how much does emergency towing cost on weekends",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down on toll road who do i call",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 291
+      "count": 292
     },
     {
       "slug": "engine-mechanical",
@@ -102,24 +102,24 @@
       "count": 31
     },
     {
+      "slug": "vehicle-safety",
+      "label": "Vehicle Safety",
+      "count": 12
+    },
+    {
+      "slug": "accident-liability",
+      "label": "Accidents & Towing Liability",
+      "count": 12
+    },
+    {
       "slug": "towing-logistics",
       "label": "Towing Logistics & Process",
       "count": 11
     },
     {
-      "slug": "vehicle-safety",
-      "label": "Vehicle Safety",
-      "count": 11
-    },
-    {
-      "slug": "accident-liability",
-      "label": "Accidents & Towing Liability",
-      "count": 11
-    },
-    {
       "slug": "winter-weather",
       "label": "Winter & Weather Breakdowns",
-      "count": 8
+      "count": 9
     },
     {
       "slug": "vehicle-recovery",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-02T10:56:10.883214+00:00",
+    "generated_at": "2026-11-03T10:46:48.311898+00:00",
     "platforms": {
       "blog": {
-        "checked": 545,
-        "verified": 545
+        "checked": 583,
+        "verified": 583
       },
       "dev": {
-        "checked": 403,
-        "verified": 403
+        "checked": 406,
+        "verified": 406
       },
       "feeder": {
-        "checked": 750,
-        "verified": 750
+        "checked": 754,
+        "verified": 754
       },
       "tumblr": {
-        "checked": 747,
-        "verified": 747
+        "checked": 751,
+        "verified": 751
       },
       "wordpress": {
-        "checked": 755,
-        "verified": 755
+        "checked": 759,
+        "verified": 759
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-02T16:31:13.465163+00:00",
+    "generated_at": "2026-11-03T14:39:02.257119+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,7 +198,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 582,
+        "rows": 576,
         "source": "ga4",
         "status": "ok"
       }
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-02T17:31:04.058417+00:00",
+    "generatedAt": "2026-11-03T14:39:02.383259+00:00",
     "keywordGeneration": {
-      "currentInventory": 286,
-      "liveKeywords": 778,
-      "estimatedDaysRemaining": 71.5,
+      "currentInventory": 282,
+      "liveKeywords": 782,
+      "estimatedDaysRemaining": 70.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "71.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "70.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 492,
+      "verificationGaps": 459,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-02T10:56:10.883214+00:00",
+      "generatedAt": "2026-11-03T10:46:48.311898+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
