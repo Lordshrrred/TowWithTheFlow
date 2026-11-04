@@ -1,6 +1,6 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-11-03T14:39:02.257119+00:00
+Generated: 2026-11-04T14:51:37.273428+00:00
 
 ## 1. Data Connection/Freshness
 
@@ -53,13 +53,13 @@ No city/local opportunities found with current thresholds.
 1. **Build or refine authority asset: Insurance Comparison** — 1 Search Console impressions match this asset pattern. Next: Use the authority backlog and build as a separate scoped asset.
 
 ## 13. Tool Engine Usage
-- Calculator opens: 10 · Completions: 10 · Completion rate: 100.0%
+- Calculator opens: 11 · Completions: 11 · Completion rate: 100.0%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 190 |
-| field_change | 78 |
-| calculator_complete | 10 |
-| calculator_open | 10 |
+| estimate_generated | 194 |
+| field_change | 80 |
+| calculator_complete | 11 |
+| calculator_open | 11 |
 
 ## 14. Data Limitations
 

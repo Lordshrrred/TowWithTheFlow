@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-11-03T14:39:02.347064+00:00",
+  "generated_at": "2026-11-04T14:51:37.332943+00:00",
   "keywords": {
     "total": 1064,
-    "live": 782,
-    "pending": 282,
+    "live": 786,
+    "pending": 278,
     "local": {
-      "live": 266,
-      "pending": 23
+      "live": 268,
+      "pending": 21
     },
     "pain_point": {
-      "live": 516,
-      "pending": 259
+      "live": 518,
+      "pending": 257
     }
   },
   "next_targets": [
-    {
-      "keyword": "how long can you wait for a tow truck on highway",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does aaa cover towing if car is not registered in my name",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car broke down on interstate median what to do",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "car broke down on toll road who do i call",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "how to dispute a towing charge if overcharged",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "transmission slipping on highway can i make it home or tow",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 292
+      "count": 294
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 92
+      "count": 93
     },
     {
       "slug": "battery-starting",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 51
+      "count": 52
     },
     {
       "slug": "roadside-help",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-03T10:46:48.311898+00:00",
+    "generated_at": "2026-11-04T10:49:21.186493+00:00",
     "platforms": {
       "blog": {
-        "checked": 583,
-        "verified": 583
+        "checked": 579,
+        "verified": 579
       },
       "dev": {
-        "checked": 406,
-        "verified": 406
+        "checked": 410,
+        "verified": 410
       },
       "feeder": {
-        "checked": 754,
-        "verified": 754
+        "checked": 758,
+        "verified": 758
       },
       "tumblr": {
-        "checked": 751,
-        "verified": 751
+        "checked": 755,
+        "verified": 755
       },
       "wordpress": {
-        "checked": 759,
-        "verified": 759
+        "checked": 763,
+        "verified": 763
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-03T14:39:02.257119+00:00",
+    "generated_at": "2026-11-04T14:51:37.273428+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -204,24 +204,24 @@
       }
     ],
     "tool_engine": {
-      "completes": 10,
+      "completes": 11,
       "completion_rate": 1.0,
-      "opens": 10,
+      "opens": 11,
       "top_events": [
         {
-          "count": 190,
+          "count": 194,
           "event": "estimate_generated"
         },
         {
-          "count": 78,
+          "count": 80,
           "event": "field_change"
         },
         {
-          "count": 10,
+          "count": 11,
           "event": "calculator_complete"
         },
         {
-          "count": 10,
+          "count": 11,
           "event": "calculator_open"
         }
       ]
@@ -238,23 +238,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-03T14:39:02.383259+00:00",
+    "generatedAt": "2026-11-04T14:51:37.351401+00:00",
     "keywordGeneration": {
-      "currentInventory": 282,
-      "liveKeywords": 782,
-      "estimatedDaysRemaining": 70.5,
+      "currentInventory": 278,
+      "liveKeywords": 786,
+      "estimatedDaysRemaining": 69.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "70.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "69.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 459,
+      "verificationGaps": 467,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-03T10:46:48.311898+00:00",
+      "generatedAt": "2026-11-04T10:49:21.186493+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
