@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-11-04T15:50:23.065898+00:00",
+  "generated_at": "2026-11-05T14:56:55.456236+00:00",
   "keywords": {
     "total": 1064,
-    "live": 786,
-    "pending": 278,
+    "live": 790,
+    "pending": 274,
     "local": {
-      "live": 268,
-      "pending": 21
+      "live": 270,
+      "pending": 19
     },
     "pain_point": {
-      "live": 518,
-      "pending": 257
+      "live": 520,
+      "pending": 255
     }
   },
   "next_targets": [
-    {
-      "keyword": "car broke down on interstate median what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "what happens if tow truck damages my car",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "does roadside assistance cover flat tire or just towing",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "transmission slipping on highway can i make it home or tow",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "blew a tire on the freeway what do i do next",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "oil pressure warning light came on while driving should i pull over",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 294
+      "count": 296
     },
     {
       "slug": "engine-mechanical",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 52
+      "count": 53
     },
     {
       "slug": "roadside-help",
@@ -102,13 +102,13 @@
       "count": 31
     },
     {
-      "slug": "vehicle-safety",
-      "label": "Vehicle Safety",
-      "count": 12
-    },
-    {
       "slug": "accident-liability",
       "label": "Accidents & Towing Liability",
+      "count": 13
+    },
+    {
+      "slug": "vehicle-safety",
+      "label": "Vehicle Safety",
       "count": 12
     },
     {
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-04T10:49:21.186493+00:00",
+    "generated_at": "2026-11-05T10:46:38.263283+00:00",
     "platforms": {
       "blog": {
-        "checked": 579,
-        "verified": 579
+        "checked": 552,
+        "verified": 552
       },
       "dev": {
-        "checked": 410,
-        "verified": 410
+        "checked": 409,
+        "verified": 409
       },
       "feeder": {
-        "checked": 758,
-        "verified": 758
+        "checked": 762,
+        "verified": 762
       },
       "tumblr": {
-        "checked": 755,
-        "verified": 755
+        "checked": 759,
+        "verified": 759
       },
       "wordpress": {
-        "checked": 763,
-        "verified": 763
+        "checked": 767,
+        "verified": 767
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-04T14:51:37.273428+00:00",
+    "generated_at": "2026-11-05T14:56:55.375694+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,70 +191,64 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 6,
+        "rows": 5,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 576,
+        "rows": 578,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
       "completes": 11,
-      "completion_rate": 1.0,
-      "opens": 11,
+      "completion_rate": 0.9166666666666666,
+      "opens": 12,
       "top_events": [
         {
-          "count": 194,
+          "count": 193,
           "event": "estimate_generated"
         },
         {
-          "count": 80,
+          "count": 79,
           "event": "field_change"
+        },
+        {
+          "count": 12,
+          "event": "calculator_open"
         },
         {
           "count": 11,
           "event": "calculator_complete"
-        },
-        {
-          "count": 11,
-          "event": "calculator_open"
         }
       ]
     },
-    "top_actions": [
-      {
-        "next_action": "Use the authority backlog and build as a separate scoped asset.",
-        "reason": "1 Search Console impressions match this asset pattern.",
-        "title": "Build or refine authority asset: Insurance Comparison"
-      }
-    ],
-    "top_landing_page_count": 2,
-    "top_query_count": 2,
+    "top_actions": [],
+    "top_landing_page_count": 1,
+    "top_query_count": 1,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-04T15:50:23.084418+00:00",
+    "generatedAt": "2026-11-05T14:56:55.492510+00:00",
     "keywordGeneration": {
-      "currentInventory": 278,
-      "liveKeywords": 786,
-      "estimatedDaysRemaining": 69.5,
+      "currentInventory": 274,
+      "liveKeywords": 790,
+      "estimatedDaysRemaining": 68.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "69.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "68.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 467,
+      "verificationGaps": 503,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-04T10:49:21.186493+00:00",
+      "generatedAt": "2026-11-05T10:46:38.263283+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
