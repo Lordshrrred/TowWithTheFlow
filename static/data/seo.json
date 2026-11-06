@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-11-05T14:56:55.456236+00:00",
+  "generated_at": "2026-11-06T14:35:52.660025+00:00",
   "keywords": {
     "total": 1064,
-    "live": 790,
-    "pending": 274,
+    "live": 794,
+    "pending": 270,
     "local": {
-      "live": 270,
-      "pending": 19
+      "live": 272,
+      "pending": 17
     },
     "pain_point": {
-      "live": 520,
-      "pending": 255
+      "live": 522,
+      "pending": 253
     }
   },
   "next_targets": [
-    {
-      "keyword": "does roadside assistance cover flat tire or just towing",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how to know if my car needs a flatbed tow",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car axle broken on highway can it be towed",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "oil pressure warning light came on while driving should i pull over",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down in left lane of highway what to do",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does car insurance cover roadside assistance if i add it",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 296
+      "count": 297
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 93
+      "count": 94
     },
     {
       "slug": "battery-starting",
@@ -99,7 +99,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 31
+      "count": 32
     },
     {
       "slug": "accident-liability",
@@ -114,7 +114,7 @@
     {
       "slug": "towing-logistics",
       "label": "Towing Logistics & Process",
-      "count": 11
+      "count": 12
     },
     {
       "slug": "winter-weather",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-05T10:46:38.263283+00:00",
+    "generated_at": "2026-11-06T10:47:29.721257+00:00",
     "platforms": {
       "blog": {
-        "checked": 552,
-        "verified": 552
+        "checked": 591,
+        "verified": 591
       },
       "dev": {
-        "checked": 409,
-        "verified": 409
+        "checked": 415,
+        "verified": 415
       },
       "feeder": {
-        "checked": 762,
-        "verified": 762
+        "checked": 766,
+        "verified": 766
       },
       "tumblr": {
-        "checked": 759,
-        "verified": 759
+        "checked": 763,
+        "verified": 763
       },
       "wordpress": {
-        "checked": 767,
-        "verified": 767
+        "checked": 771,
+        "verified": 771
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-05T14:56:55.375694+00:00",
+    "generated_at": "2026-11-06T14:35:52.590216+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,30 +198,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 578,
+        "rows": 576,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 11,
-      "completion_rate": 0.9166666666666666,
-      "opens": 12,
+      "completes": 13,
+      "completion_rate": 0.9285714285714286,
+      "opens": 14,
       "top_events": [
         {
-          "count": 193,
+          "count": 200,
           "event": "estimate_generated"
         },
         {
-          "count": 79,
+          "count": 84,
           "event": "field_change"
         },
         {
-          "count": 12,
+          "count": 14,
           "event": "calculator_open"
         },
         {
-          "count": 11,
+          "count": 13,
           "event": "calculator_complete"
         }
       ]
@@ -232,23 +232,23 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-05T14:56:55.492510+00:00",
+    "generatedAt": "2026-11-06T14:35:52.685287+00:00",
     "keywordGeneration": {
-      "currentInventory": 274,
-      "liveKeywords": 790,
-      "estimatedDaysRemaining": 68.5,
+      "currentInventory": 270,
+      "liveKeywords": 794,
+      "estimatedDaysRemaining": 67.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "68.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "67.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 503,
+      "verificationGaps": 466,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-05T10:46:38.263283+00:00",
+      "generatedAt": "2026-11-06T10:47:29.721257+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
