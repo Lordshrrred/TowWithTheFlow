@@ -26493,3 +26493,33 @@
 [2026-11-07 10:52:56] === SYNDICATE DONE: car-broke-down-on-boston-highway-who-to-call | 5/5 succeeded | 5 attempted | 0 failed ===
 [2026-11-07 10:52:56] SYNCED | car-broke-down-on-boston-highway-who-to-call marked in synced-posts.txt
 [2026-11-07 10:52:56] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-07 11:57:58] === SYNDICATE START: car-broke-down-on-toll-road-who-do-i-call ===
+[2026-11-07 11:57:58] PREFLIGHT | title: Car Broke Down on a Toll Road? Who to Call Right Now
+[2026-11-07 11:57:58] PREFLIGHT | date: 2026-11-07
+[2026-11-07 11:57:58] PREFLIGHT | timestamp: 2026-11-07 11:57:58
+[2026-11-07 11:57:58] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-11-07 11:57:58] PREFLIGHT | TUMBLR:  configured
+[2026-11-07 11:57:58] PREFLIGHT | BLOGGER: configured
+[2026-11-07 11:57:58] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-07 11:57:58] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-07 11:57:58] DEVTO | car-broke-down-on-toll-road-who-do-i-call | START
+[2026-11-07 11:57:58] DEVTO | car-broke-down-on-toll-road-who-do-i-call | account=TWTF1
+[2026-11-07 11:57:58] DEVTO | car-broke-down-on-toll-road-who-do-i-call | SUCCESS | https://dev.to/roadsideamericatowing/car-broke-down-on-a-toll-road-who-to-call-right-now-what-drivers-should-know-20pl
+[2026-11-07 11:57:58] --- waiting 60s before next platform ---
+[2026-11-07 11:58:58] TUMBLR | car-broke-down-on-toll-road-who-do-i-call | START
+[2026-11-07 11:58:58] TUMBLR | car-broke-down-on-toll-road-who-do-i-call | SUCCESS | https://towwiththeflow.tumblr.com/post/832651068431319040
+[2026-11-07 11:58:58] --- waiting 60s before next platform ---
+[2026-11-07 11:59:58] BLOGGER | car-broke-down-on-toll-road-who-do-i-call | START
+[2026-11-07 11:59:58] BLOGGER | car-broke-down-on-toll-road-who-do-i-call | step 1/3: refreshing access token
+[2026-11-07 11:59:59] BLOGGER | car-broke-down-on-toll-road-who-do-i-call | step 2/3: converting markdown to HTML
+[2026-11-07 11:59:59] BLOGGER | car-broke-down-on-toll-road-who-do-i-call | step 3/3: posting to blog 1959471973457654666
+[2026-11-07 11:59:59] BLOGGER | car-broke-down-on-toll-road-who-do-i-call | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/car-broke-down-on-toll-road-who-to-call.html
+[2026-11-07 11:59:59] --- waiting 60s before next platform ---
+[2026-11-07 12:00:59] WORDPRESS | car-broke-down-on-toll-road-who-do-i-call | START
+[2026-11-07 12:01:06] WORDPRESS | car-broke-down-on-toll-road-who-do-i-call | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/07/car-broke-down-on-toll-road-who-do-i-call/
+[2026-11-07 12:01:06] --- waiting 60s before next platform ---
+[2026-11-07 12:02:06] FEEDER | car-broke-down-on-toll-road-who-do-i-call | START
+[2026-11-07 12:02:07] FEEDER | car-broke-down-on-toll-road-who-do-i-call | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-broke-down-on-toll-road-who-do-i-call-help/
+[2026-11-07 12:02:07] === SYNDICATE DONE: car-broke-down-on-toll-road-who-do-i-call | 5/5 succeeded | 5 attempted | 0 failed ===
+[2026-11-07 12:02:07] SYNCED | car-broke-down-on-toll-road-who-do-i-call marked in synced-posts.txt
+[2026-11-07 12:02:07] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
