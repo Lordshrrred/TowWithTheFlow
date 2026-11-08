@@ -1,22 +1,24 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-11-07T13:31:17.039415+00:00
+Generated: 2026-11-08T13:50:29.510472+00:00
 
 ## 1. Data Connection/Freshness
 
-- **search_console**: ok. Fetched Search Console query/page data. Rows: 5.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 572.
+- **search_console**: ok. Fetched Search Console query/page data. Rows: 6.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 576.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
 | Page | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
 |  | 0 | 1 | 0.0% | 29.0 |
+|  | 0 | 1 | 0.0% | 79.0 |
 
 ## 3. Top Real Queries
 | Query | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
 | car died | 0 | 1 | 0.0% | 29.0 |
+| car won't start clicking | 0 | 1 | 0.0% | 79.0 |
 
 ## 4. Near-Page-One Opportunities
 None found with current thresholds.
@@ -39,7 +41,8 @@ No city/local opportunities found with current thresholds.
 ## 10. Backlink-Supported Pages
 | Page | Backlinks | Syndications | Impressions | Clicks |
 | --- | --- | --- | --- | --- |
-| /car-died-while-driving-what-now/ | 5 | 5 | 1 | 0 |
+| /car-wont-start-clicking-noise-what-to-do/ | 5 | 4 | 1 | 0 |
+| /car-died-while-driving-what-now/ | 4 | 5 | 1 | 0 |
 
 ## 11. Recommended Authority Assets
 No Search Console asset-pattern evidence yet. Backlog order remains the fallback.

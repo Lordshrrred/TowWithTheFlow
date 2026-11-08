@@ -39,6 +39,14 @@
       "backlinks": 5,
       "clicks": 0,
       "impressions": 1,
+      "path": "/car-wont-start-clicking-noise-what-to-do/",
+      "position": 79.0,
+      "syndications": 4
+    },
+    {
+      "backlinks": 4,
+      "clicks": 0,
+      "impressions": 1,
       "path": "/car-died-while-driving-what-now/",
       "position": 29.0,
       "syndications": 5
@@ -53,10 +61,10 @@
     "weak_engagement": []
   },
   "comparison": {
-    "current_gsc_rows": 1,
+    "current_gsc_rows": 2,
     "previous_gsc_rows": 4
   },
-  "generated_at": "2026-11-07T13:31:17.039415+00:00",
+  "generated_at": "2026-11-08T13:50:29.510472+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -64,12 +72,12 @@
   },
   "periods": {
     "current": [
-      "2026-10-10",
-      "2026-11-06"
+      "2026-10-11",
+      "2026-11-07"
     ],
     "previous": [
-      "2026-09-12",
-      "2026-10-09"
+      "2026-09-13",
+      "2026-10-10"
     ]
   },
   "request_counts": {
@@ -80,14 +88,14 @@
     {
       "cached": false,
       "message": "Fetched Search Console query/page data.",
-      "rows": 5,
+      "rows": 6,
       "source": "search_console",
       "status": "ok"
     },
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 572,
+      "rows": 576,
       "source": "ga4",
       "status": "ok"
     }
@@ -96,7 +104,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-07T13:31:17.039415+00:00",
+    "generated_at": "2026-11-08T13:50:29.510472+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -108,14 +116,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 5,
+        "rows": 6,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 572,
+        "rows": 576,
         "source": "ga4",
         "status": "ok"
       }
@@ -144,8 +152,8 @@
       ]
     },
     "top_actions": [],
-    "top_landing_page_count": 1,
-    "top_query_count": 1,
+    "top_landing_page_count": 2,
+    "top_query_count": 2,
     "winning_page_count": 0
   },
   "tool_engine": {
@@ -192,6 +200,26 @@
         ]
       ],
       "weighted_position": 29.0
+    },
+    {
+      "categories": [
+        "roadside emergency"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/car-wont-start-clicking-noise-what-to-do/",
+      "impressions": 1,
+      "position": 79.0,
+      "queries": {
+        "car won't start clicking": 1
+      },
+      "top_queries": [
+        [
+          "car won't start clicking",
+          1
+        ]
+      ],
+      "weighted_position": 79.0
     }
   ],
   "top_queries": [
@@ -214,6 +242,26 @@
         ]
       ],
       "weighted_position": 29.0
+    },
+    {
+      "categories": [
+        "roadside emergency"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "car won't start clicking",
+      "impressions": 1,
+      "position": 79.0,
+      "queries": {
+        "car won't start clicking": 1
+      },
+      "top_queries": [
+        [
+          "car won't start clicking",
+          1
+        ]
+      ],
+      "weighted_position": 79.0
     }
   ]
 }

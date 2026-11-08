@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-11-07T13:31:17.120350+00:00",
+  "generated_at": "2026-11-08T13:50:29.567373+00:00",
   "keywords": {
     "total": 1064,
-    "live": 798,
-    "pending": 266,
+    "live": 802,
+    "pending": 262,
     "local": {
-      "live": 274,
-      "pending": 15
+      "live": 276,
+      "pending": 13
     },
     "pain_point": {
-      "live": 524,
-      "pending": 251
+      "live": 526,
+      "pending": 249
     }
   },
   "next_targets": [
-    {
-      "keyword": "how much does emergency towing cost on weekends",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down on toll road who do i call",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "how to dispute a towing charge if overcharged",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "car broke down on bridge what to do safety steps",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "what happens if tow truck driver damages wheels during tow",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "progressive roadside assistance towing coverage limit",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 299
+      "count": 300
     },
     {
       "slug": "engine-mechanical",
@@ -89,12 +89,12 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 53
+      "count": 54
     },
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 35
+      "count": 37
     },
     {
       "slug": "tire-wheel",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-07T09:58:58.235191+00:00",
+    "generated_at": "2026-11-08T10:30:44.383009+00:00",
     "platforms": {
       "blog": {
-        "checked": 556,
-        "verified": 556
+        "checked": 323,
+        "verified": 323
       },
       "dev": {
-        "checked": 418,
-        "verified": 418
+        "checked": 458,
+        "verified": 458
       },
       "feeder": {
-        "checked": 770,
-        "verified": 770
+        "checked": 774,
+        "verified": 774
       },
       "tumblr": {
-        "checked": 767,
-        "verified": 767
+        "checked": 771,
+        "verified": 771
       },
       "wordpress": {
-        "checked": 775,
-        "verified": 775
+        "checked": 779,
+        "verified": 779
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-07T13:31:17.039415+00:00",
+    "generated_at": "2026-11-08T13:50:29.510472+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,14 +191,14 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 5,
+        "rows": 6,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 572,
+        "rows": 576,
         "source": "ga4",
         "status": "ok"
       }
@@ -227,28 +227,28 @@
       ]
     },
     "top_actions": [],
-    "top_landing_page_count": 1,
-    "top_query_count": 1,
+    "top_landing_page_count": 2,
+    "top_query_count": 2,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-07T13:31:17.156278+00:00",
+    "generatedAt": "2026-11-08T13:50:29.585284+00:00",
     "keywordGeneration": {
-      "currentInventory": 266,
-      "liveKeywords": 798,
-      "estimatedDaysRemaining": 66.5,
+      "currentInventory": 262,
+      "liveKeywords": 802,
+      "estimatedDaysRemaining": 65.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "66.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "65.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 506,
+      "verificationGaps": 707,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-07T09:58:58.235191+00:00",
+      "generatedAt": "2026-11-08T10:30:44.383009+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,
