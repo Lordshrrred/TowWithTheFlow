@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T16:50:34.447730+00:00",
+  "generated_at": "2026-11-09T17:56:05.957182+00:00",
   "keywords": {
     "total": 1064,
     "live": 806,
@@ -232,7 +232,7 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-09T16:50:34.468153+00:00",
+    "generatedAt": "2026-11-09T17:56:05.994080+00:00",
     "keywordGeneration": {
       "currentInventory": 258,
       "liveKeywords": 806,
@@ -250,12 +250,12 @@
       "requiredPlatformsPerPost": 5,
       "generatedAt": "2026-11-09T11:24:50.400826+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 20.0,
+      "completedPerDay": 19.7,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.0,
+      "netBacklinkUnitsPerDay": 0.3,
       "estimatedCatchUpDays": null,
-      "reason": "Backlinks are keeping pace, but not reducing the historical backlog."
+      "reason": "Backlog is growing by 0.3 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
