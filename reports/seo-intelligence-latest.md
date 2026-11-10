@@ -1,6 +1,6 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-11-09T16:50:34.376563+00:00
+Generated: 2026-11-10T15:13:23.429075+00:00
 
 ## 1. Data Connection/Freshness
 
@@ -51,13 +51,13 @@ No Search Console asset-pattern evidence yet. Backlog order remains the fallback
 No evidence-ranked actions yet — Search Console and GA4 are connected, but current traffic/impressions haven't crossed the action thresholds. Expected for a newly verified property or low current volume; rerun as more data accumulates.
 
 ## 13. Tool Engine Usage
-- Calculator opens: 17 · Completions: 16 · Completion rate: 94.1%
+- Calculator opens: 21 · Completions: 20 · Completion rate: 95.2%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 217 |
-| field_change | 94 |
-| calculator_open | 17 |
-| calculator_complete | 16 |
+| estimate_generated | 228 |
+| field_change | 99 |
+| calculator_open | 21 |
+| calculator_complete | 20 |
 
 ## 14. Data Limitations
 

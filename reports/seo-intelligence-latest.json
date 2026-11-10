@@ -64,7 +64,7 @@
     "current_gsc_rows": 2,
     "previous_gsc_rows": 4
   },
-  "generated_at": "2026-11-09T16:50:34.376563+00:00",
+  "generated_at": "2026-11-10T15:13:23.429075+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -72,12 +72,12 @@
   },
   "periods": {
     "current": [
-      "2026-10-12",
-      "2026-11-08"
+      "2026-10-13",
+      "2026-11-09"
     ],
     "previous": [
-      "2026-09-14",
-      "2026-10-11"
+      "2026-09-15",
+      "2026-10-12"
     ]
   },
   "request_counts": {
@@ -104,7 +104,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-09T16:50:34.376563+00:00",
+    "generated_at": "2026-11-10T15:13:23.429075+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -129,24 +129,24 @@
       }
     ],
     "tool_engine": {
-      "completes": 16,
-      "completion_rate": 0.9411764705882353,
-      "opens": 17,
+      "completes": 20,
+      "completion_rate": 0.9523809523809523,
+      "opens": 21,
       "top_events": [
         {
-          "count": 217,
+          "count": 228,
           "event": "estimate_generated"
         },
         {
-          "count": 94,
+          "count": 99,
           "event": "field_change"
         },
         {
-          "count": 17,
+          "count": 21,
           "event": "calculator_open"
         },
         {
-          "count": 16,
+          "count": 20,
           "event": "calculator_complete"
         }
       ]
@@ -157,24 +157,24 @@
     "winning_page_count": 0
   },
   "tool_engine": {
-    "completes": 16,
-    "completion_rate": 0.9411764705882353,
-    "opens": 17,
+    "completes": 20,
+    "completion_rate": 0.9523809523809523,
+    "opens": 21,
     "top_events": [
       {
-        "count": 217,
+        "count": 228,
         "event": "estimate_generated"
       },
       {
-        "count": 94,
+        "count": 99,
         "event": "field_change"
       },
       {
-        "count": 17,
+        "count": 21,
         "event": "calculator_open"
       },
       {
-        "count": 16,
+        "count": 20,
         "event": "calculator_complete"
       }
     ]
