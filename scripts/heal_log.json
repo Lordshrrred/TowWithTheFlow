@@ -31,5 +31,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-11T19:37:59.364936+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "medium",
+        "diagnosis": "The Dev.to API key for account TWTF1 is returning HTTP 401 (unauthorized), meaning the key is invalid or revoked. The logs show the successful Dev.to posts used account TWTF2 (the 2026-11-11 run explicitly used account=TWTF2), so the TWTF1 key in the failing configuration is stale and must be rotated in the GitHub secret DevTO_TWTF1_API_Key.",
+        "instructions": "1. Log in to dev.to as the TWTF1 account (roadsideamericatowing) and go to Settings > Extensions > DEV Community API Keys.\n2. Generate a new API key with a descriptive name (e.g., 'TWTF syndication').\n3. Revoke the old key that returned 401.\n4. In the GitHub repository settings, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key value.\n5. Re-run the Dev.to health check (scripts/check_platform_health.py) to confirm the key is healthy.\n6. Optionally confirm DevTO_TWTF2_API_Key is still valid, since the TWTF2 account is actively publishing successfully.",
+        "status": "human_required"
+      }
+    }
   }
 ]
