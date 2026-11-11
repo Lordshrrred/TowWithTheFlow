@@ -1,23 +1,21 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-11-10T15:13:23.429075+00:00
+Generated: 2026-11-11T14:42:08.900590+00:00
 
 ## 1. Data Connection/Freshness
 
-- **search_console**: ok. Fetched Search Console query/page data. Rows: 6.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 570.
+- **search_console**: ok. Fetched Search Console query/page data. Rows: 5.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 566.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
 | Page | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
-|  | 0 | 1 | 0.0% | 29.0 |
 |  | 0 | 1 | 0.0% | 79.0 |
 
 ## 3. Top Real Queries
 | Query | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
-| car died | 0 | 1 | 0.0% | 29.0 |
 | car won't start clicking | 0 | 1 | 0.0% | 79.0 |
 
 ## 4. Near-Page-One Opportunities
@@ -42,7 +40,6 @@ No city/local opportunities found with current thresholds.
 | Page | Backlinks | Syndications | Impressions | Clicks |
 | --- | --- | --- | --- | --- |
 | /car-wont-start-clicking-noise-what-to-do/ | 5 | 4 | 1 | 0 |
-| /car-died-while-driving-what-now/ | 4 | 5 | 1 | 0 |
 
 ## 11. Recommended Authority Assets
 No Search Console asset-pattern evidence yet. Backlog order remains the fallback.
@@ -51,13 +48,13 @@ No Search Console asset-pattern evidence yet. Backlog order remains the fallback
 No evidence-ranked actions yet — Search Console and GA4 are connected, but current traffic/impressions haven't crossed the action thresholds. Expected for a newly verified property or low current volume; rerun as more data accumulates.
 
 ## 13. Tool Engine Usage
-- Calculator opens: 21 · Completions: 20 · Completion rate: 95.2%
+- Calculator opens: 24 · Completions: 23 · Completion rate: 95.8%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 228 |
-| field_change | 99 |
-| calculator_open | 21 |
-| calculator_complete | 20 |
+| estimate_generated | 240 |
+| field_change | 106 |
+| calculator_open | 24 |
+| calculator_complete | 23 |
 
 ## 14. Data Limitations
 

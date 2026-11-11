@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-11-10T15:13:23.497309+00:00",
+  "generated_at": "2026-11-11T14:42:08.987004+00:00",
   "keywords": {
     "total": 1064,
-    "live": 810,
-    "pending": 254,
+    "live": 814,
+    "pending": 250,
     "local": {
-      "live": 280,
-      "pending": 9
+      "live": 282,
+      "pending": 7
     },
     "pain_point": {
-      "live": 530,
-      "pending": 245
+      "live": 532,
+      "pending": 243
     }
   },
   "next_targets": [
-    {
-      "keyword": "car broke down in left lane of highway what to do",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does car insurance cover roadside assistance if i add it",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "how far will insurance tow my car after a breakdown",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "car broke down no money for tow truck what are my options",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "flat tire on highway too dangerous to change",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does geico cover towing and roadside assistance",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 304
+      "count": 305
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 95
+      "count": 96
     },
     {
       "slug": "battery-starting",
@@ -89,7 +89,7 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 54
+      "count": 55
     },
     {
       "slug": "roadside-help",
@@ -119,7 +119,7 @@
     {
       "slug": "winter-weather",
       "label": "Winter & Weather Breakdowns",
-      "count": 9
+      "count": 10
     },
     {
       "slug": "vehicle-recovery",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-10T11:04:19.924768+00:00",
+    "generated_at": "2026-11-11T10:48:42.143504+00:00",
     "platforms": {
       "blog": {
-        "checked": 335,
-        "verified": 335
+        "checked": 307,
+        "verified": 307
       },
       "dev": {
-        "checked": 466,
-        "verified": 466
+        "checked": 470,
+        "verified": 470
       },
       "feeder": {
-        "checked": 782,
-        "verified": 782
+        "checked": 786,
+        "verified": 786
       },
       "tumblr": {
-        "checked": 779,
-        "verified": 779
+        "checked": 783,
+        "verified": 783
       },
       "wordpress": {
-        "checked": 787,
-        "verified": 787
+        "checked": 791,
+        "verified": 791
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-10T15:13:23.429075+00:00",
+    "generated_at": "2026-11-11T14:42:08.900590+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -191,64 +191,64 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 6,
+        "rows": 5,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 570,
+        "rows": 566,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 20,
-      "completion_rate": 0.9523809523809523,
-      "opens": 21,
+      "completes": 23,
+      "completion_rate": 0.9583333333333334,
+      "opens": 24,
       "top_events": [
         {
-          "count": 228,
+          "count": 240,
           "event": "estimate_generated"
         },
         {
-          "count": 99,
+          "count": 106,
           "event": "field_change"
         },
         {
-          "count": 21,
+          "count": 24,
           "event": "calculator_open"
         },
         {
-          "count": 20,
+          "count": 23,
           "event": "calculator_complete"
         }
       ]
     },
     "top_actions": [],
-    "top_landing_page_count": 2,
-    "top_query_count": 2,
+    "top_landing_page_count": 1,
+    "top_query_count": 1,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-10T15:13:23.523770+00:00",
+    "generatedAt": "2026-11-11T14:42:09.020397+00:00",
     "keywordGeneration": {
-      "currentInventory": 254,
-      "liveKeywords": 810,
-      "estimatedDaysRemaining": 63.5,
+      "currentInventory": 250,
+      "liveKeywords": 814,
+      "estimatedDaysRemaining": 62.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "63.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "62.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
       "backlogPosts": 73,
       "backlogUnits": 83,
-      "verificationGaps": 703,
+      "verificationGaps": 735,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-10T11:04:19.924768+00:00",
+      "generatedAt": "2026-11-11T10:48:42.143504+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 20.0,
       "newPostsPerDay": 4.0,

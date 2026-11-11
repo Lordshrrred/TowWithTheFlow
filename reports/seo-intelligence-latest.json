@@ -42,14 +42,6 @@
       "path": "/car-wont-start-clicking-noise-what-to-do/",
       "position": 79.0,
       "syndications": 4
-    },
-    {
-      "backlinks": 4,
-      "clicks": 0,
-      "impressions": 1,
-      "path": "/car-died-while-driving-what-now/",
-      "position": 29.0,
-      "syndications": 5
     }
   ],
   "cannibalization": [],
@@ -61,10 +53,10 @@
     "weak_engagement": []
   },
   "comparison": {
-    "current_gsc_rows": 2,
+    "current_gsc_rows": 1,
     "previous_gsc_rows": 4
   },
-  "generated_at": "2026-11-10T15:13:23.429075+00:00",
+  "generated_at": "2026-11-11T14:42:08.900590+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -72,12 +64,12 @@
   },
   "periods": {
     "current": [
-      "2026-10-13",
-      "2026-11-09"
+      "2026-10-14",
+      "2026-11-10"
     ],
     "previous": [
-      "2026-09-15",
-      "2026-10-12"
+      "2026-09-16",
+      "2026-10-13"
     ]
   },
   "request_counts": {
@@ -88,14 +80,14 @@
     {
       "cached": false,
       "message": "Fetched Search Console query/page data.",
-      "rows": 6,
+      "rows": 5,
       "source": "search_console",
       "status": "ok"
     },
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 570,
+      "rows": 566,
       "source": "ga4",
       "status": "ok"
     }
@@ -104,7 +96,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-10T15:13:23.429075+00:00",
+    "generated_at": "2026-11-11T14:42:08.900590+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -116,91 +108,71 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 6,
+        "rows": 5,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 570,
+        "rows": 566,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 20,
-      "completion_rate": 0.9523809523809523,
-      "opens": 21,
+      "completes": 23,
+      "completion_rate": 0.9583333333333334,
+      "opens": 24,
       "top_events": [
         {
-          "count": 228,
+          "count": 240,
           "event": "estimate_generated"
         },
         {
-          "count": 99,
+          "count": 106,
           "event": "field_change"
         },
         {
-          "count": 21,
+          "count": 24,
           "event": "calculator_open"
         },
         {
-          "count": 20,
+          "count": 23,
           "event": "calculator_complete"
         }
       ]
     },
     "top_actions": [],
-    "top_landing_page_count": 2,
-    "top_query_count": 2,
+    "top_landing_page_count": 1,
+    "top_query_count": 1,
     "winning_page_count": 0
   },
   "tool_engine": {
-    "completes": 20,
-    "completion_rate": 0.9523809523809523,
-    "opens": 21,
+    "completes": 23,
+    "completion_rate": 0.9583333333333334,
+    "opens": 24,
     "top_events": [
       {
-        "count": 228,
+        "count": 240,
         "event": "estimate_generated"
       },
       {
-        "count": 99,
+        "count": 106,
         "event": "field_change"
       },
       {
-        "count": 21,
+        "count": 24,
         "event": "calculator_open"
       },
       {
-        "count": 20,
+        "count": 23,
         "event": "calculator_complete"
       }
     ]
   },
   "top_actions": [],
   "top_landing_pages": [
-    {
-      "categories": [
-        "general roadside"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "/car-died-while-driving-what-now/",
-      "impressions": 1,
-      "position": 29.0,
-      "queries": {
-        "car died": 1
-      },
-      "top_queries": [
-        [
-          "car died",
-          1
-        ]
-      ],
-      "weighted_position": 29.0
-    },
     {
       "categories": [
         "roadside emergency"
@@ -223,26 +195,6 @@
     }
   ],
   "top_queries": [
-    {
-      "categories": [
-        "general roadside"
-      ],
-      "clicks": 0,
-      "ctr": 0.0,
-      "id": "car died",
-      "impressions": 1,
-      "position": 29.0,
-      "queries": {
-        "car died": 1
-      },
-      "top_queries": [
-        [
-          "car died",
-          1
-        ]
-      ],
-      "weighted_position": 29.0
-    },
     {
       "categories": [
         "roadside emergency"
