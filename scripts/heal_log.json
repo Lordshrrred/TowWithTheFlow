@@ -44,5 +44,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-12T07:14:05.531339+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to returns HTTP 401 for both API keys (DevTO_TWTF1_API_Key and DevTO_TWTF2_API_Key), meaning the GitHub secrets are invalid or revoked. The health check confirms the same failure, so the keys must be regenerated in the Dev.to account settings and updated in GitHub secrets; no code change will resolve this.",
+        "instructions": "1. Log in to Dev.to as the TWTF1 account and go to Settings > Extensions > DEV Community API Keys. Generate a new API key and copy it.\n2. Repeat for the TWTF2 account if that key is also needed (the TWTF2 error in the failure report indicates it is also invalid).\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions and update DevTO_TWTF1_API_Key with the new TWTF1 key (and DevTO_TWTF2_API_Key with the new TWTF2 key if applicable).\n4. Re-run the failed syndication for car-broke-down-on-bridge-what-to-do-safety-steps and how-much-does-it-cost-to-tow-a-car-in-detroit-michigan, or wait for the next scheduled run.\n5. Run check_platform_health.py manually to confirm the devto check reports healthy.",
+        "status": "human_required"
+      }
+    }
   }
 ]
