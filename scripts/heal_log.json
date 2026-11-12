@@ -57,5 +57,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-12T08:14:48.438266+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to returns HTTP 401 for both configured API keys (DevTO_TWTF1_API_Key and DevTO_TWTF2_API_Key), meaning the keys were revoked, expired, or rotated on the Dev.to side. The log shows the syndicator was using account TWTF1, and the health check also fails for the configured accounts. The fix requires generating a new API key in Dev.to account settings and updating the GitHub secret; this cannot be derived from the available data.",
+        "instructions": "1. Log in to dev.to with the TWTF1 account (and TWTF2 if it is also in use).\n2. Go to Settings > Extensions (https://dev.to/settings/extensions) and under 'DEV Community API Keys' click 'Generate API Key' with a description such as 'TWTF syndication'.\n3. Copy the new key immediately (it is shown only once).\n4. In the GitHub repository, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new value (repeat for DevTO_TWTF2_API_Key if that account is in use).\n5. Re-run the failed Dev.to syndication for the slugs car-broke-down-on-bridge-what-to-do-safety-steps and how-much-does-it-cost-to-tow-a-car-in-detroit-michigan (or wait for the next scheduled run) and confirm the health check reports devto healthy.\n6. If the key is still rejected, confirm the Dev.to account has not been suspended or restricted and that the key was generated from the same account that owns the target publication.",
+        "status": "human_required"
+      }
+    }
   }
 ]
