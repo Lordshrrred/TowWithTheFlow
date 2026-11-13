@@ -96,5 +96,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-13T07:48:43.389322+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401 \u2014 it is invalid or has been revoked. The TWTF2 key also returns 401 in the failure log, so both Dev.to keys appear to be unauthorized, and the health check confirms the same failure path. The other platforms (Tumblr, Blogger, WordPress, Feeder) are succeeding, so the problem is isolated to Dev.to credentials, not code.",
+        "instructions": "1. Log in to dev.to with the account that owns TWTF1 (and separately TWTF2).\n2. Go to Settings > Extensions > DEV Community API Keys.\n3. Check whether the existing keys are still listed; if revoked or missing, generate a new API key and copy it immediately (it is shown only once).\n4. In the GitHub repository, open Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new TWTF1 key value (repeat for DevTO_TWTF2_API_Key if TWTF2 is also dead).\n5. Optionally verify locally: curl -H 'api-key: <KEY>' https://dev.to/api/articles/me/published should return HTTP 200.\n6. Re-run the syndication workflow or the health check (check_platform_health.py) to confirm Dev.to reports healthy.\n7. Note: if the Dev.to account was deactivated or the key was revoked for policy reasons, review the account status on dev.to before generating a new key.",
+        "status": "human_required"
+      }
+    }
   }
 ]
