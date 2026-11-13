@@ -109,5 +109,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-13T08:49:12.119953+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to API key for account TWTF1 (secret DevTO_TWTF1_API_Key) is returning HTTP 401 unauthorized, meaning the key is invalid, expired, or revoked. The TWTF2 key also returned 401, so both Dev.to account keys appear unusable; the code and health check are working correctly and only the credentials need rotation.",
+        "instructions": "1. Log in to dev.to with the TWTF1 account and go to Settings > Extensions > DEV Community API Keys.\n2. Generate a new API key (description e.g. 'TWTF automation').\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key value.\n4. Repeat steps 1-3 for the TWTF2 account, updating secret DevTO_TWTF2_API_Key, since its key also returned 401.\n5. Re-run the Dev.to syndication for the failed posts (progressive-roadside-assistance-towing-coverage-limit and towing-cost-in-charlotte-north-carolina-average-price) or wait for the next scheduled run, then confirm check_platform_health.py reports devto as healthy.",
+        "status": "human_required"
+      }
+    }
   }
 ]
