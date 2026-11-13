@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T10:58:27.371066+00:00",
+  "generated_at": "2026-11-13T10:52:54.869807+00:00",
   "slugs": {
     "24-hour-towing-cost-extra-houston": {
       "blog": {
@@ -2422,9 +2422,9 @@
         "verified": null
       },
       "dev": {
-        "reason": "ok",
+        "reason": "http_429",
         "url": "https://dev.to/denverroadsideelitetowing/car-broke-down-on-a-boston-highway-who-to-call-first-roadside-tips-3lim",
-        "verified": true
+        "verified": null
       },
       "feeder": {
         "reason": "ok",
@@ -12792,6 +12792,28 @@
         "verified": true
       }
     },
+    "progressive-roadside-assistance-towing-coverage-limit": {
+      "blog": {
+        "reason": "site_unavailable",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/11/progressive-roadside-assistance-towing.html",
+        "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/progressive-roadside-assistance-towing-coverage-limit-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/833113688730976256/progressive-roadside-assistance-towing-coverage-limit",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/11/12/progressive-roadside-assistance-towing-coverage-limit/",
+        "verified": true
+      }
+    },
     "progressive-roadside-assistance-towing-distance-limit": {
       "blog": {
         "reason": "http_429",
@@ -16582,6 +16604,28 @@
         "verified": true
       }
     },
+    "towing-cost-in-charlotte-north-carolina-average-price": {
+      "blog": {
+        "reason": "site_unavailable",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/11/towing-cost-in-charlotte-north-carolina.html",
+        "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-charlotte-north-carolina-average-price-guide/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/833116805651365888/towing-cost-in-charlotte-north-carolina-average-price",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/11/12/towing-cost-in-charlotte-north-carolina-average-price/",
+        "verified": true
+      }
+    },
     "towing-cost-in-charlotte-north-carolina-flatbed": {
       "blog": {
         "reason": "http_429",
@@ -17627,6 +17671,28 @@
       "wordpress": {
         "reason": "ok",
         "url": "https://towwiththeflowyo.wordpress.com/2026/10/17/towing-cost-in-memphis-tennessee-flatbed/",
+        "verified": true
+      }
+    },
+    "towing-cost-in-memphis-tennessee-no-insurance": {
+      "blog": {
+        "reason": "site_unavailable",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/11/towing-cost-in-memphis-tennessee-no.html",
+        "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/towing-cost-in-memphis-tennessee-no-insurance-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/833108897409744896/towing-cost-in-memphis-tennessee-no-insurance",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/11/12/towing-cost-in-memphis-tennessee-no-insurance/",
         "verified": true
       }
     },
@@ -20759,6 +20825,28 @@
         "verified": true
       }
     },
+    "what-happens-if-tow-truck-driver-damages-wheels-during-tow": {
+      "blog": {
+        "reason": "site_unavailable",
+        "url": "https://towingandflowingroadsidedenver.blogspot.com/2026/11/what-happens-if-tow-truck-driver.html",
+        "verified": null
+      },
+      "feeder": {
+        "reason": "ok",
+        "url": "https://lordshrrred.github.io/TWTF_Feeder/what-happens-if-tow-truck-driver-damages-wheels-during-tow-help/",
+        "verified": true
+      },
+      "tumblr": {
+        "reason": "ok",
+        "url": "https://www.tumblr.com/towwiththeflow/833102293558771712/what-happens-if-tow-truck-driver-damages-wheels-during-tow",
+        "verified": true
+      },
+      "wordpress": {
+        "reason": "ok",
+        "url": "https://towwiththeflowyo.wordpress.com/2026/11/12/what-happens-if-tow-truck-driver-damages-wheels-during-tow/",
+        "verified": true
+      }
+    },
     "what-happens-if-you-run-out-of-oil-while-driving": {
       "blog": {
         "reason": "ok",
@@ -21059,20 +21147,20 @@
       "verified": 307
     },
     "dev": {
-      "checked": 471,
-      "verified": 471
+      "checked": 470,
+      "verified": 470
     },
     "feeder": {
-      "checked": 790,
-      "verified": 790
+      "checked": 794,
+      "verified": 794
     },
     "tumblr": {
-      "checked": 787,
-      "verified": 787
+      "checked": 791,
+      "verified": 791
     },
     "wordpress": {
-      "checked": 795,
-      "verified": 795
+      "checked": 799,
+      "verified": 799
     }
   }
 }
