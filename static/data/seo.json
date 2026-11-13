@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-11-12T15:35:05.044617+00:00",
+  "generated_at": "2026-11-13T14:53:58.447514+00:00",
   "keywords": {
     "total": 1064,
-    "live": 818,
-    "pending": 246,
+    "live": 822,
+    "pending": 242,
     "local": {
-      "live": 284,
-      "pending": 5
+      "live": 286,
+      "pending": 3
     },
     "pain_point": {
-      "live": 534,
-      "pending": 241
+      "live": 536,
+      "pending": 239
     }
   },
   "next_targets": [
-    {
-      "keyword": "what happens if tow truck driver damages wheels during tow",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "progressive roadside assistance towing coverage limit",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "car making grinding noise when braking safe to drive or tow",
       "score": 8,
@@ -63,13 +53,23 @@
       "keyword": "does progressive insurance cover roadside assistance towing",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car overheated and wont start should i call a tow truck",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does aaa cover towing cost after accident or only breakdowns",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 306
+      "count": 308
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 97
+      "count": 98
     },
     {
       "slug": "battery-starting",
@@ -99,7 +99,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 33
+      "count": 34
     },
     {
       "slug": "accident-liability",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-12T10:58:27.371066+00:00",
+    "generated_at": "2026-11-13T10:52:54.869807+00:00",
     "platforms": {
       "blog": {
         "checked": 307,
         "verified": 307
       },
       "dev": {
-        "checked": 471,
-        "verified": 471
+        "checked": 470,
+        "verified": 470
       },
       "feeder": {
-        "checked": 790,
-        "verified": 790
+        "checked": 794,
+        "verified": 794
       },
       "tumblr": {
-        "checked": 787,
-        "verified": 787
+        "checked": 791,
+        "verified": 791
       },
       "wordpress": {
-        "checked": 795,
-        "verified": 795
+        "checked": 799,
+        "verified": 799
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-12T15:35:04.951663+00:00",
+    "generated_at": "2026-11-13T14:53:58.377245+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,30 +198,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 574,
+        "rows": 576,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 24,
-      "completion_rate": 0.96,
-      "opens": 25,
+      "completes": 28,
+      "completion_rate": 0.9655172413793104,
+      "opens": 29,
       "top_events": [
         {
-          "count": 247,
+          "count": 263,
           "event": "estimate_generated"
         },
         {
-          "count": 110,
+          "count": 119,
           "event": "field_change"
         },
         {
-          "count": 25,
+          "count": 29,
           "event": "calculator_open"
         },
         {
-          "count": 24,
+          "count": 28,
           "event": "calculator_complete"
         }
       ]
@@ -232,30 +232,30 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-12T15:35:05.071788+00:00",
+    "generatedAt": "2026-11-13T14:53:58.474371+00:00",
     "keywordGeneration": {
-      "currentInventory": 246,
-      "liveKeywords": 818,
-      "estimatedDaysRemaining": 61.5,
+      "currentInventory": 242,
+      "liveKeywords": 822,
+      "estimatedDaysRemaining": 60.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "61.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "60.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 76,
-      "backlogUnits": 86,
-      "verificationGaps": 739,
+      "backlogPosts": 80,
+      "backlogUnits": 90,
+      "verificationGaps": 744,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-12T10:58:27.371066+00:00",
+      "generatedAt": "2026-11-13T10:52:54.869807+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.8,
+      "completedPerDay": 19.5,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.2,
+      "netBacklinkUnitsPerDay": 0.5,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.2 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.5 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,

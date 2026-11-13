@@ -1,11 +1,11 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-11-12T15:35:04.951663+00:00
+Generated: 2026-11-13T14:53:58.377245+00:00
 
 ## 1. Data Connection/Freshness
 
 - **search_console**: ok. Fetched Search Console query/page data. Rows: 5.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 574.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 576.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
@@ -48,13 +48,13 @@ No Search Console asset-pattern evidence yet. Backlog order remains the fallback
 No evidence-ranked actions yet — Search Console and GA4 are connected, but current traffic/impressions haven't crossed the action thresholds. Expected for a newly verified property or low current volume; rerun as more data accumulates.
 
 ## 13. Tool Engine Usage
-- Calculator opens: 25 · Completions: 24 · Completion rate: 96.0%
+- Calculator opens: 29 · Completions: 28 · Completion rate: 96.6%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 247 |
-| field_change | 110 |
-| calculator_open | 25 |
-| calculator_complete | 24 |
+| estimate_generated | 263 |
+| field_change | 119 |
+| calculator_open | 29 |
+| calculator_complete | 28 |
 
 ## 14. Data Limitations
 
