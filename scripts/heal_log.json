@@ -122,5 +122,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-14T06:27:11.459345+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401 \u2014 the key is invalid or revoked on the Dev.to side. The TWTF2 key check also returned 401 in the health check, so both Dev.to credentials appear to be failing, and the syndication pipeline falls back to TWTF1 and fails each run. The rest of the platforms (Tumblr, Blogger, WordPress, Feeder) are succeeding, so this is isolated to Dev.to credentials.",
+        "instructions": "1. Log in to dev.to as the TWTF1 account and go to Settings > Extensions (or https://dev.to/settings/extensions) and generate a new API key.\n2. Repeat for the TWTF2 account if its key is also revoked (the health check reported 401 for TWTF2 as well).\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions and update DevTO_TWTF1_API_Key (and DevTO_TWTF2_API_Key if needed) with the new key values.\n4. Verify the local .env file, if used, is updated to match.\n5. Re-run the health check (scripts/check_platform_health.py) to confirm both Dev.to accounts return healthy.\n6. Re-run syndication for the two failed posts (catalytic-converter-gone-can-i-still-drive-the-car and towing-cost-in-indianapolis-indiana-flatbed-average-rate) to Dev.to only, if desired, since they are already marked synced for the other platforms.",
+        "status": "human_required"
+      }
+    }
   }
 ]
