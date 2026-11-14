@@ -1,11 +1,11 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-11-13T14:53:58.377245+00:00
+Generated: 2026-11-14T13:47:01.957983+00:00
 
 ## 1. Data Connection/Freshness
 
 - **search_console**: ok. Fetched Search Console query/page data. Rows: 5.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 576.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 568.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
@@ -51,8 +51,8 @@ No evidence-ranked actions yet — Search Console and GA4 are connected, but cur
 - Calculator opens: 29 · Completions: 28 · Completion rate: 96.6%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 263 |
-| field_change | 119 |
+| estimate_generated | 259 |
+| field_change | 116 |
 | calculator_open | 29 |
 | calculator_complete | 28 |
 

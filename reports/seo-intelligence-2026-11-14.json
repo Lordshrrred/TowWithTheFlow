@@ -1,0 +1,219 @@
+{
+  "authority_asset_opportunities": [
+    {
+      "asset": "Tow Cost Estimator",
+      "backlog_status": "live",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0,
+      "priority": 1,
+      "url": "tow-cost-estimator"
+    },
+    {
+      "asset": "Tow or Drive Decision Tree",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "Roadside Checklists",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "Insurance Comparison",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "State Law Resources",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    }
+  ],
+  "backlink_supported": [
+    {
+      "backlinks": 5,
+      "clicks": 0,
+      "impressions": 1,
+      "path": "/car-wont-start-clicking-noise-what-to-do/",
+      "position": 79.0,
+      "syndications": 4
+    }
+  ],
+  "cannibalization": [],
+  "city_opportunities": [],
+  "classifications": {
+    "ctr_opportunities": [],
+    "engagement_winners": [],
+    "near_page_one": [],
+    "weak_engagement": []
+  },
+  "comparison": {
+    "current_gsc_rows": 1,
+    "previous_gsc_rows": 4
+  },
+  "generated_at": "2026-11-14T13:47:01.957983+00:00",
+  "intent_map": {
+    "generatedAt": "2026-07-10T17:36:01.700206+00:00",
+    "metadataFlagCount": 118,
+    "overlapGroupCount": 10
+  },
+  "periods": {
+    "current": [
+      "2026-10-17",
+      "2026-11-13"
+    ],
+    "previous": [
+      "2026-09-19",
+      "2026-10-16"
+    ]
+  },
+  "request_counts": {
+    "ga4": 2,
+    "gsc": 2
+  },
+  "statuses": [
+    {
+      "cached": false,
+      "message": "Fetched Search Console query/page data.",
+      "rows": 5,
+      "source": "search_console",
+      "status": "ok"
+    },
+    {
+      "cached": false,
+      "message": "Fetched GA4 organic landing-page behavior.",
+      "rows": 568,
+      "source": "ga4",
+      "status": "ok"
+    }
+  ],
+  "summary": {
+    "cannibalization_count": 0,
+    "ctr_opportunity_count": 0,
+    "declining_page_count": 0,
+    "generated_at": "2026-11-14T13:47:01.957983+00:00",
+    "impression_growth_count": 5,
+    "near_page_one_count": 0,
+    "report_path": "reports/seo-intelligence-latest.md",
+    "request_counts": {
+      "ga4": 2,
+      "gsc": 2
+    },
+    "statuses": [
+      {
+        "cached": false,
+        "message": "Fetched Search Console query/page data.",
+        "rows": 5,
+        "source": "search_console",
+        "status": "ok"
+      },
+      {
+        "cached": false,
+        "message": "Fetched GA4 organic landing-page behavior.",
+        "rows": 568,
+        "source": "ga4",
+        "status": "ok"
+      }
+    ],
+    "tool_engine": {
+      "completes": 28,
+      "completion_rate": 0.9655172413793104,
+      "opens": 29,
+      "top_events": [
+        {
+          "count": 259,
+          "event": "estimate_generated"
+        },
+        {
+          "count": 116,
+          "event": "field_change"
+        },
+        {
+          "count": 29,
+          "event": "calculator_open"
+        },
+        {
+          "count": 28,
+          "event": "calculator_complete"
+        }
+      ]
+    },
+    "top_actions": [],
+    "top_landing_page_count": 1,
+    "top_query_count": 1,
+    "winning_page_count": 0
+  },
+  "tool_engine": {
+    "completes": 28,
+    "completion_rate": 0.9655172413793104,
+    "opens": 29,
+    "top_events": [
+      {
+        "count": 259,
+        "event": "estimate_generated"
+      },
+      {
+        "count": 116,
+        "event": "field_change"
+      },
+      {
+        "count": 29,
+        "event": "calculator_open"
+      },
+      {
+        "count": 28,
+        "event": "calculator_complete"
+      }
+    ]
+  },
+  "top_actions": [],
+  "top_landing_pages": [
+    {
+      "categories": [
+        "roadside emergency"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/car-wont-start-clicking-noise-what-to-do/",
+      "impressions": 1,
+      "position": 79.0,
+      "queries": {
+        "car won't start clicking": 1
+      },
+      "top_queries": [
+        [
+          "car won't start clicking",
+          1
+        ]
+      ],
+      "weighted_position": 79.0
+    }
+  ],
+  "top_queries": [
+    {
+      "categories": [
+        "roadside emergency"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "car won't start clicking",
+      "impressions": 1,
+      "position": 79.0,
+      "queries": {
+        "car won't start clicking": 1
+      },
+      "top_queries": [
+        [
+          "car won't start clicking",
+          1
+        ]
+      ],
+      "weighted_position": 79.0
+    }
+  ]
+}

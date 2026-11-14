@@ -1,29 +1,19 @@
 {
-  "generated_at": "2026-11-13T15:45:49.064498+00:00",
+  "generated_at": "2026-11-14T13:47:02.074984+00:00",
   "keywords": {
     "total": 1064,
-    "live": 822,
-    "pending": 242,
+    "live": 826,
+    "pending": 238,
     "local": {
-      "live": 286,
-      "pending": 3
+      "live": 288,
+      "pending": 1
     },
     "pain_point": {
-      "live": 536,
-      "pending": 239
+      "live": 538,
+      "pending": 237
     }
   },
   "next_targets": [
-    {
-      "keyword": "car making grinding noise when braking safe to drive or tow",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "catalytic converter gone can i still drive the car",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "out of gas on highway at night who to call",
       "score": 8,
@@ -63,18 +53,28 @@
       "keyword": "does aaa cover towing cost after accident or only breakdowns",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does roadside assistance cover fuel delivery ran out of gas",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car making grinding noise when braking safe to drive to shop",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 308
+      "count": 310
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 124
+      "count": 125
     },
     {
       "slug": "insurance-coverage",
@@ -94,7 +94,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 38
+      "count": 39
     },
     {
       "slug": "tire-wheel",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-13T10:52:54.869807+00:00",
+    "generated_at": "2026-11-14T10:15:36.894096+00:00",
     "platforms": {
       "blog": {
         "checked": 307,
         "verified": 307
       },
       "dev": {
-        "checked": 470,
-        "verified": 470
+        "checked": 471,
+        "verified": 471
       },
       "feeder": {
-        "checked": 794,
-        "verified": 794
+        "checked": 798,
+        "verified": 798
       },
       "tumblr": {
-        "checked": 791,
-        "verified": 791
+        "checked": 795,
+        "verified": 795
       },
       "wordpress": {
-        "checked": 799,
-        "verified": 799
+        "checked": 803,
+        "verified": 803
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-13T14:53:58.377245+00:00",
+    "generated_at": "2026-11-14T13:47:01.957983+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,7 +198,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 576,
+        "rows": 568,
         "source": "ga4",
         "status": "ok"
       }
@@ -209,11 +209,11 @@
       "opens": 29,
       "top_events": [
         {
-          "count": 263,
+          "count": 259,
           "event": "estimate_generated"
         },
         {
-          "count": 119,
+          "count": 116,
           "event": "field_change"
         },
         {
@@ -232,30 +232,30 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-13T15:45:49.101475+00:00",
+    "generatedAt": "2026-11-14T13:47:02.101404+00:00",
     "keywordGeneration": {
-      "currentInventory": 242,
-      "liveKeywords": 822,
-      "estimatedDaysRemaining": 60.5,
+      "currentInventory": 238,
+      "liveKeywords": 826,
+      "estimatedDaysRemaining": 59.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "60.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "59.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 80,
-      "backlogUnits": 90,
-      "verificationGaps": 744,
+      "backlogPosts": 84,
+      "backlogUnits": 94,
+      "verificationGaps": 747,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-13T10:52:54.869807+00:00",
+      "generatedAt": "2026-11-14T10:15:36.894096+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.5,
+      "completedPerDay": 19.2,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.5,
+      "netBacklinkUnitsPerDay": 0.8,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.5 platform links/day at the current rate."
+      "reason": "Backlog is growing by 0.8 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
