@@ -27366,3 +27366,33 @@
 [2026-11-14 12:25:21] === SYNDICATE DONE: car-broke-down-no-money-for-tow-truck-what-are-my-options | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-11-14 12:25:21] SYNCED | car-broke-down-no-money-for-tow-truck-what-are-my-options marked in synced-posts.txt
 [2026-11-14 12:25:21] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-14 13:50:10] === SYNDICATE START: flat-tire-on-highway-too-dangerous-to-change ===
+[2026-11-14 13:50:10] PREFLIGHT | title: Flat Tire on Highway Too Dangerous to Change: What to Do
+[2026-11-14 13:50:10] PREFLIGHT | date: 2026-11-14
+[2026-11-14 13:50:10] PREFLIGHT | timestamp: 2026-11-14 13:50:10
+[2026-11-14 13:50:10] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-11-14 13:50:10] PREFLIGHT | TUMBLR:  configured
+[2026-11-14 13:50:10] PREFLIGHT | BLOGGER: configured
+[2026-11-14 13:50:10] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-14 13:50:10] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-14 13:50:10] DEVTO | flat-tire-on-highway-too-dangerous-to-change | START
+[2026-11-14 13:50:10] DEVTO | flat-tire-on-highway-too-dangerous-to-change | account=TWTF1
+[2026-11-14 13:50:10] DEVTO | flat-tire-on-highway-too-dangerous-to-change | FAIL | HTTP 401: account TWTF1 key is invalid or revoked — rotate GitHub secret DevTO_TWTF1_API_Key
+[2026-11-14 13:50:10] --- waiting 60s before next platform ---
+[2026-11-14 13:51:10] TUMBLR | flat-tire-on-highway-too-dangerous-to-change | START
+[2026-11-14 13:51:10] TUMBLR | flat-tire-on-highway-too-dangerous-to-change | SUCCESS | https://towwiththeflow.tumblr.com/post/833292305933975552
+[2026-11-14 13:51:10] --- waiting 60s before next platform ---
+[2026-11-14 13:52:10] BLOGGER | flat-tire-on-highway-too-dangerous-to-change | START
+[2026-11-14 13:52:10] BLOGGER | flat-tire-on-highway-too-dangerous-to-change | step 1/3: refreshing access token
+[2026-11-14 13:52:10] BLOGGER | flat-tire-on-highway-too-dangerous-to-change | step 2/3: converting markdown to HTML
+[2026-11-14 13:52:10] BLOGGER | flat-tire-on-highway-too-dangerous-to-change | step 3/3: posting to blog 1959471973457654666
+[2026-11-14 13:52:11] BLOGGER | flat-tire-on-highway-too-dangerous-to-change | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/flat-tire-on-highway-too-dangerous-to.html
+[2026-11-14 13:52:11] --- waiting 60s before next platform ---
+[2026-11-14 13:53:11] WORDPRESS | flat-tire-on-highway-too-dangerous-to-change | START
+[2026-11-14 13:53:18] WORDPRESS | flat-tire-on-highway-too-dangerous-to-change | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/14/flat-tire-on-highway-too-dangerous-to-change/
+[2026-11-14 13:53:18] --- waiting 60s before next platform ---
+[2026-11-14 13:54:18] FEEDER | flat-tire-on-highway-too-dangerous-to-change | START
+[2026-11-14 13:54:19] FEEDER | flat-tire-on-highway-too-dangerous-to-change | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/flat-tire-on-highway-too-dangerous-to-change-tips/
+[2026-11-14 13:54:19] === SYNDICATE DONE: flat-tire-on-highway-too-dangerous-to-change | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-11-14 13:54:19] SYNCED | flat-tire-on-highway-too-dangerous-to-change marked in synced-posts.txt
+[2026-11-14 13:54:19] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
