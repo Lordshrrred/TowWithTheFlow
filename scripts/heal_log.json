@@ -135,5 +135,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-14T07:27:35.453585+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to returns HTTP 401 for both configured API keys (DevTO_TWTF1_API_Key and DevTO_TWTF2_API_Key). The health check and syndication logs show the TWTF1 key is invalid or revoked, and the TWTF2 key fails the same way, so both Dev.to accounts are currently unauthorized. The logs cannot confirm whether the keys were revoked, expired, or simply mis-stored in GitHub secrets, so new keys must be generated and stored manually.",
+        "instructions": "1. Log in to dev.to as the TWTF1 account and go to Settings > Extensions > DEV Community API Keys. Generate a new key, copy it once, and do not share it.\n2. Repeat for the TWTF2 account if it is also in use.\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions and update DevTO_TWTF1_API_Key with the new TWTF1 key (and DevTO_TWTF2_API_Key with the new TWTF2 key if applicable). Remove any leading/trailing whitespace or quote characters when pasting.\n4. Optionally verify locally: curl -H \"api-key: <KEY>\" https://dev.to/api/articles/me/published and confirm HTTP 200.\n5. Re-run the health check workflow (check_platform_health.py) to confirm the devto status returns healthy.\n6. Re-run syndication for the two failed posts (catalytic-converter-gone-can-i-still-drive-the-car and towing-cost-in-indianapolis-indiana-flatbed-average-rate) so they publish to Dev.to.\n7. Note: the WordPress, Tumblr, Blogger and Feeder checks are not failing in the provided logs, so no action is needed for them.",
+        "status": "human_required"
+      }
+    }
   }
 ]
