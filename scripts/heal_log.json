@@ -174,5 +174,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-15T07:36:22.143410+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to API key for account TWTF1 is invalid or revoked (HTTP 401 on both syndication and the health check), while the TWTF2 key also returns 401 in the health check. The syndication log shows only TWTF1 being attempted, indicating the GitHub secret DevTO_TWTF1_API_Key needs rotation, and the TWTF2 key also appears invalid.",
+        "instructions": "1. Log in to dev.to as the TWTF1 account and go to Settings > Account > DEV Community API Keys.\n2. Generate a new API key (label it e.g. 'TWTF syndication').\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key value.\n4. Repeat steps 1-3 for the TWTF2 account, updating secret DevTO_TWTF2_API_Key, since the health check also returns HTTP 401 for TWTF2.\n5. Re-run the syndication workflow for the two failed posts (car-broke-down-no-money-for-tow-truck-what-are-my-options and flat-tire-on-highway-too-dangerous-to-change) or wait for the next scheduled run.\n6. Confirm the next check_platform_health.py run reports devto as healthy.",
+        "status": "human_required"
+      }
+    }
   }
 ]
