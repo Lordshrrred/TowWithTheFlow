@@ -161,5 +161,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-15T06:36:12.601380+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to returns HTTP 401 for both API keys (DevTO_TWTF1_API_Key and DevTO_TWTF2_API_Key). The log explicitly says the TWTF1 key is invalid or revoked, and the health check fails for both accounts, so the keys themselves were most likely revoked or expired on Dev.to's side. Code cannot fix a revoked credential; a human must generate new keys and update the GitHub secrets.",
+        "instructions": "1. Log in to Dev.to with the TWTF1 account (and separately TWTF2 if it is also failing).\n2. Go to Settings -> Account -> DEV Community API Keys and generate a new API key (give it a descriptive name such as 'TWTF syndication').\n3. Copy the new key immediately (it is shown only once).\n4. In the GitHub repository, go to Settings -> Secrets and variables -> Actions and update the secret DevTO_TWTF1_API_Key with the new value.\n5. Repeat steps 1-4 for DevTO_TWTF2_API_Key if the TWTF2 account also returns 401.\n6. Re-run the platform health check (check_platform_health.py) to confirm Dev.to shows as healthy.\n7. Re-syndicate the two posts that failed on Dev.to (car-broke-down-no-money-for-tow-truck-what-are-my-options and flat-tire-on-highway-too-dangerous-to-change), or wait for the next scheduled run.\n8. If the 401 persists after rotating keys, check whether the Dev.to account was suspended or flagged, since that would also produce 401 responses.",
+        "status": "human_required"
+      }
+    }
   }
 ]
