@@ -1,34 +1,19 @@
 {
-  "generated_at": "2026-11-14T13:47:02.074984+00:00",
+  "generated_at": "2026-11-15T14:17:12.875619+00:00",
   "keywords": {
     "total": 1064,
-    "live": 826,
-    "pending": 238,
+    "live": 830,
+    "pending": 234,
     "local": {
-      "live": 288,
-      "pending": 1
+      "live": 289,
+      "pending": 0
     },
     "pain_point": {
-      "live": 538,
-      "pending": 237
+      "live": 541,
+      "pending": 234
     }
   },
   "next_targets": [
-    {
-      "keyword": "out of gas on highway at night who to call",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down no money for tow truck what are my options",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "flat tire on highway too dangerous to change",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "does geico cover towing and roadside assistance",
       "score": 8,
@@ -63,18 +48,33 @@
       "keyword": "car making grinding noise when braking safe to drive to shop",
       "score": 8,
       "type": "pain_point"
+    },
+    {
+      "keyword": "car overheating on freeway should i pull over or keep driving",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "run flat tire blew out can i drive on it",
+      "score": 8,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "alternator died while driving symptoms what happens next",
+      "score": 8,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 310
+      "count": 311
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 125
+      "count": 126
     },
     {
       "slug": "insurance-coverage",
@@ -94,12 +94,12 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 39
+      "count": 40
     },
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 34
+      "count": 35
     },
     {
       "slug": "accident-liability",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-14T10:15:36.894096+00:00",
+    "generated_at": "2026-11-15T10:55:08.905366+00:00",
     "platforms": {
       "blog": {
-        "checked": 307,
-        "verified": 307
+        "checked": 0,
+        "verified": 0
       },
       "dev": {
-        "checked": 471,
-        "verified": 471
+        "checked": 278,
+        "verified": 278
       },
       "feeder": {
-        "checked": 798,
-        "verified": 798
+        "checked": 802,
+        "verified": 802
       },
       "tumblr": {
-        "checked": 795,
-        "verified": 795
+        "checked": 799,
+        "verified": 799
       },
       "wordpress": {
-        "checked": 803,
-        "verified": 803
+        "checked": 807,
+        "verified": 807
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-14T13:47:01.957983+00:00",
+    "generated_at": "2026-11-15T14:17:12.794607+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,30 +198,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 568,
+        "rows": 572,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 28,
-      "completion_rate": 0.9655172413793104,
-      "opens": 29,
+      "completes": 32,
+      "completion_rate": 0.9696969696969697,
+      "opens": 33,
       "top_events": [
         {
-          "count": 259,
+          "count": 281,
           "event": "estimate_generated"
         },
         {
-          "count": 116,
+          "count": 127,
           "event": "field_change"
         },
         {
-          "count": 29,
+          "count": 33,
           "event": "calculator_open"
         },
         {
-          "count": 28,
+          "count": 32,
           "event": "calculator_complete"
         }
       ]
@@ -232,30 +232,30 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-14T13:47:02.101404+00:00",
+    "generatedAt": "2026-11-15T14:17:12.903011+00:00",
     "keywordGeneration": {
-      "currentInventory": 238,
-      "liveKeywords": 826,
-      "estimatedDaysRemaining": 59.5,
+      "currentInventory": 234,
+      "liveKeywords": 830,
+      "estimatedDaysRemaining": 58.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "59.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "58.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 84,
-      "backlogUnits": 94,
-      "verificationGaps": 747,
+      "backlogPosts": 88,
+      "backlogUnits": 98,
+      "verificationGaps": 1251,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-14T10:15:36.894096+00:00",
+      "generatedAt": "2026-11-15T10:55:08.905366+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 19.2,
+      "completedPerDay": 18.9,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 0.8,
+      "netBacklinkUnitsPerDay": 1.1,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 0.8 platform links/day at the current rate."
+      "reason": "Backlog is growing by 1.1 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,

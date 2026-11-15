@@ -36,7 +36,7 @@
   ],
   "backlink_supported": [
     {
-      "backlinks": 5,
+      "backlinks": 4,
       "clicks": 0,
       "impressions": 1,
       "path": "/car-wont-start-clicking-noise-what-to-do/",
@@ -56,7 +56,7 @@
     "current_gsc_rows": 1,
     "previous_gsc_rows": 4
   },
-  "generated_at": "2026-11-14T13:47:01.957983+00:00",
+  "generated_at": "2026-11-15T14:17:12.794607+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -64,12 +64,12 @@
   },
   "periods": {
     "current": [
-      "2026-10-17",
-      "2026-11-13"
+      "2026-10-18",
+      "2026-11-14"
     ],
     "previous": [
-      "2026-09-19",
-      "2026-10-16"
+      "2026-09-20",
+      "2026-10-17"
     ]
   },
   "request_counts": {
@@ -87,7 +87,7 @@
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 568,
+      "rows": 572,
       "source": "ga4",
       "status": "ok"
     }
@@ -96,7 +96,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-14T13:47:01.957983+00:00",
+    "generated_at": "2026-11-15T14:17:12.794607+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -115,30 +115,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 568,
+        "rows": 572,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 28,
-      "completion_rate": 0.9655172413793104,
-      "opens": 29,
+      "completes": 32,
+      "completion_rate": 0.9696969696969697,
+      "opens": 33,
       "top_events": [
         {
-          "count": 259,
+          "count": 281,
           "event": "estimate_generated"
         },
         {
-          "count": 116,
+          "count": 127,
           "event": "field_change"
         },
         {
-          "count": 29,
+          "count": 33,
           "event": "calculator_open"
         },
         {
-          "count": 28,
+          "count": 32,
           "event": "calculator_complete"
         }
       ]
@@ -149,24 +149,24 @@
     "winning_page_count": 0
   },
   "tool_engine": {
-    "completes": 28,
-    "completion_rate": 0.9655172413793104,
-    "opens": 29,
+    "completes": 32,
+    "completion_rate": 0.9696969696969697,
+    "opens": 33,
     "top_events": [
       {
-        "count": 259,
+        "count": 281,
         "event": "estimate_generated"
       },
       {
-        "count": 116,
+        "count": 127,
         "event": "field_change"
       },
       {
-        "count": 29,
+        "count": 33,
         "event": "calculator_open"
       },
       {
-        "count": 28,
+        "count": 32,
         "event": "calculator_complete"
       }
     ]

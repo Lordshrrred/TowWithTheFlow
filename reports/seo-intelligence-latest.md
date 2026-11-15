@@ -1,11 +1,11 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-11-14T13:47:01.957983+00:00
+Generated: 2026-11-15T14:17:12.794607+00:00
 
 ## 1. Data Connection/Freshness
 
 - **search_console**: ok. Fetched Search Console query/page data. Rows: 5.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 568.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 572.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
@@ -39,7 +39,7 @@ No city/local opportunities found with current thresholds.
 ## 10. Backlink-Supported Pages
 | Page | Backlinks | Syndications | Impressions | Clicks |
 | --- | --- | --- | --- | --- |
-| /car-wont-start-clicking-noise-what-to-do/ | 5 | 4 | 1 | 0 |
+| /car-wont-start-clicking-noise-what-to-do/ | 4 | 4 | 1 | 0 |
 
 ## 11. Recommended Authority Assets
 No Search Console asset-pattern evidence yet. Backlog order remains the fallback.
@@ -48,13 +48,13 @@ No Search Console asset-pattern evidence yet. Backlog order remains the fallback
 No evidence-ranked actions yet — Search Console and GA4 are connected, but current traffic/impressions haven't crossed the action thresholds. Expected for a newly verified property or low current volume; rerun as more data accumulates.
 
 ## 13. Tool Engine Usage
-- Calculator opens: 29 · Completions: 28 · Completion rate: 96.6%
+- Calculator opens: 33 · Completions: 32 · Completion rate: 97.0%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 259 |
-| field_change | 116 |
-| calculator_open | 29 |
-| calculator_complete | 28 |
+| estimate_generated | 281 |
+| field_change | 127 |
+| calculator_open | 33 |
+| calculator_complete | 32 |
 
 ## 14. Data Limitations
 
