@@ -27607,3 +27607,33 @@
 [2026-11-16 16:31:45] === SYNDICATE DONE: car-making-grinding-noise-when-braking-safe-to-drive-to-shop | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-11-16 16:31:45] SYNCED | car-making-grinding-noise-when-braking-safe-to-drive-to-shop marked in synced-posts.txt
 [2026-11-16 16:31:45] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-16 17:20:59] === SYNDICATE START: car-overheating-on-freeway-should-i-pull-over-or-keep-driving ===
+[2026-11-16 17:20:59] PREFLIGHT | title: Car Overheating on Freeway: Should I Pull Over or Keep Driving?
+[2026-11-16 17:20:59] PREFLIGHT | date: 2026-11-16
+[2026-11-16 17:20:59] PREFLIGHT | timestamp: 2026-11-16 17:20:59
+[2026-11-16 17:20:59] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-11-16 17:20:59] PREFLIGHT | TUMBLR:  configured
+[2026-11-16 17:20:59] PREFLIGHT | BLOGGER: configured
+[2026-11-16 17:20:59] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-16 17:20:59] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-16 17:20:59] DEVTO | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | START
+[2026-11-16 17:20:59] DEVTO | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | account=TWTF1
+[2026-11-16 17:20:59] DEVTO | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | FAIL | HTTP 401: account TWTF1 key is invalid or revoked — rotate GitHub secret DevTO_TWTF1_API_Key
+[2026-11-16 17:20:59] --- waiting 60s before next platform ---
+[2026-11-16 17:21:59] TUMBLR | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | START
+[2026-11-16 17:22:00] TUMBLR | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | SUCCESS | https://towwiththeflow.tumblr.com/post/833486764032294912
+[2026-11-16 17:22:00] --- waiting 60s before next platform ---
+[2026-11-16 17:23:00] BLOGGER | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | START
+[2026-11-16 17:23:00] BLOGGER | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | step 1/3: refreshing access token
+[2026-11-16 17:23:00] BLOGGER | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | step 2/3: converting markdown to HTML
+[2026-11-16 17:23:00] BLOGGER | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | step 3/3: posting to blog 1959471973457654666
+[2026-11-16 17:23:01] BLOGGER | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/car-overheating-on-freeway-should-i.html
+[2026-11-16 17:23:01] --- waiting 60s before next platform ---
+[2026-11-16 17:24:01] WORDPRESS | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | START
+[2026-11-16 17:24:08] WORDPRESS | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/16/car-overheating-on-freeway-should-i-pull-over-or-keep-driving/
+[2026-11-16 17:24:08] --- waiting 60s before next platform ---
+[2026-11-16 17:25:08] FEEDER | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | START
+[2026-11-16 17:25:09] FEEDER | car-overheating-on-freeway-should-i-pull-over-or-keep-driving | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/car-overheating-on-freeway-should-i-pull-over-or-keep-driving-help/
+[2026-11-16 17:25:09] === SYNDICATE DONE: car-overheating-on-freeway-should-i-pull-over-or-keep-driving | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-11-16 17:25:09] SYNCED | car-overheating-on-freeway-should-i-pull-over-or-keep-driving marked in synced-posts.txt
+[2026-11-16 17:25:09] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
