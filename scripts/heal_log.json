@@ -265,5 +265,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-17T09:57:55.283633+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401, meaning the key is invalid or has been revoked. Syndication falls back to TWTF2 only when TWTF1 is absent, so the TWTF1 failure is not retried with the other account, and the health check also reports TWTF1 as unhealthy. The key value itself cannot be recovered from the logs, so it must be regenerated in the Dev.to account settings and rotated in GitHub secrets.",
+        "instructions": "1. Log in to dev.to as the account that owns TWTF1 (the account whose key was used for DevTO_TWTF1_API_Key).\n2. Go to Settings > Extensions (https://dev.to/settings/extensions) and generate a new API key.\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key value.\n4. Verify TWTF2 (DevTO_TWTF2_API_Key) is still valid by checking the health check output for the devto entry.\n5. Re-run the health check (scripts/check_platform_health.py) to confirm Dev.to reports healthy.\n6. Re-run syndication for the two failed slugs (car-making-grinding-noise-when-braking-safe-to-drive-to-shop and car-overheating-on-freeway-should-i-pull-over-or-keep-driving) for Dev.to only, if desired.",
+        "status": "human_required"
+      }
+    }
   }
 ]
