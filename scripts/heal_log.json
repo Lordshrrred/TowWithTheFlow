@@ -252,5 +252,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-17T08:57:48.596820+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (GitHub secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401 as invalid or revoked, and the TWTF2 key also returns 401, so both Dev.to credentials appear to be expired or revoked. The key values cannot be regenerated or verified from within this system, so a human must issue new keys from the Dev.to account settings.",
+        "instructions": "1. Log in to dev.to with the account that owns TWTF1 (and separately TWTF2, if both accounts are in use).\n2. Go to Settings > Extensions (https://dev.to/settings/extensions) and scroll to 'DEV Community API Keys'.\n3. Click 'Generate API Key', give it a description such as 'TWTF syndication', and copy the new key immediately (it is shown only once).\n4. In the GitHub repository, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new TWTF1 key.\n5. If TWTF2 is used, repeat steps 3-4 for the secret DevTO_TWTF2_API_Key.\n6. Re-run the health check (check_platform_health.py) or trigger the next syndication run to confirm the Dev.to check returns healthy.\n7. Optionally, remove any old, unused keys from the Dev.to settings page to keep the key list clean.",
+        "status": "human_required"
+      }
+    }
   }
 ]
