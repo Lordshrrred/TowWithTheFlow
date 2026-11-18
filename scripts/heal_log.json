@@ -291,5 +291,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-18T08:31:46.531333+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to returns HTTP 401 for both API keys (DevTO_TWTF1_API_Key and DevTO_TWTF2_API_Key). The log shows the failing account is TWTF1, and the health check also fails for both labels, indicating the keys stored in GitHub secrets are invalid or have been revoked. The keys cannot be recovered from the logs, so they must be regenerated in the Dev.to account settings.",
+        "instructions": "1. Log in to dev.to with the account that owns TWTF1 (and TWTF2 if applicable).\n2. Go to Settings > Extensions (https://dev.to/settings/extensions) and scroll to 'DEV Community API Keys'.\n3. Revoke the existing key(s) if still listed, then click 'Generate API Key' and give it a description such as 'TWTF syndication automation'.\n4. Copy the newly generated key immediately (it is shown only once).\n5. In the GitHub repository for this project, go to Settings > Secrets and variables > Actions.\n6. Update the secret DevTO_TWTF1_API_Key with the new key value.\n7. If the TWTF2 account is also in use, repeat steps 1-4 for that account and update DevTO_TWTF2_API_Key.\n8. Re-run the syndication workflow for the failed post (who-pays-for-towing-after-a-car-accident-not-my-fault) or wait for the next scheduled run, and re-run check_platform_health.py to confirm devto reports healthy.\n9. Note: the airbag-light-on-is-car-safe-to-drive post also failed Dev.to syndication with the same error; it will need to be re-syndicated to Dev.to manually or by re-running the pipeline after the key is fixed, since it was already marked synced.",
+        "status": "human_required"
+      }
+    }
   }
 ]
