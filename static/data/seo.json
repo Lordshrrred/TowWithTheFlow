@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-11-17T16:27:48.612813+00:00",
+  "generated_at": "2026-11-18T15:57:34.389964+00:00",
   "keywords": {
     "total": 1064,
-    "live": 838,
-    "pending": 226,
+    "live": 842,
+    "pending": 222,
     "local": {
       "live": 289,
       "pending": 0
     },
     "pain_point": {
-      "live": 549,
-      "pending": 226
+      "live": 553,
+      "pending": 222
     }
   },
   "next_targets": [
-    {
-      "keyword": "run flat tire blew out can i drive on it",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "alternator died while driving symptoms what happens next",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "who pays for towing after a car accident not my fault",
-      "score": 8,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "airbag light on is car safe to drive",
-      "score": 8,
-      "type": "pain_point"
-    },
     {
       "keyword": "does progressive insurance cover towing cost",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "how far will insurance tow my car for free",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "aaa vs allstate roadside assistance which is better",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does usaa cover towing and roadside assistance",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how much does roadside assistance cost without insurance",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does my credit card cover roadside assistance towing",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 72
+      "count": 73
     },
     {
       "slug": "highway-safety",
@@ -99,21 +99,21 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 35
+      "count": 36
     },
     {
       "slug": "accident-liability",
       "label": "Accidents & Towing Liability",
-      "count": 13
-    },
-    {
-      "slug": "vehicle-safety",
-      "label": "Vehicle Safety",
-      "count": 12
+      "count": 14
     },
     {
       "slug": "towing-logistics",
       "label": "Towing Logistics & Process",
+      "count": 12
+    },
+    {
+      "slug": "vehicle-safety",
+      "label": "Vehicle Safety",
       "count": 12
     },
     {
@@ -129,7 +129,7 @@
     {
       "slug": "consumer-rights",
       "label": "Consumer Rights",
-      "count": 3
+      "count": 4
     },
     {
       "slug": "emergency-checklists",
@@ -151,27 +151,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-17T11:44:58.335749+00:00",
+    "generated_at": "2026-11-18T11:31:57.296480+00:00",
     "platforms": {
       "blog": {
-        "checked": 36,
-        "verified": 36
+        "checked": 1,
+        "verified": 1
       },
       "dev": {
         "checked": 278,
         "verified": 278
       },
       "feeder": {
-        "checked": 810,
-        "verified": 810
+        "checked": 814,
+        "verified": 814
       },
       "tumblr": {
-        "checked": 807,
-        "verified": 807
+        "checked": 811,
+        "verified": 811
       },
       "wordpress": {
-        "checked": 815,
-        "verified": 815
+        "checked": 819,
+        "verified": 819
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-17T16:27:48.543516+00:00",
+    "generated_at": "2026-11-18T15:57:34.311924+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,7 +198,7 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 564,
+        "rows": 562,
         "source": "ga4",
         "status": "ok"
       }
@@ -232,30 +232,30 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-17T16:27:48.640270+00:00",
+    "generatedAt": "2026-11-18T15:57:34.426936+00:00",
     "keywordGeneration": {
-      "currentInventory": 226,
-      "liveKeywords": 838,
-      "estimatedDaysRemaining": 56.5,
+      "currentInventory": 222,
+      "liveKeywords": 842,
+      "estimatedDaysRemaining": 55.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "56.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "55.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 96,
-      "backlogUnits": 106,
-      "verificationGaps": 1223,
+      "backlogPosts": 100,
+      "backlogUnits": 110,
+      "verificationGaps": 1262,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-17T11:44:58.335749+00:00",
+      "generatedAt": "2026-11-18T11:31:57.296480+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 18.4,
+      "completedPerDay": 18.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 1.6,
+      "netBacklinkUnitsPerDay": 1.9,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 1.6 platform links/day at the current rate."
+      "reason": "Backlog is growing by 1.9 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
