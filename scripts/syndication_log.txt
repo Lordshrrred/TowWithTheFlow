@@ -27938,3 +27938,33 @@
 [2026-11-19 13:56:51] === SYNDICATE DONE: how-far-will-insurance-tow-my-car-for-free | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-11-19 13:56:51] SYNCED | how-far-will-insurance-tow-my-car-for-free marked in synced-posts.txt
 [2026-11-19 13:56:51] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-19 15:20:46] === SYNDICATE START: aaa-vs-allstate-roadside-assistance-which-is-better ===
+[2026-11-19 15:20:46] PREFLIGHT | title: AAA vs Allstate Roadside Assistance: Which Is Better?
+[2026-11-19 15:20:46] PREFLIGHT | date: 2026-11-19
+[2026-11-19 15:20:46] PREFLIGHT | timestamp: 2026-11-19 15:20:46
+[2026-11-19 15:20:46] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-11-19 15:20:46] PREFLIGHT | TUMBLR:  configured
+[2026-11-19 15:20:46] PREFLIGHT | BLOGGER: configured
+[2026-11-19 15:20:46] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-19 15:20:46] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-19 15:20:46] DEVTO | aaa-vs-allstate-roadside-assistance-which-is-better | START
+[2026-11-19 15:20:46] DEVTO | aaa-vs-allstate-roadside-assistance-which-is-better | account=TWTF1
+[2026-11-19 15:20:47] DEVTO | aaa-vs-allstate-roadside-assistance-which-is-better | FAIL | HTTP 401: account TWTF1 key is invalid or revoked — rotate GitHub secret DevTO_TWTF1_API_Key
+[2026-11-19 15:20:47] --- waiting 60s before next platform ---
+[2026-11-19 15:21:47] TUMBLR | aaa-vs-allstate-roadside-assistance-which-is-better | START
+[2026-11-19 15:21:48] TUMBLR | aaa-vs-allstate-roadside-assistance-which-is-better | SUCCESS | https://towwiththeflow.tumblr.com/post/833750991968075776
+[2026-11-19 15:21:48] --- waiting 60s before next platform ---
+[2026-11-19 15:22:48] BLOGGER | aaa-vs-allstate-roadside-assistance-which-is-better | START
+[2026-11-19 15:22:48] BLOGGER | aaa-vs-allstate-roadside-assistance-which-is-better | step 1/3: refreshing access token
+[2026-11-19 15:22:48] BLOGGER | aaa-vs-allstate-roadside-assistance-which-is-better | step 2/3: converting markdown to HTML
+[2026-11-19 15:22:48] BLOGGER | aaa-vs-allstate-roadside-assistance-which-is-better | step 3/3: posting to blog 1959471973457654666
+[2026-11-19 15:22:49] BLOGGER | aaa-vs-allstate-roadside-assistance-which-is-better | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/aaa-vs-allstate-roadside-assistance.html
+[2026-11-19 15:22:49] --- waiting 60s before next platform ---
+[2026-11-19 15:23:49] WORDPRESS | aaa-vs-allstate-roadside-assistance-which-is-better | START
+[2026-11-19 15:23:57] WORDPRESS | aaa-vs-allstate-roadside-assistance-which-is-better | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/19/aaa-vs-allstate-roadside-assistance-which-is-better/
+[2026-11-19 15:23:57] --- waiting 60s before next platform ---
+[2026-11-19 15:24:57] FEEDER | aaa-vs-allstate-roadside-assistance-which-is-better | START
+[2026-11-19 15:24:58] FEEDER | aaa-vs-allstate-roadside-assistance-which-is-better | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/aaa-vs-allstate-roadside-assistance-which-is-better-guide/
+[2026-11-19 15:24:58] === SYNDICATE DONE: aaa-vs-allstate-roadside-assistance-which-is-better | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-11-19 15:24:58] SYNCED | aaa-vs-allstate-roadside-assistance-which-is-better marked in synced-posts.txt
+[2026-11-19 15:24:58] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
