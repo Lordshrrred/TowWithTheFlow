@@ -343,5 +343,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-19T09:30:17.958767+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to returns HTTP 401 for both configured accounts (TWTF1 and TWTF2 keys), meaning the API keys stored in GitHub secrets are invalid or have been revoked. The syndication log explicitly identifies TWTF1, and the health check shows both keys failing, so the credentials themselves must be regenerated; no code or config value can be derived from the visible responses.",
+        "instructions": "1. Log in to dev.to as the TWTF1 account and go to Settings > Extensions > DEV Community API Keys.\n2. Generate a new API key (description e.g. 'TWTF syndication 2026-11').\n3. In the GitHub repository for this project, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key.\n4. Repeat steps 1-3 for the TWTF2 account, updating DevTO_TWTF2_API_Key.\n5. Re-run the health check (check_platform_health.py) to confirm the devto check reports healthy.\n6. Re-run syndication for the two posts that failed on Dev.to (car-broke-down-on-railroad-tracks-what-to-do and does-aaa-cover-towing-for-someone-else-driving-my-car) or allow the next scheduled run to backfill them, verifying the canonical URLs are not duplicated on Dev.to.",
+        "status": "human_required"
+      }
+    }
   }
 ]
