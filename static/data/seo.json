@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-11-18T16:47:38.286203+00:00",
+  "generated_at": "2026-11-19T16:02:22.311674+00:00",
   "keywords": {
     "total": 1064,
-    "live": 842,
-    "pending": 222,
+    "live": 846,
+    "pending": 218,
     "local": {
       "live": 289,
       "pending": 0
     },
     "pain_point": {
-      "live": 553,
-      "pending": 222
+      "live": 557,
+      "pending": 218
     }
   },
   "next_targets": [
-    {
-      "keyword": "does progressive insurance cover towing cost",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car smoking under hood on highway stop or drive",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down on railroad tracks what to do",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does aaa cover towing for someone else driving my car",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "car wont start after rain dead battery or something else",
       "score": 7,
@@ -63,23 +43,43 @@
       "keyword": "does my credit card cover roadside assistance towing",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "can you negotiate tow truck price",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "towing a car with all wheel drive damage risks",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does roadside assistance cover dead battery jumpstart",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "roadside assistance how long do you have to wait",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 311
+      "count": 312
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 128
+      "count": 129
     },
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 102
+      "count": 103
     },
     {
       "slug": "battery-starting",
@@ -94,7 +94,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 40
+      "count": 41
     },
     {
       "slug": "tire-wheel",
@@ -151,7 +151,7 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-18T11:31:57.296480+00:00",
+    "generated_at": "2026-11-19T11:30:58.011477+00:00",
     "platforms": {
       "blog": {
         "checked": 1,
@@ -162,16 +162,16 @@
         "verified": 278
       },
       "feeder": {
-        "checked": 814,
-        "verified": 814
+        "checked": 818,
+        "verified": 818
       },
       "tumblr": {
-        "checked": 811,
-        "verified": 811
+        "checked": 815,
+        "verified": 815
       },
       "wordpress": {
-        "checked": 819,
-        "verified": 819
+        "checked": 823,
+        "verified": 823
       }
     }
   },
@@ -179,7 +179,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-18T15:57:34.311924+00:00",
+    "generated_at": "2026-11-19T16:02:22.230243+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,30 +198,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 562,
+        "rows": 564,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 37,
-      "completion_rate": 0.9736842105263158,
-      "opens": 38,
+      "completes": 41,
+      "completion_rate": 0.9761904761904762,
+      "opens": 42,
       "top_events": [
         {
-          "count": 356,
+          "count": 369,
           "event": "estimate_generated"
         },
         {
-          "count": 174,
+          "count": 189,
           "event": "field_change"
         },
         {
-          "count": 38,
+          "count": 42,
           "event": "calculator_open"
         },
         {
-          "count": 37,
+          "count": 41,
           "event": "calculator_complete"
         }
       ]
@@ -232,30 +232,30 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-18T16:47:38.306887+00:00",
+    "generatedAt": "2026-11-19T16:02:22.350480+00:00",
     "keywordGeneration": {
-      "currentInventory": 222,
-      "liveKeywords": 842,
-      "estimatedDaysRemaining": 55.5,
+      "currentInventory": 218,
+      "liveKeywords": 846,
+      "estimatedDaysRemaining": 54.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "55.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "54.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 100,
-      "backlogUnits": 110,
-      "verificationGaps": 1262,
+      "backlogPosts": 104,
+      "backlogUnits": 114,
+      "verificationGaps": 1266,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-18T11:31:57.296480+00:00",
+      "generatedAt": "2026-11-19T11:30:58.011477+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 18.1,
+      "completedPerDay": 17.8,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 1.9,
+      "netBacklinkUnitsPerDay": 2.2,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 1.9 platform links/day at the current rate."
+      "reason": "Backlog is growing by 2.2 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
