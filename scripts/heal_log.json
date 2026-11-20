@@ -382,5 +382,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-20T09:19:38.638726+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to returns HTTP 401 for both configured API keys (DevTO_TWTF1_API_Key and DevTO_TWTF2_API_Key). The logs show the TWTF1 key was revoked or invalidated, and the health check indicates both accounts are failing, so the GitHub secrets need to be regenerated from the Dev.to account settings rather than patched in code.",
+        "instructions": "1. Log in to dev.to with the TWTF1 account (and TWTF2 if it is also failing) and go to Settings > Extensions > Generate New API Key.\n2. Generate a new key, then copy it immediately (it is shown only once).\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions and update DevTO_TWTF1_API_Key with the new key. Repeat for DevTO_TWTF2_API_Key if that account is also returning 401.\n4. Optionally confirm locally with: curl -H 'api-key: <new key>' https://dev.to/api/articles/me/published\n5. Re-run the failed syndication for aaa-vs-allstate-roadside-assistance-which-is-better and does-usaa-cover-towing-and-roadside-assistance (or wait for the next scheduled run) and confirm the Dev.to health check reports healthy in scripts/platform_health.json.\n6. Note: the posts currently listed as FAIL on Dev.to will need manual republishing or a re-run once the key is restored, since the canonical_url path makes duplicates unlikely to be a problem.",
+        "status": "human_required"
+      }
+    }
   }
 ]
