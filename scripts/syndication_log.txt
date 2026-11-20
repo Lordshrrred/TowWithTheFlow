@@ -28059,3 +28059,33 @@
 [2026-11-20 13:42:02] === SYNDICATE DONE: does-my-credit-card-cover-roadside-assistance-towing | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-11-20 13:42:02] SYNCED | does-my-credit-card-cover-roadside-assistance-towing marked in synced-posts.txt
 [2026-11-20 13:42:02] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-20 14:54:24] === SYNDICATE START: can-you-negotiate-tow-truck-price ===
+[2026-11-20 14:54:24] PREFLIGHT | title: Can You Negotiate Tow Truck Price? What Works and What Doesn't
+[2026-11-20 14:54:24] PREFLIGHT | date: 2026-11-20
+[2026-11-20 14:54:24] PREFLIGHT | timestamp: 2026-11-20 14:54:24
+[2026-11-20 14:54:24] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-11-20 14:54:24] PREFLIGHT | TUMBLR:  configured
+[2026-11-20 14:54:24] PREFLIGHT | BLOGGER: configured
+[2026-11-20 14:54:24] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-20 14:54:24] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-20 14:54:24] DEVTO | can-you-negotiate-tow-truck-price | START
+[2026-11-20 14:54:24] DEVTO | can-you-negotiate-tow-truck-price | account=TWTF1
+[2026-11-20 14:54:24] DEVTO | can-you-negotiate-tow-truck-price | FAIL | HTTP 401: account TWTF1 key is invalid or revoked — rotate GitHub secret DevTO_TWTF1_API_Key
+[2026-11-20 14:54:24] --- waiting 60s before next platform ---
+[2026-11-20 14:55:24] TUMBLR | can-you-negotiate-tow-truck-price | START
+[2026-11-20 14:55:25] TUMBLR | can-you-negotiate-tow-truck-price | SUCCESS | https://towwiththeflow.tumblr.com/post/833839929557745664
+[2026-11-20 14:55:25] --- waiting 60s before next platform ---
+[2026-11-20 14:56:25] BLOGGER | can-you-negotiate-tow-truck-price | START
+[2026-11-20 14:56:25] BLOGGER | can-you-negotiate-tow-truck-price | step 1/3: refreshing access token
+[2026-11-20 14:56:25] BLOGGER | can-you-negotiate-tow-truck-price | step 2/3: converting markdown to HTML
+[2026-11-20 14:56:25] BLOGGER | can-you-negotiate-tow-truck-price | step 3/3: posting to blog 1959471973457654666
+[2026-11-20 14:56:25] BLOGGER | can-you-negotiate-tow-truck-price | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/can-you-negotiate-tow-truck-price-what.html
+[2026-11-20 14:56:25] --- waiting 60s before next platform ---
+[2026-11-20 14:57:25] WORDPRESS | can-you-negotiate-tow-truck-price | START
+[2026-11-20 14:57:34] WORDPRESS | can-you-negotiate-tow-truck-price | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/20/can-you-negotiate-tow-truck-price/
+[2026-11-20 14:57:34] --- waiting 60s before next platform ---
+[2026-11-20 14:58:34] FEEDER | can-you-negotiate-tow-truck-price | START
+[2026-11-20 14:58:35] FEEDER | can-you-negotiate-tow-truck-price | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/can-you-negotiate-tow-truck-price-advice/
+[2026-11-20 14:58:35] === SYNDICATE DONE: can-you-negotiate-tow-truck-price | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-11-20 14:58:35] SYNCED | can-you-negotiate-tow-truck-price marked in synced-posts.txt
+[2026-11-20 14:58:35] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
