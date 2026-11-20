@@ -369,5 +369,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-20T08:19:28.219478+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (GitHub secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401, meaning it is invalid, revoked, or expired. The health check shows both TWTF1 and TWTF2 accounts failing with 401, so the problem is likely the API keys themselves rather than code, and the key values cannot be regenerated or verified from within this system.",
+        "instructions": "1. Log in to dev.to with the TWTF1 account (and separately TWTF2 if its key is also failing).\n2. Go to Settings > Extensions (https://dev.to/settings/extensions) and scroll to 'DEV Community API Keys'.\n3. Revoke the existing key(s) if they are listed, then generate a new API key with a description such as 'TWTF syndication'.\n4. Copy the new key immediately (it is shown only once).\n5. In the GitHub repository for this project, go to Settings > Secrets and variables > Actions.\n6. Update the secret DevTO_TWTF1_API_Key with the new key value (and DevTO_TWTF2_API_Key if TWTF2 was also rejected).\n7. Re-run the failed Dev.to syndication for the affected posts (aaa-vs-allstate-roadside-assistance-which-is-better and does-usaa-cover-towing-and-roadside-assistance) or wait for the next scheduled run.\n8. Re-run scripts/check_platform_health.py to confirm the devto check reports 'healthy'.",
+        "status": "human_required"
+      }
+    }
   }
 ]
