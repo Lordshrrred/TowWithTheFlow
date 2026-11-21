@@ -28149,3 +28149,33 @@
 [2026-11-21 10:47:46] === SYNDICATE DONE: does-roadside-assistance-cover-dead-battery-jumpstart | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-11-21 10:47:46] SYNCED | does-roadside-assistance-cover-dead-battery-jumpstart marked in synced-posts.txt
 [2026-11-21 10:47:46] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-21 12:37:28] === SYNDICATE START: roadside-assistance-how-long-do-you-have-to-wait ===
+[2026-11-21 12:37:28] PREFLIGHT | title: Roadside Assistance: How Long Do You Have to Wait? Real Timeframes
+[2026-11-21 12:37:28] PREFLIGHT | date: 2026-11-21
+[2026-11-21 12:37:28] PREFLIGHT | timestamp: 2026-11-21 12:37:28
+[2026-11-21 12:37:28] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-11-21 12:37:28] PREFLIGHT | TUMBLR:  configured
+[2026-11-21 12:37:28] PREFLIGHT | BLOGGER: configured
+[2026-11-21 12:37:28] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-21 12:37:28] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-21 12:37:28] DEVTO | roadside-assistance-how-long-do-you-have-to-wait | START
+[2026-11-21 12:37:28] DEVTO | roadside-assistance-how-long-do-you-have-to-wait | account=TWTF2
+[2026-11-21 12:37:28] DEVTO | roadside-assistance-how-long-do-you-have-to-wait | FAIL | HTTP 401: account TWTF2 key is invalid or revoked — rotate GitHub secret DevTO_TWTF2_API_Key
+[2026-11-21 12:37:28] --- waiting 60s before next platform ---
+[2026-11-21 12:38:28] TUMBLR | roadside-assistance-how-long-do-you-have-to-wait | START
+[2026-11-21 12:38:29] TUMBLR | roadside-assistance-how-long-do-you-have-to-wait | SUCCESS | https://towwiththeflow.tumblr.com/post/833921911575724032
+[2026-11-21 12:38:29] --- waiting 60s before next platform ---
+[2026-11-21 12:39:29] BLOGGER | roadside-assistance-how-long-do-you-have-to-wait | START
+[2026-11-21 12:39:29] BLOGGER | roadside-assistance-how-long-do-you-have-to-wait | step 1/3: refreshing access token
+[2026-11-21 12:39:29] BLOGGER | roadside-assistance-how-long-do-you-have-to-wait | step 2/3: converting markdown to HTML
+[2026-11-21 12:39:29] BLOGGER | roadside-assistance-how-long-do-you-have-to-wait | step 3/3: posting to blog 1959471973457654666
+[2026-11-21 12:39:30] BLOGGER | roadside-assistance-how-long-do-you-have-to-wait | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/roadside-assistance-how-long-do-you.html
+[2026-11-21 12:39:30] --- waiting 60s before next platform ---
+[2026-11-21 12:40:30] WORDPRESS | roadside-assistance-how-long-do-you-have-to-wait | START
+[2026-11-21 12:40:41] WORDPRESS | roadside-assistance-how-long-do-you-have-to-wait | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/21/roadside-assistance-how-long-do-you-have-to-wait/
+[2026-11-21 12:40:41] --- waiting 60s before next platform ---
+[2026-11-21 12:41:41] FEEDER | roadside-assistance-how-long-do-you-have-to-wait | START
+[2026-11-21 12:41:42] FEEDER | roadside-assistance-how-long-do-you-have-to-wait | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/roadside-assistance-how-long-do-you-have-to-wait-guide/
+[2026-11-21 12:41:42] === SYNDICATE DONE: roadside-assistance-how-long-do-you-have-to-wait | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-11-21 12:41:42] SYNCED | roadside-assistance-how-long-do-you-have-to-wait marked in synced-posts.txt
+[2026-11-21 12:41:42] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
