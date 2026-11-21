@@ -408,5 +408,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-21T08:11:59.951980+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (and TWTF2) is being rejected with HTTP 401, meaning the keys stored in GitHub secrets are invalid or have been revoked. The health check confirms both DevTO_TWTF1_API_Key and DevTO_TWTF2_API_Key are failing; the code cannot fix an expired or revoked credential, so a human must regenerate the key on dev.to and update the secret.",
+        "instructions": "1. Log in to dev.to as the TWTF1 account (and separately TWTF2 if used).\n2. Go to Settings > Extensions > DEV Community API Keys and generate a new API key (revoke the old one if it appears compromised).\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions.\n4. Update the secret DevTO_TWTF1_API_Key with the new TWTF1 key.\n5. Update the secret DevTO_TWTF2_API_Key with the new TWTF2 key if that account is in use.\n6. Re-run the failed syndication for can-you-negotiate-tow-truck-price and towing-a-car-with-all-wheel-drive-damage-risks, or wait for the next scheduled run, and confirm the Dev.to HTTP 401 errors are gone.\n7. Re-run check_platform_health.py to confirm devto reports healthy.",
+        "status": "human_required"
+      }
+    }
   }
 ]
