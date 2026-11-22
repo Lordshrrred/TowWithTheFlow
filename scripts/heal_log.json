@@ -460,5 +460,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-22T08:53:19.115030+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401, meaning the key is invalid or has been revoked. Both the health check and the live syndication for TWTF1 fail while Tumblr, Blogger, WordPress and Feeder succeed, so the platform code is fine and only the credential is stale; the TWTF2 key also returns 401 in the health check, so both Dev.to keys may need rotation.",
+        "instructions": "1. Log in to dev.to as the TWTF1 account (and the TWTF2 account if it is also affected).\n2. Go to Settings > Extensions > DEV Community API Keys and generate a new API key with a descriptive name such as 'TWTF syndication'.\n3. Copy the new key immediately (it is shown only once).\n4. In the GitHub repository, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key (and DevTO_TWTF2_API_Key if TWTF2 is also invalid).\n5. Optionally revoke the old key in the Dev.to settings page.\n6. Re-run the Dev.to syndication for the two failed posts: does-progressive-cover-towing-after-accident and private-property-towing-rules-who-is-responsible, or wait for the next scheduled run.\n7. Confirm the next run of check_platform_health.py reports devto as healthy.",
+        "status": "human_required"
+      }
+    }
   }
 ]
