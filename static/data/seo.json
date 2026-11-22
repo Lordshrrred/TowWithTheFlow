@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-11-21T14:55:29.674976+00:00",
+  "generated_at": "2026-11-22T14:53:12.363428+00:00",
   "keywords": {
     "total": 1064,
-    "live": 854,
-    "pending": 210,
+    "live": 858,
+    "pending": 206,
     "local": {
       "live": 289,
       "pending": 0
     },
     "pain_point": {
-      "live": 565,
-      "pending": 210
+      "live": 569,
+      "pending": 206
     }
   },
   "next_targets": [
-    {
-      "keyword": "does roadside assistance cover dead battery jumpstart",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "roadside assistance how long do you have to wait",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does progressive cover towing after accident",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "private property towing rules who is responsible",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "does aaa cover towing after an at fault accident",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "does progressive roadside assistance cover lockout service",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does rental car insurance cover towing cost",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car stranded in desert heat what to do",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does state farm roadside assistance have mileage limits",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "car broke down in toll lane what to do",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 108
+      "count": 111
     },
     {
       "slug": "battery-starting",
@@ -137,6 +137,11 @@
       "count": 2
     },
     {
+      "slug": "state-towing-laws",
+      "label": "State Towing Laws",
+      "count": 1
+    },
+    {
       "slug": "trailer-rv-towing",
       "label": "Trailer & RV Towing",
       "count": 1
@@ -151,27 +156,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-21T10:55:41.911492+00:00",
+    "generated_at": "2026-11-22T11:30:09.419873+00:00",
     "platforms": {
       "blog": {
-        "checked": 40,
-        "verified": 40
+        "checked": 516,
+        "verified": 516
       },
       "dev": {
-        "checked": 278,
-        "verified": 278
+        "checked": 435,
+        "verified": 435
       },
       "feeder": {
-        "checked": 826,
-        "verified": 826
+        "checked": 830,
+        "verified": 830
       },
       "tumblr": {
-        "checked": 823,
-        "verified": 823
+        "checked": 827,
+        "verified": 827
       },
       "wordpress": {
-        "checked": 831,
-        "verified": 831
+        "checked": 835,
+        "verified": 835
       }
     }
   },
@@ -179,7 +184,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-21T14:55:29.591805+00:00",
+    "generated_at": "2026-11-22T14:53:12.286521+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -198,30 +203,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 576,
+        "rows": 578,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 44,
-      "completion_rate": 0.9777777777777777,
-      "opens": 45,
+      "completes": 42,
+      "completion_rate": 0.9767441860465116,
+      "opens": 43,
       "top_events": [
         {
-          "count": 394,
+          "count": 262,
           "event": "estimate_generated"
         },
         {
-          "count": 203,
+          "count": 157,
           "event": "field_change"
         },
         {
-          "count": 45,
+          "count": 43,
           "event": "calculator_open"
         },
         {
-          "count": 44,
+          "count": 42,
           "event": "calculator_complete"
         }
       ]
@@ -232,30 +237,30 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-21T14:55:29.715461+00:00",
+    "generatedAt": "2026-11-22T14:53:12.401930+00:00",
     "keywordGeneration": {
-      "currentInventory": 210,
-      "liveKeywords": 854,
-      "estimatedDaysRemaining": 52.5,
+      "currentInventory": 206,
+      "liveKeywords": 858,
+      "estimatedDaysRemaining": 51.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "52.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "51.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 112,
-      "backlogUnits": 122,
-      "verificationGaps": 1235,
+      "backlogPosts": 116,
+      "backlogUnits": 126,
+      "verificationGaps": 606,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-21T10:55:41.911492+00:00",
+      "generatedAt": "2026-11-22T11:30:09.419873+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 17.2,
+      "completedPerDay": 16.9,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 2.8,
+      "netBacklinkUnitsPerDay": 3.1,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 2.8 platform links/day at the current rate."
+      "reason": "Backlog is growing by 3.1 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
