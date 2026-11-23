@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-11-20T16:28:37.588303+00:00",
+  "generatedAt": "2026-11-23T19:36:26.909310+00:00",
   "keywordGeneration": {
-    "currentInventory": 214,
-    "liveKeywords": 850,
-    "estimatedDaysRemaining": 53.5,
+    "currentInventory": 202,
+    "liveKeywords": 862,
+    "estimatedDaysRemaining": 50.5,
     "publishingCadencePerDay": 4.0,
     "pauseThresholdDays": 90.0,
     "resumeThresholdDays": 45.0,
     "status": "paused",
-    "reason": "53.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+    "reason": "50.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
   },
   "backlinks": {
-    "backlogPosts": 108,
-    "backlogUnits": 118,
-    "verificationGaps": 1248,
+    "backlogPosts": 120,
+    "backlogUnits": 130,
+    "verificationGaps": 632,
     "requiredPlatformsPerPost": 5,
-    "generatedAt": "2026-11-20T11:27:54.363878+00:00",
+    "generatedAt": "2026-11-23T12:22:56.235533+00:00",
     "source": "backlink_audit.json",
-    "completedPerDay": 17.5,
+    "completedPerDay": 16.6,
     "newPostsPerDay": 4.0,
     "newBacklinkUnitsPerDay": 20.0,
-    "netBacklinkUnitsPerDay": 2.5,
+    "netBacklinkUnitsPerDay": 3.4,
     "estimatedCatchUpDays": null,
-    "reason": "Backlog is growing by 2.5 platform links/day at the current rate."
+    "reason": "Backlog is growing by 3.4 platform links/day at the current rate."
   },
   "curatedExpansion": {
     "supported": true,
