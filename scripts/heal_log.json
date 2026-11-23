@@ -486,5 +486,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-23T08:42:44.129324+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401, meaning the key is invalid, revoked, or expired. Both the syndication run and the health check fail for TWTF1 while TWTF2 is also returning 401 in the failure report, so the Dev.to credentials need to be regenerated on the Dev.to account settings page and updated in GitHub secrets. Tumblr, Blogger, WordPress, and Feeder are succeeding, so the problem is isolated to Dev.to credentials.",
+        "instructions": "1. Log in to dev.to as the TWTF1 account (and TWTF2 if its key is also invalid).\n2. Go to Settings > Extensions > DEV Community API Keys and generate a new API key for each account.\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions.\n4. Update secret DevTO_TWTF1_API_Key with the new TWTF1 key.\n5. If TWTF2 also fails, update DevTO_TWTF2_API_Key with the new TWTF2 key.\n6. Re-run the failed syndication for does-geico-roadside-assistance-cover-towing-after-accident and does-liability-only-insurance-cover-towing, or wait for the next scheduled run.\n7. Confirm the next platform health check reports Dev.to as healthy.",
+        "status": "human_required"
+      }
+    }
   }
 ]
