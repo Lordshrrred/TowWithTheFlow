@@ -499,5 +499,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-23T09:43:09.926978+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401 as invalid or revoked, and both the syndication run and the health check fail on it. The TWTF2 key is also returning 401 in the failure report, so both configured Dev.to keys appear to be invalid, and the code cannot be the cause since it is correctly sending the api-key header.",
+        "instructions": "1. Log in to dev.to as the TWTF1 account and go to Settings > Extensions > Generate New API Key. Copy the new key.\n2. In the GitHub repository for this project, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key.\n3. Repeat steps 1-2 for the TWTF2 account, updating secret DevTO_TWTF2_API_Key, since its key is also returning 401.\n4. Confirm the keys are not truncated or wrapped in quotes when pasted; the env_clean helper strips quotes, but verify the value.\n5. Re-run the Dev.to health check (check_platform_health.py) or trigger a syndication run for one post to verify HTTP 200/201 before resuming automated syndication.\n6. If the accounts have been locked or the API access revoked by Dev.to, contact Dev.to support or check the account's email for a notice.",
+        "status": "human_required"
+      }
+    }
   }
 ]
