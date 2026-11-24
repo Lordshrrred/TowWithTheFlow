@@ -512,5 +512,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-24T09:56:59.298029+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (GitHub secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401, meaning the key is invalid or has been revoked. The log shows Dev.to syndication failing for every post, while the health check indicates the TWTF2 account key may also be failing, so both Dev.to credentials likely need to be regenerated and rotated in GitHub secrets. The code cannot fix an expired or revoked credential.",
+        "instructions": "1. Log in to dev.to with the TWTF1 account and go to Settings > Extensions > DEV Community API Keys.\n2. Generate a new API key (description e.g. 'TWTF syndication').\n3. In the GitHub repository for this project, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key value.\n4. Repeat steps 1-3 for the TWTF2 account, updating the secret DevTO_TWTF2_API_Key, since the health check suggests it may also be failing.\n5. Re-run the syndication workflow for the two posts that failed (does-rental-car-insurance-cover-towing-cost and car-stranded-in-desert-heat-what-to-do) or wait for the next scheduled run.\n6. Confirm via the next check_platform_health.py run that devto status shows 'healthy'.",
+        "status": "human_required"
+      }
+    }
   }
 ]
