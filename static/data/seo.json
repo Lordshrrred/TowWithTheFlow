@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-11-23T19:36:27.322826+00:00",
+  "generated_at": "2026-11-24T18:17:21.501672+00:00",
   "keywords": {
     "total": 1064,
-    "live": 862,
-    "pending": 202,
+    "live": 866,
+    "pending": 198,
     "local": {
       "live": 289,
       "pending": 0
     },
     "pain_point": {
-      "live": 573,
-      "pending": 202
+      "live": 577,
+      "pending": 198
     }
   },
   "next_targets": [
-    {
-      "keyword": "how far will aaa tow my car for free",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does progressive roadside assistance cover lockout service",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does rental car insurance cover towing cost",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car stranded in desert heat what to do",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "does state farm roadside assistance have mileage limits",
       "score": 7,
@@ -63,13 +43,33 @@
       "keyword": "does progressive cover roadside assistance towing cost",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "how long can you drive on a spare donut tire before it fails",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "oil pressure warning light came on while driving what to do",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "flat tire on highway no spare what are my options",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how much does emergency roadside assistance cost without insurance",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 313
+      "count": 314
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 114
+      "count": 116
     },
     {
       "slug": "battery-starting",
@@ -94,7 +94,7 @@
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 41
+      "count": 42
     },
     {
       "slug": "tire-wheel",
@@ -156,7 +156,7 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-23T12:22:56.235533+00:00",
+    "generated_at": "2026-11-24T13:35:00.114629+00:00",
     "platforms": {
       "blog": {
         "checked": 494,
@@ -167,16 +167,16 @@
         "verified": 435
       },
       "feeder": {
-        "checked": 834,
-        "verified": 834
+        "checked": 838,
+        "verified": 838
       },
       "tumblr": {
-        "checked": 831,
-        "verified": 831
+        "checked": 835,
+        "verified": 835
       },
       "wordpress": {
-        "checked": 839,
-        "verified": 839
+        "checked": 843,
+        "verified": 843
       }
     }
   },
@@ -184,7 +184,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-23T18:43:40.898936+00:00",
+    "generated_at": "2026-11-24T18:17:21.423810+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -196,71 +196,71 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 4,
+        "rows": 5,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 580,
+        "rows": 578,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 43,
-      "completion_rate": 0.9772727272727273,
-      "opens": 44,
+      "completes": 46,
+      "completion_rate": 0.9787234042553191,
+      "opens": 47,
       "top_events": [
         {
-          "count": 272,
+          "count": 285,
           "event": "estimate_generated"
         },
         {
-          "count": 163,
+          "count": 173,
           "event": "field_change"
         },
         {
-          "count": 44,
+          "count": 47,
           "event": "calculator_open"
         },
         {
-          "count": 43,
+          "count": 46,
           "event": "calculator_complete"
         }
       ]
     },
     "top_actions": [],
-    "top_landing_page_count": 1,
-    "top_query_count": 1,
+    "top_landing_page_count": 2,
+    "top_query_count": 2,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-23T19:36:27.351023+00:00",
+    "generatedAt": "2026-11-24T18:17:21.523317+00:00",
     "keywordGeneration": {
-      "currentInventory": 202,
-      "liveKeywords": 862,
-      "estimatedDaysRemaining": 50.5,
+      "currentInventory": 198,
+      "liveKeywords": 866,
+      "estimatedDaysRemaining": 49.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "50.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "49.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 120,
-      "backlogUnits": 130,
-      "verificationGaps": 632,
+      "backlogPosts": 124,
+      "backlogUnits": 134,
+      "verificationGaps": 636,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-23T12:22:56.235533+00:00",
+      "generatedAt": "2026-11-24T13:35:00.114629+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 16.6,
+      "completedPerDay": 16.0,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 3.4,
+      "netBacklinkUnitsPerDay": 4.0,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 3.4 platform links/day at the current rate."
+      "reason": "Backlog is growing by 4.0 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,

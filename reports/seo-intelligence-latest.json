@@ -39,6 +39,14 @@
       "backlinks": 4,
       "clicks": 0,
       "impressions": 1,
+      "path": "/what-to-do-if-your-car-breaks-down-at-night/",
+      "position": 91.0,
+      "syndications": 5
+    },
+    {
+      "backlinks": 4,
+      "clicks": 0,
+      "impressions": 1,
       "path": "/car-wont-start-clicking-noise-what-to-do/",
       "position": 79.0,
       "syndications": 4
@@ -53,10 +61,10 @@
     "weak_engagement": []
   },
   "comparison": {
-    "current_gsc_rows": 1,
+    "current_gsc_rows": 2,
     "previous_gsc_rows": 3
   },
-  "generated_at": "2026-11-23T18:43:40.898936+00:00",
+  "generated_at": "2026-11-24T18:17:21.423810+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -64,12 +72,12 @@
   },
   "periods": {
     "current": [
-      "2026-10-26",
-      "2026-11-22"
+      "2026-10-27",
+      "2026-11-23"
     ],
     "previous": [
-      "2026-09-28",
-      "2026-10-25"
+      "2026-09-29",
+      "2026-10-26"
     ]
   },
   "request_counts": {
@@ -80,14 +88,14 @@
     {
       "cached": false,
       "message": "Fetched Search Console query/page data.",
-      "rows": 4,
+      "rows": 5,
       "source": "search_console",
       "status": "ok"
     },
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 580,
+      "rows": 578,
       "source": "ga4",
       "status": "ok"
     }
@@ -96,7 +104,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-23T18:43:40.898936+00:00",
+    "generated_at": "2026-11-24T18:17:21.423810+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -108,71 +116,91 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 4,
+        "rows": 5,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 580,
+        "rows": 578,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 43,
-      "completion_rate": 0.9772727272727273,
-      "opens": 44,
+      "completes": 46,
+      "completion_rate": 0.9787234042553191,
+      "opens": 47,
       "top_events": [
         {
-          "count": 272,
+          "count": 285,
           "event": "estimate_generated"
         },
         {
-          "count": 163,
+          "count": 173,
           "event": "field_change"
         },
         {
-          "count": 44,
+          "count": 47,
           "event": "calculator_open"
         },
         {
-          "count": 43,
+          "count": 46,
           "event": "calculator_complete"
         }
       ]
     },
     "top_actions": [],
-    "top_landing_page_count": 1,
-    "top_query_count": 1,
+    "top_landing_page_count": 2,
+    "top_query_count": 2,
     "winning_page_count": 0
   },
   "tool_engine": {
-    "completes": 43,
-    "completion_rate": 0.9772727272727273,
-    "opens": 44,
+    "completes": 46,
+    "completion_rate": 0.9787234042553191,
+    "opens": 47,
     "top_events": [
       {
-        "count": 272,
+        "count": 285,
         "event": "estimate_generated"
       },
       {
-        "count": 163,
+        "count": 173,
         "event": "field_change"
       },
       {
-        "count": 44,
+        "count": 47,
         "event": "calculator_open"
       },
       {
-        "count": 43,
+        "count": 46,
         "event": "calculator_complete"
       }
     ]
   },
   "top_actions": [],
   "top_landing_pages": [
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/what-to-do-if-your-car-breaks-down-at-night/",
+      "impressions": 1,
+      "position": 91.0,
+      "queries": {
+        "car broke down on the road at night": 1
+      },
+      "top_queries": [
+        [
+          "car broke down on the road at night",
+          1
+        ]
+      ],
+      "weighted_position": 91.0
+    },
     {
       "categories": [
         "roadside emergency"
@@ -195,6 +223,26 @@
     }
   ],
   "top_queries": [
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "car broke down on the road at night",
+      "impressions": 1,
+      "position": 91.0,
+      "queries": {
+        "car broke down on the road at night": 1
+      },
+      "top_queries": [
+        [
+          "car broke down on the road at night",
+          1
+        ]
+      ],
+      "weighted_position": 91.0
+    },
     {
       "categories": [
         "roadside emergency"
