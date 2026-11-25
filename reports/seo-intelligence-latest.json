@@ -38,9 +38,9 @@
     {
       "backlinks": 4,
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "path": "/what-to-do-if-your-car-breaks-down-at-night/",
-      "position": 91.0,
+      "position": 92.0,
       "syndications": 5
     },
     {
@@ -64,7 +64,7 @@
     "current_gsc_rows": 2,
     "previous_gsc_rows": 3
   },
-  "generated_at": "2026-11-24T18:17:21.423810+00:00",
+  "generated_at": "2026-11-25T17:36:53.701142+00:00",
   "intent_map": {
     "generatedAt": "2026-07-10T17:36:01.700206+00:00",
     "metadataFlagCount": 118,
@@ -72,12 +72,12 @@
   },
   "periods": {
     "current": [
-      "2026-10-27",
-      "2026-11-23"
+      "2026-10-28",
+      "2026-11-24"
     ],
     "previous": [
-      "2026-09-29",
-      "2026-10-26"
+      "2026-09-30",
+      "2026-10-27"
     ]
   },
   "request_counts": {
@@ -95,7 +95,7 @@
     {
       "cached": false,
       "message": "Fetched GA4 organic landing-page behavior.",
-      "rows": 578,
+      "rows": 570,
       "source": "ga4",
       "status": "ok"
     }
@@ -104,7 +104,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-24T18:17:21.423810+00:00",
+    "generated_at": "2026-11-25T17:36:53.701142+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -123,30 +123,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 578,
+        "rows": 570,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 46,
-      "completion_rate": 0.9787234042553191,
-      "opens": 47,
+      "completes": 50,
+      "completion_rate": 0.9803921568627451,
+      "opens": 51,
       "top_events": [
         {
-          "count": 285,
+          "count": 298,
           "event": "estimate_generated"
         },
         {
-          "count": 173,
+          "count": 181,
           "event": "field_change"
         },
         {
-          "count": 47,
+          "count": 51,
           "event": "calculator_open"
         },
         {
-          "count": 46,
+          "count": 50,
           "event": "calculator_complete"
         }
       ]
@@ -157,24 +157,24 @@
     "winning_page_count": 0
   },
   "tool_engine": {
-    "completes": 46,
-    "completion_rate": 0.9787234042553191,
-    "opens": 47,
+    "completes": 50,
+    "completion_rate": 0.9803921568627451,
+    "opens": 51,
     "top_events": [
       {
-        "count": 285,
+        "count": 298,
         "event": "estimate_generated"
       },
       {
-        "count": 173,
+        "count": 181,
         "event": "field_change"
       },
       {
-        "count": 47,
+        "count": 51,
         "event": "calculator_open"
       },
       {
-        "count": 46,
+        "count": 50,
         "event": "calculator_complete"
       }
     ]
@@ -188,18 +188,18 @@
       "clicks": 0,
       "ctr": 0.0,
       "id": "/what-to-do-if-your-car-breaks-down-at-night/",
-      "impressions": 1,
-      "position": 91.0,
+      "impressions": 2,
+      "position": 92.0,
       "queries": {
-        "car broke down on the road at night": 1
+        "car broke down on the road at night": 2
       },
       "top_queries": [
         [
           "car broke down on the road at night",
-          1
+          2
         ]
       ],
-      "weighted_position": 91.0
+      "weighted_position": 184.0
     },
     {
       "categories": [
@@ -230,18 +230,18 @@
       "clicks": 0,
       "ctr": 0.0,
       "id": "car broke down on the road at night",
-      "impressions": 1,
-      "position": 91.0,
+      "impressions": 2,
+      "position": 92.0,
       "queries": {
-        "car broke down on the road at night": 1
+        "car broke down on the road at night": 2
       },
       "top_queries": [
         [
           "car broke down on the road at night",
-          1
+          2
         ]
       ],
-      "weighted_position": 91.0
+      "weighted_position": 184.0
     },
     {
       "categories": [

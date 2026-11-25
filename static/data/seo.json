@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-11-24T18:17:21.501672+00:00",
+  "generated_at": "2026-11-25T17:36:53.770914+00:00",
   "keywords": {
     "total": 1064,
-    "live": 866,
-    "pending": 198,
+    "live": 870,
+    "pending": 194,
     "local": {
       "live": 289,
       "pending": 0
     },
     "pain_point": {
-      "live": 577,
-      "pending": 198
+      "live": 581,
+      "pending": 194
     }
   },
   "next_targets": [
-    {
-      "keyword": "does state farm roadside assistance have mileage limits",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car broke down in toll lane what to do",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does aaa pay back towing costs if i already called a tow truck",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "car sputtering and losing power on highway what to do",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "car won't start in cold weather dead battery or something else",
       "score": 7,
@@ -63,13 +43,33 @@
       "keyword": "how much does emergency roadside assistance cost without insurance",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does rental car insurance cover towing and roadside assistance",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does aaa membership cover towing for someone else in my car",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "aaa towing coverage limit miles per year",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how far will insurance tow my car after breakdown",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 314
+      "count": 315
     },
     {
       "slug": "engine-mechanical",
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 116
+      "count": 117
     },
     {
       "slug": "battery-starting",
@@ -89,12 +89,12 @@
     {
       "slug": "highway-safety",
       "label": "Highway & Freeway Safety",
-      "count": 56
+      "count": 57
     },
     {
       "slug": "roadside-help",
       "label": "General Roadside Help",
-      "count": 42
+      "count": 43
     },
     {
       "slug": "tire-wheel",
@@ -156,7 +156,7 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-24T13:35:00.114629+00:00",
+    "generated_at": "2026-11-25T12:44:31.011288+00:00",
     "platforms": {
       "blog": {
         "checked": 494,
@@ -167,16 +167,16 @@
         "verified": 435
       },
       "feeder": {
-        "checked": 838,
-        "verified": 838
+        "checked": 842,
+        "verified": 842
       },
       "tumblr": {
-        "checked": 835,
-        "verified": 835
+        "checked": 839,
+        "verified": 839
       },
       "wordpress": {
-        "checked": 843,
-        "verified": 843
+        "checked": 847,
+        "verified": 847
       }
     }
   },
@@ -184,7 +184,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-24T18:17:21.423810+00:00",
+    "generated_at": "2026-11-25T17:36:53.701142+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -203,30 +203,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 578,
+        "rows": 570,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 46,
-      "completion_rate": 0.9787234042553191,
-      "opens": 47,
+      "completes": 50,
+      "completion_rate": 0.9803921568627451,
+      "opens": 51,
       "top_events": [
         {
-          "count": 285,
+          "count": 298,
           "event": "estimate_generated"
         },
         {
-          "count": 173,
+          "count": 181,
           "event": "field_change"
         },
         {
-          "count": 47,
+          "count": 51,
           "event": "calculator_open"
         },
         {
-          "count": 46,
+          "count": 50,
           "event": "calculator_complete"
         }
       ]
@@ -237,30 +237,30 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-24T18:17:21.523317+00:00",
+    "generatedAt": "2026-11-25T17:36:53.790420+00:00",
     "keywordGeneration": {
-      "currentInventory": 198,
-      "liveKeywords": 866,
-      "estimatedDaysRemaining": 49.5,
+      "currentInventory": 194,
+      "liveKeywords": 870,
+      "estimatedDaysRemaining": 48.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "49.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "48.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 124,
-      "backlogUnits": 134,
-      "verificationGaps": 636,
+      "backlogPosts": 128,
+      "backlogUnits": 138,
+      "verificationGaps": 640,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-24T13:35:00.114629+00:00",
+      "generatedAt": "2026-11-25T12:44:31.011288+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 16.0,
+      "completedPerDay": 16.1,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 4.0,
+      "netBacklinkUnitsPerDay": 3.9,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 4.0 platform links/day at the current rate."
+      "reason": "Backlog is growing by 3.9 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
