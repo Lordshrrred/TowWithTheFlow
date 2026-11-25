@@ -28661,3 +28661,33 @@
 [2026-11-25 14:59:04] === SYNDICATE DONE: does-progressive-cover-roadside-assistance-towing-cost | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-11-25 14:59:04] SYNCED | does-progressive-cover-roadside-assistance-towing-cost marked in synced-posts.txt
 [2026-11-25 14:59:04] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-25 16:11:42] === SYNDICATE START: how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails ===
+[2026-11-25 16:11:42] PREFLIGHT | title: How Long Can You Drive on a Spare Donut Tire Before It Fails?
+[2026-11-25 16:11:42] PREFLIGHT | date: 2026-11-25
+[2026-11-25 16:11:42] PREFLIGHT | timestamp: 2026-11-25 16:11:42
+[2026-11-25 16:11:42] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-11-25 16:11:42] PREFLIGHT | TUMBLR:  configured
+[2026-11-25 16:11:42] PREFLIGHT | BLOGGER: configured
+[2026-11-25 16:11:42] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-25 16:11:42] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-25 16:11:42] DEVTO | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | START
+[2026-11-25 16:11:42] DEVTO | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | account=TWTF1
+[2026-11-25 16:11:42] DEVTO | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | FAIL | HTTP 401: account TWTF1 key is invalid or revoked — rotate GitHub secret DevTO_TWTF1_API_Key
+[2026-11-25 16:11:42] --- waiting 60s before next platform ---
+[2026-11-25 16:12:42] TUMBLR | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | START
+[2026-11-25 16:12:42] TUMBLR | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | SUCCESS | https://towwiththeflow.tumblr.com/post/834297777373806592
+[2026-11-25 16:12:42] --- waiting 60s before next platform ---
+[2026-11-25 16:13:42] BLOGGER | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | START
+[2026-11-25 16:13:42] BLOGGER | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | step 1/3: refreshing access token
+[2026-11-25 16:13:42] BLOGGER | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | step 2/3: converting markdown to HTML
+[2026-11-25 16:13:42] BLOGGER | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | step 3/3: posting to blog 1959471973457654666
+[2026-11-25 16:13:43] BLOGGER | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/how-long-can-you-drive-on-spare-donut.html
+[2026-11-25 16:13:43] --- waiting 60s before next platform ---
+[2026-11-25 16:14:43] WORDPRESS | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | START
+[2026-11-25 16:14:44] WORDPRESS | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/25/how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails/
+[2026-11-25 16:14:44] --- waiting 60s before next platform ---
+[2026-11-25 16:15:44] FEEDER | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | START
+[2026-11-25 16:15:45] FEEDER | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails-guide/
+[2026-11-25 16:15:45] === SYNDICATE DONE: how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-11-25 16:15:45] SYNCED | how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails marked in synced-posts.txt
+[2026-11-25 16:15:45] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
