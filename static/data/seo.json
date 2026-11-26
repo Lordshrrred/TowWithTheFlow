@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-11-25T18:15:46.964937+00:00",
+  "generated_at": "2026-11-26T17:17:43.296236+00:00",
   "keywords": {
     "total": 1064,
-    "live": 870,
-    "pending": 194,
+    "live": 874,
+    "pending": 190,
     "local": {
       "live": 289,
       "pending": 0
     },
     "pain_point": {
-      "live": 581,
-      "pending": 194
+      "live": 585,
+      "pending": 190
     }
   },
   "next_targets": [
-    {
-      "keyword": "car won't start in cold weather dead battery or something else",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does progressive cover roadside assistance towing cost",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how long can you drive on a spare donut tire before it fails",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "oil pressure warning light came on while driving what to do",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "flat tire on highway no spare what are my options",
       "score": 7,
@@ -63,18 +43,38 @@
       "keyword": "how far will insurance tow my car after breakdown",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does allstate cover towing after breakdown insurance",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does car warranty cover towing cost breakdown",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "how long can a car sit on side of highway before towed",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does trip interruption insurance cover towing and hotel",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
     {
       "slug": "towing-cost",
       "label": "Towing Cost & Pricing",
-      "count": 315
+      "count": 316
     },
     {
       "slug": "engine-mechanical",
       "label": "Engine & Mechanical Breakdown",
-      "count": 129
+      "count": 130
     },
     {
       "slug": "insurance-coverage",
@@ -84,7 +84,7 @@
     {
       "slug": "battery-starting",
       "label": "Battery & Starting Problems",
-      "count": 74
+      "count": 75
     },
     {
       "slug": "highway-safety",
@@ -99,7 +99,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 37
+      "count": 38
     },
     {
       "slug": "accident-liability",
@@ -137,13 +137,13 @@
       "count": 2
     },
     {
-      "slug": "trailer-rv-towing",
-      "label": "Trailer & RV Towing",
+      "slug": "state-towing-laws",
+      "label": "State Towing Laws",
       "count": 1
     },
     {
-      "slug": "state-towing-laws",
-      "label": "State Towing Laws",
+      "slug": "trailer-rv-towing",
+      "label": "Trailer & RV Towing",
       "count": 1
     }
   ],
@@ -156,27 +156,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-25T12:44:31.011288+00:00",
+    "generated_at": "2026-11-26T12:19:43.208138+00:00",
     "platforms": {
       "blog": {
-        "checked": 494,
-        "verified": 494
+        "checked": 514,
+        "verified": 514
       },
       "dev": {
         "checked": 435,
         "verified": 435
       },
       "feeder": {
-        "checked": 842,
-        "verified": 842
+        "checked": 846,
+        "verified": 846
       },
       "tumblr": {
-        "checked": 839,
-        "verified": 839
+        "checked": 843,
+        "verified": 843
       },
       "wordpress": {
-        "checked": 847,
-        "verified": 847
+        "checked": 851,
+        "verified": 851
       }
     }
   },
@@ -184,7 +184,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-25T17:36:53.701142+00:00",
+    "generated_at": "2026-11-26T17:17:43.239618+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -203,30 +203,30 @@
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 570,
+        "rows": 580,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 50,
-      "completion_rate": 0.9803921568627451,
-      "opens": 51,
+      "completes": 53,
+      "completion_rate": 0.9814814814814815,
+      "opens": 54,
       "top_events": [
         {
-          "count": 298,
+          "count": 312,
           "event": "estimate_generated"
         },
         {
-          "count": 181,
+          "count": 188,
           "event": "field_change"
         },
         {
-          "count": 51,
+          "count": 54,
           "event": "calculator_open"
         },
         {
-          "count": 50,
+          "count": 53,
           "event": "calculator_complete"
         }
       ]
@@ -237,30 +237,30 @@
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-25T18:15:46.984543+00:00",
+    "generatedAt": "2026-11-26T17:17:43.315749+00:00",
     "keywordGeneration": {
-      "currentInventory": 194,
-      "liveKeywords": 870,
-      "estimatedDaysRemaining": 48.5,
+      "currentInventory": 190,
+      "liveKeywords": 874,
+      "estimatedDaysRemaining": 47.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "48.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "47.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 128,
-      "backlogUnits": 138,
-      "verificationGaps": 640,
+      "backlogPosts": 132,
+      "backlogUnits": 142,
+      "verificationGaps": 624,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-25T12:44:31.011288+00:00",
+      "generatedAt": "2026-11-26T12:19:43.208138+00:00",
       "source": "backlink_audit.json",
-      "completedPerDay": 15.7,
+      "completedPerDay": 16.0,
       "newPostsPerDay": 4.0,
       "newBacklinkUnitsPerDay": 20.0,
-      "netBacklinkUnitsPerDay": 4.3,
+      "netBacklinkUnitsPerDay": 4.0,
       "estimatedCatchUpDays": null,
-      "reason": "Backlog is growing by 4.3 platform links/day at the current rate."
+      "reason": "Backlog is growing by 4.0 platform links/day at the current rate."
     },
     "curatedExpansion": {
       "supported": true,
