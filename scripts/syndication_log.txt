@@ -28721,3 +28721,33 @@
 [2026-11-25 17:37:26] === SYNDICATE DONE: oil-pressure-warning-light-came-on-while-driving-what-to-do | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-11-25 17:37:26] SYNCED | oil-pressure-warning-light-came-on-while-driving-what-to-do marked in synced-posts.txt
 [2026-11-25 17:37:26] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-26 12:44:51] === SYNDICATE START: flat-tire-on-highway-no-spare-what-are-my-options ===
+[2026-11-26 12:44:51] PREFLIGHT | title: Flat Tire on Highway With No Spare: Your Real Options
+[2026-11-26 12:44:51] PREFLIGHT | date: 2026-11-26
+[2026-11-26 12:44:51] PREFLIGHT | timestamp: 2026-11-26 12:44:51
+[2026-11-26 12:44:51] PREFLIGHT | DEVTO:   configured (account=TWTF2)
+[2026-11-26 12:44:51] PREFLIGHT | TUMBLR:  configured
+[2026-11-26 12:44:51] PREFLIGHT | BLOGGER: configured
+[2026-11-26 12:44:51] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-26 12:44:51] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-26 12:44:51] DEVTO | flat-tire-on-highway-no-spare-what-are-my-options | START
+[2026-11-26 12:44:51] DEVTO | flat-tire-on-highway-no-spare-what-are-my-options | account=TWTF2
+[2026-11-26 12:44:52] DEVTO | flat-tire-on-highway-no-spare-what-are-my-options | FAIL | HTTP 401: account TWTF2 key is invalid or revoked — rotate GitHub secret DevTO_TWTF2_API_Key
+[2026-11-26 12:44:52] --- waiting 60s before next platform ---
+[2026-11-26 12:45:52] TUMBLR | flat-tire-on-highway-no-spare-what-are-my-options | START
+[2026-11-26 12:45:52] TUMBLR | flat-tire-on-highway-no-spare-what-are-my-options | SUCCESS | https://towwiththeflow.tumblr.com/post/834375361128218624
+[2026-11-26 12:45:52] --- waiting 60s before next platform ---
+[2026-11-26 12:46:52] BLOGGER | flat-tire-on-highway-no-spare-what-are-my-options | START
+[2026-11-26 12:46:52] BLOGGER | flat-tire-on-highway-no-spare-what-are-my-options | step 1/3: refreshing access token
+[2026-11-26 12:46:52] BLOGGER | flat-tire-on-highway-no-spare-what-are-my-options | step 2/3: converting markdown to HTML
+[2026-11-26 12:46:52] BLOGGER | flat-tire-on-highway-no-spare-what-are-my-options | step 3/3: posting to blog 1959471973457654666
+[2026-11-26 12:46:53] BLOGGER | flat-tire-on-highway-no-spare-what-are-my-options | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/flat-tire-on-highway-with-no-spare-your.html
+[2026-11-26 12:46:53] --- waiting 60s before next platform ---
+[2026-11-26 12:47:53] WORDPRESS | flat-tire-on-highway-no-spare-what-are-my-options | START
+[2026-11-26 12:48:00] WORDPRESS | flat-tire-on-highway-no-spare-what-are-my-options | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/26/flat-tire-on-highway-no-spare-what-are-my-options/
+[2026-11-26 12:48:00] --- waiting 60s before next platform ---
+[2026-11-26 12:49:00] FEEDER | flat-tire-on-highway-no-spare-what-are-my-options | START
+[2026-11-26 12:49:01] FEEDER | flat-tire-on-highway-no-spare-what-are-my-options | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/flat-tire-on-highway-no-spare-what-are-my-options-guide/
+[2026-11-26 12:49:01] === SYNDICATE DONE: flat-tire-on-highway-no-spare-what-are-my-options | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-11-26 12:49:01] SYNCED | flat-tire-on-highway-no-spare-what-are-my-options marked in synced-posts.txt
+[2026-11-26 12:49:01] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
