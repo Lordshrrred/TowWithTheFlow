@@ -603,5 +603,18 @@
         "status": "human_required"
       }
     }
+  },
+  {
+    "healed_at": "2026-11-26T09:23:09.385136+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "The Dev.to API key for account TWTF1 (secret DevTO_TWTF1_API_Key) is being rejected with HTTP 401 on both the syndication run and the health check, meaning the key has been revoked, expired, or was never valid. The TWTF2 key is also returning 401 in the failed-platform error, so both configured Dev.to keys appear invalid, and the issue cannot be resolved from code or from any value visible in the logs.",
+        "instructions": "1. Log in to dev.to with the TWTF1 account and go to Settings > Account > DEV Community API Keys (https://dev.to/settings/extensions).\n2. Generate a new API key for TWTF1 and copy it.\n3. In the GitHub repository, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key.\n4. Repeat steps 1-3 for the TWTF2 account, updating secret DevTO_TWTF2_API_Key, since its key is also returning 401.\n5. Re-run the health check (check_platform_health.py) to confirm the devto check reports healthy.\n6. Re-syndicate the two affected posts (how-long-can-you-drive-on-a-spare-donut-tire-before-it-fails and oil-pressure-warning-light-came-on-while-driving-what-to-do) to Dev.to, or let the next scheduled run pick them up if they are not marked as Dev.to-synced.\n7. Confirm that the platform-health alert emails stop arriving at earthlingoflight@gmail.com.",
+        "status": "human_required"
+      }
+    }
   }
 ]
