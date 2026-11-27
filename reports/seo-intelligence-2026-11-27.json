@@ -1,0 +1,315 @@
+{
+  "authority_asset_opportunities": [
+    {
+      "asset": "Tow Cost Estimator",
+      "backlog_status": "live",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0,
+      "priority": 1,
+      "url": "tow-cost-estimator"
+    },
+    {
+      "asset": "Tow or Drive Decision Tree",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "Roadside Checklists",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "Insurance Comparison",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    },
+    {
+      "asset": "State Law Resources",
+      "clicks": 0,
+      "evidence_queries": [],
+      "impressions": 0
+    }
+  ],
+  "backlink_supported": [
+    {
+      "backlinks": 4,
+      "clicks": 0,
+      "impressions": 3,
+      "path": "/what-to-do-if-your-car-breaks-down-at-night/",
+      "position": 88.66666666666667,
+      "syndications": 5
+    },
+    {
+      "backlinks": 4,
+      "clicks": 0,
+      "impressions": 1,
+      "path": "/car-wont-start-clicking-noise-what-to-do/",
+      "position": 79.0,
+      "syndications": 4
+    },
+    {
+      "backlinks": 4,
+      "clicks": 0,
+      "impressions": 1,
+      "path": "/car-died-while-driving-what-now/",
+      "position": 76.0,
+      "syndications": 5
+    }
+  ],
+  "cannibalization": [],
+  "city_opportunities": [],
+  "classifications": {
+    "ctr_opportunities": [],
+    "engagement_winners": [],
+    "near_page_one": [],
+    "weak_engagement": []
+  },
+  "comparison": {
+    "current_gsc_rows": 3,
+    "previous_gsc_rows": 3
+  },
+  "generated_at": "2026-11-27T16:58:08.727420+00:00",
+  "intent_map": {
+    "generatedAt": "2026-07-10T17:36:01.700206+00:00",
+    "metadataFlagCount": 118,
+    "overlapGroupCount": 10
+  },
+  "periods": {
+    "current": [
+      "2026-10-30",
+      "2026-11-26"
+    ],
+    "previous": [
+      "2026-10-02",
+      "2026-10-29"
+    ]
+  },
+  "request_counts": {
+    "ga4": 2,
+    "gsc": 2
+  },
+  "statuses": [
+    {
+      "cached": false,
+      "message": "Fetched Search Console query/page data.",
+      "rows": 6,
+      "source": "search_console",
+      "status": "ok"
+    },
+    {
+      "cached": false,
+      "message": "Fetched GA4 organic landing-page behavior.",
+      "rows": 574,
+      "source": "ga4",
+      "status": "ok"
+    }
+  ],
+  "summary": {
+    "cannibalization_count": 0,
+    "ctr_opportunity_count": 0,
+    "declining_page_count": 0,
+    "generated_at": "2026-11-27T16:58:08.727420+00:00",
+    "impression_growth_count": 5,
+    "near_page_one_count": 0,
+    "report_path": "reports/seo-intelligence-latest.md",
+    "request_counts": {
+      "ga4": 2,
+      "gsc": 2
+    },
+    "statuses": [
+      {
+        "cached": false,
+        "message": "Fetched Search Console query/page data.",
+        "rows": 6,
+        "source": "search_console",
+        "status": "ok"
+      },
+      {
+        "cached": false,
+        "message": "Fetched GA4 organic landing-page behavior.",
+        "rows": 574,
+        "source": "ga4",
+        "status": "ok"
+      }
+    ],
+    "tool_engine": {
+      "completes": 55,
+      "completion_rate": 0.9821428571428571,
+      "opens": 56,
+      "top_events": [
+        {
+          "count": 319,
+          "event": "estimate_generated"
+        },
+        {
+          "count": 192,
+          "event": "field_change"
+        },
+        {
+          "count": 56,
+          "event": "calculator_open"
+        },
+        {
+          "count": 55,
+          "event": "calculator_complete"
+        }
+      ]
+    },
+    "top_actions": [],
+    "top_landing_page_count": 3,
+    "top_query_count": 3,
+    "winning_page_count": 0
+  },
+  "tool_engine": {
+    "completes": 55,
+    "completion_rate": 0.9821428571428571,
+    "opens": 56,
+    "top_events": [
+      {
+        "count": 319,
+        "event": "estimate_generated"
+      },
+      {
+        "count": 192,
+        "event": "field_change"
+      },
+      {
+        "count": 56,
+        "event": "calculator_open"
+      },
+      {
+        "count": 55,
+        "event": "calculator_complete"
+      }
+    ]
+  },
+  "top_actions": [],
+  "top_landing_pages": [
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/what-to-do-if-your-car-breaks-down-at-night/",
+      "impressions": 3,
+      "position": 88.66666666666667,
+      "queries": {
+        "car broke down on the road at night": 3
+      },
+      "top_queries": [
+        [
+          "car broke down on the road at night",
+          3
+        ]
+      ],
+      "weighted_position": 266.0
+    },
+    {
+      "categories": [
+        "roadside emergency"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/car-wont-start-clicking-noise-what-to-do/",
+      "impressions": 1,
+      "position": 79.0,
+      "queries": {
+        "car won't start clicking": 1
+      },
+      "top_queries": [
+        [
+          "car won't start clicking",
+          1
+        ]
+      ],
+      "weighted_position": 79.0
+    },
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "/car-died-while-driving-what-now/",
+      "impressions": 1,
+      "position": 76.0,
+      "queries": {
+        "engine died": 1
+      },
+      "top_queries": [
+        [
+          "engine died",
+          1
+        ]
+      ],
+      "weighted_position": 76.0
+    }
+  ],
+  "top_queries": [
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "car broke down on the road at night",
+      "impressions": 3,
+      "position": 88.66666666666667,
+      "queries": {
+        "car broke down on the road at night": 3
+      },
+      "top_queries": [
+        [
+          "car broke down on the road at night",
+          3
+        ]
+      ],
+      "weighted_position": 266.0
+    },
+    {
+      "categories": [
+        "roadside emergency"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "car won't start clicking",
+      "impressions": 1,
+      "position": 79.0,
+      "queries": {
+        "car won't start clicking": 1
+      },
+      "top_queries": [
+        [
+          "car won't start clicking",
+          1
+        ]
+      ],
+      "weighted_position": 79.0
+    },
+    {
+      "categories": [
+        "general roadside"
+      ],
+      "clicks": 0,
+      "ctr": 0.0,
+      "id": "engine died",
+      "impressions": 1,
+      "position": 76.0,
+      "queries": {
+        "engine died": 1
+      },
+      "top_queries": [
+        [
+          "engine died",
+          1
+        ]
+      ],
+      "weighted_position": 76.0
+    }
+  ]
+}

@@ -1,39 +1,19 @@
 {
-  "generated_at": "2026-11-26T17:17:43.296236+00:00",
+  "generated_at": "2026-11-27T16:58:08.795125+00:00",
   "keywords": {
     "total": 1064,
-    "live": 874,
-    "pending": 190,
+    "live": 878,
+    "pending": 186,
     "local": {
       "live": 289,
       "pending": 0
     },
     "pain_point": {
-      "live": 585,
-      "pending": 190
+      "live": 589,
+      "pending": 186
     }
   },
   "next_targets": [
-    {
-      "keyword": "flat tire on highway no spare what are my options",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "how much does emergency roadside assistance cost without insurance",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does rental car insurance cover towing and roadside assistance",
-      "score": 7,
-      "type": "pain_point"
-    },
-    {
-      "keyword": "does aaa membership cover towing for someone else in my car",
-      "score": 7,
-      "type": "pain_point"
-    },
     {
       "keyword": "aaa towing coverage limit miles per year",
       "score": 7,
@@ -63,6 +43,26 @@
       "keyword": "does trip interruption insurance cover towing and hotel",
       "score": 7,
       "type": "pain_point"
+    },
+    {
+      "keyword": "does lyft or uber cover towing if car breaks down during ride",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does aaa plus cover towing more than 100 miles",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "does state farm roadside assistance cover lockout service",
+      "score": 7,
+      "type": "pain_point"
+    },
+    {
+      "keyword": "roadside assistance worth it if i already have aaa",
+      "score": 7,
+      "type": "pain_point"
     }
   ],
   "content_clusters": [
@@ -79,7 +79,7 @@
     {
       "slug": "insurance-coverage",
       "label": "Insurance & Roadside Coverage",
-      "count": 117
+      "count": 120
     },
     {
       "slug": "battery-starting",
@@ -99,7 +99,7 @@
     {
       "slug": "tire-wheel",
       "label": "Tire & Wheel Issues",
-      "count": 38
+      "count": 39
     },
     {
       "slug": "accident-liability",
@@ -156,27 +156,27 @@
     "results": []
   },
   "backlinks": {
-    "generated_at": "2026-11-26T12:19:43.208138+00:00",
+    "generated_at": "2026-11-27T12:06:55.340937+00:00",
     "platforms": {
       "blog": {
-        "checked": 514,
-        "verified": 514
+        "checked": 496,
+        "verified": 496
       },
       "dev": {
         "checked": 435,
         "verified": 435
       },
       "feeder": {
-        "checked": 846,
-        "verified": 846
+        "checked": 850,
+        "verified": 850
       },
       "tumblr": {
-        "checked": 843,
-        "verified": 843
+        "checked": 847,
+        "verified": 847
       },
       "wordpress": {
-        "checked": 851,
-        "verified": 851
+        "checked": 855,
+        "verified": 855
       }
     }
   },
@@ -184,7 +184,7 @@
     "cannibalization_count": 0,
     "ctr_opportunity_count": 0,
     "declining_page_count": 0,
-    "generated_at": "2026-11-26T17:17:43.239618+00:00",
+    "generated_at": "2026-11-27T16:58:08.727420+00:00",
     "impression_growth_count": 5,
     "near_page_one_count": 0,
     "report_path": "reports/seo-intelligence-latest.md",
@@ -196,64 +196,64 @@
       {
         "cached": false,
         "message": "Fetched Search Console query/page data.",
-        "rows": 5,
+        "rows": 6,
         "source": "search_console",
         "status": "ok"
       },
       {
         "cached": false,
         "message": "Fetched GA4 organic landing-page behavior.",
-        "rows": 580,
+        "rows": 574,
         "source": "ga4",
         "status": "ok"
       }
     ],
     "tool_engine": {
-      "completes": 53,
-      "completion_rate": 0.9814814814814815,
-      "opens": 54,
+      "completes": 55,
+      "completion_rate": 0.9821428571428571,
+      "opens": 56,
       "top_events": [
         {
-          "count": 312,
+          "count": 319,
           "event": "estimate_generated"
         },
         {
-          "count": 188,
+          "count": 192,
           "event": "field_change"
         },
         {
-          "count": 54,
+          "count": 56,
           "event": "calculator_open"
         },
         {
-          "count": 53,
+          "count": 55,
           "event": "calculator_complete"
         }
       ]
     },
     "top_actions": [],
-    "top_landing_page_count": 2,
-    "top_query_count": 2,
+    "top_landing_page_count": 3,
+    "top_query_count": 3,
     "winning_page_count": 0
   },
   "strategy": {
-    "generatedAt": "2026-11-26T17:17:43.315749+00:00",
+    "generatedAt": "2026-11-27T16:58:08.823407+00:00",
     "keywordGeneration": {
-      "currentInventory": 190,
-      "liveKeywords": 874,
-      "estimatedDaysRemaining": 47.5,
+      "currentInventory": 186,
+      "liveKeywords": 878,
+      "estimatedDaysRemaining": 46.5,
       "publishingCadencePerDay": 4.0,
       "pauseThresholdDays": 90.0,
       "resumeThresholdDays": 45.0,
       "status": "paused",
-      "reason": "47.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
+      "reason": "46.5 publishing days of inventory remain between the 45 day resume and 90 day pause thresholds; holding previous state: paused."
     },
     "backlinks": {
-      "backlogPosts": 132,
-      "backlogUnits": 142,
-      "verificationGaps": 624,
+      "backlogPosts": 136,
+      "backlogUnits": 146,
+      "verificationGaps": 646,
       "requiredPlatformsPerPost": 5,
-      "generatedAt": "2026-11-26T12:19:43.208138+00:00",
+      "generatedAt": "2026-11-27T12:06:55.340937+00:00",
       "source": "backlink_audit.json",
       "completedPerDay": 16.0,
       "newPostsPerDay": 4.0,

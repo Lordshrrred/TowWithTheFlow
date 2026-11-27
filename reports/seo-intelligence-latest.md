@@ -1,24 +1,26 @@
 # TWTF SEO Intelligence Report
 
-Generated: 2026-11-26T17:17:43.239618+00:00
+Generated: 2026-11-27T16:58:08.727420+00:00
 
 ## 1. Data Connection/Freshness
 
-- **search_console**: ok. Fetched Search Console query/page data. Rows: 5.
-- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 580.
+- **search_console**: ok. Fetched Search Console query/page data. Rows: 6.
+- **ga4**: ok. Fetched GA4 organic landing-page behavior. Rows: 574.
 - **Normal-run API requests**: Search Console 2; GA4 2; paid LLM/web-search/rank-check 0.
 
 ## 2. Top Organic Landing Pages
 | Page | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
-|  | 0 | 2 | 0.0% | 92.0 |
+|  | 0 | 3 | 0.0% | 88.7 |
 |  | 0 | 1 | 0.0% | 79.0 |
+|  | 0 | 1 | 0.0% | 76.0 |
 
 ## 3. Top Real Queries
 | Query | Clicks | Impressions | CTR | Avg position |
 | --- | --- | --- | --- | --- |
-| car broke down on the road at night | 0 | 2 | 0.0% | 92.0 |
+| car broke down on the road at night | 0 | 3 | 0.0% | 88.7 |
 | car won't start clicking | 0 | 1 | 0.0% | 79.0 |
+| engine died | 0 | 1 | 0.0% | 76.0 |
 
 ## 4. Near-Page-One Opportunities
 None found with current thresholds.
@@ -41,8 +43,9 @@ No city/local opportunities found with current thresholds.
 ## 10. Backlink-Supported Pages
 | Page | Backlinks | Syndications | Impressions | Clicks |
 | --- | --- | --- | --- | --- |
-| /what-to-do-if-your-car-breaks-down-at-night/ | 4 | 5 | 2 | 0 |
+| /what-to-do-if-your-car-breaks-down-at-night/ | 4 | 5 | 3 | 0 |
 | /car-wont-start-clicking-noise-what-to-do/ | 4 | 4 | 1 | 0 |
+| /car-died-while-driving-what-now/ | 4 | 5 | 1 | 0 |
 
 ## 11. Recommended Authority Assets
 No Search Console asset-pattern evidence yet. Backlog order remains the fallback.
@@ -51,13 +54,13 @@ No Search Console asset-pattern evidence yet. Backlog order remains the fallback
 No evidence-ranked actions yet — Search Console and GA4 are connected, but current traffic/impressions haven't crossed the action thresholds. Expected for a newly verified property or low current volume; rerun as more data accumulates.
 
 ## 13. Tool Engine Usage
-- Calculator opens: 54 · Completions: 53 · Completion rate: 98.1%
+- Calculator opens: 56 · Completions: 55 · Completion rate: 98.2%
 | Event | Count |
 | --- | --- |
-| estimate_generated | 312 |
-| field_change | 188 |
-| calculator_open | 54 |
-| calculator_complete | 53 |
+| estimate_generated | 319 |
+| field_change | 192 |
+| calculator_open | 56 |
+| calculator_complete | 55 |
 
 ## 14. Data Limitations
 
