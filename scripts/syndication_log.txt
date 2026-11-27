@@ -28902,3 +28902,33 @@
 [2026-11-27 14:35:05] === SYNDICATE DONE: how-far-will-insurance-tow-my-car-after-breakdown | 4/5 succeeded | 5 attempted | 1 failed ===
 [2026-11-27 14:35:05] SYNCED | how-far-will-insurance-tow-my-car-after-breakdown marked in synced-posts.txt
 [2026-11-27 14:35:05] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
+[2026-11-27 15:49:59] === SYNDICATE START: does-allstate-cover-towing-after-breakdown-insurance ===
+[2026-11-27 15:49:59] PREFLIGHT | title: Does Allstate Cover Towing After a Breakdown? What Your Policy Actually Pays
+[2026-11-27 15:49:59] PREFLIGHT | date: 2026-11-27
+[2026-11-27 15:49:59] PREFLIGHT | timestamp: 2026-11-27 15:49:59
+[2026-11-27 15:49:59] PREFLIGHT | DEVTO:   configured (account=TWTF1)
+[2026-11-27 15:49:59] PREFLIGHT | TUMBLR:  configured
+[2026-11-27 15:49:59] PREFLIGHT | BLOGGER: configured
+[2026-11-27 15:49:59] PREFLIGHT | WORDPRESS: configured via direct WordPress.com API
+[2026-11-27 15:49:59] PREFLIGHT | FEEDER:  configured (source=FEEDER_TRIGGER_TOKEN, dedicated token)
+[2026-11-27 15:49:59] DEVTO | does-allstate-cover-towing-after-breakdown-insurance | START
+[2026-11-27 15:49:59] DEVTO | does-allstate-cover-towing-after-breakdown-insurance | account=TWTF1
+[2026-11-27 15:49:59] DEVTO | does-allstate-cover-towing-after-breakdown-insurance | FAIL | HTTP 401: account TWTF1 key is invalid or revoked — rotate GitHub secret DevTO_TWTF1_API_Key
+[2026-11-27 15:49:59] --- waiting 60s before next platform ---
+[2026-11-27 15:50:59] TUMBLR | does-allstate-cover-towing-after-breakdown-insurance | START
+[2026-11-27 15:51:00] TUMBLR | does-allstate-cover-towing-after-breakdown-insurance | SUCCESS | https://towwiththeflow.tumblr.com/post/834477605305647104
+[2026-11-27 15:51:00] --- waiting 60s before next platform ---
+[2026-11-27 15:52:00] BLOGGER | does-allstate-cover-towing-after-breakdown-insurance | START
+[2026-11-27 15:52:00] BLOGGER | does-allstate-cover-towing-after-breakdown-insurance | step 1/3: refreshing access token
+[2026-11-27 15:52:00] BLOGGER | does-allstate-cover-towing-after-breakdown-insurance | step 2/3: converting markdown to HTML
+[2026-11-27 15:52:00] BLOGGER | does-allstate-cover-towing-after-breakdown-insurance | step 3/3: posting to blog 1959471973457654666
+[2026-11-27 15:52:01] BLOGGER | does-allstate-cover-towing-after-breakdown-insurance | SUCCESS | https://towingandflowingroadsidedenver.blogspot.com/2026/11/does-allstate-cover-towing-after.html
+[2026-11-27 15:52:01] --- waiting 60s before next platform ---
+[2026-11-27 15:53:01] WORDPRESS | does-allstate-cover-towing-after-breakdown-insurance | START
+[2026-11-27 15:53:08] WORDPRESS | does-allstate-cover-towing-after-breakdown-insurance | SUCCESS | https://towwiththeflowyo.wordpress.com/2026/11/27/does-allstate-cover-towing-after-breakdown-insurance/
+[2026-11-27 15:53:08] --- waiting 60s before next platform ---
+[2026-11-27 15:54:08] FEEDER | does-allstate-cover-towing-after-breakdown-insurance | START
+[2026-11-27 15:54:09] FEEDER | does-allstate-cover-towing-after-breakdown-insurance | SUCCESS | https://lordshrrred.github.io/TWTF_Feeder/does-allstate-cover-towing-after-breakdown-insurance-help/
+[2026-11-27 15:54:09] === SYNDICATE DONE: does-allstate-cover-towing-after-breakdown-insurance | 4/5 succeeded | 5 attempted | 1 failed ===
+[2026-11-27 15:54:09] SYNCED | does-allstate-cover-towing-after-breakdown-insurance marked in synced-posts.txt
+[2026-11-27 15:54:09] VARIATION SUMMARY | generated=0 reused=0 skipped=0 failed=0 fallback_original=5
