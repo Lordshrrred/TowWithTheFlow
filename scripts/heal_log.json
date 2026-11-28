@@ -1,27 +1,5 @@
 [
   {
-    "healed_at": "2026-07-19T08:33:59.985623+00:00",
-    "results": {
-      "devto": {
-        "tier": 2,
-        "action": "human_required",
-        "confidence": "high",
-        "diagnosis": "The Dev.to API key stored in GitHub secret DevTO_TWTF1_API_Key has expired or been revoked, causing 401 Unauthorized errors on all Dev.to syndication attempts. The health check script correctly identifies this as an authentication failure requiring secret rotation.",
-        "instructions": [
-          "Log into your Dev.to account at https://dev.to/settings/account",
-          "Navigate to Settings \u2192 Extensions \u2192 API Keys",
-          "Revoke the current API key associated with the roadsideamericatowing account (if present)",
-          "Generate a new API key and copy it",
-          "Go to your GitHub repository settings \u2192 Secrets and variables \u2192 Actions",
-          "Update the secret DevTO_TWTF1_API_Key with the new Dev.to API key value",
-          "If you have a DevTO_TWTF2_API_Key configured, verify it is also valid by testing at https://dev.to/api/articles/me/published with the header 'api-key: [key]'",
-          "Re-run the syndication system for the next article to verify the fix"
-        ],
-        "status": "human_required"
-      }
-    }
-  },
-  {
     "healed_at": "2026-11-11T19:37:59.364936+00:00",
     "results": {
       "devto": {
@@ -654,6 +632,19 @@
         "confidence": "high",
         "diagnosis": "Dev.to returns HTTP 401 for both configured API keys (TWTF1 and TWTF2 in the health check, and TWTF1 in syndication). The log explicitly states the TWTF1 key is invalid or revoked. The key is most likely revoked or expired on the Dev.to side, or the GitHub secret DevTO_TWTF1_API_Key holds a stale value. I cannot verify the new key value, so this requires a human to generate and rotate it.",
         "instructions": "1. Log in to dev.to as the TWTF1 account (earthlingoflight or the account that owns the Tow With The Flow posts).\n2. Go to Settings > Extensions > DEV Community API Keys and check whether the existing key is still listed. If it is missing or revoked, generate a new key with a descriptive name (e.g., 'TWTF syndication').\n3. In the GitHub repository for this project, go to Settings > Secrets and variables > Actions and update the secret DevTO_TWTF1_API_Key with the new key value.\n4. Also verify DevTO_TWTF2_API_Key: the health check reports TWTF2 failing with 401 too, so generate and rotate that secret the same way if that account is still in use, or remove the secret if the TWTF2 account is no longer needed.\n5. Re-run the health check (check_platform_health.py) to confirm the devto check reports healthy.\n6. Re-run syndication for the two failed posts (does-rental-car-insurance-cover-towing-and-roadside-assistance and does-aaa-membership-cover-towing-for-someone-else-in-my-car) on Dev.to only, or let the next scheduled run pick them up if they are not yet marked as synced for Dev.to.",
+        "status": "human_required"
+      }
+    }
+  },
+  {
+    "healed_at": "2026-11-28T07:52:38.420785+00:00",
+    "results": {
+      "devto": {
+        "tier": 2,
+        "action": "human_required",
+        "confidence": "high",
+        "diagnosis": "Dev.to returns HTTP 401 for account TWTF1 (and TWTF2 in the health check), meaning the API keys stored in the GitHub secrets DevTO_TWTF1_API_Key / DevTO_TWTF2_API_Key are invalid or revoked. The syndication code and health check are functioning correctly; the credential itself must be regenerated on Dev.to and re-saved as a secret.",
+        "instructions": "1. Log in to dev.to with the TWTF1 account (and separately the TWTF2 account if it is also in use).\n2. Go to Settings > Extensions > DEV Community API Keys.\n3. Revoke the existing key(s) and generate a new API key, giving it a descriptive name such as 'TWTF syndication'.\n4. Copy the new key immediately (it is shown only once).\n5. In the GitHub repository for this project, go to Settings > Secrets and variables > Actions.\n6. Update secret DevTO_TWTF1_API_Key with the new TWTF1 key, and DevTO_TWTF2_API_Key with the TWTF2 key if applicable.\n7. Re-run the syndication workflow for the failed posts (does-allstate-cover-towing-after-breakdown-insurance and does-car-warranty-cover-towing-cost-breakdown) or re-run check_platform_health.py to confirm the Dev.to check reports healthy.\n8. Confirm that the account being used matches the intended Dev.to account, since the two keys belong to separate accounts.",
         "status": "human_required"
       }
     }
